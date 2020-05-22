@@ -1,0 +1,5 @@
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+
+.textBoxJson {
+    text-align: "left";
+}

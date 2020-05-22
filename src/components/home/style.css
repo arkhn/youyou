@@ -1,0 +1,13 @@
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+
+.extensionMaker {
+    width: 50%
+}
+
+.JSONViewer {
+    width: 50%
+}
+
+.homeContent {
+    display: flex;
+}
