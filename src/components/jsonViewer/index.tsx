@@ -1,9 +1,5 @@
 import * as React from "react";
-import Header from "../header";
-
-import "./style.css";
-
-import { Text } from "@blueprintjs/core";
+import ReactJson from "react-json-view";
 
 interface Props {
   jsonText: any;
@@ -12,7 +8,7 @@ interface Props {
 const JSONViewer = ({ jsonText }: Props) => {
   return (
     <>
-      <Text className="textBoxJson">{jsonText}</Text>
+      <ReactJson src={jsonText}></ReactJson>
     </>
   );
 };
