@@ -1,0 +1,4 @@
+export const {
+    REACT_APP_PYROG_API_URL: PYROG_API_URL
+  } = process.env
+  export const AUTH_TOKEN_KEY = 'Bearer eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiY2tiMTBqaHk1MDAwMDZibnpteDlwanN1aCIsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AYXJraG4uY29tIn0sImlhdCI6MTU5MzAwNTAxM30.hXPZy9Mrw-0CEauzMuXVHucvrOUP7eAJU6Jt9RarH3cAlabs-ULwtP2XKn7v1naP5iNeNJTLfmulfwVOKXlvcQ'

@@ -1,0 +1,7 @@
+query allResources {
+  structureDefinitions(
+    filter: { kind: "resource", derivation: "specialization" }
+  ) {
+    id
+  }
+}
