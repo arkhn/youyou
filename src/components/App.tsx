@@ -1,9 +1,15 @@
 import React from "react";
-import ProfileEditor from './profileEditor/ProfileEditor';
+import initStore from '../state/store';
+import {Provider} from 'react-redux';
+import ProfileEditor from './resourceProfileMapping/resourceProfileMapping';
+
+const store = initStore()
 
 const App = () => {
   return (
+    <Provider store={store}>
       <ProfileEditor />
+    </Provider>
   );
 }
 

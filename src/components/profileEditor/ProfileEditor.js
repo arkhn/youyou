@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from "react-router-dom";
 
-const ResourceProfileMapping = (props) => {
+const ProfileEditor = (props) => {
     let { resourceId } = useParams()
 
     if (resourceId === 'profileSettings'){
@@ -17,4 +17,4 @@ const ResourceProfileMapping = (props) => {
     }
 }
 
-export default ResourceProfileMapping;
+export default ProfileEditor;

@@ -1,5 +1,5 @@
 import React from 'react';
-import ResourceProfileMapping from '../profileEditor/ProfileEditor';
+import ProfileEditor from '../profileEditor/ProfileEditor';
 import { useQuery } from '@apollo/react-hooks';
 import { loader } from 'graphql.macro';
 import {
@@ -14,8 +14,8 @@ const getResources = loader(
     'src/graphql/queryProfile.gql'
 );
 
-const Menu = () => {
-    const source = "Patient";
+const ResourceProfileMapping: React.FC<{}> = () => {
+    const source: string = "Patient";
     const { data: resourceData, loading: resourceLoading, error: resourceError } = useQuery(getResources, {variables: { definitionId: source }});
     const { data: resourceStructureDef, loading: structureDefLoading, error: structureDefError } = useQuery(getResources, {variables: { definitionId: "StructureDefinition" }})
 
@@ -26,6 +26,7 @@ const Menu = () => {
 
     const structureDefinition = resourceData.structureDefinition;
     const attributes = resourceData.structureDefinition.attributes;
+    console.log(attributes)
 
     const renderTopic = attributes.map((attribute: any, i: number) => {
         const attributeName = attribute.attribute.id;
@@ -51,7 +52,7 @@ const Menu = () => {
             </ul>
             <Switch>
             <Route path="/:profile/:resourceId">
-                <ResourceProfileMapping everything={resourceData} structure={resourceStructureDef}/>
+                <ProfileEditor resourceData={resourceData} resourceStructureDef={resourceStructureDef}/>
             </Route>
             </Switch>
         </div>
@@ -59,4 +60,4 @@ const Menu = () => {
     )
 }
 
-export default Menu;
+export default ResourceProfileMapping;
