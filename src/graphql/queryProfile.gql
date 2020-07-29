@@ -1,9 +1,0 @@
-query profile($definitionId: ID!) {
-    structureDefinition(definitionId: $definitionId){
-        id
-        attributes {
-            id,
-            attribute
-        }
-    }
-}
