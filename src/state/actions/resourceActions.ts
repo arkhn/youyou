@@ -13,7 +13,6 @@ export type SelectResourceAction = {
 
 export type GetDataStartAction = {
     type: typeof GET_DATA_START,
-    payload: boolean
 }
 
 export type GetDataSuccessAction = {
@@ -23,7 +22,7 @@ export type GetDataSuccessAction = {
 
 export type GetDataFailureAction = {
     type: typeof GET_DATA_FAILURE,
-    payload: string
+    payload: Error
 }
 
 export const selectResource = (id: string): SelectResourceAction => {
@@ -33,10 +32,9 @@ export const selectResource = (id: string): SelectResourceAction => {
     }
 }
 
-export const getDataStart = (loading: boolean): GetDataStartAction => {
+export const getDataStart = (): GetDataStartAction => {
     return {
-        type: GET_DATA_START,
-        payload: loading
+        type: GET_DATA_START
     }
 }
 
@@ -47,7 +45,7 @@ export const getDataSuccess = (allDatas: IStructureDefinition[]): GetDataSuccess
     }
 }
 
-export const getDataFailure = (error: string): GetDataFailureAction => {
+export const getDataFailure = (error: Error): GetDataFailureAction => {
     return {
         type: GET_DATA_FAILURE,
         payload: error

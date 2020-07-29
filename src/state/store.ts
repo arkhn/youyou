@@ -1,10 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
-import { resource, ResourceState } from './reducers/resource';
+import { resource } from './reducers/resource';
 import thunk from 'redux-thunk'
-
-export type AppState = {
-    resource: ResourceState
-}
 
 const rootReducer = combineReducers({ 
     resource

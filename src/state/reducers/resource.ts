@@ -8,7 +8,7 @@ export type ResourceState = {
     selectedResourceId: string | null;
     selectedAttributeId: string | null;
     loading: boolean;
-    error: string | null;
+    error: Error | null;
 }
 
 const initialState: ResourceState = {
@@ -16,7 +16,7 @@ const initialState: ResourceState = {
     profiles: [],
     selectedResourceId: null,
     selectedAttributeId: null,
-    loading: true,
+    loading: false,
     error: null
 }
 
@@ -37,8 +37,8 @@ export const resource = (state: ResourceState = initialState, action: AllResourc
         case GET_DATA_SUCCESS:
             return {
                 ...state,
-                data: action.payload,
                 loading: false,
+                data: action.payload,
                 error: null
             }
         case GET_DATA_FAILURE:
