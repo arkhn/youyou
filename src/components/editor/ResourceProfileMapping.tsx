@@ -4,7 +4,7 @@ import { RootState } from '../../state/store';
 import { IElementDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
 
 const ResourceProfileMapping: React.FC<{}> = () => {
-    const attributes: IElementDefinition[] | undefined = useSelector((state: RootState) => state.resource.profiles?.snapshot?.element);
+    const attributes: IElementDefinition[] | undefined = useSelector((state: RootState) => state.resource.profile?.snapshot?.element);
 
     const renderTree: JSX.Element[] | undefined = attributes?.map((attribute) => {
         return (

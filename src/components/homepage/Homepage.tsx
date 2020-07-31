@@ -12,6 +12,7 @@ const Homepage: React.FC<{}> = () => {
     const dispatchResourceSelected = (data: DataFetched): void => {
         if (data.id) {
             dispatch(selectResource(data.id));
+            dispatch(requestResource(data.id));
         };
     };
 
@@ -21,7 +22,6 @@ const Homepage: React.FC<{}> = () => {
                 <button onClick={
                     (): void => {
                         dispatchResourceSelected(data);
-                        dispatch(requestResource(data.id));
                     }
                 }>
                     {data.id}

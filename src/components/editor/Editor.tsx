@@ -7,7 +7,7 @@ import { IStructureDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
 
 const Editor: React.FC<{}> = () => {
     const stateApp: RootState = useSelector((state: RootState) => state);
-    const resourceSelected: IStructureDefinition | null = useSelector((state: RootState) => state.resource.profiles);
+    const resourceSelected: IStructureDefinition | null = useSelector((state: RootState) => state.resource.profile);
 
     if (stateApp.resource.loading === true ){
         return <div>Loading ...</div>

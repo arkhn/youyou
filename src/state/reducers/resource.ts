@@ -7,7 +7,7 @@ export type DataFetched = {
 
 export type ResourceState = {
     data: DataFetched[];
-    profiles: R4.IStructureDefinition | null;
+    profile: R4.IStructureDefinition | null;
     selectedResourceId: string | null;
     selectedAttributeId: string | null;
     loading: boolean;
@@ -16,7 +16,7 @@ export type ResourceState = {
 
 const initialState: ResourceState = {
     data: [],
-    profiles: null,
+    profile: null,
     selectedResourceId: null,
     selectedAttributeId: null,
     loading: false,
@@ -55,14 +55,14 @@ export const resource = (state: ResourceState = initialState, action: AllResourc
             return {
                 ...state,
                 loading: false,
-                profiles: action.payload,
+                profile: action.payload,
                 error: null
             }
         case GET_STRUCTUREDEF_FAILURE:
             return {
                 ...state,
                 loading: false,
-                profiles: null,
+                profile: null,
                 error: action.payload
             } 
         default:
