@@ -1,2 +1,0 @@
-export const FHIR_API_URL = 'https://demo.arkhn.com/api'
-export const AUTH_TOKEN_KEY = 'eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiY2tiMTBqaHk1MDAwMDZibnpteDlwanN1aCIsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AYXJraG4uY29tIn0sImlhdCI6MTU5NTIzNTkzM30.q8RLBv9T_ZJ4tjXXiAlvIRFkAApdB0L60QfW421nS5twIZ0BC30iYARSX9dwUHLhcsq9_fY3HAUjHfby8gsVeA'

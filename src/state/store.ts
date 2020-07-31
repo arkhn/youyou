@@ -1,15 +1,28 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { resource } from './reducers/resource';
-import thunk from 'redux-thunk'
+import { persistReducer, persistStore } from 'redux-persist';
+import storage from 'redux-persist/lib/storage' // defaults to localStorage for web
+import thunk from 'redux-thunk';
 
-const rootReducer = combineReducers({ 
+const persistConfig = {
+    key: 'root',
+    storage: storage
+}
+
+const rootReducer = combineReducers({
     resource
 })
 
-const initStore = () => {
+/* const initStore = () => {
     return createStore(rootReducer, applyMiddleware(thunk))
-}
+} */
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+const createStoreWithMiddlewares = applyMiddleware(thunk)(createStore);
+
+export const store = createStoreWithMiddlewares(persistedReducer);
+export const persistor = persistStore(store)
 
 export type RootState = ReturnType<typeof rootReducer>
 
-export default initStore;
+//export default initStore;

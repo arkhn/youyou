@@ -1,20 +1,44 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../../state/store';
+import { selectResource } from '../../state/actions/resourceActions';
+import { Link } from 'react-router-dom';
+import { DataFetched } from '../../state/reducers/resource';
+import { requestResource } from '../../state/thunkMiddleware';
 
 const Homepage: React.FC<{}> = () => {
-    const stateApp  = useSelector((state: RootState) => state);
-    if (stateApp.resource.loading === true){
+    const stateApp = useSelector((state: RootState) => state);
+    const dispatch = useDispatch();
+    const dispatchResourceSelected = (data: DataFetched): void => {
+        if (data.id) {
+            dispatch(selectResource(data.id))
+        }
+    }
+
+    const mapAllResources = stateApp.resource.data?.map((data: DataFetched, index: number) => {
+        return (
+            <Link to="/editprofile" key={index}>
+                <button onClick={
+                    (): void => {
+                        dispatchResourceSelected(data)
+                        dispatch(requestResource(data.id))
+                    }
+                }>
+                    {data.id}
+                </button>
+            </Link>
+        )
+    })
+
+    if (stateApp.resource.loading === true) {
         return <p>Loading...</p>
     }
 
-return (
-    <div>
-        {stateApp.resource.data?.map((data, index) => {
-            return <button key={index}>{data.id}</button>
-        })}
-    </div>);
-    
+    return (
+        <div>
+            {mapAllResources}
+        </div>);
+
 }
 
 export default Homepage;
