@@ -7,7 +7,7 @@ import { DataFetched } from '../../state/reducers/resource';
 import { requestResource } from '../../state/thunkMiddleware';
 
 const Homepage: React.FC<{}> = () => {
-    const stateApp = useSelector((state: RootState) => state);
+    const { loading, data } = useSelector((state: RootState) => state.resource);
     const dispatch = useDispatch();
     const dispatchResourceSelected = (data: DataFetched): void => {
         if (data.id) {
@@ -16,7 +16,7 @@ const Homepage: React.FC<{}> = () => {
         };
     };
 
-    const mapAllResources = stateApp.resource.data?.map((data: DataFetched, index: number) => {
+    const mapAllResources = data?.map((data: DataFetched, index: number) => {
         return (
             <Link to="/editprofile" key={index}>
                 <button onClick={
@@ -30,7 +30,7 @@ const Homepage: React.FC<{}> = () => {
         );
     })
 
-    if (stateApp.resource.loading === true) {
+    if (loading === true) {
         return <p>Loading...</p>
     };
 

@@ -1,10 +1,12 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../state/store';
-import { IElementDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
+import { IStructureDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
 
-const ResourceProfileMapping: React.FC<{}> = () => {
-    const attributes: IElementDefinition[] | undefined = useSelector((state: RootState) => state.resource.profile?.snapshot?.element);
+type ResourceProfileMappingProps = {
+    profile: IStructureDefinition | null
+}
+
+const ResourceProfileMapping: React.FC<ResourceProfileMappingProps > = ({profile}) => {
+    const attributes = profile?.snapshot?.element;
 
     const renderTree: JSX.Element[] | undefined = attributes?.map((attribute) => {
         return (

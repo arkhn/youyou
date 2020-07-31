@@ -13,10 +13,6 @@ const rootReducer = combineReducers({
     resource
 })
 
-/* const initStore = () => {
-    return createStore(rootReducer, applyMiddleware(thunk))
-} */
-
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 const createStoreWithMiddlewares = applyMiddleware(thunk)(createStore);
 
@@ -24,5 +20,3 @@ export const store = createStoreWithMiddlewares(persistedReducer);
 export const persistor = persistStore(store)
 
 export type RootState = ReturnType<typeof rootReducer>
-
-//export default initStore;
