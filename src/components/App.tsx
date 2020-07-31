@@ -9,7 +9,7 @@ import { PersistGate } from "redux-persist/integration/react";
 
 const App = () => {
   /* @ts-ignore */
-  store.dispatch(requestIds())
+  store.dispatch(requestIds());
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>

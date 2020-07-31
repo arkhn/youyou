@@ -11,7 +11,7 @@ const Editor: React.FC<{}> = () => {
 
     if (stateApp.resource.loading === true ){
         return <div>Loading ...</div>
-    }
+    };
 
 
     return (
@@ -20,7 +20,7 @@ const Editor: React.FC<{}> = () => {
             <ResourceProfileMapping />
             <AttributeEditor />
         </div>
-    )
-}
+    );
+};
 
 export default Editor;

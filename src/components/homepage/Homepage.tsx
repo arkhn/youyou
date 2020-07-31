@@ -11,33 +11,34 @@ const Homepage: React.FC<{}> = () => {
     const dispatch = useDispatch();
     const dispatchResourceSelected = (data: DataFetched): void => {
         if (data.id) {
-            dispatch(selectResource(data.id))
-        }
-    }
+            dispatch(selectResource(data.id));
+        };
+    };
 
     const mapAllResources = stateApp.resource.data?.map((data: DataFetched, index: number) => {
         return (
             <Link to="/editprofile" key={index}>
                 <button onClick={
                     (): void => {
-                        dispatchResourceSelected(data)
-                        dispatch(requestResource(data.id))
+                        dispatchResourceSelected(data);
+                        dispatch(requestResource(data.id));
                     }
                 }>
                     {data.id}
                 </button>
             </Link>
-        )
+        );
     })
 
     if (stateApp.resource.loading === true) {
         return <p>Loading...</p>
-    }
+    };
 
     return (
         <div>
             {mapAllResources}
-        </div>);
+        </div>
+    );
 
 }
 

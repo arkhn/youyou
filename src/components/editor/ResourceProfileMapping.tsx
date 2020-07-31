@@ -9,8 +9,8 @@ const ResourceProfileMapping: React.FC<{}> = () => {
     const renderTree: JSX.Element[] | undefined = attributes?.map((attribute) => {
         return (
             <p key={attribute.id}>{attribute.id}</p>
-        )
-    })
+        );
+    });
 
 
     return (
@@ -18,7 +18,7 @@ const ResourceProfileMapping: React.FC<{}> = () => {
             <p>Profil Settings</p>
             {renderTree}
         </div>
-    )
-}
+    );
+};
 
 export default ResourceProfileMapping;
