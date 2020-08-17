@@ -14,23 +14,18 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({attribute}) =>  {
         console.log(min, max, cardiMin, cardiMax)
         if (min >= cardiMin){
             if (cardiMax === "1"){
-                if (max === "1"){
-                    return false
-                } else if (max === "0"){
+                if (max === "1" || max ==="0"){
                     return false
                 }
             } else if (cardiMax === "*"){
-                if (max === "*"){
-                    return false 
-                } else if (max === "1"){
-                    return false
-                } else if (max === "0"){
+                if (max === "*" || max === "1" || max === "0"){
                     return false
                 }
             }
         }
         return true;
     }
+
  
     const handleCardinality = (cardiMin: any, cardiMax: any) => {
         console.log(cardiMin, cardiMax)
