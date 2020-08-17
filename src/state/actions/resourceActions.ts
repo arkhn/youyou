@@ -1,53 +1,80 @@
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
+import { DataFetched } from "../reducers/resource";
 
 export const SELECT_RESOURCE = 'SELECT_RESOURCE';
-export const GET_DATA_START = 'GET_DATA_START';
-export const GET_DATA_SUCCESS = 'GET_DATA_SUCCESS';
-export const GET_DATA_FAILURE = 'GET_DATA_FAILURE';
+export const GET_FETCH_START = 'GET_FETCH_START';
+export const GET_IDS_SUCCESS = 'GET_IDS_SUCCESS';
+export const GET_IDS_FAILURE = 'GET_IDS_FAILURE';
+export const GET_STRUCTUREDEF_SUCCESS = 'GET_STRUCTUREDEF_SUCCESS';
+export const GET_STRUCTUREDEF_FAILURE = 'GET_STRUCTUREDEF_FAILURE';
 
 
 export type SelectResourceAction = {
     type: typeof SELECT_RESOURCE,
-    id: string
+    payload: string
 }
 
-export type GetDataStartAction = {
-    type: typeof GET_DATA_START,
+export type GetFetchStartAction = {
+    type: typeof GET_FETCH_START,
 }
 
-export type GetDataSuccessAction = {
-    type: typeof GET_DATA_SUCCESS,
-    payload: IStructureDefinition[]
+export type GetIdsSuccessAction = {
+    type: typeof GET_IDS_SUCCESS,
+    payload: DataFetched[],
 }
 
-export type GetDataFailureAction = {
-    type: typeof GET_DATA_FAILURE,
+export type GetIdsFailureAction = {
+    type: typeof GET_IDS_FAILURE,
+    payload: Error
+}
+
+export type GetStructureDefSuccessAction = {
+    type: typeof GET_STRUCTUREDEF_SUCCESS,
+    payload: IStructureDefinition | null,
+}
+
+export type GetStructureDefFailureAction = {
+    type: typeof GET_STRUCTUREDEF_FAILURE,
     payload: Error
 }
 
 export const selectResource = (id: string): SelectResourceAction => {
     return {
         type: SELECT_RESOURCE,
-        id
+        payload: id 
     }
 }
 
-export const getDataStart = (): GetDataStartAction => {
+export const getFetchStart = (): GetFetchStartAction => {
     return {
-        type: GET_DATA_START
+        type: GET_FETCH_START
     }
 }
 
-export const getDataSuccess = (allDatas: IStructureDefinition[]): GetDataSuccessAction => {
+export const getIdsSuccess = (data: DataFetched[]): GetIdsSuccessAction => {
     return {
-        type: GET_DATA_SUCCESS,
-        payload: allDatas
+        type: GET_IDS_SUCCESS,
+        payload: data
     }
 }
 
-export const getDataFailure = (error: Error): GetDataFailureAction => {
+export const getIdsFailure = (error: Error): GetIdsFailureAction => {
     return {
-        type: GET_DATA_FAILURE,
+        type: GET_IDS_FAILURE,
+        payload: error
+    }
+}
+
+export const getStructureDefSuccess = (data: IStructureDefinition): GetStructureDefSuccessAction => {
+    return {
+        type: GET_STRUCTUREDEF_SUCCESS,
+        payload: data
+    }
+}
+
+export const getStructureDefFailure = (error: Error): GetStructureDefFailureAction => {
+    return {
+        type: GET_STRUCTUREDEF_FAILURE,
         payload: error
     }
 }

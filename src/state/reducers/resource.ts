@@ -1,10 +1,13 @@
 import { R4 } from '@ahryman40k/ts-fhir-types';
-import { ResourceAction, SELECT_RESOURCE, GET_DATA_SUCCESS, GetDataFailureAction, GetDataStartAction, GetDataSuccessAction, GET_DATA_START, GET_DATA_FAILURE } from '../actions/resourceActions';
-import { IStructureDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
+import { ResourceAction, SELECT_RESOURCE, GET_IDS_SUCCESS, GetIdsFailureAction, GetFetchStartAction, GetIdsSuccessAction, GET_FETCH_START, GET_IDS_FAILURE, GetStructureDefFailureAction, GetStructureDefSuccessAction, GET_STRUCTUREDEF_SUCCESS, GET_STRUCTUREDEF_FAILURE } from '../actions/resourceActions';
+
+export type DataFetched = {
+    id: string
+}
 
 export type ResourceState = {
-    data: R4.IStructureDefinition[];
-    profiles: R4.IStructureDefinition[];
+    data: DataFetched[];
+    profile: R4.IStructureDefinition | null;
     selectedResourceId: string | null;
     selectedAttributeId: string | null;
     loading: boolean;
@@ -13,41 +16,55 @@ export type ResourceState = {
 
 const initialState: ResourceState = {
     data: [],
-    profiles: [],
+    profile: null,
     selectedResourceId: null,
     selectedAttributeId: null,
     loading: false,
     error: null
 }
 
-export type AllResourcesAction = GetDataFailureAction | GetDataStartAction | GetDataSuccessAction | ResourceAction;
+export type AllResourcesAction = GetIdsFailureAction | GetFetchStartAction | GetIdsSuccessAction | ResourceAction | GetStructureDefFailureAction | GetStructureDefSuccessAction;
 
 export const resource = (state: ResourceState = initialState, action: AllResourcesAction): ResourceState => {
     switch (action.type) {
         case SELECT_RESOURCE:
             return {
                 ...state,
-                selectedResourceId: action.id
+                selectedResourceId: action.payload
             }
-        case GET_DATA_START:
+        case GET_FETCH_START:
             return {
                 ...state,
                 loading: true
             }
-        case GET_DATA_SUCCESS:
+        case GET_IDS_SUCCESS:
             return {
                 ...state,
                 loading: false,
                 data: action.payload,
                 error: null
             }
-        case GET_DATA_FAILURE:
+        case GET_IDS_FAILURE:
             return {
                 ...state,
                 loading: false,
                 data: [],
                 error: action.payload
             }
+        case GET_STRUCTUREDEF_SUCCESS:
+            return {
+                ...state,
+                loading: false,
+                profile: action.payload,
+                error: null
+            }
+        case GET_STRUCTUREDEF_FAILURE:
+            return {
+                ...state,
+                loading: false,
+                profile: null,
+                error: action.payload
+            } 
         default:
             return state;
     }

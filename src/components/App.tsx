@@ -1,18 +1,25 @@
 import React from "react";
-import initStore from '../state/store';
+import {store, persistor} from '../state/store';
 import { Provider } from 'react-redux';
 import Homepage from './homepage/Homepage';
-import { getData } from "../state/thunkMiddleware";
-
-
-const store = initStore()
+import { requestIds } from "../state/thunkMiddleware";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Editor from "./editor/Editor";
+import { PersistGate } from "redux-persist/integration/react";
 
 const App = () => {
   /* @ts-ignore */
-  store.dispatch(getData())
+  store.dispatch(requestIds());
   return (
     <Provider store={store}>
-      <Homepage />
+      <PersistGate loading={null} persistor={persistor}>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Homepage} />
+          <Route path="/editprofile" component={Editor} />
+        </Switch>
+      </Router>
+      </PersistGate>
     </Provider>
   );
 }

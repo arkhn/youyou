@@ -2,19 +2,34 @@ import api from '../services/api';
 import { ThunkDispatch } from "redux-thunk";
 import { RootState } from "./store";
 import { Action } from 'redux';
-import { getDataStart, getDataSuccess, getDataFailure } from './actions/resourceActions';
+import { getFetchStart, getIdsSuccess, getIdsFailure, getStructureDefSuccess, getStructureDefFailure } from './actions/resourceActions';
 import { FetchedData } from './../types'
+import { AxiosResponse } from 'axios';
 
-export const getData = () => {
+// FETCH ALL RESOURCE IDS
+export const requestIds = () => {
     return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
-        dispatch(getDataStart())
-        const response = await api.get('/StructureDefinition?kind=resource&derivation=specialization&_count=150')
+        dispatch(getFetchStart())
+        const response: AxiosResponse<any> = await api.get(`/StructureDefinition?kind=resource&derivation=specialization&_elements=id&_count=150`)
         if (response.status === 200) {
-            dispatch(getDataSuccess(response.data.entry.map((result: FetchedData) => {
+            dispatch(getIdsSuccess(response.data.entry.map((result: FetchedData) => {
                 return result.resource
             })))
         } else {
-            dispatch(getDataFailure(new Error(response.statusText)))
+            dispatch(getIdsFailure(new Error(response.statusText)))
+        }
+    }
+}
+
+// FETCH RESOURCE SELECTED
+export const requestResource = (resource: string) => {
+    return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
+        dispatch(getFetchStart())
+        const response: AxiosResponse<any> = await api.get(`/StructureDefinition?kind=resource&derivation=specialization&id=${resource}`)
+        if (response.status === 200) {
+            dispatch(getStructureDefSuccess(response.data.entry[0].resource))
+        } else {
+            dispatch(getStructureDefFailure(new Error(response.statusText)))
         }
     }
 }
