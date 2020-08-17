@@ -7,6 +7,7 @@ export const GET_IDS_SUCCESS = 'GET_IDS_SUCCESS';
 export const GET_IDS_FAILURE = 'GET_IDS_FAILURE';
 export const GET_STRUCTUREDEF_SUCCESS = 'GET_STRUCTUREDEF_SUCCESS';
 export const GET_STRUCTUREDEF_FAILURE = 'GET_STRUCTUREDEF_FAILURE';
+export const SELECT_ATTRIBUTE = 'SELECT_ATTRIBUTE';
 
 
 export type SelectResourceAction = {
@@ -36,6 +37,11 @@ export type GetStructureDefSuccessAction = {
 export type GetStructureDefFailureAction = {
     type: typeof GET_STRUCTUREDEF_FAILURE,
     payload: Error
+}
+
+export type SelectAttributeAction = {
+    type: typeof SELECT_ATTRIBUTE,
+    payload: string | null,
 }
 
 export const selectResource = (id: string): SelectResourceAction => {
@@ -76,6 +82,13 @@ export const getStructureDefFailure = (error: Error): GetStructureDefFailureActi
     return {
         type: GET_STRUCTUREDEF_FAILURE,
         payload: error
+    }
+}
+
+export const selectAttributeId = (data: string): SelectAttributeAction => {
+    return {
+        type: SELECT_ATTRIBUTE,
+        payload: data
     }
 }
 

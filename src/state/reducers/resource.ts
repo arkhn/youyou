@@ -1,5 +1,5 @@
 import { R4 } from '@ahryman40k/ts-fhir-types';
-import { ResourceAction, SELECT_RESOURCE, GET_IDS_SUCCESS, GetIdsFailureAction, GetFetchStartAction, GetIdsSuccessAction, GET_FETCH_START, GET_IDS_FAILURE, GetStructureDefFailureAction, GetStructureDefSuccessAction, GET_STRUCTUREDEF_SUCCESS, GET_STRUCTUREDEF_FAILURE } from '../actions/resourceActions';
+import { ResourceAction, SELECT_RESOURCE, GET_IDS_SUCCESS, GetIdsFailureAction, GetFetchStartAction, GetIdsSuccessAction, GET_FETCH_START, GET_IDS_FAILURE, GetStructureDefFailureAction, GetStructureDefSuccessAction, GET_STRUCTUREDEF_SUCCESS, GET_STRUCTUREDEF_FAILURE, SELECT_ATTRIBUTE, SelectAttributeAction } from '../actions/resourceActions';
 
 export type DataFetched = {
     id: string
@@ -23,7 +23,7 @@ const initialState: ResourceState = {
     error: null
 }
 
-export type AllResourcesAction = GetIdsFailureAction | GetFetchStartAction | GetIdsSuccessAction | ResourceAction | GetStructureDefFailureAction | GetStructureDefSuccessAction;
+export type AllResourcesAction = GetIdsFailureAction | GetFetchStartAction | GetIdsSuccessAction | ResourceAction | GetStructureDefFailureAction | GetStructureDefSuccessAction | SelectAttributeAction;
 
 export const resource = (state: ResourceState = initialState, action: AllResourcesAction): ResourceState => {
     switch (action.type) {
@@ -65,6 +65,11 @@ export const resource = (state: ResourceState = initialState, action: AllResourc
                 profile: null,
                 error: action.payload
             } 
+        case SELECT_ATTRIBUTE :
+            return {
+                ...state,
+                selectedAttributeId: action.payload
+            }
         default:
             return state;
     }
