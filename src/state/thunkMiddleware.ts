@@ -3,7 +3,7 @@ import { ThunkDispatch } from "redux-thunk";
 import { RootState } from "./store";
 import { Action } from 'redux';
 import { getFetchStart, getIdsSuccess, getIdsFailure, getStructureDefSuccess, getStructureDefFailure } from './actions/resourceActions';
-import { FetchedData } from './../types'
+import { FetchedData } from './../types';
 import { AxiosResponse } from 'axios';
 
 // FETCH ALL RESOURCE IDS

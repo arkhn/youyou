@@ -13,10 +13,9 @@ const ResourceProfileMapping: React.FC<ResourceProfileMappingProps > = ({profile
 
     const renderTree: JSX.Element[] | undefined = attributes?.map((attribute) => {
         return (
-            <p key={attribute.id} onClick={() => dispatch(selectAttributeId(attribute.id as string))}>{attribute.id}</p>
+            <div key={attribute.id} onClick={() => dispatch(selectAttributeId(attribute.id as string))}>{attribute.id}</div>
         );
     });
-
 
     return (
         <div>

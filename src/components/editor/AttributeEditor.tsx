@@ -6,12 +6,7 @@ type AttributeEditorProps = {
 }
 
 const AttributeEditor: React.FC<AttributeEditorProps> = ({attribute}) =>  {
-    console.log(attribute?.min , attribute?.max)
-
-    // 0...*    00  01  0*  11  1*
-    
     const isDisabledInput = (cardiMin: any, cardiMax: any, min: Number, max: String) => {
-        console.log(min, max, cardiMin, cardiMax)
         if (min >= cardiMin){
             if (cardiMax === "1"){
                 if (max === "1" || max ==="0"){
@@ -26,13 +21,11 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({attribute}) =>  {
         return true;
     }
 
- 
     const handleCardinality = (cardiMin: any, cardiMax: any) => {
-        console.log(cardiMin, cardiMax)
         return (
             <form>
                 <input type="text" placeholder="0" /><br />
-                <input type="text" placeholder={cardiMax} /><br />
+                <input type="text" placeholder="*" /><br />
                 <input type="button" value="0...0" disabled={isDisabledInput(cardiMin, cardiMax, 0, "0")} /><br />
                 <input type="button" value="0...1" disabled={isDisabledInput(cardiMin, cardiMax, 0, "1")}/><br />
                 <input type="button" value="0...*" disabled={isDisabledInput(cardiMin, cardiMax, 0, "*")}/><br />
@@ -41,7 +34,6 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({attribute}) =>  {
             </form>
         )
     }
-
 
     return (
         <>

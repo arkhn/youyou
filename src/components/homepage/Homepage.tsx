@@ -23,9 +23,7 @@ const Homepage: React.FC<{}> = () => {
                     (): void => {
                         dispatchResourceSelected(data);
                     }
-                }>
-                    {data.id}
-                </button>
+                }>{data.id}</button>
             </Link>
         );
     })
