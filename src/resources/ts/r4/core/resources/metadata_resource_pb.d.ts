@@ -33,19 +33,19 @@ export class MetadataResource extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasUrl(): boolean;
@@ -88,9 +88,9 @@ export class MetadataResource extends jspb.Message {
   getPublisher(): proto_r4_core_datatypes_pb.String | undefined;
   setPublisher(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearContactList(): void;
-  getContactList(): Array<proto_r4_core_datatypes_pb.ContactDetail>;
-  setContactList(value: Array<proto_r4_core_datatypes_pb.ContactDetail>): void;
+  clearContact(): void;
+  getContact(): Array<proto_r4_core_datatypes_pb.ContactDetail>;
+  setContact(value: Array<proto_r4_core_datatypes_pb.ContactDetail>): void;
   addContact(value?: proto_r4_core_datatypes_pb.ContactDetail, index?: number): proto_r4_core_datatypes_pb.ContactDetail;
 
   hasDescription(): boolean;
@@ -98,14 +98,14 @@ export class MetadataResource extends jspb.Message {
   getDescription(): proto_r4_core_datatypes_pb.Markdown | undefined;
   setDescription(value?: proto_r4_core_datatypes_pb.Markdown): void;
 
-  clearUseContextList(): void;
-  getUseContextList(): Array<proto_r4_core_datatypes_pb.UsageContext>;
-  setUseContextList(value: Array<proto_r4_core_datatypes_pb.UsageContext>): void;
+  clearUseContext(): void;
+  getUseContext(): Array<proto_r4_core_datatypes_pb.UsageContext>;
+  setUseContext(value: Array<proto_r4_core_datatypes_pb.UsageContext>): void;
   addUseContext(value?: proto_r4_core_datatypes_pb.UsageContext, index?: number): proto_r4_core_datatypes_pb.UsageContext;
 
-  clearJurisdictionList(): void;
-  getJurisdictionList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setJurisdictionList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearJurisdiction(): void;
+  getJurisdiction(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setJurisdiction(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addJurisdiction(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   serializeBinary(): Uint8Array;
@@ -125,9 +125,9 @@ export namespace MetadataResource {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     url?: proto_r4_core_datatypes_pb.Uri.AsObject,
     version?: proto_r4_core_datatypes_pb.String.AsObject,
     name?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -136,10 +136,10 @@ export namespace MetadataResource {
     experimental?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     publisher?: proto_r4_core_datatypes_pb.String.AsObject,
-    contactList: Array<proto_r4_core_datatypes_pb.ContactDetail.AsObject>,
+    contact: Array<proto_r4_core_datatypes_pb.ContactDetail.AsObject>,
     description?: proto_r4_core_datatypes_pb.Markdown.AsObject,
-    useContextList: Array<proto_r4_core_datatypes_pb.UsageContext.AsObject>,
-    jurisdictionList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    useContext: Array<proto_r4_core_datatypes_pb.UsageContext.AsObject>,
+    jurisdiction: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -151,9 +151,9 @@ export namespace MetadataResource {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -170,7 +170,7 @@ export namespace MetadataResource {
     export type AsObject = {
       value: proto_r4_core_codes_pb.PublicationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.PublicationStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 }

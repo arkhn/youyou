@@ -33,24 +33,24 @@ export class Practitioner extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasActive(): boolean;
@@ -58,19 +58,19 @@ export class Practitioner extends jspb.Message {
   getActive(): proto_r4_core_datatypes_pb.Boolean | undefined;
   setActive(value?: proto_r4_core_datatypes_pb.Boolean): void;
 
-  clearNameList(): void;
-  getNameList(): Array<proto_r4_core_datatypes_pb.HumanName>;
-  setNameList(value: Array<proto_r4_core_datatypes_pb.HumanName>): void;
+  clearName(): void;
+  getName(): Array<proto_r4_core_datatypes_pb.HumanName>;
+  setName(value: Array<proto_r4_core_datatypes_pb.HumanName>): void;
   addName(value?: proto_r4_core_datatypes_pb.HumanName, index?: number): proto_r4_core_datatypes_pb.HumanName;
 
-  clearTelecomList(): void;
-  getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearTelecom(): void;
+  getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
-  clearAddressList(): void;
-  getAddressList(): Array<proto_r4_core_datatypes_pb.Address>;
-  setAddressList(value: Array<proto_r4_core_datatypes_pb.Address>): void;
+  clearAddress(): void;
+  getAddress(): Array<proto_r4_core_datatypes_pb.Address>;
+  setAddress(value: Array<proto_r4_core_datatypes_pb.Address>): void;
   addAddress(value?: proto_r4_core_datatypes_pb.Address, index?: number): proto_r4_core_datatypes_pb.Address;
 
   hasGender(): boolean;
@@ -83,19 +83,19 @@ export class Practitioner extends jspb.Message {
   getBirthDate(): proto_r4_core_datatypes_pb.Date | undefined;
   setBirthDate(value?: proto_r4_core_datatypes_pb.Date): void;
 
-  clearPhotoList(): void;
-  getPhotoList(): Array<proto_r4_core_datatypes_pb.Attachment>;
-  setPhotoList(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
+  clearPhoto(): void;
+  getPhoto(): Array<proto_r4_core_datatypes_pb.Attachment>;
+  setPhoto(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
   addPhoto(value?: proto_r4_core_datatypes_pb.Attachment, index?: number): proto_r4_core_datatypes_pb.Attachment;
 
-  clearQualificationList(): void;
-  getQualificationList(): Array<Practitioner.Qualification>;
-  setQualificationList(value: Array<Practitioner.Qualification>): void;
+  clearQualification(): void;
+  getQualification(): Array<Practitioner.Qualification>;
+  setQualification(value: Array<Practitioner.Qualification>): void;
   addQualification(value?: Practitioner.Qualification, index?: number): Practitioner.Qualification;
 
-  clearCommunicationList(): void;
-  getCommunicationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCommunicationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCommunication(): void;
+  getCommunication(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCommunication(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCommunication(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   serializeBinary(): Uint8Array;
@@ -115,19 +115,19 @@ export namespace Practitioner {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     active?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-    nameList: Array<proto_r4_core_datatypes_pb.HumanName.AsObject>,
-    telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
-    addressList: Array<proto_r4_core_datatypes_pb.Address.AsObject>,
+    name: Array<proto_r4_core_datatypes_pb.HumanName.AsObject>,
+    telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    address: Array<proto_r4_core_datatypes_pb.Address.AsObject>,
     gender?: Practitioner.GenderCode.AsObject,
     birthDate?: proto_r4_core_datatypes_pb.Date.AsObject,
-    photoList: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
-    qualificationList: Array<Practitioner.Qualification.AsObject>,
-    communicationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    photo: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
+    qualification: Array<Practitioner.Qualification.AsObject>,
+    communication: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
   }
 
   export class GenderCode extends jspb.Message {
@@ -139,9 +139,9 @@ export namespace Practitioner {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -158,7 +158,7 @@ export namespace Practitioner {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AdministrativeGenderCode.ValueMap[keyof proto_r4_core_codes_pb.AdministrativeGenderCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -168,19 +168,19 @@ export namespace Practitioner {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearIdentifierList(): void;
-    getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-    setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+    clearIdentifier(): void;
+    getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+    setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
     addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
     hasCode(): boolean;
@@ -211,9 +211,9 @@ export namespace Practitioner {
   export namespace Qualification {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       period?: proto_r4_core_datatypes_pb.Period.AsObject,
       issuer?: proto_r4_core_datatypes_pb.Reference.AsObject,

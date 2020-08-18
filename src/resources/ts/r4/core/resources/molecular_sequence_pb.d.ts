@@ -33,24 +33,24 @@ export class MolecularSequence extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasType(): boolean;
@@ -93,9 +93,9 @@ export class MolecularSequence extends jspb.Message {
   getReferenceSeq(): MolecularSequence.ReferenceSeq | undefined;
   setReferenceSeq(value?: MolecularSequence.ReferenceSeq): void;
 
-  clearVariantList(): void;
-  getVariantList(): Array<MolecularSequence.Variant>;
-  setVariantList(value: Array<MolecularSequence.Variant>): void;
+  clearVariant(): void;
+  getVariant(): Array<MolecularSequence.Variant>;
+  setVariant(value: Array<MolecularSequence.Variant>): void;
   addVariant(value?: MolecularSequence.Variant, index?: number): MolecularSequence.Variant;
 
   hasObservedSeq(): boolean;
@@ -103,9 +103,9 @@ export class MolecularSequence extends jspb.Message {
   getObservedSeq(): proto_r4_core_datatypes_pb.String | undefined;
   setObservedSeq(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearQualityList(): void;
-  getQualityList(): Array<MolecularSequence.Quality>;
-  setQualityList(value: Array<MolecularSequence.Quality>): void;
+  clearQuality(): void;
+  getQuality(): Array<MolecularSequence.Quality>;
+  setQuality(value: Array<MolecularSequence.Quality>): void;
   addQuality(value?: MolecularSequence.Quality, index?: number): MolecularSequence.Quality;
 
   hasReadCoverage(): boolean;
@@ -113,19 +113,19 @@ export class MolecularSequence extends jspb.Message {
   getReadCoverage(): proto_r4_core_datatypes_pb.Integer | undefined;
   setReadCoverage(value?: proto_r4_core_datatypes_pb.Integer): void;
 
-  clearRepositoryList(): void;
-  getRepositoryList(): Array<MolecularSequence.Repository>;
-  setRepositoryList(value: Array<MolecularSequence.Repository>): void;
+  clearRepository(): void;
+  getRepository(): Array<MolecularSequence.Repository>;
+  setRepository(value: Array<MolecularSequence.Repository>): void;
   addRepository(value?: MolecularSequence.Repository, index?: number): MolecularSequence.Repository;
 
-  clearPointerList(): void;
-  getPointerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPointerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPointer(): void;
+  getPointer(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPointer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPointer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearStructureVariantList(): void;
-  getStructureVariantList(): Array<MolecularSequence.StructureVariant>;
-  setStructureVariantList(value: Array<MolecularSequence.StructureVariant>): void;
+  clearStructureVariant(): void;
+  getStructureVariant(): Array<MolecularSequence.StructureVariant>;
+  setStructureVariant(value: Array<MolecularSequence.StructureVariant>): void;
   addStructureVariant(value?: MolecularSequence.StructureVariant, index?: number): MolecularSequence.StructureVariant;
 
   serializeBinary(): Uint8Array;
@@ -145,10 +145,10 @@ export namespace MolecularSequence {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     type?: MolecularSequence.TypeCode.AsObject,
     coordinateSystem?: proto_r4_core_datatypes_pb.Integer.AsObject,
     patient?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -157,13 +157,13 @@ export namespace MolecularSequence {
     performer?: proto_r4_core_datatypes_pb.Reference.AsObject,
     quantity?: proto_r4_core_datatypes_pb.Quantity.AsObject,
     referenceSeq?: MolecularSequence.ReferenceSeq.AsObject,
-    variantList: Array<MolecularSequence.Variant.AsObject>,
+    variant: Array<MolecularSequence.Variant.AsObject>,
     observedSeq?: proto_r4_core_datatypes_pb.String.AsObject,
-    qualityList: Array<MolecularSequence.Quality.AsObject>,
+    quality: Array<MolecularSequence.Quality.AsObject>,
     readCoverage?: proto_r4_core_datatypes_pb.Integer.AsObject,
-    repositoryList: Array<MolecularSequence.Repository.AsObject>,
-    pointerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    structureVariantList: Array<MolecularSequence.StructureVariant.AsObject>,
+    repository: Array<MolecularSequence.Repository.AsObject>,
+    pointer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    structureVariant: Array<MolecularSequence.StructureVariant.AsObject>,
   }
 
   export class TypeCode extends jspb.Message {
@@ -175,9 +175,9 @@ export namespace MolecularSequence {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -194,7 +194,7 @@ export namespace MolecularSequence {
     export type AsObject = {
       value: proto_r4_core_codes_pb.SequenceTypeCode.ValueMap[keyof proto_r4_core_codes_pb.SequenceTypeCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -204,14 +204,14 @@ export namespace MolecularSequence {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasChromosome(): boolean;
@@ -272,8 +272,8 @@ export namespace MolecularSequence {
   export namespace ReferenceSeq {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       chromosome?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       genomeBuild?: proto_r4_core_datatypes_pb.String.AsObject,
       orientation?: MolecularSequence.ReferenceSeq.OrientationCode.AsObject,
@@ -294,9 +294,9 @@ export namespace MolecularSequence {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -313,7 +313,7 @@ export namespace MolecularSequence {
       export type AsObject = {
         value: proto_r4_core_codes_pb.OrientationTypeCode.ValueMap[keyof proto_r4_core_codes_pb.OrientationTypeCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
 
@@ -326,9 +326,9 @@ export namespace MolecularSequence {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -345,7 +345,7 @@ export namespace MolecularSequence {
       export type AsObject = {
         value: proto_r4_core_codes_pb.StrandTypeCode.ValueMap[keyof proto_r4_core_codes_pb.StrandTypeCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -356,14 +356,14 @@ export namespace MolecularSequence {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasStart(): boolean;
@@ -409,8 +409,8 @@ export namespace MolecularSequence {
   export namespace Variant {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       start?: proto_r4_core_datatypes_pb.Integer.AsObject,
       end?: proto_r4_core_datatypes_pb.Integer.AsObject,
       observedAllele?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -426,14 +426,14 @@ export namespace MolecularSequence {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -524,8 +524,8 @@ export namespace MolecularSequence {
   export namespace Quality {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: MolecularSequence.Quality.TypeCode.AsObject,
       standardSequence?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       start?: proto_r4_core_datatypes_pb.Integer.AsObject,
@@ -552,9 +552,9 @@ export namespace MolecularSequence {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -571,7 +571,7 @@ export namespace MolecularSequence {
       export type AsObject = {
         value: proto_r4_core_codes_pb.QualityTypeCode.ValueMap[keyof proto_r4_core_codes_pb.QualityTypeCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
 
@@ -581,49 +581,49 @@ export namespace MolecularSequence {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearScoreList(): void;
-      getScoreList(): Array<proto_r4_core_datatypes_pb.Integer>;
-      setScoreList(value: Array<proto_r4_core_datatypes_pb.Integer>): void;
+      clearScore(): void;
+      getScore(): Array<proto_r4_core_datatypes_pb.Integer>;
+      setScore(value: Array<proto_r4_core_datatypes_pb.Integer>): void;
       addScore(value?: proto_r4_core_datatypes_pb.Integer, index?: number): proto_r4_core_datatypes_pb.Integer;
 
-      clearNumTpList(): void;
-      getNumTpList(): Array<proto_r4_core_datatypes_pb.Integer>;
-      setNumTpList(value: Array<proto_r4_core_datatypes_pb.Integer>): void;
+      clearNumTp(): void;
+      getNumTp(): Array<proto_r4_core_datatypes_pb.Integer>;
+      setNumTp(value: Array<proto_r4_core_datatypes_pb.Integer>): void;
       addNumTp(value?: proto_r4_core_datatypes_pb.Integer, index?: number): proto_r4_core_datatypes_pb.Integer;
 
-      clearNumFpList(): void;
-      getNumFpList(): Array<proto_r4_core_datatypes_pb.Integer>;
-      setNumFpList(value: Array<proto_r4_core_datatypes_pb.Integer>): void;
+      clearNumFp(): void;
+      getNumFp(): Array<proto_r4_core_datatypes_pb.Integer>;
+      setNumFp(value: Array<proto_r4_core_datatypes_pb.Integer>): void;
       addNumFp(value?: proto_r4_core_datatypes_pb.Integer, index?: number): proto_r4_core_datatypes_pb.Integer;
 
-      clearNumFnList(): void;
-      getNumFnList(): Array<proto_r4_core_datatypes_pb.Integer>;
-      setNumFnList(value: Array<proto_r4_core_datatypes_pb.Integer>): void;
+      clearNumFn(): void;
+      getNumFn(): Array<proto_r4_core_datatypes_pb.Integer>;
+      setNumFn(value: Array<proto_r4_core_datatypes_pb.Integer>): void;
       addNumFn(value?: proto_r4_core_datatypes_pb.Integer, index?: number): proto_r4_core_datatypes_pb.Integer;
 
-      clearPrecisionList(): void;
-      getPrecisionList(): Array<proto_r4_core_datatypes_pb.Decimal>;
-      setPrecisionList(value: Array<proto_r4_core_datatypes_pb.Decimal>): void;
+      clearPrecision(): void;
+      getPrecision(): Array<proto_r4_core_datatypes_pb.Decimal>;
+      setPrecision(value: Array<proto_r4_core_datatypes_pb.Decimal>): void;
       addPrecision(value?: proto_r4_core_datatypes_pb.Decimal, index?: number): proto_r4_core_datatypes_pb.Decimal;
 
-      clearSensitivityList(): void;
-      getSensitivityList(): Array<proto_r4_core_datatypes_pb.Decimal>;
-      setSensitivityList(value: Array<proto_r4_core_datatypes_pb.Decimal>): void;
+      clearSensitivity(): void;
+      getSensitivity(): Array<proto_r4_core_datatypes_pb.Decimal>;
+      setSensitivity(value: Array<proto_r4_core_datatypes_pb.Decimal>): void;
       addSensitivity(value?: proto_r4_core_datatypes_pb.Decimal, index?: number): proto_r4_core_datatypes_pb.Decimal;
 
-      clearFMeasureList(): void;
-      getFMeasureList(): Array<proto_r4_core_datatypes_pb.Decimal>;
-      setFMeasureList(value: Array<proto_r4_core_datatypes_pb.Decimal>): void;
+      clearFMeasure(): void;
+      getFMeasure(): Array<proto_r4_core_datatypes_pb.Decimal>;
+      setFMeasure(value: Array<proto_r4_core_datatypes_pb.Decimal>): void;
       addFMeasure(value?: proto_r4_core_datatypes_pb.Decimal, index?: number): proto_r4_core_datatypes_pb.Decimal;
 
       serializeBinary(): Uint8Array;
@@ -639,15 +639,15 @@ export namespace MolecularSequence {
     export namespace Roc {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        scoreList: Array<proto_r4_core_datatypes_pb.Integer.AsObject>,
-        numTpList: Array<proto_r4_core_datatypes_pb.Integer.AsObject>,
-        numFpList: Array<proto_r4_core_datatypes_pb.Integer.AsObject>,
-        numFnList: Array<proto_r4_core_datatypes_pb.Integer.AsObject>,
-        precisionList: Array<proto_r4_core_datatypes_pb.Decimal.AsObject>,
-        sensitivityList: Array<proto_r4_core_datatypes_pb.Decimal.AsObject>,
-        fMeasureList: Array<proto_r4_core_datatypes_pb.Decimal.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        score: Array<proto_r4_core_datatypes_pb.Integer.AsObject>,
+        numTp: Array<proto_r4_core_datatypes_pb.Integer.AsObject>,
+        numFp: Array<proto_r4_core_datatypes_pb.Integer.AsObject>,
+        numFn: Array<proto_r4_core_datatypes_pb.Integer.AsObject>,
+        precision: Array<proto_r4_core_datatypes_pb.Decimal.AsObject>,
+        sensitivity: Array<proto_r4_core_datatypes_pb.Decimal.AsObject>,
+        fMeasure: Array<proto_r4_core_datatypes_pb.Decimal.AsObject>,
       }
     }
   }
@@ -658,14 +658,14 @@ export namespace MolecularSequence {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -711,8 +711,8 @@ export namespace MolecularSequence {
   export namespace Repository {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: MolecularSequence.Repository.TypeCode.AsObject,
       url?: proto_r4_core_datatypes_pb.Uri.AsObject,
       name?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -730,9 +730,9 @@ export namespace MolecularSequence {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -749,7 +749,7 @@ export namespace MolecularSequence {
       export type AsObject = {
         value: proto_r4_core_codes_pb.RepositoryTypeCode.ValueMap[keyof proto_r4_core_codes_pb.RepositoryTypeCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -760,14 +760,14 @@ export namespace MolecularSequence {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasVariantType(): boolean;
@@ -808,8 +808,8 @@ export namespace MolecularSequence {
   export namespace StructureVariant {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       variantType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       exact?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       length?: proto_r4_core_datatypes_pb.Integer.AsObject,
@@ -823,14 +823,14 @@ export namespace MolecularSequence {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasStart(): boolean;
@@ -856,8 +856,8 @@ export namespace MolecularSequence {
     export namespace Outer {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         start?: proto_r4_core_datatypes_pb.Integer.AsObject,
         end?: proto_r4_core_datatypes_pb.Integer.AsObject,
       }
@@ -869,14 +869,14 @@ export namespace MolecularSequence {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasStart(): boolean;
@@ -902,8 +902,8 @@ export namespace MolecularSequence {
     export namespace Inner {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         start?: proto_r4_core_datatypes_pb.Integer.AsObject,
         end?: proto_r4_core_datatypes_pb.Integer.AsObject,
       }

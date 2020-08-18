@@ -34,49 +34,49 @@ export class CarePlan extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearInstantiatesCanonicalList(): void;
-  getInstantiatesCanonicalList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-  setInstantiatesCanonicalList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+  clearInstantiatesCanonical(): void;
+  getInstantiatesCanonical(): Array<proto_r4_core_datatypes_pb.Canonical>;
+  setInstantiatesCanonical(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
   addInstantiatesCanonical(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
-  clearInstantiatesUriList(): void;
-  getInstantiatesUriList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setInstantiatesUriList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearInstantiatesUri(): void;
+  getInstantiatesUri(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setInstantiatesUri(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addInstantiatesUri(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearReplacesList(): void;
-  getReplacesList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReplacesList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReplaces(): void;
+  getReplaces(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReplaces(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReplaces(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearPartOfList(): void;
-  getPartOfList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPartOfList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPartOf(): void;
+  getPartOf(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPartOf(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPartOf(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -89,9 +89,9 @@ export class CarePlan extends jspb.Message {
   getIntent(): CarePlan.IntentCode | undefined;
   setIntent(value?: CarePlan.IntentCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasTitle(): boolean;
@@ -129,39 +129,39 @@ export class CarePlan extends jspb.Message {
   getAuthor(): proto_r4_core_datatypes_pb.Reference | undefined;
   setAuthor(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearContributorList(): void;
-  getContributorList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setContributorList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearContributor(): void;
+  getContributor(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setContributor(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addContributor(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearCareTeamList(): void;
-  getCareTeamList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setCareTeamList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearCareTeam(): void;
+  getCareTeam(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setCareTeam(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addCareTeam(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearAddressesList(): void;
-  getAddressesList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setAddressesList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearAddresses(): void;
+  getAddresses(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setAddresses(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addAddresses(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearSupportingInfoList(): void;
-  getSupportingInfoList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSupportingInfoList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSupportingInfo(): void;
+  getSupportingInfo(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSupportingInfo(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSupportingInfo(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearGoalList(): void;
-  getGoalList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setGoalList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearGoal(): void;
+  getGoal(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setGoal(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addGoal(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearActivityList(): void;
-  getActivityList(): Array<CarePlan.Activity>;
-  setActivityList(value: Array<CarePlan.Activity>): void;
+  clearActivity(): void;
+  getActivity(): Array<CarePlan.Activity>;
+  setActivity(value: Array<CarePlan.Activity>): void;
   addActivity(value?: CarePlan.Activity, index?: number): CarePlan.Activity;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   serializeBinary(): Uint8Array;
@@ -181,18 +181,18 @@ export namespace CarePlan {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    instantiatesCanonicalList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
-    instantiatesUriList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    replacesList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    partOfList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    instantiatesCanonical: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+    instantiatesUri: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    replaces: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    partOf: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: CarePlan.StatusCode.AsObject,
     intent?: CarePlan.IntentCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     title?: proto_r4_core_datatypes_pb.String.AsObject,
     description?: proto_r4_core_datatypes_pb.String.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -200,13 +200,13 @@ export namespace CarePlan {
     period?: proto_r4_core_datatypes_pb.Period.AsObject,
     created?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     author?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    contributorList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    careTeamList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    addressesList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    supportingInfoList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    goalList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    activityList: Array<CarePlan.Activity.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    contributor: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    careTeam: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    addresses: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    supportingInfo: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    goal: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    activity: Array<CarePlan.Activity.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -218,9 +218,9 @@ export namespace CarePlan {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -237,7 +237,7 @@ export namespace CarePlan {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestStatusCode.ValueMap[keyof proto_r4_core_codes_pb.RequestStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -250,9 +250,9 @@ export namespace CarePlan {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -269,7 +269,7 @@ export namespace CarePlan {
     export type AsObject = {
       value: proto_r4_core_valuesets_pb.CarePlanIntentValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.CarePlanIntentValueSet.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -279,29 +279,29 @@ export namespace CarePlan {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearOutcomeCodeableConceptList(): void;
-    getOutcomeCodeableConceptList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setOutcomeCodeableConceptList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearOutcomeCodeableConcept(): void;
+    getOutcomeCodeableConcept(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setOutcomeCodeableConcept(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addOutcomeCodeableConcept(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearOutcomeReferenceList(): void;
-    getOutcomeReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setOutcomeReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearOutcomeReference(): void;
+    getOutcomeReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setOutcomeReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addOutcomeReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-    clearProgressList(): void;
-    getProgressList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-    setProgressList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+    clearProgress(): void;
+    getProgress(): Array<proto_r4_core_datatypes_pb.Annotation>;
+    setProgress(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
     addProgress(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
     hasReference(): boolean;
@@ -327,11 +327,11 @@ export namespace CarePlan {
   export namespace Activity {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      outcomeCodeableConceptList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      outcomeReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-      progressList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      outcomeCodeableConcept: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      outcomeReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      progress: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
       reference?: proto_r4_core_datatypes_pb.Reference.AsObject,
       detail?: CarePlan.Activity.Detail.AsObject,
     }
@@ -342,14 +342,14 @@ export namespace CarePlan {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasKind(): boolean;
@@ -357,14 +357,14 @@ export namespace CarePlan {
       getKind(): CarePlan.Activity.Detail.KindCode | undefined;
       setKind(value?: CarePlan.Activity.Detail.KindCode): void;
 
-      clearInstantiatesCanonicalList(): void;
-      getInstantiatesCanonicalList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-      setInstantiatesCanonicalList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+      clearInstantiatesCanonical(): void;
+      getInstantiatesCanonical(): Array<proto_r4_core_datatypes_pb.Canonical>;
+      setInstantiatesCanonical(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
       addInstantiatesCanonical(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
-      clearInstantiatesUriList(): void;
-      getInstantiatesUriList(): Array<proto_r4_core_datatypes_pb.Uri>;
-      setInstantiatesUriList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+      clearInstantiatesUri(): void;
+      getInstantiatesUri(): Array<proto_r4_core_datatypes_pb.Uri>;
+      setInstantiatesUri(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
       addInstantiatesUri(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
       hasCode(): boolean;
@@ -372,19 +372,19 @@ export namespace CarePlan {
       getCode(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
       setCode(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-      clearReasonCodeList(): void;
-      getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-      setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+      clearReasonCode(): void;
+      getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+      setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
       addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-      clearReasonReferenceList(): void;
-      getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-      setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+      clearReasonReference(): void;
+      getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+      setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
       addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-      clearGoalList(): void;
-      getGoalList(): Array<proto_r4_core_datatypes_pb.Reference>;
-      setGoalList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+      clearGoal(): void;
+      getGoal(): Array<proto_r4_core_datatypes_pb.Reference>;
+      setGoal(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
       addGoal(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
       hasStatus(): boolean;
@@ -412,9 +412,9 @@ export namespace CarePlan {
       getLocation(): proto_r4_core_datatypes_pb.Reference | undefined;
       setLocation(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-      clearPerformerList(): void;
-      getPerformerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-      setPerformerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+      clearPerformer(): void;
+      getPerformer(): Array<proto_r4_core_datatypes_pb.Reference>;
+      setPerformer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
       addPerformer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
       hasProduct(): boolean;
@@ -450,21 +450,21 @@ export namespace CarePlan {
     export namespace Detail {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         kind?: CarePlan.Activity.Detail.KindCode.AsObject,
-        instantiatesCanonicalList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
-        instantiatesUriList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+        instantiatesCanonical: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+        instantiatesUri: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
         code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-        reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-        reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-        goalList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+        reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+        reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+        goal: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
         status?: CarePlan.Activity.Detail.StatusCode.AsObject,
         statusReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         doNotPerform?: proto_r4_core_datatypes_pb.Boolean.AsObject,
         scheduled?: CarePlan.Activity.Detail.ScheduledX.AsObject,
         location?: proto_r4_core_datatypes_pb.Reference.AsObject,
-        performerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+        performer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
         product?: CarePlan.Activity.Detail.ProductX.AsObject,
         dailyAmount?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
         quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
@@ -480,9 +480,9 @@ export namespace CarePlan {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         serializeBinary(): Uint8Array;
@@ -499,7 +499,7 @@ export namespace CarePlan {
         export type AsObject = {
           value: proto_r4_core_valuesets_pb.CarePlanActivityKindValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.CarePlanActivityKindValueSet.ValueMap],
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         }
       }
 
@@ -512,9 +512,9 @@ export namespace CarePlan {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         serializeBinary(): Uint8Array;
@@ -531,7 +531,7 @@ export namespace CarePlan {
         export type AsObject = {
           value: proto_r4_core_codes_pb.CarePlanActivityStatusCode.ValueMap[keyof proto_r4_core_codes_pb.CarePlanActivityStatusCode.ValueMap],
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         }
       }
 

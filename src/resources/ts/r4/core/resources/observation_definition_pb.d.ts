@@ -33,24 +33,24 @@ export class ObservationDefinition extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -58,14 +58,14 @@ export class ObservationDefinition extends jspb.Message {
   getCode(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setCode(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearPermittedDataTypeList(): void;
-  getPermittedDataTypeList(): Array<ObservationDefinition.PermittedDataTypeCode>;
-  setPermittedDataTypeList(value: Array<ObservationDefinition.PermittedDataTypeCode>): void;
+  clearPermittedDataType(): void;
+  getPermittedDataType(): Array<ObservationDefinition.PermittedDataTypeCode>;
+  setPermittedDataType(value: Array<ObservationDefinition.PermittedDataTypeCode>): void;
   addPermittedDataType(value?: ObservationDefinition.PermittedDataTypeCode, index?: number): ObservationDefinition.PermittedDataTypeCode;
 
   hasMultipleResultsAllowed(): boolean;
@@ -88,9 +88,9 @@ export class ObservationDefinition extends jspb.Message {
   getQuantitativeDetails(): ObservationDefinition.QuantitativeDetails | undefined;
   setQuantitativeDetails(value?: ObservationDefinition.QuantitativeDetails): void;
 
-  clearQualifiedIntervalList(): void;
-  getQualifiedIntervalList(): Array<ObservationDefinition.QualifiedInterval>;
-  setQualifiedIntervalList(value: Array<ObservationDefinition.QualifiedInterval>): void;
+  clearQualifiedInterval(): void;
+  getQualifiedInterval(): Array<ObservationDefinition.QualifiedInterval>;
+  setQualifiedInterval(value: Array<ObservationDefinition.QualifiedInterval>): void;
   addQualifiedInterval(value?: ObservationDefinition.QualifiedInterval, index?: number): ObservationDefinition.QualifiedInterval;
 
   hasValidCodedValueSet(): boolean;
@@ -130,18 +130,18 @@ export namespace ObservationDefinition {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    permittedDataTypeList: Array<ObservationDefinition.PermittedDataTypeCode.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    permittedDataType: Array<ObservationDefinition.PermittedDataTypeCode.AsObject>,
     multipleResultsAllowed?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     method?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     preferredReportName?: proto_r4_core_datatypes_pb.String.AsObject,
     quantitativeDetails?: ObservationDefinition.QuantitativeDetails.AsObject,
-    qualifiedIntervalList: Array<ObservationDefinition.QualifiedInterval.AsObject>,
+    qualifiedInterval: Array<ObservationDefinition.QualifiedInterval.AsObject>,
     validCodedValueSet?: proto_r4_core_datatypes_pb.Reference.AsObject,
     normalCodedValueSet?: proto_r4_core_datatypes_pb.Reference.AsObject,
     abnormalCodedValueSet?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -157,9 +157,9 @@ export namespace ObservationDefinition {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -176,7 +176,7 @@ export namespace ObservationDefinition {
     export type AsObject = {
       value: proto_r4_core_codes_pb.ObservationDataTypeCode.ValueMap[keyof proto_r4_core_codes_pb.ObservationDataTypeCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -186,14 +186,14 @@ export namespace ObservationDefinition {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCustomaryUnit(): boolean;
@@ -229,8 +229,8 @@ export namespace ObservationDefinition {
   export namespace QuantitativeDetails {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       customaryUnit?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       unit?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       conversionFactor?: proto_r4_core_datatypes_pb.Decimal.AsObject,
@@ -244,14 +244,14 @@ export namespace ObservationDefinition {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCategory(): boolean;
@@ -269,9 +269,9 @@ export namespace ObservationDefinition {
     getContext(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setContext(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasGender(): boolean;
@@ -307,12 +307,12 @@ export namespace ObservationDefinition {
   export namespace QualifiedInterval {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       category?: ObservationDefinition.QualifiedInterval.CategoryCode.AsObject,
       range?: proto_r4_core_datatypes_pb.Range.AsObject,
       context?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       gender?: ObservationDefinition.QualifiedInterval.GenderCode.AsObject,
       age?: proto_r4_core_datatypes_pb.Range.AsObject,
       gestationalAge?: proto_r4_core_datatypes_pb.Range.AsObject,
@@ -328,9 +328,9 @@ export namespace ObservationDefinition {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -347,7 +347,7 @@ export namespace ObservationDefinition {
       export type AsObject = {
         value: proto_r4_core_codes_pb.ObservationRangeCategoryCode.ValueMap[keyof proto_r4_core_codes_pb.ObservationRangeCategoryCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
 
@@ -360,9 +360,9 @@ export namespace ObservationDefinition {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -379,7 +379,7 @@ export namespace ObservationDefinition {
       export type AsObject = {
         value: proto_r4_core_codes_pb.AdministrativeGenderCode.ValueMap[keyof proto_r4_core_codes_pb.AdministrativeGenderCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }

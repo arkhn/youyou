@@ -488,9 +488,9 @@ export class AllergyIntoleranceSubstanceExposureRisk extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasSubstance(): boolean;
@@ -516,7 +516,7 @@ export class AllergyIntoleranceSubstanceExposureRisk extends jspb.Message {
 export namespace AllergyIntoleranceSubstanceExposureRisk {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     substance?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     exposureRisk?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
   }
@@ -864,19 +864,19 @@ export class CapabilityStatementSearchParameterCombination extends jspb.Message 
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearRequiredList(): void;
-  getRequiredList(): Array<proto_stu3_datatypes_pb.String>;
-  setRequiredList(value: Array<proto_stu3_datatypes_pb.String>): void;
+  clearRequired(): void;
+  getRequired(): Array<proto_stu3_datatypes_pb.String>;
+  setRequired(value: Array<proto_stu3_datatypes_pb.String>): void;
   addRequired(value?: proto_stu3_datatypes_pb.String, index?: number): proto_stu3_datatypes_pb.String;
 
-  clearOptionalList(): void;
-  getOptionalList(): Array<proto_stu3_datatypes_pb.String>;
-  setOptionalList(value: Array<proto_stu3_datatypes_pb.String>): void;
+  clearOptional(): void;
+  getOptional(): Array<proto_stu3_datatypes_pb.String>;
+  setOptional(value: Array<proto_stu3_datatypes_pb.String>): void;
   addOptional(value?: proto_stu3_datatypes_pb.String, index?: number): proto_stu3_datatypes_pb.String;
 
   serializeBinary(): Uint8Array;
@@ -892,9 +892,9 @@ export class CapabilityStatementSearchParameterCombination extends jspb.Message 
 export namespace CapabilityStatementSearchParameterCombination {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    requiredList: Array<proto_stu3_datatypes_pb.String.AsObject>,
-    optionalList: Array<proto_stu3_datatypes_pb.String.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    required: Array<proto_stu3_datatypes_pb.String.AsObject>,
+    optional: Array<proto_stu3_datatypes_pb.String.AsObject>,
   }
 }
 
@@ -1016,9 +1016,9 @@ export class CodeSystemComment extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasContent(): boolean;
@@ -1044,7 +1044,7 @@ export class CodeSystemComment extends jspb.Message {
 export namespace CodeSystemComment {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     content?: proto_stu3_datatypes_pb.String.AsObject,
     timestamp?: proto_stu3_datatypes_pb.Instant.AsObject,
   }
@@ -1196,9 +1196,9 @@ export class CodeSystemHistory extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasName(): boolean;
@@ -1206,9 +1206,9 @@ export class CodeSystemHistory extends jspb.Message {
   getName(): proto_stu3_datatypes_pb.String | undefined;
   setName(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearRevisionList(): void;
-  getRevisionList(): Array<CodeSystemHistory.Revision>;
-  setRevisionList(value: Array<CodeSystemHistory.Revision>): void;
+  clearRevision(): void;
+  getRevision(): Array<CodeSystemHistory.Revision>;
+  setRevision(value: Array<CodeSystemHistory.Revision>): void;
   addRevision(value?: CodeSystemHistory.Revision, index?: number): CodeSystemHistory.Revision;
 
   serializeBinary(): Uint8Array;
@@ -1224,9 +1224,9 @@ export class CodeSystemHistory extends jspb.Message {
 export namespace CodeSystemHistory {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     name?: proto_stu3_datatypes_pb.String.AsObject,
-    revisionList: Array<CodeSystemHistory.Revision.AsObject>,
+    revision: Array<CodeSystemHistory.Revision.AsObject>,
   }
 
   export class Revision extends jspb.Message {
@@ -1394,9 +1394,9 @@ export class CodeSystemOtherName extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasName(): boolean;
@@ -1422,7 +1422,7 @@ export class CodeSystemOtherName extends jspb.Message {
 export namespace CodeSystemOtherName {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     name?: proto_stu3_datatypes_pb.String.AsObject,
     preferred?: proto_stu3_datatypes_pb.Boolean.AsObject,
   }
@@ -1574,9 +1574,9 @@ export class CodeSystemUsage extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasUser(): boolean;
@@ -1602,7 +1602,7 @@ export class CodeSystemUsage extends jspb.Message {
 export namespace CodeSystemUsage {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     user?: proto_stu3_datatypes_pb.String.AsObject,
     use?: proto_stu3_datatypes_pb.String.AsObject,
   }
@@ -3056,9 +3056,9 @@ export class MeasureInfo extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasMeasure(): boolean;
@@ -3089,7 +3089,7 @@ export class MeasureInfo extends jspb.Message {
 export namespace MeasureInfo {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     measure?: proto_stu3_datatypes_pb.Reference.AsObject,
     groupIdentifier?: proto_stu3_datatypes_pb.Identifier.AsObject,
     populationIdentifier?: proto_stu3_datatypes_pb.Identifier.AsObject,
@@ -3326,9 +3326,9 @@ export class DeviceRequestPatientInstruction extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasLang(): boolean;
@@ -3354,7 +3354,7 @@ export class DeviceRequestPatientInstruction extends jspb.Message {
 export namespace DeviceRequestPatientInstruction {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     lang?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     content?: proto_stu3_datatypes_pb.String.AsObject,
   }
@@ -3450,9 +3450,9 @@ export class DiagnosticReportAnalysis extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasType(): boolean;
@@ -3478,7 +3478,7 @@ export class DiagnosticReportAnalysis extends jspb.Message {
 export namespace DiagnosticReportAnalysis {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     type?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
   }
@@ -4589,9 +4589,9 @@ export class FamilyMemberHistoryParent extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasType(): boolean;
@@ -4617,7 +4617,7 @@ export class FamilyMemberHistoryParent extends jspb.Message {
 export namespace FamilyMemberHistoryParent {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     type?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     reference?: proto_stu3_datatypes_pb.Reference.AsObject,
   }
@@ -4629,9 +4629,9 @@ export class FamilyMemberHistorySibling extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasType(): boolean;
@@ -4657,7 +4657,7 @@ export class FamilyMemberHistorySibling extends jspb.Message {
 export namespace FamilyMemberHistorySibling {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     type?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     reference?: proto_stu3_datatypes_pb.Reference.AsObject,
   }
@@ -4879,9 +4879,9 @@ export class AddressGeolocation extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasLatitude(): boolean;
@@ -4907,7 +4907,7 @@ export class AddressGeolocation extends jspb.Message {
 export namespace AddressGeolocation {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     latitude?: proto_stu3_datatypes_pb.Decimal.AsObject,
     longitude?: proto_stu3_datatypes_pb.Decimal.AsObject,
   }
@@ -4919,9 +4919,9 @@ export class GoalAcceptance extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasIndividual(): boolean;
@@ -4952,7 +4952,7 @@ export class GoalAcceptance extends jspb.Message {
 export namespace GoalAcceptance {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     individual?: proto_stu3_datatypes_pb.Reference.AsObject,
     status?: proto_stu3_codes_pb.GoalAcceptanceStatusCode.AsObject,
     priority?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -5021,9 +5021,9 @@ export class GoalRelationship extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasType(): boolean;
@@ -5049,7 +5049,7 @@ export class GoalRelationship extends jspb.Message {
 export namespace GoalRelationship {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     type?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     target?: proto_stu3_datatypes_pb.Reference.AsObject,
   }
@@ -5089,9 +5089,9 @@ export class DiagnosticReportGlstring extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasUrl(): boolean;
@@ -5117,7 +5117,7 @@ export class DiagnosticReportGlstring extends jspb.Message {
 export namespace DiagnosticReportGlstring {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     url?: proto_stu3_datatypes_pb.Uri.AsObject,
     text?: proto_stu3_datatypes_pb.String.AsObject,
   }
@@ -5129,9 +5129,9 @@ export class DiagnosticReportHaploid extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasLocus(): boolean;
@@ -5162,7 +5162,7 @@ export class DiagnosticReportHaploid extends jspb.Message {
 export namespace DiagnosticReportHaploid {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     locus?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     type?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     method?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -6981,9 +6981,9 @@ export class ObservationEventTiming extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasCode(): boolean;
@@ -7009,7 +7009,7 @@ export class ObservationEventTiming extends jspb.Message {
 export namespace ObservationEventTiming {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     offset?: proto_stu3_datatypes_pb.Quantity.AsObject,
   }
@@ -8001,9 +8001,9 @@ export class PatientCitizenship extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasCode(): boolean;
@@ -8029,7 +8029,7 @@ export class PatientCitizenship extends jspb.Message {
 export namespace PatientCitizenship {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     period?: proto_stu3_datatypes_pb.Period.AsObject,
   }
@@ -8041,9 +8041,9 @@ export class PatientClinicalTrial extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasNct(): boolean;
@@ -8074,7 +8074,7 @@ export class PatientClinicalTrial extends jspb.Message {
 export namespace PatientClinicalTrial {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     nct?: proto_stu3_datatypes_pb.String.AsObject,
     period?: proto_stu3_datatypes_pb.Period.AsObject,
     reason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -8227,9 +8227,9 @@ export class PatientNationality extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasCode(): boolean;
@@ -8255,7 +8255,7 @@ export class PatientNationality extends jspb.Message {
 export namespace PatientNationality {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     period?: proto_stu3_datatypes_pb.Period.AsObject,
   }
@@ -8911,9 +8911,9 @@ export class DiagnosticReportItem extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasCode(): boolean;
@@ -8949,7 +8949,7 @@ export class DiagnosticReportItem extends jspb.Message {
 export namespace DiagnosticReportItem {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     geneticsObservation?: proto_stu3_datatypes_pb.Reference.AsObject,
     specimen?: proto_stu3_datatypes_pb.Reference.AsObject,
@@ -10846,14 +10846,14 @@ export class DaysOfCycle extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearDayList(): void;
-  getDayList(): Array<proto_stu3_datatypes_pb.Integer>;
-  setDayList(value: Array<proto_stu3_datatypes_pb.Integer>): void;
+  clearDay(): void;
+  getDay(): Array<proto_stu3_datatypes_pb.Integer>;
+  setDay(value: Array<proto_stu3_datatypes_pb.Integer>): void;
   addDay(value?: proto_stu3_datatypes_pb.Integer, index?: number): proto_stu3_datatypes_pb.Integer;
 
   serializeBinary(): Uint8Array;
@@ -10869,8 +10869,8 @@ export class DaysOfCycle extends jspb.Message {
 export namespace DaysOfCycle {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    dayList: Array<proto_stu3_datatypes_pb.Integer.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    day: Array<proto_stu3_datatypes_pb.Integer.AsObject>,
   }
 }
 
@@ -10908,9 +10908,9 @@ export class Translation extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasLang(): boolean;
@@ -10936,7 +10936,7 @@ export class Translation extends jspb.Message {
 export namespace Translation {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     lang?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     content?: Translation.Content.AsObject,
   }
@@ -11067,9 +11067,9 @@ export class ValueSetComment extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasContent(): boolean;
@@ -11095,7 +11095,7 @@ export class ValueSetComment extends jspb.Message {
 export namespace ValueSetComment {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     content?: proto_stu3_datatypes_pb.String.AsObject,
     timestamp?: proto_stu3_datatypes_pb.Instant.AsObject,
   }
@@ -11275,9 +11275,9 @@ export class ValueSetHistory extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasName(): boolean;
@@ -11285,9 +11285,9 @@ export class ValueSetHistory extends jspb.Message {
   getName(): proto_stu3_datatypes_pb.String | undefined;
   setName(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearRevisionList(): void;
-  getRevisionList(): Array<ValueSetHistory.Revision>;
-  setRevisionList(value: Array<ValueSetHistory.Revision>): void;
+  clearRevision(): void;
+  getRevision(): Array<ValueSetHistory.Revision>;
+  setRevision(value: Array<ValueSetHistory.Revision>): void;
   addRevision(value?: ValueSetHistory.Revision, index?: number): ValueSetHistory.Revision;
 
   serializeBinary(): Uint8Array;
@@ -11303,9 +11303,9 @@ export class ValueSetHistory extends jspb.Message {
 export namespace ValueSetHistory {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     name?: proto_stu3_datatypes_pb.String.AsObject,
-    revisionList: Array<ValueSetHistory.Revision.AsObject>,
+    revision: Array<ValueSetHistory.Revision.AsObject>,
   }
 
   export class Revision extends jspb.Message {
@@ -11473,9 +11473,9 @@ export class ValueSetOtherName extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasName(): boolean;
@@ -11501,7 +11501,7 @@ export class ValueSetOtherName extends jspb.Message {
 export namespace ValueSetOtherName {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     name?: proto_stu3_datatypes_pb.String.AsObject,
     preferred?: proto_stu3_datatypes_pb.Boolean.AsObject,
   }
@@ -11737,9 +11737,9 @@ export class ValueSetUsage extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasUser(): boolean;
@@ -11765,7 +11765,7 @@ export class ValueSetUsage extends jspb.Message {
 export namespace ValueSetUsage {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     user?: proto_stu3_datatypes_pb.String.AsObject,
     use?: proto_stu3_datatypes_pb.String.AsObject,
   }

@@ -33,24 +33,24 @@ export class Claim extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -113,9 +113,9 @@ export class Claim extends jspb.Message {
   getFundsReserve(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setFundsReserve(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearRelatedList(): void;
-  getRelatedList(): Array<Claim.RelatedClaim>;
-  setRelatedList(value: Array<Claim.RelatedClaim>): void;
+  clearRelated(): void;
+  getRelated(): Array<Claim.RelatedClaim>;
+  setRelated(value: Array<Claim.RelatedClaim>): void;
   addRelated(value?: Claim.RelatedClaim, index?: number): Claim.RelatedClaim;
 
   hasPrescription(): boolean;
@@ -143,29 +143,29 @@ export class Claim extends jspb.Message {
   getFacility(): proto_r4_core_datatypes_pb.Reference | undefined;
   setFacility(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearCareTeamList(): void;
-  getCareTeamList(): Array<Claim.CareTeam>;
-  setCareTeamList(value: Array<Claim.CareTeam>): void;
+  clearCareTeam(): void;
+  getCareTeam(): Array<Claim.CareTeam>;
+  setCareTeam(value: Array<Claim.CareTeam>): void;
   addCareTeam(value?: Claim.CareTeam, index?: number): Claim.CareTeam;
 
-  clearSupportingInfoList(): void;
-  getSupportingInfoList(): Array<Claim.SupportingInformation>;
-  setSupportingInfoList(value: Array<Claim.SupportingInformation>): void;
+  clearSupportingInfo(): void;
+  getSupportingInfo(): Array<Claim.SupportingInformation>;
+  setSupportingInfo(value: Array<Claim.SupportingInformation>): void;
   addSupportingInfo(value?: Claim.SupportingInformation, index?: number): Claim.SupportingInformation;
 
-  clearDiagnosisList(): void;
-  getDiagnosisList(): Array<Claim.Diagnosis>;
-  setDiagnosisList(value: Array<Claim.Diagnosis>): void;
+  clearDiagnosis(): void;
+  getDiagnosis(): Array<Claim.Diagnosis>;
+  setDiagnosis(value: Array<Claim.Diagnosis>): void;
   addDiagnosis(value?: Claim.Diagnosis, index?: number): Claim.Diagnosis;
 
-  clearProcedureList(): void;
-  getProcedureList(): Array<Claim.Procedure>;
-  setProcedureList(value: Array<Claim.Procedure>): void;
+  clearProcedure(): void;
+  getProcedure(): Array<Claim.Procedure>;
+  setProcedure(value: Array<Claim.Procedure>): void;
   addProcedure(value?: Claim.Procedure, index?: number): Claim.Procedure;
 
-  clearInsuranceList(): void;
-  getInsuranceList(): Array<Claim.Insurance>;
-  setInsuranceList(value: Array<Claim.Insurance>): void;
+  clearInsurance(): void;
+  getInsurance(): Array<Claim.Insurance>;
+  setInsurance(value: Array<Claim.Insurance>): void;
   addInsurance(value?: Claim.Insurance, index?: number): Claim.Insurance;
 
   hasAccident(): boolean;
@@ -173,9 +173,9 @@ export class Claim extends jspb.Message {
   getAccident(): Claim.Accident | undefined;
   setAccident(value?: Claim.Accident): void;
 
-  clearItemList(): void;
-  getItemList(): Array<Claim.Item>;
-  setItemList(value: Array<Claim.Item>): void;
+  clearItem(): void;
+  getItem(): Array<Claim.Item>;
+  setItem(value: Array<Claim.Item>): void;
   addItem(value?: Claim.Item, index?: number): Claim.Item;
 
   hasTotal(): boolean;
@@ -200,10 +200,10 @@ export namespace Claim {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: Claim.StatusCode.AsObject,
     type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -216,19 +216,19 @@ export namespace Claim {
     provider?: proto_r4_core_datatypes_pb.Reference.AsObject,
     priority?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     fundsReserve?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    relatedList: Array<Claim.RelatedClaim.AsObject>,
+    related: Array<Claim.RelatedClaim.AsObject>,
     prescription?: proto_r4_core_datatypes_pb.Reference.AsObject,
     originalPrescription?: proto_r4_core_datatypes_pb.Reference.AsObject,
     payee?: Claim.Payee.AsObject,
     referral?: proto_r4_core_datatypes_pb.Reference.AsObject,
     facility?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    careTeamList: Array<Claim.CareTeam.AsObject>,
-    supportingInfoList: Array<Claim.SupportingInformation.AsObject>,
-    diagnosisList: Array<Claim.Diagnosis.AsObject>,
-    procedureList: Array<Claim.Procedure.AsObject>,
-    insuranceList: Array<Claim.Insurance.AsObject>,
+    careTeam: Array<Claim.CareTeam.AsObject>,
+    supportingInfo: Array<Claim.SupportingInformation.AsObject>,
+    diagnosis: Array<Claim.Diagnosis.AsObject>,
+    procedure: Array<Claim.Procedure.AsObject>,
+    insurance: Array<Claim.Insurance.AsObject>,
     accident?: Claim.Accident.AsObject,
-    itemList: Array<Claim.Item.AsObject>,
+    item: Array<Claim.Item.AsObject>,
     total?: proto_r4_core_datatypes_pb.Money.AsObject,
   }
 
@@ -241,9 +241,9 @@ export namespace Claim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -260,7 +260,7 @@ export namespace Claim {
     export type AsObject = {
       value: proto_r4_core_codes_pb.FinancialResourceStatusCode.ValueMap[keyof proto_r4_core_codes_pb.FinancialResourceStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -273,9 +273,9 @@ export namespace Claim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -292,7 +292,7 @@ export namespace Claim {
     export type AsObject = {
       value: proto_r4_core_codes_pb.UseCode.ValueMap[keyof proto_r4_core_codes_pb.UseCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -302,14 +302,14 @@ export namespace Claim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasClaim(): boolean;
@@ -340,8 +340,8 @@ export namespace Claim {
   export namespace RelatedClaim {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       claim?: proto_r4_core_datatypes_pb.Reference.AsObject,
       relationship?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       reference?: proto_r4_core_datatypes_pb.Identifier.AsObject,
@@ -354,14 +354,14 @@ export namespace Claim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -387,8 +387,8 @@ export namespace Claim {
   export namespace Payee {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       party?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
@@ -400,14 +400,14 @@ export namespace Claim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSequence(): boolean;
@@ -448,8 +448,8 @@ export namespace Claim {
   export namespace CareTeam {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
       provider?: proto_r4_core_datatypes_pb.Reference.AsObject,
       responsible?: proto_r4_core_datatypes_pb.Boolean.AsObject,
@@ -464,14 +464,14 @@ export namespace Claim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSequence(): boolean;
@@ -517,8 +517,8 @@ export namespace Claim {
   export namespace SupportingInformation {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
       category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -625,14 +625,14 @@ export namespace Claim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSequence(): boolean;
@@ -645,9 +645,9 @@ export namespace Claim {
     getDiagnosis(): Claim.Diagnosis.DiagnosisX | undefined;
     setDiagnosis(value?: Claim.Diagnosis.DiagnosisX): void;
 
-    clearTypeList(): void;
-    getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearType(): void;
+    getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasOnAdmission(): boolean;
@@ -673,11 +673,11 @@ export namespace Claim {
   export namespace Diagnosis {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
       diagnosis?: Claim.Diagnosis.DiagnosisX.AsObject,
-      typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       onAdmission?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       packageCode?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     }
@@ -724,14 +724,14 @@ export namespace Claim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSequence(): boolean;
@@ -739,9 +739,9 @@ export namespace Claim {
     getSequence(): proto_r4_core_datatypes_pb.PositiveInt | undefined;
     setSequence(value?: proto_r4_core_datatypes_pb.PositiveInt): void;
 
-    clearTypeList(): void;
-    getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearType(): void;
+    getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasDate(): boolean;
@@ -754,9 +754,9 @@ export namespace Claim {
     getProcedure(): Claim.Procedure.ProcedureX | undefined;
     setProcedure(value?: Claim.Procedure.ProcedureX): void;
 
-    clearUdiList(): void;
-    getUdiList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setUdiList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearUdi(): void;
+    getUdi(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setUdi(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addUdi(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     serializeBinary(): Uint8Array;
@@ -772,13 +772,13 @@ export namespace Claim {
   export namespace Procedure {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
-      typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
       procedure?: Claim.Procedure.ProcedureX.AsObject,
-      udiList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      udi: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     }
 
     export class ProcedureX extends jspb.Message {
@@ -823,14 +823,14 @@ export namespace Claim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSequence(): boolean;
@@ -858,9 +858,9 @@ export namespace Claim {
     getBusinessArrangement(): proto_r4_core_datatypes_pb.String | undefined;
     setBusinessArrangement(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearPreAuthRefList(): void;
-    getPreAuthRefList(): Array<proto_r4_core_datatypes_pb.String>;
-    setPreAuthRefList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+    clearPreAuthRef(): void;
+    getPreAuthRef(): Array<proto_r4_core_datatypes_pb.String>;
+    setPreAuthRef(value: Array<proto_r4_core_datatypes_pb.String>): void;
     addPreAuthRef(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
     hasClaimResponse(): boolean;
@@ -881,14 +881,14 @@ export namespace Claim {
   export namespace Insurance {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
       focal?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       identifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
       coverage?: proto_r4_core_datatypes_pb.Reference.AsObject,
       businessArrangement?: proto_r4_core_datatypes_pb.String.AsObject,
-      preAuthRefList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+      preAuthRef: Array<proto_r4_core_datatypes_pb.String.AsObject>,
       claimResponse?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
   }
@@ -899,14 +899,14 @@ export namespace Claim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasDate(): boolean;
@@ -937,8 +937,8 @@ export namespace Claim {
   export namespace Accident {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       date?: proto_r4_core_datatypes_pb.Date.AsObject,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       location?: Claim.Accident.LocationX.AsObject,
@@ -986,14 +986,14 @@ export namespace Claim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSequence(): boolean;
@@ -1001,24 +1001,24 @@ export namespace Claim {
     getSequence(): proto_r4_core_datatypes_pb.PositiveInt | undefined;
     setSequence(value?: proto_r4_core_datatypes_pb.PositiveInt): void;
 
-    clearCareTeamSequenceList(): void;
-    getCareTeamSequenceList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-    setCareTeamSequenceList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+    clearCareTeamSequence(): void;
+    getCareTeamSequence(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+    setCareTeamSequence(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
     addCareTeamSequence(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
-    clearDiagnosisSequenceList(): void;
-    getDiagnosisSequenceList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-    setDiagnosisSequenceList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+    clearDiagnosisSequence(): void;
+    getDiagnosisSequence(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+    setDiagnosisSequence(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
     addDiagnosisSequence(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
-    clearProcedureSequenceList(): void;
-    getProcedureSequenceList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-    setProcedureSequenceList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+    clearProcedureSequence(): void;
+    getProcedureSequence(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+    setProcedureSequence(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
     addProcedureSequence(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
-    clearInformationSequenceList(): void;
-    getInformationSequenceList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-    setInformationSequenceList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+    clearInformationSequence(): void;
+    getInformationSequence(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+    setInformationSequence(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
     addInformationSequence(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
     hasRevenue(): boolean;
@@ -1036,14 +1036,14 @@ export namespace Claim {
     getProductOrService(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setProductOrService(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearModifierList(): void;
-    getModifierList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setModifierList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearModifier(): void;
+    getModifier(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setModifier(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addModifier(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearProgramCodeList(): void;
-    getProgramCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setProgramCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearProgramCode(): void;
+    getProgramCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setProgramCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addProgramCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasServiced(): boolean;
@@ -1076,9 +1076,9 @@ export namespace Claim {
     getNet(): proto_r4_core_datatypes_pb.Money | undefined;
     setNet(value?: proto_r4_core_datatypes_pb.Money): void;
 
-    clearUdiList(): void;
-    getUdiList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setUdiList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearUdi(): void;
+    getUdi(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setUdi(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addUdi(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     hasBodySite(): boolean;
@@ -1086,19 +1086,19 @@ export namespace Claim {
     getBodySite(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setBodySite(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearSubSiteList(): void;
-    getSubSiteList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setSubSiteList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearSubSite(): void;
+    getSubSite(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setSubSite(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addSubSite(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearEncounterList(): void;
-    getEncounterList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setEncounterList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearEncounter(): void;
+    getEncounter(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setEncounter(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addEncounter(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-    clearDetailList(): void;
-    getDetailList(): Array<Claim.Item.Detail>;
-    setDetailList(value: Array<Claim.Item.Detail>): void;
+    clearDetail(): void;
+    getDetail(): Array<Claim.Item.Detail>;
+    setDetail(value: Array<Claim.Item.Detail>): void;
     addDetail(value?: Claim.Item.Detail, index?: number): Claim.Item.Detail;
 
     serializeBinary(): Uint8Array;
@@ -1114,29 +1114,29 @@ export namespace Claim {
   export namespace Item {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
-      careTeamSequenceList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
-      diagnosisSequenceList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
-      procedureSequenceList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
-      informationSequenceList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+      careTeamSequence: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+      diagnosisSequence: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+      procedureSequence: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+      informationSequence: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
       revenue?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       productOrService?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      modifierList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      programCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      modifier: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      programCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       serviced?: Claim.Item.ServicedX.AsObject,
       location?: Claim.Item.LocationX.AsObject,
       quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       unitPrice?: proto_r4_core_datatypes_pb.Money.AsObject,
       factor?: proto_r4_core_datatypes_pb.Decimal.AsObject,
       net?: proto_r4_core_datatypes_pb.Money.AsObject,
-      udiList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      udi: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
       bodySite?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      subSiteList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      encounterList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-      detailList: Array<Claim.Item.Detail.AsObject>,
+      subSite: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      encounter: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      detail: Array<Claim.Item.Detail.AsObject>,
     }
 
     export class ServicedX extends jspb.Message {
@@ -1222,14 +1222,14 @@ export namespace Claim {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasSequence(): boolean;
@@ -1252,14 +1252,14 @@ export namespace Claim {
       getProductOrService(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
       setProductOrService(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-      clearModifierList(): void;
-      getModifierList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-      setModifierList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+      clearModifier(): void;
+      getModifier(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+      setModifier(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
       addModifier(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-      clearProgramCodeList(): void;
-      getProgramCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-      setProgramCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+      clearProgramCode(): void;
+      getProgramCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+      setProgramCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
       addProgramCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
       hasQuantity(): boolean;
@@ -1282,14 +1282,14 @@ export namespace Claim {
       getNet(): proto_r4_core_datatypes_pb.Money | undefined;
       setNet(value?: proto_r4_core_datatypes_pb.Money): void;
 
-      clearUdiList(): void;
-      getUdiList(): Array<proto_r4_core_datatypes_pb.Reference>;
-      setUdiList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+      clearUdi(): void;
+      getUdi(): Array<proto_r4_core_datatypes_pb.Reference>;
+      setUdi(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
       addUdi(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-      clearSubDetailList(): void;
-      getSubDetailList(): Array<Claim.Item.Detail.SubDetail>;
-      setSubDetailList(value: Array<Claim.Item.Detail.SubDetail>): void;
+      clearSubDetail(): void;
+      getSubDetail(): Array<Claim.Item.Detail.SubDetail>;
+      setSubDetail(value: Array<Claim.Item.Detail.SubDetail>): void;
       addSubDetail(value?: Claim.Item.Detail.SubDetail, index?: number): Claim.Item.Detail.SubDetail;
 
       serializeBinary(): Uint8Array;
@@ -1305,20 +1305,20 @@ export namespace Claim {
     export namespace Detail {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
         revenue?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         productOrService?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-        modifierList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-        programCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+        modifier: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+        programCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
         quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
         unitPrice?: proto_r4_core_datatypes_pb.Money.AsObject,
         factor?: proto_r4_core_datatypes_pb.Decimal.AsObject,
         net?: proto_r4_core_datatypes_pb.Money.AsObject,
-        udiList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-        subDetailList: Array<Claim.Item.Detail.SubDetail.AsObject>,
+        udi: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+        subDetail: Array<Claim.Item.Detail.SubDetail.AsObject>,
       }
 
       export class SubDetail extends jspb.Message {
@@ -1327,14 +1327,14 @@ export namespace Claim {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         hasSequence(): boolean;
@@ -1357,14 +1357,14 @@ export namespace Claim {
         getProductOrService(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
         setProductOrService(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-        clearModifierList(): void;
-        getModifierList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-        setModifierList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+        clearModifier(): void;
+        getModifier(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+        setModifier(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
         addModifier(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-        clearProgramCodeList(): void;
-        getProgramCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-        setProgramCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+        clearProgramCode(): void;
+        getProgramCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+        setProgramCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
         addProgramCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
         hasQuantity(): boolean;
@@ -1387,9 +1387,9 @@ export namespace Claim {
         getNet(): proto_r4_core_datatypes_pb.Money | undefined;
         setNet(value?: proto_r4_core_datatypes_pb.Money): void;
 
-        clearUdiList(): void;
-        getUdiList(): Array<proto_r4_core_datatypes_pb.Reference>;
-        setUdiList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+        clearUdi(): void;
+        getUdi(): Array<proto_r4_core_datatypes_pb.Reference>;
+        setUdi(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
         addUdi(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
         serializeBinary(): Uint8Array;
@@ -1405,19 +1405,19 @@ export namespace Claim {
       export namespace SubDetail {
         export type AsObject = {
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
           sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
           revenue?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
           category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
           productOrService?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-          modifierList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-          programCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+          modifier: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+          programCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
           quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
           unitPrice?: proto_r4_core_datatypes_pb.Money.AsObject,
           factor?: proto_r4_core_datatypes_pb.Decimal.AsObject,
           net?: proto_r4_core_datatypes_pb.Money.AsObject,
-          udiList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+          udi: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
         }
       }
     }

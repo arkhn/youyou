@@ -32,24 +32,24 @@ export class MedicinalProductInteraction extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearSubjectList(): void;
-  getSubjectList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSubjectList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSubject(): void;
+  getSubject(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSubject(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSubject(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasDescription(): boolean;
@@ -57,9 +57,9 @@ export class MedicinalProductInteraction extends jspb.Message {
   getDescription(): proto_r4_core_datatypes_pb.String | undefined;
   setDescription(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearInteractantList(): void;
-  getInteractantList(): Array<MedicinalProductInteraction.Interactant>;
-  setInteractantList(value: Array<MedicinalProductInteraction.Interactant>): void;
+  clearInteractant(): void;
+  getInteractant(): Array<MedicinalProductInteraction.Interactant>;
+  setInteractant(value: Array<MedicinalProductInteraction.Interactant>): void;
   addInteractant(value?: MedicinalProductInteraction.Interactant, index?: number): MedicinalProductInteraction.Interactant;
 
   hasType(): boolean;
@@ -99,12 +99,12 @@ export namespace MedicinalProductInteraction {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    subjectList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    subject: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     description?: proto_r4_core_datatypes_pb.String.AsObject,
-    interactantList: Array<MedicinalProductInteraction.Interactant.AsObject>,
+    interactant: Array<MedicinalProductInteraction.Interactant.AsObject>,
     type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     effect?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     incidence?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -117,14 +117,14 @@ export namespace MedicinalProductInteraction {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasItem(): boolean;
@@ -145,8 +145,8 @@ export namespace MedicinalProductInteraction {
   export namespace Interactant {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       item?: MedicinalProductInteraction.Interactant.ItemX.AsObject,
     }
 

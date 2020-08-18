@@ -33,24 +33,24 @@ export class OperationOutcome extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIssueList(): void;
-  getIssueList(): Array<OperationOutcome.Issue>;
-  setIssueList(value: Array<OperationOutcome.Issue>): void;
+  clearIssue(): void;
+  getIssue(): Array<OperationOutcome.Issue>;
+  setIssue(value: Array<OperationOutcome.Issue>): void;
   addIssue(value?: OperationOutcome.Issue, index?: number): OperationOutcome.Issue;
 
   serializeBinary(): Uint8Array;
@@ -70,10 +70,10 @@ export namespace OperationOutcome {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    issueList: Array<OperationOutcome.Issue.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    issue: Array<OperationOutcome.Issue.AsObject>,
   }
 
   export class Issue extends jspb.Message {
@@ -82,14 +82,14 @@ export namespace OperationOutcome {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSeverity(): boolean;
@@ -112,14 +112,14 @@ export namespace OperationOutcome {
     getDiagnostics(): proto_r4_core_datatypes_pb.String | undefined;
     setDiagnostics(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearLocationList(): void;
-    getLocationList(): Array<proto_r4_core_datatypes_pb.String>;
-    setLocationList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+    clearLocation(): void;
+    getLocation(): Array<proto_r4_core_datatypes_pb.String>;
+    setLocation(value: Array<proto_r4_core_datatypes_pb.String>): void;
     addLocation(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
-    clearExpressionList(): void;
-    getExpressionList(): Array<proto_r4_core_datatypes_pb.String>;
-    setExpressionList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+    clearExpression(): void;
+    getExpression(): Array<proto_r4_core_datatypes_pb.String>;
+    setExpression(value: Array<proto_r4_core_datatypes_pb.String>): void;
     addExpression(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
     serializeBinary(): Uint8Array;
@@ -135,14 +135,14 @@ export namespace OperationOutcome {
   export namespace Issue {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       severity?: OperationOutcome.Issue.SeverityCode.AsObject,
       code?: OperationOutcome.Issue.CodeType.AsObject,
       details?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       diagnostics?: proto_r4_core_datatypes_pb.String.AsObject,
-      locationList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
-      expressionList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+      location: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+      expression: Array<proto_r4_core_datatypes_pb.String.AsObject>,
     }
 
     export class SeverityCode extends jspb.Message {
@@ -154,9 +154,9 @@ export namespace OperationOutcome {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -173,7 +173,7 @@ export namespace OperationOutcome {
       export type AsObject = {
         value: proto_r4_core_codes_pb.IssueSeverityCode.ValueMap[keyof proto_r4_core_codes_pb.IssueSeverityCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
 
@@ -186,9 +186,9 @@ export namespace OperationOutcome {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -205,7 +205,7 @@ export namespace OperationOutcome {
       export type AsObject = {
         value: proto_r4_core_codes_pb.IssueTypeCode.ValueMap[keyof proto_r4_core_codes_pb.IssueTypeCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }

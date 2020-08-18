@@ -33,24 +33,24 @@ export class Coverage extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -98,14 +98,14 @@ export class Coverage extends jspb.Message {
   getPeriod(): proto_r4_core_datatypes_pb.Period | undefined;
   setPeriod(value?: proto_r4_core_datatypes_pb.Period): void;
 
-  clearPayorList(): void;
-  getPayorList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPayorList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPayor(): void;
+  getPayor(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPayor(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPayor(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearClassValueList(): void;
-  getClassValueList(): Array<Coverage.Class>;
-  setClassValueList(value: Array<Coverage.Class>): void;
+  clearClassValue(): void;
+  getClassValue(): Array<Coverage.Class>;
+  setClassValue(value: Array<Coverage.Class>): void;
   addClassValue(value?: Coverage.Class, index?: number): Coverage.Class;
 
   hasOrder(): boolean;
@@ -118,9 +118,9 @@ export class Coverage extends jspb.Message {
   getNetwork(): proto_r4_core_datatypes_pb.String | undefined;
   setNetwork(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearCostToBeneficiaryList(): void;
-  getCostToBeneficiaryList(): Array<Coverage.CostToBeneficiary>;
-  setCostToBeneficiaryList(value: Array<Coverage.CostToBeneficiary>): void;
+  clearCostToBeneficiary(): void;
+  getCostToBeneficiary(): Array<Coverage.CostToBeneficiary>;
+  setCostToBeneficiary(value: Array<Coverage.CostToBeneficiary>): void;
   addCostToBeneficiary(value?: Coverage.CostToBeneficiary, index?: number): Coverage.CostToBeneficiary;
 
   hasSubrogation(): boolean;
@@ -128,9 +128,9 @@ export class Coverage extends jspb.Message {
   getSubrogation(): proto_r4_core_datatypes_pb.Boolean | undefined;
   setSubrogation(value?: proto_r4_core_datatypes_pb.Boolean): void;
 
-  clearContractList(): void;
-  getContractList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setContractList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearContract(): void;
+  getContract(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setContract(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addContract(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -150,10 +150,10 @@ export namespace Coverage {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: Coverage.StatusCode.AsObject,
     type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     policyHolder?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -163,13 +163,13 @@ export namespace Coverage {
     dependent?: proto_r4_core_datatypes_pb.String.AsObject,
     relationship?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     period?: proto_r4_core_datatypes_pb.Period.AsObject,
-    payorList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    classValueList: Array<Coverage.Class.AsObject>,
+    payor: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    classValue: Array<Coverage.Class.AsObject>,
     order?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
     network?: proto_r4_core_datatypes_pb.String.AsObject,
-    costToBeneficiaryList: Array<Coverage.CostToBeneficiary.AsObject>,
+    costToBeneficiary: Array<Coverage.CostToBeneficiary.AsObject>,
     subrogation?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-    contractList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contract: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -181,9 +181,9 @@ export namespace Coverage {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -200,7 +200,7 @@ export namespace Coverage {
     export type AsObject = {
       value: proto_r4_core_codes_pb.FinancialResourceStatusCode.ValueMap[keyof proto_r4_core_codes_pb.FinancialResourceStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -210,14 +210,14 @@ export namespace Coverage {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -248,8 +248,8 @@ export namespace Coverage {
   export namespace Class {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       value?: proto_r4_core_datatypes_pb.String.AsObject,
       name?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -262,14 +262,14 @@ export namespace Coverage {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -282,9 +282,9 @@ export namespace Coverage {
     getValue(): Coverage.CostToBeneficiary.ValueX | undefined;
     setValue(value?: Coverage.CostToBeneficiary.ValueX): void;
 
-    clearExceptionList(): void;
-    getExceptionList(): Array<Coverage.CostToBeneficiary.Exemption>;
-    setExceptionList(value: Array<Coverage.CostToBeneficiary.Exemption>): void;
+    clearException(): void;
+    getException(): Array<Coverage.CostToBeneficiary.Exemption>;
+    setException(value: Array<Coverage.CostToBeneficiary.Exemption>): void;
     addException(value?: Coverage.CostToBeneficiary.Exemption, index?: number): Coverage.CostToBeneficiary.Exemption;
 
     serializeBinary(): Uint8Array;
@@ -300,11 +300,11 @@ export namespace Coverage {
   export namespace CostToBeneficiary {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       value?: Coverage.CostToBeneficiary.ValueX.AsObject,
-      exceptionList: Array<Coverage.CostToBeneficiary.Exemption.AsObject>,
+      exception: Array<Coverage.CostToBeneficiary.Exemption.AsObject>,
     }
 
     export class ValueX extends jspb.Message {
@@ -348,14 +348,14 @@ export namespace Coverage {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasType(): boolean;
@@ -381,8 +381,8 @@ export namespace Coverage {
     export namespace Exemption {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         period?: proto_r4_core_datatypes_pb.Period.AsObject,
       }

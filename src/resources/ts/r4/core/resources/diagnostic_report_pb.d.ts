@@ -33,29 +33,29 @@ export class DiagnosticReport extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -63,9 +63,9 @@ export class DiagnosticReport extends jspb.Message {
   getStatus(): DiagnosticReport.StatusCode | undefined;
   setStatus(value?: DiagnosticReport.StatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -93,34 +93,34 @@ export class DiagnosticReport extends jspb.Message {
   getIssued(): proto_r4_core_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_r4_core_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearResultsInterpreterList(): void;
-  getResultsInterpreterList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setResultsInterpreterList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearResultsInterpreter(): void;
+  getResultsInterpreter(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setResultsInterpreter(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addResultsInterpreter(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearSpecimenList(): void;
-  getSpecimenList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSpecimenList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSpecimen(): void;
+  getSpecimen(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSpecimen(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSpecimen(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearResultList(): void;
-  getResultList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setResultList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearResult(): void;
+  getResult(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setResult(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addResult(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearImagingStudyList(): void;
-  getImagingStudyList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setImagingStudyList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearImagingStudy(): void;
+  getImagingStudy(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setImagingStudy(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addImagingStudy(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearMediaList(): void;
-  getMediaList(): Array<DiagnosticReport.Media>;
-  setMediaList(value: Array<DiagnosticReport.Media>): void;
+  clearMedia(): void;
+  getMedia(): Array<DiagnosticReport.Media>;
+  setMedia(value: Array<DiagnosticReport.Media>): void;
   addMedia(value?: DiagnosticReport.Media, index?: number): DiagnosticReport.Media;
 
   hasConclusion(): boolean;
@@ -128,14 +128,14 @@ export class DiagnosticReport extends jspb.Message {
   getConclusion(): proto_r4_core_datatypes_pb.String | undefined;
   setConclusion(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearConclusionCodeList(): void;
-  getConclusionCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setConclusionCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearConclusionCode(): void;
+  getConclusionCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setConclusionCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addConclusionCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearPresentedFormList(): void;
-  getPresentedFormList(): Array<proto_r4_core_datatypes_pb.Attachment>;
-  setPresentedFormList(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
+  clearPresentedForm(): void;
+  getPresentedForm(): Array<proto_r4_core_datatypes_pb.Attachment>;
+  setPresentedForm(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
   addPresentedForm(value?: proto_r4_core_datatypes_pb.Attachment, index?: number): proto_r4_core_datatypes_pb.Attachment;
 
   serializeBinary(): Uint8Array;
@@ -155,27 +155,27 @@ export namespace DiagnosticReport {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: DiagnosticReport.StatusCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     effective?: DiagnosticReport.EffectiveX.AsObject,
     issued?: proto_r4_core_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    resultsInterpreterList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    specimenList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    resultList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    imagingStudyList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    mediaList: Array<DiagnosticReport.Media.AsObject>,
+    performer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    resultsInterpreter: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    specimen: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    result: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    imagingStudy: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    media: Array<DiagnosticReport.Media.AsObject>,
     conclusion?: proto_r4_core_datatypes_pb.String.AsObject,
-    conclusionCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    presentedFormList: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
+    conclusionCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    presentedForm: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -187,9 +187,9 @@ export namespace DiagnosticReport {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -206,7 +206,7 @@ export namespace DiagnosticReport {
     export type AsObject = {
       value: proto_r4_core_codes_pb.DiagnosticReportStatusCode.ValueMap[keyof proto_r4_core_codes_pb.DiagnosticReportStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -251,14 +251,14 @@ export namespace DiagnosticReport {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasComment(): boolean;
@@ -284,8 +284,8 @@ export namespace DiagnosticReport {
   export namespace Media {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       comment?: proto_r4_core_datatypes_pb.String.AsObject,
       link?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }

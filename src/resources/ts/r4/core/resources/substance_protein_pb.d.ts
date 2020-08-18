@@ -32,19 +32,19 @@ export class SubstanceProtein extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasSequenceType(): boolean;
@@ -57,14 +57,14 @@ export class SubstanceProtein extends jspb.Message {
   getNumberOfSubunits(): proto_r4_core_datatypes_pb.Integer | undefined;
   setNumberOfSubunits(value?: proto_r4_core_datatypes_pb.Integer): void;
 
-  clearDisulfideLinkageList(): void;
-  getDisulfideLinkageList(): Array<proto_r4_core_datatypes_pb.String>;
-  setDisulfideLinkageList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+  clearDisulfideLinkage(): void;
+  getDisulfideLinkage(): Array<proto_r4_core_datatypes_pb.String>;
+  setDisulfideLinkage(value: Array<proto_r4_core_datatypes_pb.String>): void;
   addDisulfideLinkage(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
-  clearSubunitList(): void;
-  getSubunitList(): Array<SubstanceProtein.Subunit>;
-  setSubunitList(value: Array<SubstanceProtein.Subunit>): void;
+  clearSubunit(): void;
+  getSubunit(): Array<SubstanceProtein.Subunit>;
+  setSubunit(value: Array<SubstanceProtein.Subunit>): void;
   addSubunit(value?: SubstanceProtein.Subunit, index?: number): SubstanceProtein.Subunit;
 
   serializeBinary(): Uint8Array;
@@ -84,13 +84,13 @@ export namespace SubstanceProtein {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     sequenceType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     numberOfSubunits?: proto_r4_core_datatypes_pb.Integer.AsObject,
-    disulfideLinkageList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
-    subunitList: Array<SubstanceProtein.Subunit.AsObject>,
+    disulfideLinkage: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+    subunit: Array<SubstanceProtein.Subunit.AsObject>,
   }
 
   export class Subunit extends jspb.Message {
@@ -99,14 +99,14 @@ export namespace SubstanceProtein {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSubunit(): boolean;
@@ -162,8 +162,8 @@ export namespace SubstanceProtein {
   export namespace Subunit {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       subunit?: proto_r4_core_datatypes_pb.Integer.AsObject,
       sequence?: proto_r4_core_datatypes_pb.String.AsObject,
       length?: proto_r4_core_datatypes_pb.Integer.AsObject,

@@ -32,19 +32,19 @@ export class SubstancePolymer extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasClassValue(): boolean;
@@ -57,24 +57,24 @@ export class SubstancePolymer extends jspb.Message {
   getGeometry(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setGeometry(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearCopolymerConnectivityList(): void;
-  getCopolymerConnectivityList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCopolymerConnectivityList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCopolymerConnectivity(): void;
+  getCopolymerConnectivity(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCopolymerConnectivity(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCopolymerConnectivity(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearModificationList(): void;
-  getModificationList(): Array<proto_r4_core_datatypes_pb.String>;
-  setModificationList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+  clearModification(): void;
+  getModification(): Array<proto_r4_core_datatypes_pb.String>;
+  setModification(value: Array<proto_r4_core_datatypes_pb.String>): void;
   addModification(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
-  clearMonomerSetList(): void;
-  getMonomerSetList(): Array<SubstancePolymer.MonomerSet>;
-  setMonomerSetList(value: Array<SubstancePolymer.MonomerSet>): void;
+  clearMonomerSet(): void;
+  getMonomerSet(): Array<SubstancePolymer.MonomerSet>;
+  setMonomerSet(value: Array<SubstancePolymer.MonomerSet>): void;
   addMonomerSet(value?: SubstancePolymer.MonomerSet, index?: number): SubstancePolymer.MonomerSet;
 
-  clearRepeatList(): void;
-  getRepeatList(): Array<SubstancePolymer.Repeat>;
-  setRepeatList(value: Array<SubstancePolymer.Repeat>): void;
+  clearRepeat(): void;
+  getRepeat(): Array<SubstancePolymer.Repeat>;
+  setRepeat(value: Array<SubstancePolymer.Repeat>): void;
   addRepeat(value?: SubstancePolymer.Repeat, index?: number): SubstancePolymer.Repeat;
 
   serializeBinary(): Uint8Array;
@@ -94,15 +94,15 @@ export namespace SubstancePolymer {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     classValue?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     geometry?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    copolymerConnectivityList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    modificationList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
-    monomerSetList: Array<SubstancePolymer.MonomerSet.AsObject>,
-    repeatList: Array<SubstancePolymer.Repeat.AsObject>,
+    copolymerConnectivity: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    modification: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+    monomerSet: Array<SubstancePolymer.MonomerSet.AsObject>,
+    repeat: Array<SubstancePolymer.Repeat.AsObject>,
   }
 
   export class MonomerSet extends jspb.Message {
@@ -111,14 +111,14 @@ export namespace SubstancePolymer {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasRatioType(): boolean;
@@ -126,9 +126,9 @@ export namespace SubstancePolymer {
     getRatioType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setRatioType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearStartingMaterialList(): void;
-    getStartingMaterialList(): Array<SubstancePolymer.MonomerSet.StartingMaterial>;
-    setStartingMaterialList(value: Array<SubstancePolymer.MonomerSet.StartingMaterial>): void;
+    clearStartingMaterial(): void;
+    getStartingMaterial(): Array<SubstancePolymer.MonomerSet.StartingMaterial>;
+    setStartingMaterial(value: Array<SubstancePolymer.MonomerSet.StartingMaterial>): void;
     addStartingMaterial(value?: SubstancePolymer.MonomerSet.StartingMaterial, index?: number): SubstancePolymer.MonomerSet.StartingMaterial;
 
     serializeBinary(): Uint8Array;
@@ -144,10 +144,10 @@ export namespace SubstancePolymer {
   export namespace MonomerSet {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       ratioType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      startingMaterialList: Array<SubstancePolymer.MonomerSet.StartingMaterial.AsObject>,
+      startingMaterial: Array<SubstancePolymer.MonomerSet.StartingMaterial.AsObject>,
     }
 
     export class StartingMaterial extends jspb.Message {
@@ -156,14 +156,14 @@ export namespace SubstancePolymer {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasMaterial(): boolean;
@@ -199,8 +199,8 @@ export namespace SubstancePolymer {
     export namespace StartingMaterial {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         material?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         isDefining?: proto_r4_core_datatypes_pb.Boolean.AsObject,
@@ -215,14 +215,14 @@ export namespace SubstancePolymer {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasNumberOfUnits(): boolean;
@@ -240,9 +240,9 @@ export namespace SubstancePolymer {
     getRepeatUnitAmountType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setRepeatUnitAmountType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearRepeatUnitList(): void;
-    getRepeatUnitList(): Array<SubstancePolymer.Repeat.RepeatUnit>;
-    setRepeatUnitList(value: Array<SubstancePolymer.Repeat.RepeatUnit>): void;
+    clearRepeatUnit(): void;
+    getRepeatUnit(): Array<SubstancePolymer.Repeat.RepeatUnit>;
+    setRepeatUnit(value: Array<SubstancePolymer.Repeat.RepeatUnit>): void;
     addRepeatUnit(value?: SubstancePolymer.Repeat.RepeatUnit, index?: number): SubstancePolymer.Repeat.RepeatUnit;
 
     serializeBinary(): Uint8Array;
@@ -258,12 +258,12 @@ export namespace SubstancePolymer {
   export namespace Repeat {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       numberOfUnits?: proto_r4_core_datatypes_pb.Integer.AsObject,
       averageMolecularFormula?: proto_r4_core_datatypes_pb.String.AsObject,
       repeatUnitAmountType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      repeatUnitList: Array<SubstancePolymer.Repeat.RepeatUnit.AsObject>,
+      repeatUnit: Array<SubstancePolymer.Repeat.RepeatUnit.AsObject>,
     }
 
     export class RepeatUnit extends jspb.Message {
@@ -272,14 +272,14 @@ export namespace SubstancePolymer {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasOrientationOfPolymerisation(): boolean;
@@ -297,14 +297,14 @@ export namespace SubstancePolymer {
       getAmount(): proto_r4_core_datatypes_pb.SubstanceAmount | undefined;
       setAmount(value?: proto_r4_core_datatypes_pb.SubstanceAmount): void;
 
-      clearDegreeOfPolymerisationList(): void;
-      getDegreeOfPolymerisationList(): Array<SubstancePolymer.Repeat.RepeatUnit.DegreeOfPolymerisation>;
-      setDegreeOfPolymerisationList(value: Array<SubstancePolymer.Repeat.RepeatUnit.DegreeOfPolymerisation>): void;
+      clearDegreeOfPolymerisation(): void;
+      getDegreeOfPolymerisation(): Array<SubstancePolymer.Repeat.RepeatUnit.DegreeOfPolymerisation>;
+      setDegreeOfPolymerisation(value: Array<SubstancePolymer.Repeat.RepeatUnit.DegreeOfPolymerisation>): void;
       addDegreeOfPolymerisation(value?: SubstancePolymer.Repeat.RepeatUnit.DegreeOfPolymerisation, index?: number): SubstancePolymer.Repeat.RepeatUnit.DegreeOfPolymerisation;
 
-      clearStructuralRepresentationList(): void;
-      getStructuralRepresentationList(): Array<SubstancePolymer.Repeat.RepeatUnit.StructuralRepresentation>;
-      setStructuralRepresentationList(value: Array<SubstancePolymer.Repeat.RepeatUnit.StructuralRepresentation>): void;
+      clearStructuralRepresentation(): void;
+      getStructuralRepresentation(): Array<SubstancePolymer.Repeat.RepeatUnit.StructuralRepresentation>;
+      setStructuralRepresentation(value: Array<SubstancePolymer.Repeat.RepeatUnit.StructuralRepresentation>): void;
       addStructuralRepresentation(value?: SubstancePolymer.Repeat.RepeatUnit.StructuralRepresentation, index?: number): SubstancePolymer.Repeat.RepeatUnit.StructuralRepresentation;
 
       serializeBinary(): Uint8Array;
@@ -320,13 +320,13 @@ export namespace SubstancePolymer {
     export namespace RepeatUnit {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         orientationOfPolymerisation?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         repeatUnit?: proto_r4_core_datatypes_pb.String.AsObject,
         amount?: proto_r4_core_datatypes_pb.SubstanceAmount.AsObject,
-        degreeOfPolymerisationList: Array<SubstancePolymer.Repeat.RepeatUnit.DegreeOfPolymerisation.AsObject>,
-        structuralRepresentationList: Array<SubstancePolymer.Repeat.RepeatUnit.StructuralRepresentation.AsObject>,
+        degreeOfPolymerisation: Array<SubstancePolymer.Repeat.RepeatUnit.DegreeOfPolymerisation.AsObject>,
+        structuralRepresentation: Array<SubstancePolymer.Repeat.RepeatUnit.StructuralRepresentation.AsObject>,
       }
 
       export class DegreeOfPolymerisation extends jspb.Message {
@@ -335,14 +335,14 @@ export namespace SubstancePolymer {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         hasDegree(): boolean;
@@ -368,8 +368,8 @@ export namespace SubstancePolymer {
       export namespace DegreeOfPolymerisation {
         export type AsObject = {
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
           degree?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
           amount?: proto_r4_core_datatypes_pb.SubstanceAmount.AsObject,
         }
@@ -381,14 +381,14 @@ export namespace SubstancePolymer {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         hasType(): boolean;
@@ -419,8 +419,8 @@ export namespace SubstancePolymer {
       export namespace StructuralRepresentation {
         export type AsObject = {
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
           type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
           representation?: proto_r4_core_datatypes_pb.String.AsObject,
           attachment?: proto_r4_core_datatypes_pb.Attachment.AsObject,

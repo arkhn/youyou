@@ -33,24 +33,24 @@ export class Consent extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -63,9 +63,9 @@ export class Consent extends jspb.Message {
   getScope(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setScope(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasPatient(): boolean;
@@ -78,14 +78,14 @@ export class Consent extends jspb.Message {
   getDateTime(): proto_r4_core_datatypes_pb.DateTime | undefined;
   setDateTime(value?: proto_r4_core_datatypes_pb.DateTime): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearOrganizationList(): void;
-  getOrganizationList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setOrganizationList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearOrganization(): void;
+  getOrganization(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setOrganization(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addOrganization(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasSource(): boolean;
@@ -93,9 +93,9 @@ export class Consent extends jspb.Message {
   getSource(): Consent.SourceX | undefined;
   setSource(value?: Consent.SourceX): void;
 
-  clearPolicyList(): void;
-  getPolicyList(): Array<Consent.Policy>;
-  setPolicyList(value: Array<Consent.Policy>): void;
+  clearPolicy(): void;
+  getPolicy(): Array<Consent.Policy>;
+  setPolicy(value: Array<Consent.Policy>): void;
   addPolicy(value?: Consent.Policy, index?: number): Consent.Policy;
 
   hasPolicyRule(): boolean;
@@ -103,9 +103,9 @@ export class Consent extends jspb.Message {
   getPolicyRule(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setPolicyRule(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearVerificationList(): void;
-  getVerificationList(): Array<Consent.Verification>;
-  setVerificationList(value: Array<Consent.Verification>): void;
+  clearVerification(): void;
+  getVerification(): Array<Consent.Verification>;
+  setVerification(value: Array<Consent.Verification>): void;
   addVerification(value?: Consent.Verification, index?: number): Consent.Verification;
 
   hasProvision(): boolean;
@@ -130,21 +130,21 @@ export namespace Consent {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: Consent.StatusCode.AsObject,
     scope?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     patient?: proto_r4_core_datatypes_pb.Reference.AsObject,
     dateTime?: proto_r4_core_datatypes_pb.DateTime.AsObject,
-    performerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    organizationList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    organization: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     source?: Consent.SourceX.AsObject,
-    policyList: Array<Consent.Policy.AsObject>,
+    policy: Array<Consent.Policy.AsObject>,
     policyRule?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    verificationList: Array<Consent.Verification.AsObject>,
+    verification: Array<Consent.Verification.AsObject>,
     provision?: Consent.Provision.AsObject,
   }
 
@@ -157,9 +157,9 @@ export namespace Consent {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -176,7 +176,7 @@ export namespace Consent {
     export type AsObject = {
       value: proto_r4_core_codes_pb.ConsentStateCode.ValueMap[keyof proto_r4_core_codes_pb.ConsentStateCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -221,14 +221,14 @@ export namespace Consent {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasAuthority(): boolean;
@@ -254,8 +254,8 @@ export namespace Consent {
   export namespace Policy {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       authority?: proto_r4_core_datatypes_pb.Uri.AsObject,
       uri?: proto_r4_core_datatypes_pb.Uri.AsObject,
     }
@@ -267,14 +267,14 @@ export namespace Consent {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasVerified(): boolean;
@@ -305,8 +305,8 @@ export namespace Consent {
   export namespace Verification {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       verified?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       verifiedWith?: proto_r4_core_datatypes_pb.Reference.AsObject,
       verificationDate?: proto_r4_core_datatypes_pb.DateTime.AsObject,
@@ -319,14 +319,14 @@ export namespace Consent {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -339,34 +339,34 @@ export namespace Consent {
     getPeriod(): proto_r4_core_datatypes_pb.Period | undefined;
     setPeriod(value?: proto_r4_core_datatypes_pb.Period): void;
 
-    clearActorList(): void;
-    getActorList(): Array<Consent.Provision.ProvisionActor>;
-    setActorList(value: Array<Consent.Provision.ProvisionActor>): void;
+    clearActor(): void;
+    getActor(): Array<Consent.Provision.ProvisionActor>;
+    setActor(value: Array<Consent.Provision.ProvisionActor>): void;
     addActor(value?: Consent.Provision.ProvisionActor, index?: number): Consent.Provision.ProvisionActor;
 
-    clearActionList(): void;
-    getActionList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setActionList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearAction(): void;
+    getAction(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setAction(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addAction(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearSecurityLabelList(): void;
-    getSecurityLabelList(): Array<proto_r4_core_datatypes_pb.Coding>;
-    setSecurityLabelList(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
+    clearSecurityLabel(): void;
+    getSecurityLabel(): Array<proto_r4_core_datatypes_pb.Coding>;
+    setSecurityLabel(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
     addSecurityLabel(value?: proto_r4_core_datatypes_pb.Coding, index?: number): proto_r4_core_datatypes_pb.Coding;
 
-    clearPurposeList(): void;
-    getPurposeList(): Array<proto_r4_core_datatypes_pb.Coding>;
-    setPurposeList(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
+    clearPurpose(): void;
+    getPurpose(): Array<proto_r4_core_datatypes_pb.Coding>;
+    setPurpose(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
     addPurpose(value?: proto_r4_core_datatypes_pb.Coding, index?: number): proto_r4_core_datatypes_pb.Coding;
 
-    clearClassValueList(): void;
-    getClassValueList(): Array<proto_r4_core_datatypes_pb.Coding>;
-    setClassValueList(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
+    clearClassValue(): void;
+    getClassValue(): Array<proto_r4_core_datatypes_pb.Coding>;
+    setClassValue(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
     addClassValue(value?: proto_r4_core_datatypes_pb.Coding, index?: number): proto_r4_core_datatypes_pb.Coding;
 
-    clearCodeList(): void;
-    getCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearCode(): void;
+    getCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasDataPeriod(): boolean;
@@ -374,14 +374,14 @@ export namespace Consent {
     getDataPeriod(): proto_r4_core_datatypes_pb.Period | undefined;
     setDataPeriod(value?: proto_r4_core_datatypes_pb.Period): void;
 
-    clearDataList(): void;
-    getDataList(): Array<Consent.Provision.ProvisionData>;
-    setDataList(value: Array<Consent.Provision.ProvisionData>): void;
+    clearData(): void;
+    getData(): Array<Consent.Provision.ProvisionData>;
+    setData(value: Array<Consent.Provision.ProvisionData>): void;
     addData(value?: Consent.Provision.ProvisionData, index?: number): Consent.Provision.ProvisionData;
 
-    clearProvisionList(): void;
-    getProvisionList(): Array<Consent.Provision>;
-    setProvisionList(value: Array<Consent.Provision>): void;
+    clearProvision(): void;
+    getProvision(): Array<Consent.Provision>;
+    setProvision(value: Array<Consent.Provision>): void;
     addProvision(value?: Consent.Provision, index?: number): Consent.Provision;
 
     serializeBinary(): Uint8Array;
@@ -397,19 +397,19 @@ export namespace Consent {
   export namespace Provision {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: Consent.Provision.TypeCode.AsObject,
       period?: proto_r4_core_datatypes_pb.Period.AsObject,
-      actorList: Array<Consent.Provision.ProvisionActor.AsObject>,
-      actionList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      securityLabelList: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
-      purposeList: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
-      classValueList: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
-      codeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      actor: Array<Consent.Provision.ProvisionActor.AsObject>,
+      action: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      securityLabel: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
+      purpose: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
+      classValue: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
+      code: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       dataPeriod?: proto_r4_core_datatypes_pb.Period.AsObject,
-      dataList: Array<Consent.Provision.ProvisionData.AsObject>,
-      provisionList: Array<Consent.Provision.AsObject>,
+      data: Array<Consent.Provision.ProvisionData.AsObject>,
+      provision: Array<Consent.Provision.AsObject>,
     }
 
     export class TypeCode extends jspb.Message {
@@ -421,9 +421,9 @@ export namespace Consent {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -440,7 +440,7 @@ export namespace Consent {
       export type AsObject = {
         value: proto_r4_core_codes_pb.ConsentProvisionTypeCode.ValueMap[keyof proto_r4_core_codes_pb.ConsentProvisionTypeCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
 
@@ -450,14 +450,14 @@ export namespace Consent {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasRole(): boolean;
@@ -483,8 +483,8 @@ export namespace Consent {
     export namespace ProvisionActor {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         role?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         reference?: proto_r4_core_datatypes_pb.Reference.AsObject,
       }
@@ -496,14 +496,14 @@ export namespace Consent {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasMeaning(): boolean;
@@ -529,8 +529,8 @@ export namespace Consent {
     export namespace ProvisionData {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         meaning?: Consent.Provision.ProvisionData.MeaningCode.AsObject,
         reference?: proto_r4_core_datatypes_pb.Reference.AsObject,
       }
@@ -544,9 +544,9 @@ export namespace Consent {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         serializeBinary(): Uint8Array;
@@ -563,7 +563,7 @@ export namespace Consent {
         export type AsObject = {
           value: proto_r4_core_codes_pb.ConsentDataMeaningCode.ValueMap[keyof proto_r4_core_codes_pb.ConsentDataMeaningCode.ValueMap],
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         }
       }
     }

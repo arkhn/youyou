@@ -1,4 +1,4 @@
-import { R4 } from '@ahryman40k/ts-fhir-types';
+import { StructureDefinition } from '../../resources/ts/r4/core/resources/structure_definition_pb';
 import { ResourceAction, SELECT_RESOURCE, GET_IDS_SUCCESS, GetIdsFailureAction, GetFetchStartAction, GetIdsSuccessAction, GET_FETCH_START, GET_IDS_FAILURE, GetStructureDefFailureAction, GetStructureDefSuccessAction, GET_STRUCTUREDEF_SUCCESS, GET_STRUCTUREDEF_FAILURE, SELECT_ATTRIBUTE, SelectAttributeAction } from '../actions/resourceActions';
 
 export type DataFetched = {
@@ -7,14 +7,14 @@ export type DataFetched = {
 
 export type ResourceState = {
     data: DataFetched[];
-    profile: R4.IStructureDefinition | null;
+    profile: StructureDefinition.AsObject | null;
     selectedResourceId: string | null;
     selectedAttributeId: string | null;
     loading: boolean;
     error: Error | null;
 }
 
-const initialState: ResourceState = {
+const initialState: ResourceState = { 
     data: [],
     profile: null,
     selectedResourceId: null,

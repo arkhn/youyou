@@ -193,14 +193,14 @@ export class Bundle extends jspb.Message {
   getTotal(): proto_r4_core_datatypes_pb.UnsignedInt | undefined;
   setTotal(value?: proto_r4_core_datatypes_pb.UnsignedInt): void;
 
-  clearLinkList(): void;
-  getLinkList(): Array<Bundle.Link>;
-  setLinkList(value: Array<Bundle.Link>): void;
+  clearLink(): void;
+  getLink(): Array<Bundle.Link>;
+  setLink(value: Array<Bundle.Link>): void;
   addLink(value?: Bundle.Link, index?: number): Bundle.Link;
 
-  clearEntryList(): void;
-  getEntryList(): Array<Bundle.Entry>;
-  setEntryList(value: Array<Bundle.Entry>): void;
+  clearEntry(): void;
+  getEntry(): Array<Bundle.Entry>;
+  setEntry(value: Array<Bundle.Entry>): void;
   addEntry(value?: Bundle.Entry, index?: number): Bundle.Entry;
 
   hasSignature(): boolean;
@@ -228,8 +228,8 @@ export namespace Bundle {
     type?: Bundle.TypeCode.AsObject,
     timestamp?: proto_r4_core_datatypes_pb.Instant.AsObject,
     total?: proto_r4_core_datatypes_pb.UnsignedInt.AsObject,
-    linkList: Array<Bundle.Link.AsObject>,
-    entryList: Array<Bundle.Entry.AsObject>,
+    link: Array<Bundle.Link.AsObject>,
+    entry: Array<Bundle.Entry.AsObject>,
     signature?: proto_r4_core_datatypes_pb.Signature.AsObject,
   }
 
@@ -242,9 +242,9 @@ export namespace Bundle {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -261,7 +261,7 @@ export namespace Bundle {
     export type AsObject = {
       value: proto_r4_core_codes_pb.BundleTypeCode.ValueMap[keyof proto_r4_core_codes_pb.BundleTypeCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -271,14 +271,14 @@ export namespace Bundle {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasRelation(): boolean;
@@ -304,8 +304,8 @@ export namespace Bundle {
   export namespace Link {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       relation?: proto_r4_core_datatypes_pb.String.AsObject,
       url?: proto_r4_core_datatypes_pb.Uri.AsObject,
     }
@@ -317,19 +317,19 @@ export namespace Bundle {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearLinkList(): void;
-    getLinkList(): Array<Bundle.Link>;
-    setLinkList(value: Array<Bundle.Link>): void;
+    clearLink(): void;
+    getLink(): Array<Bundle.Link>;
+    setLink(value: Array<Bundle.Link>): void;
     addLink(value?: Bundle.Link, index?: number): Bundle.Link;
 
     hasFullUrl(): boolean;
@@ -370,9 +370,9 @@ export namespace Bundle {
   export namespace Entry {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      linkList: Array<Bundle.Link.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      link: Array<Bundle.Link.AsObject>,
       fullUrl?: proto_r4_core_datatypes_pb.Uri.AsObject,
       resource?: ContainedResource.AsObject,
       search?: Bundle.Entry.Search.AsObject,
@@ -386,14 +386,14 @@ export namespace Bundle {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasMode(): boolean;
@@ -419,8 +419,8 @@ export namespace Bundle {
     export namespace Search {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         mode?: Bundle.Entry.Search.ModeCode.AsObject,
         score?: proto_r4_core_datatypes_pb.Decimal.AsObject,
       }
@@ -434,9 +434,9 @@ export namespace Bundle {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         serializeBinary(): Uint8Array;
@@ -453,7 +453,7 @@ export namespace Bundle {
         export type AsObject = {
           value: proto_r4_core_codes_pb.SearchEntryModeCode.ValueMap[keyof proto_r4_core_codes_pb.SearchEntryModeCode.ValueMap],
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         }
       }
     }
@@ -464,14 +464,14 @@ export namespace Bundle {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasMethod(): boolean;
@@ -517,8 +517,8 @@ export namespace Bundle {
     export namespace Request {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         method?: Bundle.Entry.Request.MethodCode.AsObject,
         url?: proto_r4_core_datatypes_pb.Uri.AsObject,
         ifNoneMatch?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -536,9 +536,9 @@ export namespace Bundle {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         serializeBinary(): Uint8Array;
@@ -555,7 +555,7 @@ export namespace Bundle {
         export type AsObject = {
           value: proto_r4_core_codes_pb.HTTPVerbCode.ValueMap[keyof proto_r4_core_codes_pb.HTTPVerbCode.ValueMap],
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         }
       }
     }
@@ -566,14 +566,14 @@ export namespace Bundle {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasStatus(): boolean;
@@ -614,8 +614,8 @@ export namespace Bundle {
     export namespace Response {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         status?: proto_r4_core_datatypes_pb.String.AsObject,
         location?: proto_r4_core_datatypes_pb.Uri.AsObject,
         etag?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -972,10 +972,10 @@ export class ContainedResource extends jspb.Message {
   getLinkage(): proto_r4_core_resources_linkage_pb.Linkage | undefined;
   setLinkage(value?: proto_r4_core_resources_linkage_pb.Linkage): void;
 
-  hasList(): boolean;
-  clearList(): void;
-  getList(): proto_r4_core_resources_list_pb.List | undefined;
-  setList(value?: proto_r4_core_resources_list_pb.List): void;
+  has(): boolean;
+  clear(): void;
+  get(): proto_r4_core_resources_list_pb.List | undefined;
+  set(value?: proto_r4_core_resources_list_pb.List): void;
 
   hasLocation(): boolean;
   clearLocation(): void;

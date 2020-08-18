@@ -33,19 +33,19 @@ export class CompartmentDefinition extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasUrl(): boolean;
@@ -83,9 +83,9 @@ export class CompartmentDefinition extends jspb.Message {
   getPublisher(): proto_r4_core_datatypes_pb.String | undefined;
   setPublisher(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearContactList(): void;
-  getContactList(): Array<proto_r4_core_datatypes_pb.ContactDetail>;
-  setContactList(value: Array<proto_r4_core_datatypes_pb.ContactDetail>): void;
+  clearContact(): void;
+  getContact(): Array<proto_r4_core_datatypes_pb.ContactDetail>;
+  setContact(value: Array<proto_r4_core_datatypes_pb.ContactDetail>): void;
   addContact(value?: proto_r4_core_datatypes_pb.ContactDetail, index?: number): proto_r4_core_datatypes_pb.ContactDetail;
 
   hasDescription(): boolean;
@@ -93,9 +93,9 @@ export class CompartmentDefinition extends jspb.Message {
   getDescription(): proto_r4_core_datatypes_pb.Markdown | undefined;
   setDescription(value?: proto_r4_core_datatypes_pb.Markdown): void;
 
-  clearUseContextList(): void;
-  getUseContextList(): Array<proto_r4_core_datatypes_pb.UsageContext>;
-  setUseContextList(value: Array<proto_r4_core_datatypes_pb.UsageContext>): void;
+  clearUseContext(): void;
+  getUseContext(): Array<proto_r4_core_datatypes_pb.UsageContext>;
+  setUseContext(value: Array<proto_r4_core_datatypes_pb.UsageContext>): void;
   addUseContext(value?: proto_r4_core_datatypes_pb.UsageContext, index?: number): proto_r4_core_datatypes_pb.UsageContext;
 
   hasPurpose(): boolean;
@@ -113,9 +113,9 @@ export class CompartmentDefinition extends jspb.Message {
   getSearch(): proto_r4_core_datatypes_pb.Boolean | undefined;
   setSearch(value?: proto_r4_core_datatypes_pb.Boolean): void;
 
-  clearResourceList(): void;
-  getResourceList(): Array<CompartmentDefinition.Resource>;
-  setResourceList(value: Array<CompartmentDefinition.Resource>): void;
+  clearResource(): void;
+  getResource(): Array<CompartmentDefinition.Resource>;
+  setResource(value: Array<CompartmentDefinition.Resource>): void;
   addResource(value?: CompartmentDefinition.Resource, index?: number): CompartmentDefinition.Resource;
 
   serializeBinary(): Uint8Array;
@@ -135,9 +135,9 @@ export namespace CompartmentDefinition {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     url?: proto_r4_core_datatypes_pb.Uri.AsObject,
     version?: proto_r4_core_datatypes_pb.String.AsObject,
     name?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -145,13 +145,13 @@ export namespace CompartmentDefinition {
     experimental?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     publisher?: proto_r4_core_datatypes_pb.String.AsObject,
-    contactList: Array<proto_r4_core_datatypes_pb.ContactDetail.AsObject>,
+    contact: Array<proto_r4_core_datatypes_pb.ContactDetail.AsObject>,
     description?: proto_r4_core_datatypes_pb.Markdown.AsObject,
-    useContextList: Array<proto_r4_core_datatypes_pb.UsageContext.AsObject>,
+    useContext: Array<proto_r4_core_datatypes_pb.UsageContext.AsObject>,
     purpose?: proto_r4_core_datatypes_pb.Markdown.AsObject,
     code?: CompartmentDefinition.CodeType.AsObject,
     search?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-    resourceList: Array<CompartmentDefinition.Resource.AsObject>,
+    resource: Array<CompartmentDefinition.Resource.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -163,9 +163,9 @@ export namespace CompartmentDefinition {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -182,7 +182,7 @@ export namespace CompartmentDefinition {
     export type AsObject = {
       value: proto_r4_core_codes_pb.PublicationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.PublicationStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -195,9 +195,9 @@ export namespace CompartmentDefinition {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -214,7 +214,7 @@ export namespace CompartmentDefinition {
     export type AsObject = {
       value: proto_r4_core_codes_pb.CompartmentTypeCode.ValueMap[keyof proto_r4_core_codes_pb.CompartmentTypeCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -224,14 +224,14 @@ export namespace CompartmentDefinition {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -239,9 +239,9 @@ export namespace CompartmentDefinition {
     getCode(): CompartmentDefinition.Resource.CodeType | undefined;
     setCode(value?: CompartmentDefinition.Resource.CodeType): void;
 
-    clearParamList(): void;
-    getParamList(): Array<proto_r4_core_datatypes_pb.String>;
-    setParamList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+    clearParam(): void;
+    getParam(): Array<proto_r4_core_datatypes_pb.String>;
+    setParam(value: Array<proto_r4_core_datatypes_pb.String>): void;
     addParam(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
     hasDocumentation(): boolean;
@@ -262,10 +262,10 @@ export namespace CompartmentDefinition {
   export namespace Resource {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       code?: CompartmentDefinition.Resource.CodeType.AsObject,
-      paramList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+      param: Array<proto_r4_core_datatypes_pb.String.AsObject>,
       documentation?: proto_r4_core_datatypes_pb.String.AsObject,
     }
 
@@ -278,9 +278,9 @@ export namespace CompartmentDefinition {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -297,7 +297,7 @@ export namespace CompartmentDefinition {
       export type AsObject = {
         value: proto_r4_core_codes_pb.ResourceTypeCode.ValueMap[keyof proto_r4_core_codes_pb.ResourceTypeCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }

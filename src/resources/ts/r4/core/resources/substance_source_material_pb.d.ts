@@ -32,19 +32,19 @@ export class SubstanceSourceMaterial extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasSourceMaterialClass(): boolean;
@@ -72,24 +72,24 @@ export class SubstanceSourceMaterial extends jspb.Message {
   getOrganismName(): proto_r4_core_datatypes_pb.String | undefined;
   setOrganismName(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearParentSubstanceIdList(): void;
-  getParentSubstanceIdList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setParentSubstanceIdList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearParentSubstanceId(): void;
+  getParentSubstanceId(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setParentSubstanceId(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addParentSubstanceId(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearParentSubstanceNameList(): void;
-  getParentSubstanceNameList(): Array<proto_r4_core_datatypes_pb.String>;
-  setParentSubstanceNameList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+  clearParentSubstanceName(): void;
+  getParentSubstanceName(): Array<proto_r4_core_datatypes_pb.String>;
+  setParentSubstanceName(value: Array<proto_r4_core_datatypes_pb.String>): void;
   addParentSubstanceName(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
-  clearCountryOfOriginList(): void;
-  getCountryOfOriginList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCountryOfOriginList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCountryOfOrigin(): void;
+  getCountryOfOrigin(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCountryOfOrigin(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCountryOfOrigin(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearGeographicalLocationList(): void;
-  getGeographicalLocationList(): Array<proto_r4_core_datatypes_pb.String>;
-  setGeographicalLocationList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+  clearGeographicalLocation(): void;
+  getGeographicalLocation(): Array<proto_r4_core_datatypes_pb.String>;
+  setGeographicalLocation(value: Array<proto_r4_core_datatypes_pb.String>): void;
   addGeographicalLocation(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
   hasDevelopmentStage(): boolean;
@@ -97,9 +97,9 @@ export class SubstanceSourceMaterial extends jspb.Message {
   getDevelopmentStage(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setDevelopmentStage(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearFractionDescriptionList(): void;
-  getFractionDescriptionList(): Array<SubstanceSourceMaterial.FractionDescription>;
-  setFractionDescriptionList(value: Array<SubstanceSourceMaterial.FractionDescription>): void;
+  clearFractionDescription(): void;
+  getFractionDescription(): Array<SubstanceSourceMaterial.FractionDescription>;
+  setFractionDescription(value: Array<SubstanceSourceMaterial.FractionDescription>): void;
   addFractionDescription(value?: SubstanceSourceMaterial.FractionDescription, index?: number): SubstanceSourceMaterial.FractionDescription;
 
   hasOrganism(): boolean;
@@ -107,9 +107,9 @@ export class SubstanceSourceMaterial extends jspb.Message {
   getOrganism(): SubstanceSourceMaterial.Organism | undefined;
   setOrganism(value?: SubstanceSourceMaterial.Organism): void;
 
-  clearPartDescriptionList(): void;
-  getPartDescriptionList(): Array<SubstanceSourceMaterial.PartDescription>;
-  setPartDescriptionList(value: Array<SubstanceSourceMaterial.PartDescription>): void;
+  clearPartDescription(): void;
+  getPartDescription(): Array<SubstanceSourceMaterial.PartDescription>;
+  setPartDescription(value: Array<SubstanceSourceMaterial.PartDescription>): void;
   addPartDescription(value?: SubstanceSourceMaterial.PartDescription, index?: number): SubstanceSourceMaterial.PartDescription;
 
   serializeBinary(): Uint8Array;
@@ -129,22 +129,22 @@ export namespace SubstanceSourceMaterial {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     sourceMaterialClass?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     sourceMaterialType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     sourceMaterialState?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     organismId?: proto_r4_core_datatypes_pb.Identifier.AsObject,
     organismName?: proto_r4_core_datatypes_pb.String.AsObject,
-    parentSubstanceIdList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    parentSubstanceNameList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
-    countryOfOriginList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    geographicalLocationList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+    parentSubstanceId: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    parentSubstanceName: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+    countryOfOrigin: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    geographicalLocation: Array<proto_r4_core_datatypes_pb.String.AsObject>,
     developmentStage?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    fractionDescriptionList: Array<SubstanceSourceMaterial.FractionDescription.AsObject>,
+    fractionDescription: Array<SubstanceSourceMaterial.FractionDescription.AsObject>,
     organism?: SubstanceSourceMaterial.Organism.AsObject,
-    partDescriptionList: Array<SubstanceSourceMaterial.PartDescription.AsObject>,
+    partDescription: Array<SubstanceSourceMaterial.PartDescription.AsObject>,
   }
 
   export class FractionDescription extends jspb.Message {
@@ -153,14 +153,14 @@ export namespace SubstanceSourceMaterial {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasFraction(): boolean;
@@ -186,8 +186,8 @@ export namespace SubstanceSourceMaterial {
   export namespace FractionDescription {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       fraction?: proto_r4_core_datatypes_pb.String.AsObject,
       materialType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     }
@@ -199,14 +199,14 @@ export namespace SubstanceSourceMaterial {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasFamily(): boolean;
@@ -234,9 +234,9 @@ export namespace SubstanceSourceMaterial {
     getIntraspecificDescription(): proto_r4_core_datatypes_pb.String | undefined;
     setIntraspecificDescription(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearAuthorList(): void;
-    getAuthorList(): Array<SubstanceSourceMaterial.Organism.Author>;
-    setAuthorList(value: Array<SubstanceSourceMaterial.Organism.Author>): void;
+    clearAuthor(): void;
+    getAuthor(): Array<SubstanceSourceMaterial.Organism.Author>;
+    setAuthor(value: Array<SubstanceSourceMaterial.Organism.Author>): void;
     addAuthor(value?: SubstanceSourceMaterial.Organism.Author, index?: number): SubstanceSourceMaterial.Organism.Author;
 
     hasHybrid(): boolean;
@@ -262,14 +262,14 @@ export namespace SubstanceSourceMaterial {
   export namespace Organism {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       family?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       genus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       species?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       intraspecificType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       intraspecificDescription?: proto_r4_core_datatypes_pb.String.AsObject,
-      authorList: Array<SubstanceSourceMaterial.Organism.Author.AsObject>,
+      author: Array<SubstanceSourceMaterial.Organism.Author.AsObject>,
       hybrid?: SubstanceSourceMaterial.Organism.Hybrid.AsObject,
       organismGeneral?: SubstanceSourceMaterial.Organism.OrganismGeneral.AsObject,
     }
@@ -280,14 +280,14 @@ export namespace SubstanceSourceMaterial {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasAuthorType(): boolean;
@@ -313,8 +313,8 @@ export namespace SubstanceSourceMaterial {
     export namespace Author {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         authorType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         authorDescription?: proto_r4_core_datatypes_pb.String.AsObject,
       }
@@ -326,14 +326,14 @@ export namespace SubstanceSourceMaterial {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasMaternalOrganismId(): boolean;
@@ -374,8 +374,8 @@ export namespace SubstanceSourceMaterial {
     export namespace Hybrid {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         maternalOrganismId?: proto_r4_core_datatypes_pb.String.AsObject,
         maternalOrganismName?: proto_r4_core_datatypes_pb.String.AsObject,
         paternalOrganismId?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -390,14 +390,14 @@ export namespace SubstanceSourceMaterial {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasKingdom(): boolean;
@@ -433,8 +433,8 @@ export namespace SubstanceSourceMaterial {
     export namespace OrganismGeneral {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         kingdom?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         phylum?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         classValue?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -449,14 +449,14 @@ export namespace SubstanceSourceMaterial {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasPart(): boolean;
@@ -482,8 +482,8 @@ export namespace SubstanceSourceMaterial {
   export namespace PartDescription {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       part?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       partLocation?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     }

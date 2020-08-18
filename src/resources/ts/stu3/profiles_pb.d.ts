@@ -35,29 +35,29 @@ export class Bmi extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -65,9 +65,9 @@ export class Bmi extends jspb.Message {
   getStatus(): proto_stu3_codes_pb.ObservationStatusCode | undefined;
   setStatus(value?: proto_stu3_codes_pb.ObservationStatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -95,9 +95,9 @@ export class Bmi extends jspb.Message {
   getIssued(): proto_stu3_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_stu3_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_stu3_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -140,19 +140,19 @@ export class Bmi extends jspb.Message {
   getDevice(): proto_stu3_datatypes_pb.Reference | undefined;
   setDevice(value?: proto_stu3_datatypes_pb.Reference): void;
 
-  clearReferenceRangeList(): void;
-  getReferenceRangeList(): Array<Bmi.ReferenceRange>;
-  setReferenceRangeList(value: Array<Bmi.ReferenceRange>): void;
+  clearReferenceRange(): void;
+  getReferenceRange(): Array<Bmi.ReferenceRange>;
+  setReferenceRange(value: Array<Bmi.ReferenceRange>): void;
   addReferenceRange(value?: Bmi.ReferenceRange, index?: number): Bmi.ReferenceRange;
 
-  clearRelatedList(): void;
-  getRelatedList(): Array<Bmi.Related>;
-  setRelatedList(value: Array<Bmi.Related>): void;
+  clearRelated(): void;
+  getRelated(): Array<Bmi.Related>;
+  setRelated(value: Array<Bmi.Related>): void;
   addRelated(value?: Bmi.Related, index?: number): Bmi.Related;
 
-  clearComponentList(): void;
-  getComponentList(): Array<Bmi.Component>;
-  setComponentList(value: Array<Bmi.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<Bmi.Component>;
+  setComponent(value: Array<Bmi.Component>): void;
   addComponent(value?: Bmi.Component, index?: number): Bmi.Component;
 
   serializeBinary(): Uint8Array;
@@ -172,19 +172,19 @@ export namespace Bmi {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.ObservationStatusCode.AsObject,
-    categoryList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     code?: Bmi.CodeableConceptForCode.AsObject,
     subject?: proto_stu3_datatypes_pb.Reference.AsObject,
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: Bmi.Effective.AsObject,
     issued?: proto_stu3_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     value?: Bmi.Value.AsObject,
     dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -193,9 +193,9 @@ export namespace Bmi {
     method?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     specimen?: proto_stu3_datatypes_pb.Reference.AsObject,
     device?: proto_stu3_datatypes_pb.Reference.AsObject,
-    referenceRangeList: Array<Bmi.ReferenceRange.AsObject>,
-    relatedList: Array<Bmi.Related.AsObject>,
-    componentList: Array<Bmi.Component.AsObject>,
+    referenceRange: Array<Bmi.ReferenceRange.AsObject>,
+    related: Array<Bmi.Related.AsObject>,
+    component: Array<Bmi.Component.AsObject>,
   }
 
   export class CodeableConceptForCode extends jspb.Message {
@@ -204,14 +204,14 @@ export namespace Bmi {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearCodingList(): void;
-    getCodingList(): Array<proto_stu3_datatypes_pb.Coding>;
-    setCodingList(value: Array<proto_stu3_datatypes_pb.Coding>): void;
+    clearCoding(): void;
+    getCoding(): Array<proto_stu3_datatypes_pb.Coding>;
+    setCoding(value: Array<proto_stu3_datatypes_pb.Coding>): void;
     addCoding(value?: proto_stu3_datatypes_pb.Coding, index?: number): proto_stu3_datatypes_pb.Coding;
 
     hasText(): boolean;
@@ -219,9 +219,9 @@ export namespace Bmi {
     getText(): proto_stu3_datatypes_pb.String | undefined;
     setText(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearBmiCodeList(): void;
-    getBmiCodeList(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
-    setBmiCodeList(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
+    clearBmiCode(): void;
+    getBmiCode(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
+    setBmiCode(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
     addBmiCode(value?: proto_stu3_datatypes_pb.CodingWithFixedCode, index?: number): proto_stu3_datatypes_pb.CodingWithFixedCode;
 
     serializeBinary(): Uint8Array;
@@ -237,10 +237,10 @@ export namespace Bmi {
   export namespace CodeableConceptForCode {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      codingList: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      coding: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
       text?: proto_stu3_datatypes_pb.String.AsObject,
-      bmiCodeList: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
+      bmiCode: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
     }
   }
 
@@ -313,14 +313,14 @@ export namespace Bmi {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -338,9 +338,9 @@ export namespace Bmi {
     getType(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
     hasAge(): boolean;
@@ -366,12 +366,12 @@ export namespace Bmi {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       low?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       high?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       type?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
       age?: proto_stu3_datatypes_pb.Range.AsObject,
       text?: proto_stu3_datatypes_pb.String.AsObject,
     }
@@ -383,14 +383,14 @@ export namespace Bmi {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -416,8 +416,8 @@ export namespace Bmi {
   export namespace Related {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       type?: proto_stu3_codes_pb.ObservationRelationshipTypeCode.AsObject,
       target?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -429,14 +429,14 @@ export namespace Bmi {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -459,9 +459,9 @@ export namespace Bmi {
     getInterpretation(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setInterpretation(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<Bmi.ReferenceRange>;
-    setReferenceRangeList(value: Array<Bmi.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<Bmi.ReferenceRange>;
+    setReferenceRange(value: Array<Bmi.ReferenceRange>): void;
     addReferenceRange(value?: Bmi.ReferenceRange, index?: number): Bmi.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -477,13 +477,13 @@ export namespace Bmi {
   export namespace Component {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       value?: Bmi.Component.Value.AsObject,
       dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      referenceRangeList: Array<Bmi.ReferenceRange.AsObject>,
+      referenceRange: Array<Bmi.ReferenceRange.AsObject>,
     }
 
     export class Value extends jspb.Message {
@@ -542,29 +542,29 @@ export class Bodyheight extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -572,9 +572,9 @@ export class Bodyheight extends jspb.Message {
   getStatus(): proto_stu3_codes_pb.ObservationStatusCode | undefined;
   setStatus(value?: proto_stu3_codes_pb.ObservationStatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -602,9 +602,9 @@ export class Bodyheight extends jspb.Message {
   getIssued(): proto_stu3_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_stu3_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_stu3_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -647,19 +647,19 @@ export class Bodyheight extends jspb.Message {
   getDevice(): proto_stu3_datatypes_pb.Reference | undefined;
   setDevice(value?: proto_stu3_datatypes_pb.Reference): void;
 
-  clearReferenceRangeList(): void;
-  getReferenceRangeList(): Array<Bodyheight.ReferenceRange>;
-  setReferenceRangeList(value: Array<Bodyheight.ReferenceRange>): void;
+  clearReferenceRange(): void;
+  getReferenceRange(): Array<Bodyheight.ReferenceRange>;
+  setReferenceRange(value: Array<Bodyheight.ReferenceRange>): void;
   addReferenceRange(value?: Bodyheight.ReferenceRange, index?: number): Bodyheight.ReferenceRange;
 
-  clearRelatedList(): void;
-  getRelatedList(): Array<Bodyheight.Related>;
-  setRelatedList(value: Array<Bodyheight.Related>): void;
+  clearRelated(): void;
+  getRelated(): Array<Bodyheight.Related>;
+  setRelated(value: Array<Bodyheight.Related>): void;
   addRelated(value?: Bodyheight.Related, index?: number): Bodyheight.Related;
 
-  clearComponentList(): void;
-  getComponentList(): Array<Bodyheight.Component>;
-  setComponentList(value: Array<Bodyheight.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<Bodyheight.Component>;
+  setComponent(value: Array<Bodyheight.Component>): void;
   addComponent(value?: Bodyheight.Component, index?: number): Bodyheight.Component;
 
   serializeBinary(): Uint8Array;
@@ -679,19 +679,19 @@ export namespace Bodyheight {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.ObservationStatusCode.AsObject,
-    categoryList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     code?: Bodyheight.CodeableConceptForCode.AsObject,
     subject?: proto_stu3_datatypes_pb.Reference.AsObject,
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: Bodyheight.Effective.AsObject,
     issued?: proto_stu3_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     value?: Bodyheight.Value.AsObject,
     dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -700,9 +700,9 @@ export namespace Bodyheight {
     method?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     specimen?: proto_stu3_datatypes_pb.Reference.AsObject,
     device?: proto_stu3_datatypes_pb.Reference.AsObject,
-    referenceRangeList: Array<Bodyheight.ReferenceRange.AsObject>,
-    relatedList: Array<Bodyheight.Related.AsObject>,
-    componentList: Array<Bodyheight.Component.AsObject>,
+    referenceRange: Array<Bodyheight.ReferenceRange.AsObject>,
+    related: Array<Bodyheight.Related.AsObject>,
+    component: Array<Bodyheight.Component.AsObject>,
   }
 
   export class CodeableConceptForCode extends jspb.Message {
@@ -711,14 +711,14 @@ export namespace Bodyheight {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearCodingList(): void;
-    getCodingList(): Array<proto_stu3_datatypes_pb.Coding>;
-    setCodingList(value: Array<proto_stu3_datatypes_pb.Coding>): void;
+    clearCoding(): void;
+    getCoding(): Array<proto_stu3_datatypes_pb.Coding>;
+    setCoding(value: Array<proto_stu3_datatypes_pb.Coding>): void;
     addCoding(value?: proto_stu3_datatypes_pb.Coding, index?: number): proto_stu3_datatypes_pb.Coding;
 
     hasText(): boolean;
@@ -726,9 +726,9 @@ export namespace Bodyheight {
     getText(): proto_stu3_datatypes_pb.String | undefined;
     setText(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearBodyHeightCodeList(): void;
-    getBodyHeightCodeList(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
-    setBodyHeightCodeList(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
+    clearBodyHeightCode(): void;
+    getBodyHeightCode(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
+    setBodyHeightCode(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
     addBodyHeightCode(value?: proto_stu3_datatypes_pb.CodingWithFixedCode, index?: number): proto_stu3_datatypes_pb.CodingWithFixedCode;
 
     serializeBinary(): Uint8Array;
@@ -744,10 +744,10 @@ export namespace Bodyheight {
   export namespace CodeableConceptForCode {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      codingList: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      coding: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
       text?: proto_stu3_datatypes_pb.String.AsObject,
-      bodyHeightCodeList: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
+      bodyHeightCode: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
     }
   }
 
@@ -820,14 +820,14 @@ export namespace Bodyheight {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -845,9 +845,9 @@ export namespace Bodyheight {
     getType(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
     hasAge(): boolean;
@@ -873,12 +873,12 @@ export namespace Bodyheight {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       low?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       high?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       type?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
       age?: proto_stu3_datatypes_pb.Range.AsObject,
       text?: proto_stu3_datatypes_pb.String.AsObject,
     }
@@ -890,14 +890,14 @@ export namespace Bodyheight {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -923,8 +923,8 @@ export namespace Bodyheight {
   export namespace Related {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       type?: proto_stu3_codes_pb.ObservationRelationshipTypeCode.AsObject,
       target?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -936,14 +936,14 @@ export namespace Bodyheight {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -966,9 +966,9 @@ export namespace Bodyheight {
     getInterpretation(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setInterpretation(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<Bodyheight.ReferenceRange>;
-    setReferenceRangeList(value: Array<Bodyheight.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<Bodyheight.ReferenceRange>;
+    setReferenceRange(value: Array<Bodyheight.ReferenceRange>): void;
     addReferenceRange(value?: Bodyheight.ReferenceRange, index?: number): Bodyheight.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -984,13 +984,13 @@ export namespace Bodyheight {
   export namespace Component {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       value?: Bodyheight.Component.Value.AsObject,
       dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      referenceRangeList: Array<Bodyheight.ReferenceRange.AsObject>,
+      referenceRange: Array<Bodyheight.ReferenceRange.AsObject>,
     }
 
     export class Value extends jspb.Message {
@@ -1049,29 +1049,29 @@ export class Bodylength extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -1079,9 +1079,9 @@ export class Bodylength extends jspb.Message {
   getStatus(): proto_stu3_codes_pb.ObservationStatusCode | undefined;
   setStatus(value?: proto_stu3_codes_pb.ObservationStatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -1109,9 +1109,9 @@ export class Bodylength extends jspb.Message {
   getIssued(): proto_stu3_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_stu3_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_stu3_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -1154,19 +1154,19 @@ export class Bodylength extends jspb.Message {
   getDevice(): proto_stu3_datatypes_pb.Reference | undefined;
   setDevice(value?: proto_stu3_datatypes_pb.Reference): void;
 
-  clearReferenceRangeList(): void;
-  getReferenceRangeList(): Array<Bodylength.ReferenceRange>;
-  setReferenceRangeList(value: Array<Bodylength.ReferenceRange>): void;
+  clearReferenceRange(): void;
+  getReferenceRange(): Array<Bodylength.ReferenceRange>;
+  setReferenceRange(value: Array<Bodylength.ReferenceRange>): void;
   addReferenceRange(value?: Bodylength.ReferenceRange, index?: number): Bodylength.ReferenceRange;
 
-  clearRelatedList(): void;
-  getRelatedList(): Array<Bodylength.Related>;
-  setRelatedList(value: Array<Bodylength.Related>): void;
+  clearRelated(): void;
+  getRelated(): Array<Bodylength.Related>;
+  setRelated(value: Array<Bodylength.Related>): void;
   addRelated(value?: Bodylength.Related, index?: number): Bodylength.Related;
 
-  clearComponentList(): void;
-  getComponentList(): Array<Bodylength.Component>;
-  setComponentList(value: Array<Bodylength.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<Bodylength.Component>;
+  setComponent(value: Array<Bodylength.Component>): void;
   addComponent(value?: Bodylength.Component, index?: number): Bodylength.Component;
 
   serializeBinary(): Uint8Array;
@@ -1186,19 +1186,19 @@ export namespace Bodylength {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.ObservationStatusCode.AsObject,
-    categoryList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     code?: Bodylength.CodeableConceptForCode.AsObject,
     subject?: proto_stu3_datatypes_pb.Reference.AsObject,
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: Bodylength.Effective.AsObject,
     issued?: proto_stu3_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     value?: Bodylength.Value.AsObject,
     dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -1207,9 +1207,9 @@ export namespace Bodylength {
     method?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     specimen?: proto_stu3_datatypes_pb.Reference.AsObject,
     device?: proto_stu3_datatypes_pb.Reference.AsObject,
-    referenceRangeList: Array<Bodylength.ReferenceRange.AsObject>,
-    relatedList: Array<Bodylength.Related.AsObject>,
-    componentList: Array<Bodylength.Component.AsObject>,
+    referenceRange: Array<Bodylength.ReferenceRange.AsObject>,
+    related: Array<Bodylength.Related.AsObject>,
+    component: Array<Bodylength.Component.AsObject>,
   }
 
   export class CodeableConceptForCode extends jspb.Message {
@@ -1218,14 +1218,14 @@ export namespace Bodylength {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearCodingList(): void;
-    getCodingList(): Array<proto_stu3_datatypes_pb.Coding>;
-    setCodingList(value: Array<proto_stu3_datatypes_pb.Coding>): void;
+    clearCoding(): void;
+    getCoding(): Array<proto_stu3_datatypes_pb.Coding>;
+    setCoding(value: Array<proto_stu3_datatypes_pb.Coding>): void;
     addCoding(value?: proto_stu3_datatypes_pb.Coding, index?: number): proto_stu3_datatypes_pb.Coding;
 
     hasText(): boolean;
@@ -1233,9 +1233,9 @@ export namespace Bodylength {
     getText(): proto_stu3_datatypes_pb.String | undefined;
     setText(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearBodyLengthCodeList(): void;
-    getBodyLengthCodeList(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
-    setBodyLengthCodeList(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
+    clearBodyLengthCode(): void;
+    getBodyLengthCode(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
+    setBodyLengthCode(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
     addBodyLengthCode(value?: proto_stu3_datatypes_pb.CodingWithFixedCode, index?: number): proto_stu3_datatypes_pb.CodingWithFixedCode;
 
     serializeBinary(): Uint8Array;
@@ -1251,10 +1251,10 @@ export namespace Bodylength {
   export namespace CodeableConceptForCode {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      codingList: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      coding: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
       text?: proto_stu3_datatypes_pb.String.AsObject,
-      bodyLengthCodeList: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
+      bodyLengthCode: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
     }
   }
 
@@ -1327,14 +1327,14 @@ export namespace Bodylength {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -1352,9 +1352,9 @@ export namespace Bodylength {
     getType(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
     hasAge(): boolean;
@@ -1380,12 +1380,12 @@ export namespace Bodylength {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       low?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       high?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       type?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
       age?: proto_stu3_datatypes_pb.Range.AsObject,
       text?: proto_stu3_datatypes_pb.String.AsObject,
     }
@@ -1397,14 +1397,14 @@ export namespace Bodylength {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -1430,8 +1430,8 @@ export namespace Bodylength {
   export namespace Related {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       type?: proto_stu3_codes_pb.ObservationRelationshipTypeCode.AsObject,
       target?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -1443,14 +1443,14 @@ export namespace Bodylength {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -1473,9 +1473,9 @@ export namespace Bodylength {
     getInterpretation(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setInterpretation(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<Bodylength.ReferenceRange>;
-    setReferenceRangeList(value: Array<Bodylength.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<Bodylength.ReferenceRange>;
+    setReferenceRange(value: Array<Bodylength.ReferenceRange>): void;
     addReferenceRange(value?: Bodylength.ReferenceRange, index?: number): Bodylength.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -1491,13 +1491,13 @@ export namespace Bodylength {
   export namespace Component {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       value?: Bodylength.Component.Value.AsObject,
       dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      referenceRangeList: Array<Bodylength.ReferenceRange.AsObject>,
+      referenceRange: Array<Bodylength.ReferenceRange.AsObject>,
     }
 
     export class Value extends jspb.Message {
@@ -1556,29 +1556,29 @@ export class Bodytemp extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -1586,9 +1586,9 @@ export class Bodytemp extends jspb.Message {
   getStatus(): proto_stu3_codes_pb.ObservationStatusCode | undefined;
   setStatus(value?: proto_stu3_codes_pb.ObservationStatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -1616,9 +1616,9 @@ export class Bodytemp extends jspb.Message {
   getIssued(): proto_stu3_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_stu3_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_stu3_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -1661,19 +1661,19 @@ export class Bodytemp extends jspb.Message {
   getDevice(): proto_stu3_datatypes_pb.Reference | undefined;
   setDevice(value?: proto_stu3_datatypes_pb.Reference): void;
 
-  clearReferenceRangeList(): void;
-  getReferenceRangeList(): Array<Bodytemp.ReferenceRange>;
-  setReferenceRangeList(value: Array<Bodytemp.ReferenceRange>): void;
+  clearReferenceRange(): void;
+  getReferenceRange(): Array<Bodytemp.ReferenceRange>;
+  setReferenceRange(value: Array<Bodytemp.ReferenceRange>): void;
   addReferenceRange(value?: Bodytemp.ReferenceRange, index?: number): Bodytemp.ReferenceRange;
 
-  clearRelatedList(): void;
-  getRelatedList(): Array<Bodytemp.Related>;
-  setRelatedList(value: Array<Bodytemp.Related>): void;
+  clearRelated(): void;
+  getRelated(): Array<Bodytemp.Related>;
+  setRelated(value: Array<Bodytemp.Related>): void;
   addRelated(value?: Bodytemp.Related, index?: number): Bodytemp.Related;
 
-  clearComponentList(): void;
-  getComponentList(): Array<Bodytemp.Component>;
-  setComponentList(value: Array<Bodytemp.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<Bodytemp.Component>;
+  setComponent(value: Array<Bodytemp.Component>): void;
   addComponent(value?: Bodytemp.Component, index?: number): Bodytemp.Component;
 
   serializeBinary(): Uint8Array;
@@ -1693,19 +1693,19 @@ export namespace Bodytemp {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.ObservationStatusCode.AsObject,
-    categoryList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     code?: Bodytemp.CodeableConceptForCode.AsObject,
     subject?: proto_stu3_datatypes_pb.Reference.AsObject,
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: Bodytemp.Effective.AsObject,
     issued?: proto_stu3_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     value?: Bodytemp.Value.AsObject,
     dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -1714,9 +1714,9 @@ export namespace Bodytemp {
     method?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     specimen?: proto_stu3_datatypes_pb.Reference.AsObject,
     device?: proto_stu3_datatypes_pb.Reference.AsObject,
-    referenceRangeList: Array<Bodytemp.ReferenceRange.AsObject>,
-    relatedList: Array<Bodytemp.Related.AsObject>,
-    componentList: Array<Bodytemp.Component.AsObject>,
+    referenceRange: Array<Bodytemp.ReferenceRange.AsObject>,
+    related: Array<Bodytemp.Related.AsObject>,
+    component: Array<Bodytemp.Component.AsObject>,
   }
 
   export class CodeableConceptForCode extends jspb.Message {
@@ -1725,14 +1725,14 @@ export namespace Bodytemp {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearCodingList(): void;
-    getCodingList(): Array<proto_stu3_datatypes_pb.Coding>;
-    setCodingList(value: Array<proto_stu3_datatypes_pb.Coding>): void;
+    clearCoding(): void;
+    getCoding(): Array<proto_stu3_datatypes_pb.Coding>;
+    setCoding(value: Array<proto_stu3_datatypes_pb.Coding>): void;
     addCoding(value?: proto_stu3_datatypes_pb.Coding, index?: number): proto_stu3_datatypes_pb.Coding;
 
     hasText(): boolean;
@@ -1740,9 +1740,9 @@ export namespace Bodytemp {
     getText(): proto_stu3_datatypes_pb.String | undefined;
     setText(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearBodyTempCodeList(): void;
-    getBodyTempCodeList(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
-    setBodyTempCodeList(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
+    clearBodyTempCode(): void;
+    getBodyTempCode(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
+    setBodyTempCode(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
     addBodyTempCode(value?: proto_stu3_datatypes_pb.CodingWithFixedCode, index?: number): proto_stu3_datatypes_pb.CodingWithFixedCode;
 
     serializeBinary(): Uint8Array;
@@ -1758,10 +1758,10 @@ export namespace Bodytemp {
   export namespace CodeableConceptForCode {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      codingList: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      coding: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
       text?: proto_stu3_datatypes_pb.String.AsObject,
-      bodyTempCodeList: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
+      bodyTempCode: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
     }
   }
 
@@ -1834,14 +1834,14 @@ export namespace Bodytemp {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -1859,9 +1859,9 @@ export namespace Bodytemp {
     getType(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
     hasAge(): boolean;
@@ -1887,12 +1887,12 @@ export namespace Bodytemp {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       low?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       high?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       type?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
       age?: proto_stu3_datatypes_pb.Range.AsObject,
       text?: proto_stu3_datatypes_pb.String.AsObject,
     }
@@ -1904,14 +1904,14 @@ export namespace Bodytemp {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -1937,8 +1937,8 @@ export namespace Bodytemp {
   export namespace Related {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       type?: proto_stu3_codes_pb.ObservationRelationshipTypeCode.AsObject,
       target?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -1950,14 +1950,14 @@ export namespace Bodytemp {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -1980,9 +1980,9 @@ export namespace Bodytemp {
     getInterpretation(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setInterpretation(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<Bodytemp.ReferenceRange>;
-    setReferenceRangeList(value: Array<Bodytemp.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<Bodytemp.ReferenceRange>;
+    setReferenceRange(value: Array<Bodytemp.ReferenceRange>): void;
     addReferenceRange(value?: Bodytemp.ReferenceRange, index?: number): Bodytemp.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -1998,13 +1998,13 @@ export namespace Bodytemp {
   export namespace Component {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       value?: Bodytemp.Component.Value.AsObject,
       dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      referenceRangeList: Array<Bodytemp.ReferenceRange.AsObject>,
+      referenceRange: Array<Bodytemp.ReferenceRange.AsObject>,
     }
 
     export class Value extends jspb.Message {
@@ -2063,29 +2063,29 @@ export class Bodyweight extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -2093,9 +2093,9 @@ export class Bodyweight extends jspb.Message {
   getStatus(): proto_stu3_codes_pb.ObservationStatusCode | undefined;
   setStatus(value?: proto_stu3_codes_pb.ObservationStatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -2123,9 +2123,9 @@ export class Bodyweight extends jspb.Message {
   getIssued(): proto_stu3_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_stu3_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_stu3_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -2168,19 +2168,19 @@ export class Bodyweight extends jspb.Message {
   getDevice(): proto_stu3_datatypes_pb.Reference | undefined;
   setDevice(value?: proto_stu3_datatypes_pb.Reference): void;
 
-  clearReferenceRangeList(): void;
-  getReferenceRangeList(): Array<Bodyweight.ReferenceRange>;
-  setReferenceRangeList(value: Array<Bodyweight.ReferenceRange>): void;
+  clearReferenceRange(): void;
+  getReferenceRange(): Array<Bodyweight.ReferenceRange>;
+  setReferenceRange(value: Array<Bodyweight.ReferenceRange>): void;
   addReferenceRange(value?: Bodyweight.ReferenceRange, index?: number): Bodyweight.ReferenceRange;
 
-  clearRelatedList(): void;
-  getRelatedList(): Array<Bodyweight.Related>;
-  setRelatedList(value: Array<Bodyweight.Related>): void;
+  clearRelated(): void;
+  getRelated(): Array<Bodyweight.Related>;
+  setRelated(value: Array<Bodyweight.Related>): void;
   addRelated(value?: Bodyweight.Related, index?: number): Bodyweight.Related;
 
-  clearComponentList(): void;
-  getComponentList(): Array<Bodyweight.Component>;
-  setComponentList(value: Array<Bodyweight.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<Bodyweight.Component>;
+  setComponent(value: Array<Bodyweight.Component>): void;
   addComponent(value?: Bodyweight.Component, index?: number): Bodyweight.Component;
 
   serializeBinary(): Uint8Array;
@@ -2200,19 +2200,19 @@ export namespace Bodyweight {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.ObservationStatusCode.AsObject,
-    categoryList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     code?: Bodyweight.CodeableConceptForCode.AsObject,
     subject?: proto_stu3_datatypes_pb.Reference.AsObject,
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: Bodyweight.Effective.AsObject,
     issued?: proto_stu3_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     value?: Bodyweight.Value.AsObject,
     dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -2221,9 +2221,9 @@ export namespace Bodyweight {
     method?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     specimen?: proto_stu3_datatypes_pb.Reference.AsObject,
     device?: proto_stu3_datatypes_pb.Reference.AsObject,
-    referenceRangeList: Array<Bodyweight.ReferenceRange.AsObject>,
-    relatedList: Array<Bodyweight.Related.AsObject>,
-    componentList: Array<Bodyweight.Component.AsObject>,
+    referenceRange: Array<Bodyweight.ReferenceRange.AsObject>,
+    related: Array<Bodyweight.Related.AsObject>,
+    component: Array<Bodyweight.Component.AsObject>,
   }
 
   export class CodeableConceptForCode extends jspb.Message {
@@ -2232,14 +2232,14 @@ export namespace Bodyweight {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearCodingList(): void;
-    getCodingList(): Array<proto_stu3_datatypes_pb.Coding>;
-    setCodingList(value: Array<proto_stu3_datatypes_pb.Coding>): void;
+    clearCoding(): void;
+    getCoding(): Array<proto_stu3_datatypes_pb.Coding>;
+    setCoding(value: Array<proto_stu3_datatypes_pb.Coding>): void;
     addCoding(value?: proto_stu3_datatypes_pb.Coding, index?: number): proto_stu3_datatypes_pb.Coding;
 
     hasText(): boolean;
@@ -2247,9 +2247,9 @@ export namespace Bodyweight {
     getText(): proto_stu3_datatypes_pb.String | undefined;
     setText(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearBodyWeightCodeList(): void;
-    getBodyWeightCodeList(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
-    setBodyWeightCodeList(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
+    clearBodyWeightCode(): void;
+    getBodyWeightCode(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
+    setBodyWeightCode(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
     addBodyWeightCode(value?: proto_stu3_datatypes_pb.CodingWithFixedCode, index?: number): proto_stu3_datatypes_pb.CodingWithFixedCode;
 
     serializeBinary(): Uint8Array;
@@ -2265,10 +2265,10 @@ export namespace Bodyweight {
   export namespace CodeableConceptForCode {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      codingList: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      coding: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
       text?: proto_stu3_datatypes_pb.String.AsObject,
-      bodyWeightCodeList: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
+      bodyWeightCode: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
     }
   }
 
@@ -2341,14 +2341,14 @@ export namespace Bodyweight {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -2366,9 +2366,9 @@ export namespace Bodyweight {
     getType(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
     hasAge(): boolean;
@@ -2394,12 +2394,12 @@ export namespace Bodyweight {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       low?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       high?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       type?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
       age?: proto_stu3_datatypes_pb.Range.AsObject,
       text?: proto_stu3_datatypes_pb.String.AsObject,
     }
@@ -2411,14 +2411,14 @@ export namespace Bodyweight {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -2444,8 +2444,8 @@ export namespace Bodyweight {
   export namespace Related {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       type?: proto_stu3_codes_pb.ObservationRelationshipTypeCode.AsObject,
       target?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -2457,14 +2457,14 @@ export namespace Bodyweight {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -2487,9 +2487,9 @@ export namespace Bodyweight {
     getInterpretation(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setInterpretation(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<Bodyweight.ReferenceRange>;
-    setReferenceRangeList(value: Array<Bodyweight.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<Bodyweight.ReferenceRange>;
+    setReferenceRange(value: Array<Bodyweight.ReferenceRange>): void;
     addReferenceRange(value?: Bodyweight.ReferenceRange, index?: number): Bodyweight.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -2505,13 +2505,13 @@ export namespace Bodyweight {
   export namespace Component {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       value?: Bodyweight.Component.Value.AsObject,
       dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      referenceRangeList: Array<Bodyweight.ReferenceRange.AsObject>,
+      referenceRange: Array<Bodyweight.ReferenceRange.AsObject>,
     }
 
     export class Value extends jspb.Message {
@@ -2570,29 +2570,29 @@ export class Bp extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -2600,9 +2600,9 @@ export class Bp extends jspb.Message {
   getStatus(): proto_stu3_codes_pb.ObservationStatusCode | undefined;
   setStatus(value?: proto_stu3_codes_pb.ObservationStatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -2630,9 +2630,9 @@ export class Bp extends jspb.Message {
   getIssued(): proto_stu3_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_stu3_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_stu3_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasDataAbsentReason(): boolean;
@@ -2670,19 +2670,19 @@ export class Bp extends jspb.Message {
   getDevice(): proto_stu3_datatypes_pb.Reference | undefined;
   setDevice(value?: proto_stu3_datatypes_pb.Reference): void;
 
-  clearReferenceRangeList(): void;
-  getReferenceRangeList(): Array<Bp.ReferenceRange>;
-  setReferenceRangeList(value: Array<Bp.ReferenceRange>): void;
+  clearReferenceRange(): void;
+  getReferenceRange(): Array<Bp.ReferenceRange>;
+  setReferenceRange(value: Array<Bp.ReferenceRange>): void;
   addReferenceRange(value?: Bp.ReferenceRange, index?: number): Bp.ReferenceRange;
 
-  clearRelatedList(): void;
-  getRelatedList(): Array<Bp.Related>;
-  setRelatedList(value: Array<Bp.Related>): void;
+  clearRelated(): void;
+  getRelated(): Array<Bp.Related>;
+  setRelated(value: Array<Bp.Related>): void;
   addRelated(value?: Bp.Related, index?: number): Bp.Related;
 
-  clearComponentList(): void;
-  getComponentList(): Array<Bp.Component>;
-  setComponentList(value: Array<Bp.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<Bp.Component>;
+  setComponent(value: Array<Bp.Component>): void;
   addComponent(value?: Bp.Component, index?: number): Bp.Component;
 
   serializeBinary(): Uint8Array;
@@ -2702,19 +2702,19 @@ export namespace Bp {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.ObservationStatusCode.AsObject,
-    categoryList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     code?: Bp.CodeableConceptForCode.AsObject,
     subject?: proto_stu3_datatypes_pb.Reference.AsObject,
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: Bp.Effective.AsObject,
     issued?: proto_stu3_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     comment?: proto_stu3_datatypes_pb.String.AsObject,
@@ -2722,9 +2722,9 @@ export namespace Bp {
     method?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     specimen?: proto_stu3_datatypes_pb.Reference.AsObject,
     device?: proto_stu3_datatypes_pb.Reference.AsObject,
-    referenceRangeList: Array<Bp.ReferenceRange.AsObject>,
-    relatedList: Array<Bp.Related.AsObject>,
-    componentList: Array<Bp.Component.AsObject>,
+    referenceRange: Array<Bp.ReferenceRange.AsObject>,
+    related: Array<Bp.Related.AsObject>,
+    component: Array<Bp.Component.AsObject>,
   }
 
   export class CodeableConceptForCode extends jspb.Message {
@@ -2733,14 +2733,14 @@ export namespace Bp {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearCodingList(): void;
-    getCodingList(): Array<proto_stu3_datatypes_pb.Coding>;
-    setCodingList(value: Array<proto_stu3_datatypes_pb.Coding>): void;
+    clearCoding(): void;
+    getCoding(): Array<proto_stu3_datatypes_pb.Coding>;
+    setCoding(value: Array<proto_stu3_datatypes_pb.Coding>): void;
     addCoding(value?: proto_stu3_datatypes_pb.Coding, index?: number): proto_stu3_datatypes_pb.Coding;
 
     hasText(): boolean;
@@ -2748,9 +2748,9 @@ export namespace Bp {
     getText(): proto_stu3_datatypes_pb.String | undefined;
     setText(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearBpCodeList(): void;
-    getBpCodeList(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
-    setBpCodeList(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
+    clearBpCode(): void;
+    getBpCode(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
+    setBpCode(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
     addBpCode(value?: proto_stu3_datatypes_pb.CodingWithFixedCode, index?: number): proto_stu3_datatypes_pb.CodingWithFixedCode;
 
     serializeBinary(): Uint8Array;
@@ -2766,10 +2766,10 @@ export namespace Bp {
   export namespace CodeableConceptForCode {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      codingList: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      coding: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
       text?: proto_stu3_datatypes_pb.String.AsObject,
-      bpCodeList: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
+      bpCode: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
     }
   }
 
@@ -2814,14 +2814,14 @@ export namespace Bp {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -2839,9 +2839,9 @@ export namespace Bp {
     getType(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
     hasAge(): boolean;
@@ -2867,12 +2867,12 @@ export namespace Bp {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       low?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       high?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       type?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
       age?: proto_stu3_datatypes_pb.Range.AsObject,
       text?: proto_stu3_datatypes_pb.String.AsObject,
     }
@@ -2884,14 +2884,14 @@ export namespace Bp {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -2917,8 +2917,8 @@ export namespace Bp {
   export namespace Related {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       type?: proto_stu3_codes_pb.ObservationRelationshipTypeCode.AsObject,
       target?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -2967,29 +2967,29 @@ export class Cholesterol extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -2997,9 +2997,9 @@ export class Cholesterol extends jspb.Message {
   getStatus(): proto_stu3_codes_pb.ObservationStatusCode | undefined;
   setStatus(value?: proto_stu3_codes_pb.ObservationStatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -3027,9 +3027,9 @@ export class Cholesterol extends jspb.Message {
   getIssued(): proto_stu3_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_stu3_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_stu3_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -3077,9 +3077,9 @@ export class Cholesterol extends jspb.Message {
   getReferenceRange(): Cholesterol.ReferenceRange | undefined;
   setReferenceRange(value?: Cholesterol.ReferenceRange): void;
 
-  clearComponentList(): void;
-  getComponentList(): Array<Cholesterol.Component>;
-  setComponentList(value: Array<Cholesterol.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<Cholesterol.Component>;
+  setComponent(value: Array<Cholesterol.Component>): void;
   addComponent(value?: Cholesterol.Component, index?: number): Cholesterol.Component;
 
   serializeBinary(): Uint8Array;
@@ -3099,19 +3099,19 @@ export namespace Cholesterol {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.ObservationStatusCode.AsObject,
-    categoryList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_stu3_datatypes_pb.Reference.AsObject,
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: Cholesterol.Effective.AsObject,
     issued?: proto_stu3_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     value?: Cholesterol.Value.AsObject,
     dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -3121,7 +3121,7 @@ export namespace Cholesterol {
     specimen?: proto_stu3_datatypes_pb.Reference.AsObject,
     device?: proto_stu3_datatypes_pb.Reference.AsObject,
     referenceRange?: Cholesterol.ReferenceRange.AsObject,
-    componentList: Array<Cholesterol.Component.AsObject>,
+    component: Array<Cholesterol.Component.AsObject>,
   }
 
   export class Effective extends jspb.Message {
@@ -3193,14 +3193,14 @@ export namespace Cholesterol {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasHigh(): boolean;
@@ -3226,8 +3226,8 @@ export namespace Cholesterol {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       high?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       text?: proto_stu3_datatypes_pb.String.AsObject,
     }
@@ -3239,14 +3239,14 @@ export namespace Cholesterol {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -3269,9 +3269,9 @@ export namespace Cholesterol {
     getInterpretation(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setInterpretation(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<Cholesterol.ReferenceRange>;
-    setReferenceRangeList(value: Array<Cholesterol.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<Cholesterol.ReferenceRange>;
+    setReferenceRange(value: Array<Cholesterol.ReferenceRange>): void;
     addReferenceRange(value?: Cholesterol.ReferenceRange, index?: number): Cholesterol.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -3287,13 +3287,13 @@ export namespace Cholesterol {
   export namespace Component {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       value?: Cholesterol.Component.Value.AsObject,
       dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      referenceRangeList: Array<Cholesterol.ReferenceRange.AsObject>,
+      referenceRange: Array<Cholesterol.ReferenceRange.AsObject>,
     }
 
     export class Value extends jspb.Message {
@@ -3415,19 +3415,19 @@ export class Clinicaldocument extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasIdentifier(): boolean;
@@ -3465,9 +3465,9 @@ export class Clinicaldocument extends jspb.Message {
   getDate(): proto_stu3_datatypes_pb.DateTime | undefined;
   setDate(value?: proto_stu3_datatypes_pb.DateTime): void;
 
-  clearAuthorList(): void;
-  getAuthorList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setAuthorList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearAuthor(): void;
+  getAuthor(): Array<proto_stu3_datatypes_pb.Reference>;
+  setAuthor(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addAuthor(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasTitle(): boolean;
@@ -3480,9 +3480,9 @@ export class Clinicaldocument extends jspb.Message {
   getConfidentiality(): proto_stu3_codes_pb.ConfidentialityClassificationCode | undefined;
   setConfidentiality(value?: proto_stu3_codes_pb.ConfidentialityClassificationCode): void;
 
-  clearAttesterList(): void;
-  getAttesterList(): Array<Clinicaldocument.Attester>;
-  setAttesterList(value: Array<Clinicaldocument.Attester>): void;
+  clearAttester(): void;
+  getAttester(): Array<Clinicaldocument.Attester>;
+  setAttester(value: Array<Clinicaldocument.Attester>): void;
   addAttester(value?: Clinicaldocument.Attester, index?: number): Clinicaldocument.Attester;
 
   hasCustodian(): boolean;
@@ -3490,19 +3490,19 @@ export class Clinicaldocument extends jspb.Message {
   getCustodian(): proto_stu3_datatypes_pb.Reference | undefined;
   setCustodian(value?: proto_stu3_datatypes_pb.Reference): void;
 
-  clearRelatesToList(): void;
-  getRelatesToList(): Array<Clinicaldocument.RelatesTo>;
-  setRelatesToList(value: Array<Clinicaldocument.RelatesTo>): void;
+  clearRelatesTo(): void;
+  getRelatesTo(): Array<Clinicaldocument.RelatesTo>;
+  setRelatesTo(value: Array<Clinicaldocument.RelatesTo>): void;
   addRelatesTo(value?: Clinicaldocument.RelatesTo, index?: number): Clinicaldocument.RelatesTo;
 
-  clearEventList(): void;
-  getEventList(): Array<Clinicaldocument.Event>;
-  setEventList(value: Array<Clinicaldocument.Event>): void;
+  clearEvent(): void;
+  getEvent(): Array<Clinicaldocument.Event>;
+  setEvent(value: Array<Clinicaldocument.Event>): void;
   addEvent(value?: Clinicaldocument.Event, index?: number): Clinicaldocument.Event;
 
-  clearSectionList(): void;
-  getSectionList(): Array<Clinicaldocument.Section>;
-  setSectionList(value: Array<Clinicaldocument.Section>): void;
+  clearSection(): void;
+  getSection(): Array<Clinicaldocument.Section>;
+  setSection(value: Array<Clinicaldocument.Section>): void;
   addSection(value?: Clinicaldocument.Section, index?: number): Clinicaldocument.Section;
 
   serializeBinary(): Uint8Array;
@@ -3522,9 +3522,9 @@ export namespace Clinicaldocument {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     identifier?: proto_stu3_datatypes_pb.Identifier.AsObject,
     status?: proto_stu3_codes_pb.CompositionStatusCode.AsObject,
     type?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -3532,14 +3532,14 @@ export namespace Clinicaldocument {
     subject?: proto_stu3_datatypes_pb.Reference.AsObject,
     encounter?: proto_stu3_datatypes_pb.Reference.AsObject,
     date?: proto_stu3_datatypes_pb.DateTime.AsObject,
-    authorList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    author: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     title?: proto_stu3_datatypes_pb.String.AsObject,
     confidentiality?: proto_stu3_codes_pb.ConfidentialityClassificationCode.AsObject,
-    attesterList: Array<Clinicaldocument.Attester.AsObject>,
+    attester: Array<Clinicaldocument.Attester.AsObject>,
     custodian?: proto_stu3_datatypes_pb.Reference.AsObject,
-    relatesToList: Array<Clinicaldocument.RelatesTo.AsObject>,
-    eventList: Array<Clinicaldocument.Event.AsObject>,
-    sectionList: Array<Clinicaldocument.Section.AsObject>,
+    relatesTo: Array<Clinicaldocument.RelatesTo.AsObject>,
+    event: Array<Clinicaldocument.Event.AsObject>,
+    section: Array<Clinicaldocument.Section.AsObject>,
   }
 
   export class Attester extends jspb.Message {
@@ -3548,19 +3548,19 @@ export namespace Clinicaldocument {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModeList(): void;
-    getModeList(): Array<proto_stu3_codes_pb.CompositionAttestationModeCode>;
-    setModeList(value: Array<proto_stu3_codes_pb.CompositionAttestationModeCode>): void;
+    clearMode(): void;
+    getMode(): Array<proto_stu3_codes_pb.CompositionAttestationModeCode>;
+    setMode(value: Array<proto_stu3_codes_pb.CompositionAttestationModeCode>): void;
     addMode(value?: proto_stu3_codes_pb.CompositionAttestationModeCode, index?: number): proto_stu3_codes_pb.CompositionAttestationModeCode;
 
     hasTime(): boolean;
@@ -3586,9 +3586,9 @@ export namespace Clinicaldocument {
   export namespace Attester {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modeList: Array<proto_stu3_codes_pb.CompositionAttestationModeCode.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      mode: Array<proto_stu3_codes_pb.CompositionAttestationModeCode.AsObject>,
       time?: proto_stu3_datatypes_pb.DateTime.AsObject,
       party?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -3600,14 +3600,14 @@ export namespace Clinicaldocument {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -3633,8 +3633,8 @@ export namespace Clinicaldocument {
   export namespace RelatesTo {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_codes_pb.DocumentRelationshipTypeCode.AsObject,
       target?: Clinicaldocument.RelatesTo.Target.AsObject,
     }
@@ -3681,19 +3681,19 @@ export namespace Clinicaldocument {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearCodeList(): void;
-    getCodeList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-    setCodeList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+    clearCode(): void;
+    getCode(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+    setCode(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
     addCode(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
     hasPeriod(): boolean;
@@ -3701,9 +3701,9 @@ export namespace Clinicaldocument {
     getPeriod(): proto_stu3_datatypes_pb.Period | undefined;
     setPeriod(value?: proto_stu3_datatypes_pb.Period): void;
 
-    clearDetailList(): void;
-    getDetailList(): Array<proto_stu3_datatypes_pb.Reference>;
-    setDetailList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+    clearDetail(): void;
+    getDetail(): Array<proto_stu3_datatypes_pb.Reference>;
+    setDetail(value: Array<proto_stu3_datatypes_pb.Reference>): void;
     addDetail(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
     serializeBinary(): Uint8Array;
@@ -3719,11 +3719,11 @@ export namespace Clinicaldocument {
   export namespace Event {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      codeList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      code: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
       period?: proto_stu3_datatypes_pb.Period.AsObject,
-      detailList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+      detail: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     }
   }
 
@@ -3733,14 +3733,14 @@ export namespace Clinicaldocument {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasTitle(): boolean;
@@ -3768,9 +3768,9 @@ export namespace Clinicaldocument {
     getOrderedBy(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setOrderedBy(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearEntryList(): void;
-    getEntryList(): Array<proto_stu3_datatypes_pb.Reference>;
-    setEntryList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+    clearEntry(): void;
+    getEntry(): Array<proto_stu3_datatypes_pb.Reference>;
+    setEntry(value: Array<proto_stu3_datatypes_pb.Reference>): void;
     addEntry(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
     hasEmptyReason(): boolean;
@@ -3778,9 +3778,9 @@ export namespace Clinicaldocument {
     getEmptyReason(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setEmptyReason(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearSectionList(): void;
-    getSectionList(): Array<Clinicaldocument.Section>;
-    setSectionList(value: Array<Clinicaldocument.Section>): void;
+    clearSection(): void;
+    getSection(): Array<Clinicaldocument.Section>;
+    setSection(value: Array<Clinicaldocument.Section>): void;
     addSection(value?: Clinicaldocument.Section, index?: number): Clinicaldocument.Section;
 
     serializeBinary(): Uint8Array;
@@ -3796,16 +3796,16 @@ export namespace Clinicaldocument {
   export namespace Section {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       title?: proto_stu3_datatypes_pb.String.AsObject,
       code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
       mode?: proto_stu3_codes_pb.ListModeCode.AsObject,
       orderedBy?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      entryList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+      entry: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
       emptyReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      sectionList: Array<Clinicaldocument.Section.AsObject>,
+      section: Array<Clinicaldocument.Section.AsObject>,
     }
   }
 }
@@ -3836,29 +3836,29 @@ export class Devicemetricobservation extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -3866,9 +3866,9 @@ export class Devicemetricobservation extends jspb.Message {
   getStatus(): proto_stu3_codes_pb.ObservationStatusCode | undefined;
   setStatus(value?: proto_stu3_codes_pb.ObservationStatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -3886,9 +3886,9 @@ export class Devicemetricobservation extends jspb.Message {
   getEffective(): Devicemetricobservation.Effective | undefined;
   setEffective(value?: Devicemetricobservation.Effective): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_stu3_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -3931,9 +3931,9 @@ export class Devicemetricobservation extends jspb.Message {
   getRelated(): Devicemetricobservation.Related | undefined;
   setRelated(value?: Devicemetricobservation.Related): void;
 
-  clearComponentList(): void;
-  getComponentList(): Array<Devicemetricobservation.Component>;
-  setComponentList(value: Array<Devicemetricobservation.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<Devicemetricobservation.Component>;
+  setComponent(value: Array<Devicemetricobservation.Component>): void;
   addComponent(value?: Devicemetricobservation.Component, index?: number): Devicemetricobservation.Component;
 
   serializeBinary(): Uint8Array;
@@ -3953,17 +3953,17 @@ export namespace Devicemetricobservation {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.ObservationStatusCode.AsObject,
-    categoryList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: Devicemetricobservation.Effective.AsObject,
-    performerList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     value?: Devicemetricobservation.Value.AsObject,
     interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     comment?: proto_stu3_datatypes_pb.String.AsObject,
@@ -3972,7 +3972,7 @@ export namespace Devicemetricobservation {
     device?: proto_stu3_datatypes_pb.Reference.AsObject,
     referenceRange?: Devicemetricobservation.ReferenceRange.AsObject,
     related?: Devicemetricobservation.Related.AsObject,
-    componentList: Array<Devicemetricobservation.Component.AsObject>,
+    component: Array<Devicemetricobservation.Component.AsObject>,
   }
 
   export class Effective extends jspb.Message {
@@ -4100,14 +4100,14 @@ export namespace Devicemetricobservation {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -4125,9 +4125,9 @@ export namespace Devicemetricobservation {
     getType(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
     hasAge(): boolean;
@@ -4153,12 +4153,12 @@ export namespace Devicemetricobservation {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       low?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       high?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       type?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
       age?: proto_stu3_datatypes_pb.Range.AsObject,
       text?: proto_stu3_datatypes_pb.String.AsObject,
     }
@@ -4170,14 +4170,14 @@ export namespace Devicemetricobservation {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -4203,8 +4203,8 @@ export namespace Devicemetricobservation {
   export namespace Related {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       type?: proto_stu3_codes_pb.ObservationRelationshipTypeCode.AsObject,
       target?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -4216,14 +4216,14 @@ export namespace Devicemetricobservation {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -4246,9 +4246,9 @@ export namespace Devicemetricobservation {
     getInterpretation(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setInterpretation(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<Devicemetricobservation.ReferenceRange>;
-    setReferenceRangeList(value: Array<Devicemetricobservation.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<Devicemetricobservation.ReferenceRange>;
+    setReferenceRange(value: Array<Devicemetricobservation.ReferenceRange>): void;
     addReferenceRange(value?: Devicemetricobservation.ReferenceRange, index?: number): Devicemetricobservation.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -4264,13 +4264,13 @@ export namespace Devicemetricobservation {
   export namespace Component {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       value?: Devicemetricobservation.Component.Value.AsObject,
       dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      referenceRangeList: Array<Devicemetricobservation.ReferenceRange.AsObject>,
+      referenceRange: Array<Devicemetricobservation.ReferenceRange.AsObject>,
     }
 
     export class Value extends jspb.Message {
@@ -4392,29 +4392,29 @@ export class DiagnosticreportGenetics extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -4452,29 +4452,29 @@ export class DiagnosticreportGenetics extends jspb.Message {
   getIssued(): proto_stu3_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_stu3_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<DiagnosticreportGenetics.Performer>;
-  setPerformerList(value: Array<DiagnosticreportGenetics.Performer>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<DiagnosticreportGenetics.Performer>;
+  setPerformer(value: Array<DiagnosticreportGenetics.Performer>): void;
   addPerformer(value?: DiagnosticreportGenetics.Performer, index?: number): DiagnosticreportGenetics.Performer;
 
-  clearSpecimenList(): void;
-  getSpecimenList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setSpecimenList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearSpecimen(): void;
+  getSpecimen(): Array<proto_stu3_datatypes_pb.Reference>;
+  setSpecimen(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addSpecimen(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
-  clearResultList(): void;
-  getResultList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setResultList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearResult(): void;
+  getResult(): Array<proto_stu3_datatypes_pb.Reference>;
+  setResult(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addResult(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
-  clearImagingStudyList(): void;
-  getImagingStudyList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setImagingStudyList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearImagingStudy(): void;
+  getImagingStudy(): Array<proto_stu3_datatypes_pb.Reference>;
+  setImagingStudy(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addImagingStudy(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
-  clearImageList(): void;
-  getImageList(): Array<DiagnosticreportGenetics.Image>;
-  setImageList(value: Array<DiagnosticreportGenetics.Image>): void;
+  clearImage(): void;
+  getImage(): Array<DiagnosticreportGenetics.Image>;
+  setImage(value: Array<DiagnosticreportGenetics.Image>): void;
   addImage(value?: DiagnosticreportGenetics.Image, index?: number): DiagnosticreportGenetics.Image;
 
   hasConclusion(): boolean;
@@ -4482,24 +4482,24 @@ export class DiagnosticreportGenetics extends jspb.Message {
   getConclusion(): proto_stu3_datatypes_pb.String | undefined;
   setConclusion(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearPresentedFormList(): void;
-  getPresentedFormList(): Array<proto_stu3_datatypes_pb.Attachment>;
-  setPresentedFormList(value: Array<proto_stu3_datatypes_pb.Attachment>): void;
+  clearPresentedForm(): void;
+  getPresentedForm(): Array<proto_stu3_datatypes_pb.Attachment>;
+  setPresentedForm(value: Array<proto_stu3_datatypes_pb.Attachment>): void;
   addPresentedForm(value?: proto_stu3_datatypes_pb.Attachment, index?: number): proto_stu3_datatypes_pb.Attachment;
 
-  clearAssessedConditionList(): void;
-  getAssessedConditionList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setAssessedConditionList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearAssessedCondition(): void;
+  getAssessedCondition(): Array<proto_stu3_datatypes_pb.Reference>;
+  setAssessedCondition(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addAssessedCondition(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
-  clearFamilyMemberHistoryList(): void;
-  getFamilyMemberHistoryList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setFamilyMemberHistoryList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearFamilyMemberHistory(): void;
+  getFamilyMemberHistory(): Array<proto_stu3_datatypes_pb.Reference>;
+  setFamilyMemberHistory(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addFamilyMemberHistory(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
-  clearAnalysisList(): void;
-  getAnalysisList(): Array<proto_stu3_extensions_pb.DiagnosticReportAnalysis>;
-  setAnalysisList(value: Array<proto_stu3_extensions_pb.DiagnosticReportAnalysis>): void;
+  clearAnalysis(): void;
+  getAnalysis(): Array<proto_stu3_extensions_pb.DiagnosticReportAnalysis>;
+  setAnalysis(value: Array<proto_stu3_extensions_pb.DiagnosticReportAnalysis>): void;
   addAnalysis(value?: proto_stu3_extensions_pb.DiagnosticReportAnalysis, index?: number): proto_stu3_extensions_pb.DiagnosticReportAnalysis;
 
   serializeBinary(): Uint8Array;
@@ -4519,11 +4519,11 @@ export namespace DiagnosticreportGenetics {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.DiagnosticReportStatusCode.AsObject,
     category?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -4531,16 +4531,16 @@ export namespace DiagnosticreportGenetics {
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: DiagnosticreportGenetics.Effective.AsObject,
     issued?: proto_stu3_datatypes_pb.Instant.AsObject,
-    performerList: Array<DiagnosticreportGenetics.Performer.AsObject>,
-    specimenList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
-    resultList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
-    imagingStudyList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
-    imageList: Array<DiagnosticreportGenetics.Image.AsObject>,
+    performer: Array<DiagnosticreportGenetics.Performer.AsObject>,
+    specimen: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    result: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    imagingStudy: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    image: Array<DiagnosticreportGenetics.Image.AsObject>,
     conclusion?: proto_stu3_datatypes_pb.String.AsObject,
-    presentedFormList: Array<proto_stu3_datatypes_pb.Attachment.AsObject>,
-    assessedConditionList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
-    familyMemberHistoryList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
-    analysisList: Array<proto_stu3_extensions_pb.DiagnosticReportAnalysis.AsObject>,
+    presentedForm: Array<proto_stu3_datatypes_pb.Attachment.AsObject>,
+    assessedCondition: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    familyMemberHistory: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    analysis: Array<proto_stu3_extensions_pb.DiagnosticReportAnalysis.AsObject>,
   }
 
   export class Effective extends jspb.Message {
@@ -4584,14 +4584,14 @@ export namespace DiagnosticreportGenetics {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasRole(): boolean;
@@ -4617,8 +4617,8 @@ export namespace DiagnosticreportGenetics {
   export namespace Performer {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       role?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       actor?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -4630,14 +4630,14 @@ export namespace DiagnosticreportGenetics {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasComment(): boolean;
@@ -4663,8 +4663,8 @@ export namespace DiagnosticreportGenetics {
   export namespace Image {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       comment?: proto_stu3_datatypes_pb.String.AsObject,
       link?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -4677,9 +4677,9 @@ export class ElementdefinitionDe extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasPath(): boolean;
@@ -4697,9 +4697,9 @@ export class ElementdefinitionDe extends jspb.Message {
   getLabel(): proto_stu3_datatypes_pb.String | undefined;
   setLabel(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearCodeList(): void;
-  getCodeList(): Array<proto_stu3_datatypes_pb.Coding>;
-  setCodeList(value: Array<proto_stu3_datatypes_pb.Coding>): void;
+  clearCode(): void;
+  getCode(): Array<proto_stu3_datatypes_pb.Coding>;
+  setCode(value: Array<proto_stu3_datatypes_pb.Coding>): void;
   addCode(value?: proto_stu3_datatypes_pb.Coding, index?: number): proto_stu3_datatypes_pb.Coding;
 
   hasDefinition(): boolean;
@@ -4717,9 +4717,9 @@ export class ElementdefinitionDe extends jspb.Message {
   getRequirements(): proto_stu3_datatypes_pb.Markdown | undefined;
   setRequirements(value?: proto_stu3_datatypes_pb.Markdown): void;
 
-  clearAliasList(): void;
-  getAliasList(): Array<proto_stu3_datatypes_pb.String>;
-  setAliasList(value: Array<proto_stu3_datatypes_pb.String>): void;
+  clearAlias(): void;
+  getAlias(): Array<proto_stu3_datatypes_pb.String>;
+  setAlias(value: Array<proto_stu3_datatypes_pb.String>): void;
   addAlias(value?: proto_stu3_datatypes_pb.String, index?: number): proto_stu3_datatypes_pb.String;
 
   hasMin(): boolean;
@@ -4737,9 +4737,9 @@ export class ElementdefinitionDe extends jspb.Message {
   getBase(): ElementdefinitionDe.Base | undefined;
   setBase(value?: ElementdefinitionDe.Base): void;
 
-  clearTypeList(): void;
-  getTypeList(): Array<ElementdefinitionDe.TypeRef>;
-  setTypeList(value: Array<ElementdefinitionDe.TypeRef>): void;
+  clearType(): void;
+  getType(): Array<ElementdefinitionDe.TypeRef>;
+  setType(value: Array<ElementdefinitionDe.TypeRef>): void;
   addType(value?: ElementdefinitionDe.TypeRef, index?: number): ElementdefinitionDe.TypeRef;
 
   hasDefaultValue(): boolean;
@@ -4757,9 +4757,9 @@ export class ElementdefinitionDe extends jspb.Message {
   getOrderMeaning(): proto_stu3_datatypes_pb.String | undefined;
   setOrderMeaning(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExampleList(): void;
-  getExampleList(): Array<ElementdefinitionDe.Example>;
-  setExampleList(value: Array<ElementdefinitionDe.Example>): void;
+  clearExample(): void;
+  getExample(): Array<ElementdefinitionDe.Example>;
+  setExample(value: Array<ElementdefinitionDe.Example>): void;
   addExample(value?: ElementdefinitionDe.Example, index?: number): ElementdefinitionDe.Example;
 
   hasMinValue(): boolean;
@@ -4777,14 +4777,14 @@ export class ElementdefinitionDe extends jspb.Message {
   getMaxLength(): proto_stu3_datatypes_pb.Integer | undefined;
   setMaxLength(value?: proto_stu3_datatypes_pb.Integer): void;
 
-  clearConditionList(): void;
-  getConditionList(): Array<proto_stu3_datatypes_pb.Id>;
-  setConditionList(value: Array<proto_stu3_datatypes_pb.Id>): void;
+  clearCondition(): void;
+  getCondition(): Array<proto_stu3_datatypes_pb.Id>;
+  setCondition(value: Array<proto_stu3_datatypes_pb.Id>): void;
   addCondition(value?: proto_stu3_datatypes_pb.Id, index?: number): proto_stu3_datatypes_pb.Id;
 
-  clearConstraintList(): void;
-  getConstraintList(): Array<ElementdefinitionDe.Constraint>;
-  setConstraintList(value: Array<ElementdefinitionDe.Constraint>): void;
+  clearConstraint(): void;
+  getConstraint(): Array<ElementdefinitionDe.Constraint>;
+  setConstraint(value: Array<ElementdefinitionDe.Constraint>): void;
   addConstraint(value?: ElementdefinitionDe.Constraint, index?: number): ElementdefinitionDe.Constraint;
 
   hasMustSupport(): boolean;
@@ -4797,14 +4797,14 @@ export class ElementdefinitionDe extends jspb.Message {
   getBinding(): ElementdefinitionDe.ElementDefinitionBinding | undefined;
   setBinding(value?: ElementdefinitionDe.ElementDefinitionBinding): void;
 
-  clearMappingList(): void;
-  getMappingList(): Array<ElementdefinitionDe.Mapping>;
-  setMappingList(value: Array<ElementdefinitionDe.Mapping>): void;
+  clearMapping(): void;
+  getMapping(): Array<ElementdefinitionDe.Mapping>;
+  setMapping(value: Array<ElementdefinitionDe.Mapping>): void;
   addMapping(value?: ElementdefinitionDe.Mapping, index?: number): ElementdefinitionDe.Mapping;
 
-  clearQuestionList(): void;
-  getQuestionList(): Array<proto_stu3_datatypes_pb.String>;
-  setQuestionList(value: Array<proto_stu3_datatypes_pb.String>): void;
+  clearQuestion(): void;
+  getQuestion(): Array<proto_stu3_datatypes_pb.String>;
+  setQuestion(value: Array<proto_stu3_datatypes_pb.String>): void;
   addQuestion(value?: proto_stu3_datatypes_pb.String, index?: number): proto_stu3_datatypes_pb.String;
 
   hasAllowedUnits(): boolean;
@@ -4825,32 +4825,32 @@ export class ElementdefinitionDe extends jspb.Message {
 export namespace ElementdefinitionDe {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     path?: proto_stu3_datatypes_pb.String.AsObject,
     sliceName?: proto_stu3_datatypes_pb.String.AsObject,
     label?: proto_stu3_datatypes_pb.String.AsObject,
-    codeList: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
+    code: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
     definition?: proto_stu3_datatypes_pb.Markdown.AsObject,
     comment?: proto_stu3_datatypes_pb.Markdown.AsObject,
     requirements?: proto_stu3_datatypes_pb.Markdown.AsObject,
-    aliasList: Array<proto_stu3_datatypes_pb.String.AsObject>,
+    alias: Array<proto_stu3_datatypes_pb.String.AsObject>,
     min?: proto_stu3_datatypes_pb.UnsignedInt.AsObject,
     max?: proto_stu3_datatypes_pb.String.AsObject,
     base?: ElementdefinitionDe.Base.AsObject,
-    typeList: Array<ElementdefinitionDe.TypeRef.AsObject>,
+    type: Array<ElementdefinitionDe.TypeRef.AsObject>,
     defaultValue?: ElementdefinitionDe.DefaultValue.AsObject,
     meaningWhenMissing?: proto_stu3_datatypes_pb.Markdown.AsObject,
     orderMeaning?: proto_stu3_datatypes_pb.String.AsObject,
-    exampleList: Array<ElementdefinitionDe.Example.AsObject>,
+    example: Array<ElementdefinitionDe.Example.AsObject>,
     minValue?: ElementdefinitionDe.MinValue.AsObject,
     maxValue?: ElementdefinitionDe.MaxValue.AsObject,
     maxLength?: proto_stu3_datatypes_pb.Integer.AsObject,
-    conditionList: Array<proto_stu3_datatypes_pb.Id.AsObject>,
-    constraintList: Array<ElementdefinitionDe.Constraint.AsObject>,
+    condition: Array<proto_stu3_datatypes_pb.Id.AsObject>,
+    constraint: Array<ElementdefinitionDe.Constraint.AsObject>,
     mustSupport?: proto_stu3_datatypes_pb.Boolean.AsObject,
     binding?: ElementdefinitionDe.ElementDefinitionBinding.AsObject,
-    mappingList: Array<ElementdefinitionDe.Mapping.AsObject>,
-    questionList: Array<proto_stu3_datatypes_pb.String.AsObject>,
+    mapping: Array<ElementdefinitionDe.Mapping.AsObject>,
+    question: Array<proto_stu3_datatypes_pb.String.AsObject>,
     allowedUnits?: proto_stu3_extensions_pb.ElementDefinitionAllowedUnits.Value.AsObject,
   }
 
@@ -4860,9 +4860,9 @@ export namespace ElementdefinitionDe {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasPath(): boolean;
@@ -4893,7 +4893,7 @@ export namespace ElementdefinitionDe {
   export namespace Base {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       path?: proto_stu3_datatypes_pb.String.AsObject,
       min?: proto_stu3_datatypes_pb.UnsignedInt.AsObject,
       max?: proto_stu3_datatypes_pb.String.AsObject,
@@ -4906,9 +4906,9 @@ export namespace ElementdefinitionDe {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -4939,7 +4939,7 @@ export namespace ElementdefinitionDe {
   export namespace TypeRef {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.Uri.AsObject,
       targetProfile?: proto_stu3_datatypes_pb.Uri.AsObject,
       versioning?: proto_stu3_codes_pb.ReferenceVersionRulesCode.AsObject,
@@ -5239,9 +5239,9 @@ export namespace ElementdefinitionDe {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasLabel(): boolean;
@@ -5267,7 +5267,7 @@ export namespace ElementdefinitionDe {
   export namespace Example {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       label?: proto_stu3_datatypes_pb.String.AsObject,
       value?: ElementdefinitionDe.Example.Value.AsObject,
     }
@@ -5734,9 +5734,9 @@ export namespace ElementdefinitionDe {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasKey(): boolean;
@@ -5787,7 +5787,7 @@ export namespace ElementdefinitionDe {
   export namespace Constraint {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       key?: proto_stu3_datatypes_pb.Id.AsObject,
       requirements?: proto_stu3_datatypes_pb.String.AsObject,
       severity?: proto_stu3_codes_pb.ConstraintSeverityCode.AsObject,
@@ -5804,9 +5804,9 @@ export namespace ElementdefinitionDe {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasStrength(): boolean;
@@ -5837,7 +5837,7 @@ export namespace ElementdefinitionDe {
   export namespace ElementDefinitionBinding {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       strength?: proto_stu3_codes_pb.BindingStrengthCode.AsObject,
       description?: proto_stu3_datatypes_pb.String.AsObject,
       valueSet?: ElementdefinitionDe.ElementDefinitionBinding.ValueSet.AsObject,
@@ -5885,9 +5885,9 @@ export namespace ElementdefinitionDe {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasIdentity(): boolean;
@@ -5923,7 +5923,7 @@ export namespace ElementdefinitionDe {
   export namespace Mapping {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       identity?: proto_stu3_datatypes_pb.Id.AsObject,
       language?: proto_stu3_datatypes_pb.MimeTypeCode.AsObject,
       map?: proto_stu3_datatypes_pb.String.AsObject,
@@ -5958,29 +5958,29 @@ export class FamilymemberhistoryGenetic extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearDefinitionList(): void;
-  getDefinitionList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setDefinitionList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearDefinition(): void;
+  getDefinition(): Array<proto_stu3_datatypes_pb.Reference>;
+  setDefinition(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addDefinition(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -6043,39 +6043,39 @@ export class FamilymemberhistoryGenetic extends jspb.Message {
   getDeceased(): FamilymemberhistoryGenetic.Deceased | undefined;
   setDeceased(value?: FamilymemberhistoryGenetic.Deceased): void;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_stu3_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_stu3_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_stu3_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_stu3_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_stu3_datatypes_pb.Annotation>): void;
   addNote(value?: proto_stu3_datatypes_pb.Annotation, index?: number): proto_stu3_datatypes_pb.Annotation;
 
-  clearConditionList(): void;
-  getConditionList(): Array<FamilymemberhistoryGenetic.Condition>;
-  setConditionList(value: Array<FamilymemberhistoryGenetic.Condition>): void;
+  clearCondition(): void;
+  getCondition(): Array<FamilymemberhistoryGenetic.Condition>;
+  setCondition(value: Array<FamilymemberhistoryGenetic.Condition>): void;
   addCondition(value?: FamilymemberhistoryGenetic.Condition, index?: number): FamilymemberhistoryGenetic.Condition;
 
-  clearParentList(): void;
-  getParentList(): Array<proto_stu3_extensions_pb.FamilyMemberHistoryParent>;
-  setParentList(value: Array<proto_stu3_extensions_pb.FamilyMemberHistoryParent>): void;
+  clearParent(): void;
+  getParent(): Array<proto_stu3_extensions_pb.FamilyMemberHistoryParent>;
+  setParent(value: Array<proto_stu3_extensions_pb.FamilyMemberHistoryParent>): void;
   addParent(value?: proto_stu3_extensions_pb.FamilyMemberHistoryParent, index?: number): proto_stu3_extensions_pb.FamilyMemberHistoryParent;
 
-  clearSiblingList(): void;
-  getSiblingList(): Array<proto_stu3_extensions_pb.FamilyMemberHistorySibling>;
-  setSiblingList(value: Array<proto_stu3_extensions_pb.FamilyMemberHistorySibling>): void;
+  clearSibling(): void;
+  getSibling(): Array<proto_stu3_extensions_pb.FamilyMemberHistorySibling>;
+  setSibling(value: Array<proto_stu3_extensions_pb.FamilyMemberHistorySibling>): void;
   addSibling(value?: proto_stu3_extensions_pb.FamilyMemberHistorySibling, index?: number): proto_stu3_extensions_pb.FamilyMemberHistorySibling;
 
-  clearObservationList(): void;
-  getObservationList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setObservationList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearObservation(): void;
+  getObservation(): Array<proto_stu3_datatypes_pb.Reference>;
+  setObservation(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addObservation(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -6095,11 +6095,11 @@ export namespace FamilymemberhistoryGenetic {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    definitionList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    definition: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.FamilyHistoryStatusCode.AsObject,
     notDone?: proto_stu3_datatypes_pb.Boolean.AsObject,
     notDoneReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -6112,13 +6112,13 @@ export namespace FamilymemberhistoryGenetic {
     age?: FamilymemberhistoryGenetic.AgeType.AsObject,
     estimatedAge?: proto_stu3_datatypes_pb.Boolean.AsObject,
     deceased?: FamilymemberhistoryGenetic.Deceased.AsObject,
-    reasonCodeList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
-    noteList: Array<proto_stu3_datatypes_pb.Annotation.AsObject>,
-    conditionList: Array<FamilymemberhistoryGenetic.Condition.AsObject>,
-    parentList: Array<proto_stu3_extensions_pb.FamilyMemberHistoryParent.AsObject>,
-    siblingList: Array<proto_stu3_extensions_pb.FamilyMemberHistorySibling.AsObject>,
-    observationList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    reasonCode: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    note: Array<proto_stu3_datatypes_pb.Annotation.AsObject>,
+    condition: Array<FamilymemberhistoryGenetic.Condition.AsObject>,
+    parent: Array<proto_stu3_extensions_pb.FamilyMemberHistoryParent.AsObject>,
+    sibling: Array<proto_stu3_extensions_pb.FamilyMemberHistorySibling.AsObject>,
+    observation: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
   }
 
   export class Born extends jspb.Message {
@@ -6267,14 +6267,14 @@ export namespace FamilymemberhistoryGenetic {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -6310,8 +6310,8 @@ export namespace FamilymemberhistoryGenetic {
   export namespace Condition {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       outcome?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       onset?: FamilymemberhistoryGenetic.Condition.Onset.AsObject,
@@ -6395,29 +6395,29 @@ export class HdlCholesterol extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -6425,9 +6425,9 @@ export class HdlCholesterol extends jspb.Message {
   getStatus(): proto_stu3_codes_pb.ObservationStatusCode | undefined;
   setStatus(value?: proto_stu3_codes_pb.ObservationStatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -6455,9 +6455,9 @@ export class HdlCholesterol extends jspb.Message {
   getIssued(): proto_stu3_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_stu3_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_stu3_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -6505,9 +6505,9 @@ export class HdlCholesterol extends jspb.Message {
   getReferenceRange(): HdlCholesterol.ReferenceRange | undefined;
   setReferenceRange(value?: HdlCholesterol.ReferenceRange): void;
 
-  clearComponentList(): void;
-  getComponentList(): Array<HdlCholesterol.Component>;
-  setComponentList(value: Array<HdlCholesterol.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<HdlCholesterol.Component>;
+  setComponent(value: Array<HdlCholesterol.Component>): void;
   addComponent(value?: HdlCholesterol.Component, index?: number): HdlCholesterol.Component;
 
   serializeBinary(): Uint8Array;
@@ -6527,19 +6527,19 @@ export namespace HdlCholesterol {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.ObservationStatusCode.AsObject,
-    categoryList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_stu3_datatypes_pb.Reference.AsObject,
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: HdlCholesterol.Effective.AsObject,
     issued?: proto_stu3_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     value?: HdlCholesterol.Value.AsObject,
     dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -6549,7 +6549,7 @@ export namespace HdlCholesterol {
     specimen?: proto_stu3_datatypes_pb.Reference.AsObject,
     device?: proto_stu3_datatypes_pb.Reference.AsObject,
     referenceRange?: HdlCholesterol.ReferenceRange.AsObject,
-    componentList: Array<HdlCholesterol.Component.AsObject>,
+    component: Array<HdlCholesterol.Component.AsObject>,
   }
 
   export class Effective extends jspb.Message {
@@ -6621,14 +6621,14 @@ export namespace HdlCholesterol {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -6654,8 +6654,8 @@ export namespace HdlCholesterol {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       low?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       text?: proto_stu3_datatypes_pb.String.AsObject,
     }
@@ -6667,14 +6667,14 @@ export namespace HdlCholesterol {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -6697,9 +6697,9 @@ export namespace HdlCholesterol {
     getInterpretation(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setInterpretation(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<HdlCholesterol.ReferenceRange>;
-    setReferenceRangeList(value: Array<HdlCholesterol.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<HdlCholesterol.ReferenceRange>;
+    setReferenceRange(value: Array<HdlCholesterol.ReferenceRange>): void;
     addReferenceRange(value?: HdlCholesterol.ReferenceRange, index?: number): HdlCholesterol.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -6715,13 +6715,13 @@ export namespace HdlCholesterol {
   export namespace Component {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       value?: HdlCholesterol.Component.Value.AsObject,
       dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      referenceRangeList: Array<HdlCholesterol.ReferenceRange.AsObject>,
+      referenceRange: Array<HdlCholesterol.ReferenceRange.AsObject>,
     }
 
     export class Value extends jspb.Message {
@@ -6843,29 +6843,29 @@ export class Headcircum extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -6873,9 +6873,9 @@ export class Headcircum extends jspb.Message {
   getStatus(): proto_stu3_codes_pb.ObservationStatusCode | undefined;
   setStatus(value?: proto_stu3_codes_pb.ObservationStatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -6903,9 +6903,9 @@ export class Headcircum extends jspb.Message {
   getIssued(): proto_stu3_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_stu3_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_stu3_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -6948,19 +6948,19 @@ export class Headcircum extends jspb.Message {
   getDevice(): proto_stu3_datatypes_pb.Reference | undefined;
   setDevice(value?: proto_stu3_datatypes_pb.Reference): void;
 
-  clearReferenceRangeList(): void;
-  getReferenceRangeList(): Array<Headcircum.ReferenceRange>;
-  setReferenceRangeList(value: Array<Headcircum.ReferenceRange>): void;
+  clearReferenceRange(): void;
+  getReferenceRange(): Array<Headcircum.ReferenceRange>;
+  setReferenceRange(value: Array<Headcircum.ReferenceRange>): void;
   addReferenceRange(value?: Headcircum.ReferenceRange, index?: number): Headcircum.ReferenceRange;
 
-  clearRelatedList(): void;
-  getRelatedList(): Array<Headcircum.Related>;
-  setRelatedList(value: Array<Headcircum.Related>): void;
+  clearRelated(): void;
+  getRelated(): Array<Headcircum.Related>;
+  setRelated(value: Array<Headcircum.Related>): void;
   addRelated(value?: Headcircum.Related, index?: number): Headcircum.Related;
 
-  clearComponentList(): void;
-  getComponentList(): Array<Headcircum.Component>;
-  setComponentList(value: Array<Headcircum.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<Headcircum.Component>;
+  setComponent(value: Array<Headcircum.Component>): void;
   addComponent(value?: Headcircum.Component, index?: number): Headcircum.Component;
 
   serializeBinary(): Uint8Array;
@@ -6980,19 +6980,19 @@ export namespace Headcircum {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.ObservationStatusCode.AsObject,
-    categoryList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     code?: Headcircum.CodeableConceptForCode.AsObject,
     subject?: proto_stu3_datatypes_pb.Reference.AsObject,
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: Headcircum.Effective.AsObject,
     issued?: proto_stu3_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     value?: Headcircum.Value.AsObject,
     dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -7001,9 +7001,9 @@ export namespace Headcircum {
     method?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     specimen?: proto_stu3_datatypes_pb.Reference.AsObject,
     device?: proto_stu3_datatypes_pb.Reference.AsObject,
-    referenceRangeList: Array<Headcircum.ReferenceRange.AsObject>,
-    relatedList: Array<Headcircum.Related.AsObject>,
-    componentList: Array<Headcircum.Component.AsObject>,
+    referenceRange: Array<Headcircum.ReferenceRange.AsObject>,
+    related: Array<Headcircum.Related.AsObject>,
+    component: Array<Headcircum.Component.AsObject>,
   }
 
   export class CodeableConceptForCode extends jspb.Message {
@@ -7012,14 +7012,14 @@ export namespace Headcircum {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearCodingList(): void;
-    getCodingList(): Array<proto_stu3_datatypes_pb.Coding>;
-    setCodingList(value: Array<proto_stu3_datatypes_pb.Coding>): void;
+    clearCoding(): void;
+    getCoding(): Array<proto_stu3_datatypes_pb.Coding>;
+    setCoding(value: Array<proto_stu3_datatypes_pb.Coding>): void;
     addCoding(value?: proto_stu3_datatypes_pb.Coding, index?: number): proto_stu3_datatypes_pb.Coding;
 
     hasText(): boolean;
@@ -7027,9 +7027,9 @@ export namespace Headcircum {
     getText(): proto_stu3_datatypes_pb.String | undefined;
     setText(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearHeadCircumCodeList(): void;
-    getHeadCircumCodeList(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
-    setHeadCircumCodeList(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
+    clearHeadCircumCode(): void;
+    getHeadCircumCode(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
+    setHeadCircumCode(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
     addHeadCircumCode(value?: proto_stu3_datatypes_pb.CodingWithFixedCode, index?: number): proto_stu3_datatypes_pb.CodingWithFixedCode;
 
     serializeBinary(): Uint8Array;
@@ -7045,10 +7045,10 @@ export namespace Headcircum {
   export namespace CodeableConceptForCode {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      codingList: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      coding: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
       text?: proto_stu3_datatypes_pb.String.AsObject,
-      headCircumCodeList: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
+      headCircumCode: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
     }
   }
 
@@ -7121,14 +7121,14 @@ export namespace Headcircum {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -7146,9 +7146,9 @@ export namespace Headcircum {
     getType(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
     hasAge(): boolean;
@@ -7174,12 +7174,12 @@ export namespace Headcircum {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       low?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       high?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       type?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
       age?: proto_stu3_datatypes_pb.Range.AsObject,
       text?: proto_stu3_datatypes_pb.String.AsObject,
     }
@@ -7191,14 +7191,14 @@ export namespace Headcircum {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -7224,8 +7224,8 @@ export namespace Headcircum {
   export namespace Related {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       type?: proto_stu3_codes_pb.ObservationRelationshipTypeCode.AsObject,
       target?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -7237,14 +7237,14 @@ export namespace Headcircum {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -7267,9 +7267,9 @@ export namespace Headcircum {
     getInterpretation(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setInterpretation(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<Headcircum.ReferenceRange>;
-    setReferenceRangeList(value: Array<Headcircum.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<Headcircum.ReferenceRange>;
+    setReferenceRange(value: Array<Headcircum.ReferenceRange>): void;
     addReferenceRange(value?: Headcircum.ReferenceRange, index?: number): Headcircum.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -7285,13 +7285,13 @@ export namespace Headcircum {
   export namespace Component {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       value?: Headcircum.Component.Value.AsObject,
       dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      referenceRangeList: Array<Headcircum.ReferenceRange.AsObject>,
+      referenceRange: Array<Headcircum.ReferenceRange.AsObject>,
     }
 
     export class Value extends jspb.Message {
@@ -7350,29 +7350,29 @@ export class Heartrate extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -7380,9 +7380,9 @@ export class Heartrate extends jspb.Message {
   getStatus(): proto_stu3_codes_pb.ObservationStatusCode | undefined;
   setStatus(value?: proto_stu3_codes_pb.ObservationStatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -7410,9 +7410,9 @@ export class Heartrate extends jspb.Message {
   getIssued(): proto_stu3_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_stu3_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_stu3_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -7455,19 +7455,19 @@ export class Heartrate extends jspb.Message {
   getDevice(): proto_stu3_datatypes_pb.Reference | undefined;
   setDevice(value?: proto_stu3_datatypes_pb.Reference): void;
 
-  clearReferenceRangeList(): void;
-  getReferenceRangeList(): Array<Heartrate.ReferenceRange>;
-  setReferenceRangeList(value: Array<Heartrate.ReferenceRange>): void;
+  clearReferenceRange(): void;
+  getReferenceRange(): Array<Heartrate.ReferenceRange>;
+  setReferenceRange(value: Array<Heartrate.ReferenceRange>): void;
   addReferenceRange(value?: Heartrate.ReferenceRange, index?: number): Heartrate.ReferenceRange;
 
-  clearRelatedList(): void;
-  getRelatedList(): Array<Heartrate.Related>;
-  setRelatedList(value: Array<Heartrate.Related>): void;
+  clearRelated(): void;
+  getRelated(): Array<Heartrate.Related>;
+  setRelated(value: Array<Heartrate.Related>): void;
   addRelated(value?: Heartrate.Related, index?: number): Heartrate.Related;
 
-  clearComponentList(): void;
-  getComponentList(): Array<Heartrate.Component>;
-  setComponentList(value: Array<Heartrate.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<Heartrate.Component>;
+  setComponent(value: Array<Heartrate.Component>): void;
   addComponent(value?: Heartrate.Component, index?: number): Heartrate.Component;
 
   serializeBinary(): Uint8Array;
@@ -7487,19 +7487,19 @@ export namespace Heartrate {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.ObservationStatusCode.AsObject,
-    categoryList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     code?: Heartrate.CodeableConceptForCode.AsObject,
     subject?: proto_stu3_datatypes_pb.Reference.AsObject,
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: Heartrate.Effective.AsObject,
     issued?: proto_stu3_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     value?: Heartrate.Value.AsObject,
     dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -7508,9 +7508,9 @@ export namespace Heartrate {
     method?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     specimen?: proto_stu3_datatypes_pb.Reference.AsObject,
     device?: proto_stu3_datatypes_pb.Reference.AsObject,
-    referenceRangeList: Array<Heartrate.ReferenceRange.AsObject>,
-    relatedList: Array<Heartrate.Related.AsObject>,
-    componentList: Array<Heartrate.Component.AsObject>,
+    referenceRange: Array<Heartrate.ReferenceRange.AsObject>,
+    related: Array<Heartrate.Related.AsObject>,
+    component: Array<Heartrate.Component.AsObject>,
   }
 
   export class CodeableConceptForCode extends jspb.Message {
@@ -7519,14 +7519,14 @@ export namespace Heartrate {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearCodingList(): void;
-    getCodingList(): Array<proto_stu3_datatypes_pb.Coding>;
-    setCodingList(value: Array<proto_stu3_datatypes_pb.Coding>): void;
+    clearCoding(): void;
+    getCoding(): Array<proto_stu3_datatypes_pb.Coding>;
+    setCoding(value: Array<proto_stu3_datatypes_pb.Coding>): void;
     addCoding(value?: proto_stu3_datatypes_pb.Coding, index?: number): proto_stu3_datatypes_pb.Coding;
 
     hasText(): boolean;
@@ -7534,9 +7534,9 @@ export namespace Heartrate {
     getText(): proto_stu3_datatypes_pb.String | undefined;
     setText(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearHeartRateCodeList(): void;
-    getHeartRateCodeList(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
-    setHeartRateCodeList(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
+    clearHeartRateCode(): void;
+    getHeartRateCode(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
+    setHeartRateCode(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
     addHeartRateCode(value?: proto_stu3_datatypes_pb.CodingWithFixedCode, index?: number): proto_stu3_datatypes_pb.CodingWithFixedCode;
 
     serializeBinary(): Uint8Array;
@@ -7552,10 +7552,10 @@ export namespace Heartrate {
   export namespace CodeableConceptForCode {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      codingList: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      coding: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
       text?: proto_stu3_datatypes_pb.String.AsObject,
-      heartRateCodeList: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
+      heartRateCode: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
     }
   }
 
@@ -7628,14 +7628,14 @@ export namespace Heartrate {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -7653,9 +7653,9 @@ export namespace Heartrate {
     getType(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
     hasAge(): boolean;
@@ -7681,12 +7681,12 @@ export namespace Heartrate {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       low?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       high?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       type?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
       age?: proto_stu3_datatypes_pb.Range.AsObject,
       text?: proto_stu3_datatypes_pb.String.AsObject,
     }
@@ -7698,14 +7698,14 @@ export namespace Heartrate {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -7731,8 +7731,8 @@ export namespace Heartrate {
   export namespace Related {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       type?: proto_stu3_codes_pb.ObservationRelationshipTypeCode.AsObject,
       target?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -7744,14 +7744,14 @@ export namespace Heartrate {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -7774,9 +7774,9 @@ export namespace Heartrate {
     getInterpretation(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setInterpretation(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<Heartrate.ReferenceRange>;
-    setReferenceRangeList(value: Array<Heartrate.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<Heartrate.ReferenceRange>;
+    setReferenceRange(value: Array<Heartrate.ReferenceRange>): void;
     addReferenceRange(value?: Heartrate.ReferenceRange, index?: number): Heartrate.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -7792,13 +7792,13 @@ export namespace Heartrate {
   export namespace Component {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       value?: Heartrate.Component.Value.AsObject,
       dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      referenceRangeList: Array<Heartrate.ReferenceRange.AsObject>,
+      referenceRange: Array<Heartrate.ReferenceRange.AsObject>,
     }
 
     export class Value extends jspb.Message {
@@ -7857,29 +7857,29 @@ export class Hlaresult extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -7917,29 +7917,29 @@ export class Hlaresult extends jspb.Message {
   getIssued(): proto_stu3_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_stu3_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<Hlaresult.Performer>;
-  setPerformerList(value: Array<Hlaresult.Performer>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<Hlaresult.Performer>;
+  setPerformer(value: Array<Hlaresult.Performer>): void;
   addPerformer(value?: Hlaresult.Performer, index?: number): Hlaresult.Performer;
 
-  clearSpecimenList(): void;
-  getSpecimenList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setSpecimenList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearSpecimen(): void;
+  getSpecimen(): Array<proto_stu3_datatypes_pb.Reference>;
+  setSpecimen(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addSpecimen(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
-  clearResultList(): void;
-  getResultList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setResultList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearResult(): void;
+  getResult(): Array<proto_stu3_datatypes_pb.Reference>;
+  setResult(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addResult(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
-  clearImagingStudyList(): void;
-  getImagingStudyList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setImagingStudyList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearImagingStudy(): void;
+  getImagingStudy(): Array<proto_stu3_datatypes_pb.Reference>;
+  setImagingStudy(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addImagingStudy(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
-  clearImageList(): void;
-  getImageList(): Array<Hlaresult.Image>;
-  setImageList(value: Array<Hlaresult.Image>): void;
+  clearImage(): void;
+  getImage(): Array<Hlaresult.Image>;
+  setImage(value: Array<Hlaresult.Image>): void;
   addImage(value?: Hlaresult.Image, index?: number): Hlaresult.Image;
 
   hasConclusion(): boolean;
@@ -7947,14 +7947,14 @@ export class Hlaresult extends jspb.Message {
   getConclusion(): proto_stu3_datatypes_pb.String | undefined;
   setConclusion(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearCodedDiagnosisList(): void;
-  getCodedDiagnosisList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setCodedDiagnosisList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearCodedDiagnosis(): void;
+  getCodedDiagnosis(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setCodedDiagnosis(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addCodedDiagnosis(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
-  clearPresentedFormList(): void;
-  getPresentedFormList(): Array<proto_stu3_datatypes_pb.Attachment>;
-  setPresentedFormList(value: Array<proto_stu3_datatypes_pb.Attachment>): void;
+  clearPresentedForm(): void;
+  getPresentedForm(): Array<proto_stu3_datatypes_pb.Attachment>;
+  setPresentedForm(value: Array<proto_stu3_datatypes_pb.Attachment>): void;
   addPresentedForm(value?: proto_stu3_datatypes_pb.Attachment, index?: number): proto_stu3_datatypes_pb.Attachment;
 
   hasAlleleDatabase(): boolean;
@@ -7967,9 +7967,9 @@ export class Hlaresult extends jspb.Message {
   getGlstring(): proto_stu3_extensions_pb.DiagnosticReportGlstring | undefined;
   setGlstring(value?: proto_stu3_extensions_pb.DiagnosticReportGlstring): void;
 
-  clearHaploidList(): void;
-  getHaploidList(): Array<proto_stu3_extensions_pb.DiagnosticReportHaploid>;
-  setHaploidList(value: Array<proto_stu3_extensions_pb.DiagnosticReportHaploid>): void;
+  clearHaploid(): void;
+  getHaploid(): Array<proto_stu3_extensions_pb.DiagnosticReportHaploid>;
+  setHaploid(value: Array<proto_stu3_extensions_pb.DiagnosticReportHaploid>): void;
   addHaploid(value?: proto_stu3_extensions_pb.DiagnosticReportHaploid, index?: number): proto_stu3_extensions_pb.DiagnosticReportHaploid;
 
   hasMethod(): boolean;
@@ -7994,11 +7994,11 @@ export namespace Hlaresult {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.DiagnosticReportStatusCode.AsObject,
     category?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -8006,17 +8006,17 @@ export namespace Hlaresult {
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: Hlaresult.Effective.AsObject,
     issued?: proto_stu3_datatypes_pb.Instant.AsObject,
-    performerList: Array<Hlaresult.Performer.AsObject>,
-    specimenList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
-    resultList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
-    imagingStudyList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
-    imageList: Array<Hlaresult.Image.AsObject>,
+    performer: Array<Hlaresult.Performer.AsObject>,
+    specimen: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    result: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    imagingStudy: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    image: Array<Hlaresult.Image.AsObject>,
     conclusion?: proto_stu3_datatypes_pb.String.AsObject,
-    codedDiagnosisList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
-    presentedFormList: Array<proto_stu3_datatypes_pb.Attachment.AsObject>,
+    codedDiagnosis: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    presentedForm: Array<proto_stu3_datatypes_pb.Attachment.AsObject>,
     alleleDatabase?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     glstring?: proto_stu3_extensions_pb.DiagnosticReportGlstring.AsObject,
-    haploidList: Array<proto_stu3_extensions_pb.DiagnosticReportHaploid.AsObject>,
+    haploid: Array<proto_stu3_extensions_pb.DiagnosticReportHaploid.AsObject>,
     method?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
   }
 
@@ -8061,14 +8061,14 @@ export namespace Hlaresult {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasRole(): boolean;
@@ -8094,8 +8094,8 @@ export namespace Hlaresult {
   export namespace Performer {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       role?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       actor?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -8107,14 +8107,14 @@ export namespace Hlaresult {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasComment(): boolean;
@@ -8140,8 +8140,8 @@ export namespace Hlaresult {
   export namespace Image {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       comment?: proto_stu3_datatypes_pb.String.AsObject,
       link?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -8174,29 +8174,29 @@ export class LdlCholesterol extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -8204,9 +8204,9 @@ export class LdlCholesterol extends jspb.Message {
   getStatus(): proto_stu3_codes_pb.ObservationStatusCode | undefined;
   setStatus(value?: proto_stu3_codes_pb.ObservationStatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -8234,9 +8234,9 @@ export class LdlCholesterol extends jspb.Message {
   getIssued(): proto_stu3_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_stu3_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_stu3_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -8284,9 +8284,9 @@ export class LdlCholesterol extends jspb.Message {
   getReferenceRange(): LdlCholesterol.ReferenceRange | undefined;
   setReferenceRange(value?: LdlCholesterol.ReferenceRange): void;
 
-  clearComponentList(): void;
-  getComponentList(): Array<LdlCholesterol.Component>;
-  setComponentList(value: Array<LdlCholesterol.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<LdlCholesterol.Component>;
+  setComponent(value: Array<LdlCholesterol.Component>): void;
   addComponent(value?: LdlCholesterol.Component, index?: number): LdlCholesterol.Component;
 
   serializeBinary(): Uint8Array;
@@ -8306,19 +8306,19 @@ export namespace LdlCholesterol {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.ObservationStatusCode.AsObject,
-    categoryList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_stu3_datatypes_pb.Reference.AsObject,
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: LdlCholesterol.Effective.AsObject,
     issued?: proto_stu3_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     value?: LdlCholesterol.Value.AsObject,
     dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -8328,7 +8328,7 @@ export namespace LdlCholesterol {
     specimen?: proto_stu3_datatypes_pb.Reference.AsObject,
     device?: proto_stu3_datatypes_pb.Reference.AsObject,
     referenceRange?: LdlCholesterol.ReferenceRange.AsObject,
-    componentList: Array<LdlCholesterol.Component.AsObject>,
+    component: Array<LdlCholesterol.Component.AsObject>,
   }
 
   export class Effective extends jspb.Message {
@@ -8400,14 +8400,14 @@ export namespace LdlCholesterol {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasHigh(): boolean;
@@ -8433,8 +8433,8 @@ export namespace LdlCholesterol {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       high?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       text?: proto_stu3_datatypes_pb.String.AsObject,
     }
@@ -8446,14 +8446,14 @@ export namespace LdlCholesterol {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -8476,9 +8476,9 @@ export namespace LdlCholesterol {
     getInterpretation(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setInterpretation(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<LdlCholesterol.ReferenceRange>;
-    setReferenceRangeList(value: Array<LdlCholesterol.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<LdlCholesterol.ReferenceRange>;
+    setReferenceRange(value: Array<LdlCholesterol.ReferenceRange>): void;
     addReferenceRange(value?: LdlCholesterol.ReferenceRange, index?: number): LdlCholesterol.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -8494,13 +8494,13 @@ export namespace LdlCholesterol {
   export namespace Component {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       value?: LdlCholesterol.Component.Value.AsObject,
       dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      referenceRangeList: Array<LdlCholesterol.ReferenceRange.AsObject>,
+      referenceRange: Array<LdlCholesterol.ReferenceRange.AsObject>,
     }
 
     export class Value extends jspb.Message {
@@ -8622,29 +8622,29 @@ export class LipidProfile extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -8682,14 +8682,14 @@ export class LipidProfile extends jspb.Message {
   getIssued(): proto_stu3_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_stu3_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<LipidProfile.Performer>;
-  setPerformerList(value: Array<LipidProfile.Performer>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<LipidProfile.Performer>;
+  setPerformer(value: Array<LipidProfile.Performer>): void;
   addPerformer(value?: LipidProfile.Performer, index?: number): LipidProfile.Performer;
 
-  clearSpecimenList(): void;
-  getSpecimenList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setSpecimenList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearSpecimen(): void;
+  getSpecimen(): Array<proto_stu3_datatypes_pb.Reference>;
+  setSpecimen(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addSpecimen(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasResult(): boolean;
@@ -8697,14 +8697,14 @@ export class LipidProfile extends jspb.Message {
   getResult(): proto_stu3_datatypes_pb.Reference | undefined;
   setResult(value?: proto_stu3_datatypes_pb.Reference): void;
 
-  clearImagingStudyList(): void;
-  getImagingStudyList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setImagingStudyList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearImagingStudy(): void;
+  getImagingStudy(): Array<proto_stu3_datatypes_pb.Reference>;
+  setImagingStudy(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addImagingStudy(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
-  clearImageList(): void;
-  getImageList(): Array<LipidProfile.Image>;
-  setImageList(value: Array<LipidProfile.Image>): void;
+  clearImage(): void;
+  getImage(): Array<LipidProfile.Image>;
+  setImage(value: Array<LipidProfile.Image>): void;
   addImage(value?: LipidProfile.Image, index?: number): LipidProfile.Image;
 
   hasConclusion(): boolean;
@@ -8712,9 +8712,9 @@ export class LipidProfile extends jspb.Message {
   getConclusion(): proto_stu3_datatypes_pb.String | undefined;
   setConclusion(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearPresentedFormList(): void;
-  getPresentedFormList(): Array<proto_stu3_datatypes_pb.Attachment>;
-  setPresentedFormList(value: Array<proto_stu3_datatypes_pb.Attachment>): void;
+  clearPresentedForm(): void;
+  getPresentedForm(): Array<proto_stu3_datatypes_pb.Attachment>;
+  setPresentedForm(value: Array<proto_stu3_datatypes_pb.Attachment>): void;
   addPresentedForm(value?: proto_stu3_datatypes_pb.Attachment, index?: number): proto_stu3_datatypes_pb.Attachment;
 
   serializeBinary(): Uint8Array;
@@ -8734,11 +8734,11 @@ export namespace LipidProfile {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.DiagnosticReportStatusCode.AsObject,
     category?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -8746,13 +8746,13 @@ export namespace LipidProfile {
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: LipidProfile.Effective.AsObject,
     issued?: proto_stu3_datatypes_pb.Instant.AsObject,
-    performerList: Array<LipidProfile.Performer.AsObject>,
-    specimenList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    performer: Array<LipidProfile.Performer.AsObject>,
+    specimen: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     result?: proto_stu3_datatypes_pb.Reference.AsObject,
-    imagingStudyList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
-    imageList: Array<LipidProfile.Image.AsObject>,
+    imagingStudy: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    image: Array<LipidProfile.Image.AsObject>,
     conclusion?: proto_stu3_datatypes_pb.String.AsObject,
-    presentedFormList: Array<proto_stu3_datatypes_pb.Attachment.AsObject>,
+    presentedForm: Array<proto_stu3_datatypes_pb.Attachment.AsObject>,
   }
 
   export class Effective extends jspb.Message {
@@ -8796,14 +8796,14 @@ export namespace LipidProfile {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasRole(): boolean;
@@ -8829,8 +8829,8 @@ export namespace LipidProfile {
   export namespace Performer {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       role?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       actor?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -8842,14 +8842,14 @@ export namespace LipidProfile {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasComment(): boolean;
@@ -8875,8 +8875,8 @@ export namespace LipidProfile {
   export namespace Image {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       comment?: proto_stu3_datatypes_pb.String.AsObject,
       link?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -8909,19 +8909,19 @@ export class MetadataResource extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasUrl(): boolean;
@@ -8964,19 +8964,19 @@ export class MetadataResource extends jspb.Message {
   getPublisher(): proto_stu3_datatypes_pb.String | undefined;
   setPublisher(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearContactList(): void;
-  getContactList(): Array<proto_stu3_metadatatypes_pb.ContactDetail>;
-  setContactList(value: Array<proto_stu3_metadatatypes_pb.ContactDetail>): void;
+  clearContact(): void;
+  getContact(): Array<proto_stu3_metadatatypes_pb.ContactDetail>;
+  setContact(value: Array<proto_stu3_metadatatypes_pb.ContactDetail>): void;
   addContact(value?: proto_stu3_metadatatypes_pb.ContactDetail, index?: number): proto_stu3_metadatatypes_pb.ContactDetail;
 
-  clearUseContextList(): void;
-  getUseContextList(): Array<proto_stu3_metadatatypes_pb.UsageContext>;
-  setUseContextList(value: Array<proto_stu3_metadatatypes_pb.UsageContext>): void;
+  clearUseContext(): void;
+  getUseContext(): Array<proto_stu3_metadatatypes_pb.UsageContext>;
+  setUseContext(value: Array<proto_stu3_metadatatypes_pb.UsageContext>): void;
   addUseContext(value?: proto_stu3_metadatatypes_pb.UsageContext, index?: number): proto_stu3_metadatatypes_pb.UsageContext;
 
-  clearJurisdictionList(): void;
-  getJurisdictionList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setJurisdictionList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearJurisdiction(): void;
+  getJurisdiction(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setJurisdiction(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addJurisdiction(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasDescription(): boolean;
@@ -9001,9 +9001,9 @@ export namespace MetadataResource {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     url?: proto_stu3_datatypes_pb.Uri.AsObject,
     version?: proto_stu3_datatypes_pb.String.AsObject,
     name?: proto_stu3_datatypes_pb.String.AsObject,
@@ -9012,9 +9012,9 @@ export namespace MetadataResource {
     experimental?: proto_stu3_datatypes_pb.Boolean.AsObject,
     date?: proto_stu3_datatypes_pb.DateTime.AsObject,
     publisher?: proto_stu3_datatypes_pb.String.AsObject,
-    contactList: Array<proto_stu3_metadatatypes_pb.ContactDetail.AsObject>,
-    useContextList: Array<proto_stu3_metadatatypes_pb.UsageContext.AsObject>,
-    jurisdictionList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    contact: Array<proto_stu3_metadatatypes_pb.ContactDetail.AsObject>,
+    useContext: Array<proto_stu3_metadatatypes_pb.UsageContext.AsObject>,
+    jurisdiction: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     description?: proto_stu3_datatypes_pb.Markdown.AsObject,
   }
 }
@@ -9045,29 +9045,29 @@ export class ObservationGenetics extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -9075,9 +9075,9 @@ export class ObservationGenetics extends jspb.Message {
   getStatus(): proto_stu3_codes_pb.ObservationStatusCode | undefined;
   setStatus(value?: proto_stu3_codes_pb.ObservationStatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -9105,9 +9105,9 @@ export class ObservationGenetics extends jspb.Message {
   getIssued(): proto_stu3_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_stu3_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_stu3_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -9150,19 +9150,19 @@ export class ObservationGenetics extends jspb.Message {
   getDevice(): proto_stu3_datatypes_pb.Reference | undefined;
   setDevice(value?: proto_stu3_datatypes_pb.Reference): void;
 
-  clearReferenceRangeList(): void;
-  getReferenceRangeList(): Array<ObservationGenetics.ReferenceRange>;
-  setReferenceRangeList(value: Array<ObservationGenetics.ReferenceRange>): void;
+  clearReferenceRange(): void;
+  getReferenceRange(): Array<ObservationGenetics.ReferenceRange>;
+  setReferenceRange(value: Array<ObservationGenetics.ReferenceRange>): void;
   addReferenceRange(value?: ObservationGenetics.ReferenceRange, index?: number): ObservationGenetics.ReferenceRange;
 
-  clearRelatedList(): void;
-  getRelatedList(): Array<ObservationGenetics.Related>;
-  setRelatedList(value: Array<ObservationGenetics.Related>): void;
+  clearRelated(): void;
+  getRelated(): Array<ObservationGenetics.Related>;
+  setRelated(value: Array<ObservationGenetics.Related>): void;
   addRelated(value?: ObservationGenetics.Related, index?: number): ObservationGenetics.Related;
 
-  clearComponentList(): void;
-  getComponentList(): Array<ObservationGenetics.Component>;
-  setComponentList(value: Array<ObservationGenetics.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<ObservationGenetics.Component>;
+  setComponent(value: Array<ObservationGenetics.Component>): void;
   addComponent(value?: ObservationGenetics.Component, index?: number): ObservationGenetics.Component;
 
   hasDnaSequenceVariantName(): boolean;
@@ -9230,9 +9230,9 @@ export class ObservationGenetics extends jspb.Message {
   getPhaseSet(): proto_stu3_datatypes_pb.Uri | undefined;
   setPhaseSet(value?: proto_stu3_datatypes_pb.Uri): void;
 
-  clearSequenceList(): void;
-  getSequenceList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setSequenceList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearSequence(): void;
+  getSequence(): Array<proto_stu3_datatypes_pb.Reference>;
+  setSequence(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addSequence(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasInterpretationSlice(): boolean;
@@ -9257,19 +9257,19 @@ export namespace ObservationGenetics {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.ObservationStatusCode.AsObject,
-    categoryList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_stu3_datatypes_pb.Reference.AsObject,
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: ObservationGenetics.Effective.AsObject,
     issued?: proto_stu3_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     value?: ObservationGenetics.Value.AsObject,
     dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -9278,9 +9278,9 @@ export namespace ObservationGenetics {
     method?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     specimen?: proto_stu3_datatypes_pb.Reference.AsObject,
     device?: proto_stu3_datatypes_pb.Reference.AsObject,
-    referenceRangeList: Array<ObservationGenetics.ReferenceRange.AsObject>,
-    relatedList: Array<ObservationGenetics.Related.AsObject>,
-    componentList: Array<ObservationGenetics.Component.AsObject>,
+    referenceRange: Array<ObservationGenetics.ReferenceRange.AsObject>,
+    related: Array<ObservationGenetics.Related.AsObject>,
+    component: Array<ObservationGenetics.Component.AsObject>,
     dnaSequenceVariantName?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     dnaVariantId?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     dnaSequenceVariantType?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -9294,7 +9294,7 @@ export namespace ObservationGenetics {
     copyNumberEvent?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     genomicSourceClass?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     phaseSet?: proto_stu3_datatypes_pb.Uri.AsObject,
-    sequenceList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    sequence: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     interpretationSlice?: proto_stu3_datatypes_pb.Reference.AsObject,
   }
 
@@ -9437,14 +9437,14 @@ export namespace ObservationGenetics {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -9462,9 +9462,9 @@ export namespace ObservationGenetics {
     getType(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
     hasAge(): boolean;
@@ -9490,12 +9490,12 @@ export namespace ObservationGenetics {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       low?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       high?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       type?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
       age?: proto_stu3_datatypes_pb.Range.AsObject,
       text?: proto_stu3_datatypes_pb.String.AsObject,
     }
@@ -9507,14 +9507,14 @@ export namespace ObservationGenetics {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -9540,8 +9540,8 @@ export namespace ObservationGenetics {
   export namespace Related {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       type?: proto_stu3_codes_pb.ObservationRelationshipTypeCode.AsObject,
       target?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -9553,14 +9553,14 @@ export namespace ObservationGenetics {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -9583,9 +9583,9 @@ export namespace ObservationGenetics {
     getInterpretation(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setInterpretation(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<ObservationGenetics.ReferenceRange>;
-    setReferenceRangeList(value: Array<ObservationGenetics.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<ObservationGenetics.ReferenceRange>;
+    setReferenceRange(value: Array<ObservationGenetics.ReferenceRange>): void;
     addReferenceRange(value?: ObservationGenetics.ReferenceRange, index?: number): ObservationGenetics.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -9601,13 +9601,13 @@ export namespace ObservationGenetics {
   export namespace Component {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       value?: ObservationGenetics.Component.Value.AsObject,
       dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      referenceRangeList: Array<ObservationGenetics.ReferenceRange.AsObject>,
+      referenceRange: Array<ObservationGenetics.ReferenceRange.AsObject>,
     }
 
     export class Value extends jspb.Message {
@@ -9729,29 +9729,29 @@ export class Oxygensat extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -9759,9 +9759,9 @@ export class Oxygensat extends jspb.Message {
   getStatus(): proto_stu3_codes_pb.ObservationStatusCode | undefined;
   setStatus(value?: proto_stu3_codes_pb.ObservationStatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -9789,9 +9789,9 @@ export class Oxygensat extends jspb.Message {
   getIssued(): proto_stu3_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_stu3_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_stu3_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -9834,19 +9834,19 @@ export class Oxygensat extends jspb.Message {
   getDevice(): proto_stu3_datatypes_pb.Reference | undefined;
   setDevice(value?: proto_stu3_datatypes_pb.Reference): void;
 
-  clearReferenceRangeList(): void;
-  getReferenceRangeList(): Array<Oxygensat.ReferenceRange>;
-  setReferenceRangeList(value: Array<Oxygensat.ReferenceRange>): void;
+  clearReferenceRange(): void;
+  getReferenceRange(): Array<Oxygensat.ReferenceRange>;
+  setReferenceRange(value: Array<Oxygensat.ReferenceRange>): void;
   addReferenceRange(value?: Oxygensat.ReferenceRange, index?: number): Oxygensat.ReferenceRange;
 
-  clearRelatedList(): void;
-  getRelatedList(): Array<Oxygensat.Related>;
-  setRelatedList(value: Array<Oxygensat.Related>): void;
+  clearRelated(): void;
+  getRelated(): Array<Oxygensat.Related>;
+  setRelated(value: Array<Oxygensat.Related>): void;
   addRelated(value?: Oxygensat.Related, index?: number): Oxygensat.Related;
 
-  clearComponentList(): void;
-  getComponentList(): Array<Oxygensat.Component>;
-  setComponentList(value: Array<Oxygensat.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<Oxygensat.Component>;
+  setComponent(value: Array<Oxygensat.Component>): void;
   addComponent(value?: Oxygensat.Component, index?: number): Oxygensat.Component;
 
   serializeBinary(): Uint8Array;
@@ -9866,19 +9866,19 @@ export namespace Oxygensat {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.ObservationStatusCode.AsObject,
-    categoryList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     code?: Oxygensat.CodeableConceptForCode.AsObject,
     subject?: proto_stu3_datatypes_pb.Reference.AsObject,
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: Oxygensat.Effective.AsObject,
     issued?: proto_stu3_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     value?: Oxygensat.Value.AsObject,
     dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -9887,9 +9887,9 @@ export namespace Oxygensat {
     method?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     specimen?: proto_stu3_datatypes_pb.Reference.AsObject,
     device?: proto_stu3_datatypes_pb.Reference.AsObject,
-    referenceRangeList: Array<Oxygensat.ReferenceRange.AsObject>,
-    relatedList: Array<Oxygensat.Related.AsObject>,
-    componentList: Array<Oxygensat.Component.AsObject>,
+    referenceRange: Array<Oxygensat.ReferenceRange.AsObject>,
+    related: Array<Oxygensat.Related.AsObject>,
+    component: Array<Oxygensat.Component.AsObject>,
   }
 
   export class CodeableConceptForCode extends jspb.Message {
@@ -9898,14 +9898,14 @@ export namespace Oxygensat {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearCodingList(): void;
-    getCodingList(): Array<proto_stu3_datatypes_pb.Coding>;
-    setCodingList(value: Array<proto_stu3_datatypes_pb.Coding>): void;
+    clearCoding(): void;
+    getCoding(): Array<proto_stu3_datatypes_pb.Coding>;
+    setCoding(value: Array<proto_stu3_datatypes_pb.Coding>): void;
     addCoding(value?: proto_stu3_datatypes_pb.Coding, index?: number): proto_stu3_datatypes_pb.Coding;
 
     hasText(): boolean;
@@ -9913,9 +9913,9 @@ export namespace Oxygensat {
     getText(): proto_stu3_datatypes_pb.String | undefined;
     setText(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearOxygenSatCodeList(): void;
-    getOxygenSatCodeList(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
-    setOxygenSatCodeList(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
+    clearOxygenSatCode(): void;
+    getOxygenSatCode(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
+    setOxygenSatCode(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
     addOxygenSatCode(value?: proto_stu3_datatypes_pb.CodingWithFixedCode, index?: number): proto_stu3_datatypes_pb.CodingWithFixedCode;
 
     serializeBinary(): Uint8Array;
@@ -9931,10 +9931,10 @@ export namespace Oxygensat {
   export namespace CodeableConceptForCode {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      codingList: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      coding: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
       text?: proto_stu3_datatypes_pb.String.AsObject,
-      oxygenSatCodeList: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
+      oxygenSatCode: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
     }
   }
 
@@ -10007,14 +10007,14 @@ export namespace Oxygensat {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -10032,9 +10032,9 @@ export namespace Oxygensat {
     getType(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
     hasAge(): boolean;
@@ -10060,12 +10060,12 @@ export namespace Oxygensat {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       low?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       high?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       type?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
       age?: proto_stu3_datatypes_pb.Range.AsObject,
       text?: proto_stu3_datatypes_pb.String.AsObject,
     }
@@ -10077,14 +10077,14 @@ export namespace Oxygensat {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -10110,8 +10110,8 @@ export namespace Oxygensat {
   export namespace Related {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       type?: proto_stu3_codes_pb.ObservationRelationshipTypeCode.AsObject,
       target?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -10123,14 +10123,14 @@ export namespace Oxygensat {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -10153,9 +10153,9 @@ export namespace Oxygensat {
     getInterpretation(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setInterpretation(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<Oxygensat.ReferenceRange>;
-    setReferenceRangeList(value: Array<Oxygensat.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<Oxygensat.ReferenceRange>;
+    setReferenceRange(value: Array<Oxygensat.ReferenceRange>): void;
     addReferenceRange(value?: Oxygensat.ReferenceRange, index?: number): Oxygensat.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -10171,13 +10171,13 @@ export namespace Oxygensat {
   export namespace Component {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       value?: Oxygensat.Component.Value.AsObject,
       dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      referenceRangeList: Array<Oxygensat.ReferenceRange.AsObject>,
+      referenceRange: Array<Oxygensat.ReferenceRange.AsObject>,
     }
 
     export class Value extends jspb.Message {
@@ -10236,39 +10236,39 @@ export class ProcedurerequestGenetics extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearDefinitionList(): void;
-  getDefinitionList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setDefinitionList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearDefinition(): void;
+  getDefinition(): Array<proto_stu3_datatypes_pb.Reference>;
+  setDefinition(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addDefinition(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
-  clearReplacesList(): void;
-  getReplacesList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setReplacesList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearReplaces(): void;
+  getReplaces(): Array<proto_stu3_datatypes_pb.Reference>;
+  setReplaces(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addReplaces(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasRequisition(): boolean;
@@ -10296,9 +10296,9 @@ export class ProcedurerequestGenetics extends jspb.Message {
   getDoNotPerform(): proto_stu3_datatypes_pb.Boolean | undefined;
   setDoNotPerform(value?: proto_stu3_datatypes_pb.Boolean): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -10346,44 +10346,44 @@ export class ProcedurerequestGenetics extends jspb.Message {
   getPerformer(): proto_stu3_datatypes_pb.Reference | undefined;
   setPerformer(value?: proto_stu3_datatypes_pb.Reference): void;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_stu3_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
-  clearSupportingInfoList(): void;
-  getSupportingInfoList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setSupportingInfoList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearSupportingInfo(): void;
+  getSupportingInfo(): Array<proto_stu3_datatypes_pb.Reference>;
+  setSupportingInfo(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addSupportingInfo(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
-  clearSpecimenList(): void;
-  getSpecimenList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setSpecimenList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearSpecimen(): void;
+  getSpecimen(): Array<proto_stu3_datatypes_pb.Reference>;
+  setSpecimen(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addSpecimen(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
-  clearBodySiteList(): void;
-  getBodySiteList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setBodySiteList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearBodySite(): void;
+  getBodySite(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setBodySite(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addBodySite(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_stu3_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_stu3_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_stu3_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_stu3_datatypes_pb.Annotation>): void;
   addNote(value?: proto_stu3_datatypes_pb.Annotation, index?: number): proto_stu3_datatypes_pb.Annotation;
 
-  clearRelevantHistoryList(): void;
-  getRelevantHistoryList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setRelevantHistoryList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearRelevantHistory(): void;
+  getRelevantHistory(): Array<proto_stu3_datatypes_pb.Reference>;
+  setRelevantHistory(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addRelevantHistory(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
-  clearItemList(): void;
-  getItemList(): Array<proto_stu3_extensions_pb.DiagnosticReportItem>;
-  setItemList(value: Array<proto_stu3_extensions_pb.DiagnosticReportItem>): void;
+  clearItem(): void;
+  getItem(): Array<proto_stu3_extensions_pb.DiagnosticReportItem>;
+  setItem(value: Array<proto_stu3_extensions_pb.DiagnosticReportItem>): void;
   addItem(value?: proto_stu3_extensions_pb.DiagnosticReportItem, index?: number): proto_stu3_extensions_pb.DiagnosticReportItem;
 
   serializeBinary(): Uint8Array;
@@ -10403,19 +10403,19 @@ export namespace ProcedurerequestGenetics {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    definitionList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
-    replacesList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    definition: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    replaces: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     requisition?: proto_stu3_datatypes_pb.Identifier.AsObject,
     status?: proto_stu3_codes_pb.RequestStatusCode.AsObject,
     intent?: proto_stu3_codes_pb.RequestIntentCode.AsObject,
     priority?: proto_stu3_codes_pb.RequestPriorityCode.AsObject,
     doNotPerform?: proto_stu3_datatypes_pb.Boolean.AsObject,
-    categoryList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_stu3_datatypes_pb.Reference.AsObject,
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
@@ -10425,14 +10425,14 @@ export namespace ProcedurerequestGenetics {
     requester?: ProcedurerequestGenetics.Requester.AsObject,
     performerType?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     performer?: proto_stu3_datatypes_pb.Reference.AsObject,
-    reasonCodeList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
-    supportingInfoList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
-    specimenList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
-    bodySiteList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
-    noteList: Array<proto_stu3_datatypes_pb.Annotation.AsObject>,
-    relevantHistoryList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
-    itemList: Array<proto_stu3_extensions_pb.DiagnosticReportItem.AsObject>,
+    reasonCode: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    supportingInfo: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    specimen: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    bodySite: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    note: Array<proto_stu3_datatypes_pb.Annotation.AsObject>,
+    relevantHistory: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    item: Array<proto_stu3_extensions_pb.DiagnosticReportItem.AsObject>,
   }
 
   export class Occurrence extends jspb.Message {
@@ -10518,14 +10518,14 @@ export namespace ProcedurerequestGenetics {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasAgent(): boolean;
@@ -10551,8 +10551,8 @@ export namespace ProcedurerequestGenetics {
   export namespace Requester {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       agent?: proto_stu3_datatypes_pb.Reference.AsObject,
       onBehalfOf?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -10585,29 +10585,29 @@ export class Resprate extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -10615,9 +10615,9 @@ export class Resprate extends jspb.Message {
   getStatus(): proto_stu3_codes_pb.ObservationStatusCode | undefined;
   setStatus(value?: proto_stu3_codes_pb.ObservationStatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -10645,9 +10645,9 @@ export class Resprate extends jspb.Message {
   getIssued(): proto_stu3_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_stu3_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_stu3_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -10690,19 +10690,19 @@ export class Resprate extends jspb.Message {
   getDevice(): proto_stu3_datatypes_pb.Reference | undefined;
   setDevice(value?: proto_stu3_datatypes_pb.Reference): void;
 
-  clearReferenceRangeList(): void;
-  getReferenceRangeList(): Array<Resprate.ReferenceRange>;
-  setReferenceRangeList(value: Array<Resprate.ReferenceRange>): void;
+  clearReferenceRange(): void;
+  getReferenceRange(): Array<Resprate.ReferenceRange>;
+  setReferenceRange(value: Array<Resprate.ReferenceRange>): void;
   addReferenceRange(value?: Resprate.ReferenceRange, index?: number): Resprate.ReferenceRange;
 
-  clearRelatedList(): void;
-  getRelatedList(): Array<Resprate.Related>;
-  setRelatedList(value: Array<Resprate.Related>): void;
+  clearRelated(): void;
+  getRelated(): Array<Resprate.Related>;
+  setRelated(value: Array<Resprate.Related>): void;
   addRelated(value?: Resprate.Related, index?: number): Resprate.Related;
 
-  clearComponentList(): void;
-  getComponentList(): Array<Resprate.Component>;
-  setComponentList(value: Array<Resprate.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<Resprate.Component>;
+  setComponent(value: Array<Resprate.Component>): void;
   addComponent(value?: Resprate.Component, index?: number): Resprate.Component;
 
   serializeBinary(): Uint8Array;
@@ -10722,19 +10722,19 @@ export namespace Resprate {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.ObservationStatusCode.AsObject,
-    categoryList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     code?: Resprate.CodeableConceptForCode.AsObject,
     subject?: proto_stu3_datatypes_pb.Reference.AsObject,
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: Resprate.Effective.AsObject,
     issued?: proto_stu3_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     value?: Resprate.Value.AsObject,
     dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -10743,9 +10743,9 @@ export namespace Resprate {
     method?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     specimen?: proto_stu3_datatypes_pb.Reference.AsObject,
     device?: proto_stu3_datatypes_pb.Reference.AsObject,
-    referenceRangeList: Array<Resprate.ReferenceRange.AsObject>,
-    relatedList: Array<Resprate.Related.AsObject>,
-    componentList: Array<Resprate.Component.AsObject>,
+    referenceRange: Array<Resprate.ReferenceRange.AsObject>,
+    related: Array<Resprate.Related.AsObject>,
+    component: Array<Resprate.Component.AsObject>,
   }
 
   export class CodeableConceptForCode extends jspb.Message {
@@ -10754,14 +10754,14 @@ export namespace Resprate {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearCodingList(): void;
-    getCodingList(): Array<proto_stu3_datatypes_pb.Coding>;
-    setCodingList(value: Array<proto_stu3_datatypes_pb.Coding>): void;
+    clearCoding(): void;
+    getCoding(): Array<proto_stu3_datatypes_pb.Coding>;
+    setCoding(value: Array<proto_stu3_datatypes_pb.Coding>): void;
     addCoding(value?: proto_stu3_datatypes_pb.Coding, index?: number): proto_stu3_datatypes_pb.Coding;
 
     hasText(): boolean;
@@ -10769,9 +10769,9 @@ export namespace Resprate {
     getText(): proto_stu3_datatypes_pb.String | undefined;
     setText(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearRespRateCodeList(): void;
-    getRespRateCodeList(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
-    setRespRateCodeList(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
+    clearRespRateCode(): void;
+    getRespRateCode(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
+    setRespRateCode(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
     addRespRateCode(value?: proto_stu3_datatypes_pb.CodingWithFixedCode, index?: number): proto_stu3_datatypes_pb.CodingWithFixedCode;
 
     serializeBinary(): Uint8Array;
@@ -10787,10 +10787,10 @@ export namespace Resprate {
   export namespace CodeableConceptForCode {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      codingList: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      coding: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
       text?: proto_stu3_datatypes_pb.String.AsObject,
-      respRateCodeList: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
+      respRateCode: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
     }
   }
 
@@ -10863,14 +10863,14 @@ export namespace Resprate {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -10888,9 +10888,9 @@ export namespace Resprate {
     getType(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
     hasAge(): boolean;
@@ -10916,12 +10916,12 @@ export namespace Resprate {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       low?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       high?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       type?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
       age?: proto_stu3_datatypes_pb.Range.AsObject,
       text?: proto_stu3_datatypes_pb.String.AsObject,
     }
@@ -10933,14 +10933,14 @@ export namespace Resprate {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -10966,8 +10966,8 @@ export namespace Resprate {
   export namespace Related {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       type?: proto_stu3_codes_pb.ObservationRelationshipTypeCode.AsObject,
       target?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -10979,14 +10979,14 @@ export namespace Resprate {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -11009,9 +11009,9 @@ export namespace Resprate {
     getInterpretation(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setInterpretation(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<Resprate.ReferenceRange>;
-    setReferenceRangeList(value: Array<Resprate.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<Resprate.ReferenceRange>;
+    setReferenceRange(value: Array<Resprate.ReferenceRange>): void;
     addReferenceRange(value?: Resprate.ReferenceRange, index?: number): Resprate.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -11027,13 +11027,13 @@ export namespace Resprate {
   export namespace Component {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       value?: Resprate.Component.Value.AsObject,
       dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      referenceRangeList: Array<Resprate.ReferenceRange.AsObject>,
+      referenceRange: Array<Resprate.ReferenceRange.AsObject>,
     }
 
     export class Value extends jspb.Message {
@@ -11092,19 +11092,19 @@ export class Shareablecodesystem extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasUrl(): boolean;
@@ -11152,9 +11152,9 @@ export class Shareablecodesystem extends jspb.Message {
   getPublisher(): proto_stu3_datatypes_pb.String | undefined;
   setPublisher(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearContactList(): void;
-  getContactList(): Array<proto_stu3_metadatatypes_pb.ContactDetail>;
-  setContactList(value: Array<proto_stu3_metadatatypes_pb.ContactDetail>): void;
+  clearContact(): void;
+  getContact(): Array<proto_stu3_metadatatypes_pb.ContactDetail>;
+  setContact(value: Array<proto_stu3_metadatatypes_pb.ContactDetail>): void;
   addContact(value?: proto_stu3_metadatatypes_pb.ContactDetail, index?: number): proto_stu3_metadatatypes_pb.ContactDetail;
 
   hasDescription(): boolean;
@@ -11162,14 +11162,14 @@ export class Shareablecodesystem extends jspb.Message {
   getDescription(): proto_stu3_datatypes_pb.Markdown | undefined;
   setDescription(value?: proto_stu3_datatypes_pb.Markdown): void;
 
-  clearUseContextList(): void;
-  getUseContextList(): Array<proto_stu3_metadatatypes_pb.UsageContext>;
-  setUseContextList(value: Array<proto_stu3_metadatatypes_pb.UsageContext>): void;
+  clearUseContext(): void;
+  getUseContext(): Array<proto_stu3_metadatatypes_pb.UsageContext>;
+  setUseContext(value: Array<proto_stu3_metadatatypes_pb.UsageContext>): void;
   addUseContext(value?: proto_stu3_metadatatypes_pb.UsageContext, index?: number): proto_stu3_metadatatypes_pb.UsageContext;
 
-  clearJurisdictionList(): void;
-  getJurisdictionList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setJurisdictionList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearJurisdiction(): void;
+  getJurisdiction(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setJurisdiction(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addJurisdiction(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasPurpose(): boolean;
@@ -11217,19 +11217,19 @@ export class Shareablecodesystem extends jspb.Message {
   getCount(): proto_stu3_datatypes_pb.UnsignedInt | undefined;
   setCount(value?: proto_stu3_datatypes_pb.UnsignedInt): void;
 
-  clearFilterList(): void;
-  getFilterList(): Array<Shareablecodesystem.Filter>;
-  setFilterList(value: Array<Shareablecodesystem.Filter>): void;
+  clearFilter(): void;
+  getFilter(): Array<Shareablecodesystem.Filter>;
+  setFilter(value: Array<Shareablecodesystem.Filter>): void;
   addFilter(value?: Shareablecodesystem.Filter, index?: number): Shareablecodesystem.Filter;
 
-  clearPropertyList(): void;
-  getPropertyList(): Array<Shareablecodesystem.Property>;
-  setPropertyList(value: Array<Shareablecodesystem.Property>): void;
+  clearProperty(): void;
+  getProperty(): Array<Shareablecodesystem.Property>;
+  setProperty(value: Array<Shareablecodesystem.Property>): void;
   addProperty(value?: Shareablecodesystem.Property, index?: number): Shareablecodesystem.Property;
 
-  clearConceptList(): void;
-  getConceptList(): Array<Shareablecodesystem.ConceptDefinition>;
-  setConceptList(value: Array<Shareablecodesystem.ConceptDefinition>): void;
+  clearConcept(): void;
+  getConcept(): Array<Shareablecodesystem.ConceptDefinition>;
+  setConcept(value: Array<Shareablecodesystem.ConceptDefinition>): void;
   addConcept(value?: Shareablecodesystem.ConceptDefinition, index?: number): Shareablecodesystem.ConceptDefinition;
 
   serializeBinary(): Uint8Array;
@@ -11249,9 +11249,9 @@ export namespace Shareablecodesystem {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     url?: proto_stu3_datatypes_pb.Uri.AsObject,
     identifier?: proto_stu3_datatypes_pb.Identifier.AsObject,
     version?: proto_stu3_datatypes_pb.String.AsObject,
@@ -11261,10 +11261,10 @@ export namespace Shareablecodesystem {
     experimental?: proto_stu3_datatypes_pb.Boolean.AsObject,
     date?: proto_stu3_datatypes_pb.DateTime.AsObject,
     publisher?: proto_stu3_datatypes_pb.String.AsObject,
-    contactList: Array<proto_stu3_metadatatypes_pb.ContactDetail.AsObject>,
+    contact: Array<proto_stu3_metadatatypes_pb.ContactDetail.AsObject>,
     description?: proto_stu3_datatypes_pb.Markdown.AsObject,
-    useContextList: Array<proto_stu3_metadatatypes_pb.UsageContext.AsObject>,
-    jurisdictionList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    useContext: Array<proto_stu3_metadatatypes_pb.UsageContext.AsObject>,
+    jurisdiction: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     purpose?: proto_stu3_datatypes_pb.Markdown.AsObject,
     copyright?: proto_stu3_datatypes_pb.Markdown.AsObject,
     caseSensitive?: proto_stu3_datatypes_pb.Boolean.AsObject,
@@ -11274,9 +11274,9 @@ export namespace Shareablecodesystem {
     versionNeeded?: proto_stu3_datatypes_pb.Boolean.AsObject,
     content?: proto_stu3_codes_pb.CodeSystemContentModeCode.AsObject,
     count?: proto_stu3_datatypes_pb.UnsignedInt.AsObject,
-    filterList: Array<Shareablecodesystem.Filter.AsObject>,
-    propertyList: Array<Shareablecodesystem.Property.AsObject>,
-    conceptList: Array<Shareablecodesystem.ConceptDefinition.AsObject>,
+    filter: Array<Shareablecodesystem.Filter.AsObject>,
+    property: Array<Shareablecodesystem.Property.AsObject>,
+    concept: Array<Shareablecodesystem.ConceptDefinition.AsObject>,
   }
 
   export class Filter extends jspb.Message {
@@ -11285,14 +11285,14 @@ export namespace Shareablecodesystem {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -11305,9 +11305,9 @@ export namespace Shareablecodesystem {
     getDescription(): proto_stu3_datatypes_pb.String | undefined;
     setDescription(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearOperatorList(): void;
-    getOperatorList(): Array<proto_stu3_codes_pb.FilterOperatorCode>;
-    setOperatorList(value: Array<proto_stu3_codes_pb.FilterOperatorCode>): void;
+    clearOperator(): void;
+    getOperator(): Array<proto_stu3_codes_pb.FilterOperatorCode>;
+    setOperator(value: Array<proto_stu3_codes_pb.FilterOperatorCode>): void;
     addOperator(value?: proto_stu3_codes_pb.FilterOperatorCode, index?: number): proto_stu3_codes_pb.FilterOperatorCode;
 
     hasValue(): boolean;
@@ -11328,11 +11328,11 @@ export namespace Shareablecodesystem {
   export namespace Filter {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.Code.AsObject,
       description?: proto_stu3_datatypes_pb.String.AsObject,
-      operatorList: Array<proto_stu3_codes_pb.FilterOperatorCode.AsObject>,
+      operator: Array<proto_stu3_codes_pb.FilterOperatorCode.AsObject>,
       value?: proto_stu3_datatypes_pb.String.AsObject,
     }
   }
@@ -11343,14 +11343,14 @@ export namespace Shareablecodesystem {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -11386,8 +11386,8 @@ export namespace Shareablecodesystem {
   export namespace Property {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.Code.AsObject,
       uri?: proto_stu3_datatypes_pb.Uri.AsObject,
       description?: proto_stu3_datatypes_pb.String.AsObject,
@@ -11401,14 +11401,14 @@ export namespace Shareablecodesystem {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -11426,19 +11426,19 @@ export namespace Shareablecodesystem {
     getDefinition(): proto_stu3_datatypes_pb.String | undefined;
     setDefinition(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearDesignationList(): void;
-    getDesignationList(): Array<Shareablecodesystem.ConceptDefinition.Designation>;
-    setDesignationList(value: Array<Shareablecodesystem.ConceptDefinition.Designation>): void;
+    clearDesignation(): void;
+    getDesignation(): Array<Shareablecodesystem.ConceptDefinition.Designation>;
+    setDesignation(value: Array<Shareablecodesystem.ConceptDefinition.Designation>): void;
     addDesignation(value?: Shareablecodesystem.ConceptDefinition.Designation, index?: number): Shareablecodesystem.ConceptDefinition.Designation;
 
-    clearPropertyList(): void;
-    getPropertyList(): Array<Shareablecodesystem.ConceptDefinition.ConceptProperty>;
-    setPropertyList(value: Array<Shareablecodesystem.ConceptDefinition.ConceptProperty>): void;
+    clearProperty(): void;
+    getProperty(): Array<Shareablecodesystem.ConceptDefinition.ConceptProperty>;
+    setProperty(value: Array<Shareablecodesystem.ConceptDefinition.ConceptProperty>): void;
     addProperty(value?: Shareablecodesystem.ConceptDefinition.ConceptProperty, index?: number): Shareablecodesystem.ConceptDefinition.ConceptProperty;
 
-    clearConceptList(): void;
-    getConceptList(): Array<Shareablecodesystem.ConceptDefinition>;
-    setConceptList(value: Array<Shareablecodesystem.ConceptDefinition>): void;
+    clearConcept(): void;
+    getConcept(): Array<Shareablecodesystem.ConceptDefinition>;
+    setConcept(value: Array<Shareablecodesystem.ConceptDefinition>): void;
     addConcept(value?: Shareablecodesystem.ConceptDefinition, index?: number): Shareablecodesystem.ConceptDefinition;
 
     serializeBinary(): Uint8Array;
@@ -11454,14 +11454,14 @@ export namespace Shareablecodesystem {
   export namespace ConceptDefinition {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.Code.AsObject,
       display?: proto_stu3_datatypes_pb.String.AsObject,
       definition?: proto_stu3_datatypes_pb.String.AsObject,
-      designationList: Array<Shareablecodesystem.ConceptDefinition.Designation.AsObject>,
-      propertyList: Array<Shareablecodesystem.ConceptDefinition.ConceptProperty.AsObject>,
-      conceptList: Array<Shareablecodesystem.ConceptDefinition.AsObject>,
+      designation: Array<Shareablecodesystem.ConceptDefinition.Designation.AsObject>,
+      property: Array<Shareablecodesystem.ConceptDefinition.ConceptProperty.AsObject>,
+      concept: Array<Shareablecodesystem.ConceptDefinition.AsObject>,
     }
 
     export class Designation extends jspb.Message {
@@ -11470,14 +11470,14 @@ export namespace Shareablecodesystem {
       getId(): proto_stu3_datatypes_pb.String | undefined;
       setId(value?: proto_stu3_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
       addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
       hasLanguage(): boolean;
@@ -11508,8 +11508,8 @@ export namespace Shareablecodesystem {
     export namespace Designation {
       export type AsObject = {
         id?: proto_stu3_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
         language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
         use?: proto_stu3_datatypes_pb.Coding.AsObject,
         value?: proto_stu3_datatypes_pb.String.AsObject,
@@ -11522,14 +11522,14 @@ export namespace Shareablecodesystem {
       getId(): proto_stu3_datatypes_pb.String | undefined;
       setId(value?: proto_stu3_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
       addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
       hasCode(): boolean;
@@ -11555,8 +11555,8 @@ export namespace Shareablecodesystem {
     export namespace ConceptProperty {
       export type AsObject = {
         id?: proto_stu3_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
         code?: proto_stu3_datatypes_pb.Code.AsObject,
         value?: Shareablecodesystem.ConceptDefinition.ConceptProperty.Value.AsObject,
       }
@@ -11653,19 +11653,19 @@ export class Shareablevalueset extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasUrl(): boolean;
@@ -11673,9 +11673,9 @@ export class Shareablevalueset extends jspb.Message {
   getUrl(): proto_stu3_datatypes_pb.Uri | undefined;
   setUrl(value?: proto_stu3_datatypes_pb.Uri): void;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
   hasVersion(): boolean;
@@ -11713,9 +11713,9 @@ export class Shareablevalueset extends jspb.Message {
   getPublisher(): proto_stu3_datatypes_pb.String | undefined;
   setPublisher(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearContactList(): void;
-  getContactList(): Array<proto_stu3_metadatatypes_pb.ContactDetail>;
-  setContactList(value: Array<proto_stu3_metadatatypes_pb.ContactDetail>): void;
+  clearContact(): void;
+  getContact(): Array<proto_stu3_metadatatypes_pb.ContactDetail>;
+  setContact(value: Array<proto_stu3_metadatatypes_pb.ContactDetail>): void;
   addContact(value?: proto_stu3_metadatatypes_pb.ContactDetail, index?: number): proto_stu3_metadatatypes_pb.ContactDetail;
 
   hasDescription(): boolean;
@@ -11723,14 +11723,14 @@ export class Shareablevalueset extends jspb.Message {
   getDescription(): proto_stu3_datatypes_pb.Markdown | undefined;
   setDescription(value?: proto_stu3_datatypes_pb.Markdown): void;
 
-  clearUseContextList(): void;
-  getUseContextList(): Array<proto_stu3_metadatatypes_pb.UsageContext>;
-  setUseContextList(value: Array<proto_stu3_metadatatypes_pb.UsageContext>): void;
+  clearUseContext(): void;
+  getUseContext(): Array<proto_stu3_metadatatypes_pb.UsageContext>;
+  setUseContext(value: Array<proto_stu3_metadatatypes_pb.UsageContext>): void;
   addUseContext(value?: proto_stu3_metadatatypes_pb.UsageContext, index?: number): proto_stu3_metadatatypes_pb.UsageContext;
 
-  clearJurisdictionList(): void;
-  getJurisdictionList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setJurisdictionList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearJurisdiction(): void;
+  getJurisdiction(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setJurisdiction(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addJurisdiction(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasImmutable(): boolean;
@@ -11780,11 +11780,11 @@ export namespace Shareablevalueset {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     url?: proto_stu3_datatypes_pb.Uri.AsObject,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
     version?: proto_stu3_datatypes_pb.String.AsObject,
     name?: proto_stu3_datatypes_pb.String.AsObject,
     title?: proto_stu3_datatypes_pb.String.AsObject,
@@ -11792,10 +11792,10 @@ export namespace Shareablevalueset {
     experimental?: proto_stu3_datatypes_pb.Boolean.AsObject,
     date?: proto_stu3_datatypes_pb.DateTime.AsObject,
     publisher?: proto_stu3_datatypes_pb.String.AsObject,
-    contactList: Array<proto_stu3_metadatatypes_pb.ContactDetail.AsObject>,
+    contact: Array<proto_stu3_metadatatypes_pb.ContactDetail.AsObject>,
     description?: proto_stu3_datatypes_pb.Markdown.AsObject,
-    useContextList: Array<proto_stu3_metadatatypes_pb.UsageContext.AsObject>,
-    jurisdictionList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    useContext: Array<proto_stu3_metadatatypes_pb.UsageContext.AsObject>,
+    jurisdiction: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     immutable?: proto_stu3_datatypes_pb.Boolean.AsObject,
     purpose?: proto_stu3_datatypes_pb.Markdown.AsObject,
     copyright?: proto_stu3_datatypes_pb.Markdown.AsObject,
@@ -11810,14 +11810,14 @@ export namespace Shareablevalueset {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasLockedDate(): boolean;
@@ -11830,14 +11830,14 @@ export namespace Shareablevalueset {
     getInactive(): proto_stu3_datatypes_pb.Boolean | undefined;
     setInactive(value?: proto_stu3_datatypes_pb.Boolean): void;
 
-    clearIncludeList(): void;
-    getIncludeList(): Array<Shareablevalueset.Compose.ConceptSet>;
-    setIncludeList(value: Array<Shareablevalueset.Compose.ConceptSet>): void;
+    clearInclude(): void;
+    getInclude(): Array<Shareablevalueset.Compose.ConceptSet>;
+    setInclude(value: Array<Shareablevalueset.Compose.ConceptSet>): void;
     addInclude(value?: Shareablevalueset.Compose.ConceptSet, index?: number): Shareablevalueset.Compose.ConceptSet;
 
-    clearExcludeList(): void;
-    getExcludeList(): Array<Shareablevalueset.Compose.ConceptSet>;
-    setExcludeList(value: Array<Shareablevalueset.Compose.ConceptSet>): void;
+    clearExclude(): void;
+    getExclude(): Array<Shareablevalueset.Compose.ConceptSet>;
+    setExclude(value: Array<Shareablevalueset.Compose.ConceptSet>): void;
     addExclude(value?: Shareablevalueset.Compose.ConceptSet, index?: number): Shareablevalueset.Compose.ConceptSet;
 
     serializeBinary(): Uint8Array;
@@ -11853,12 +11853,12 @@ export namespace Shareablevalueset {
   export namespace Compose {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       lockedDate?: proto_stu3_datatypes_pb.Date.AsObject,
       inactive?: proto_stu3_datatypes_pb.Boolean.AsObject,
-      includeList: Array<Shareablevalueset.Compose.ConceptSet.AsObject>,
-      excludeList: Array<Shareablevalueset.Compose.ConceptSet.AsObject>,
+      include: Array<Shareablevalueset.Compose.ConceptSet.AsObject>,
+      exclude: Array<Shareablevalueset.Compose.ConceptSet.AsObject>,
     }
 
     export class ConceptSet extends jspb.Message {
@@ -11867,14 +11867,14 @@ export namespace Shareablevalueset {
       getId(): proto_stu3_datatypes_pb.String | undefined;
       setId(value?: proto_stu3_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
       addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
       hasSystem(): boolean;
@@ -11887,19 +11887,19 @@ export namespace Shareablevalueset {
       getVersion(): proto_stu3_datatypes_pb.String | undefined;
       setVersion(value?: proto_stu3_datatypes_pb.String): void;
 
-      clearConceptList(): void;
-      getConceptList(): Array<Shareablevalueset.Compose.ConceptSet.ConceptReference>;
-      setConceptList(value: Array<Shareablevalueset.Compose.ConceptSet.ConceptReference>): void;
+      clearConcept(): void;
+      getConcept(): Array<Shareablevalueset.Compose.ConceptSet.ConceptReference>;
+      setConcept(value: Array<Shareablevalueset.Compose.ConceptSet.ConceptReference>): void;
       addConcept(value?: Shareablevalueset.Compose.ConceptSet.ConceptReference, index?: number): Shareablevalueset.Compose.ConceptSet.ConceptReference;
 
-      clearFilterList(): void;
-      getFilterList(): Array<Shareablevalueset.Compose.ConceptSet.Filter>;
-      setFilterList(value: Array<Shareablevalueset.Compose.ConceptSet.Filter>): void;
+      clearFilter(): void;
+      getFilter(): Array<Shareablevalueset.Compose.ConceptSet.Filter>;
+      setFilter(value: Array<Shareablevalueset.Compose.ConceptSet.Filter>): void;
       addFilter(value?: Shareablevalueset.Compose.ConceptSet.Filter, index?: number): Shareablevalueset.Compose.ConceptSet.Filter;
 
-      clearValueSetList(): void;
-      getValueSetList(): Array<proto_stu3_datatypes_pb.Uri>;
-      setValueSetList(value: Array<proto_stu3_datatypes_pb.Uri>): void;
+      clearValueSet(): void;
+      getValueSet(): Array<proto_stu3_datatypes_pb.Uri>;
+      setValueSet(value: Array<proto_stu3_datatypes_pb.Uri>): void;
       addValueSet(value?: proto_stu3_datatypes_pb.Uri, index?: number): proto_stu3_datatypes_pb.Uri;
 
       serializeBinary(): Uint8Array;
@@ -11915,13 +11915,13 @@ export namespace Shareablevalueset {
     export namespace ConceptSet {
       export type AsObject = {
         id?: proto_stu3_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
         system?: proto_stu3_datatypes_pb.Uri.AsObject,
         version?: proto_stu3_datatypes_pb.String.AsObject,
-        conceptList: Array<Shareablevalueset.Compose.ConceptSet.ConceptReference.AsObject>,
-        filterList: Array<Shareablevalueset.Compose.ConceptSet.Filter.AsObject>,
-        valueSetList: Array<proto_stu3_datatypes_pb.Uri.AsObject>,
+        concept: Array<Shareablevalueset.Compose.ConceptSet.ConceptReference.AsObject>,
+        filter: Array<Shareablevalueset.Compose.ConceptSet.Filter.AsObject>,
+        valueSet: Array<proto_stu3_datatypes_pb.Uri.AsObject>,
       }
 
       export class ConceptReference extends jspb.Message {
@@ -11930,14 +11930,14 @@ export namespace Shareablevalueset {
         getId(): proto_stu3_datatypes_pb.String | undefined;
         setId(value?: proto_stu3_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
         addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
         hasCode(): boolean;
@@ -11950,9 +11950,9 @@ export namespace Shareablevalueset {
         getDisplay(): proto_stu3_datatypes_pb.String | undefined;
         setDisplay(value?: proto_stu3_datatypes_pb.String): void;
 
-        clearDesignationList(): void;
-        getDesignationList(): Array<Shareablevalueset.Compose.ConceptSet.ConceptReference.Designation>;
-        setDesignationList(value: Array<Shareablevalueset.Compose.ConceptSet.ConceptReference.Designation>): void;
+        clearDesignation(): void;
+        getDesignation(): Array<Shareablevalueset.Compose.ConceptSet.ConceptReference.Designation>;
+        setDesignation(value: Array<Shareablevalueset.Compose.ConceptSet.ConceptReference.Designation>): void;
         addDesignation(value?: Shareablevalueset.Compose.ConceptSet.ConceptReference.Designation, index?: number): Shareablevalueset.Compose.ConceptSet.ConceptReference.Designation;
 
         serializeBinary(): Uint8Array;
@@ -11968,11 +11968,11 @@ export namespace Shareablevalueset {
       export namespace ConceptReference {
         export type AsObject = {
           id?: proto_stu3_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
           code?: proto_stu3_datatypes_pb.Code.AsObject,
           display?: proto_stu3_datatypes_pb.String.AsObject,
-          designationList: Array<Shareablevalueset.Compose.ConceptSet.ConceptReference.Designation.AsObject>,
+          designation: Array<Shareablevalueset.Compose.ConceptSet.ConceptReference.Designation.AsObject>,
         }
 
         export class Designation extends jspb.Message {
@@ -11981,14 +11981,14 @@ export namespace Shareablevalueset {
           getId(): proto_stu3_datatypes_pb.String | undefined;
           setId(value?: proto_stu3_datatypes_pb.String): void;
 
-          clearExtensionList(): void;
-          getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-          setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+          clearExtension(): void;
+          getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+          setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
           addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-          clearModifierExtensionList(): void;
-          getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-          setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+          clearModifierExtension(): void;
+          getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+          setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
           addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
           hasLanguage(): boolean;
@@ -12019,8 +12019,8 @@ export namespace Shareablevalueset {
         export namespace Designation {
           export type AsObject = {
             id?: proto_stu3_datatypes_pb.String.AsObject,
-            extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-            modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+            extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+            modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
             language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
             use?: proto_stu3_datatypes_pb.Coding.AsObject,
             value?: proto_stu3_datatypes_pb.String.AsObject,
@@ -12034,14 +12034,14 @@ export namespace Shareablevalueset {
         getId(): proto_stu3_datatypes_pb.String | undefined;
         setId(value?: proto_stu3_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
         addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
         hasProperty(): boolean;
@@ -12072,8 +12072,8 @@ export namespace Shareablevalueset {
       export namespace Filter {
         export type AsObject = {
           id?: proto_stu3_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
           property?: proto_stu3_datatypes_pb.Code.AsObject,
           op?: proto_stu3_codes_pb.FilterOperatorCode.AsObject,
           value?: proto_stu3_datatypes_pb.Code.AsObject,
@@ -12088,14 +12088,14 @@ export namespace Shareablevalueset {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasIdentifier(): boolean;
@@ -12118,14 +12118,14 @@ export namespace Shareablevalueset {
     getOffset(): proto_stu3_datatypes_pb.Integer | undefined;
     setOffset(value?: proto_stu3_datatypes_pb.Integer): void;
 
-    clearParameterList(): void;
-    getParameterList(): Array<Shareablevalueset.Expansion.Parameter>;
-    setParameterList(value: Array<Shareablevalueset.Expansion.Parameter>): void;
+    clearParameter(): void;
+    getParameter(): Array<Shareablevalueset.Expansion.Parameter>;
+    setParameter(value: Array<Shareablevalueset.Expansion.Parameter>): void;
     addParameter(value?: Shareablevalueset.Expansion.Parameter, index?: number): Shareablevalueset.Expansion.Parameter;
 
-    clearContainsList(): void;
-    getContainsList(): Array<Shareablevalueset.Expansion.Contains>;
-    setContainsList(value: Array<Shareablevalueset.Expansion.Contains>): void;
+    clearContains(): void;
+    getContains(): Array<Shareablevalueset.Expansion.Contains>;
+    setContains(value: Array<Shareablevalueset.Expansion.Contains>): void;
     addContains(value?: Shareablevalueset.Expansion.Contains, index?: number): Shareablevalueset.Expansion.Contains;
 
     serializeBinary(): Uint8Array;
@@ -12141,14 +12141,14 @@ export namespace Shareablevalueset {
   export namespace Expansion {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       identifier?: proto_stu3_datatypes_pb.Uri.AsObject,
       timestamp?: proto_stu3_datatypes_pb.DateTime.AsObject,
       total?: proto_stu3_datatypes_pb.Integer.AsObject,
       offset?: proto_stu3_datatypes_pb.Integer.AsObject,
-      parameterList: Array<Shareablevalueset.Expansion.Parameter.AsObject>,
-      containsList: Array<Shareablevalueset.Expansion.Contains.AsObject>,
+      parameter: Array<Shareablevalueset.Expansion.Parameter.AsObject>,
+      contains: Array<Shareablevalueset.Expansion.Contains.AsObject>,
     }
 
     export class Parameter extends jspb.Message {
@@ -12157,14 +12157,14 @@ export namespace Shareablevalueset {
       getId(): proto_stu3_datatypes_pb.String | undefined;
       setId(value?: proto_stu3_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
       addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
       hasName(): boolean;
@@ -12190,8 +12190,8 @@ export namespace Shareablevalueset {
     export namespace Parameter {
       export type AsObject = {
         id?: proto_stu3_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
         name?: proto_stu3_datatypes_pb.String.AsObject,
         value?: Shareablevalueset.Expansion.Parameter.Value.AsObject,
       }
@@ -12266,14 +12266,14 @@ export namespace Shareablevalueset {
       getId(): proto_stu3_datatypes_pb.String | undefined;
       setId(value?: proto_stu3_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
       addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
       hasSystem(): boolean;
@@ -12306,14 +12306,14 @@ export namespace Shareablevalueset {
       getDisplay(): proto_stu3_datatypes_pb.String | undefined;
       setDisplay(value?: proto_stu3_datatypes_pb.String): void;
 
-      clearDesignationList(): void;
-      getDesignationList(): Array<Shareablevalueset.Compose.ConceptSet.ConceptReference.Designation>;
-      setDesignationList(value: Array<Shareablevalueset.Compose.ConceptSet.ConceptReference.Designation>): void;
+      clearDesignation(): void;
+      getDesignation(): Array<Shareablevalueset.Compose.ConceptSet.ConceptReference.Designation>;
+      setDesignation(value: Array<Shareablevalueset.Compose.ConceptSet.ConceptReference.Designation>): void;
       addDesignation(value?: Shareablevalueset.Compose.ConceptSet.ConceptReference.Designation, index?: number): Shareablevalueset.Compose.ConceptSet.ConceptReference.Designation;
 
-      clearContainsList(): void;
-      getContainsList(): Array<Shareablevalueset.Expansion.Contains>;
-      setContainsList(value: Array<Shareablevalueset.Expansion.Contains>): void;
+      clearContains(): void;
+      getContains(): Array<Shareablevalueset.Expansion.Contains>;
+      setContains(value: Array<Shareablevalueset.Expansion.Contains>): void;
       addContains(value?: Shareablevalueset.Expansion.Contains, index?: number): Shareablevalueset.Expansion.Contains;
 
       serializeBinary(): Uint8Array;
@@ -12329,16 +12329,16 @@ export namespace Shareablevalueset {
     export namespace Contains {
       export type AsObject = {
         id?: proto_stu3_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
         system?: proto_stu3_datatypes_pb.Uri.AsObject,
         pb_abstract?: proto_stu3_datatypes_pb.Boolean.AsObject,
         inactive?: proto_stu3_datatypes_pb.Boolean.AsObject,
         version?: proto_stu3_datatypes_pb.String.AsObject,
         code?: proto_stu3_datatypes_pb.Code.AsObject,
         display?: proto_stu3_datatypes_pb.String.AsObject,
-        designationList: Array<Shareablevalueset.Compose.ConceptSet.ConceptReference.Designation.AsObject>,
-        containsList: Array<Shareablevalueset.Expansion.Contains.AsObject>,
+        designation: Array<Shareablevalueset.Compose.ConceptSet.ConceptReference.Designation.AsObject>,
+        contains: Array<Shareablevalueset.Expansion.Contains.AsObject>,
       }
     }
   }
@@ -12370,29 +12370,29 @@ export class Triglyceride extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -12400,9 +12400,9 @@ export class Triglyceride extends jspb.Message {
   getStatus(): proto_stu3_codes_pb.ObservationStatusCode | undefined;
   setStatus(value?: proto_stu3_codes_pb.ObservationStatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -12430,9 +12430,9 @@ export class Triglyceride extends jspb.Message {
   getIssued(): proto_stu3_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_stu3_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_stu3_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -12480,9 +12480,9 @@ export class Triglyceride extends jspb.Message {
   getReferenceRange(): Triglyceride.ReferenceRange | undefined;
   setReferenceRange(value?: Triglyceride.ReferenceRange): void;
 
-  clearComponentList(): void;
-  getComponentList(): Array<Triglyceride.Component>;
-  setComponentList(value: Array<Triglyceride.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<Triglyceride.Component>;
+  setComponent(value: Array<Triglyceride.Component>): void;
   addComponent(value?: Triglyceride.Component, index?: number): Triglyceride.Component;
 
   serializeBinary(): Uint8Array;
@@ -12502,19 +12502,19 @@ export namespace Triglyceride {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.ObservationStatusCode.AsObject,
-    categoryList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_stu3_datatypes_pb.Reference.AsObject,
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: Triglyceride.Effective.AsObject,
     issued?: proto_stu3_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     value?: Triglyceride.Value.AsObject,
     dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -12524,7 +12524,7 @@ export namespace Triglyceride {
     specimen?: proto_stu3_datatypes_pb.Reference.AsObject,
     device?: proto_stu3_datatypes_pb.Reference.AsObject,
     referenceRange?: Triglyceride.ReferenceRange.AsObject,
-    componentList: Array<Triglyceride.Component.AsObject>,
+    component: Array<Triglyceride.Component.AsObject>,
   }
 
   export class Effective extends jspb.Message {
@@ -12596,14 +12596,14 @@ export namespace Triglyceride {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasHigh(): boolean;
@@ -12629,8 +12629,8 @@ export namespace Triglyceride {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       high?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       text?: proto_stu3_datatypes_pb.String.AsObject,
     }
@@ -12642,14 +12642,14 @@ export namespace Triglyceride {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -12672,9 +12672,9 @@ export namespace Triglyceride {
     getInterpretation(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setInterpretation(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<Triglyceride.ReferenceRange>;
-    setReferenceRangeList(value: Array<Triglyceride.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<Triglyceride.ReferenceRange>;
+    setReferenceRange(value: Array<Triglyceride.ReferenceRange>): void;
     addReferenceRange(value?: Triglyceride.ReferenceRange, index?: number): Triglyceride.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -12690,13 +12690,13 @@ export namespace Triglyceride {
   export namespace Component {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       value?: Triglyceride.Component.Value.AsObject,
       dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      referenceRangeList: Array<Triglyceride.ReferenceRange.AsObject>,
+      referenceRange: Array<Triglyceride.ReferenceRange.AsObject>,
     }
 
     export class Value extends jspb.Message {
@@ -12818,29 +12818,29 @@ export class Vitalsigns extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -12848,9 +12848,9 @@ export class Vitalsigns extends jspb.Message {
   getStatus(): proto_stu3_codes_pb.ObservationStatusCode | undefined;
   setStatus(value?: proto_stu3_codes_pb.ObservationStatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -12878,9 +12878,9 @@ export class Vitalsigns extends jspb.Message {
   getIssued(): proto_stu3_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_stu3_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_stu3_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -12923,19 +12923,19 @@ export class Vitalsigns extends jspb.Message {
   getDevice(): proto_stu3_datatypes_pb.Reference | undefined;
   setDevice(value?: proto_stu3_datatypes_pb.Reference): void;
 
-  clearReferenceRangeList(): void;
-  getReferenceRangeList(): Array<Vitalsigns.ReferenceRange>;
-  setReferenceRangeList(value: Array<Vitalsigns.ReferenceRange>): void;
+  clearReferenceRange(): void;
+  getReferenceRange(): Array<Vitalsigns.ReferenceRange>;
+  setReferenceRange(value: Array<Vitalsigns.ReferenceRange>): void;
   addReferenceRange(value?: Vitalsigns.ReferenceRange, index?: number): Vitalsigns.ReferenceRange;
 
-  clearRelatedList(): void;
-  getRelatedList(): Array<Vitalsigns.Related>;
-  setRelatedList(value: Array<Vitalsigns.Related>): void;
+  clearRelated(): void;
+  getRelated(): Array<Vitalsigns.Related>;
+  setRelated(value: Array<Vitalsigns.Related>): void;
   addRelated(value?: Vitalsigns.Related, index?: number): Vitalsigns.Related;
 
-  clearComponentList(): void;
-  getComponentList(): Array<Vitalsigns.Component>;
-  setComponentList(value: Array<Vitalsigns.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<Vitalsigns.Component>;
+  setComponent(value: Array<Vitalsigns.Component>): void;
   addComponent(value?: Vitalsigns.Component, index?: number): Vitalsigns.Component;
 
   serializeBinary(): Uint8Array;
@@ -12955,19 +12955,19 @@ export namespace Vitalsigns {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.ObservationStatusCode.AsObject,
-    categoryList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_stu3_datatypes_pb.Reference.AsObject,
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: Vitalsigns.Effective.AsObject,
     issued?: proto_stu3_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     value?: Vitalsigns.Value.AsObject,
     dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
@@ -12976,9 +12976,9 @@ export namespace Vitalsigns {
     method?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     specimen?: proto_stu3_datatypes_pb.Reference.AsObject,
     device?: proto_stu3_datatypes_pb.Reference.AsObject,
-    referenceRangeList: Array<Vitalsigns.ReferenceRange.AsObject>,
-    relatedList: Array<Vitalsigns.Related.AsObject>,
-    componentList: Array<Vitalsigns.Component.AsObject>,
+    referenceRange: Array<Vitalsigns.ReferenceRange.AsObject>,
+    related: Array<Vitalsigns.Related.AsObject>,
+    component: Array<Vitalsigns.Component.AsObject>,
   }
 
   export class Effective extends jspb.Message {
@@ -13050,14 +13050,14 @@ export namespace Vitalsigns {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -13075,9 +13075,9 @@ export namespace Vitalsigns {
     getType(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
     hasAge(): boolean;
@@ -13103,12 +13103,12 @@ export namespace Vitalsigns {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       low?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       high?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       type?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
       age?: proto_stu3_datatypes_pb.Range.AsObject,
       text?: proto_stu3_datatypes_pb.String.AsObject,
     }
@@ -13120,14 +13120,14 @@ export namespace Vitalsigns {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -13153,8 +13153,8 @@ export namespace Vitalsigns {
   export namespace Related {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       type?: proto_stu3_codes_pb.ObservationRelationshipTypeCode.AsObject,
       target?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -13166,14 +13166,14 @@ export namespace Vitalsigns {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -13196,9 +13196,9 @@ export namespace Vitalsigns {
     getInterpretation(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setInterpretation(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<Vitalsigns.ReferenceRange>;
-    setReferenceRangeList(value: Array<Vitalsigns.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<Vitalsigns.ReferenceRange>;
+    setReferenceRange(value: Array<Vitalsigns.ReferenceRange>): void;
     addReferenceRange(value?: Vitalsigns.ReferenceRange, index?: number): Vitalsigns.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -13214,13 +13214,13 @@ export namespace Vitalsigns {
   export namespace Component {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       value?: Vitalsigns.Component.Value.AsObject,
       dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      referenceRangeList: Array<Vitalsigns.ReferenceRange.AsObject>,
+      referenceRange: Array<Vitalsigns.ReferenceRange.AsObject>,
     }
 
     export class Value extends jspb.Message {
@@ -13279,29 +13279,29 @@ export class Vitalspanel extends jspb.Message {
   getText(): proto_stu3_metadatatypes_pb.Narrative | undefined;
   setText(value?: proto_stu3_metadatatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<proto_stu3_resources_pb.ContainedResource>;
-  setContainedList(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
+  clearContained(): void;
+  getContained(): Array<proto_stu3_resources_pb.ContainedResource>;
+  setContained(value: Array<proto_stu3_resources_pb.ContainedResource>): void;
   addContained(value?: proto_stu3_resources_pb.ContainedResource, index?: number): proto_stu3_resources_pb.ContainedResource;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_stu3_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_stu3_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_stu3_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_stu3_datatypes_pb.Identifier, index?: number): proto_stu3_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_stu3_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -13309,9 +13309,9 @@ export class Vitalspanel extends jspb.Message {
   getStatus(): proto_stu3_codes_pb.ObservationStatusCode | undefined;
   setStatus(value?: proto_stu3_codes_pb.ObservationStatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -13339,9 +13339,9 @@ export class Vitalspanel extends jspb.Message {
   getIssued(): proto_stu3_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_stu3_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_stu3_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_stu3_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_stu3_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_stu3_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_stu3_datatypes_pb.Reference, index?: number): proto_stu3_datatypes_pb.Reference;
 
   hasDataAbsentReason(): boolean;
@@ -13379,19 +13379,19 @@ export class Vitalspanel extends jspb.Message {
   getDevice(): proto_stu3_datatypes_pb.Reference | undefined;
   setDevice(value?: proto_stu3_datatypes_pb.Reference): void;
 
-  clearReferenceRangeList(): void;
-  getReferenceRangeList(): Array<Vitalspanel.ReferenceRange>;
-  setReferenceRangeList(value: Array<Vitalspanel.ReferenceRange>): void;
+  clearReferenceRange(): void;
+  getReferenceRange(): Array<Vitalspanel.ReferenceRange>;
+  setReferenceRange(value: Array<Vitalspanel.ReferenceRange>): void;
   addReferenceRange(value?: Vitalspanel.ReferenceRange, index?: number): Vitalspanel.ReferenceRange;
 
-  clearRelatedList(): void;
-  getRelatedList(): Array<Vitalspanel.Related>;
-  setRelatedList(value: Array<Vitalspanel.Related>): void;
+  clearRelated(): void;
+  getRelated(): Array<Vitalspanel.Related>;
+  setRelated(value: Array<Vitalspanel.Related>): void;
   addRelated(value?: Vitalspanel.Related, index?: number): Vitalspanel.Related;
 
-  clearComponentList(): void;
-  getComponentList(): Array<Vitalspanel.Component>;
-  setComponentList(value: Array<Vitalspanel.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<Vitalspanel.Component>;
+  setComponent(value: Array<Vitalspanel.Component>): void;
   addComponent(value?: Vitalspanel.Component, index?: number): Vitalspanel.Component;
 
   serializeBinary(): Uint8Array;
@@ -13411,19 +13411,19 @@ export namespace Vitalspanel {
     implicitRules?: proto_stu3_datatypes_pb.Uri.AsObject,
     language?: proto_stu3_datatypes_pb.LanguageCode.AsObject,
     text?: proto_stu3_metadatatypes_pb.Narrative.AsObject,
-    containedList: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    contained: Array<proto_stu3_resources_pb.ContainedResource.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_stu3_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     status?: proto_stu3_codes_pb.ObservationStatusCode.AsObject,
-    categoryList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     code?: Vitalspanel.CodeableConceptForCode.AsObject,
     subject?: proto_stu3_datatypes_pb.Reference.AsObject,
     context?: proto_stu3_datatypes_pb.Reference.AsObject,
     effective?: Vitalspanel.Effective.AsObject,
     issued?: proto_stu3_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_stu3_datatypes_pb.Reference.AsObject>,
     dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     comment?: proto_stu3_datatypes_pb.String.AsObject,
@@ -13431,9 +13431,9 @@ export namespace Vitalspanel {
     method?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
     specimen?: proto_stu3_datatypes_pb.Reference.AsObject,
     device?: proto_stu3_datatypes_pb.Reference.AsObject,
-    referenceRangeList: Array<Vitalspanel.ReferenceRange.AsObject>,
-    relatedList: Array<Vitalspanel.Related.AsObject>,
-    componentList: Array<Vitalspanel.Component.AsObject>,
+    referenceRange: Array<Vitalspanel.ReferenceRange.AsObject>,
+    related: Array<Vitalspanel.Related.AsObject>,
+    component: Array<Vitalspanel.Component.AsObject>,
   }
 
   export class CodeableConceptForCode extends jspb.Message {
@@ -13442,14 +13442,14 @@ export namespace Vitalspanel {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearCodingList(): void;
-    getCodingList(): Array<proto_stu3_datatypes_pb.Coding>;
-    setCodingList(value: Array<proto_stu3_datatypes_pb.Coding>): void;
+    clearCoding(): void;
+    getCoding(): Array<proto_stu3_datatypes_pb.Coding>;
+    setCoding(value: Array<proto_stu3_datatypes_pb.Coding>): void;
     addCoding(value?: proto_stu3_datatypes_pb.Coding, index?: number): proto_stu3_datatypes_pb.Coding;
 
     hasText(): boolean;
@@ -13457,9 +13457,9 @@ export namespace Vitalspanel {
     getText(): proto_stu3_datatypes_pb.String | undefined;
     setText(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearBodyWeightCodeList(): void;
-    getBodyWeightCodeList(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
-    setBodyWeightCodeList(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
+    clearBodyWeightCode(): void;
+    getBodyWeightCode(): Array<proto_stu3_datatypes_pb.CodingWithFixedCode>;
+    setBodyWeightCode(value: Array<proto_stu3_datatypes_pb.CodingWithFixedCode>): void;
     addBodyWeightCode(value?: proto_stu3_datatypes_pb.CodingWithFixedCode, index?: number): proto_stu3_datatypes_pb.CodingWithFixedCode;
 
     serializeBinary(): Uint8Array;
@@ -13475,10 +13475,10 @@ export namespace Vitalspanel {
   export namespace CodeableConceptForCode {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      codingList: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      coding: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
       text?: proto_stu3_datatypes_pb.String.AsObject,
-      bodyWeightCodeList: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
+      bodyWeightCode: Array<proto_stu3_datatypes_pb.CodingWithFixedCode.AsObject>,
     }
   }
 
@@ -13523,14 +13523,14 @@ export namespace Vitalspanel {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -13548,9 +13548,9 @@ export namespace Vitalspanel {
     getType(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
     hasAge(): boolean;
@@ -13576,12 +13576,12 @@ export namespace Vitalspanel {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       low?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       high?: proto_stu3_datatypes_pb.SimpleQuantity.AsObject,
       type?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
       age?: proto_stu3_datatypes_pb.Range.AsObject,
       text?: proto_stu3_datatypes_pb.String.AsObject,
     }
@@ -13593,14 +13593,14 @@ export namespace Vitalspanel {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -13626,8 +13626,8 @@ export namespace Vitalspanel {
   export namespace Related {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       type?: proto_stu3_codes_pb.ObservationRelationshipTypeCode.AsObject,
       target?: proto_stu3_datatypes_pb.Reference.AsObject,
     }
@@ -13639,14 +13639,14 @@ export namespace Vitalspanel {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -13669,9 +13669,9 @@ export namespace Vitalspanel {
     getInterpretation(): proto_stu3_datatypes_pb.CodeableConcept | undefined;
     setInterpretation(value?: proto_stu3_datatypes_pb.CodeableConcept): void;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<Vitalspanel.ReferenceRange>;
-    setReferenceRangeList(value: Array<Vitalspanel.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<Vitalspanel.ReferenceRange>;
+    setReferenceRange(value: Array<Vitalspanel.ReferenceRange>): void;
     addReferenceRange(value?: Vitalspanel.ReferenceRange, index?: number): Vitalspanel.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -13687,13 +13687,13 @@ export namespace Vitalspanel {
   export namespace Component {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       value?: Vitalspanel.Component.Value.AsObject,
       dataAbsentReason?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
       interpretation?: proto_stu3_datatypes_pb.CodeableConcept.AsObject,
-      referenceRangeList: Array<Vitalspanel.ReferenceRange.AsObject>,
+      referenceRange: Array<Vitalspanel.ReferenceRange.AsObject>,
     }
 
     export class Value extends jspb.Message {

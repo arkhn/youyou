@@ -33,24 +33,24 @@ export class ExplanationOfBenefit extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -118,9 +118,9 @@ export class ExplanationOfBenefit extends jspb.Message {
   getFundsReserve(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setFundsReserve(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearRelatedList(): void;
-  getRelatedList(): Array<ExplanationOfBenefit.RelatedClaim>;
-  setRelatedList(value: Array<ExplanationOfBenefit.RelatedClaim>): void;
+  clearRelated(): void;
+  getRelated(): Array<ExplanationOfBenefit.RelatedClaim>;
+  setRelated(value: Array<ExplanationOfBenefit.RelatedClaim>): void;
   addRelated(value?: ExplanationOfBenefit.RelatedClaim, index?: number): ExplanationOfBenefit.RelatedClaim;
 
   hasPrescription(): boolean;
@@ -168,34 +168,34 @@ export class ExplanationOfBenefit extends jspb.Message {
   getDisposition(): proto_r4_core_datatypes_pb.String | undefined;
   setDisposition(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearPreAuthRefList(): void;
-  getPreAuthRefList(): Array<proto_r4_core_datatypes_pb.String>;
-  setPreAuthRefList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+  clearPreAuthRef(): void;
+  getPreAuthRef(): Array<proto_r4_core_datatypes_pb.String>;
+  setPreAuthRef(value: Array<proto_r4_core_datatypes_pb.String>): void;
   addPreAuthRef(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
-  clearPreAuthRefPeriodList(): void;
-  getPreAuthRefPeriodList(): Array<proto_r4_core_datatypes_pb.Period>;
-  setPreAuthRefPeriodList(value: Array<proto_r4_core_datatypes_pb.Period>): void;
+  clearPreAuthRefPeriod(): void;
+  getPreAuthRefPeriod(): Array<proto_r4_core_datatypes_pb.Period>;
+  setPreAuthRefPeriod(value: Array<proto_r4_core_datatypes_pb.Period>): void;
   addPreAuthRefPeriod(value?: proto_r4_core_datatypes_pb.Period, index?: number): proto_r4_core_datatypes_pb.Period;
 
-  clearCareTeamList(): void;
-  getCareTeamList(): Array<ExplanationOfBenefit.CareTeam>;
-  setCareTeamList(value: Array<ExplanationOfBenefit.CareTeam>): void;
+  clearCareTeam(): void;
+  getCareTeam(): Array<ExplanationOfBenefit.CareTeam>;
+  setCareTeam(value: Array<ExplanationOfBenefit.CareTeam>): void;
   addCareTeam(value?: ExplanationOfBenefit.CareTeam, index?: number): ExplanationOfBenefit.CareTeam;
 
-  clearSupportingInfoList(): void;
-  getSupportingInfoList(): Array<ExplanationOfBenefit.SupportingInformation>;
-  setSupportingInfoList(value: Array<ExplanationOfBenefit.SupportingInformation>): void;
+  clearSupportingInfo(): void;
+  getSupportingInfo(): Array<ExplanationOfBenefit.SupportingInformation>;
+  setSupportingInfo(value: Array<ExplanationOfBenefit.SupportingInformation>): void;
   addSupportingInfo(value?: ExplanationOfBenefit.SupportingInformation, index?: number): ExplanationOfBenefit.SupportingInformation;
 
-  clearDiagnosisList(): void;
-  getDiagnosisList(): Array<ExplanationOfBenefit.Diagnosis>;
-  setDiagnosisList(value: Array<ExplanationOfBenefit.Diagnosis>): void;
+  clearDiagnosis(): void;
+  getDiagnosis(): Array<ExplanationOfBenefit.Diagnosis>;
+  setDiagnosis(value: Array<ExplanationOfBenefit.Diagnosis>): void;
   addDiagnosis(value?: ExplanationOfBenefit.Diagnosis, index?: number): ExplanationOfBenefit.Diagnosis;
 
-  clearProcedureList(): void;
-  getProcedureList(): Array<ExplanationOfBenefit.Procedure>;
-  setProcedureList(value: Array<ExplanationOfBenefit.Procedure>): void;
+  clearProcedure(): void;
+  getProcedure(): Array<ExplanationOfBenefit.Procedure>;
+  setProcedure(value: Array<ExplanationOfBenefit.Procedure>): void;
   addProcedure(value?: ExplanationOfBenefit.Procedure, index?: number): ExplanationOfBenefit.Procedure;
 
   hasPrecedence(): boolean;
@@ -203,9 +203,9 @@ export class ExplanationOfBenefit extends jspb.Message {
   getPrecedence(): proto_r4_core_datatypes_pb.PositiveInt | undefined;
   setPrecedence(value?: proto_r4_core_datatypes_pb.PositiveInt): void;
 
-  clearInsuranceList(): void;
-  getInsuranceList(): Array<ExplanationOfBenefit.Insurance>;
-  setInsuranceList(value: Array<ExplanationOfBenefit.Insurance>): void;
+  clearInsurance(): void;
+  getInsurance(): Array<ExplanationOfBenefit.Insurance>;
+  setInsurance(value: Array<ExplanationOfBenefit.Insurance>): void;
   addInsurance(value?: ExplanationOfBenefit.Insurance, index?: number): ExplanationOfBenefit.Insurance;
 
   hasAccident(): boolean;
@@ -213,24 +213,24 @@ export class ExplanationOfBenefit extends jspb.Message {
   getAccident(): ExplanationOfBenefit.Accident | undefined;
   setAccident(value?: ExplanationOfBenefit.Accident): void;
 
-  clearItemList(): void;
-  getItemList(): Array<ExplanationOfBenefit.Item>;
-  setItemList(value: Array<ExplanationOfBenefit.Item>): void;
+  clearItem(): void;
+  getItem(): Array<ExplanationOfBenefit.Item>;
+  setItem(value: Array<ExplanationOfBenefit.Item>): void;
   addItem(value?: ExplanationOfBenefit.Item, index?: number): ExplanationOfBenefit.Item;
 
-  clearAddItemList(): void;
-  getAddItemList(): Array<ExplanationOfBenefit.AddedItem>;
-  setAddItemList(value: Array<ExplanationOfBenefit.AddedItem>): void;
+  clearAddItem(): void;
+  getAddItem(): Array<ExplanationOfBenefit.AddedItem>;
+  setAddItem(value: Array<ExplanationOfBenefit.AddedItem>): void;
   addAddItem(value?: ExplanationOfBenefit.AddedItem, index?: number): ExplanationOfBenefit.AddedItem;
 
-  clearAdjudicationList(): void;
-  getAdjudicationList(): Array<ExplanationOfBenefit.Item.Adjudication>;
-  setAdjudicationList(value: Array<ExplanationOfBenefit.Item.Adjudication>): void;
+  clearAdjudication(): void;
+  getAdjudication(): Array<ExplanationOfBenefit.Item.Adjudication>;
+  setAdjudication(value: Array<ExplanationOfBenefit.Item.Adjudication>): void;
   addAdjudication(value?: ExplanationOfBenefit.Item.Adjudication, index?: number): ExplanationOfBenefit.Item.Adjudication;
 
-  clearTotalList(): void;
-  getTotalList(): Array<ExplanationOfBenefit.Total>;
-  setTotalList(value: Array<ExplanationOfBenefit.Total>): void;
+  clearTotal(): void;
+  getTotal(): Array<ExplanationOfBenefit.Total>;
+  setTotal(value: Array<ExplanationOfBenefit.Total>): void;
   addTotal(value?: ExplanationOfBenefit.Total, index?: number): ExplanationOfBenefit.Total;
 
   hasPayment(): boolean;
@@ -248,9 +248,9 @@ export class ExplanationOfBenefit extends jspb.Message {
   getForm(): proto_r4_core_datatypes_pb.Attachment | undefined;
   setForm(value?: proto_r4_core_datatypes_pb.Attachment): void;
 
-  clearProcessNoteList(): void;
-  getProcessNoteList(): Array<ExplanationOfBenefit.Note>;
-  setProcessNoteList(value: Array<ExplanationOfBenefit.Note>): void;
+  clearProcessNote(): void;
+  getProcessNote(): Array<ExplanationOfBenefit.Note>;
+  setProcessNote(value: Array<ExplanationOfBenefit.Note>): void;
   addProcessNote(value?: ExplanationOfBenefit.Note, index?: number): ExplanationOfBenefit.Note;
 
   hasBenefitPeriod(): boolean;
@@ -258,9 +258,9 @@ export class ExplanationOfBenefit extends jspb.Message {
   getBenefitPeriod(): proto_r4_core_datatypes_pb.Period | undefined;
   setBenefitPeriod(value?: proto_r4_core_datatypes_pb.Period): void;
 
-  clearBenefitBalanceList(): void;
-  getBenefitBalanceList(): Array<ExplanationOfBenefit.BenefitBalance>;
-  setBenefitBalanceList(value: Array<ExplanationOfBenefit.BenefitBalance>): void;
+  clearBenefitBalance(): void;
+  getBenefitBalance(): Array<ExplanationOfBenefit.BenefitBalance>;
+  setBenefitBalance(value: Array<ExplanationOfBenefit.BenefitBalance>): void;
   addBenefitBalance(value?: ExplanationOfBenefit.BenefitBalance, index?: number): ExplanationOfBenefit.BenefitBalance;
 
   serializeBinary(): Uint8Array;
@@ -280,10 +280,10 @@ export namespace ExplanationOfBenefit {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: ExplanationOfBenefit.StatusCode.AsObject,
     type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -297,7 +297,7 @@ export namespace ExplanationOfBenefit {
     priority?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     fundsReserveRequested?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     fundsReserve?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    relatedList: Array<ExplanationOfBenefit.RelatedClaim.AsObject>,
+    related: Array<ExplanationOfBenefit.RelatedClaim.AsObject>,
     prescription?: proto_r4_core_datatypes_pb.Reference.AsObject,
     originalPrescription?: proto_r4_core_datatypes_pb.Reference.AsObject,
     payee?: ExplanationOfBenefit.Payee.AsObject,
@@ -307,25 +307,25 @@ export namespace ExplanationOfBenefit {
     claimResponse?: proto_r4_core_datatypes_pb.Reference.AsObject,
     outcome?: ExplanationOfBenefit.OutcomeCode.AsObject,
     disposition?: proto_r4_core_datatypes_pb.String.AsObject,
-    preAuthRefList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
-    preAuthRefPeriodList: Array<proto_r4_core_datatypes_pb.Period.AsObject>,
-    careTeamList: Array<ExplanationOfBenefit.CareTeam.AsObject>,
-    supportingInfoList: Array<ExplanationOfBenefit.SupportingInformation.AsObject>,
-    diagnosisList: Array<ExplanationOfBenefit.Diagnosis.AsObject>,
-    procedureList: Array<ExplanationOfBenefit.Procedure.AsObject>,
+    preAuthRef: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+    preAuthRefPeriod: Array<proto_r4_core_datatypes_pb.Period.AsObject>,
+    careTeam: Array<ExplanationOfBenefit.CareTeam.AsObject>,
+    supportingInfo: Array<ExplanationOfBenefit.SupportingInformation.AsObject>,
+    diagnosis: Array<ExplanationOfBenefit.Diagnosis.AsObject>,
+    procedure: Array<ExplanationOfBenefit.Procedure.AsObject>,
     precedence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
-    insuranceList: Array<ExplanationOfBenefit.Insurance.AsObject>,
+    insurance: Array<ExplanationOfBenefit.Insurance.AsObject>,
     accident?: ExplanationOfBenefit.Accident.AsObject,
-    itemList: Array<ExplanationOfBenefit.Item.AsObject>,
-    addItemList: Array<ExplanationOfBenefit.AddedItem.AsObject>,
-    adjudicationList: Array<ExplanationOfBenefit.Item.Adjudication.AsObject>,
-    totalList: Array<ExplanationOfBenefit.Total.AsObject>,
+    item: Array<ExplanationOfBenefit.Item.AsObject>,
+    addItem: Array<ExplanationOfBenefit.AddedItem.AsObject>,
+    adjudication: Array<ExplanationOfBenefit.Item.Adjudication.AsObject>,
+    total: Array<ExplanationOfBenefit.Total.AsObject>,
     payment?: ExplanationOfBenefit.Payment.AsObject,
     formCode?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     form?: proto_r4_core_datatypes_pb.Attachment.AsObject,
-    processNoteList: Array<ExplanationOfBenefit.Note.AsObject>,
+    processNote: Array<ExplanationOfBenefit.Note.AsObject>,
     benefitPeriod?: proto_r4_core_datatypes_pb.Period.AsObject,
-    benefitBalanceList: Array<ExplanationOfBenefit.BenefitBalance.AsObject>,
+    benefitBalance: Array<ExplanationOfBenefit.BenefitBalance.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -337,9 +337,9 @@ export namespace ExplanationOfBenefit {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -356,7 +356,7 @@ export namespace ExplanationOfBenefit {
     export type AsObject = {
       value: proto_r4_core_codes_pb.ExplanationOfBenefitStatusCode.ValueMap[keyof proto_r4_core_codes_pb.ExplanationOfBenefitStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -369,9 +369,9 @@ export namespace ExplanationOfBenefit {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -388,7 +388,7 @@ export namespace ExplanationOfBenefit {
     export type AsObject = {
       value: proto_r4_core_codes_pb.UseCode.ValueMap[keyof proto_r4_core_codes_pb.UseCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -398,14 +398,14 @@ export namespace ExplanationOfBenefit {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasClaim(): boolean;
@@ -436,8 +436,8 @@ export namespace ExplanationOfBenefit {
   export namespace RelatedClaim {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       claim?: proto_r4_core_datatypes_pb.Reference.AsObject,
       relationship?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       reference?: proto_r4_core_datatypes_pb.Identifier.AsObject,
@@ -450,14 +450,14 @@ export namespace ExplanationOfBenefit {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -483,8 +483,8 @@ export namespace ExplanationOfBenefit {
   export namespace Payee {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       party?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
@@ -499,9 +499,9 @@ export namespace ExplanationOfBenefit {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -518,7 +518,7 @@ export namespace ExplanationOfBenefit {
     export type AsObject = {
       value: proto_r4_core_codes_pb.ClaimProcessingCode.ValueMap[keyof proto_r4_core_codes_pb.ClaimProcessingCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -528,14 +528,14 @@ export namespace ExplanationOfBenefit {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSequence(): boolean;
@@ -576,8 +576,8 @@ export namespace ExplanationOfBenefit {
   export namespace CareTeam {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
       provider?: proto_r4_core_datatypes_pb.Reference.AsObject,
       responsible?: proto_r4_core_datatypes_pb.Boolean.AsObject,
@@ -592,14 +592,14 @@ export namespace ExplanationOfBenefit {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSequence(): boolean;
@@ -645,8 +645,8 @@ export namespace ExplanationOfBenefit {
   export namespace SupportingInformation {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
       category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -753,14 +753,14 @@ export namespace ExplanationOfBenefit {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSequence(): boolean;
@@ -773,9 +773,9 @@ export namespace ExplanationOfBenefit {
     getDiagnosis(): ExplanationOfBenefit.Diagnosis.DiagnosisX | undefined;
     setDiagnosis(value?: ExplanationOfBenefit.Diagnosis.DiagnosisX): void;
 
-    clearTypeList(): void;
-    getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearType(): void;
+    getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasOnAdmission(): boolean;
@@ -801,11 +801,11 @@ export namespace ExplanationOfBenefit {
   export namespace Diagnosis {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
       diagnosis?: ExplanationOfBenefit.Diagnosis.DiagnosisX.AsObject,
-      typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       onAdmission?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       packageCode?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     }
@@ -852,14 +852,14 @@ export namespace ExplanationOfBenefit {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSequence(): boolean;
@@ -867,9 +867,9 @@ export namespace ExplanationOfBenefit {
     getSequence(): proto_r4_core_datatypes_pb.PositiveInt | undefined;
     setSequence(value?: proto_r4_core_datatypes_pb.PositiveInt): void;
 
-    clearTypeList(): void;
-    getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearType(): void;
+    getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasDate(): boolean;
@@ -882,9 +882,9 @@ export namespace ExplanationOfBenefit {
     getProcedure(): ExplanationOfBenefit.Procedure.ProcedureX | undefined;
     setProcedure(value?: ExplanationOfBenefit.Procedure.ProcedureX): void;
 
-    clearUdiList(): void;
-    getUdiList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setUdiList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearUdi(): void;
+    getUdi(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setUdi(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addUdi(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     serializeBinary(): Uint8Array;
@@ -900,13 +900,13 @@ export namespace ExplanationOfBenefit {
   export namespace Procedure {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
-      typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
       procedure?: ExplanationOfBenefit.Procedure.ProcedureX.AsObject,
-      udiList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      udi: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     }
 
     export class ProcedureX extends jspb.Message {
@@ -951,14 +951,14 @@ export namespace ExplanationOfBenefit {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasFocal(): boolean;
@@ -971,9 +971,9 @@ export namespace ExplanationOfBenefit {
     getCoverage(): proto_r4_core_datatypes_pb.Reference | undefined;
     setCoverage(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-    clearPreAuthRefList(): void;
-    getPreAuthRefList(): Array<proto_r4_core_datatypes_pb.String>;
-    setPreAuthRefList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+    clearPreAuthRef(): void;
+    getPreAuthRef(): Array<proto_r4_core_datatypes_pb.String>;
+    setPreAuthRef(value: Array<proto_r4_core_datatypes_pb.String>): void;
     addPreAuthRef(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
     serializeBinary(): Uint8Array;
@@ -989,11 +989,11 @@ export namespace ExplanationOfBenefit {
   export namespace Insurance {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       focal?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       coverage?: proto_r4_core_datatypes_pb.Reference.AsObject,
-      preAuthRefList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+      preAuthRef: Array<proto_r4_core_datatypes_pb.String.AsObject>,
     }
   }
 
@@ -1003,14 +1003,14 @@ export namespace ExplanationOfBenefit {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasDate(): boolean;
@@ -1041,8 +1041,8 @@ export namespace ExplanationOfBenefit {
   export namespace Accident {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       date?: proto_r4_core_datatypes_pb.Date.AsObject,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       location?: ExplanationOfBenefit.Accident.LocationX.AsObject,
@@ -1090,14 +1090,14 @@ export namespace ExplanationOfBenefit {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSequence(): boolean;
@@ -1105,24 +1105,24 @@ export namespace ExplanationOfBenefit {
     getSequence(): proto_r4_core_datatypes_pb.PositiveInt | undefined;
     setSequence(value?: proto_r4_core_datatypes_pb.PositiveInt): void;
 
-    clearCareTeamSequenceList(): void;
-    getCareTeamSequenceList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-    setCareTeamSequenceList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+    clearCareTeamSequence(): void;
+    getCareTeamSequence(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+    setCareTeamSequence(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
     addCareTeamSequence(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
-    clearDiagnosisSequenceList(): void;
-    getDiagnosisSequenceList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-    setDiagnosisSequenceList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+    clearDiagnosisSequence(): void;
+    getDiagnosisSequence(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+    setDiagnosisSequence(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
     addDiagnosisSequence(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
-    clearProcedureSequenceList(): void;
-    getProcedureSequenceList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-    setProcedureSequenceList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+    clearProcedureSequence(): void;
+    getProcedureSequence(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+    setProcedureSequence(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
     addProcedureSequence(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
-    clearInformationSequenceList(): void;
-    getInformationSequenceList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-    setInformationSequenceList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+    clearInformationSequence(): void;
+    getInformationSequence(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+    setInformationSequence(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
     addInformationSequence(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
     hasRevenue(): boolean;
@@ -1140,14 +1140,14 @@ export namespace ExplanationOfBenefit {
     getProductOrService(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setProductOrService(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearModifierList(): void;
-    getModifierList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setModifierList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearModifier(): void;
+    getModifier(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setModifier(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addModifier(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearProgramCodeList(): void;
-    getProgramCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setProgramCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearProgramCode(): void;
+    getProgramCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setProgramCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addProgramCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasServiced(): boolean;
@@ -1180,9 +1180,9 @@ export namespace ExplanationOfBenefit {
     getNet(): proto_r4_core_datatypes_pb.Money | undefined;
     setNet(value?: proto_r4_core_datatypes_pb.Money): void;
 
-    clearUdiList(): void;
-    getUdiList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setUdiList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearUdi(): void;
+    getUdi(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setUdi(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addUdi(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     hasBodySite(): boolean;
@@ -1190,29 +1190,29 @@ export namespace ExplanationOfBenefit {
     getBodySite(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setBodySite(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearSubSiteList(): void;
-    getSubSiteList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setSubSiteList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearSubSite(): void;
+    getSubSite(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setSubSite(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addSubSite(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearEncounterList(): void;
-    getEncounterList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setEncounterList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearEncounter(): void;
+    getEncounter(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setEncounter(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addEncounter(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-    clearNoteNumberList(): void;
-    getNoteNumberList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-    setNoteNumberList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+    clearNoteNumber(): void;
+    getNoteNumber(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+    setNoteNumber(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
     addNoteNumber(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
-    clearAdjudicationList(): void;
-    getAdjudicationList(): Array<ExplanationOfBenefit.Item.Adjudication>;
-    setAdjudicationList(value: Array<ExplanationOfBenefit.Item.Adjudication>): void;
+    clearAdjudication(): void;
+    getAdjudication(): Array<ExplanationOfBenefit.Item.Adjudication>;
+    setAdjudication(value: Array<ExplanationOfBenefit.Item.Adjudication>): void;
     addAdjudication(value?: ExplanationOfBenefit.Item.Adjudication, index?: number): ExplanationOfBenefit.Item.Adjudication;
 
-    clearDetailList(): void;
-    getDetailList(): Array<ExplanationOfBenefit.Item.Detail>;
-    setDetailList(value: Array<ExplanationOfBenefit.Item.Detail>): void;
+    clearDetail(): void;
+    getDetail(): Array<ExplanationOfBenefit.Item.Detail>;
+    setDetail(value: Array<ExplanationOfBenefit.Item.Detail>): void;
     addDetail(value?: ExplanationOfBenefit.Item.Detail, index?: number): ExplanationOfBenefit.Item.Detail;
 
     serializeBinary(): Uint8Array;
@@ -1228,31 +1228,31 @@ export namespace ExplanationOfBenefit {
   export namespace Item {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
-      careTeamSequenceList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
-      diagnosisSequenceList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
-      procedureSequenceList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
-      informationSequenceList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+      careTeamSequence: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+      diagnosisSequence: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+      procedureSequence: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+      informationSequence: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
       revenue?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       productOrService?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      modifierList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      programCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      modifier: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      programCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       serviced?: ExplanationOfBenefit.Item.ServicedX.AsObject,
       location?: ExplanationOfBenefit.Item.LocationX.AsObject,
       quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       unitPrice?: proto_r4_core_datatypes_pb.Money.AsObject,
       factor?: proto_r4_core_datatypes_pb.Decimal.AsObject,
       net?: proto_r4_core_datatypes_pb.Money.AsObject,
-      udiList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      udi: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
       bodySite?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      subSiteList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      encounterList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-      noteNumberList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
-      adjudicationList: Array<ExplanationOfBenefit.Item.Adjudication.AsObject>,
-      detailList: Array<ExplanationOfBenefit.Item.Detail.AsObject>,
+      subSite: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      encounter: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      noteNumber: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+      adjudication: Array<ExplanationOfBenefit.Item.Adjudication.AsObject>,
+      detail: Array<ExplanationOfBenefit.Item.Detail.AsObject>,
     }
 
     export class ServicedX extends jspb.Message {
@@ -1338,14 +1338,14 @@ export namespace ExplanationOfBenefit {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasCategory(): boolean;
@@ -1381,8 +1381,8 @@ export namespace ExplanationOfBenefit {
     export namespace Adjudication {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         reason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         amount?: proto_r4_core_datatypes_pb.Money.AsObject,
@@ -1396,14 +1396,14 @@ export namespace ExplanationOfBenefit {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasSequence(): boolean;
@@ -1426,14 +1426,14 @@ export namespace ExplanationOfBenefit {
       getProductOrService(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
       setProductOrService(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-      clearModifierList(): void;
-      getModifierList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-      setModifierList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+      clearModifier(): void;
+      getModifier(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+      setModifier(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
       addModifier(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-      clearProgramCodeList(): void;
-      getProgramCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-      setProgramCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+      clearProgramCode(): void;
+      getProgramCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+      setProgramCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
       addProgramCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
       hasQuantity(): boolean;
@@ -1456,24 +1456,24 @@ export namespace ExplanationOfBenefit {
       getNet(): proto_r4_core_datatypes_pb.Money | undefined;
       setNet(value?: proto_r4_core_datatypes_pb.Money): void;
 
-      clearUdiList(): void;
-      getUdiList(): Array<proto_r4_core_datatypes_pb.Reference>;
-      setUdiList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+      clearUdi(): void;
+      getUdi(): Array<proto_r4_core_datatypes_pb.Reference>;
+      setUdi(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
       addUdi(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-      clearNoteNumberList(): void;
-      getNoteNumberList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-      setNoteNumberList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+      clearNoteNumber(): void;
+      getNoteNumber(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+      setNoteNumber(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
       addNoteNumber(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
-      clearAdjudicationList(): void;
-      getAdjudicationList(): Array<ExplanationOfBenefit.Item.Adjudication>;
-      setAdjudicationList(value: Array<ExplanationOfBenefit.Item.Adjudication>): void;
+      clearAdjudication(): void;
+      getAdjudication(): Array<ExplanationOfBenefit.Item.Adjudication>;
+      setAdjudication(value: Array<ExplanationOfBenefit.Item.Adjudication>): void;
       addAdjudication(value?: ExplanationOfBenefit.Item.Adjudication, index?: number): ExplanationOfBenefit.Item.Adjudication;
 
-      clearSubDetailList(): void;
-      getSubDetailList(): Array<ExplanationOfBenefit.Item.Detail.SubDetail>;
-      setSubDetailList(value: Array<ExplanationOfBenefit.Item.Detail.SubDetail>): void;
+      clearSubDetail(): void;
+      getSubDetail(): Array<ExplanationOfBenefit.Item.Detail.SubDetail>;
+      setSubDetail(value: Array<ExplanationOfBenefit.Item.Detail.SubDetail>): void;
       addSubDetail(value?: ExplanationOfBenefit.Item.Detail.SubDetail, index?: number): ExplanationOfBenefit.Item.Detail.SubDetail;
 
       serializeBinary(): Uint8Array;
@@ -1489,22 +1489,22 @@ export namespace ExplanationOfBenefit {
     export namespace Detail {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
         revenue?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         productOrService?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-        modifierList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-        programCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+        modifier: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+        programCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
         quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
         unitPrice?: proto_r4_core_datatypes_pb.Money.AsObject,
         factor?: proto_r4_core_datatypes_pb.Decimal.AsObject,
         net?: proto_r4_core_datatypes_pb.Money.AsObject,
-        udiList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-        noteNumberList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
-        adjudicationList: Array<ExplanationOfBenefit.Item.Adjudication.AsObject>,
-        subDetailList: Array<ExplanationOfBenefit.Item.Detail.SubDetail.AsObject>,
+        udi: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+        noteNumber: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+        adjudication: Array<ExplanationOfBenefit.Item.Adjudication.AsObject>,
+        subDetail: Array<ExplanationOfBenefit.Item.Detail.SubDetail.AsObject>,
       }
 
       export class SubDetail extends jspb.Message {
@@ -1513,14 +1513,14 @@ export namespace ExplanationOfBenefit {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         hasSequence(): boolean;
@@ -1543,14 +1543,14 @@ export namespace ExplanationOfBenefit {
         getProductOrService(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
         setProductOrService(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-        clearModifierList(): void;
-        getModifierList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-        setModifierList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+        clearModifier(): void;
+        getModifier(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+        setModifier(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
         addModifier(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-        clearProgramCodeList(): void;
-        getProgramCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-        setProgramCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+        clearProgramCode(): void;
+        getProgramCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+        setProgramCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
         addProgramCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
         hasQuantity(): boolean;
@@ -1573,19 +1573,19 @@ export namespace ExplanationOfBenefit {
         getNet(): proto_r4_core_datatypes_pb.Money | undefined;
         setNet(value?: proto_r4_core_datatypes_pb.Money): void;
 
-        clearUdiList(): void;
-        getUdiList(): Array<proto_r4_core_datatypes_pb.Reference>;
-        setUdiList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+        clearUdi(): void;
+        getUdi(): Array<proto_r4_core_datatypes_pb.Reference>;
+        setUdi(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
         addUdi(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-        clearNoteNumberList(): void;
-        getNoteNumberList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-        setNoteNumberList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+        clearNoteNumber(): void;
+        getNoteNumber(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+        setNoteNumber(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
         addNoteNumber(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
-        clearAdjudicationList(): void;
-        getAdjudicationList(): Array<ExplanationOfBenefit.Item.Adjudication>;
-        setAdjudicationList(value: Array<ExplanationOfBenefit.Item.Adjudication>): void;
+        clearAdjudication(): void;
+        getAdjudication(): Array<ExplanationOfBenefit.Item.Adjudication>;
+        setAdjudication(value: Array<ExplanationOfBenefit.Item.Adjudication>): void;
         addAdjudication(value?: ExplanationOfBenefit.Item.Adjudication, index?: number): ExplanationOfBenefit.Item.Adjudication;
 
         serializeBinary(): Uint8Array;
@@ -1601,21 +1601,21 @@ export namespace ExplanationOfBenefit {
       export namespace SubDetail {
         export type AsObject = {
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
           sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
           revenue?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
           category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
           productOrService?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-          modifierList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-          programCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+          modifier: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+          programCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
           quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
           unitPrice?: proto_r4_core_datatypes_pb.Money.AsObject,
           factor?: proto_r4_core_datatypes_pb.Decimal.AsObject,
           net?: proto_r4_core_datatypes_pb.Money.AsObject,
-          udiList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-          noteNumberList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
-          adjudicationList: Array<ExplanationOfBenefit.Item.Adjudication.AsObject>,
+          udi: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+          noteNumber: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+          adjudication: Array<ExplanationOfBenefit.Item.Adjudication.AsObject>,
         }
       }
     }
@@ -1627,34 +1627,34 @@ export namespace ExplanationOfBenefit {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearItemSequenceList(): void;
-    getItemSequenceList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-    setItemSequenceList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+    clearItemSequence(): void;
+    getItemSequence(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+    setItemSequence(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
     addItemSequence(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
-    clearDetailSequenceList(): void;
-    getDetailSequenceList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-    setDetailSequenceList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+    clearDetailSequence(): void;
+    getDetailSequence(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+    setDetailSequence(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
     addDetailSequence(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
-    clearSubDetailSequenceList(): void;
-    getSubDetailSequenceList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-    setSubDetailSequenceList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+    clearSubDetailSequence(): void;
+    getSubDetailSequence(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+    setSubDetailSequence(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
     addSubDetailSequence(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
-    clearProviderList(): void;
-    getProviderList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setProviderList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearProvider(): void;
+    getProvider(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setProvider(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addProvider(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     hasProductOrService(): boolean;
@@ -1662,14 +1662,14 @@ export namespace ExplanationOfBenefit {
     getProductOrService(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setProductOrService(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearModifierList(): void;
-    getModifierList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setModifierList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearModifier(): void;
+    getModifier(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setModifier(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addModifier(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearProgramCodeList(): void;
-    getProgramCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setProgramCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearProgramCode(): void;
+    getProgramCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setProgramCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addProgramCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasServiced(): boolean;
@@ -1707,24 +1707,24 @@ export namespace ExplanationOfBenefit {
     getBodySite(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setBodySite(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearSubSiteList(): void;
-    getSubSiteList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setSubSiteList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearSubSite(): void;
+    getSubSite(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setSubSite(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addSubSite(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearNoteNumberList(): void;
-    getNoteNumberList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-    setNoteNumberList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+    clearNoteNumber(): void;
+    getNoteNumber(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+    setNoteNumber(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
     addNoteNumber(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
-    clearAdjudicationList(): void;
-    getAdjudicationList(): Array<ExplanationOfBenefit.Item.Adjudication>;
-    setAdjudicationList(value: Array<ExplanationOfBenefit.Item.Adjudication>): void;
+    clearAdjudication(): void;
+    getAdjudication(): Array<ExplanationOfBenefit.Item.Adjudication>;
+    setAdjudication(value: Array<ExplanationOfBenefit.Item.Adjudication>): void;
     addAdjudication(value?: ExplanationOfBenefit.Item.Adjudication, index?: number): ExplanationOfBenefit.Item.Adjudication;
 
-    clearDetailList(): void;
-    getDetailList(): Array<ExplanationOfBenefit.AddedItem.AddedItemDetail>;
-    setDetailList(value: Array<ExplanationOfBenefit.AddedItem.AddedItemDetail>): void;
+    clearDetail(): void;
+    getDetail(): Array<ExplanationOfBenefit.AddedItem.AddedItemDetail>;
+    setDetail(value: Array<ExplanationOfBenefit.AddedItem.AddedItemDetail>): void;
     addDetail(value?: ExplanationOfBenefit.AddedItem.AddedItemDetail, index?: number): ExplanationOfBenefit.AddedItem.AddedItemDetail;
 
     serializeBinary(): Uint8Array;
@@ -1740,15 +1740,15 @@ export namespace ExplanationOfBenefit {
   export namespace AddedItem {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      itemSequenceList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
-      detailSequenceList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
-      subDetailSequenceList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
-      providerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      itemSequence: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+      detailSequence: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+      subDetailSequence: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+      provider: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
       productOrService?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      modifierList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      programCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      modifier: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      programCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       serviced?: ExplanationOfBenefit.AddedItem.ServicedX.AsObject,
       location?: ExplanationOfBenefit.AddedItem.LocationX.AsObject,
       quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
@@ -1756,10 +1756,10 @@ export namespace ExplanationOfBenefit {
       factor?: proto_r4_core_datatypes_pb.Decimal.AsObject,
       net?: proto_r4_core_datatypes_pb.Money.AsObject,
       bodySite?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      subSiteList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      noteNumberList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
-      adjudicationList: Array<ExplanationOfBenefit.Item.Adjudication.AsObject>,
-      detailList: Array<ExplanationOfBenefit.AddedItem.AddedItemDetail.AsObject>,
+      subSite: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      noteNumber: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+      adjudication: Array<ExplanationOfBenefit.Item.Adjudication.AsObject>,
+      detail: Array<ExplanationOfBenefit.AddedItem.AddedItemDetail.AsObject>,
     }
 
     export class ServicedX extends jspb.Message {
@@ -1845,14 +1845,14 @@ export namespace ExplanationOfBenefit {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasProductOrService(): boolean;
@@ -1860,9 +1860,9 @@ export namespace ExplanationOfBenefit {
       getProductOrService(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
       setProductOrService(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-      clearModifierList(): void;
-      getModifierList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-      setModifierList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+      clearModifier(): void;
+      getModifier(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+      setModifier(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
       addModifier(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
       hasQuantity(): boolean;
@@ -1885,19 +1885,19 @@ export namespace ExplanationOfBenefit {
       getNet(): proto_r4_core_datatypes_pb.Money | undefined;
       setNet(value?: proto_r4_core_datatypes_pb.Money): void;
 
-      clearNoteNumberList(): void;
-      getNoteNumberList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-      setNoteNumberList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+      clearNoteNumber(): void;
+      getNoteNumber(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+      setNoteNumber(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
       addNoteNumber(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
-      clearAdjudicationList(): void;
-      getAdjudicationList(): Array<ExplanationOfBenefit.Item.Adjudication>;
-      setAdjudicationList(value: Array<ExplanationOfBenefit.Item.Adjudication>): void;
+      clearAdjudication(): void;
+      getAdjudication(): Array<ExplanationOfBenefit.Item.Adjudication>;
+      setAdjudication(value: Array<ExplanationOfBenefit.Item.Adjudication>): void;
       addAdjudication(value?: ExplanationOfBenefit.Item.Adjudication, index?: number): ExplanationOfBenefit.Item.Adjudication;
 
-      clearSubDetailList(): void;
-      getSubDetailList(): Array<ExplanationOfBenefit.AddedItem.AddedItemDetail.AddedItemDetailSubDetail>;
-      setSubDetailList(value: Array<ExplanationOfBenefit.AddedItem.AddedItemDetail.AddedItemDetailSubDetail>): void;
+      clearSubDetail(): void;
+      getSubDetail(): Array<ExplanationOfBenefit.AddedItem.AddedItemDetail.AddedItemDetailSubDetail>;
+      setSubDetail(value: Array<ExplanationOfBenefit.AddedItem.AddedItemDetail.AddedItemDetailSubDetail>): void;
       addSubDetail(value?: ExplanationOfBenefit.AddedItem.AddedItemDetail.AddedItemDetailSubDetail, index?: number): ExplanationOfBenefit.AddedItem.AddedItemDetail.AddedItemDetailSubDetail;
 
       serializeBinary(): Uint8Array;
@@ -1913,17 +1913,17 @@ export namespace ExplanationOfBenefit {
     export namespace AddedItemDetail {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         productOrService?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-        modifierList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+        modifier: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
         quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
         unitPrice?: proto_r4_core_datatypes_pb.Money.AsObject,
         factor?: proto_r4_core_datatypes_pb.Decimal.AsObject,
         net?: proto_r4_core_datatypes_pb.Money.AsObject,
-        noteNumberList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
-        adjudicationList: Array<ExplanationOfBenefit.Item.Adjudication.AsObject>,
-        subDetailList: Array<ExplanationOfBenefit.AddedItem.AddedItemDetail.AddedItemDetailSubDetail.AsObject>,
+        noteNumber: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+        adjudication: Array<ExplanationOfBenefit.Item.Adjudication.AsObject>,
+        subDetail: Array<ExplanationOfBenefit.AddedItem.AddedItemDetail.AddedItemDetailSubDetail.AsObject>,
       }
 
       export class AddedItemDetailSubDetail extends jspb.Message {
@@ -1932,14 +1932,14 @@ export namespace ExplanationOfBenefit {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         hasProductOrService(): boolean;
@@ -1947,9 +1947,9 @@ export namespace ExplanationOfBenefit {
         getProductOrService(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
         setProductOrService(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-        clearModifierList(): void;
-        getModifierList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-        setModifierList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+        clearModifier(): void;
+        getModifier(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+        setModifier(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
         addModifier(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
         hasQuantity(): boolean;
@@ -1972,14 +1972,14 @@ export namespace ExplanationOfBenefit {
         getNet(): proto_r4_core_datatypes_pb.Money | undefined;
         setNet(value?: proto_r4_core_datatypes_pb.Money): void;
 
-        clearNoteNumberList(): void;
-        getNoteNumberList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-        setNoteNumberList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+        clearNoteNumber(): void;
+        getNoteNumber(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+        setNoteNumber(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
         addNoteNumber(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
-        clearAdjudicationList(): void;
-        getAdjudicationList(): Array<ExplanationOfBenefit.Item.Adjudication>;
-        setAdjudicationList(value: Array<ExplanationOfBenefit.Item.Adjudication>): void;
+        clearAdjudication(): void;
+        getAdjudication(): Array<ExplanationOfBenefit.Item.Adjudication>;
+        setAdjudication(value: Array<ExplanationOfBenefit.Item.Adjudication>): void;
         addAdjudication(value?: ExplanationOfBenefit.Item.Adjudication, index?: number): ExplanationOfBenefit.Item.Adjudication;
 
         serializeBinary(): Uint8Array;
@@ -1995,16 +1995,16 @@ export namespace ExplanationOfBenefit {
       export namespace AddedItemDetailSubDetail {
         export type AsObject = {
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
           productOrService?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-          modifierList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+          modifier: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
           quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
           unitPrice?: proto_r4_core_datatypes_pb.Money.AsObject,
           factor?: proto_r4_core_datatypes_pb.Decimal.AsObject,
           net?: proto_r4_core_datatypes_pb.Money.AsObject,
-          noteNumberList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
-          adjudicationList: Array<ExplanationOfBenefit.Item.Adjudication.AsObject>,
+          noteNumber: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+          adjudication: Array<ExplanationOfBenefit.Item.Adjudication.AsObject>,
         }
       }
     }
@@ -2016,14 +2016,14 @@ export namespace ExplanationOfBenefit {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCategory(): boolean;
@@ -2049,8 +2049,8 @@ export namespace ExplanationOfBenefit {
   export namespace Total {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       amount?: proto_r4_core_datatypes_pb.Money.AsObject,
     }
@@ -2062,14 +2062,14 @@ export namespace ExplanationOfBenefit {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -2115,8 +2115,8 @@ export namespace ExplanationOfBenefit {
   export namespace Payment {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       adjustment?: proto_r4_core_datatypes_pb.Money.AsObject,
       adjustmentReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -2132,14 +2132,14 @@ export namespace ExplanationOfBenefit {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasNumber(): boolean;
@@ -2175,8 +2175,8 @@ export namespace ExplanationOfBenefit {
   export namespace Note {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       number?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
       type?: ExplanationOfBenefit.Note.TypeCode.AsObject,
       text?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -2192,9 +2192,9 @@ export namespace ExplanationOfBenefit {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -2211,7 +2211,7 @@ export namespace ExplanationOfBenefit {
       export type AsObject = {
         value: proto_r4_core_codes_pb.NoteTypeCode.ValueMap[keyof proto_r4_core_codes_pb.NoteTypeCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -2222,14 +2222,14 @@ export namespace ExplanationOfBenefit {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCategory(): boolean;
@@ -2267,9 +2267,9 @@ export namespace ExplanationOfBenefit {
     getTerm(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setTerm(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearFinancialList(): void;
-    getFinancialList(): Array<ExplanationOfBenefit.BenefitBalance.Benefit>;
-    setFinancialList(value: Array<ExplanationOfBenefit.BenefitBalance.Benefit>): void;
+    clearFinancial(): void;
+    getFinancial(): Array<ExplanationOfBenefit.BenefitBalance.Benefit>;
+    setFinancial(value: Array<ExplanationOfBenefit.BenefitBalance.Benefit>): void;
     addFinancial(value?: ExplanationOfBenefit.BenefitBalance.Benefit, index?: number): ExplanationOfBenefit.BenefitBalance.Benefit;
 
     serializeBinary(): Uint8Array;
@@ -2285,8 +2285,8 @@ export namespace ExplanationOfBenefit {
   export namespace BenefitBalance {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       excluded?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       name?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -2294,7 +2294,7 @@ export namespace ExplanationOfBenefit {
       network?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       unit?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       term?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      financialList: Array<ExplanationOfBenefit.BenefitBalance.Benefit.AsObject>,
+      financial: Array<ExplanationOfBenefit.BenefitBalance.Benefit.AsObject>,
     }
 
     export class Benefit extends jspb.Message {
@@ -2303,14 +2303,14 @@ export namespace ExplanationOfBenefit {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasType(): boolean;
@@ -2341,8 +2341,8 @@ export namespace ExplanationOfBenefit {
     export namespace Benefit {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         allowed?: ExplanationOfBenefit.BenefitBalance.Benefit.AllowedX.AsObject,
         used?: ExplanationOfBenefit.BenefitBalance.Benefit.UsedX.AsObject,

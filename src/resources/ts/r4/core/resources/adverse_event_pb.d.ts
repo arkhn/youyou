@@ -33,19 +33,19 @@ export class AdverseEvent extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasIdentifier(): boolean;
@@ -58,9 +58,9 @@ export class AdverseEvent extends jspb.Message {
   getActuality(): AdverseEvent.ActualityCode | undefined;
   setActuality(value?: AdverseEvent.ActualityCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasEvent(): boolean;
@@ -93,9 +93,9 @@ export class AdverseEvent extends jspb.Message {
   getRecordedDate(): proto_r4_core_datatypes_pb.DateTime | undefined;
   setRecordedDate(value?: proto_r4_core_datatypes_pb.DateTime): void;
 
-  clearResultingConditionList(): void;
-  getResultingConditionList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setResultingConditionList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearResultingCondition(): void;
+  getResultingCondition(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setResultingCondition(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addResultingCondition(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasLocation(): boolean;
@@ -123,29 +123,29 @@ export class AdverseEvent extends jspb.Message {
   getRecorder(): proto_r4_core_datatypes_pb.Reference | undefined;
   setRecorder(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearContributorList(): void;
-  getContributorList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setContributorList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearContributor(): void;
+  getContributor(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setContributor(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addContributor(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearSuspectEntityList(): void;
-  getSuspectEntityList(): Array<AdverseEvent.SuspectEntity>;
-  setSuspectEntityList(value: Array<AdverseEvent.SuspectEntity>): void;
+  clearSuspectEntity(): void;
+  getSuspectEntity(): Array<AdverseEvent.SuspectEntity>;
+  setSuspectEntity(value: Array<AdverseEvent.SuspectEntity>): void;
   addSuspectEntity(value?: AdverseEvent.SuspectEntity, index?: number): AdverseEvent.SuspectEntity;
 
-  clearSubjectMedicalHistoryList(): void;
-  getSubjectMedicalHistoryList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSubjectMedicalHistoryList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSubjectMedicalHistory(): void;
+  getSubjectMedicalHistory(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSubjectMedicalHistory(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSubjectMedicalHistory(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearReferenceDocumentList(): void;
-  getReferenceDocumentList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReferenceDocumentList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReferenceDocument(): void;
+  getReferenceDocument(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReferenceDocument(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReferenceDocument(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearStudyList(): void;
-  getStudyList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setStudyList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearStudy(): void;
+  getStudy(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setStudy(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addStudy(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -165,29 +165,29 @@ export namespace AdverseEvent {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     identifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
     actuality?: AdverseEvent.ActualityCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     event?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     detected?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     recordedDate?: proto_r4_core_datatypes_pb.DateTime.AsObject,
-    resultingConditionList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    resultingCondition: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     location?: proto_r4_core_datatypes_pb.Reference.AsObject,
     seriousness?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     severity?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     outcome?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     recorder?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    contributorList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    suspectEntityList: Array<AdverseEvent.SuspectEntity.AsObject>,
-    subjectMedicalHistoryList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    referenceDocumentList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    studyList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contributor: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    suspectEntity: Array<AdverseEvent.SuspectEntity.AsObject>,
+    subjectMedicalHistory: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    referenceDocument: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    study: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class ActualityCode extends jspb.Message {
@@ -199,9 +199,9 @@ export namespace AdverseEvent {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -218,7 +218,7 @@ export namespace AdverseEvent {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AdverseEventActualityCode.ValueMap[keyof proto_r4_core_codes_pb.AdverseEventActualityCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -228,14 +228,14 @@ export namespace AdverseEvent {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasInstance(): boolean;
@@ -243,9 +243,9 @@ export namespace AdverseEvent {
     getInstance(): proto_r4_core_datatypes_pb.Reference | undefined;
     setInstance(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-    clearCausalityList(): void;
-    getCausalityList(): Array<AdverseEvent.SuspectEntity.Causality>;
-    setCausalityList(value: Array<AdverseEvent.SuspectEntity.Causality>): void;
+    clearCausality(): void;
+    getCausality(): Array<AdverseEvent.SuspectEntity.Causality>;
+    setCausality(value: Array<AdverseEvent.SuspectEntity.Causality>): void;
     addCausality(value?: AdverseEvent.SuspectEntity.Causality, index?: number): AdverseEvent.SuspectEntity.Causality;
 
     serializeBinary(): Uint8Array;
@@ -261,10 +261,10 @@ export namespace AdverseEvent {
   export namespace SuspectEntity {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       instance?: proto_r4_core_datatypes_pb.Reference.AsObject,
-      causalityList: Array<AdverseEvent.SuspectEntity.Causality.AsObject>,
+      causality: Array<AdverseEvent.SuspectEntity.Causality.AsObject>,
     }
 
     export class Causality extends jspb.Message {
@@ -273,14 +273,14 @@ export namespace AdverseEvent {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasAssessment(): boolean;
@@ -316,8 +316,8 @@ export namespace AdverseEvent {
     export namespace Causality {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         assessment?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         productRelatedness?: proto_r4_core_datatypes_pb.String.AsObject,
         author?: proto_r4_core_datatypes_pb.Reference.AsObject,

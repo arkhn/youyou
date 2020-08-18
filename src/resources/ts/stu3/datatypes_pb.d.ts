@@ -15,9 +15,9 @@ export class Base64Binary extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -34,7 +34,7 @@ export namespace Base64Binary {
   export type AsObject = {
     value: Uint8Array | string,
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 }
 
@@ -47,9 +47,9 @@ export class Boolean extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -66,7 +66,7 @@ export namespace Boolean {
   export type AsObject = {
     value: boolean,
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 }
 
@@ -79,9 +79,9 @@ export class Code extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -98,7 +98,7 @@ export namespace Code {
   export type AsObject = {
     value: string,
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 }
 
@@ -117,9 +117,9 @@ export class Date extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -138,7 +138,7 @@ export namespace Date {
     timezone: string,
     precision: Date.PrecisionMap[keyof Date.PrecisionMap],
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 
   export interface PrecisionMap {
@@ -166,9 +166,9 @@ export class DateTime extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -187,7 +187,7 @@ export namespace DateTime {
     timezone: string,
     precision: DateTime.PrecisionMap[keyof DateTime.PrecisionMap],
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 
   export interface PrecisionMap {
@@ -212,9 +212,9 @@ export class Decimal extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -231,7 +231,7 @@ export namespace Decimal {
   export type AsObject = {
     value: string,
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 }
 
@@ -244,9 +244,9 @@ export class Id extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -263,7 +263,7 @@ export namespace Id {
   export type AsObject = {
     value: string,
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 }
 
@@ -282,9 +282,9 @@ export class Instant extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -303,7 +303,7 @@ export namespace Instant {
     timezone: string,
     precision: Instant.PrecisionMap[keyof Instant.PrecisionMap],
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 
   export interface PrecisionMap {
@@ -325,9 +325,9 @@ export class Integer extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -344,7 +344,7 @@ export namespace Integer {
   export type AsObject = {
     value: number,
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 }
 
@@ -357,9 +357,9 @@ export class Markdown extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -376,7 +376,7 @@ export namespace Markdown {
   export type AsObject = {
     value: string,
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 }
 
@@ -389,9 +389,9 @@ export class Oid extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -408,7 +408,7 @@ export namespace Oid {
   export type AsObject = {
     value: string,
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 }
 
@@ -421,9 +421,9 @@ export class PositiveInt extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -440,7 +440,7 @@ export namespace PositiveInt {
   export type AsObject = {
     value: number,
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 }
 
@@ -453,9 +453,9 @@ export class String extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -472,7 +472,7 @@ export namespace String {
   export type AsObject = {
     value: string,
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 }
 
@@ -488,9 +488,9 @@ export class Time extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -508,7 +508,7 @@ export namespace Time {
     valueUs: number,
     precision: Time.PrecisionMap[keyof Time.PrecisionMap],
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 
   export interface PrecisionMap {
@@ -530,9 +530,9 @@ export class UnsignedInt extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -549,7 +549,7 @@ export namespace UnsignedInt {
   export type AsObject = {
     value: number,
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 }
 
@@ -562,9 +562,9 @@ export class Uri extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -581,7 +581,7 @@ export namespace Uri {
   export type AsObject = {
     value: string,
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 }
 
@@ -594,9 +594,9 @@ export class Uuid extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -613,7 +613,7 @@ export namespace Uuid {
   export type AsObject = {
     value: string,
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 }
 
@@ -649,9 +649,9 @@ export class Address extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasUse(): boolean;
@@ -669,9 +669,9 @@ export class Address extends jspb.Message {
   getText(): String | undefined;
   setText(value?: String): void;
 
-  clearLineList(): void;
-  getLineList(): Array<String>;
-  setLineList(value: Array<String>): void;
+  clearLine(): void;
+  getLine(): Array<String>;
+  setLine(value: Array<String>): void;
   addLine(value?: String, index?: number): String;
 
   hasCity(): boolean;
@@ -717,11 +717,11 @@ export class Address extends jspb.Message {
 export namespace Address {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     use?: AddressUseCode.AsObject,
     type?: AddressTypeCode.AsObject,
     text?: String.AsObject,
-    lineList: Array<String.AsObject>,
+    line: Array<String.AsObject>,
     city?: String.AsObject,
     district?: String.AsObject,
     state?: String.AsObject,
@@ -737,9 +737,9 @@ export class Age extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasValue(): boolean;
@@ -780,7 +780,7 @@ export class Age extends jspb.Message {
 export namespace Age {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     value?: Decimal.AsObject,
     comparator?: QuantityComparatorCode.AsObject,
     unit?: String.AsObject,
@@ -795,9 +795,9 @@ export class Annotation extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasAuthor(): boolean;
@@ -828,7 +828,7 @@ export class Annotation extends jspb.Message {
 export namespace Annotation {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     author?: Annotation.Author.AsObject,
     time?: DateTime.AsObject,
     text?: String.AsObject,
@@ -876,9 +876,9 @@ export class Attachment extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasContentType(): boolean;
@@ -934,7 +934,7 @@ export class Attachment extends jspb.Message {
 export namespace Attachment {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     contentType?: MimeTypeCode.AsObject,
     language?: LanguageCode.AsObject,
     data?: Base64Binary.AsObject,
@@ -952,14 +952,14 @@ export class CodeableConcept extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
-  clearCodingList(): void;
-  getCodingList(): Array<Coding>;
-  setCodingList(value: Array<Coding>): void;
+  clearCoding(): void;
+  getCoding(): Array<Coding>;
+  setCoding(value: Array<Coding>): void;
   addCoding(value?: Coding, index?: number): Coding;
 
   hasText(): boolean;
@@ -980,8 +980,8 @@ export class CodeableConcept extends jspb.Message {
 export namespace CodeableConcept {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
-    codingList: Array<Coding.AsObject>,
+    extension: Array<Extension.AsObject>,
+    coding: Array<Coding.AsObject>,
     text?: String.AsObject,
   }
 }
@@ -992,9 +992,9 @@ export class Coding extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasSystem(): boolean;
@@ -1035,7 +1035,7 @@ export class Coding extends jspb.Message {
 export namespace Coding {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     system?: Uri.AsObject,
     version?: String.AsObject,
     code?: Code.AsObject,
@@ -1050,9 +1050,9 @@ export class ContactPoint extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasSystem(): boolean;
@@ -1093,7 +1093,7 @@ export class ContactPoint extends jspb.Message {
 export namespace ContactPoint {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     system?: ContactPointSystemCode.AsObject,
     value?: String.AsObject,
     use?: ContactPointUseCode.AsObject,
@@ -1108,9 +1108,9 @@ export class Count extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasValue(): boolean;
@@ -1151,7 +1151,7 @@ export class Count extends jspb.Message {
 export namespace Count {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     value?: Decimal.AsObject,
     comparator?: QuantityComparatorCode.AsObject,
     unit?: String.AsObject,
@@ -1166,9 +1166,9 @@ export class Distance extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasValue(): boolean;
@@ -1209,7 +1209,7 @@ export class Distance extends jspb.Message {
 export namespace Distance {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     value?: Decimal.AsObject,
     comparator?: QuantityComparatorCode.AsObject,
     unit?: String.AsObject,
@@ -1224,9 +1224,9 @@ export class Dosage extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasSequence(): boolean;
@@ -1239,9 +1239,9 @@ export class Dosage extends jspb.Message {
   getText(): String | undefined;
   setText(value?: String): void;
 
-  clearAdditionalInstructionList(): void;
-  getAdditionalInstructionList(): Array<CodeableConcept>;
-  setAdditionalInstructionList(value: Array<CodeableConcept>): void;
+  clearAdditionalInstruction(): void;
+  getAdditionalInstruction(): Array<CodeableConcept>;
+  setAdditionalInstruction(value: Array<CodeableConcept>): void;
   addAdditionalInstruction(value?: CodeableConcept, index?: number): CodeableConcept;
 
   hasPatientInstruction(): boolean;
@@ -1312,10 +1312,10 @@ export class Dosage extends jspb.Message {
 export namespace Dosage {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     sequence?: Integer.AsObject,
     text?: String.AsObject,
-    additionalInstructionList: Array<CodeableConcept.AsObject>,
+    additionalInstruction: Array<CodeableConcept.AsObject>,
     patientInstruction?: String.AsObject,
     timing?: Timing.AsObject,
     asNeeded?: Dosage.AsNeeded.AsObject,
@@ -1448,9 +1448,9 @@ export class Duration extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasValue(): boolean;
@@ -1491,7 +1491,7 @@ export class Duration extends jspb.Message {
 export namespace Duration {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     value?: Decimal.AsObject,
     comparator?: QuantityComparatorCode.AsObject,
     unit?: String.AsObject,
@@ -1506,9 +1506,9 @@ export class HumanName extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasUse(): boolean;
@@ -1526,19 +1526,19 @@ export class HumanName extends jspb.Message {
   getFamily(): String | undefined;
   setFamily(value?: String): void;
 
-  clearGivenList(): void;
-  getGivenList(): Array<String>;
-  setGivenList(value: Array<String>): void;
+  clearGiven(): void;
+  getGiven(): Array<String>;
+  setGiven(value: Array<String>): void;
   addGiven(value?: String, index?: number): String;
 
-  clearPrefixList(): void;
-  getPrefixList(): Array<String>;
-  setPrefixList(value: Array<String>): void;
+  clearPrefix(): void;
+  getPrefix(): Array<String>;
+  setPrefix(value: Array<String>): void;
   addPrefix(value?: String, index?: number): String;
 
-  clearSuffixList(): void;
-  getSuffixList(): Array<String>;
-  setSuffixList(value: Array<String>): void;
+  clearSuffix(): void;
+  getSuffix(): Array<String>;
+  setSuffix(value: Array<String>): void;
   addSuffix(value?: String, index?: number): String;
 
   hasPeriod(): boolean;
@@ -1559,13 +1559,13 @@ export class HumanName extends jspb.Message {
 export namespace HumanName {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     use?: NameUseCode.AsObject,
     text?: String.AsObject,
     family?: String.AsObject,
-    givenList: Array<String.AsObject>,
-    prefixList: Array<String.AsObject>,
-    suffixList: Array<String.AsObject>,
+    given: Array<String.AsObject>,
+    prefix: Array<String.AsObject>,
+    suffix: Array<String.AsObject>,
     period?: Period.AsObject,
   }
 }
@@ -1576,9 +1576,9 @@ export class Identifier extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasUse(): boolean;
@@ -1624,7 +1624,7 @@ export class Identifier extends jspb.Message {
 export namespace Identifier {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     use?: IdentifierUseCode.AsObject,
     type?: CodeableConcept.AsObject,
     system?: Uri.AsObject,
@@ -1640,9 +1640,9 @@ export class Meta extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasVersionId(): boolean;
@@ -1655,19 +1655,19 @@ export class Meta extends jspb.Message {
   getLastUpdated(): Instant | undefined;
   setLastUpdated(value?: Instant): void;
 
-  clearProfileList(): void;
-  getProfileList(): Array<Uri>;
-  setProfileList(value: Array<Uri>): void;
+  clearProfile(): void;
+  getProfile(): Array<Uri>;
+  setProfile(value: Array<Uri>): void;
   addProfile(value?: Uri, index?: number): Uri;
 
-  clearSecurityList(): void;
-  getSecurityList(): Array<Coding>;
-  setSecurityList(value: Array<Coding>): void;
+  clearSecurity(): void;
+  getSecurity(): Array<Coding>;
+  setSecurity(value: Array<Coding>): void;
   addSecurity(value?: Coding, index?: number): Coding;
 
-  clearTagList(): void;
-  getTagList(): Array<Coding>;
-  setTagList(value: Array<Coding>): void;
+  clearTag(): void;
+  getTag(): Array<Coding>;
+  setTag(value: Array<Coding>): void;
   addTag(value?: Coding, index?: number): Coding;
 
   serializeBinary(): Uint8Array;
@@ -1683,12 +1683,12 @@ export class Meta extends jspb.Message {
 export namespace Meta {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     versionId?: Id.AsObject,
     lastUpdated?: Instant.AsObject,
-    profileList: Array<Uri.AsObject>,
-    securityList: Array<Coding.AsObject>,
-    tagList: Array<Coding.AsObject>,
+    profile: Array<Uri.AsObject>,
+    security: Array<Coding.AsObject>,
+    tag: Array<Coding.AsObject>,
   }
 }
 
@@ -1698,9 +1698,9 @@ export class Money extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasValue(): boolean;
@@ -1741,7 +1741,7 @@ export class Money extends jspb.Message {
 export namespace Money {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     value?: Decimal.AsObject,
     comparator?: QuantityComparatorCode.AsObject,
     unit?: String.AsObject,
@@ -1756,9 +1756,9 @@ export class Period extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasStart(): boolean;
@@ -1784,7 +1784,7 @@ export class Period extends jspb.Message {
 export namespace Period {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     start?: DateTime.AsObject,
     end?: DateTime.AsObject,
   }
@@ -1796,9 +1796,9 @@ export class Quantity extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasValue(): boolean;
@@ -1839,7 +1839,7 @@ export class Quantity extends jspb.Message {
 export namespace Quantity {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     value?: Decimal.AsObject,
     comparator?: QuantityComparatorCode.AsObject,
     unit?: String.AsObject,
@@ -1854,9 +1854,9 @@ export class Range extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasLow(): boolean;
@@ -1882,7 +1882,7 @@ export class Range extends jspb.Message {
 export namespace Range {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     low?: SimpleQuantity.AsObject,
     high?: SimpleQuantity.AsObject,
   }
@@ -1894,9 +1894,9 @@ export class Ratio extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasNumerator(): boolean;
@@ -1922,7 +1922,7 @@ export class Ratio extends jspb.Message {
 export namespace Ratio {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     numerator?: Quantity.AsObject,
     denominator?: Quantity.AsObject,
   }
@@ -1934,9 +1934,9 @@ export class SampledData extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasOrigin(): boolean;
@@ -1987,7 +1987,7 @@ export class SampledData extends jspb.Message {
 export namespace SampledData {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     origin?: SimpleQuantity.AsObject,
     period?: Decimal.AsObject,
     factor?: Decimal.AsObject,
@@ -2004,14 +2004,14 @@ export class Signature extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
-  clearTypeList(): void;
-  getTypeList(): Array<Coding>;
-  setTypeList(value: Array<Coding>): void;
+  clearType(): void;
+  getType(): Array<Coding>;
+  setType(value: Array<Coding>): void;
   addType(value?: Coding, index?: number): Coding;
 
   hasWhen(): boolean;
@@ -2052,8 +2052,8 @@ export class Signature extends jspb.Message {
 export namespace Signature {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
-    typeList: Array<Coding.AsObject>,
+    extension: Array<Extension.AsObject>,
+    type: Array<Coding.AsObject>,
     when?: Instant.AsObject,
     who?: Signature.Who.AsObject,
     onBehalfOf?: Signature.OnBehalfOf.AsObject,
@@ -2138,9 +2138,9 @@ export class SimpleQuantity extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasValue(): boolean;
@@ -2176,7 +2176,7 @@ export class SimpleQuantity extends jspb.Message {
 export namespace SimpleQuantity {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     value?: Decimal.AsObject,
     unit?: String.AsObject,
     system?: Uri.AsObject,
@@ -2190,14 +2190,14 @@ export class Timing extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
-  clearEventList(): void;
-  getEventList(): Array<DateTime>;
-  setEventList(value: Array<DateTime>): void;
+  clearEvent(): void;
+  getEvent(): Array<DateTime>;
+  setEvent(value: Array<DateTime>): void;
   addEvent(value?: DateTime, index?: number): DateTime;
 
   hasRepeat(): boolean;
@@ -2223,8 +2223,8 @@ export class Timing extends jspb.Message {
 export namespace Timing {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
-    eventList: Array<DateTime.AsObject>,
+    extension: Array<Extension.AsObject>,
+    event: Array<DateTime.AsObject>,
     repeat?: Timing.Repeat.AsObject,
     code?: CodeableConcept.AsObject,
   }
@@ -2235,9 +2235,9 @@ export namespace Timing {
     getId(): String | undefined;
     setId(value?: String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<Extension>;
-    setExtensionList(value: Array<Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<Extension>;
+    setExtension(value: Array<Extension>): void;
     addExtension(value?: Extension, index?: number): Extension;
 
     hasBounds(): boolean;
@@ -2295,19 +2295,19 @@ export namespace Timing {
     getPeriodUnit(): UnitsOfTimeCode | undefined;
     setPeriodUnit(value?: UnitsOfTimeCode): void;
 
-    clearDayOfWeekList(): void;
-    getDayOfWeekList(): Array<DaysOfWeekCode>;
-    setDayOfWeekList(value: Array<DaysOfWeekCode>): void;
+    clearDayOfWeek(): void;
+    getDayOfWeek(): Array<DaysOfWeekCode>;
+    setDayOfWeek(value: Array<DaysOfWeekCode>): void;
     addDayOfWeek(value?: DaysOfWeekCode, index?: number): DaysOfWeekCode;
 
-    clearTimeOfDayList(): void;
-    getTimeOfDayList(): Array<Time>;
-    setTimeOfDayList(value: Array<Time>): void;
+    clearTimeOfDay(): void;
+    getTimeOfDay(): Array<Time>;
+    setTimeOfDay(value: Array<Time>): void;
     addTimeOfDay(value?: Time, index?: number): Time;
 
-    clearWhenList(): void;
-    getWhenList(): Array<EventTimingCode>;
-    setWhenList(value: Array<EventTimingCode>): void;
+    clearWhen(): void;
+    getWhen(): Array<EventTimingCode>;
+    setWhen(value: Array<EventTimingCode>): void;
     addWhen(value?: EventTimingCode, index?: number): EventTimingCode;
 
     hasOffset(): boolean;
@@ -2328,7 +2328,7 @@ export namespace Timing {
   export namespace Repeat {
     export type AsObject = {
       id?: String.AsObject,
-      extensionList: Array<Extension.AsObject>,
+      extension: Array<Extension.AsObject>,
       bounds?: Timing.Repeat.Bounds.AsObject,
       count?: Integer.AsObject,
       countMax?: Integer.AsObject,
@@ -2340,9 +2340,9 @@ export namespace Timing {
       period?: Decimal.AsObject,
       periodMax?: Decimal.AsObject,
       periodUnit?: UnitsOfTimeCode.AsObject,
-      dayOfWeekList: Array<DaysOfWeekCode.AsObject>,
-      timeOfDayList: Array<Time.AsObject>,
-      whenList: Array<EventTimingCode.AsObject>,
+      dayOfWeek: Array<DaysOfWeekCode.AsObject>,
+      timeOfDay: Array<Time.AsObject>,
+      when: Array<EventTimingCode.AsObject>,
       offset?: UnsignedInt.AsObject,
     }
 
@@ -2406,9 +2406,9 @@ export class Extension extends jspb.Message {
   getValue(): Extension.ValueX | undefined;
   setValue(value?: Extension.ValueX): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -2426,7 +2426,7 @@ export namespace Extension {
     id?: String.AsObject,
     url?: Uri.AsObject,
     value?: Extension.ValueX.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 
   export class ValueX extends jspb.Message {
@@ -2723,9 +2723,9 @@ export class CodingWithFixedSystem extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasVersion(): boolean;
@@ -2761,7 +2761,7 @@ export class CodingWithFixedSystem extends jspb.Message {
 export namespace CodingWithFixedSystem {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     version?: String.AsObject,
     code?: Code.AsObject,
     display?: String.AsObject,
@@ -2775,9 +2775,9 @@ export class CodingWithFixedCode extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasVersion(): boolean;
@@ -2808,7 +2808,7 @@ export class CodingWithFixedCode extends jspb.Message {
 export namespace CodingWithFixedCode {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     version?: String.AsObject,
     display?: String.AsObject,
     userSelected?: Boolean.AsObject,
@@ -2821,9 +2821,9 @@ export class Reference extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   hasUri(): boolean;
@@ -3445,7 +3445,7 @@ export class Reference extends jspb.Message {
 export namespace Reference {
   export type AsObject = {
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
     uri?: String.AsObject,
     fragment?: String.AsObject,
     accountId?: ReferenceId.AsObject,
@@ -3707,9 +3707,9 @@ export class ReferenceId extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -3727,7 +3727,7 @@ export namespace ReferenceId {
     value: string,
     history?: Id.AsObject,
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 }
 
@@ -3740,9 +3740,9 @@ export class AddressTypeCode extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -3759,7 +3759,7 @@ export namespace AddressTypeCode {
   export type AsObject = {
     value: AddressTypeCode.ValueMap[keyof AddressTypeCode.ValueMap],
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3781,9 +3781,9 @@ export class AddressUseCode extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -3800,7 +3800,7 @@ export namespace AddressUseCode {
   export type AsObject = {
     value: AddressUseCode.ValueMap[keyof AddressUseCode.ValueMap],
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3823,9 +3823,9 @@ export class ContactPointSystemCode extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -3842,7 +3842,7 @@ export namespace ContactPointSystemCode {
   export type AsObject = {
     value: ContactPointSystemCode.ValueMap[keyof ContactPointSystemCode.ValueMap],
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3868,9 +3868,9 @@ export class ContactPointUseCode extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -3887,7 +3887,7 @@ export namespace ContactPointUseCode {
   export type AsObject = {
     value: ContactPointUseCode.ValueMap[keyof ContactPointUseCode.ValueMap],
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3911,9 +3911,9 @@ export class DaysOfWeekCode extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -3930,7 +3930,7 @@ export namespace DaysOfWeekCode {
   export type AsObject = {
     value: DaysOfWeekCode.ValueMap[keyof DaysOfWeekCode.ValueMap],
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3956,9 +3956,9 @@ export class EventTimingCode extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -3975,7 +3975,7 @@ export namespace EventTimingCode {
   export type AsObject = {
     value: EventTimingCode.ValueMap[keyof EventTimingCode.ValueMap],
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4013,9 +4013,9 @@ export class IdentifierUseCode extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -4032,7 +4032,7 @@ export namespace IdentifierUseCode {
   export type AsObject = {
     value: IdentifierUseCode.ValueMap[keyof IdentifierUseCode.ValueMap],
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4055,9 +4055,9 @@ export class AllLanguageCode extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -4074,7 +4074,7 @@ export namespace AllLanguageCode {
   export type AsObject = {
     value: string,
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 }
 
@@ -4087,9 +4087,9 @@ export class LanguageCode extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -4106,7 +4106,7 @@ export namespace LanguageCode {
   export type AsObject = {
     value: string,
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 }
 
@@ -4119,9 +4119,9 @@ export class MimeTypeCode extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -4138,7 +4138,7 @@ export namespace MimeTypeCode {
   export type AsObject = {
     value: string,
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 }
 
@@ -4151,9 +4151,9 @@ export class NameUseCode extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -4170,7 +4170,7 @@ export namespace NameUseCode {
   export type AsObject = {
     value: NameUseCode.ValueMap[keyof NameUseCode.ValueMap],
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4196,9 +4196,9 @@ export class QuantityComparatorCode extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -4215,7 +4215,7 @@ export namespace QuantityComparatorCode {
   export type AsObject = {
     value: QuantityComparatorCode.ValueMap[keyof QuantityComparatorCode.ValueMap],
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4238,9 +4238,9 @@ export class UnitsOfTimeCode extends jspb.Message {
   getId(): String | undefined;
   setId(value?: String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<Extension>;
-  setExtensionList(value: Array<Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<Extension>;
+  setExtension(value: Array<Extension>): void;
   addExtension(value?: Extension, index?: number): Extension;
 
   serializeBinary(): Uint8Array;
@@ -4257,7 +4257,7 @@ export namespace UnitsOfTimeCode {
   export type AsObject = {
     value: UnitsOfTimeCode.ValueMap[keyof UnitsOfTimeCode.ValueMap],
     id?: String.AsObject,
-    extensionList: Array<Extension.AsObject>,
+    extension: Array<Extension.AsObject>,
   }
 
   export interface ValueMap {

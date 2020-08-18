@@ -1,4 +1,7 @@
 {
+  "fork-ts-checker": {
+    "typescript": false
+  },
   "name": "youyoucopy",
   "version": "0.1.0",
   "private": true,

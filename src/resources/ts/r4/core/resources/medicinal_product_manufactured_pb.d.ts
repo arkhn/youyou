@@ -32,19 +32,19 @@ export class MedicinalProductManufactured extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasManufacturedDoseForm(): boolean;
@@ -62,14 +62,14 @@ export class MedicinalProductManufactured extends jspb.Message {
   getQuantity(): proto_r4_core_datatypes_pb.Quantity | undefined;
   setQuantity(value?: proto_r4_core_datatypes_pb.Quantity): void;
 
-  clearManufacturerList(): void;
-  getManufacturerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setManufacturerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearManufacturer(): void;
+  getManufacturer(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setManufacturer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addManufacturer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearIngredientList(): void;
-  getIngredientList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setIngredientList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearIngredient(): void;
+  getIngredient(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setIngredient(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addIngredient(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasPhysicalCharacteristics(): boolean;
@@ -77,9 +77,9 @@ export class MedicinalProductManufactured extends jspb.Message {
   getPhysicalCharacteristics(): proto_r4_core_datatypes_pb.ProdCharacteristic | undefined;
   setPhysicalCharacteristics(value?: proto_r4_core_datatypes_pb.ProdCharacteristic): void;
 
-  clearOtherCharacteristicsList(): void;
-  getOtherCharacteristicsList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setOtherCharacteristicsList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearOtherCharacteristics(): void;
+  getOtherCharacteristics(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setOtherCharacteristics(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addOtherCharacteristics(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   serializeBinary(): Uint8Array;
@@ -99,16 +99,16 @@ export namespace MedicinalProductManufactured {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     manufacturedDoseForm?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     unitOfPresentation?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     quantity?: proto_r4_core_datatypes_pb.Quantity.AsObject,
-    manufacturerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    ingredientList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    manufacturer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    ingredient: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     physicalCharacteristics?: proto_r4_core_datatypes_pb.ProdCharacteristic.AsObject,
-    otherCharacteristicsList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    otherCharacteristics: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
   }
 }
 

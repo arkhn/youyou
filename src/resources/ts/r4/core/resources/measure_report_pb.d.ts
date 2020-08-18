@@ -33,24 +33,24 @@ export class MeasureReport extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -93,14 +93,14 @@ export class MeasureReport extends jspb.Message {
   getImprovementNotation(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setImprovementNotation(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearGroupList(): void;
-  getGroupList(): Array<MeasureReport.Group>;
-  setGroupList(value: Array<MeasureReport.Group>): void;
+  clearGroup(): void;
+  getGroup(): Array<MeasureReport.Group>;
+  setGroup(value: Array<MeasureReport.Group>): void;
   addGroup(value?: MeasureReport.Group, index?: number): MeasureReport.Group;
 
-  clearEvaluatedResourceList(): void;
-  getEvaluatedResourceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setEvaluatedResourceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearEvaluatedResource(): void;
+  getEvaluatedResource(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setEvaluatedResource(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addEvaluatedResource(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -120,10 +120,10 @@ export namespace MeasureReport {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: MeasureReport.StatusCode.AsObject,
     type?: MeasureReport.TypeCode.AsObject,
     measure?: proto_r4_core_datatypes_pb.Canonical.AsObject,
@@ -132,8 +132,8 @@ export namespace MeasureReport {
     reporter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     period?: proto_r4_core_datatypes_pb.Period.AsObject,
     improvementNotation?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    groupList: Array<MeasureReport.Group.AsObject>,
-    evaluatedResourceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    group: Array<MeasureReport.Group.AsObject>,
+    evaluatedResource: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -145,9 +145,9 @@ export namespace MeasureReport {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -164,7 +164,7 @@ export namespace MeasureReport {
     export type AsObject = {
       value: proto_r4_core_codes_pb.MeasureReportStatusCode.ValueMap[keyof proto_r4_core_codes_pb.MeasureReportStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -177,9 +177,9 @@ export namespace MeasureReport {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -196,7 +196,7 @@ export namespace MeasureReport {
     export type AsObject = {
       value: proto_r4_core_codes_pb.MeasureReportTypeCode.ValueMap[keyof proto_r4_core_codes_pb.MeasureReportTypeCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -206,14 +206,14 @@ export namespace MeasureReport {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -221,9 +221,9 @@ export namespace MeasureReport {
     getCode(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setCode(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearPopulationList(): void;
-    getPopulationList(): Array<MeasureReport.Group.Population>;
-    setPopulationList(value: Array<MeasureReport.Group.Population>): void;
+    clearPopulation(): void;
+    getPopulation(): Array<MeasureReport.Group.Population>;
+    setPopulation(value: Array<MeasureReport.Group.Population>): void;
     addPopulation(value?: MeasureReport.Group.Population, index?: number): MeasureReport.Group.Population;
 
     hasMeasureScore(): boolean;
@@ -231,9 +231,9 @@ export namespace MeasureReport {
     getMeasureScore(): proto_r4_core_datatypes_pb.Quantity | undefined;
     setMeasureScore(value?: proto_r4_core_datatypes_pb.Quantity): void;
 
-    clearStratifierList(): void;
-    getStratifierList(): Array<MeasureReport.Group.Stratifier>;
-    setStratifierList(value: Array<MeasureReport.Group.Stratifier>): void;
+    clearStratifier(): void;
+    getStratifier(): Array<MeasureReport.Group.Stratifier>;
+    setStratifier(value: Array<MeasureReport.Group.Stratifier>): void;
     addStratifier(value?: MeasureReport.Group.Stratifier, index?: number): MeasureReport.Group.Stratifier;
 
     serializeBinary(): Uint8Array;
@@ -249,12 +249,12 @@ export namespace MeasureReport {
   export namespace Group {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      populationList: Array<MeasureReport.Group.Population.AsObject>,
+      population: Array<MeasureReport.Group.Population.AsObject>,
       measureScore?: proto_r4_core_datatypes_pb.Quantity.AsObject,
-      stratifierList: Array<MeasureReport.Group.Stratifier.AsObject>,
+      stratifier: Array<MeasureReport.Group.Stratifier.AsObject>,
     }
 
     export class Population extends jspb.Message {
@@ -263,14 +263,14 @@ export namespace MeasureReport {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasCode(): boolean;
@@ -301,8 +301,8 @@ export namespace MeasureReport {
     export namespace Population {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         count?: proto_r4_core_datatypes_pb.Integer.AsObject,
         subjectResults?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -315,24 +315,24 @@ export namespace MeasureReport {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearCodeList(): void;
-      getCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-      setCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+      clearCode(): void;
+      getCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+      setCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
       addCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-      clearStratumList(): void;
-      getStratumList(): Array<MeasureReport.Group.Stratifier.StratifierGroup>;
-      setStratumList(value: Array<MeasureReport.Group.Stratifier.StratifierGroup>): void;
+      clearStratum(): void;
+      getStratum(): Array<MeasureReport.Group.Stratifier.StratifierGroup>;
+      setStratum(value: Array<MeasureReport.Group.Stratifier.StratifierGroup>): void;
       addStratum(value?: MeasureReport.Group.Stratifier.StratifierGroup, index?: number): MeasureReport.Group.Stratifier.StratifierGroup;
 
       serializeBinary(): Uint8Array;
@@ -348,10 +348,10 @@ export namespace MeasureReport {
     export namespace Stratifier {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        codeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-        stratumList: Array<MeasureReport.Group.Stratifier.StratifierGroup.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        code: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+        stratum: Array<MeasureReport.Group.Stratifier.StratifierGroup.AsObject>,
       }
 
       export class StratifierGroup extends jspb.Message {
@@ -360,14 +360,14 @@ export namespace MeasureReport {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         hasValue(): boolean;
@@ -375,14 +375,14 @@ export namespace MeasureReport {
         getValue(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
         setValue(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-        clearComponentList(): void;
-        getComponentList(): Array<MeasureReport.Group.Stratifier.StratifierGroup.Component>;
-        setComponentList(value: Array<MeasureReport.Group.Stratifier.StratifierGroup.Component>): void;
+        clearComponent(): void;
+        getComponent(): Array<MeasureReport.Group.Stratifier.StratifierGroup.Component>;
+        setComponent(value: Array<MeasureReport.Group.Stratifier.StratifierGroup.Component>): void;
         addComponent(value?: MeasureReport.Group.Stratifier.StratifierGroup.Component, index?: number): MeasureReport.Group.Stratifier.StratifierGroup.Component;
 
-        clearPopulationList(): void;
-        getPopulationList(): Array<MeasureReport.Group.Stratifier.StratifierGroup.StratifierGroupPopulation>;
-        setPopulationList(value: Array<MeasureReport.Group.Stratifier.StratifierGroup.StratifierGroupPopulation>): void;
+        clearPopulation(): void;
+        getPopulation(): Array<MeasureReport.Group.Stratifier.StratifierGroup.StratifierGroupPopulation>;
+        setPopulation(value: Array<MeasureReport.Group.Stratifier.StratifierGroup.StratifierGroupPopulation>): void;
         addPopulation(value?: MeasureReport.Group.Stratifier.StratifierGroup.StratifierGroupPopulation, index?: number): MeasureReport.Group.Stratifier.StratifierGroup.StratifierGroupPopulation;
 
         hasMeasureScore(): boolean;
@@ -403,11 +403,11 @@ export namespace MeasureReport {
       export namespace StratifierGroup {
         export type AsObject = {
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
           value?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-          componentList: Array<MeasureReport.Group.Stratifier.StratifierGroup.Component.AsObject>,
-          populationList: Array<MeasureReport.Group.Stratifier.StratifierGroup.StratifierGroupPopulation.AsObject>,
+          component: Array<MeasureReport.Group.Stratifier.StratifierGroup.Component.AsObject>,
+          population: Array<MeasureReport.Group.Stratifier.StratifierGroup.StratifierGroupPopulation.AsObject>,
           measureScore?: proto_r4_core_datatypes_pb.Quantity.AsObject,
         }
 
@@ -417,14 +417,14 @@ export namespace MeasureReport {
           getId(): proto_r4_core_datatypes_pb.String | undefined;
           setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-          clearExtensionList(): void;
-          getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-          setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+          clearExtension(): void;
+          getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+          setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
           addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-          clearModifierExtensionList(): void;
-          getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-          setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+          clearModifierExtension(): void;
+          getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+          setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
           addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
           hasCode(): boolean;
@@ -450,8 +450,8 @@ export namespace MeasureReport {
         export namespace Component {
           export type AsObject = {
             id?: proto_r4_core_datatypes_pb.String.AsObject,
-            extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-            modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+            extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+            modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
             code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
             value?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
           }
@@ -463,14 +463,14 @@ export namespace MeasureReport {
           getId(): proto_r4_core_datatypes_pb.String | undefined;
           setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-          clearExtensionList(): void;
-          getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-          setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+          clearExtension(): void;
+          getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+          setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
           addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-          clearModifierExtensionList(): void;
-          getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-          setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+          clearModifierExtension(): void;
+          getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+          setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
           addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
           hasCode(): boolean;
@@ -501,8 +501,8 @@ export namespace MeasureReport {
         export namespace StratifierGroupPopulation {
           export type AsObject = {
             id?: proto_r4_core_datatypes_pb.String.AsObject,
-            extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-            modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+            extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+            modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
             code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
             count?: proto_r4_core_datatypes_pb.Integer.AsObject,
             subjectResults?: proto_r4_core_datatypes_pb.Reference.AsObject,

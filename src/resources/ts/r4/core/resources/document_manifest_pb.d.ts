@@ -33,19 +33,19 @@ export class DocumentManifest extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasMasterIdentifier(): boolean;
@@ -53,9 +53,9 @@ export class DocumentManifest extends jspb.Message {
   getMasterIdentifier(): proto_r4_core_datatypes_pb.Identifier | undefined;
   setMasterIdentifier(value?: proto_r4_core_datatypes_pb.Identifier): void;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -78,14 +78,14 @@ export class DocumentManifest extends jspb.Message {
   getCreated(): proto_r4_core_datatypes_pb.DateTime | undefined;
   setCreated(value?: proto_r4_core_datatypes_pb.DateTime): void;
 
-  clearAuthorList(): void;
-  getAuthorList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setAuthorList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearAuthor(): void;
+  getAuthor(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setAuthor(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addAuthor(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearRecipientList(): void;
-  getRecipientList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setRecipientList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearRecipient(): void;
+  getRecipient(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setRecipient(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addRecipient(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasSource(): boolean;
@@ -98,14 +98,14 @@ export class DocumentManifest extends jspb.Message {
   getDescription(): proto_r4_core_datatypes_pb.String | undefined;
   setDescription(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearContentList(): void;
-  getContentList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setContentList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearContent(): void;
+  getContent(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setContent(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addContent(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearRelatedList(): void;
-  getRelatedList(): Array<DocumentManifest.Related>;
-  setRelatedList(value: Array<DocumentManifest.Related>): void;
+  clearRelated(): void;
+  getRelated(): Array<DocumentManifest.Related>;
+  setRelated(value: Array<DocumentManifest.Related>): void;
   addRelated(value?: DocumentManifest.Related, index?: number): DocumentManifest.Related;
 
   serializeBinary(): Uint8Array;
@@ -125,21 +125,21 @@ export namespace DocumentManifest {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     masterIdentifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: DocumentManifest.StatusCode.AsObject,
     type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     created?: proto_r4_core_datatypes_pb.DateTime.AsObject,
-    authorList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    recipientList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    author: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    recipient: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     source?: proto_r4_core_datatypes_pb.Uri.AsObject,
     description?: proto_r4_core_datatypes_pb.String.AsObject,
-    contentList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    relatedList: Array<DocumentManifest.Related.AsObject>,
+    content: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    related: Array<DocumentManifest.Related.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -151,9 +151,9 @@ export namespace DocumentManifest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -170,7 +170,7 @@ export namespace DocumentManifest {
     export type AsObject = {
       value: proto_r4_core_codes_pb.DocumentReferenceStatusCode.ValueMap[keyof proto_r4_core_codes_pb.DocumentReferenceStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -180,14 +180,14 @@ export namespace DocumentManifest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasIdentifier(): boolean;
@@ -213,8 +213,8 @@ export namespace DocumentManifest {
   export namespace Related {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       identifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
       ref?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }

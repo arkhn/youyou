@@ -32,19 +32,19 @@ export class SubstanceSpecification extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasIdentifier(): boolean;
@@ -72,9 +72,9 @@ export class SubstanceSpecification extends jspb.Message {
   getDescription(): proto_r4_core_datatypes_pb.String | undefined;
   setDescription(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearSourceList(): void;
-  getSourceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSourceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSource(): void;
+  getSource(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSource(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSource(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasComment(): boolean;
@@ -82,14 +82,14 @@ export class SubstanceSpecification extends jspb.Message {
   getComment(): proto_r4_core_datatypes_pb.String | undefined;
   setComment(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearMoietyList(): void;
-  getMoietyList(): Array<SubstanceSpecification.Moiety>;
-  setMoietyList(value: Array<SubstanceSpecification.Moiety>): void;
+  clearMoiety(): void;
+  getMoiety(): Array<SubstanceSpecification.Moiety>;
+  setMoiety(value: Array<SubstanceSpecification.Moiety>): void;
   addMoiety(value?: SubstanceSpecification.Moiety, index?: number): SubstanceSpecification.Moiety;
 
-  clearPropertyList(): void;
-  getPropertyList(): Array<SubstanceSpecification.Property>;
-  setPropertyList(value: Array<SubstanceSpecification.Property>): void;
+  clearProperty(): void;
+  getProperty(): Array<SubstanceSpecification.Property>;
+  setProperty(value: Array<SubstanceSpecification.Property>): void;
   addProperty(value?: SubstanceSpecification.Property, index?: number): SubstanceSpecification.Property;
 
   hasReferenceInformation(): boolean;
@@ -102,24 +102,24 @@ export class SubstanceSpecification extends jspb.Message {
   getStructure(): SubstanceSpecification.Structure | undefined;
   setStructure(value?: SubstanceSpecification.Structure): void;
 
-  clearCodeList(): void;
-  getCodeList(): Array<SubstanceSpecification.CodeType>;
-  setCodeList(value: Array<SubstanceSpecification.CodeType>): void;
+  clearCode(): void;
+  getCode(): Array<SubstanceSpecification.CodeType>;
+  setCode(value: Array<SubstanceSpecification.CodeType>): void;
   addCode(value?: SubstanceSpecification.CodeType, index?: number): SubstanceSpecification.CodeType;
 
-  clearNameList(): void;
-  getNameList(): Array<SubstanceSpecification.Name>;
-  setNameList(value: Array<SubstanceSpecification.Name>): void;
+  clearName(): void;
+  getName(): Array<SubstanceSpecification.Name>;
+  setName(value: Array<SubstanceSpecification.Name>): void;
   addName(value?: SubstanceSpecification.Name, index?: number): SubstanceSpecification.Name;
 
-  clearMolecularWeightList(): void;
-  getMolecularWeightList(): Array<SubstanceSpecification.Structure.Isotope.MolecularWeight>;
-  setMolecularWeightList(value: Array<SubstanceSpecification.Structure.Isotope.MolecularWeight>): void;
+  clearMolecularWeight(): void;
+  getMolecularWeight(): Array<SubstanceSpecification.Structure.Isotope.MolecularWeight>;
+  setMolecularWeight(value: Array<SubstanceSpecification.Structure.Isotope.MolecularWeight>): void;
   addMolecularWeight(value?: SubstanceSpecification.Structure.Isotope.MolecularWeight, index?: number): SubstanceSpecification.Structure.Isotope.MolecularWeight;
 
-  clearRelationshipList(): void;
-  getRelationshipList(): Array<SubstanceSpecification.Relationship>;
-  setRelationshipList(value: Array<SubstanceSpecification.Relationship>): void;
+  clearRelationship(): void;
+  getRelationship(): Array<SubstanceSpecification.Relationship>;
+  setRelationship(value: Array<SubstanceSpecification.Relationship>): void;
   addRelationship(value?: SubstanceSpecification.Relationship, index?: number): SubstanceSpecification.Relationship;
 
   hasNucleicAcid(): boolean;
@@ -159,24 +159,24 @@ export namespace SubstanceSpecification {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     identifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
     type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     status?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     domain?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     description?: proto_r4_core_datatypes_pb.String.AsObject,
-    sourceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    source: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     comment?: proto_r4_core_datatypes_pb.String.AsObject,
-    moietyList: Array<SubstanceSpecification.Moiety.AsObject>,
-    propertyList: Array<SubstanceSpecification.Property.AsObject>,
+    moiety: Array<SubstanceSpecification.Moiety.AsObject>,
+    property: Array<SubstanceSpecification.Property.AsObject>,
     referenceInformation?: proto_r4_core_datatypes_pb.Reference.AsObject,
     structure?: SubstanceSpecification.Structure.AsObject,
-    codeList: Array<SubstanceSpecification.CodeType.AsObject>,
-    nameList: Array<SubstanceSpecification.Name.AsObject>,
-    molecularWeightList: Array<SubstanceSpecification.Structure.Isotope.MolecularWeight.AsObject>,
-    relationshipList: Array<SubstanceSpecification.Relationship.AsObject>,
+    code: Array<SubstanceSpecification.CodeType.AsObject>,
+    name: Array<SubstanceSpecification.Name.AsObject>,
+    molecularWeight: Array<SubstanceSpecification.Structure.Isotope.MolecularWeight.AsObject>,
+    relationship: Array<SubstanceSpecification.Relationship.AsObject>,
     nucleicAcid?: proto_r4_core_datatypes_pb.Reference.AsObject,
     polymer?: proto_r4_core_datatypes_pb.Reference.AsObject,
     protein?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -189,14 +189,14 @@ export namespace SubstanceSpecification {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasRole(): boolean;
@@ -247,8 +247,8 @@ export namespace SubstanceSpecification {
   export namespace Moiety {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       role?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       identifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
       name?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -300,14 +300,14 @@ export namespace SubstanceSpecification {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCategory(): boolean;
@@ -348,8 +348,8 @@ export namespace SubstanceSpecification {
   export namespace Property {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       parameters?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -434,14 +434,14 @@ export namespace SubstanceSpecification {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasStereochemistry(): boolean;
@@ -464,9 +464,9 @@ export namespace SubstanceSpecification {
     getMolecularFormulaByMoiety(): proto_r4_core_datatypes_pb.String | undefined;
     setMolecularFormulaByMoiety(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearIsotopeList(): void;
-    getIsotopeList(): Array<SubstanceSpecification.Structure.Isotope>;
-    setIsotopeList(value: Array<SubstanceSpecification.Structure.Isotope>): void;
+    clearIsotope(): void;
+    getIsotope(): Array<SubstanceSpecification.Structure.Isotope>;
+    setIsotope(value: Array<SubstanceSpecification.Structure.Isotope>): void;
     addIsotope(value?: SubstanceSpecification.Structure.Isotope, index?: number): SubstanceSpecification.Structure.Isotope;
 
     hasMolecularWeight(): boolean;
@@ -474,14 +474,14 @@ export namespace SubstanceSpecification {
     getMolecularWeight(): SubstanceSpecification.Structure.Isotope.MolecularWeight | undefined;
     setMolecularWeight(value?: SubstanceSpecification.Structure.Isotope.MolecularWeight): void;
 
-    clearSourceList(): void;
-    getSourceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setSourceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearSource(): void;
+    getSource(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setSource(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addSource(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-    clearRepresentationList(): void;
-    getRepresentationList(): Array<SubstanceSpecification.Structure.Representation>;
-    setRepresentationList(value: Array<SubstanceSpecification.Structure.Representation>): void;
+    clearRepresentation(): void;
+    getRepresentation(): Array<SubstanceSpecification.Structure.Representation>;
+    setRepresentation(value: Array<SubstanceSpecification.Structure.Representation>): void;
     addRepresentation(value?: SubstanceSpecification.Structure.Representation, index?: number): SubstanceSpecification.Structure.Representation;
 
     serializeBinary(): Uint8Array;
@@ -497,16 +497,16 @@ export namespace SubstanceSpecification {
   export namespace Structure {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       stereochemistry?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       opticalActivity?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       molecularFormula?: proto_r4_core_datatypes_pb.String.AsObject,
       molecularFormulaByMoiety?: proto_r4_core_datatypes_pb.String.AsObject,
-      isotopeList: Array<SubstanceSpecification.Structure.Isotope.AsObject>,
+      isotope: Array<SubstanceSpecification.Structure.Isotope.AsObject>,
       molecularWeight?: SubstanceSpecification.Structure.Isotope.MolecularWeight.AsObject,
-      sourceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-      representationList: Array<SubstanceSpecification.Structure.Representation.AsObject>,
+      source: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      representation: Array<SubstanceSpecification.Structure.Representation.AsObject>,
     }
 
     export class Isotope extends jspb.Message {
@@ -515,14 +515,14 @@ export namespace SubstanceSpecification {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasIdentifier(): boolean;
@@ -563,8 +563,8 @@ export namespace SubstanceSpecification {
     export namespace Isotope {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         identifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
         name?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         substitution?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -578,14 +578,14 @@ export namespace SubstanceSpecification {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         hasMethod(): boolean;
@@ -616,8 +616,8 @@ export namespace SubstanceSpecification {
       export namespace MolecularWeight {
         export type AsObject = {
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
           method?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
           type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
           amount?: proto_r4_core_datatypes_pb.Quantity.AsObject,
@@ -631,14 +631,14 @@ export namespace SubstanceSpecification {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasType(): boolean;
@@ -669,8 +669,8 @@ export namespace SubstanceSpecification {
     export namespace Representation {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         representation?: proto_r4_core_datatypes_pb.String.AsObject,
         attachment?: proto_r4_core_datatypes_pb.Attachment.AsObject,
@@ -684,14 +684,14 @@ export namespace SubstanceSpecification {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -714,9 +714,9 @@ export namespace SubstanceSpecification {
     getComment(): proto_r4_core_datatypes_pb.String | undefined;
     setComment(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearSourceList(): void;
-    getSourceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setSourceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearSource(): void;
+    getSource(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setSource(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addSource(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     serializeBinary(): Uint8Array;
@@ -732,13 +732,13 @@ export namespace SubstanceSpecification {
   export namespace CodeType {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       status?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       statusDate?: proto_r4_core_datatypes_pb.DateTime.AsObject,
       comment?: proto_r4_core_datatypes_pb.String.AsObject,
-      sourceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      source: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     }
   }
 
@@ -748,14 +748,14 @@ export namespace SubstanceSpecification {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasName(): boolean;
@@ -778,39 +778,39 @@ export namespace SubstanceSpecification {
     getPreferred(): proto_r4_core_datatypes_pb.Boolean | undefined;
     setPreferred(value?: proto_r4_core_datatypes_pb.Boolean): void;
 
-    clearLanguageList(): void;
-    getLanguageList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setLanguageList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearLanguage(): void;
+    getLanguage(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setLanguage(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addLanguage(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearDomainList(): void;
-    getDomainList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setDomainList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearDomain(): void;
+    getDomain(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setDomain(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addDomain(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearJurisdictionList(): void;
-    getJurisdictionList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setJurisdictionList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearJurisdiction(): void;
+    getJurisdiction(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setJurisdiction(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addJurisdiction(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearSynonymList(): void;
-    getSynonymList(): Array<SubstanceSpecification.Name>;
-    setSynonymList(value: Array<SubstanceSpecification.Name>): void;
+    clearSynonym(): void;
+    getSynonym(): Array<SubstanceSpecification.Name>;
+    setSynonym(value: Array<SubstanceSpecification.Name>): void;
     addSynonym(value?: SubstanceSpecification.Name, index?: number): SubstanceSpecification.Name;
 
-    clearTranslationList(): void;
-    getTranslationList(): Array<SubstanceSpecification.Name>;
-    setTranslationList(value: Array<SubstanceSpecification.Name>): void;
+    clearTranslation(): void;
+    getTranslation(): Array<SubstanceSpecification.Name>;
+    setTranslation(value: Array<SubstanceSpecification.Name>): void;
     addTranslation(value?: SubstanceSpecification.Name, index?: number): SubstanceSpecification.Name;
 
-    clearOfficialList(): void;
-    getOfficialList(): Array<SubstanceSpecification.Name.Official>;
-    setOfficialList(value: Array<SubstanceSpecification.Name.Official>): void;
+    clearOfficial(): void;
+    getOfficial(): Array<SubstanceSpecification.Name.Official>;
+    setOfficial(value: Array<SubstanceSpecification.Name.Official>): void;
     addOfficial(value?: SubstanceSpecification.Name.Official, index?: number): SubstanceSpecification.Name.Official;
 
-    clearSourceList(): void;
-    getSourceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setSourceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearSource(): void;
+    getSource(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setSource(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addSource(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     serializeBinary(): Uint8Array;
@@ -826,19 +826,19 @@ export namespace SubstanceSpecification {
   export namespace Name {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       name?: proto_r4_core_datatypes_pb.String.AsObject,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       status?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       preferred?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-      languageList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      domainList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      jurisdictionList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      synonymList: Array<SubstanceSpecification.Name.AsObject>,
-      translationList: Array<SubstanceSpecification.Name.AsObject>,
-      officialList: Array<SubstanceSpecification.Name.Official.AsObject>,
-      sourceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      language: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      domain: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      jurisdiction: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      synonym: Array<SubstanceSpecification.Name.AsObject>,
+      translation: Array<SubstanceSpecification.Name.AsObject>,
+      official: Array<SubstanceSpecification.Name.Official.AsObject>,
+      source: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     }
 
     export class Official extends jspb.Message {
@@ -847,14 +847,14 @@ export namespace SubstanceSpecification {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasAuthority(): boolean;
@@ -885,8 +885,8 @@ export namespace SubstanceSpecification {
     export namespace Official {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         authority?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         status?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
@@ -900,14 +900,14 @@ export namespace SubstanceSpecification {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSubstance(): boolean;
@@ -940,9 +940,9 @@ export namespace SubstanceSpecification {
     getAmountType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setAmountType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearSourceList(): void;
-    getSourceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setSourceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearSource(): void;
+    getSource(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setSource(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addSource(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     serializeBinary(): Uint8Array;
@@ -958,15 +958,15 @@ export namespace SubstanceSpecification {
   export namespace Relationship {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       substance?: SubstanceSpecification.Relationship.SubstanceX.AsObject,
       relationship?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       isDefining?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       amount?: SubstanceSpecification.Relationship.AmountX.AsObject,
       amountRatioLowLimit?: proto_r4_core_datatypes_pb.Ratio.AsObject,
       amountType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      sourceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      source: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     }
 
     export class SubstanceX extends jspb.Message {

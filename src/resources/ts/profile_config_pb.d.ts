@@ -109,9 +109,9 @@ export namespace PackageInfo {
 }
 
 export class Profiles extends jspb.Message {
-  clearProfileList(): void;
-  getProfileList(): Array<Profile>;
-  setProfileList(value: Array<Profile>): void;
+  clearProfile(): void;
+  getProfile(): Array<Profile>;
+  setProfile(value: Array<Profile>): void;
   addProfile(value?: Profile, index?: number): Profile;
 
   serializeBinary(): Uint8Array;
@@ -126,19 +126,19 @@ export class Profiles extends jspb.Message {
 
 export namespace Profiles {
   export type AsObject = {
-    profileList: Array<Profile.AsObject>,
+    profile: Array<Profile.AsObject>,
   }
 }
 
 export class Extensions extends jspb.Message {
-  clearSimpleExtensionList(): void;
-  getSimpleExtensionList(): Array<SimpleExtension>;
-  setSimpleExtensionList(value: Array<SimpleExtension>): void;
+  clearSimpleExtension(): void;
+  getSimpleExtension(): Array<SimpleExtension>;
+  setSimpleExtension(value: Array<SimpleExtension>): void;
   addSimpleExtension(value?: SimpleExtension, index?: number): SimpleExtension;
 
-  clearComplexExtensionList(): void;
-  getComplexExtensionList(): Array<ComplexExtension>;
-  setComplexExtensionList(value: Array<ComplexExtension>): void;
+  clearComplexExtension(): void;
+  getComplexExtension(): Array<ComplexExtension>;
+  setComplexExtension(value: Array<ComplexExtension>): void;
   addComplexExtension(value?: ComplexExtension, index?: number): ComplexExtension;
 
   serializeBinary(): Uint8Array;
@@ -153,20 +153,20 @@ export class Extensions extends jspb.Message {
 
 export namespace Extensions {
   export type AsObject = {
-    simpleExtensionList: Array<SimpleExtension.AsObject>,
-    complexExtensionList: Array<ComplexExtension.AsObject>,
+    simpleExtension: Array<SimpleExtension.AsObject>,
+    complexExtension: Array<ComplexExtension.AsObject>,
   }
 }
 
 export class Terminologies extends jspb.Message {
-  clearCodeSystemList(): void;
-  getCodeSystemList(): Array<CodeSystemConfig>;
-  setCodeSystemList(value: Array<CodeSystemConfig>): void;
+  clearCodeSystem(): void;
+  getCodeSystem(): Array<CodeSystemConfig>;
+  setCodeSystem(value: Array<CodeSystemConfig>): void;
   addCodeSystem(value?: CodeSystemConfig, index?: number): CodeSystemConfig;
 
-  clearValueSetList(): void;
-  getValueSetList(): Array<ValueSetConfig>;
-  setValueSetList(value: Array<ValueSetConfig>): void;
+  clearValueSet(): void;
+  getValueSet(): Array<ValueSetConfig>;
+  setValueSet(value: Array<ValueSetConfig>): void;
   addValueSet(value?: ValueSetConfig, index?: number): ValueSetConfig;
 
   serializeBinary(): Uint8Array;
@@ -181,8 +181,8 @@ export class Terminologies extends jspb.Message {
 
 export namespace Terminologies {
   export type AsObject = {
-    codeSystemList: Array<CodeSystemConfig.AsObject>,
-    valueSetList: Array<ValueSetConfig.AsObject>,
+    codeSystem: Array<CodeSystemConfig.AsObject>,
+    valueSet: Array<ValueSetConfig.AsObject>,
   }
 }
 
@@ -195,19 +195,19 @@ export class Profile extends jspb.Message {
   getBaseUrl(): string;
   setBaseUrl(value: string): void;
 
-  clearRestrictionList(): void;
-  getRestrictionList(): Array<FieldRestriction>;
-  setRestrictionList(value: Array<FieldRestriction>): void;
+  clearRestriction(): void;
+  getRestriction(): Array<FieldRestriction>;
+  setRestriction(value: Array<FieldRestriction>): void;
   addRestriction(value?: FieldRestriction, index?: number): FieldRestriction;
 
-  clearExtensionSliceList(): void;
-  getExtensionSliceList(): Array<ExtensionSlice>;
-  setExtensionSliceList(value: Array<ExtensionSlice>): void;
+  clearExtensionSlice(): void;
+  getExtensionSlice(): Array<ExtensionSlice>;
+  setExtensionSlice(value: Array<ExtensionSlice>): void;
   addExtensionSlice(value?: ExtensionSlice, index?: number): ExtensionSlice;
 
-  clearCodeableConceptSliceList(): void;
-  getCodeableConceptSliceList(): Array<CodeableConceptSlice>;
-  setCodeableConceptSliceList(value: Array<CodeableConceptSlice>): void;
+  clearCodeableConceptSlice(): void;
+  getCodeableConceptSlice(): Array<CodeableConceptSlice>;
+  setCodeableConceptSlice(value: Array<CodeableConceptSlice>): void;
   addCodeableConceptSlice(value?: CodeableConceptSlice, index?: number): CodeableConceptSlice;
 
   serializeBinary(): Uint8Array;
@@ -224,9 +224,9 @@ export namespace Profile {
   export type AsObject = {
     elementData?: ElementData.AsObject,
     baseUrl: string,
-    restrictionList: Array<FieldRestriction.AsObject>,
-    extensionSliceList: Array<ExtensionSlice.AsObject>,
-    codeableConceptSliceList: Array<CodeableConceptSlice.AsObject>,
+    restriction: Array<FieldRestriction.AsObject>,
+    extensionSlice: Array<ExtensionSlice.AsObject>,
+    codeableConceptSlice: Array<CodeableConceptSlice.AsObject>,
   }
 }
 
@@ -247,9 +247,9 @@ export class FieldRestriction extends jspb.Message {
   getChoiceTypeRestriction(): ChoiceTypeRestriction | undefined;
   setChoiceTypeRestriction(value?: ChoiceTypeRestriction): void;
 
-  clearFhirPathConstraintList(): void;
-  getFhirPathConstraintList(): Array<FhirPathConstraint>;
-  setFhirPathConstraintList(value: Array<FhirPathConstraint>): void;
+  clearFhirPathConstraint(): void;
+  getFhirPathConstraint(): Array<FhirPathConstraint>;
+  setFhirPathConstraint(value: Array<FhirPathConstraint>): void;
   addFhirPathConstraint(value?: FhirPathConstraint, index?: number): FhirPathConstraint;
 
   serializeBinary(): Uint8Array;
@@ -268,14 +268,14 @@ export namespace FieldRestriction {
     sizeRestriction: SizeRestrictionMap[keyof SizeRestrictionMap],
     referenceRestriction?: ReferenceRestriction.AsObject,
     choiceTypeRestriction?: ChoiceTypeRestriction.AsObject,
-    fhirPathConstraintList: Array<FhirPathConstraint.AsObject>,
+    fhirPathConstraint: Array<FhirPathConstraint.AsObject>,
   }
 }
 
 export class ReferenceRestriction extends jspb.Message {
-  clearAllowedList(): void;
-  getAllowedList(): Array<string>;
-  setAllowedList(value: Array<string>): void;
+  clearAllowed(): void;
+  getAllowed(): Array<string>;
+  setAllowed(value: Array<string>): void;
   addAllowed(value: string, index?: number): string;
 
   serializeBinary(): Uint8Array;
@@ -290,14 +290,14 @@ export class ReferenceRestriction extends jspb.Message {
 
 export namespace ReferenceRestriction {
   export type AsObject = {
-    allowedList: Array<string>,
+    allowed: Array<string>,
   }
 }
 
 export class ChoiceTypeRestriction extends jspb.Message {
-  clearAllowedList(): void;
-  getAllowedList(): Array<string>;
-  setAllowedList(value: Array<string>): void;
+  clearAllowed(): void;
+  getAllowed(): Array<string>;
+  setAllowed(value: Array<string>): void;
   addAllowed(value: string, index?: number): string;
 
   serializeBinary(): Uint8Array;
@@ -312,7 +312,7 @@ export class ChoiceTypeRestriction extends jspb.Message {
 
 export namespace ChoiceTypeRestriction {
   export type AsObject = {
-    allowedList: Array<string>,
+    allowed: Array<string>,
   }
 }
 
@@ -386,9 +386,9 @@ export class CodeableConceptSlice extends jspb.Message {
   getFieldId(): string;
   setFieldId(value: string): void;
 
-  clearCodingSliceList(): void;
-  getCodingSliceList(): Array<CodeableConceptSlice.CodingSlice>;
-  setCodingSliceList(value: Array<CodeableConceptSlice.CodingSlice>): void;
+  clearCodingSlice(): void;
+  getCodingSlice(): Array<CodeableConceptSlice.CodingSlice>;
+  setCodingSlice(value: Array<CodeableConceptSlice.CodingSlice>): void;
   addCodingSlice(value?: CodeableConceptSlice.CodingSlice, index?: number): CodeableConceptSlice.CodingSlice;
 
   getRules(): proto_r4_core_codes_pb.SlicingRulesCode.ValueMap[keyof proto_r4_core_codes_pb.SlicingRulesCode.ValueMap];
@@ -407,7 +407,7 @@ export class CodeableConceptSlice extends jspb.Message {
 export namespace CodeableConceptSlice {
   export type AsObject = {
     fieldId: string,
-    codingSliceList: Array<CodeableConceptSlice.CodingSlice.AsObject>,
+    codingSlice: Array<CodeableConceptSlice.CodingSlice.AsObject>,
     rules: proto_r4_core_codes_pb.SlicingRulesCode.ValueMap[keyof proto_r4_core_codes_pb.SlicingRulesCode.ValueMap],
   }
 
@@ -449,14 +449,14 @@ export class ComplexExtension extends jspb.Message {
   getCanHaveAdditionalExtensions(): boolean;
   setCanHaveAdditionalExtensions(value: boolean): void;
 
-  clearSimpleFieldList(): void;
-  getSimpleFieldList(): Array<SimpleExtension>;
-  setSimpleFieldList(value: Array<SimpleExtension>): void;
+  clearSimpleField(): void;
+  getSimpleField(): Array<SimpleExtension>;
+  setSimpleField(value: Array<SimpleExtension>): void;
   addSimpleField(value?: SimpleExtension, index?: number): SimpleExtension;
 
-  clearComplexFieldList(): void;
-  getComplexFieldList(): Array<ComplexExtension>;
-  setComplexFieldList(value: Array<ComplexExtension>): void;
+  clearComplexField(): void;
+  getComplexField(): Array<ComplexExtension>;
+  setComplexField(value: Array<ComplexExtension>): void;
   addComplexField(value?: ComplexExtension, index?: number): ComplexExtension;
 
   serializeBinary(): Uint8Array;
@@ -473,8 +473,8 @@ export namespace ComplexExtension {
   export type AsObject = {
     elementData?: ElementData.AsObject,
     canHaveAdditionalExtensions: boolean,
-    simpleFieldList: Array<SimpleExtension.AsObject>,
-    complexFieldList: Array<ComplexExtension.AsObject>,
+    simpleField: Array<SimpleExtension.AsObject>,
+    complexField: Array<ComplexExtension.AsObject>,
   }
 }
 
@@ -484,9 +484,9 @@ export class SimpleExtension extends jspb.Message {
   getElementData(): ElementData | undefined;
   setElementData(value?: ElementData): void;
 
-  clearTypeList(): void;
-  getTypeList(): Array<string>;
-  setTypeList(value: Array<string>): void;
+  clearType(): void;
+  getType(): Array<string>;
+  setType(value: Array<string>): void;
   addType(value: string, index?: number): string;
 
   hasCodeType(): boolean;
@@ -510,7 +510,7 @@ export class SimpleExtension extends jspb.Message {
 export namespace SimpleExtension {
   export type AsObject = {
     elementData?: ElementData.AsObject,
-    typeList: Array<string>,
+    type: Array<string>,
     codeType?: CodeData.AsObject,
     canHaveExtensions: boolean,
   }
@@ -597,9 +597,9 @@ export class CodeSystemConfig extends jspb.Message {
   getUrlOverride(): string;
   setUrlOverride(value: string): void;
 
-  clearConceptList(): void;
-  getConceptList(): Array<CodeSystemConfig.Concept>;
-  setConceptList(value: Array<CodeSystemConfig.Concept>): void;
+  clearConcept(): void;
+  getConcept(): Array<CodeSystemConfig.Concept>;
+  setConcept(value: Array<CodeSystemConfig.Concept>): void;
   addConcept(value?: CodeSystemConfig.Concept, index?: number): CodeSystemConfig.Concept;
 
   serializeBinary(): Uint8Array;
@@ -618,7 +618,7 @@ export namespace CodeSystemConfig {
     status: proto_r4_core_codes_pb.PublicationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.PublicationStatusCode.ValueMap],
     description: string,
     urlOverride: string,
-    conceptList: Array<CodeSystemConfig.Concept.AsObject>,
+    concept: Array<CodeSystemConfig.Concept.AsObject>,
   }
 
   export class Concept extends jspb.Message {
@@ -663,9 +663,9 @@ export class ValueSetConfig extends jspb.Message {
   getUrlOverride(): string;
   setUrlOverride(value: string): void;
 
-  clearSystemList(): void;
-  getSystemList(): Array<ValueSetConfig.System>;
-  setSystemList(value: Array<ValueSetConfig.System>): void;
+  clearSystem(): void;
+  getSystem(): Array<ValueSetConfig.System>;
+  setSystem(value: Array<ValueSetConfig.System>): void;
   addSystem(value?: ValueSetConfig.System, index?: number): ValueSetConfig.System;
 
   serializeBinary(): Uint8Array;
@@ -684,21 +684,21 @@ export namespace ValueSetConfig {
     status: proto_r4_core_codes_pb.PublicationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.PublicationStatusCode.ValueMap],
     description: string,
     urlOverride: string,
-    systemList: Array<ValueSetConfig.System.AsObject>,
+    system: Array<ValueSetConfig.System.AsObject>,
   }
 
   export class System extends jspb.Message {
     getUrl(): string;
     setUrl(value: string): void;
 
-    clearIncludeList(): void;
-    getIncludeList(): Array<string>;
-    setIncludeList(value: Array<string>): void;
+    clearInclude(): void;
+    getInclude(): Array<string>;
+    setInclude(value: Array<string>): void;
     addInclude(value: string, index?: number): string;
 
-    clearExcludeList(): void;
-    getExcludeList(): Array<string>;
-    setExcludeList(value: Array<string>): void;
+    clearExclude(): void;
+    getExclude(): Array<string>;
+    setExclude(value: Array<string>): void;
     addExclude(value: string, index?: number): string;
 
     serializeBinary(): Uint8Array;
@@ -714,8 +714,8 @@ export namespace ValueSetConfig {
   export namespace System {
     export type AsObject = {
       url: string,
-      includeList: Array<string>,
-      excludeList: Array<string>,
+      include: Array<string>,
+      exclude: Array<string>,
     }
   }
 }

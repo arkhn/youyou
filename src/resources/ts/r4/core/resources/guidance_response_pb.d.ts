@@ -33,19 +33,19 @@ export class GuidanceResponse extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasRequestIdentifier(): boolean;
@@ -53,9 +53,9 @@ export class GuidanceResponse extends jspb.Message {
   getRequestIdentifier(): proto_r4_core_datatypes_pb.Identifier | undefined;
   setRequestIdentifier(value?: proto_r4_core_datatypes_pb.Identifier): void;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasModule(): boolean;
@@ -88,24 +88,24 @@ export class GuidanceResponse extends jspb.Message {
   getPerformer(): proto_r4_core_datatypes_pb.Reference | undefined;
   setPerformer(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearEvaluationMessageList(): void;
-  getEvaluationMessageList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setEvaluationMessageList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearEvaluationMessage(): void;
+  getEvaluationMessage(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setEvaluationMessage(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addEvaluationMessage(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasOutputParameters(): boolean;
@@ -118,9 +118,9 @@ export class GuidanceResponse extends jspb.Message {
   getResult(): proto_r4_core_datatypes_pb.Reference | undefined;
   setResult(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearDataRequirementList(): void;
-  getDataRequirementList(): Array<proto_r4_core_datatypes_pb.DataRequirement>;
-  setDataRequirementList(value: Array<proto_r4_core_datatypes_pb.DataRequirement>): void;
+  clearDataRequirement(): void;
+  getDataRequirement(): Array<proto_r4_core_datatypes_pb.DataRequirement>;
+  setDataRequirement(value: Array<proto_r4_core_datatypes_pb.DataRequirement>): void;
   addDataRequirement(value?: proto_r4_core_datatypes_pb.DataRequirement, index?: number): proto_r4_core_datatypes_pb.DataRequirement;
 
   serializeBinary(): Uint8Array;
@@ -140,24 +140,24 @@ export namespace GuidanceResponse {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     requestIdentifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     module?: GuidanceResponse.ModuleX.AsObject,
     status?: GuidanceResponse.StatusCode.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     occurrenceDateTime?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     performer?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    evaluationMessageList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    evaluationMessage: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     outputParameters?: proto_r4_core_datatypes_pb.Reference.AsObject,
     result?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    dataRequirementList: Array<proto_r4_core_datatypes_pb.DataRequirement.AsObject>,
+    dataRequirement: Array<proto_r4_core_datatypes_pb.DataRequirement.AsObject>,
   }
 
   export class ModuleX extends jspb.Message {
@@ -211,9 +211,9 @@ export namespace GuidanceResponse {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -230,7 +230,7 @@ export namespace GuidanceResponse {
     export type AsObject = {
       value: proto_r4_core_codes_pb.GuidanceResponseStatusCode.ValueMap[keyof proto_r4_core_codes_pb.GuidanceResponseStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 }

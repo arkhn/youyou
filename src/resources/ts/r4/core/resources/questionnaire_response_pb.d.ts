@@ -33,19 +33,19 @@ export class QuestionnaireResponse extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasIdentifier(): boolean;
@@ -53,14 +53,14 @@ export class QuestionnaireResponse extends jspb.Message {
   getIdentifier(): proto_r4_core_datatypes_pb.Identifier | undefined;
   setIdentifier(value?: proto_r4_core_datatypes_pb.Identifier): void;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearPartOfList(): void;
-  getPartOfList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPartOfList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPartOf(): void;
+  getPartOf(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPartOf(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPartOf(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasQuestionnaire(): boolean;
@@ -98,9 +98,9 @@ export class QuestionnaireResponse extends jspb.Message {
   getSource(): proto_r4_core_datatypes_pb.Reference | undefined;
   setSource(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearItemList(): void;
-  getItemList(): Array<QuestionnaireResponse.Item>;
-  setItemList(value: Array<QuestionnaireResponse.Item>): void;
+  clearItem(): void;
+  getItem(): Array<QuestionnaireResponse.Item>;
+  setItem(value: Array<QuestionnaireResponse.Item>): void;
   addItem(value?: QuestionnaireResponse.Item, index?: number): QuestionnaireResponse.Item;
 
   serializeBinary(): Uint8Array;
@@ -120,12 +120,12 @@ export namespace QuestionnaireResponse {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     identifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    partOfList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    partOf: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     questionnaire?: proto_r4_core_datatypes_pb.Canonical.AsObject,
     status?: QuestionnaireResponse.StatusCode.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -133,7 +133,7 @@ export namespace QuestionnaireResponse {
     authored?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     author?: proto_r4_core_datatypes_pb.Reference.AsObject,
     source?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    itemList: Array<QuestionnaireResponse.Item.AsObject>,
+    item: Array<QuestionnaireResponse.Item.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -145,9 +145,9 @@ export namespace QuestionnaireResponse {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -164,7 +164,7 @@ export namespace QuestionnaireResponse {
     export type AsObject = {
       value: proto_r4_core_codes_pb.QuestionnaireResponseStatusCode.ValueMap[keyof proto_r4_core_codes_pb.QuestionnaireResponseStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -174,14 +174,14 @@ export namespace QuestionnaireResponse {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasLinkId(): boolean;
@@ -199,14 +199,14 @@ export namespace QuestionnaireResponse {
     getText(): proto_r4_core_datatypes_pb.String | undefined;
     setText(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearAnswerList(): void;
-    getAnswerList(): Array<QuestionnaireResponse.Item.Answer>;
-    setAnswerList(value: Array<QuestionnaireResponse.Item.Answer>): void;
+    clearAnswer(): void;
+    getAnswer(): Array<QuestionnaireResponse.Item.Answer>;
+    setAnswer(value: Array<QuestionnaireResponse.Item.Answer>): void;
     addAnswer(value?: QuestionnaireResponse.Item.Answer, index?: number): QuestionnaireResponse.Item.Answer;
 
-    clearItemList(): void;
-    getItemList(): Array<QuestionnaireResponse.Item>;
-    setItemList(value: Array<QuestionnaireResponse.Item>): void;
+    clearItem(): void;
+    getItem(): Array<QuestionnaireResponse.Item>;
+    setItem(value: Array<QuestionnaireResponse.Item>): void;
     addItem(value?: QuestionnaireResponse.Item, index?: number): QuestionnaireResponse.Item;
 
     serializeBinary(): Uint8Array;
@@ -222,13 +222,13 @@ export namespace QuestionnaireResponse {
   export namespace Item {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       linkId?: proto_r4_core_datatypes_pb.String.AsObject,
       definition?: proto_r4_core_datatypes_pb.Uri.AsObject,
       text?: proto_r4_core_datatypes_pb.String.AsObject,
-      answerList: Array<QuestionnaireResponse.Item.Answer.AsObject>,
-      itemList: Array<QuestionnaireResponse.Item.AsObject>,
+      answer: Array<QuestionnaireResponse.Item.Answer.AsObject>,
+      item: Array<QuestionnaireResponse.Item.AsObject>,
     }
 
     export class Answer extends jspb.Message {
@@ -237,14 +237,14 @@ export namespace QuestionnaireResponse {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasValue(): boolean;
@@ -252,9 +252,9 @@ export namespace QuestionnaireResponse {
       getValue(): QuestionnaireResponse.Item.Answer.ValueX | undefined;
       setValue(value?: QuestionnaireResponse.Item.Answer.ValueX): void;
 
-      clearItemList(): void;
-      getItemList(): Array<QuestionnaireResponse.Item>;
-      setItemList(value: Array<QuestionnaireResponse.Item>): void;
+      clearItem(): void;
+      getItem(): Array<QuestionnaireResponse.Item>;
+      setItem(value: Array<QuestionnaireResponse.Item>): void;
       addItem(value?: QuestionnaireResponse.Item, index?: number): QuestionnaireResponse.Item;
 
       serializeBinary(): Uint8Array;
@@ -270,10 +270,10 @@ export namespace QuestionnaireResponse {
     export namespace Answer {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         value?: QuestionnaireResponse.Item.Answer.ValueX.AsObject,
-        itemList: Array<QuestionnaireResponse.Item.AsObject>,
+        item: Array<QuestionnaireResponse.Item.AsObject>,
       }
 
       export class ValueX extends jspb.Message {

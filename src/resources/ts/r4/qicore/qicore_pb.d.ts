@@ -38,19 +38,19 @@ export class QICoreAdverseEvent extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasIdentifier(): boolean;
@@ -63,9 +63,9 @@ export class QICoreAdverseEvent extends jspb.Message {
   getActuality(): QICoreAdverseEvent.ActualityCode | undefined;
   setActuality(value?: QICoreAdverseEvent.ActualityCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasEvent(): boolean;
@@ -98,9 +98,9 @@ export class QICoreAdverseEvent extends jspb.Message {
   getRecordedDate(): proto_r4_core_datatypes_pb.DateTime | undefined;
   setRecordedDate(value?: proto_r4_core_datatypes_pb.DateTime): void;
 
-  clearResultingConditionList(): void;
-  getResultingConditionList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setResultingConditionList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearResultingCondition(): void;
+  getResultingCondition(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setResultingCondition(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addResultingCondition(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasLocation(): boolean;
@@ -128,29 +128,29 @@ export class QICoreAdverseEvent extends jspb.Message {
   getRecorder(): proto_r4_core_datatypes_pb.Reference | undefined;
   setRecorder(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearContributorList(): void;
-  getContributorList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setContributorList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearContributor(): void;
+  getContributor(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setContributor(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addContributor(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearSuspectEntityList(): void;
-  getSuspectEntityList(): Array<QICoreAdverseEvent.SuspectEntity>;
-  setSuspectEntityList(value: Array<QICoreAdverseEvent.SuspectEntity>): void;
+  clearSuspectEntity(): void;
+  getSuspectEntity(): Array<QICoreAdverseEvent.SuspectEntity>;
+  setSuspectEntity(value: Array<QICoreAdverseEvent.SuspectEntity>): void;
   addSuspectEntity(value?: QICoreAdverseEvent.SuspectEntity, index?: number): QICoreAdverseEvent.SuspectEntity;
 
-  clearSubjectMedicalHistoryList(): void;
-  getSubjectMedicalHistoryList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSubjectMedicalHistoryList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSubjectMedicalHistory(): void;
+  getSubjectMedicalHistory(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSubjectMedicalHistory(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSubjectMedicalHistory(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearReferenceDocumentList(): void;
-  getReferenceDocumentList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReferenceDocumentList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReferenceDocument(): void;
+  getReferenceDocument(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReferenceDocument(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReferenceDocument(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearStudyList(): void;
-  getStudyList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setStudyList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearStudy(): void;
+  getStudy(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setStudy(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addStudy(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -170,29 +170,29 @@ export namespace QICoreAdverseEvent {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     identifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
     actuality?: QICoreAdverseEvent.ActualityCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     event?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     detected?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     recordedDate?: proto_r4_core_datatypes_pb.DateTime.AsObject,
-    resultingConditionList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    resultingCondition: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     location?: proto_r4_core_datatypes_pb.Reference.AsObject,
     seriousness?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     severity?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     outcome?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     recorder?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    contributorList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    suspectEntityList: Array<QICoreAdverseEvent.SuspectEntity.AsObject>,
-    subjectMedicalHistoryList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    referenceDocumentList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    studyList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contributor: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    suspectEntity: Array<QICoreAdverseEvent.SuspectEntity.AsObject>,
+    subjectMedicalHistory: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    referenceDocument: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    study: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class ActualityCode extends jspb.Message {
@@ -204,9 +204,9 @@ export namespace QICoreAdverseEvent {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -223,7 +223,7 @@ export namespace QICoreAdverseEvent {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AdverseEventActualityCode.ValueMap[keyof proto_r4_core_codes_pb.AdverseEventActualityCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -233,14 +233,14 @@ export namespace QICoreAdverseEvent {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasInstance(): boolean;
@@ -266,8 +266,8 @@ export namespace QICoreAdverseEvent {
   export namespace SuspectEntity {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       instance?: proto_r4_core_datatypes_pb.Reference.AsObject,
       causality?: QICoreAdverseEvent.SuspectEntity.Causality.AsObject,
     }
@@ -278,14 +278,14 @@ export namespace QICoreAdverseEvent {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasAssessment(): boolean;
@@ -321,8 +321,8 @@ export namespace QICoreAdverseEvent {
     export namespace Causality {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         assessment?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         productRelatedness?: proto_r4_core_datatypes_pb.String.AsObject,
         author?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -358,24 +358,24 @@ export class QICoreAllergyIntolerance extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasClinicalStatus(): boolean;
@@ -393,9 +393,9 @@ export class QICoreAllergyIntolerance extends jspb.Message {
   getType(): QICoreAllergyIntolerance.TypeCode | undefined;
   setType(value?: QICoreAllergyIntolerance.TypeCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<QICoreAllergyIntolerance.CategoryCode>;
-  setCategoryList(value: Array<QICoreAllergyIntolerance.CategoryCode>): void;
+  clearCategory(): void;
+  getCategory(): Array<QICoreAllergyIntolerance.CategoryCode>;
+  setCategory(value: Array<QICoreAllergyIntolerance.CategoryCode>): void;
   addCategory(value?: QICoreAllergyIntolerance.CategoryCode, index?: number): QICoreAllergyIntolerance.CategoryCode;
 
   hasCriticality(): boolean;
@@ -443,14 +443,14 @@ export class QICoreAllergyIntolerance extends jspb.Message {
   getLastOccurrence(): proto_r4_core_datatypes_pb.DateTime | undefined;
   setLastOccurrence(value?: proto_r4_core_datatypes_pb.DateTime): void;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearReactionList(): void;
-  getReactionList(): Array<QICoreAllergyIntolerance.Reaction>;
-  setReactionList(value: Array<QICoreAllergyIntolerance.Reaction>): void;
+  clearReaction(): void;
+  getReaction(): Array<QICoreAllergyIntolerance.Reaction>;
+  setReaction(value: Array<QICoreAllergyIntolerance.Reaction>): void;
   addReaction(value?: QICoreAllergyIntolerance.Reaction, index?: number): QICoreAllergyIntolerance.Reaction;
 
   hasResolutionAge(): boolean;
@@ -480,14 +480,14 @@ export namespace QICoreAllergyIntolerance {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     clinicalStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     verificationStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     type?: QICoreAllergyIntolerance.TypeCode.AsObject,
-    categoryList: Array<QICoreAllergyIntolerance.CategoryCode.AsObject>,
+    category: Array<QICoreAllergyIntolerance.CategoryCode.AsObject>,
     criticality?: QICoreAllergyIntolerance.CriticalityCode.AsObject,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     patient?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -497,8 +497,8 @@ export namespace QICoreAllergyIntolerance {
     recorder?: proto_r4_core_datatypes_pb.Reference.AsObject,
     asserter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     lastOccurrence?: proto_r4_core_datatypes_pb.DateTime.AsObject,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    reactionList: Array<QICoreAllergyIntolerance.Reaction.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    reaction: Array<QICoreAllergyIntolerance.Reaction.AsObject>,
     resolutionAge?: proto_r4_core_datatypes_pb.Age.AsObject,
     reasonRefuted?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
   }
@@ -512,9 +512,9 @@ export namespace QICoreAllergyIntolerance {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -531,7 +531,7 @@ export namespace QICoreAllergyIntolerance {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AllergyIntoleranceTypeCode.ValueMap[keyof proto_r4_core_codes_pb.AllergyIntoleranceTypeCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -544,9 +544,9 @@ export namespace QICoreAllergyIntolerance {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -563,7 +563,7 @@ export namespace QICoreAllergyIntolerance {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AllergyIntoleranceCategoryCode.ValueMap[keyof proto_r4_core_codes_pb.AllergyIntoleranceCategoryCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -576,9 +576,9 @@ export namespace QICoreAllergyIntolerance {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -595,7 +595,7 @@ export namespace QICoreAllergyIntolerance {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AllergyIntoleranceCriticalityCode.ValueMap[keyof proto_r4_core_codes_pb.AllergyIntoleranceCriticalityCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -654,14 +654,14 @@ export namespace QICoreAllergyIntolerance {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSubstance(): boolean;
@@ -669,9 +669,9 @@ export namespace QICoreAllergyIntolerance {
     getSubstance(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setSubstance(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearManifestationList(): void;
-    getManifestationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setManifestationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearManifestation(): void;
+    getManifestation(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setManifestation(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addManifestation(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasDescription(): boolean;
@@ -694,9 +694,9 @@ export namespace QICoreAllergyIntolerance {
     getExposureRoute(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setExposureRoute(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearNoteList(): void;
-    getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-    setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+    clearNote(): void;
+    getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+    setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
     addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
     hasReactionDuration(): boolean;
@@ -717,15 +717,15 @@ export namespace QICoreAllergyIntolerance {
   export namespace Reaction {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       substance?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      manifestationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      manifestation: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       description?: proto_r4_core_datatypes_pb.String.AsObject,
       onset?: proto_r4_core_datatypes_pb.DateTime.AsObject,
       severity?: QICoreAllergyIntolerance.Reaction.SeverityCode.AsObject,
       exposureRoute?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+      note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
       reactionDuration?: proto_r4_core_datatypes_pb.Duration.AsObject,
     }
 
@@ -738,9 +738,9 @@ export namespace QICoreAllergyIntolerance {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -757,7 +757,7 @@ export namespace QICoreAllergyIntolerance {
       export type AsObject = {
         value: proto_r4_core_codes_pb.AllergyIntoleranceSeverityCode.ValueMap[keyof proto_r4_core_codes_pb.AllergyIntoleranceSeverityCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -789,24 +789,24 @@ export class QICoreBodyStructure extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasActive(): boolean;
@@ -824,9 +824,9 @@ export class QICoreBodyStructure extends jspb.Message {
   getLocation(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setLocation(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearLocationQualifierList(): void;
-  getLocationQualifierList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setLocationQualifierList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearLocationQualifier(): void;
+  getLocationQualifier(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setLocationQualifier(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addLocationQualifier(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasDescription(): boolean;
@@ -834,9 +834,9 @@ export class QICoreBodyStructure extends jspb.Message {
   getDescription(): proto_r4_core_datatypes_pb.String | undefined;
   setDescription(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearImageList(): void;
-  getImageList(): Array<proto_r4_core_datatypes_pb.Attachment>;
-  setImageList(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
+  clearImage(): void;
+  getImage(): Array<proto_r4_core_datatypes_pb.Attachment>;
+  setImage(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
   addImage(value?: proto_r4_core_datatypes_pb.Attachment, index?: number): proto_r4_core_datatypes_pb.Attachment;
 
   hasPatient(): boolean;
@@ -861,16 +861,16 @@ export namespace QICoreBodyStructure {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     active?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     morphology?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     location?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    locationQualifierList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    locationQualifier: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     description?: proto_r4_core_datatypes_pb.String.AsObject,
-    imageList: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
+    image: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
     patient?: proto_r4_core_datatypes_pb.Reference.AsObject,
   }
 }
@@ -901,49 +901,49 @@ export class QICoreCarePlan extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearInstantiatesCanonicalList(): void;
-  getInstantiatesCanonicalList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-  setInstantiatesCanonicalList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+  clearInstantiatesCanonical(): void;
+  getInstantiatesCanonical(): Array<proto_r4_core_datatypes_pb.Canonical>;
+  setInstantiatesCanonical(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
   addInstantiatesCanonical(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
-  clearInstantiatesUriList(): void;
-  getInstantiatesUriList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setInstantiatesUriList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearInstantiatesUri(): void;
+  getInstantiatesUri(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setInstantiatesUri(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addInstantiatesUri(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearReplacesList(): void;
-  getReplacesList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReplacesList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReplaces(): void;
+  getReplaces(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReplaces(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReplaces(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearPartOfList(): void;
-  getPartOfList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPartOfList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPartOf(): void;
+  getPartOf(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPartOf(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPartOf(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -956,9 +956,9 @@ export class QICoreCarePlan extends jspb.Message {
   getIntent(): QICoreCarePlan.IntentCode | undefined;
   setIntent(value?: QICoreCarePlan.IntentCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasTitle(): boolean;
@@ -996,39 +996,39 @@ export class QICoreCarePlan extends jspb.Message {
   getAuthor(): proto_r4_core_datatypes_pb.Reference | undefined;
   setAuthor(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearContributorList(): void;
-  getContributorList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setContributorList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearContributor(): void;
+  getContributor(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setContributor(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addContributor(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearCareTeamList(): void;
-  getCareTeamList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setCareTeamList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearCareTeam(): void;
+  getCareTeam(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setCareTeam(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addCareTeam(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearAddressesList(): void;
-  getAddressesList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setAddressesList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearAddresses(): void;
+  getAddresses(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setAddresses(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addAddresses(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearSupportingInfoList(): void;
-  getSupportingInfoList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSupportingInfoList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSupportingInfo(): void;
+  getSupportingInfo(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSupportingInfo(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSupportingInfo(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearGoalList(): void;
-  getGoalList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setGoalList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearGoal(): void;
+  getGoal(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setGoal(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addGoal(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearActivityList(): void;
-  getActivityList(): Array<QICoreCarePlan.Activity>;
-  setActivityList(value: Array<QICoreCarePlan.Activity>): void;
+  clearActivity(): void;
+  getActivity(): Array<QICoreCarePlan.Activity>;
+  setActivity(value: Array<QICoreCarePlan.Activity>): void;
   addActivity(value?: QICoreCarePlan.Activity, index?: number): QICoreCarePlan.Activity;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   serializeBinary(): Uint8Array;
@@ -1048,18 +1048,18 @@ export namespace QICoreCarePlan {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    instantiatesCanonicalList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
-    instantiatesUriList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    replacesList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    partOfList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    instantiatesCanonical: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+    instantiatesUri: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    replaces: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    partOf: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: QICoreCarePlan.StatusCode.AsObject,
     intent?: QICoreCarePlan.IntentCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     title?: proto_r4_core_datatypes_pb.String.AsObject,
     description?: proto_r4_core_datatypes_pb.String.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -1067,13 +1067,13 @@ export namespace QICoreCarePlan {
     period?: proto_r4_core_datatypes_pb.Period.AsObject,
     created?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     author?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    contributorList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    careTeamList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    addressesList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    supportingInfoList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    goalList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    activityList: Array<QICoreCarePlan.Activity.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    contributor: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    careTeam: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    addresses: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    supportingInfo: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    goal: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    activity: Array<QICoreCarePlan.Activity.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -1085,9 +1085,9 @@ export namespace QICoreCarePlan {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -1104,7 +1104,7 @@ export namespace QICoreCarePlan {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestStatusCode.ValueMap[keyof proto_r4_core_codes_pb.RequestStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -1117,9 +1117,9 @@ export namespace QICoreCarePlan {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -1136,7 +1136,7 @@ export namespace QICoreCarePlan {
     export type AsObject = {
       value: proto_r4_core_valuesets_pb.CarePlanIntentValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.CarePlanIntentValueSet.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -1146,29 +1146,29 @@ export namespace QICoreCarePlan {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearOutcomeCodeableConceptList(): void;
-    getOutcomeCodeableConceptList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setOutcomeCodeableConceptList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearOutcomeCodeableConcept(): void;
+    getOutcomeCodeableConcept(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setOutcomeCodeableConcept(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addOutcomeCodeableConcept(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearOutcomeReferenceList(): void;
-    getOutcomeReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setOutcomeReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearOutcomeReference(): void;
+    getOutcomeReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setOutcomeReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addOutcomeReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-    clearProgressList(): void;
-    getProgressList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-    setProgressList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+    clearProgress(): void;
+    getProgress(): Array<proto_r4_core_datatypes_pb.Annotation>;
+    setProgress(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
     addProgress(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
     hasReference(): boolean;
@@ -1194,11 +1194,11 @@ export namespace QICoreCarePlan {
   export namespace Activity {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      outcomeCodeableConceptList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      outcomeReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-      progressList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      outcomeCodeableConcept: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      outcomeReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      progress: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
       reference?: proto_r4_core_datatypes_pb.Reference.AsObject,
       detail?: QICoreCarePlan.Activity.Detail.AsObject,
     }
@@ -1209,14 +1209,14 @@ export namespace QICoreCarePlan {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasKind(): boolean;
@@ -1224,14 +1224,14 @@ export namespace QICoreCarePlan {
       getKind(): QICoreCarePlan.Activity.Detail.KindCode | undefined;
       setKind(value?: QICoreCarePlan.Activity.Detail.KindCode): void;
 
-      clearInstantiatesCanonicalList(): void;
-      getInstantiatesCanonicalList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-      setInstantiatesCanonicalList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+      clearInstantiatesCanonical(): void;
+      getInstantiatesCanonical(): Array<proto_r4_core_datatypes_pb.Canonical>;
+      setInstantiatesCanonical(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
       addInstantiatesCanonical(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
-      clearInstantiatesUriList(): void;
-      getInstantiatesUriList(): Array<proto_r4_core_datatypes_pb.Uri>;
-      setInstantiatesUriList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+      clearInstantiatesUri(): void;
+      getInstantiatesUri(): Array<proto_r4_core_datatypes_pb.Uri>;
+      setInstantiatesUri(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
       addInstantiatesUri(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
       hasCode(): boolean;
@@ -1239,19 +1239,19 @@ export namespace QICoreCarePlan {
       getCode(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
       setCode(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-      clearReasonCodeList(): void;
-      getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-      setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+      clearReasonCode(): void;
+      getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+      setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
       addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-      clearReasonReferenceList(): void;
-      getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-      setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+      clearReasonReference(): void;
+      getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+      setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
       addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-      clearGoalList(): void;
-      getGoalList(): Array<proto_r4_core_datatypes_pb.Reference>;
-      setGoalList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+      clearGoal(): void;
+      getGoal(): Array<proto_r4_core_datatypes_pb.Reference>;
+      setGoal(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
       addGoal(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
       hasStatus(): boolean;
@@ -1279,9 +1279,9 @@ export namespace QICoreCarePlan {
       getLocation(): proto_r4_core_datatypes_pb.Reference | undefined;
       setLocation(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-      clearPerformerList(): void;
-      getPerformerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-      setPerformerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+      clearPerformer(): void;
+      getPerformer(): Array<proto_r4_core_datatypes_pb.Reference>;
+      setPerformer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
       addPerformer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
       hasProduct(): boolean;
@@ -1317,21 +1317,21 @@ export namespace QICoreCarePlan {
     export namespace Detail {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         kind?: QICoreCarePlan.Activity.Detail.KindCode.AsObject,
-        instantiatesCanonicalList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
-        instantiatesUriList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+        instantiatesCanonical: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+        instantiatesUri: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
         code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-        reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-        reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-        goalList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+        reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+        reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+        goal: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
         status?: QICoreCarePlan.Activity.Detail.StatusCode.AsObject,
         statusReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         doNotPerform?: proto_r4_core_datatypes_pb.Boolean.AsObject,
         scheduled?: QICoreCarePlan.Activity.Detail.ScheduledX.AsObject,
         location?: proto_r4_core_datatypes_pb.Reference.AsObject,
-        performerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+        performer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
         product?: QICoreCarePlan.Activity.Detail.ProductX.AsObject,
         dailyAmount?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
         quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
@@ -1347,9 +1347,9 @@ export namespace QICoreCarePlan {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         serializeBinary(): Uint8Array;
@@ -1366,7 +1366,7 @@ export namespace QICoreCarePlan {
         export type AsObject = {
           value: proto_r4_core_valuesets_pb.CarePlanActivityKindValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.CarePlanActivityKindValueSet.ValueMap],
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         }
       }
 
@@ -1379,9 +1379,9 @@ export namespace QICoreCarePlan {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         serializeBinary(): Uint8Array;
@@ -1398,7 +1398,7 @@ export namespace QICoreCarePlan {
         export type AsObject = {
           value: proto_r4_core_codes_pb.CarePlanActivityStatusCode.ValueMap[keyof proto_r4_core_codes_pb.CarePlanActivityStatusCode.ValueMap],
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         }
       }
 
@@ -1508,24 +1508,24 @@ export class QICoreCareTeam extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -1533,9 +1533,9 @@ export class QICoreCareTeam extends jspb.Message {
   getStatus(): QICoreCareTeam.StatusCode | undefined;
   setStatus(value?: QICoreCareTeam.StatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasName(): boolean;
@@ -1558,34 +1558,34 @@ export class QICoreCareTeam extends jspb.Message {
   getPeriod(): proto_r4_core_datatypes_pb.Period | undefined;
   setPeriod(value?: proto_r4_core_datatypes_pb.Period): void;
 
-  clearParticipantList(): void;
-  getParticipantList(): Array<QICoreCareTeam.Participant>;
-  setParticipantList(value: Array<QICoreCareTeam.Participant>): void;
+  clearParticipant(): void;
+  getParticipant(): Array<QICoreCareTeam.Participant>;
+  setParticipant(value: Array<QICoreCareTeam.Participant>): void;
   addParticipant(value?: QICoreCareTeam.Participant, index?: number): QICoreCareTeam.Participant;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearManagingOrganizationList(): void;
-  getManagingOrganizationList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setManagingOrganizationList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearManagingOrganization(): void;
+  getManagingOrganization(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setManagingOrganization(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addManagingOrganization(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearTelecomList(): void;
-  getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearTelecom(): void;
+  getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   serializeBinary(): Uint8Array;
@@ -1605,22 +1605,22 @@ export namespace QICoreCareTeam {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: QICoreCareTeam.StatusCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     name?: proto_r4_core_datatypes_pb.String.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     period?: proto_r4_core_datatypes_pb.Period.AsObject,
-    participantList: Array<QICoreCareTeam.Participant.AsObject>,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    managingOrganizationList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    participant: Array<QICoreCareTeam.Participant.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    managingOrganization: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -1632,9 +1632,9 @@ export namespace QICoreCareTeam {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -1651,7 +1651,7 @@ export namespace QICoreCareTeam {
     export type AsObject = {
       value: proto_r4_core_codes_pb.CareTeamStatusCode.ValueMap[keyof proto_r4_core_codes_pb.CareTeamStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -1661,14 +1661,14 @@ export namespace QICoreCareTeam {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasRole(): boolean;
@@ -1704,8 +1704,8 @@ export namespace QICoreCareTeam {
   export namespace Participant {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       role?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       member?: proto_r4_core_datatypes_pb.Reference.AsObject,
       onBehalfOf?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -1740,24 +1740,24 @@ export class QICoreClaim extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -1820,9 +1820,9 @@ export class QICoreClaim extends jspb.Message {
   getFundsReserve(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setFundsReserve(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearRelatedList(): void;
-  getRelatedList(): Array<QICoreClaim.RelatedClaim>;
-  setRelatedList(value: Array<QICoreClaim.RelatedClaim>): void;
+  clearRelated(): void;
+  getRelated(): Array<QICoreClaim.RelatedClaim>;
+  setRelated(value: Array<QICoreClaim.RelatedClaim>): void;
   addRelated(value?: QICoreClaim.RelatedClaim, index?: number): QICoreClaim.RelatedClaim;
 
   hasPrescription(): boolean;
@@ -1850,29 +1850,29 @@ export class QICoreClaim extends jspb.Message {
   getFacility(): proto_r4_core_datatypes_pb.Reference | undefined;
   setFacility(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearCareTeamList(): void;
-  getCareTeamList(): Array<QICoreClaim.CareTeam>;
-  setCareTeamList(value: Array<QICoreClaim.CareTeam>): void;
+  clearCareTeam(): void;
+  getCareTeam(): Array<QICoreClaim.CareTeam>;
+  setCareTeam(value: Array<QICoreClaim.CareTeam>): void;
   addCareTeam(value?: QICoreClaim.CareTeam, index?: number): QICoreClaim.CareTeam;
 
-  clearSupportingInfoList(): void;
-  getSupportingInfoList(): Array<QICoreClaim.SupportingInformation>;
-  setSupportingInfoList(value: Array<QICoreClaim.SupportingInformation>): void;
+  clearSupportingInfo(): void;
+  getSupportingInfo(): Array<QICoreClaim.SupportingInformation>;
+  setSupportingInfo(value: Array<QICoreClaim.SupportingInformation>): void;
   addSupportingInfo(value?: QICoreClaim.SupportingInformation, index?: number): QICoreClaim.SupportingInformation;
 
-  clearDiagnosisList(): void;
-  getDiagnosisList(): Array<QICoreClaim.Diagnosis>;
-  setDiagnosisList(value: Array<QICoreClaim.Diagnosis>): void;
+  clearDiagnosis(): void;
+  getDiagnosis(): Array<QICoreClaim.Diagnosis>;
+  setDiagnosis(value: Array<QICoreClaim.Diagnosis>): void;
   addDiagnosis(value?: QICoreClaim.Diagnosis, index?: number): QICoreClaim.Diagnosis;
 
-  clearProcedureList(): void;
-  getProcedureList(): Array<QICoreClaim.Procedure>;
-  setProcedureList(value: Array<QICoreClaim.Procedure>): void;
+  clearProcedure(): void;
+  getProcedure(): Array<QICoreClaim.Procedure>;
+  setProcedure(value: Array<QICoreClaim.Procedure>): void;
   addProcedure(value?: QICoreClaim.Procedure, index?: number): QICoreClaim.Procedure;
 
-  clearInsuranceList(): void;
-  getInsuranceList(): Array<QICoreClaim.Insurance>;
-  setInsuranceList(value: Array<QICoreClaim.Insurance>): void;
+  clearInsurance(): void;
+  getInsurance(): Array<QICoreClaim.Insurance>;
+  setInsurance(value: Array<QICoreClaim.Insurance>): void;
   addInsurance(value?: QICoreClaim.Insurance, index?: number): QICoreClaim.Insurance;
 
   hasAccident(): boolean;
@@ -1880,9 +1880,9 @@ export class QICoreClaim extends jspb.Message {
   getAccident(): QICoreClaim.Accident | undefined;
   setAccident(value?: QICoreClaim.Accident): void;
 
-  clearItemList(): void;
-  getItemList(): Array<QICoreClaim.Item>;
-  setItemList(value: Array<QICoreClaim.Item>): void;
+  clearItem(): void;
+  getItem(): Array<QICoreClaim.Item>;
+  setItem(value: Array<QICoreClaim.Item>): void;
   addItem(value?: QICoreClaim.Item, index?: number): QICoreClaim.Item;
 
   hasTotal(): boolean;
@@ -1907,10 +1907,10 @@ export namespace QICoreClaim {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: QICoreClaim.StatusCode.AsObject,
     type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -1923,19 +1923,19 @@ export namespace QICoreClaim {
     provider?: proto_r4_core_datatypes_pb.Reference.AsObject,
     priority?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     fundsReserve?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    relatedList: Array<QICoreClaim.RelatedClaim.AsObject>,
+    related: Array<QICoreClaim.RelatedClaim.AsObject>,
     prescription?: proto_r4_core_datatypes_pb.Reference.AsObject,
     originalPrescription?: proto_r4_core_datatypes_pb.Reference.AsObject,
     payee?: QICoreClaim.Payee.AsObject,
     referral?: proto_r4_core_datatypes_pb.Reference.AsObject,
     facility?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    careTeamList: Array<QICoreClaim.CareTeam.AsObject>,
-    supportingInfoList: Array<QICoreClaim.SupportingInformation.AsObject>,
-    diagnosisList: Array<QICoreClaim.Diagnosis.AsObject>,
-    procedureList: Array<QICoreClaim.Procedure.AsObject>,
-    insuranceList: Array<QICoreClaim.Insurance.AsObject>,
+    careTeam: Array<QICoreClaim.CareTeam.AsObject>,
+    supportingInfo: Array<QICoreClaim.SupportingInformation.AsObject>,
+    diagnosis: Array<QICoreClaim.Diagnosis.AsObject>,
+    procedure: Array<QICoreClaim.Procedure.AsObject>,
+    insurance: Array<QICoreClaim.Insurance.AsObject>,
     accident?: QICoreClaim.Accident.AsObject,
-    itemList: Array<QICoreClaim.Item.AsObject>,
+    item: Array<QICoreClaim.Item.AsObject>,
     total?: proto_r4_core_datatypes_pb.Money.AsObject,
   }
 
@@ -1948,9 +1948,9 @@ export namespace QICoreClaim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -1967,7 +1967,7 @@ export namespace QICoreClaim {
     export type AsObject = {
       value: proto_r4_core_codes_pb.FinancialResourceStatusCode.ValueMap[keyof proto_r4_core_codes_pb.FinancialResourceStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -1980,9 +1980,9 @@ export namespace QICoreClaim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -1999,7 +1999,7 @@ export namespace QICoreClaim {
     export type AsObject = {
       value: proto_r4_core_codes_pb.UseCode.ValueMap[keyof proto_r4_core_codes_pb.UseCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -2009,14 +2009,14 @@ export namespace QICoreClaim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasClaim(): boolean;
@@ -2047,8 +2047,8 @@ export namespace QICoreClaim {
   export namespace RelatedClaim {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       claim?: proto_r4_core_datatypes_pb.Reference.AsObject,
       relationship?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       reference?: proto_r4_core_datatypes_pb.Identifier.AsObject,
@@ -2061,14 +2061,14 @@ export namespace QICoreClaim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -2094,8 +2094,8 @@ export namespace QICoreClaim {
   export namespace Payee {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       party?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
@@ -2107,14 +2107,14 @@ export namespace QICoreClaim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSequence(): boolean;
@@ -2155,8 +2155,8 @@ export namespace QICoreClaim {
   export namespace CareTeam {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
       provider?: proto_r4_core_datatypes_pb.Reference.AsObject,
       responsible?: proto_r4_core_datatypes_pb.Boolean.AsObject,
@@ -2171,14 +2171,14 @@ export namespace QICoreClaim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSequence(): boolean;
@@ -2224,8 +2224,8 @@ export namespace QICoreClaim {
   export namespace SupportingInformation {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
       category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -2332,14 +2332,14 @@ export namespace QICoreClaim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSequence(): boolean;
@@ -2352,9 +2352,9 @@ export namespace QICoreClaim {
     getDiagnosis(): QICoreClaim.Diagnosis.DiagnosisX | undefined;
     setDiagnosis(value?: QICoreClaim.Diagnosis.DiagnosisX): void;
 
-    clearTypeList(): void;
-    getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearType(): void;
+    getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasOnAdmission(): boolean;
@@ -2380,11 +2380,11 @@ export namespace QICoreClaim {
   export namespace Diagnosis {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
       diagnosis?: QICoreClaim.Diagnosis.DiagnosisX.AsObject,
-      typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       onAdmission?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       packageCode?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     }
@@ -2431,14 +2431,14 @@ export namespace QICoreClaim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSequence(): boolean;
@@ -2446,9 +2446,9 @@ export namespace QICoreClaim {
     getSequence(): proto_r4_core_datatypes_pb.PositiveInt | undefined;
     setSequence(value?: proto_r4_core_datatypes_pb.PositiveInt): void;
 
-    clearTypeList(): void;
-    getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearType(): void;
+    getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasDate(): boolean;
@@ -2461,9 +2461,9 @@ export namespace QICoreClaim {
     getProcedure(): QICoreClaim.Procedure.ProcedureX | undefined;
     setProcedure(value?: QICoreClaim.Procedure.ProcedureX): void;
 
-    clearUdiList(): void;
-    getUdiList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setUdiList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearUdi(): void;
+    getUdi(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setUdi(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addUdi(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     serializeBinary(): Uint8Array;
@@ -2479,13 +2479,13 @@ export namespace QICoreClaim {
   export namespace Procedure {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
-      typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
       procedure?: QICoreClaim.Procedure.ProcedureX.AsObject,
-      udiList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      udi: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     }
 
     export class ProcedureX extends jspb.Message {
@@ -2530,14 +2530,14 @@ export namespace QICoreClaim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSequence(): boolean;
@@ -2565,9 +2565,9 @@ export namespace QICoreClaim {
     getBusinessArrangement(): proto_r4_core_datatypes_pb.String | undefined;
     setBusinessArrangement(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearPreAuthRefList(): void;
-    getPreAuthRefList(): Array<proto_r4_core_datatypes_pb.String>;
-    setPreAuthRefList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+    clearPreAuthRef(): void;
+    getPreAuthRef(): Array<proto_r4_core_datatypes_pb.String>;
+    setPreAuthRef(value: Array<proto_r4_core_datatypes_pb.String>): void;
     addPreAuthRef(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
     hasClaimResponse(): boolean;
@@ -2588,14 +2588,14 @@ export namespace QICoreClaim {
   export namespace Insurance {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
       focal?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       identifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
       coverage?: proto_r4_core_datatypes_pb.Reference.AsObject,
       businessArrangement?: proto_r4_core_datatypes_pb.String.AsObject,
-      preAuthRefList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+      preAuthRef: Array<proto_r4_core_datatypes_pb.String.AsObject>,
       claimResponse?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
   }
@@ -2606,14 +2606,14 @@ export namespace QICoreClaim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasDate(): boolean;
@@ -2644,8 +2644,8 @@ export namespace QICoreClaim {
   export namespace Accident {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       date?: proto_r4_core_datatypes_pb.Date.AsObject,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       location?: QICoreClaim.Accident.LocationX.AsObject,
@@ -2693,14 +2693,14 @@ export namespace QICoreClaim {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSequence(): boolean;
@@ -2708,24 +2708,24 @@ export namespace QICoreClaim {
     getSequence(): proto_r4_core_datatypes_pb.PositiveInt | undefined;
     setSequence(value?: proto_r4_core_datatypes_pb.PositiveInt): void;
 
-    clearCareTeamSequenceList(): void;
-    getCareTeamSequenceList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-    setCareTeamSequenceList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+    clearCareTeamSequence(): void;
+    getCareTeamSequence(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+    setCareTeamSequence(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
     addCareTeamSequence(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
-    clearDiagnosisSequenceList(): void;
-    getDiagnosisSequenceList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-    setDiagnosisSequenceList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+    clearDiagnosisSequence(): void;
+    getDiagnosisSequence(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+    setDiagnosisSequence(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
     addDiagnosisSequence(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
-    clearProcedureSequenceList(): void;
-    getProcedureSequenceList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-    setProcedureSequenceList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+    clearProcedureSequence(): void;
+    getProcedureSequence(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+    setProcedureSequence(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
     addProcedureSequence(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
-    clearInformationSequenceList(): void;
-    getInformationSequenceList(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
-    setInformationSequenceList(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
+    clearInformationSequence(): void;
+    getInformationSequence(): Array<proto_r4_core_datatypes_pb.PositiveInt>;
+    setInformationSequence(value: Array<proto_r4_core_datatypes_pb.PositiveInt>): void;
     addInformationSequence(value?: proto_r4_core_datatypes_pb.PositiveInt, index?: number): proto_r4_core_datatypes_pb.PositiveInt;
 
     hasRevenue(): boolean;
@@ -2743,14 +2743,14 @@ export namespace QICoreClaim {
     getProductOrService(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setProductOrService(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearModifierList(): void;
-    getModifierList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setModifierList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearModifier(): void;
+    getModifier(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setModifier(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addModifier(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearProgramCodeList(): void;
-    getProgramCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setProgramCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearProgramCode(): void;
+    getProgramCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setProgramCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addProgramCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasServiced(): boolean;
@@ -2783,9 +2783,9 @@ export namespace QICoreClaim {
     getNet(): proto_r4_core_datatypes_pb.Money | undefined;
     setNet(value?: proto_r4_core_datatypes_pb.Money): void;
 
-    clearUdiList(): void;
-    getUdiList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setUdiList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearUdi(): void;
+    getUdi(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setUdi(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addUdi(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     hasBodySite(): boolean;
@@ -2793,19 +2793,19 @@ export namespace QICoreClaim {
     getBodySite(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setBodySite(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearSubSiteList(): void;
-    getSubSiteList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setSubSiteList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearSubSite(): void;
+    getSubSite(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setSubSite(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addSubSite(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearEncounterList(): void;
-    getEncounterList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setEncounterList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearEncounter(): void;
+    getEncounter(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setEncounter(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addEncounter(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-    clearDetailList(): void;
-    getDetailList(): Array<QICoreClaim.Item.Detail>;
-    setDetailList(value: Array<QICoreClaim.Item.Detail>): void;
+    clearDetail(): void;
+    getDetail(): Array<QICoreClaim.Item.Detail>;
+    setDetail(value: Array<QICoreClaim.Item.Detail>): void;
     addDetail(value?: QICoreClaim.Item.Detail, index?: number): QICoreClaim.Item.Detail;
 
     serializeBinary(): Uint8Array;
@@ -2821,29 +2821,29 @@ export namespace QICoreClaim {
   export namespace Item {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
-      careTeamSequenceList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
-      diagnosisSequenceList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
-      procedureSequenceList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
-      informationSequenceList: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+      careTeamSequence: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+      diagnosisSequence: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+      procedureSequence: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
+      informationSequence: Array<proto_r4_core_datatypes_pb.PositiveInt.AsObject>,
       revenue?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       productOrService?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      modifierList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      programCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      modifier: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      programCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       serviced?: QICoreClaim.Item.ServicedX.AsObject,
       location?: QICoreClaim.Item.LocationX.AsObject,
       quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       unitPrice?: proto_r4_core_datatypes_pb.Money.AsObject,
       factor?: proto_r4_core_datatypes_pb.Decimal.AsObject,
       net?: proto_r4_core_datatypes_pb.Money.AsObject,
-      udiList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      udi: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
       bodySite?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      subSiteList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      encounterList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-      detailList: Array<QICoreClaim.Item.Detail.AsObject>,
+      subSite: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      encounter: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      detail: Array<QICoreClaim.Item.Detail.AsObject>,
     }
 
     export class ServicedX extends jspb.Message {
@@ -2929,14 +2929,14 @@ export namespace QICoreClaim {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasSequence(): boolean;
@@ -2959,14 +2959,14 @@ export namespace QICoreClaim {
       getProductOrService(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
       setProductOrService(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-      clearModifierList(): void;
-      getModifierList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-      setModifierList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+      clearModifier(): void;
+      getModifier(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+      setModifier(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
       addModifier(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-      clearProgramCodeList(): void;
-      getProgramCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-      setProgramCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+      clearProgramCode(): void;
+      getProgramCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+      setProgramCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
       addProgramCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
       hasQuantity(): boolean;
@@ -2989,14 +2989,14 @@ export namespace QICoreClaim {
       getNet(): proto_r4_core_datatypes_pb.Money | undefined;
       setNet(value?: proto_r4_core_datatypes_pb.Money): void;
 
-      clearUdiList(): void;
-      getUdiList(): Array<proto_r4_core_datatypes_pb.Reference>;
-      setUdiList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+      clearUdi(): void;
+      getUdi(): Array<proto_r4_core_datatypes_pb.Reference>;
+      setUdi(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
       addUdi(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-      clearSubDetailList(): void;
-      getSubDetailList(): Array<QICoreClaim.Item.Detail.SubDetail>;
-      setSubDetailList(value: Array<QICoreClaim.Item.Detail.SubDetail>): void;
+      clearSubDetail(): void;
+      getSubDetail(): Array<QICoreClaim.Item.Detail.SubDetail>;
+      setSubDetail(value: Array<QICoreClaim.Item.Detail.SubDetail>): void;
       addSubDetail(value?: QICoreClaim.Item.Detail.SubDetail, index?: number): QICoreClaim.Item.Detail.SubDetail;
 
       serializeBinary(): Uint8Array;
@@ -3012,20 +3012,20 @@ export namespace QICoreClaim {
     export namespace Detail {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
         revenue?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         productOrService?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-        modifierList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-        programCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+        modifier: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+        programCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
         quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
         unitPrice?: proto_r4_core_datatypes_pb.Money.AsObject,
         factor?: proto_r4_core_datatypes_pb.Decimal.AsObject,
         net?: proto_r4_core_datatypes_pb.Money.AsObject,
-        udiList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-        subDetailList: Array<QICoreClaim.Item.Detail.SubDetail.AsObject>,
+        udi: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+        subDetail: Array<QICoreClaim.Item.Detail.SubDetail.AsObject>,
       }
 
       export class SubDetail extends jspb.Message {
@@ -3034,14 +3034,14 @@ export namespace QICoreClaim {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         hasSequence(): boolean;
@@ -3064,14 +3064,14 @@ export namespace QICoreClaim {
         getProductOrService(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
         setProductOrService(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-        clearModifierList(): void;
-        getModifierList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-        setModifierList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+        clearModifier(): void;
+        getModifier(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+        setModifier(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
         addModifier(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-        clearProgramCodeList(): void;
-        getProgramCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-        setProgramCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+        clearProgramCode(): void;
+        getProgramCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+        setProgramCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
         addProgramCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
         hasQuantity(): boolean;
@@ -3094,9 +3094,9 @@ export namespace QICoreClaim {
         getNet(): proto_r4_core_datatypes_pb.Money | undefined;
         setNet(value?: proto_r4_core_datatypes_pb.Money): void;
 
-        clearUdiList(): void;
-        getUdiList(): Array<proto_r4_core_datatypes_pb.Reference>;
-        setUdiList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+        clearUdi(): void;
+        getUdi(): Array<proto_r4_core_datatypes_pb.Reference>;
+        setUdi(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
         addUdi(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
         serializeBinary(): Uint8Array;
@@ -3112,19 +3112,19 @@ export namespace QICoreClaim {
       export namespace SubDetail {
         export type AsObject = {
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
           sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
           revenue?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
           category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
           productOrService?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-          modifierList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-          programCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+          modifier: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+          programCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
           quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
           unitPrice?: proto_r4_core_datatypes_pb.Money.AsObject,
           factor?: proto_r4_core_datatypes_pb.Decimal.AsObject,
           net?: proto_r4_core_datatypes_pb.Money.AsObject,
-          udiList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+          udi: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
         }
       }
     }
@@ -3157,49 +3157,49 @@ export class QICoreCommunication extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearInstantiatesCanonicalList(): void;
-  getInstantiatesCanonicalList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-  setInstantiatesCanonicalList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+  clearInstantiatesCanonical(): void;
+  getInstantiatesCanonical(): Array<proto_r4_core_datatypes_pb.Canonical>;
+  setInstantiatesCanonical(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
   addInstantiatesCanonical(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
-  clearInstantiatesUriList(): void;
-  getInstantiatesUriList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setInstantiatesUriList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearInstantiatesUri(): void;
+  getInstantiatesUri(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setInstantiatesUri(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addInstantiatesUri(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearPartOfList(): void;
-  getPartOfList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPartOfList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPartOf(): void;
+  getPartOf(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPartOf(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPartOf(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearInResponseToList(): void;
-  getInResponseToList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setInResponseToList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearInResponseTo(): void;
+  getInResponseTo(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setInResponseTo(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addInResponseTo(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -3212,9 +3212,9 @@ export class QICoreCommunication extends jspb.Message {
   getStatusReason(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setStatusReason(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasPriority(): boolean;
@@ -3222,9 +3222,9 @@ export class QICoreCommunication extends jspb.Message {
   getPriority(): QICoreCommunication.PriorityCode | undefined;
   setPriority(value?: QICoreCommunication.PriorityCode): void;
 
-  clearMediumList(): void;
-  getMediumList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setMediumList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearMedium(): void;
+  getMedium(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setMedium(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addMedium(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasSubject(): boolean;
@@ -3237,9 +3237,9 @@ export class QICoreCommunication extends jspb.Message {
   getTopic(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setTopic(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearAboutList(): void;
-  getAboutList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setAboutList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearAbout(): void;
+  getAbout(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setAbout(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addAbout(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasEncounter(): boolean;
@@ -3257,9 +3257,9 @@ export class QICoreCommunication extends jspb.Message {
   getReceived(): proto_r4_core_datatypes_pb.DateTime | undefined;
   setReceived(value?: proto_r4_core_datatypes_pb.DateTime): void;
 
-  clearRecipientList(): void;
-  getRecipientList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setRecipientList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearRecipient(): void;
+  getRecipient(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setRecipient(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addRecipient(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasSender(): boolean;
@@ -3267,24 +3267,24 @@ export class QICoreCommunication extends jspb.Message {
   getSender(): proto_r4_core_datatypes_pb.Reference | undefined;
   setSender(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearPayloadList(): void;
-  getPayloadList(): Array<QICoreCommunication.Payload>;
-  setPayloadList(value: Array<QICoreCommunication.Payload>): void;
+  clearPayload(): void;
+  getPayload(): Array<QICoreCommunication.Payload>;
+  setPayload(value: Array<QICoreCommunication.Payload>): void;
   addPayload(value?: QICoreCommunication.Payload, index?: number): QICoreCommunication.Payload;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   serializeBinary(): Uint8Array;
@@ -3304,32 +3304,32 @@ export namespace QICoreCommunication {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    instantiatesCanonicalList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
-    instantiatesUriList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    partOfList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    inResponseToList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    instantiatesCanonical: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+    instantiatesUri: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    partOf: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    inResponseTo: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: QICoreCommunication.StatusCode.AsObject,
     statusReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     priority?: QICoreCommunication.PriorityCode.AsObject,
-    mediumList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    medium: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     topic?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    aboutList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    about: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     sent?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     received?: proto_r4_core_datatypes_pb.DateTime.AsObject,
-    recipientList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    recipient: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     sender?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    payloadList: Array<QICoreCommunication.Payload.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    payload: Array<QICoreCommunication.Payload.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -3341,9 +3341,9 @@ export namespace QICoreCommunication {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -3360,7 +3360,7 @@ export namespace QICoreCommunication {
     export type AsObject = {
       value: proto_r4_core_codes_pb.EventStatusCode.ValueMap[keyof proto_r4_core_codes_pb.EventStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -3373,9 +3373,9 @@ export namespace QICoreCommunication {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -3392,7 +3392,7 @@ export namespace QICoreCommunication {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestPriorityCode.ValueMap[keyof proto_r4_core_codes_pb.RequestPriorityCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -3402,14 +3402,14 @@ export namespace QICoreCommunication {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasContent(): boolean;
@@ -3430,8 +3430,8 @@ export namespace QICoreCommunication {
   export namespace Payload {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       content?: QICoreCommunication.Payload.ContentX.AsObject,
     }
 
@@ -3505,34 +3505,34 @@ export class QICoreCommunicationRequest extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearReplacesList(): void;
-  getReplacesList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReplacesList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReplaces(): void;
+  getReplaces(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReplaces(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReplaces(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasGroupIdentifier(): boolean;
@@ -3550,9 +3550,9 @@ export class QICoreCommunicationRequest extends jspb.Message {
   getStatusReason(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setStatusReason(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasPriority(): boolean;
@@ -3565,9 +3565,9 @@ export class QICoreCommunicationRequest extends jspb.Message {
   getDoNotPerform(): proto_r4_core_datatypes_pb.Boolean | undefined;
   setDoNotPerform(value?: proto_r4_core_datatypes_pb.Boolean): void;
 
-  clearMediumList(): void;
-  getMediumList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setMediumList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearMedium(): void;
+  getMedium(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setMedium(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addMedium(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasSubject(): boolean;
@@ -3575,9 +3575,9 @@ export class QICoreCommunicationRequest extends jspb.Message {
   getSubject(): proto_r4_core_datatypes_pb.Reference | undefined;
   setSubject(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearAboutList(): void;
-  getAboutList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setAboutList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearAbout(): void;
+  getAbout(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setAbout(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addAbout(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasEncounter(): boolean;
@@ -3585,9 +3585,9 @@ export class QICoreCommunicationRequest extends jspb.Message {
   getEncounter(): proto_r4_core_datatypes_pb.Reference | undefined;
   setEncounter(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearPayloadList(): void;
-  getPayloadList(): Array<QICoreCommunicationRequest.Payload>;
-  setPayloadList(value: Array<QICoreCommunicationRequest.Payload>): void;
+  clearPayload(): void;
+  getPayload(): Array<QICoreCommunicationRequest.Payload>;
+  setPayload(value: Array<QICoreCommunicationRequest.Payload>): void;
   addPayload(value?: QICoreCommunicationRequest.Payload, index?: number): QICoreCommunicationRequest.Payload;
 
   hasOccurrence(): boolean;
@@ -3605,9 +3605,9 @@ export class QICoreCommunicationRequest extends jspb.Message {
   getRequester(): proto_r4_core_datatypes_pb.Reference | undefined;
   setRequester(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearRecipientList(): void;
-  getRecipientList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setRecipientList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearRecipient(): void;
+  getRecipient(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setRecipient(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addRecipient(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasSender(): boolean;
@@ -3615,19 +3615,19 @@ export class QICoreCommunicationRequest extends jspb.Message {
   getSender(): proto_r4_core_datatypes_pb.Reference | undefined;
   setSender(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   serializeBinary(): Uint8Array;
@@ -3647,31 +3647,31 @@ export namespace QICoreCommunicationRequest {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    replacesList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    replaces: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     groupIdentifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
     status?: QICoreCommunicationRequest.StatusCode.AsObject,
     statusReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     priority?: QICoreCommunicationRequest.PriorityCode.AsObject,
     doNotPerform?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-    mediumList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    medium: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    aboutList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    about: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    payloadList: Array<QICoreCommunicationRequest.Payload.AsObject>,
+    payload: Array<QICoreCommunicationRequest.Payload.AsObject>,
     occurrence?: QICoreCommunicationRequest.OccurrenceX.AsObject,
     authoredOn?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     requester?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    recipientList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    recipient: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     sender?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -3683,9 +3683,9 @@ export namespace QICoreCommunicationRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -3702,7 +3702,7 @@ export namespace QICoreCommunicationRequest {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestStatusCode.ValueMap[keyof proto_r4_core_codes_pb.RequestStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -3715,9 +3715,9 @@ export namespace QICoreCommunicationRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -3734,7 +3734,7 @@ export namespace QICoreCommunicationRequest {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestPriorityCode.ValueMap[keyof proto_r4_core_codes_pb.RequestPriorityCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -3744,14 +3744,14 @@ export namespace QICoreCommunicationRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasContent(): boolean;
@@ -3772,8 +3772,8 @@ export namespace QICoreCommunicationRequest {
   export namespace Payload {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       content?: QICoreCommunicationRequest.Payload.ContentX.AsObject,
     }
 
@@ -3882,24 +3882,24 @@ export class QICoreCondition extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasClinicalStatus(): boolean;
@@ -3912,9 +3912,9 @@ export class QICoreCondition extends jspb.Message {
   getVerificationStatus(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setVerificationStatus(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasSeverity(): boolean;
@@ -3927,9 +3927,9 @@ export class QICoreCondition extends jspb.Message {
   getCode(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setCode(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearBodySiteList(): void;
-  getBodySiteList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setBodySiteList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearBodySite(): void;
+  getBodySite(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setBodySite(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addBodySite(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasSubject(): boolean;
@@ -3967,29 +3967,29 @@ export class QICoreCondition extends jspb.Message {
   getAsserter(): proto_r4_core_datatypes_pb.Reference | undefined;
   setAsserter(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearStageList(): void;
-  getStageList(): Array<QICoreCondition.Stage>;
-  setStageList(value: Array<QICoreCondition.Stage>): void;
+  clearStage(): void;
+  getStage(): Array<QICoreCondition.Stage>;
+  setStage(value: Array<QICoreCondition.Stage>): void;
   addStage(value?: QICoreCondition.Stage, index?: number): QICoreCondition.Stage;
 
-  clearEvidenceList(): void;
-  getEvidenceList(): Array<QICoreCondition.Evidence>;
-  setEvidenceList(value: Array<QICoreCondition.Evidence>): void;
+  clearEvidence(): void;
+  getEvidence(): Array<QICoreCondition.Evidence>;
+  setEvidence(value: Array<QICoreCondition.Evidence>): void;
   addEvidence(value?: QICoreCondition.Evidence, index?: number): QICoreCondition.Evidence;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearDueToList(): void;
-  getDueToList(): Array<proto_r4_core_extensions_pb.ConditionDueTo.ValueX>;
-  setDueToList(value: Array<proto_r4_core_extensions_pb.ConditionDueTo.ValueX>): void;
+  clearDueTo(): void;
+  getDueTo(): Array<proto_r4_core_extensions_pb.ConditionDueTo.ValueX>;
+  setDueTo(value: Array<proto_r4_core_extensions_pb.ConditionDueTo.ValueX>): void;
   addDueTo(value?: proto_r4_core_extensions_pb.ConditionDueTo.ValueX, index?: number): proto_r4_core_extensions_pb.ConditionDueTo.ValueX;
 
-  clearOccurredFollowingList(): void;
-  getOccurredFollowingList(): Array<proto_r4_core_extensions_pb.ConditionOccurredFollowing.ValueX>;
-  setOccurredFollowingList(value: Array<proto_r4_core_extensions_pb.ConditionOccurredFollowing.ValueX>): void;
+  clearOccurredFollowing(): void;
+  getOccurredFollowing(): Array<proto_r4_core_extensions_pb.ConditionOccurredFollowing.ValueX>;
+  setOccurredFollowing(value: Array<proto_r4_core_extensions_pb.ConditionOccurredFollowing.ValueX>): void;
   addOccurredFollowing(value?: proto_r4_core_extensions_pb.ConditionOccurredFollowing.ValueX, index?: number): proto_r4_core_extensions_pb.ConditionOccurredFollowing.ValueX;
 
   serializeBinary(): Uint8Array;
@@ -4009,16 +4009,16 @@ export namespace QICoreCondition {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     clinicalStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     verificationStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     severity?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    bodySiteList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    bodySite: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     onset?: QICoreCondition.OnsetX.AsObject,
@@ -4026,11 +4026,11 @@ export namespace QICoreCondition {
     recordedDate?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     recorder?: proto_r4_core_datatypes_pb.Reference.AsObject,
     asserter?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    stageList: Array<QICoreCondition.Stage.AsObject>,
-    evidenceList: Array<QICoreCondition.Evidence.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    dueToList: Array<proto_r4_core_extensions_pb.ConditionDueTo.ValueX.AsObject>,
-    occurredFollowingList: Array<proto_r4_core_extensions_pb.ConditionOccurredFollowing.ValueX.AsObject>,
+    stage: Array<QICoreCondition.Stage.AsObject>,
+    evidence: Array<QICoreCondition.Evidence.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    dueTo: Array<proto_r4_core_extensions_pb.ConditionDueTo.ValueX.AsObject>,
+    occurredFollowing: Array<proto_r4_core_extensions_pb.ConditionOccurredFollowing.ValueX.AsObject>,
   }
 
   export class OnsetX extends jspb.Message {
@@ -4137,14 +4137,14 @@ export namespace QICoreCondition {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSummary(): boolean;
@@ -4152,9 +4152,9 @@ export namespace QICoreCondition {
     getSummary(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setSummary(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearAssessmentList(): void;
-    getAssessmentList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setAssessmentList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearAssessment(): void;
+    getAssessment(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setAssessment(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addAssessment(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     hasType(): boolean;
@@ -4175,10 +4175,10 @@ export namespace QICoreCondition {
   export namespace Stage {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       summary?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      assessmentList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      assessment: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     }
   }
@@ -4189,24 +4189,24 @@ export namespace QICoreCondition {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearCodeList(): void;
-    getCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearCode(): void;
+    getCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearDetailList(): void;
-    getDetailList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setDetailList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearDetail(): void;
+    getDetail(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setDetail(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addDetail(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     serializeBinary(): Uint8Array;
@@ -4222,10 +4222,10 @@ export namespace QICoreCondition {
   export namespace Evidence {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      codeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      detailList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      code: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      detail: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     }
   }
 }
@@ -4256,24 +4256,24 @@ export class QICoreCoverage extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -4321,14 +4321,14 @@ export class QICoreCoverage extends jspb.Message {
   getPeriod(): proto_r4_core_datatypes_pb.Period | undefined;
   setPeriod(value?: proto_r4_core_datatypes_pb.Period): void;
 
-  clearPayorList(): void;
-  getPayorList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPayorList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPayor(): void;
+  getPayor(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPayor(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPayor(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearClassValueList(): void;
-  getClassValueList(): Array<QICoreCoverage.Class>;
-  setClassValueList(value: Array<QICoreCoverage.Class>): void;
+  clearClassValue(): void;
+  getClassValue(): Array<QICoreCoverage.Class>;
+  setClassValue(value: Array<QICoreCoverage.Class>): void;
   addClassValue(value?: QICoreCoverage.Class, index?: number): QICoreCoverage.Class;
 
   hasOrder(): boolean;
@@ -4341,9 +4341,9 @@ export class QICoreCoverage extends jspb.Message {
   getNetwork(): proto_r4_core_datatypes_pb.String | undefined;
   setNetwork(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearCostToBeneficiaryList(): void;
-  getCostToBeneficiaryList(): Array<QICoreCoverage.CostToBeneficiary>;
-  setCostToBeneficiaryList(value: Array<QICoreCoverage.CostToBeneficiary>): void;
+  clearCostToBeneficiary(): void;
+  getCostToBeneficiary(): Array<QICoreCoverage.CostToBeneficiary>;
+  setCostToBeneficiary(value: Array<QICoreCoverage.CostToBeneficiary>): void;
   addCostToBeneficiary(value?: QICoreCoverage.CostToBeneficiary, index?: number): QICoreCoverage.CostToBeneficiary;
 
   hasSubrogation(): boolean;
@@ -4351,9 +4351,9 @@ export class QICoreCoverage extends jspb.Message {
   getSubrogation(): proto_r4_core_datatypes_pb.Boolean | undefined;
   setSubrogation(value?: proto_r4_core_datatypes_pb.Boolean): void;
 
-  clearContractList(): void;
-  getContractList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setContractList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearContract(): void;
+  getContract(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setContract(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addContract(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -4373,10 +4373,10 @@ export namespace QICoreCoverage {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: QICoreCoverage.StatusCode.AsObject,
     type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     policyHolder?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -4386,13 +4386,13 @@ export namespace QICoreCoverage {
     dependent?: proto_r4_core_datatypes_pb.String.AsObject,
     relationship?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     period?: proto_r4_core_datatypes_pb.Period.AsObject,
-    payorList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    classValueList: Array<QICoreCoverage.Class.AsObject>,
+    payor: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    classValue: Array<QICoreCoverage.Class.AsObject>,
     order?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
     network?: proto_r4_core_datatypes_pb.String.AsObject,
-    costToBeneficiaryList: Array<QICoreCoverage.CostToBeneficiary.AsObject>,
+    costToBeneficiary: Array<QICoreCoverage.CostToBeneficiary.AsObject>,
     subrogation?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-    contractList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contract: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -4404,9 +4404,9 @@ export namespace QICoreCoverage {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -4423,7 +4423,7 @@ export namespace QICoreCoverage {
     export type AsObject = {
       value: proto_r4_core_codes_pb.FinancialResourceStatusCode.ValueMap[keyof proto_r4_core_codes_pb.FinancialResourceStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -4433,14 +4433,14 @@ export namespace QICoreCoverage {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -4471,8 +4471,8 @@ export namespace QICoreCoverage {
   export namespace Class {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       value?: proto_r4_core_datatypes_pb.String.AsObject,
       name?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -4485,14 +4485,14 @@ export namespace QICoreCoverage {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -4505,9 +4505,9 @@ export namespace QICoreCoverage {
     getValue(): QICoreCoverage.CostToBeneficiary.ValueX | undefined;
     setValue(value?: QICoreCoverage.CostToBeneficiary.ValueX): void;
 
-    clearExceptionList(): void;
-    getExceptionList(): Array<QICoreCoverage.CostToBeneficiary.Exemption>;
-    setExceptionList(value: Array<QICoreCoverage.CostToBeneficiary.Exemption>): void;
+    clearException(): void;
+    getException(): Array<QICoreCoverage.CostToBeneficiary.Exemption>;
+    setException(value: Array<QICoreCoverage.CostToBeneficiary.Exemption>): void;
     addException(value?: QICoreCoverage.CostToBeneficiary.Exemption, index?: number): QICoreCoverage.CostToBeneficiary.Exemption;
 
     serializeBinary(): Uint8Array;
@@ -4523,11 +4523,11 @@ export namespace QICoreCoverage {
   export namespace CostToBeneficiary {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       value?: QICoreCoverage.CostToBeneficiary.ValueX.AsObject,
-      exceptionList: Array<QICoreCoverage.CostToBeneficiary.Exemption.AsObject>,
+      exception: Array<QICoreCoverage.CostToBeneficiary.Exemption.AsObject>,
     }
 
     export class ValueX extends jspb.Message {
@@ -4571,14 +4571,14 @@ export namespace QICoreCoverage {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasType(): boolean;
@@ -4604,8 +4604,8 @@ export namespace QICoreCoverage {
     export namespace Exemption {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         period?: proto_r4_core_datatypes_pb.Period.AsObject,
       }
@@ -4639,24 +4639,24 @@ export class QICoreDevice extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasDefinition(): boolean;
@@ -4674,9 +4674,9 @@ export class QICoreDevice extends jspb.Message {
   getStatus(): QICoreDevice.StatusCode | undefined;
   setStatus(value?: QICoreDevice.StatusCode): void;
 
-  clearStatusReasonList(): void;
-  getStatusReasonList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setStatusReasonList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearStatusReason(): void;
+  getStatusReason(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setStatusReason(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addStatusReason(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasDistinctIdentifier(): boolean;
@@ -4709,9 +4709,9 @@ export class QICoreDevice extends jspb.Message {
   getSerialNumber(): proto_r4_core_datatypes_pb.String | undefined;
   setSerialNumber(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearDeviceNameList(): void;
-  getDeviceNameList(): Array<QICoreDevice.DeviceName>;
-  setDeviceNameList(value: Array<QICoreDevice.DeviceName>): void;
+  clearDeviceName(): void;
+  getDeviceName(): Array<QICoreDevice.DeviceName>;
+  setDeviceName(value: Array<QICoreDevice.DeviceName>): void;
   addDeviceName(value?: QICoreDevice.DeviceName, index?: number): QICoreDevice.DeviceName;
 
   hasModelNumber(): boolean;
@@ -4729,19 +4729,19 @@ export class QICoreDevice extends jspb.Message {
   getType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearSpecializationList(): void;
-  getSpecializationList(): Array<QICoreDevice.Specialization>;
-  setSpecializationList(value: Array<QICoreDevice.Specialization>): void;
+  clearSpecialization(): void;
+  getSpecialization(): Array<QICoreDevice.Specialization>;
+  setSpecialization(value: Array<QICoreDevice.Specialization>): void;
   addSpecialization(value?: QICoreDevice.Specialization, index?: number): QICoreDevice.Specialization;
 
-  clearVersionList(): void;
-  getVersionList(): Array<QICoreDevice.Version>;
-  setVersionList(value: Array<QICoreDevice.Version>): void;
+  clearVersion(): void;
+  getVersion(): Array<QICoreDevice.Version>;
+  setVersion(value: Array<QICoreDevice.Version>): void;
   addVersion(value?: QICoreDevice.Version, index?: number): QICoreDevice.Version;
 
-  clearPropertyList(): void;
-  getPropertyList(): Array<QICoreDevice.Property>;
-  setPropertyList(value: Array<QICoreDevice.Property>): void;
+  clearProperty(): void;
+  getProperty(): Array<QICoreDevice.Property>;
+  setProperty(value: Array<QICoreDevice.Property>): void;
   addProperty(value?: QICoreDevice.Property, index?: number): QICoreDevice.Property;
 
   hasPatient(): boolean;
@@ -4754,9 +4754,9 @@ export class QICoreDevice extends jspb.Message {
   getOwner(): proto_r4_core_datatypes_pb.Reference | undefined;
   setOwner(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearContactList(): void;
-  getContactList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setContactList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearContact(): void;
+  getContact(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setContact(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addContact(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
   hasLocation(): boolean;
@@ -4769,14 +4769,14 @@ export class QICoreDevice extends jspb.Message {
   getUrl(): proto_r4_core_datatypes_pb.Uri | undefined;
   setUrl(value?: proto_r4_core_datatypes_pb.Uri): void;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearSafetyList(): void;
-  getSafetyList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setSafetyList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearSafety(): void;
+  getSafety(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setSafety(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addSafety(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasParent(): boolean;
@@ -4801,34 +4801,34 @@ export namespace QICoreDevice {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     definition?: proto_r4_core_datatypes_pb.Reference.AsObject,
     udiCarrier?: QICoreDevice.UdiCarrier.AsObject,
     status?: QICoreDevice.StatusCode.AsObject,
-    statusReasonList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    statusReason: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     distinctIdentifier?: proto_r4_core_datatypes_pb.String.AsObject,
     manufacturer?: proto_r4_core_datatypes_pb.String.AsObject,
     manufactureDate?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     expirationDate?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     lotNumber?: proto_r4_core_datatypes_pb.String.AsObject,
     serialNumber?: proto_r4_core_datatypes_pb.String.AsObject,
-    deviceNameList: Array<QICoreDevice.DeviceName.AsObject>,
+    deviceName: Array<QICoreDevice.DeviceName.AsObject>,
     modelNumber?: proto_r4_core_datatypes_pb.String.AsObject,
     partNumber?: proto_r4_core_datatypes_pb.String.AsObject,
     type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    specializationList: Array<QICoreDevice.Specialization.AsObject>,
-    versionList: Array<QICoreDevice.Version.AsObject>,
-    propertyList: Array<QICoreDevice.Property.AsObject>,
+    specialization: Array<QICoreDevice.Specialization.AsObject>,
+    version: Array<QICoreDevice.Version.AsObject>,
+    property: Array<QICoreDevice.Property.AsObject>,
     patient?: proto_r4_core_datatypes_pb.Reference.AsObject,
     owner?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    contactList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    contact: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
     location?: proto_r4_core_datatypes_pb.Reference.AsObject,
     url?: proto_r4_core_datatypes_pb.Uri.AsObject,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    safetyList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    safety: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     parent?: proto_r4_core_datatypes_pb.Reference.AsObject,
   }
 
@@ -4838,14 +4838,14 @@ export namespace QICoreDevice {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasDeviceIdentifier(): boolean;
@@ -4891,8 +4891,8 @@ export namespace QICoreDevice {
   export namespace UdiCarrier {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       deviceIdentifier?: proto_r4_core_datatypes_pb.String.AsObject,
       issuer?: proto_r4_core_datatypes_pb.Uri.AsObject,
       jurisdiction?: proto_r4_core_datatypes_pb.Uri.AsObject,
@@ -4910,9 +4910,9 @@ export namespace QICoreDevice {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -4929,7 +4929,7 @@ export namespace QICoreDevice {
       export type AsObject = {
         value: proto_r4_core_codes_pb.UDIEntryTypeCode.ValueMap[keyof proto_r4_core_codes_pb.UDIEntryTypeCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -4943,9 +4943,9 @@ export namespace QICoreDevice {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -4962,7 +4962,7 @@ export namespace QICoreDevice {
     export type AsObject = {
       value: proto_r4_core_codes_pb.FHIRDeviceStatusCode.ValueMap[keyof proto_r4_core_codes_pb.FHIRDeviceStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -4972,14 +4972,14 @@ export namespace QICoreDevice {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasName(): boolean;
@@ -5005,8 +5005,8 @@ export namespace QICoreDevice {
   export namespace DeviceName {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       name?: proto_r4_core_datatypes_pb.String.AsObject,
       type?: QICoreDevice.DeviceName.TypeCode.AsObject,
     }
@@ -5020,9 +5020,9 @@ export namespace QICoreDevice {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -5039,7 +5039,7 @@ export namespace QICoreDevice {
       export type AsObject = {
         value: proto_r4_core_codes_pb.DeviceNameTypeCode.ValueMap[keyof proto_r4_core_codes_pb.DeviceNameTypeCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -5050,14 +5050,14 @@ export namespace QICoreDevice {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSystemType(): boolean;
@@ -5083,8 +5083,8 @@ export namespace QICoreDevice {
   export namespace Specialization {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       systemType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       version?: proto_r4_core_datatypes_pb.String.AsObject,
     }
@@ -5096,14 +5096,14 @@ export namespace QICoreDevice {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -5134,8 +5134,8 @@ export namespace QICoreDevice {
   export namespace Version {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       component?: proto_r4_core_datatypes_pb.Identifier.AsObject,
       value?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -5148,14 +5148,14 @@ export namespace QICoreDevice {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -5163,14 +5163,14 @@ export namespace QICoreDevice {
     getType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearValueQuantityList(): void;
-    getValueQuantityList(): Array<proto_r4_core_datatypes_pb.Quantity>;
-    setValueQuantityList(value: Array<proto_r4_core_datatypes_pb.Quantity>): void;
+    clearValueQuantity(): void;
+    getValueQuantity(): Array<proto_r4_core_datatypes_pb.Quantity>;
+    setValueQuantity(value: Array<proto_r4_core_datatypes_pb.Quantity>): void;
     addValueQuantity(value?: proto_r4_core_datatypes_pb.Quantity, index?: number): proto_r4_core_datatypes_pb.Quantity;
 
-    clearValueCodeList(): void;
-    getValueCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setValueCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearValueCode(): void;
+    getValueCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setValueCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addValueCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     serializeBinary(): Uint8Array;
@@ -5186,11 +5186,11 @@ export namespace QICoreDevice {
   export namespace Property {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      valueQuantityList: Array<proto_r4_core_datatypes_pb.Quantity.AsObject>,
-      valueCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      valueQuantity: Array<proto_r4_core_datatypes_pb.Quantity.AsObject>,
+      valueCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     }
   }
 }
@@ -5221,44 +5221,44 @@ export class QICoreDeviceRequest extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearInstantiatesCanonicalList(): void;
-  getInstantiatesCanonicalList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-  setInstantiatesCanonicalList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+  clearInstantiatesCanonical(): void;
+  getInstantiatesCanonical(): Array<proto_r4_core_datatypes_pb.Canonical>;
+  setInstantiatesCanonical(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
   addInstantiatesCanonical(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
-  clearInstantiatesUriList(): void;
-  getInstantiatesUriList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setInstantiatesUriList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearInstantiatesUri(): void;
+  getInstantiatesUri(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setInstantiatesUri(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addInstantiatesUri(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearPriorRequestList(): void;
-  getPriorRequestList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPriorRequestList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPriorRequest(): void;
+  getPriorRequest(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPriorRequest(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPriorRequest(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasGroupIdentifier(): boolean;
@@ -5286,9 +5286,9 @@ export class QICoreDeviceRequest extends jspb.Message {
   getCode(): QICoreDeviceRequest.CodeX | undefined;
   setCode(value?: QICoreDeviceRequest.CodeX): void;
 
-  clearParameterList(): void;
-  getParameterList(): Array<QICoreDeviceRequest.Parameter>;
-  setParameterList(value: Array<QICoreDeviceRequest.Parameter>): void;
+  clearParameter(): void;
+  getParameter(): Array<QICoreDeviceRequest.Parameter>;
+  setParameter(value: Array<QICoreDeviceRequest.Parameter>): void;
   addParameter(value?: QICoreDeviceRequest.Parameter, index?: number): QICoreDeviceRequest.Parameter;
 
   hasSubject(): boolean;
@@ -5326,34 +5326,34 @@ export class QICoreDeviceRequest extends jspb.Message {
   getPerformer(): proto_r4_core_datatypes_pb.Reference | undefined;
   setPerformer(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearInsuranceList(): void;
-  getInsuranceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setInsuranceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearInsurance(): void;
+  getInsurance(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setInsurance(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addInsurance(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearSupportingInfoList(): void;
-  getSupportingInfoList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSupportingInfoList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSupportingInfo(): void;
+  getSupportingInfo(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSupportingInfo(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSupportingInfo(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearRelevantHistoryList(): void;
-  getRelevantHistoryList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setRelevantHistoryList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearRelevantHistory(): void;
+  getRelevantHistory(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setRelevantHistory(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addRelevantHistory(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasDoNotPerform(): boolean;
@@ -5378,20 +5378,20 @@ export namespace QICoreDeviceRequest {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    instantiatesCanonicalList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
-    instantiatesUriList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    priorRequestList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    instantiatesCanonical: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+    instantiatesUri: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    priorRequest: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     groupIdentifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
     status?: QICoreDeviceRequest.StatusCode.AsObject,
     intent?: QICoreDeviceRequest.IntentCode.AsObject,
     priority?: QICoreDeviceRequest.PriorityCode.AsObject,
     code?: QICoreDeviceRequest.CodeX.AsObject,
-    parameterList: Array<QICoreDeviceRequest.Parameter.AsObject>,
+    parameter: Array<QICoreDeviceRequest.Parameter.AsObject>,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     occurrence?: QICoreDeviceRequest.OccurrenceX.AsObject,
@@ -5399,12 +5399,12 @@ export namespace QICoreDeviceRequest {
     requester?: proto_r4_core_datatypes_pb.Reference.AsObject,
     performerType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     performer?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    insuranceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    supportingInfoList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    relevantHistoryList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    insurance: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    supportingInfo: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    relevantHistory: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     doNotPerform?: proto_r4_core_datatypes_pb.Boolean.AsObject,
   }
 
@@ -5417,9 +5417,9 @@ export namespace QICoreDeviceRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -5436,7 +5436,7 @@ export namespace QICoreDeviceRequest {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestStatusCode.ValueMap[keyof proto_r4_core_codes_pb.RequestStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -5449,9 +5449,9 @@ export namespace QICoreDeviceRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -5468,7 +5468,7 @@ export namespace QICoreDeviceRequest {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestIntentCode.ValueMap[keyof proto_r4_core_codes_pb.RequestIntentCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -5481,9 +5481,9 @@ export namespace QICoreDeviceRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -5500,7 +5500,7 @@ export namespace QICoreDeviceRequest {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestPriorityCode.ValueMap[keyof proto_r4_core_codes_pb.RequestPriorityCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -5545,14 +5545,14 @@ export namespace QICoreDeviceRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -5578,8 +5578,8 @@ export namespace QICoreDeviceRequest {
   export namespace Parameter {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       value?: QICoreDeviceRequest.Parameter.ValueX.AsObject,
     }
@@ -5683,9 +5683,9 @@ export class DeviceUseStatementQICoreNotDoneExtension extends jspb.Message {
   getId(): proto_r4_core_datatypes_pb.String | undefined;
   setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasValue(): boolean;
@@ -5706,7 +5706,7 @@ export class DeviceUseStatementQICoreNotDoneExtension extends jspb.Message {
 export namespace DeviceUseStatementQICoreNotDoneExtension {
   export type AsObject = {
     id?: proto_r4_core_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     value?: DeviceUseStatementQICoreNotDoneExtension.ValueX.AsObject,
   }
 
@@ -5765,29 +5765,29 @@ export class QICoreDeviceUseStatement extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -5800,9 +5800,9 @@ export class QICoreDeviceUseStatement extends jspb.Message {
   getSubject(): proto_r4_core_datatypes_pb.Reference | undefined;
   setSubject(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearDerivedFromList(): void;
-  getDerivedFromList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setDerivedFromList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearDerivedFrom(): void;
+  getDerivedFrom(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setDerivedFrom(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addDerivedFrom(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasTiming(): boolean;
@@ -5825,14 +5825,14 @@ export class QICoreDeviceUseStatement extends jspb.Message {
   getDevice(): proto_r4_core_datatypes_pb.Reference | undefined;
   setDevice(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasBodySite(): boolean;
@@ -5840,9 +5840,9 @@ export class QICoreDeviceUseStatement extends jspb.Message {
   getBodySite(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setBodySite(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   hasNotDone(): boolean;
@@ -5867,22 +5867,22 @@ export namespace QICoreDeviceUseStatement {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: QICoreDeviceUseStatement.StatusCode.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    derivedFromList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    derivedFrom: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     timing?: QICoreDeviceUseStatement.TimingX.AsObject,
     recordedOn?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     source?: proto_r4_core_datatypes_pb.Reference.AsObject,
     device?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     bodySite?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
     notDone?: proto_r4_core_datatypes_pb.Boolean.AsObject,
   }
 
@@ -5895,9 +5895,9 @@ export namespace QICoreDeviceUseStatement {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -5914,7 +5914,7 @@ export namespace QICoreDeviceUseStatement {
     export type AsObject = {
       value: proto_r4_core_codes_pb.DeviceUseStatementStatusCode.ValueMap[keyof proto_r4_core_codes_pb.DeviceUseStatementStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -5987,29 +5987,29 @@ export class QICoreDiagnosticReportLab extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -6017,9 +6017,9 @@ export class QICoreDiagnosticReportLab extends jspb.Message {
   getStatus(): QICoreDiagnosticReportLab.StatusCode | undefined;
   setStatus(value?: QICoreDiagnosticReportLab.StatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -6047,34 +6047,34 @@ export class QICoreDiagnosticReportLab extends jspb.Message {
   getIssued(): proto_r4_core_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_r4_core_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearResultsInterpreterList(): void;
-  getResultsInterpreterList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setResultsInterpreterList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearResultsInterpreter(): void;
+  getResultsInterpreter(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setResultsInterpreter(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addResultsInterpreter(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearSpecimenList(): void;
-  getSpecimenList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSpecimenList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSpecimen(): void;
+  getSpecimen(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSpecimen(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSpecimen(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearResultList(): void;
-  getResultList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setResultList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearResult(): void;
+  getResult(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setResult(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addResult(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearImagingStudyList(): void;
-  getImagingStudyList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setImagingStudyList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearImagingStudy(): void;
+  getImagingStudy(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setImagingStudy(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addImagingStudy(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearMediaList(): void;
-  getMediaList(): Array<QICoreDiagnosticReportLab.Media>;
-  setMediaList(value: Array<QICoreDiagnosticReportLab.Media>): void;
+  clearMedia(): void;
+  getMedia(): Array<QICoreDiagnosticReportLab.Media>;
+  setMedia(value: Array<QICoreDiagnosticReportLab.Media>): void;
   addMedia(value?: QICoreDiagnosticReportLab.Media, index?: number): QICoreDiagnosticReportLab.Media;
 
   hasConclusion(): boolean;
@@ -6082,14 +6082,14 @@ export class QICoreDiagnosticReportLab extends jspb.Message {
   getConclusion(): proto_r4_core_datatypes_pb.String | undefined;
   setConclusion(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearConclusionCodeList(): void;
-  getConclusionCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setConclusionCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearConclusionCode(): void;
+  getConclusionCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setConclusionCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addConclusionCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearPresentedFormList(): void;
-  getPresentedFormList(): Array<proto_r4_core_datatypes_pb.Attachment>;
-  setPresentedFormList(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
+  clearPresentedForm(): void;
+  getPresentedForm(): Array<proto_r4_core_datatypes_pb.Attachment>;
+  setPresentedForm(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
   addPresentedForm(value?: proto_r4_core_datatypes_pb.Attachment, index?: number): proto_r4_core_datatypes_pb.Attachment;
 
   hasLocationPerformed(): boolean;
@@ -6114,27 +6114,27 @@ export namespace QICoreDiagnosticReportLab {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: QICoreDiagnosticReportLab.StatusCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     effective?: QICoreDiagnosticReportLab.EffectiveX.AsObject,
     issued?: proto_r4_core_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    resultsInterpreterList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    specimenList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    resultList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    imagingStudyList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    mediaList: Array<QICoreDiagnosticReportLab.Media.AsObject>,
+    performer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    resultsInterpreter: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    specimen: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    result: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    imagingStudy: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    media: Array<QICoreDiagnosticReportLab.Media.AsObject>,
     conclusion?: proto_r4_core_datatypes_pb.String.AsObject,
-    conclusionCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    presentedFormList: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
+    conclusionCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    presentedForm: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
     locationPerformed?: proto_r4_core_datatypes_pb.Reference.AsObject,
   }
 
@@ -6147,9 +6147,9 @@ export namespace QICoreDiagnosticReportLab {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -6166,7 +6166,7 @@ export namespace QICoreDiagnosticReportLab {
     export type AsObject = {
       value: proto_r4_core_codes_pb.DiagnosticReportStatusCode.ValueMap[keyof proto_r4_core_codes_pb.DiagnosticReportStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -6211,14 +6211,14 @@ export namespace QICoreDiagnosticReportLab {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasComment(): boolean;
@@ -6244,8 +6244,8 @@ export namespace QICoreDiagnosticReportLab {
   export namespace Media {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       comment?: proto_r4_core_datatypes_pb.String.AsObject,
       link?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
@@ -6278,29 +6278,29 @@ export class QICoreDiagnosticReportNote extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -6308,9 +6308,9 @@ export class QICoreDiagnosticReportNote extends jspb.Message {
   getStatus(): QICoreDiagnosticReportNote.StatusCode | undefined;
   setStatus(value?: QICoreDiagnosticReportNote.StatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -6338,34 +6338,34 @@ export class QICoreDiagnosticReportNote extends jspb.Message {
   getIssued(): proto_r4_core_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_r4_core_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearResultsInterpreterList(): void;
-  getResultsInterpreterList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setResultsInterpreterList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearResultsInterpreter(): void;
+  getResultsInterpreter(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setResultsInterpreter(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addResultsInterpreter(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearSpecimenList(): void;
-  getSpecimenList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSpecimenList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSpecimen(): void;
+  getSpecimen(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSpecimen(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSpecimen(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearResultList(): void;
-  getResultList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setResultList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearResult(): void;
+  getResult(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setResult(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addResult(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearImagingStudyList(): void;
-  getImagingStudyList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setImagingStudyList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearImagingStudy(): void;
+  getImagingStudy(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setImagingStudy(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addImagingStudy(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearMediaList(): void;
-  getMediaList(): Array<QICoreDiagnosticReportNote.Media>;
-  setMediaList(value: Array<QICoreDiagnosticReportNote.Media>): void;
+  clearMedia(): void;
+  getMedia(): Array<QICoreDiagnosticReportNote.Media>;
+  setMedia(value: Array<QICoreDiagnosticReportNote.Media>): void;
   addMedia(value?: QICoreDiagnosticReportNote.Media, index?: number): QICoreDiagnosticReportNote.Media;
 
   hasConclusion(): boolean;
@@ -6373,14 +6373,14 @@ export class QICoreDiagnosticReportNote extends jspb.Message {
   getConclusion(): proto_r4_core_datatypes_pb.String | undefined;
   setConclusion(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearConclusionCodeList(): void;
-  getConclusionCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setConclusionCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearConclusionCode(): void;
+  getConclusionCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setConclusionCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addConclusionCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearPresentedFormList(): void;
-  getPresentedFormList(): Array<proto_r4_core_datatypes_pb.Attachment>;
-  setPresentedFormList(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
+  clearPresentedForm(): void;
+  getPresentedForm(): Array<proto_r4_core_datatypes_pb.Attachment>;
+  setPresentedForm(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
   addPresentedForm(value?: proto_r4_core_datatypes_pb.Attachment, index?: number): proto_r4_core_datatypes_pb.Attachment;
 
   hasLocationPerformed(): boolean;
@@ -6405,27 +6405,27 @@ export namespace QICoreDiagnosticReportNote {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: QICoreDiagnosticReportNote.StatusCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     effective?: QICoreDiagnosticReportNote.EffectiveX.AsObject,
     issued?: proto_r4_core_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    resultsInterpreterList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    specimenList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    resultList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    imagingStudyList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    mediaList: Array<QICoreDiagnosticReportNote.Media.AsObject>,
+    performer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    resultsInterpreter: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    specimen: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    result: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    imagingStudy: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    media: Array<QICoreDiagnosticReportNote.Media.AsObject>,
     conclusion?: proto_r4_core_datatypes_pb.String.AsObject,
-    conclusionCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    presentedFormList: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
+    conclusionCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    presentedForm: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
     locationPerformed?: proto_r4_core_datatypes_pb.Reference.AsObject,
   }
 
@@ -6438,9 +6438,9 @@ export namespace QICoreDiagnosticReportNote {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -6457,7 +6457,7 @@ export namespace QICoreDiagnosticReportNote {
     export type AsObject = {
       value: proto_r4_core_codes_pb.DiagnosticReportStatusCode.ValueMap[keyof proto_r4_core_codes_pb.DiagnosticReportStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -6502,14 +6502,14 @@ export namespace QICoreDiagnosticReportNote {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasComment(): boolean;
@@ -6535,8 +6535,8 @@ export namespace QICoreDiagnosticReportNote {
   export namespace Media {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       comment?: proto_r4_core_datatypes_pb.String.AsObject,
       link?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
@@ -6549,9 +6549,9 @@ export class EncounterEncounterProcedureExtension extends jspb.Message {
   getId(): proto_r4_core_datatypes_pb.String | undefined;
   setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasType(): boolean;
@@ -6582,7 +6582,7 @@ export class EncounterEncounterProcedureExtension extends jspb.Message {
 export namespace EncounterEncounterProcedureExtension {
   export type AsObject = {
     id?: proto_r4_core_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     rank?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
     procedure?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -6615,24 +6615,24 @@ export class QICoreEncounter extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -6640,9 +6640,9 @@ export class QICoreEncounter extends jspb.Message {
   getStatus(): QICoreEncounter.StatusCode | undefined;
   setStatus(value?: QICoreEncounter.StatusCode): void;
 
-  clearStatusHistoryList(): void;
-  getStatusHistoryList(): Array<QICoreEncounter.StatusHistory>;
-  setStatusHistoryList(value: Array<QICoreEncounter.StatusHistory>): void;
+  clearStatusHistory(): void;
+  getStatusHistory(): Array<QICoreEncounter.StatusHistory>;
+  setStatusHistory(value: Array<QICoreEncounter.StatusHistory>): void;
   addStatusHistory(value?: QICoreEncounter.StatusHistory, index?: number): QICoreEncounter.StatusHistory;
 
   hasClassValue(): boolean;
@@ -6650,14 +6650,14 @@ export class QICoreEncounter extends jspb.Message {
   getClassValue(): proto_r4_core_datatypes_pb.Coding | undefined;
   setClassValue(value?: proto_r4_core_datatypes_pb.Coding): void;
 
-  clearClassHistoryList(): void;
-  getClassHistoryList(): Array<QICoreEncounter.ClassHistory>;
-  setClassHistoryList(value: Array<QICoreEncounter.ClassHistory>): void;
+  clearClassHistory(): void;
+  getClassHistory(): Array<QICoreEncounter.ClassHistory>;
+  setClassHistory(value: Array<QICoreEncounter.ClassHistory>): void;
   addClassHistory(value?: QICoreEncounter.ClassHistory, index?: number): QICoreEncounter.ClassHistory;
 
-  clearTypeList(): void;
-  getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearType(): void;
+  getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasServiceType(): boolean;
@@ -6675,24 +6675,24 @@ export class QICoreEncounter extends jspb.Message {
   getSubject(): proto_r4_core_datatypes_pb.Reference | undefined;
   setSubject(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearEpisodeOfCareList(): void;
-  getEpisodeOfCareList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setEpisodeOfCareList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearEpisodeOfCare(): void;
+  getEpisodeOfCare(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setEpisodeOfCare(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addEpisodeOfCare(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearParticipantList(): void;
-  getParticipantList(): Array<QICoreEncounter.Participant>;
-  setParticipantList(value: Array<QICoreEncounter.Participant>): void;
+  clearParticipant(): void;
+  getParticipant(): Array<QICoreEncounter.Participant>;
+  setParticipant(value: Array<QICoreEncounter.Participant>): void;
   addParticipant(value?: QICoreEncounter.Participant, index?: number): QICoreEncounter.Participant;
 
-  clearAppointmentList(): void;
-  getAppointmentList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setAppointmentList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearAppointment(): void;
+  getAppointment(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setAppointment(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addAppointment(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasPeriod(): boolean;
@@ -6705,24 +6705,24 @@ export class QICoreEncounter extends jspb.Message {
   getLength(): proto_r4_core_datatypes_pb.Duration | undefined;
   setLength(value?: proto_r4_core_datatypes_pb.Duration): void;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearDiagnosisList(): void;
-  getDiagnosisList(): Array<QICoreEncounter.Diagnosis>;
-  setDiagnosisList(value: Array<QICoreEncounter.Diagnosis>): void;
+  clearDiagnosis(): void;
+  getDiagnosis(): Array<QICoreEncounter.Diagnosis>;
+  setDiagnosis(value: Array<QICoreEncounter.Diagnosis>): void;
   addDiagnosis(value?: QICoreEncounter.Diagnosis, index?: number): QICoreEncounter.Diagnosis;
 
-  clearAccountList(): void;
-  getAccountList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setAccountList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearAccount(): void;
+  getAccount(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setAccount(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addAccount(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasHospitalization(): boolean;
@@ -6730,9 +6730,9 @@ export class QICoreEncounter extends jspb.Message {
   getHospitalization(): QICoreEncounter.Hospitalization | undefined;
   setHospitalization(value?: QICoreEncounter.Hospitalization): void;
 
-  clearLocationList(): void;
-  getLocationList(): Array<QICoreEncounter.Location>;
-  setLocationList(value: Array<QICoreEncounter.Location>): void;
+  clearLocation(): void;
+  getLocation(): Array<QICoreEncounter.Location>;
+  setLocation(value: Array<QICoreEncounter.Location>): void;
   addLocation(value?: QICoreEncounter.Location, index?: number): QICoreEncounter.Location;
 
   hasServiceProvider(): boolean;
@@ -6750,9 +6750,9 @@ export class QICoreEncounter extends jspb.Message {
   getReasonCancelled(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setReasonCancelled(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearProcedureList(): void;
-  getProcedureList(): Array<EncounterEncounterProcedureExtension>;
-  setProcedureList(value: Array<EncounterEncounterProcedureExtension>): void;
+  clearProcedure(): void;
+  getProcedure(): Array<EncounterEncounterProcedureExtension>;
+  setProcedure(value: Array<EncounterEncounterProcedureExtension>): void;
   addProcedure(value?: EncounterEncounterProcedureExtension, index?: number): EncounterEncounterProcedureExtension;
 
   serializeBinary(): Uint8Array;
@@ -6772,34 +6772,34 @@ export namespace QICoreEncounter {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: QICoreEncounter.StatusCode.AsObject,
-    statusHistoryList: Array<QICoreEncounter.StatusHistory.AsObject>,
+    statusHistory: Array<QICoreEncounter.StatusHistory.AsObject>,
     classValue?: proto_r4_core_datatypes_pb.Coding.AsObject,
-    classHistoryList: Array<QICoreEncounter.ClassHistory.AsObject>,
-    typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    classHistory: Array<QICoreEncounter.ClassHistory.AsObject>,
+    type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     serviceType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     priority?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    episodeOfCareList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    participantList: Array<QICoreEncounter.Participant.AsObject>,
-    appointmentList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    episodeOfCare: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    participant: Array<QICoreEncounter.Participant.AsObject>,
+    appointment: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     period?: proto_r4_core_datatypes_pb.Period.AsObject,
     length?: proto_r4_core_datatypes_pb.Duration.AsObject,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    diagnosisList: Array<QICoreEncounter.Diagnosis.AsObject>,
-    accountList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    diagnosis: Array<QICoreEncounter.Diagnosis.AsObject>,
+    account: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     hospitalization?: QICoreEncounter.Hospitalization.AsObject,
-    locationList: Array<QICoreEncounter.Location.AsObject>,
+    location: Array<QICoreEncounter.Location.AsObject>,
     serviceProvider?: proto_r4_core_datatypes_pb.Reference.AsObject,
     partOf?: proto_r4_core_datatypes_pb.Reference.AsObject,
     reasonCancelled?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    procedureList: Array<EncounterEncounterProcedureExtension.AsObject>,
+    procedure: Array<EncounterEncounterProcedureExtension.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -6811,9 +6811,9 @@ export namespace QICoreEncounter {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -6830,7 +6830,7 @@ export namespace QICoreEncounter {
     export type AsObject = {
       value: proto_r4_core_codes_pb.EncounterStatusCode.ValueMap[keyof proto_r4_core_codes_pb.EncounterStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -6840,14 +6840,14 @@ export namespace QICoreEncounter {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasStatus(): boolean;
@@ -6873,8 +6873,8 @@ export namespace QICoreEncounter {
   export namespace StatusHistory {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       status?: QICoreEncounter.StatusHistory.StatusCode.AsObject,
       period?: proto_r4_core_datatypes_pb.Period.AsObject,
     }
@@ -6888,9 +6888,9 @@ export namespace QICoreEncounter {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -6907,7 +6907,7 @@ export namespace QICoreEncounter {
       export type AsObject = {
         value: proto_r4_core_codes_pb.EncounterStatusCode.ValueMap[keyof proto_r4_core_codes_pb.EncounterStatusCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -6918,14 +6918,14 @@ export namespace QICoreEncounter {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasClassValue(): boolean;
@@ -6951,8 +6951,8 @@ export namespace QICoreEncounter {
   export namespace ClassHistory {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       classValue?: proto_r4_core_datatypes_pb.Coding.AsObject,
       period?: proto_r4_core_datatypes_pb.Period.AsObject,
     }
@@ -6964,19 +6964,19 @@ export namespace QICoreEncounter {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearTypeList(): void;
-    getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearType(): void;
+    getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasPeriod(): boolean;
@@ -7002,9 +7002,9 @@ export namespace QICoreEncounter {
   export namespace Participant {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       period?: proto_r4_core_datatypes_pb.Period.AsObject,
       individual?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
@@ -7016,14 +7016,14 @@ export namespace QICoreEncounter {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCondition(): boolean;
@@ -7054,8 +7054,8 @@ export namespace QICoreEncounter {
   export namespace Diagnosis {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       condition?: proto_r4_core_datatypes_pb.Reference.AsObject,
       use?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       rank?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
@@ -7068,14 +7068,14 @@ export namespace QICoreEncounter {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasPreAdmissionIdentifier(): boolean;
@@ -7098,19 +7098,19 @@ export namespace QICoreEncounter {
     getReAdmission(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setReAdmission(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearDietPreferenceList(): void;
-    getDietPreferenceList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setDietPreferenceList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearDietPreference(): void;
+    getDietPreference(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setDietPreference(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addDietPreference(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearSpecialCourtesyList(): void;
-    getSpecialCourtesyList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setSpecialCourtesyList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearSpecialCourtesy(): void;
+    getSpecialCourtesy(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setSpecialCourtesy(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addSpecialCourtesy(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearSpecialArrangementList(): void;
-    getSpecialArrangementList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setSpecialArrangementList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearSpecialArrangement(): void;
+    getSpecialArrangement(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setSpecialArrangement(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addSpecialArrangement(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasDestination(): boolean;
@@ -7136,15 +7136,15 @@ export namespace QICoreEncounter {
   export namespace Hospitalization {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       preAdmissionIdentifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
       origin?: proto_r4_core_datatypes_pb.Reference.AsObject,
       admitSource?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       reAdmission?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      dietPreferenceList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      specialCourtesyList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      specialArrangementList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      dietPreference: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      specialCourtesy: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      specialArrangement: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       destination?: proto_r4_core_datatypes_pb.Reference.AsObject,
       dischargeDisposition?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     }
@@ -7156,14 +7156,14 @@ export namespace QICoreEncounter {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasLocation(): boolean;
@@ -7199,8 +7199,8 @@ export namespace QICoreEncounter {
   export namespace Location {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       location?: proto_r4_core_datatypes_pb.Reference.AsObject,
       status?: QICoreEncounter.Location.StatusCode.AsObject,
       physicalType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -7216,9 +7216,9 @@ export namespace QICoreEncounter {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -7235,7 +7235,7 @@ export namespace QICoreEncounter {
       export type AsObject = {
         value: proto_r4_core_codes_pb.EncounterLocationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.EncounterLocationStatusCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -7267,34 +7267,34 @@ export class QICoreFamilyMemberHistory extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearInstantiatesCanonicalList(): void;
-  getInstantiatesCanonicalList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-  setInstantiatesCanonicalList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+  clearInstantiatesCanonical(): void;
+  getInstantiatesCanonical(): Array<proto_r4_core_datatypes_pb.Canonical>;
+  setInstantiatesCanonical(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
   addInstantiatesCanonical(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
-  clearInstantiatesUriList(): void;
-  getInstantiatesUriList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setInstantiatesUriList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearInstantiatesUri(): void;
+  getInstantiatesUri(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setInstantiatesUri(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addInstantiatesUri(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
   hasStatus(): boolean;
@@ -7352,24 +7352,24 @@ export class QICoreFamilyMemberHistory extends jspb.Message {
   getDeceased(): QICoreFamilyMemberHistory.DeceasedX | undefined;
   setDeceased(value?: QICoreFamilyMemberHistory.DeceasedX): void;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearConditionList(): void;
-  getConditionList(): Array<QICoreFamilyMemberHistory.Condition>;
-  setConditionList(value: Array<QICoreFamilyMemberHistory.Condition>): void;
+  clearCondition(): void;
+  getCondition(): Array<QICoreFamilyMemberHistory.Condition>;
+  setCondition(value: Array<QICoreFamilyMemberHistory.Condition>): void;
   addCondition(value?: QICoreFamilyMemberHistory.Condition, index?: number): QICoreFamilyMemberHistory.Condition;
 
   serializeBinary(): Uint8Array;
@@ -7389,12 +7389,12 @@ export namespace QICoreFamilyMemberHistory {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    instantiatesCanonicalList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
-    instantiatesUriList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    instantiatesCanonical: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+    instantiatesUri: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
     status?: QICoreFamilyMemberHistory.StatusCode.AsObject,
     dataAbsentReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     patient?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -7406,10 +7406,10 @@ export namespace QICoreFamilyMemberHistory {
     age?: QICoreFamilyMemberHistory.AgeX.AsObject,
     estimatedAge?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     deceased?: QICoreFamilyMemberHistory.DeceasedX.AsObject,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    conditionList: Array<QICoreFamilyMemberHistory.Condition.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    condition: Array<QICoreFamilyMemberHistory.Condition.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -7421,9 +7421,9 @@ export namespace QICoreFamilyMemberHistory {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -7440,7 +7440,7 @@ export namespace QICoreFamilyMemberHistory {
     export type AsObject = {
       value: proto_r4_core_codes_pb.FamilyHistoryStatusCode.ValueMap[keyof proto_r4_core_codes_pb.FamilyHistoryStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -7590,14 +7590,14 @@ export namespace QICoreFamilyMemberHistory {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -7620,9 +7620,9 @@ export namespace QICoreFamilyMemberHistory {
     getOnset(): QICoreFamilyMemberHistory.Condition.OnsetX | undefined;
     setOnset(value?: QICoreFamilyMemberHistory.Condition.OnsetX): void;
 
-    clearNoteList(): void;
-    getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-    setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+    clearNote(): void;
+    getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+    setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
     addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
     hasConditionAbatement(): boolean;
@@ -7648,13 +7648,13 @@ export namespace QICoreFamilyMemberHistory {
   export namespace Condition {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       outcome?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       contributedToDeath?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       onset?: QICoreFamilyMemberHistory.Condition.OnsetX.AsObject,
-      noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+      note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
       conditionAbatement?: proto_r4_core_extensions_pb.FamilyMemberHistoryAbatement.ValueX.AsObject,
       conditionSeverity?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     }
@@ -7736,24 +7736,24 @@ export class QICoreFlag extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -7761,9 +7761,9 @@ export class QICoreFlag extends jspb.Message {
   getStatus(): QICoreFlag.StatusCode | undefined;
   setStatus(value?: QICoreFlag.StatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -7808,12 +7808,12 @@ export namespace QICoreFlag {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: QICoreFlag.StatusCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     period?: proto_r4_core_datatypes_pb.Period.AsObject,
@@ -7830,9 +7830,9 @@ export namespace QICoreFlag {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -7849,7 +7849,7 @@ export namespace QICoreFlag {
     export type AsObject = {
       value: proto_r4_core_codes_pb.FlagStatusCode.ValueMap[keyof proto_r4_core_codes_pb.FlagStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 }
@@ -7880,24 +7880,24 @@ export class QICoreGoal extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasLifecycleStatus(): boolean;
@@ -7910,9 +7910,9 @@ export class QICoreGoal extends jspb.Message {
   getAchievementStatus(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setAchievementStatus(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasPriority(): boolean;
@@ -7935,9 +7935,9 @@ export class QICoreGoal extends jspb.Message {
   getStart(): QICoreGoal.StartX | undefined;
   setStart(value?: QICoreGoal.StartX): void;
 
-  clearTargetList(): void;
-  getTargetList(): Array<QICoreGoal.Target>;
-  setTargetList(value: Array<QICoreGoal.Target>): void;
+  clearTarget(): void;
+  getTarget(): Array<QICoreGoal.Target>;
+  setTarget(value: Array<QICoreGoal.Target>): void;
   addTarget(value?: QICoreGoal.Target, index?: number): QICoreGoal.Target;
 
   hasStatusDate(): boolean;
@@ -7955,24 +7955,24 @@ export class QICoreGoal extends jspb.Message {
   getExpressedBy(): proto_r4_core_datatypes_pb.Reference | undefined;
   setExpressedBy(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearAddressesList(): void;
-  getAddressesList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setAddressesList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearAddresses(): void;
+  getAddresses(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setAddresses(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addAddresses(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearOutcomeCodeList(): void;
-  getOutcomeCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setOutcomeCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearOutcomeCode(): void;
+  getOutcomeCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setOutcomeCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addOutcomeCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearOutcomeReferenceList(): void;
-  getOutcomeReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setOutcomeReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearOutcomeReference(): void;
+  getOutcomeReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setOutcomeReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addOutcomeReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasReasonRejected(): boolean;
@@ -7997,25 +7997,25 @@ export namespace QICoreGoal {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     lifecycleStatus?: QICoreGoal.LifecycleStatusCode.AsObject,
     achievementStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     priority?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     description?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     start?: QICoreGoal.StartX.AsObject,
-    targetList: Array<QICoreGoal.Target.AsObject>,
+    target: Array<QICoreGoal.Target.AsObject>,
     statusDate?: proto_r4_core_datatypes_pb.Date.AsObject,
     statusReason?: proto_r4_core_datatypes_pb.String.AsObject,
     expressedBy?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    addressesList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    outcomeCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    outcomeReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    addresses: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    outcomeCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    outcomeReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     reasonRejected?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
   }
 
@@ -8028,9 +8028,9 @@ export namespace QICoreGoal {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -8047,7 +8047,7 @@ export namespace QICoreGoal {
     export type AsObject = {
       value: proto_r4_core_codes_pb.GoalLifecycleStatusCode.ValueMap[keyof proto_r4_core_codes_pb.GoalLifecycleStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -8085,14 +8085,14 @@ export namespace QICoreGoal {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasMeasure(): boolean;
@@ -8123,8 +8123,8 @@ export namespace QICoreGoal {
   export namespace Target {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       measure?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       detail?: QICoreGoal.Target.DetailX.AsObject,
       due?: QICoreGoal.Target.DueX.AsObject,
@@ -8263,24 +8263,24 @@ export class QICoreImagingStudy extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -8288,9 +8288,9 @@ export class QICoreImagingStudy extends jspb.Message {
   getStatus(): QICoreImagingStudy.StatusCode | undefined;
   setStatus(value?: QICoreImagingStudy.StatusCode): void;
 
-  clearModalityList(): void;
-  getModalityList(): Array<proto_r4_core_datatypes_pb.Coding>;
-  setModalityList(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
+  clearModality(): void;
+  getModality(): Array<proto_r4_core_datatypes_pb.Coding>;
+  setModality(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
   addModality(value?: proto_r4_core_datatypes_pb.Coding, index?: number): proto_r4_core_datatypes_pb.Coding;
 
   hasSubject(): boolean;
@@ -8308,9 +8308,9 @@ export class QICoreImagingStudy extends jspb.Message {
   getStarted(): proto_r4_core_datatypes_pb.DateTime | undefined;
   setStarted(value?: proto_r4_core_datatypes_pb.DateTime): void;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasReferrer(): boolean;
@@ -8318,14 +8318,14 @@ export class QICoreImagingStudy extends jspb.Message {
   getReferrer(): proto_r4_core_datatypes_pb.Reference | undefined;
   setReferrer(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearInterpreterList(): void;
-  getInterpreterList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setInterpreterList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearInterpreter(): void;
+  getInterpreter(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setInterpreter(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addInterpreter(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearEndpointList(): void;
-  getEndpointList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setEndpointList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearEndpoint(): void;
+  getEndpoint(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setEndpoint(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addEndpoint(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasNumberOfSeries(): boolean;
@@ -8343,9 +8343,9 @@ export class QICoreImagingStudy extends jspb.Message {
   getProcedureReference(): proto_r4_core_datatypes_pb.Reference | undefined;
   setProcedureReference(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearProcedureCodeList(): void;
-  getProcedureCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setProcedureCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearProcedureCode(): void;
+  getProcedureCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setProcedureCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addProcedureCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasLocation(): boolean;
@@ -8353,19 +8353,19 @@ export class QICoreImagingStudy extends jspb.Message {
   getLocation(): proto_r4_core_datatypes_pb.Reference | undefined;
   setLocation(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   hasDescription(): boolean;
@@ -8373,9 +8373,9 @@ export class QICoreImagingStudy extends jspb.Message {
   getDescription(): proto_r4_core_datatypes_pb.String | undefined;
   setDescription(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearSeriesList(): void;
-  getSeriesList(): Array<QICoreImagingStudy.Series>;
-  setSeriesList(value: Array<QICoreImagingStudy.Series>): void;
+  clearSeries(): void;
+  getSeries(): Array<QICoreImagingStudy.Series>;
+  setSeries(value: Array<QICoreImagingStudy.Series>): void;
   addSeries(value?: QICoreImagingStudy.Series, index?: number): QICoreImagingStudy.Series;
 
   serializeBinary(): Uint8Array;
@@ -8395,29 +8395,29 @@ export namespace QICoreImagingStudy {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: QICoreImagingStudy.StatusCode.AsObject,
-    modalityList: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
+    modality: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     started?: proto_r4_core_datatypes_pb.DateTime.AsObject,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     referrer?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    interpreterList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    endpointList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    interpreter: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    endpoint: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     numberOfSeries?: proto_r4_core_datatypes_pb.UnsignedInt.AsObject,
     numberOfInstances?: proto_r4_core_datatypes_pb.UnsignedInt.AsObject,
     procedureReference?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    procedureCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    procedureCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     location?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
     description?: proto_r4_core_datatypes_pb.String.AsObject,
-    seriesList: Array<QICoreImagingStudy.Series.AsObject>,
+    series: Array<QICoreImagingStudy.Series.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -8429,9 +8429,9 @@ export namespace QICoreImagingStudy {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -8448,7 +8448,7 @@ export namespace QICoreImagingStudy {
     export type AsObject = {
       value: proto_r4_core_codes_pb.ImagingStudyStatusCode.ValueMap[keyof proto_r4_core_codes_pb.ImagingStudyStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -8458,14 +8458,14 @@ export namespace QICoreImagingStudy {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasUid(): boolean;
@@ -8493,9 +8493,9 @@ export namespace QICoreImagingStudy {
     getNumberOfInstances(): proto_r4_core_datatypes_pb.UnsignedInt | undefined;
     setNumberOfInstances(value?: proto_r4_core_datatypes_pb.UnsignedInt): void;
 
-    clearEndpointList(): void;
-    getEndpointList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setEndpointList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearEndpoint(): void;
+    getEndpoint(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setEndpoint(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addEndpoint(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     hasBodySite(): boolean;
@@ -8508,9 +8508,9 @@ export namespace QICoreImagingStudy {
     getLaterality(): proto_r4_core_datatypes_pb.Coding | undefined;
     setLaterality(value?: proto_r4_core_datatypes_pb.Coding): void;
 
-    clearSpecimenList(): void;
-    getSpecimenList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setSpecimenList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearSpecimen(): void;
+    getSpecimen(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setSpecimen(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addSpecimen(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     hasStarted(): boolean;
@@ -8518,14 +8518,14 @@ export namespace QICoreImagingStudy {
     getStarted(): proto_r4_core_datatypes_pb.DateTime | undefined;
     setStarted(value?: proto_r4_core_datatypes_pb.DateTime): void;
 
-    clearPerformerList(): void;
-    getPerformerList(): Array<QICoreImagingStudy.Series.Performer>;
-    setPerformerList(value: Array<QICoreImagingStudy.Series.Performer>): void;
+    clearPerformer(): void;
+    getPerformer(): Array<QICoreImagingStudy.Series.Performer>;
+    setPerformer(value: Array<QICoreImagingStudy.Series.Performer>): void;
     addPerformer(value?: QICoreImagingStudy.Series.Performer, index?: number): QICoreImagingStudy.Series.Performer;
 
-    clearInstanceList(): void;
-    getInstanceList(): Array<QICoreImagingStudy.Series.Instance>;
-    setInstanceList(value: Array<QICoreImagingStudy.Series.Instance>): void;
+    clearInstance(): void;
+    getInstance(): Array<QICoreImagingStudy.Series.Instance>;
+    setInstance(value: Array<QICoreImagingStudy.Series.Instance>): void;
     addInstance(value?: QICoreImagingStudy.Series.Instance, index?: number): QICoreImagingStudy.Series.Instance;
 
     serializeBinary(): Uint8Array;
@@ -8541,20 +8541,20 @@ export namespace QICoreImagingStudy {
   export namespace Series {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       uid?: proto_r4_core_datatypes_pb.Id.AsObject,
       number?: proto_r4_core_datatypes_pb.UnsignedInt.AsObject,
       modality?: proto_r4_core_datatypes_pb.Coding.AsObject,
       description?: proto_r4_core_datatypes_pb.String.AsObject,
       numberOfInstances?: proto_r4_core_datatypes_pb.UnsignedInt.AsObject,
-      endpointList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      endpoint: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
       bodySite?: proto_r4_core_datatypes_pb.Coding.AsObject,
       laterality?: proto_r4_core_datatypes_pb.Coding.AsObject,
-      specimenList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      specimen: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
       started?: proto_r4_core_datatypes_pb.DateTime.AsObject,
-      performerList: Array<QICoreImagingStudy.Series.Performer.AsObject>,
-      instanceList: Array<QICoreImagingStudy.Series.Instance.AsObject>,
+      performer: Array<QICoreImagingStudy.Series.Performer.AsObject>,
+      instance: Array<QICoreImagingStudy.Series.Instance.AsObject>,
     }
 
     export class Performer extends jspb.Message {
@@ -8563,14 +8563,14 @@ export namespace QICoreImagingStudy {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasFunction(): boolean;
@@ -8596,8 +8596,8 @@ export namespace QICoreImagingStudy {
     export namespace Performer {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         pb_function?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         actor?: proto_r4_core_datatypes_pb.Reference.AsObject,
       }
@@ -8609,14 +8609,14 @@ export namespace QICoreImagingStudy {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasUid(): boolean;
@@ -8652,8 +8652,8 @@ export namespace QICoreImagingStudy {
     export namespace Instance {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         uid?: proto_r4_core_datatypes_pb.Id.AsObject,
         sopClass?: proto_r4_core_datatypes_pb.Coding.AsObject,
         number?: proto_r4_core_datatypes_pb.UnsignedInt.AsObject,
@@ -8689,24 +8689,24 @@ export class QICoreImmunization extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -8789,24 +8789,24 @@ export class QICoreImmunization extends jspb.Message {
   getDoseQuantity(): proto_r4_core_datatypes_pb.SimpleQuantity | undefined;
   setDoseQuantity(value?: proto_r4_core_datatypes_pb.SimpleQuantity): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<QICoreImmunization.Performer>;
-  setPerformerList(value: Array<QICoreImmunization.Performer>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<QICoreImmunization.Performer>;
+  setPerformer(value: Array<QICoreImmunization.Performer>): void;
   addPerformer(value?: QICoreImmunization.Performer, index?: number): QICoreImmunization.Performer;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasIsSubpotent(): boolean;
@@ -8814,19 +8814,19 @@ export class QICoreImmunization extends jspb.Message {
   getIsSubpotent(): proto_r4_core_datatypes_pb.Boolean | undefined;
   setIsSubpotent(value?: proto_r4_core_datatypes_pb.Boolean): void;
 
-  clearSubpotentReasonList(): void;
-  getSubpotentReasonList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setSubpotentReasonList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearSubpotentReason(): void;
+  getSubpotentReason(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setSubpotentReason(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addSubpotentReason(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearEducationList(): void;
-  getEducationList(): Array<QICoreImmunization.Education>;
-  setEducationList(value: Array<QICoreImmunization.Education>): void;
+  clearEducation(): void;
+  getEducation(): Array<QICoreImmunization.Education>;
+  setEducation(value: Array<QICoreImmunization.Education>): void;
   addEducation(value?: QICoreImmunization.Education, index?: number): QICoreImmunization.Education;
 
-  clearProgramEligibilityList(): void;
-  getProgramEligibilityList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setProgramEligibilityList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearProgramEligibility(): void;
+  getProgramEligibility(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setProgramEligibility(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addProgramEligibility(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasFundingSource(): boolean;
@@ -8834,14 +8834,14 @@ export class QICoreImmunization extends jspb.Message {
   getFundingSource(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setFundingSource(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearReactionList(): void;
-  getReactionList(): Array<QICoreImmunization.Reaction>;
-  setReactionList(value: Array<QICoreImmunization.Reaction>): void;
+  clearReaction(): void;
+  getReaction(): Array<QICoreImmunization.Reaction>;
+  setReaction(value: Array<QICoreImmunization.Reaction>): void;
   addReaction(value?: QICoreImmunization.Reaction, index?: number): QICoreImmunization.Reaction;
 
-  clearProtocolAppliedList(): void;
-  getProtocolAppliedList(): Array<QICoreImmunization.ProtocolApplied>;
-  setProtocolAppliedList(value: Array<QICoreImmunization.ProtocolApplied>): void;
+  clearProtocolApplied(): void;
+  getProtocolApplied(): Array<QICoreImmunization.ProtocolApplied>;
+  setProtocolApplied(value: Array<QICoreImmunization.ProtocolApplied>): void;
   addProtocolApplied(value?: QICoreImmunization.ProtocolApplied, index?: number): QICoreImmunization.ProtocolApplied;
 
   serializeBinary(): Uint8Array;
@@ -8861,10 +8861,10 @@ export namespace QICoreImmunization {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: QICoreImmunization.StatusCode.AsObject,
     statusReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     vaccineCode?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -8881,17 +8881,17 @@ export namespace QICoreImmunization {
     site?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     route?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     doseQuantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
-    performerList: Array<QICoreImmunization.Performer.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    performer: Array<QICoreImmunization.Performer.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     isSubpotent?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-    subpotentReasonList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    educationList: Array<QICoreImmunization.Education.AsObject>,
-    programEligibilityList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    subpotentReason: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    education: Array<QICoreImmunization.Education.AsObject>,
+    programEligibility: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     fundingSource?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    reactionList: Array<QICoreImmunization.Reaction.AsObject>,
-    protocolAppliedList: Array<QICoreImmunization.ProtocolApplied.AsObject>,
+    reaction: Array<QICoreImmunization.Reaction.AsObject>,
+    protocolApplied: Array<QICoreImmunization.ProtocolApplied.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -8903,9 +8903,9 @@ export namespace QICoreImmunization {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -8922,7 +8922,7 @@ export namespace QICoreImmunization {
     export type AsObject = {
       value: proto_r4_core_valuesets_pb.ImmunizationStatusCodesValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.ImmunizationStatusCodesValueSet.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -8967,14 +8967,14 @@ export namespace QICoreImmunization {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasFunction(): boolean;
@@ -9000,8 +9000,8 @@ export namespace QICoreImmunization {
   export namespace Performer {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       pb_function?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       actor?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
@@ -9013,14 +9013,14 @@ export namespace QICoreImmunization {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasDocumentType(): boolean;
@@ -9056,8 +9056,8 @@ export namespace QICoreImmunization {
   export namespace Education {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       documentType?: proto_r4_core_datatypes_pb.String.AsObject,
       reference?: proto_r4_core_datatypes_pb.Uri.AsObject,
       publicationDate?: proto_r4_core_datatypes_pb.DateTime.AsObject,
@@ -9071,14 +9071,14 @@ export namespace QICoreImmunization {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasDate(): boolean;
@@ -9109,8 +9109,8 @@ export namespace QICoreImmunization {
   export namespace Reaction {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
       detail?: proto_r4_core_datatypes_pb.Reference.AsObject,
       reported?: proto_r4_core_datatypes_pb.Boolean.AsObject,
@@ -9123,14 +9123,14 @@ export namespace QICoreImmunization {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSeries(): boolean;
@@ -9143,9 +9143,9 @@ export namespace QICoreImmunization {
     getAuthority(): proto_r4_core_datatypes_pb.Reference | undefined;
     setAuthority(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-    clearTargetDiseaseList(): void;
-    getTargetDiseaseList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setTargetDiseaseList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearTargetDisease(): void;
+    getTargetDisease(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setTargetDisease(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addTargetDisease(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasDoseNumber(): boolean;
@@ -9171,11 +9171,11 @@ export namespace QICoreImmunization {
   export namespace ProtocolApplied {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       series?: proto_r4_core_datatypes_pb.String.AsObject,
       authority?: proto_r4_core_datatypes_pb.Reference.AsObject,
-      targetDiseaseList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      targetDisease: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       doseNumber?: QICoreImmunization.ProtocolApplied.DoseNumberX.AsObject,
       seriesDoses?: QICoreImmunization.ProtocolApplied.SeriesDosesX.AsObject,
     }
@@ -9278,24 +9278,24 @@ export class QICoreImmunizationEvaluation extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -9333,9 +9333,9 @@ export class QICoreImmunizationEvaluation extends jspb.Message {
   getDoseStatus(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setDoseStatus(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearDoseStatusReasonList(): void;
-  getDoseStatusReasonList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setDoseStatusReasonList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearDoseStatusReason(): void;
+  getDoseStatusReason(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setDoseStatusReason(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addDoseStatusReason(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasDescription(): boolean;
@@ -9375,10 +9375,10 @@ export namespace QICoreImmunizationEvaluation {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: QICoreImmunizationEvaluation.StatusCode.AsObject,
     patient?: proto_r4_core_datatypes_pb.Reference.AsObject,
     date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
@@ -9386,7 +9386,7 @@ export namespace QICoreImmunizationEvaluation {
     targetDisease?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     immunizationEvent?: proto_r4_core_datatypes_pb.Reference.AsObject,
     doseStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    doseStatusReasonList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    doseStatusReason: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     description?: proto_r4_core_datatypes_pb.String.AsObject,
     series?: proto_r4_core_datatypes_pb.String.AsObject,
     doseNumber?: QICoreImmunizationEvaluation.DoseNumberX.AsObject,
@@ -9402,9 +9402,9 @@ export namespace QICoreImmunizationEvaluation {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -9421,7 +9421,7 @@ export namespace QICoreImmunizationEvaluation {
     export type AsObject = {
       value: proto_r4_core_valuesets_pb.ImmunizationEvaluationStatusCodesValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.ImmunizationEvaluationStatusCodesValueSet.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -9522,24 +9522,24 @@ export class QICoreImmunizationRecommendation extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasPatient(): boolean;
@@ -9557,9 +9557,9 @@ export class QICoreImmunizationRecommendation extends jspb.Message {
   getAuthority(): proto_r4_core_datatypes_pb.Reference | undefined;
   setAuthority(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearRecommendationList(): void;
-  getRecommendationList(): Array<QICoreImmunizationRecommendation.Recommendation>;
-  setRecommendationList(value: Array<QICoreImmunizationRecommendation.Recommendation>): void;
+  clearRecommendation(): void;
+  getRecommendation(): Array<QICoreImmunizationRecommendation.Recommendation>;
+  setRecommendation(value: Array<QICoreImmunizationRecommendation.Recommendation>): void;
   addRecommendation(value?: QICoreImmunizationRecommendation.Recommendation, index?: number): QICoreImmunizationRecommendation.Recommendation;
 
   serializeBinary(): Uint8Array;
@@ -9579,14 +9579,14 @@ export namespace QICoreImmunizationRecommendation {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     patient?: proto_r4_core_datatypes_pb.Reference.AsObject,
     date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     authority?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    recommendationList: Array<QICoreImmunizationRecommendation.Recommendation.AsObject>,
+    recommendation: Array<QICoreImmunizationRecommendation.Recommendation.AsObject>,
   }
 
   export class Recommendation extends jspb.Message {
@@ -9595,19 +9595,19 @@ export namespace QICoreImmunizationRecommendation {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearVaccineCodeList(): void;
-    getVaccineCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setVaccineCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearVaccineCode(): void;
+    getVaccineCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setVaccineCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addVaccineCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasTargetDisease(): boolean;
@@ -9615,9 +9615,9 @@ export namespace QICoreImmunizationRecommendation {
     getTargetDisease(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setTargetDisease(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearContraindicatedVaccineCodeList(): void;
-    getContraindicatedVaccineCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setContraindicatedVaccineCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearContraindicatedVaccineCode(): void;
+    getContraindicatedVaccineCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setContraindicatedVaccineCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addContraindicatedVaccineCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasForecastStatus(): boolean;
@@ -9625,14 +9625,14 @@ export namespace QICoreImmunizationRecommendation {
     getForecastStatus(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setForecastStatus(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearForecastReasonList(): void;
-    getForecastReasonList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setForecastReasonList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearForecastReason(): void;
+    getForecastReason(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setForecastReason(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addForecastReason(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearDateCriterionList(): void;
-    getDateCriterionList(): Array<QICoreImmunizationRecommendation.Recommendation.DateCriterion>;
-    setDateCriterionList(value: Array<QICoreImmunizationRecommendation.Recommendation.DateCriterion>): void;
+    clearDateCriterion(): void;
+    getDateCriterion(): Array<QICoreImmunizationRecommendation.Recommendation.DateCriterion>;
+    setDateCriterion(value: Array<QICoreImmunizationRecommendation.Recommendation.DateCriterion>): void;
     addDateCriterion(value?: QICoreImmunizationRecommendation.Recommendation.DateCriterion, index?: number): QICoreImmunizationRecommendation.Recommendation.DateCriterion;
 
     hasDescription(): boolean;
@@ -9655,14 +9655,14 @@ export namespace QICoreImmunizationRecommendation {
     getSeriesDoses(): QICoreImmunizationRecommendation.Recommendation.SeriesDosesX | undefined;
     setSeriesDoses(value?: QICoreImmunizationRecommendation.Recommendation.SeriesDosesX): void;
 
-    clearSupportingImmunizationList(): void;
-    getSupportingImmunizationList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setSupportingImmunizationList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearSupportingImmunization(): void;
+    getSupportingImmunization(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setSupportingImmunization(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addSupportingImmunization(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-    clearSupportingPatientInformationList(): void;
-    getSupportingPatientInformationList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setSupportingPatientInformationList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearSupportingPatientInformation(): void;
+    getSupportingPatientInformation(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setSupportingPatientInformation(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addSupportingPatientInformation(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     serializeBinary(): Uint8Array;
@@ -9678,20 +9678,20 @@ export namespace QICoreImmunizationRecommendation {
   export namespace Recommendation {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      vaccineCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      vaccineCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       targetDisease?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      contraindicatedVaccineCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      contraindicatedVaccineCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       forecastStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      forecastReasonList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      dateCriterionList: Array<QICoreImmunizationRecommendation.Recommendation.DateCriterion.AsObject>,
+      forecastReason: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      dateCriterion: Array<QICoreImmunizationRecommendation.Recommendation.DateCriterion.AsObject>,
       description?: proto_r4_core_datatypes_pb.String.AsObject,
       series?: proto_r4_core_datatypes_pb.String.AsObject,
       doseNumber?: QICoreImmunizationRecommendation.Recommendation.DoseNumberX.AsObject,
       seriesDoses?: QICoreImmunizationRecommendation.Recommendation.SeriesDosesX.AsObject,
-      supportingImmunizationList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-      supportingPatientInformationList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      supportingImmunization: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      supportingPatientInformation: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     }
 
     export class DateCriterion extends jspb.Message {
@@ -9700,14 +9700,14 @@ export namespace QICoreImmunizationRecommendation {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasCode(): boolean;
@@ -9733,8 +9733,8 @@ export namespace QICoreImmunizationRecommendation {
     export namespace DateCriterion {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         value?: proto_r4_core_datatypes_pb.DateTime.AsObject,
       }
@@ -9838,24 +9838,24 @@ export class QICoreLocation extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -9873,9 +9873,9 @@ export class QICoreLocation extends jspb.Message {
   getName(): proto_r4_core_datatypes_pb.String | undefined;
   setName(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearAliasList(): void;
-  getAliasList(): Array<proto_r4_core_datatypes_pb.String>;
-  setAliasList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+  clearAlias(): void;
+  getAlias(): Array<proto_r4_core_datatypes_pb.String>;
+  setAlias(value: Array<proto_r4_core_datatypes_pb.String>): void;
   addAlias(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
   hasDescription(): boolean;
@@ -9888,14 +9888,14 @@ export class QICoreLocation extends jspb.Message {
   getMode(): QICoreLocation.ModeCode | undefined;
   setMode(value?: QICoreLocation.ModeCode): void;
 
-  clearTypeList(): void;
-  getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearType(): void;
+  getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearTelecomList(): void;
-  getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearTelecom(): void;
+  getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
   hasAddress(): boolean;
@@ -9923,9 +9923,9 @@ export class QICoreLocation extends jspb.Message {
   getPartOf(): proto_r4_core_datatypes_pb.Reference | undefined;
   setPartOf(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearHoursOfOperationList(): void;
-  getHoursOfOperationList(): Array<QICoreLocation.HoursOfOperation>;
-  setHoursOfOperationList(value: Array<QICoreLocation.HoursOfOperation>): void;
+  clearHoursOfOperation(): void;
+  getHoursOfOperation(): Array<QICoreLocation.HoursOfOperation>;
+  setHoursOfOperation(value: Array<QICoreLocation.HoursOfOperation>): void;
   addHoursOfOperation(value?: QICoreLocation.HoursOfOperation, index?: number): QICoreLocation.HoursOfOperation;
 
   hasAvailabilityExceptions(): boolean;
@@ -9933,9 +9933,9 @@ export class QICoreLocation extends jspb.Message {
   getAvailabilityExceptions(): proto_r4_core_datatypes_pb.String | undefined;
   setAvailabilityExceptions(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearEndpointList(): void;
-  getEndpointList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setEndpointList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearEndpoint(): void;
+  getEndpoint(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setEndpoint(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addEndpoint(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -9955,26 +9955,26 @@ export namespace QICoreLocation {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: QICoreLocation.StatusCode.AsObject,
     operationalStatus?: proto_r4_core_datatypes_pb.Coding.AsObject,
     name?: proto_r4_core_datatypes_pb.String.AsObject,
-    aliasList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+    alias: Array<proto_r4_core_datatypes_pb.String.AsObject>,
     description?: proto_r4_core_datatypes_pb.String.AsObject,
     mode?: QICoreLocation.ModeCode.AsObject,
-    typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
     address?: proto_r4_core_datatypes_pb.Address.AsObject,
     physicalType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     position?: QICoreLocation.Position.AsObject,
     managingOrganization?: proto_r4_core_datatypes_pb.Reference.AsObject,
     partOf?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    hoursOfOperationList: Array<QICoreLocation.HoursOfOperation.AsObject>,
+    hoursOfOperation: Array<QICoreLocation.HoursOfOperation.AsObject>,
     availabilityExceptions?: proto_r4_core_datatypes_pb.String.AsObject,
-    endpointList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    endpoint: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -9986,9 +9986,9 @@ export namespace QICoreLocation {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -10005,7 +10005,7 @@ export namespace QICoreLocation {
     export type AsObject = {
       value: proto_r4_core_codes_pb.LocationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.LocationStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -10018,9 +10018,9 @@ export namespace QICoreLocation {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -10037,7 +10037,7 @@ export namespace QICoreLocation {
     export type AsObject = {
       value: proto_r4_core_codes_pb.LocationModeCode.ValueMap[keyof proto_r4_core_codes_pb.LocationModeCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -10047,14 +10047,14 @@ export namespace QICoreLocation {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasLongitude(): boolean;
@@ -10085,8 +10085,8 @@ export namespace QICoreLocation {
   export namespace Position {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       longitude?: proto_r4_core_datatypes_pb.Decimal.AsObject,
       latitude?: proto_r4_core_datatypes_pb.Decimal.AsObject,
       altitude?: proto_r4_core_datatypes_pb.Decimal.AsObject,
@@ -10099,19 +10099,19 @@ export namespace QICoreLocation {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearDaysOfWeekList(): void;
-    getDaysOfWeekList(): Array<QICoreLocation.HoursOfOperation.DaysOfWeekCode>;
-    setDaysOfWeekList(value: Array<QICoreLocation.HoursOfOperation.DaysOfWeekCode>): void;
+    clearDaysOfWeek(): void;
+    getDaysOfWeek(): Array<QICoreLocation.HoursOfOperation.DaysOfWeekCode>;
+    setDaysOfWeek(value: Array<QICoreLocation.HoursOfOperation.DaysOfWeekCode>): void;
     addDaysOfWeek(value?: QICoreLocation.HoursOfOperation.DaysOfWeekCode, index?: number): QICoreLocation.HoursOfOperation.DaysOfWeekCode;
 
     hasAllDay(): boolean;
@@ -10142,9 +10142,9 @@ export namespace QICoreLocation {
   export namespace HoursOfOperation {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      daysOfWeekList: Array<QICoreLocation.HoursOfOperation.DaysOfWeekCode.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      daysOfWeek: Array<QICoreLocation.HoursOfOperation.DaysOfWeekCode.AsObject>,
       allDay?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       openingTime?: proto_r4_core_datatypes_pb.Time.AsObject,
       closingTime?: proto_r4_core_datatypes_pb.Time.AsObject,
@@ -10159,9 +10159,9 @@ export namespace QICoreLocation {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -10178,7 +10178,7 @@ export namespace QICoreLocation {
       export type AsObject = {
         value: proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap[keyof proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -10210,24 +10210,24 @@ export class QICoreMedication extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasCode(): boolean;
@@ -10255,9 +10255,9 @@ export class QICoreMedication extends jspb.Message {
   getAmount(): proto_r4_core_datatypes_pb.Ratio | undefined;
   setAmount(value?: proto_r4_core_datatypes_pb.Ratio): void;
 
-  clearIngredientList(): void;
-  getIngredientList(): Array<QICoreMedication.Ingredient>;
-  setIngredientList(value: Array<QICoreMedication.Ingredient>): void;
+  clearIngredient(): void;
+  getIngredient(): Array<QICoreMedication.Ingredient>;
+  setIngredient(value: Array<QICoreMedication.Ingredient>): void;
   addIngredient(value?: QICoreMedication.Ingredient, index?: number): QICoreMedication.Ingredient;
 
   hasBatch(): boolean;
@@ -10282,16 +10282,16 @@ export namespace QICoreMedication {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     status?: QICoreMedication.StatusCode.AsObject,
     manufacturer?: proto_r4_core_datatypes_pb.Reference.AsObject,
     form?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     amount?: proto_r4_core_datatypes_pb.Ratio.AsObject,
-    ingredientList: Array<QICoreMedication.Ingredient.AsObject>,
+    ingredient: Array<QICoreMedication.Ingredient.AsObject>,
     batch?: QICoreMedication.Batch.AsObject,
   }
 
@@ -10304,9 +10304,9 @@ export namespace QICoreMedication {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -10323,7 +10323,7 @@ export namespace QICoreMedication {
     export type AsObject = {
       value: proto_r4_core_codes_pb.MedicationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.MedicationStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -10333,14 +10333,14 @@ export namespace QICoreMedication {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasItem(): boolean;
@@ -10371,8 +10371,8 @@ export namespace QICoreMedication {
   export namespace Ingredient {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       item?: QICoreMedication.Ingredient.ItemX.AsObject,
       isActive?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       strength?: proto_r4_core_datatypes_pb.Ratio.AsObject,
@@ -10420,14 +10420,14 @@ export namespace QICoreMedication {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasLotNumber(): boolean;
@@ -10453,8 +10453,8 @@ export namespace QICoreMedication {
   export namespace Batch {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       lotNumber?: proto_r4_core_datatypes_pb.String.AsObject,
       expirationDate?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     }
@@ -10487,34 +10487,34 @@ export class QICoreMedicationAdministration extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearInstantiatesList(): void;
-  getInstantiatesList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setInstantiatesList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearInstantiates(): void;
+  getInstantiates(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setInstantiates(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addInstantiates(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
-  clearPartOfList(): void;
-  getPartOfList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPartOfList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPartOf(): void;
+  getPartOf(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPartOf(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPartOf(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -10522,9 +10522,9 @@ export class QICoreMedicationAdministration extends jspb.Message {
   getStatus(): QICoreMedicationAdministration.StatusCode | undefined;
   setStatus(value?: QICoreMedicationAdministration.StatusCode): void;
 
-  clearStatusReasonList(): void;
-  getStatusReasonList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setStatusReasonList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearStatusReason(): void;
+  getStatusReason(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setStatusReason(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addStatusReason(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasCategory(): boolean;
@@ -10547,9 +10547,9 @@ export class QICoreMedicationAdministration extends jspb.Message {
   getContext(): proto_r4_core_datatypes_pb.Reference | undefined;
   setContext(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearSupportingInformationList(): void;
-  getSupportingInformationList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSupportingInformationList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSupportingInformation(): void;
+  getSupportingInformation(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSupportingInformation(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSupportingInformation(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasEffective(): boolean;
@@ -10557,19 +10557,19 @@ export class QICoreMedicationAdministration extends jspb.Message {
   getEffective(): QICoreMedicationAdministration.EffectiveX | undefined;
   setEffective(value?: QICoreMedicationAdministration.EffectiveX): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<QICoreMedicationAdministration.Performer>;
-  setPerformerList(value: Array<QICoreMedicationAdministration.Performer>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<QICoreMedicationAdministration.Performer>;
+  setPerformer(value: Array<QICoreMedicationAdministration.Performer>): void;
   addPerformer(value?: QICoreMedicationAdministration.Performer, index?: number): QICoreMedicationAdministration.Performer;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasRequest(): boolean;
@@ -10577,14 +10577,14 @@ export class QICoreMedicationAdministration extends jspb.Message {
   getRequest(): proto_r4_core_datatypes_pb.Reference | undefined;
   setRequest(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearDeviceList(): void;
-  getDeviceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setDeviceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearDevice(): void;
+  getDevice(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setDevice(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addDevice(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   hasDosage(): boolean;
@@ -10592,9 +10592,9 @@ export class QICoreMedicationAdministration extends jspb.Message {
   getDosage(): QICoreMedicationAdministration.Dosage | undefined;
   setDosage(value?: QICoreMedicationAdministration.Dosage): void;
 
-  clearEventHistoryList(): void;
-  getEventHistoryList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setEventHistoryList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearEventHistory(): void;
+  getEventHistory(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setEventHistory(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addEventHistory(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -10614,28 +10614,28 @@ export namespace QICoreMedicationAdministration {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    instantiatesList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
-    partOfList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    instantiates: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    partOf: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: QICoreMedicationAdministration.StatusCode.AsObject,
-    statusReasonList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    statusReason: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     medication?: QICoreMedicationAdministration.MedicationX.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     context?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    supportingInformationList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    supportingInformation: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     effective?: QICoreMedicationAdministration.EffectiveX.AsObject,
-    performerList: Array<QICoreMedicationAdministration.Performer.AsObject>,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    performer: Array<QICoreMedicationAdministration.Performer.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     request?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    deviceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    device: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
     dosage?: QICoreMedicationAdministration.Dosage.AsObject,
-    eventHistoryList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    eventHistory: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -10647,9 +10647,9 @@ export namespace QICoreMedicationAdministration {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -10666,7 +10666,7 @@ export namespace QICoreMedicationAdministration {
     export type AsObject = {
       value: proto_r4_core_codes_pb.MedicationAdministrationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.MedicationAdministrationStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -10746,14 +10746,14 @@ export namespace QICoreMedicationAdministration {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasFunction(): boolean;
@@ -10779,8 +10779,8 @@ export namespace QICoreMedicationAdministration {
   export namespace Performer {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       pb_function?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       actor?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
@@ -10792,14 +10792,14 @@ export namespace QICoreMedicationAdministration {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasText(): boolean;
@@ -10845,8 +10845,8 @@ export namespace QICoreMedicationAdministration {
   export namespace Dosage {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       text?: proto_r4_core_datatypes_pb.String.AsObject,
       site?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       route?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -10918,29 +10918,29 @@ export class QICoreMedicationDispense extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearPartOfList(): void;
-  getPartOfList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPartOfList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPartOf(): void;
+  getPartOf(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPartOf(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPartOf(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -10973,14 +10973,14 @@ export class QICoreMedicationDispense extends jspb.Message {
   getContext(): proto_r4_core_datatypes_pb.Reference | undefined;
   setContext(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearSupportingInformationList(): void;
-  getSupportingInformationList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSupportingInformationList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSupportingInformation(): void;
+  getSupportingInformation(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSupportingInformation(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSupportingInformation(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<QICoreMedicationDispense.Performer>;
-  setPerformerList(value: Array<QICoreMedicationDispense.Performer>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<QICoreMedicationDispense.Performer>;
+  setPerformer(value: Array<QICoreMedicationDispense.Performer>): void;
   addPerformer(value?: QICoreMedicationDispense.Performer, index?: number): QICoreMedicationDispense.Performer;
 
   hasLocation(): boolean;
@@ -10988,9 +10988,9 @@ export class QICoreMedicationDispense extends jspb.Message {
   getLocation(): proto_r4_core_datatypes_pb.Reference | undefined;
   setLocation(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearAuthorizingPrescriptionList(): void;
-  getAuthorizingPrescriptionList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setAuthorizingPrescriptionList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearAuthorizingPrescription(): void;
+  getAuthorizingPrescription(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setAuthorizingPrescription(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addAuthorizingPrescription(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasType(): boolean;
@@ -11023,19 +11023,19 @@ export class QICoreMedicationDispense extends jspb.Message {
   getDestination(): proto_r4_core_datatypes_pb.Reference | undefined;
   setDestination(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReceiverList(): void;
-  getReceiverList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReceiverList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReceiver(): void;
+  getReceiver(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReceiver(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReceiver(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearDosageInstructionList(): void;
-  getDosageInstructionList(): Array<proto_r4_core_datatypes_pb.Dosage>;
-  setDosageInstructionList(value: Array<proto_r4_core_datatypes_pb.Dosage>): void;
+  clearDosageInstruction(): void;
+  getDosageInstruction(): Array<proto_r4_core_datatypes_pb.Dosage>;
+  setDosageInstruction(value: Array<proto_r4_core_datatypes_pb.Dosage>): void;
   addDosageInstruction(value?: proto_r4_core_datatypes_pb.Dosage, index?: number): proto_r4_core_datatypes_pb.Dosage;
 
   hasSubstitution(): boolean;
@@ -11043,14 +11043,14 @@ export class QICoreMedicationDispense extends jspb.Message {
   getSubstitution(): QICoreMedicationDispense.Substitution | undefined;
   setSubstitution(value?: QICoreMedicationDispense.Substitution): void;
 
-  clearDetectedIssueList(): void;
-  getDetectedIssueList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setDetectedIssueList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearDetectedIssue(): void;
+  getDetectedIssue(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setDetectedIssue(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addDetectedIssue(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearEventHistoryList(): void;
-  getEventHistoryList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setEventHistoryList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearEventHistory(): void;
+  getEventHistory(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setEventHistory(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addEventHistory(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -11070,33 +11070,33 @@ export namespace QICoreMedicationDispense {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    partOfList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    partOf: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: QICoreMedicationDispense.StatusCode.AsObject,
     statusReason?: QICoreMedicationDispense.StatusReasonX.AsObject,
     category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     medication?: QICoreMedicationDispense.MedicationX.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     context?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    supportingInformationList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    performerList: Array<QICoreMedicationDispense.Performer.AsObject>,
+    supportingInformation: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    performer: Array<QICoreMedicationDispense.Performer.AsObject>,
     location?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    authorizingPrescriptionList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    authorizingPrescription: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
     daysSupply?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
     whenPrepared?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     whenHandedOver?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     destination?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    receiverList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    dosageInstructionList: Array<proto_r4_core_datatypes_pb.Dosage.AsObject>,
+    receiver: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    dosageInstruction: Array<proto_r4_core_datatypes_pb.Dosage.AsObject>,
     substitution?: QICoreMedicationDispense.Substitution.AsObject,
-    detectedIssueList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    eventHistoryList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    detectedIssue: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    eventHistory: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -11108,9 +11108,9 @@ export namespace QICoreMedicationDispense {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -11127,7 +11127,7 @@ export namespace QICoreMedicationDispense {
     export type AsObject = {
       value: proto_r4_core_codes_pb.MedicationDispenseStatusCode.ValueMap[keyof proto_r4_core_codes_pb.MedicationDispenseStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -11207,14 +11207,14 @@ export namespace QICoreMedicationDispense {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasFunction(): boolean;
@@ -11240,8 +11240,8 @@ export namespace QICoreMedicationDispense {
   export namespace Performer {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       pb_function?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       actor?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
@@ -11253,14 +11253,14 @@ export namespace QICoreMedicationDispense {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasWasSubstituted(): boolean;
@@ -11273,14 +11273,14 @@ export namespace QICoreMedicationDispense {
     getType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearReasonList(): void;
-    getReasonList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setReasonList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearReason(): void;
+    getReason(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setReason(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addReason(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearResponsiblePartyList(): void;
-    getResponsiblePartyList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setResponsiblePartyList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearResponsibleParty(): void;
+    getResponsibleParty(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setResponsibleParty(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addResponsibleParty(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     serializeBinary(): Uint8Array;
@@ -11296,12 +11296,12 @@ export namespace QICoreMedicationDispense {
   export namespace Substitution {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       wasSubstituted?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      reasonList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      responsiblePartyList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      reason: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      responsibleParty: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     }
   }
 }
@@ -11332,24 +11332,24 @@ export class QICoreMedicationRequest extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -11367,9 +11367,9 @@ export class QICoreMedicationRequest extends jspb.Message {
   getIntent(): QICoreMedicationRequest.IntentCode | undefined;
   setIntent(value?: QICoreMedicationRequest.IntentCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasPriority(): boolean;
@@ -11402,9 +11402,9 @@ export class QICoreMedicationRequest extends jspb.Message {
   getEncounter(): proto_r4_core_datatypes_pb.Reference | undefined;
   setEncounter(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearSupportingInformationList(): void;
-  getSupportingInformationList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSupportingInformationList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSupportingInformation(): void;
+  getSupportingInformation(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSupportingInformation(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSupportingInformation(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasAuthoredOn(): boolean;
@@ -11432,29 +11432,29 @@ export class QICoreMedicationRequest extends jspb.Message {
   getRecorder(): proto_r4_core_datatypes_pb.Reference | undefined;
   setRecorder(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearInstantiatesCanonicalList(): void;
-  getInstantiatesCanonicalList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-  setInstantiatesCanonicalList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+  clearInstantiatesCanonical(): void;
+  getInstantiatesCanonical(): Array<proto_r4_core_datatypes_pb.Canonical>;
+  setInstantiatesCanonical(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
   addInstantiatesCanonical(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
-  clearInstantiatesUriList(): void;
-  getInstantiatesUriList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setInstantiatesUriList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearInstantiatesUri(): void;
+  getInstantiatesUri(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setInstantiatesUri(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addInstantiatesUri(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasGroupIdentifier(): boolean;
@@ -11467,19 +11467,19 @@ export class QICoreMedicationRequest extends jspb.Message {
   getCourseOfTherapyType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setCourseOfTherapyType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearInsuranceList(): void;
-  getInsuranceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setInsuranceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearInsurance(): void;
+  getInsurance(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setInsurance(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addInsurance(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearDosageInstructionList(): void;
-  getDosageInstructionList(): Array<proto_r4_core_datatypes_pb.Dosage>;
-  setDosageInstructionList(value: Array<proto_r4_core_datatypes_pb.Dosage>): void;
+  clearDosageInstruction(): void;
+  getDosageInstruction(): Array<proto_r4_core_datatypes_pb.Dosage>;
+  setDosageInstruction(value: Array<proto_r4_core_datatypes_pb.Dosage>): void;
   addDosageInstruction(value?: proto_r4_core_datatypes_pb.Dosage, index?: number): proto_r4_core_datatypes_pb.Dosage;
 
   hasDispenseRequest(): boolean;
@@ -11497,14 +11497,14 @@ export class QICoreMedicationRequest extends jspb.Message {
   getPriorPrescription(): proto_r4_core_datatypes_pb.Reference | undefined;
   setPriorPrescription(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearDetectedIssueList(): void;
-  getDetectedIssueList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setDetectedIssueList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearDetectedIssue(): void;
+  getDetectedIssue(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setDetectedIssue(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addDetectedIssue(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearEventHistoryList(): void;
-  getEventHistoryList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setEventHistoryList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearEventHistory(): void;
+  getEventHistory(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setEventHistory(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addEventHistory(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -11524,41 +11524,41 @@ export namespace QICoreMedicationRequest {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: QICoreMedicationRequest.StatusCode.AsObject,
     statusReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     intent?: QICoreMedicationRequest.IntentCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     priority?: QICoreMedicationRequest.PriorityCode.AsObject,
     doNotPerform?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     reported?: QICoreMedicationRequest.ReportedX.AsObject,
     medication?: QICoreMedicationRequest.MedicationX.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    supportingInformationList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    supportingInformation: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     authoredOn?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     requester?: proto_r4_core_datatypes_pb.Reference.AsObject,
     performer?: proto_r4_core_datatypes_pb.Reference.AsObject,
     performerType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     recorder?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    instantiatesCanonicalList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
-    instantiatesUriList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    instantiatesCanonical: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+    instantiatesUri: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     groupIdentifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
     courseOfTherapyType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    insuranceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    dosageInstructionList: Array<proto_r4_core_datatypes_pb.Dosage.AsObject>,
+    insurance: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    dosageInstruction: Array<proto_r4_core_datatypes_pb.Dosage.AsObject>,
     dispenseRequest?: QICoreMedicationRequest.DispenseRequest.AsObject,
     substitution?: QICoreMedicationRequest.Substitution.AsObject,
     priorPrescription?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    detectedIssueList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    eventHistoryList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    detectedIssue: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    eventHistory: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -11570,9 +11570,9 @@ export namespace QICoreMedicationRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -11589,7 +11589,7 @@ export namespace QICoreMedicationRequest {
     export type AsObject = {
       value: proto_r4_core_codes_pb.MedicationrequestStatusCode.ValueMap[keyof proto_r4_core_codes_pb.MedicationrequestStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -11602,9 +11602,9 @@ export namespace QICoreMedicationRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -11621,7 +11621,7 @@ export namespace QICoreMedicationRequest {
     export type AsObject = {
       value: proto_r4_core_codes_pb.MedicationRequestIntentCode.ValueMap[keyof proto_r4_core_codes_pb.MedicationRequestIntentCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -11634,9 +11634,9 @@ export namespace QICoreMedicationRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -11653,7 +11653,7 @@ export namespace QICoreMedicationRequest {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestPriorityCode.ValueMap[keyof proto_r4_core_codes_pb.RequestPriorityCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -11733,14 +11733,14 @@ export namespace QICoreMedicationRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasInitialFill(): boolean;
@@ -11791,8 +11791,8 @@ export namespace QICoreMedicationRequest {
   export namespace DispenseRequest {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       initialFill?: QICoreMedicationRequest.DispenseRequest.InitialFill.AsObject,
       dispenseInterval?: proto_r4_core_datatypes_pb.Duration.AsObject,
       validityPeriod?: proto_r4_core_datatypes_pb.Period.AsObject,
@@ -11808,14 +11808,14 @@ export namespace QICoreMedicationRequest {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasQuantity(): boolean;
@@ -11841,8 +11841,8 @@ export namespace QICoreMedicationRequest {
     export namespace InitialFill {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
         duration?: proto_r4_core_datatypes_pb.Duration.AsObject,
       }
@@ -11855,14 +11855,14 @@ export namespace QICoreMedicationRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasAllowed(): boolean;
@@ -11888,8 +11888,8 @@ export namespace QICoreMedicationRequest {
   export namespace Substitution {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       allowed?: QICoreMedicationRequest.Substitution.AllowedX.AsObject,
       reason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     }
@@ -11957,34 +11957,34 @@ export class QICoreMedicationStatement extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearPartOfList(): void;
-  getPartOfList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPartOfList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPartOf(): void;
+  getPartOf(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPartOf(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPartOf(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -11992,9 +11992,9 @@ export class QICoreMedicationStatement extends jspb.Message {
   getStatus(): QICoreMedicationStatement.StatusCode | undefined;
   setStatus(value?: QICoreMedicationStatement.StatusCode): void;
 
-  clearStatusReasonList(): void;
-  getStatusReasonList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setStatusReasonList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearStatusReason(): void;
+  getStatusReason(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setStatusReason(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addStatusReason(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasCategory(): boolean;
@@ -12032,29 +12032,29 @@ export class QICoreMedicationStatement extends jspb.Message {
   getInformationSource(): proto_r4_core_datatypes_pb.Reference | undefined;
   setInformationSource(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearDerivedFromList(): void;
-  getDerivedFromList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setDerivedFromList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearDerivedFrom(): void;
+  getDerivedFrom(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setDerivedFrom(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addDerivedFrom(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearDosageList(): void;
-  getDosageList(): Array<proto_r4_core_datatypes_pb.Dosage>;
-  setDosageList(value: Array<proto_r4_core_datatypes_pb.Dosage>): void;
+  clearDosage(): void;
+  getDosage(): Array<proto_r4_core_datatypes_pb.Dosage>;
+  setDosage(value: Array<proto_r4_core_datatypes_pb.Dosage>): void;
   addDosage(value?: proto_r4_core_datatypes_pb.Dosage, index?: number): proto_r4_core_datatypes_pb.Dosage;
 
   serializeBinary(): Uint8Array;
@@ -12074,14 +12074,14 @@ export namespace QICoreMedicationStatement {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    partOfList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    partOf: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: QICoreMedicationStatement.StatusCode.AsObject,
-    statusReasonList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    statusReason: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     medication?: QICoreMedicationStatement.MedicationX.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -12089,11 +12089,11 @@ export namespace QICoreMedicationStatement {
     effective?: QICoreMedicationStatement.EffectiveX.AsObject,
     dateAsserted?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     informationSource?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    derivedFromList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    dosageList: Array<proto_r4_core_datatypes_pb.Dosage.AsObject>,
+    derivedFrom: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    dosage: Array<proto_r4_core_datatypes_pb.Dosage.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -12105,9 +12105,9 @@ export namespace QICoreMedicationStatement {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -12124,7 +12124,7 @@ export namespace QICoreMedicationStatement {
     export type AsObject = {
       value: proto_r4_core_codes_pb.MedicationStatementStatusCodes.ValueMap[keyof proto_r4_core_codes_pb.MedicationStatementStatusCodes.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -12253,39 +12253,39 @@ export class QICoreNutritionOrder extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearInstantiatesCanonicalList(): void;
-  getInstantiatesCanonicalList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-  setInstantiatesCanonicalList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+  clearInstantiatesCanonical(): void;
+  getInstantiatesCanonical(): Array<proto_r4_core_datatypes_pb.Canonical>;
+  setInstantiatesCanonical(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
   addInstantiatesCanonical(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
-  clearInstantiatesUriList(): void;
-  getInstantiatesUriList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setInstantiatesUriList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearInstantiatesUri(): void;
+  getInstantiatesUri(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setInstantiatesUri(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addInstantiatesUri(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
-  clearInstantiatesList(): void;
-  getInstantiatesList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setInstantiatesList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearInstantiates(): void;
+  getInstantiates(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setInstantiates(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addInstantiates(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
   hasStatus(): boolean;
@@ -12318,19 +12318,19 @@ export class QICoreNutritionOrder extends jspb.Message {
   getOrderer(): proto_r4_core_datatypes_pb.Reference | undefined;
   setOrderer(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearAllergyIntoleranceList(): void;
-  getAllergyIntoleranceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setAllergyIntoleranceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearAllergyIntolerance(): void;
+  getAllergyIntolerance(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setAllergyIntolerance(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addAllergyIntolerance(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearFoodPreferenceModifierList(): void;
-  getFoodPreferenceModifierList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setFoodPreferenceModifierList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearFoodPreferenceModifier(): void;
+  getFoodPreferenceModifier(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setFoodPreferenceModifier(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addFoodPreferenceModifier(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearExcludeFoodModifierList(): void;
-  getExcludeFoodModifierList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setExcludeFoodModifierList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearExcludeFoodModifier(): void;
+  getExcludeFoodModifier(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setExcludeFoodModifier(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addExcludeFoodModifier(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasOralDiet(): boolean;
@@ -12338,9 +12338,9 @@ export class QICoreNutritionOrder extends jspb.Message {
   getOralDiet(): QICoreNutritionOrder.OralDiet | undefined;
   setOralDiet(value?: QICoreNutritionOrder.OralDiet): void;
 
-  clearSupplementList(): void;
-  getSupplementList(): Array<QICoreNutritionOrder.Supplement>;
-  setSupplementList(value: Array<QICoreNutritionOrder.Supplement>): void;
+  clearSupplement(): void;
+  getSupplement(): Array<QICoreNutritionOrder.Supplement>;
+  setSupplement(value: Array<QICoreNutritionOrder.Supplement>): void;
   addSupplement(value?: QICoreNutritionOrder.Supplement, index?: number): QICoreNutritionOrder.Supplement;
 
   hasEnteralFormula(): boolean;
@@ -12348,9 +12348,9 @@ export class QICoreNutritionOrder extends jspb.Message {
   getEnteralFormula(): QICoreNutritionOrder.EnteralFormula | undefined;
   setEnteralFormula(value?: QICoreNutritionOrder.EnteralFormula): void;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   serializeBinary(): Uint8Array;
@@ -12370,26 +12370,26 @@ export namespace QICoreNutritionOrder {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    instantiatesCanonicalList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
-    instantiatesUriList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
-    instantiatesList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    instantiatesCanonical: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+    instantiatesUri: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    instantiates: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
     status?: QICoreNutritionOrder.StatusCode.AsObject,
     intent?: QICoreNutritionOrder.IntentCode.AsObject,
     patient?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     dateTime?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     orderer?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    allergyIntoleranceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    foodPreferenceModifierList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    excludeFoodModifierList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    allergyIntolerance: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    foodPreferenceModifier: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    excludeFoodModifier: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     oralDiet?: QICoreNutritionOrder.OralDiet.AsObject,
-    supplementList: Array<QICoreNutritionOrder.Supplement.AsObject>,
+    supplement: Array<QICoreNutritionOrder.Supplement.AsObject>,
     enteralFormula?: QICoreNutritionOrder.EnteralFormula.AsObject,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -12401,9 +12401,9 @@ export namespace QICoreNutritionOrder {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -12420,7 +12420,7 @@ export namespace QICoreNutritionOrder {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestStatusCode.ValueMap[keyof proto_r4_core_codes_pb.RequestStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -12433,9 +12433,9 @@ export namespace QICoreNutritionOrder {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -12452,7 +12452,7 @@ export namespace QICoreNutritionOrder {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestIntentCode.ValueMap[keyof proto_r4_core_codes_pb.RequestIntentCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -12462,39 +12462,39 @@ export namespace QICoreNutritionOrder {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearTypeList(): void;
-    getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearType(): void;
+    getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearScheduleList(): void;
-    getScheduleList(): Array<proto_r4_core_datatypes_pb.Timing>;
-    setScheduleList(value: Array<proto_r4_core_datatypes_pb.Timing>): void;
+    clearSchedule(): void;
+    getSchedule(): Array<proto_r4_core_datatypes_pb.Timing>;
+    setSchedule(value: Array<proto_r4_core_datatypes_pb.Timing>): void;
     addSchedule(value?: proto_r4_core_datatypes_pb.Timing, index?: number): proto_r4_core_datatypes_pb.Timing;
 
-    clearNutrientList(): void;
-    getNutrientList(): Array<QICoreNutritionOrder.OralDiet.Nutrient>;
-    setNutrientList(value: Array<QICoreNutritionOrder.OralDiet.Nutrient>): void;
+    clearNutrient(): void;
+    getNutrient(): Array<QICoreNutritionOrder.OralDiet.Nutrient>;
+    setNutrient(value: Array<QICoreNutritionOrder.OralDiet.Nutrient>): void;
     addNutrient(value?: QICoreNutritionOrder.OralDiet.Nutrient, index?: number): QICoreNutritionOrder.OralDiet.Nutrient;
 
-    clearTextureList(): void;
-    getTextureList(): Array<QICoreNutritionOrder.OralDiet.Texture>;
-    setTextureList(value: Array<QICoreNutritionOrder.OralDiet.Texture>): void;
+    clearTexture(): void;
+    getTexture(): Array<QICoreNutritionOrder.OralDiet.Texture>;
+    setTexture(value: Array<QICoreNutritionOrder.OralDiet.Texture>): void;
     addTexture(value?: QICoreNutritionOrder.OralDiet.Texture, index?: number): QICoreNutritionOrder.OralDiet.Texture;
 
-    clearFluidConsistencyTypeList(): void;
-    getFluidConsistencyTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setFluidConsistencyTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearFluidConsistencyType(): void;
+    getFluidConsistencyType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setFluidConsistencyType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addFluidConsistencyType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasInstruction(): boolean;
@@ -12515,13 +12515,13 @@ export namespace QICoreNutritionOrder {
   export namespace OralDiet {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      scheduleList: Array<proto_r4_core_datatypes_pb.Timing.AsObject>,
-      nutrientList: Array<QICoreNutritionOrder.OralDiet.Nutrient.AsObject>,
-      textureList: Array<QICoreNutritionOrder.OralDiet.Texture.AsObject>,
-      fluidConsistencyTypeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      schedule: Array<proto_r4_core_datatypes_pb.Timing.AsObject>,
+      nutrient: Array<QICoreNutritionOrder.OralDiet.Nutrient.AsObject>,
+      texture: Array<QICoreNutritionOrder.OralDiet.Texture.AsObject>,
+      fluidConsistencyType: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       instruction?: proto_r4_core_datatypes_pb.String.AsObject,
     }
 
@@ -12531,14 +12531,14 @@ export namespace QICoreNutritionOrder {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasModifier(): boolean;
@@ -12564,8 +12564,8 @@ export namespace QICoreNutritionOrder {
     export namespace Nutrient {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         modifier?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         amount?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       }
@@ -12577,14 +12577,14 @@ export namespace QICoreNutritionOrder {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasModifier(): boolean;
@@ -12610,8 +12610,8 @@ export namespace QICoreNutritionOrder {
     export namespace Texture {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         modifier?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         foodType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       }
@@ -12624,14 +12624,14 @@ export namespace QICoreNutritionOrder {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -12644,9 +12644,9 @@ export namespace QICoreNutritionOrder {
     getProductName(): proto_r4_core_datatypes_pb.String | undefined;
     setProductName(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearScheduleList(): void;
-    getScheduleList(): Array<proto_r4_core_datatypes_pb.Timing>;
-    setScheduleList(value: Array<proto_r4_core_datatypes_pb.Timing>): void;
+    clearSchedule(): void;
+    getSchedule(): Array<proto_r4_core_datatypes_pb.Timing>;
+    setSchedule(value: Array<proto_r4_core_datatypes_pb.Timing>): void;
     addSchedule(value?: proto_r4_core_datatypes_pb.Timing, index?: number): proto_r4_core_datatypes_pb.Timing;
 
     hasQuantity(): boolean;
@@ -12672,11 +12672,11 @@ export namespace QICoreNutritionOrder {
   export namespace Supplement {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       productName?: proto_r4_core_datatypes_pb.String.AsObject,
-      scheduleList: Array<proto_r4_core_datatypes_pb.Timing.AsObject>,
+      schedule: Array<proto_r4_core_datatypes_pb.Timing.AsObject>,
       quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       instruction?: proto_r4_core_datatypes_pb.String.AsObject,
     }
@@ -12688,14 +12688,14 @@ export namespace QICoreNutritionOrder {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasBaseFormulaType(): boolean;
@@ -12728,9 +12728,9 @@ export namespace QICoreNutritionOrder {
     getRouteofAdministration(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setRouteofAdministration(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearAdministrationList(): void;
-    getAdministrationList(): Array<QICoreNutritionOrder.EnteralFormula.Administration>;
-    setAdministrationList(value: Array<QICoreNutritionOrder.EnteralFormula.Administration>): void;
+    clearAdministration(): void;
+    getAdministration(): Array<QICoreNutritionOrder.EnteralFormula.Administration>;
+    setAdministration(value: Array<QICoreNutritionOrder.EnteralFormula.Administration>): void;
     addAdministration(value?: QICoreNutritionOrder.EnteralFormula.Administration, index?: number): QICoreNutritionOrder.EnteralFormula.Administration;
 
     hasMaxVolumeToDeliver(): boolean;
@@ -12756,15 +12756,15 @@ export namespace QICoreNutritionOrder {
   export namespace EnteralFormula {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       baseFormulaType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       baseFormulaProductName?: proto_r4_core_datatypes_pb.String.AsObject,
       additiveType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       additiveProductName?: proto_r4_core_datatypes_pb.String.AsObject,
       caloricDensity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       routeofAdministration?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      administrationList: Array<QICoreNutritionOrder.EnteralFormula.Administration.AsObject>,
+      administration: Array<QICoreNutritionOrder.EnteralFormula.Administration.AsObject>,
       maxVolumeToDeliver?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       administrationInstruction?: proto_r4_core_datatypes_pb.String.AsObject,
     }
@@ -12775,14 +12775,14 @@ export namespace QICoreNutritionOrder {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasSchedule(): boolean;
@@ -12813,8 +12813,8 @@ export namespace QICoreNutritionOrder {
     export namespace Administration {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         schedule?: proto_r4_core_datatypes_pb.Timing.AsObject,
         quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
         rate?: QICoreNutritionOrder.EnteralFormula.Administration.RateX.AsObject,
@@ -12884,34 +12884,34 @@ export class QICoreObservation extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearPartOfList(): void;
-  getPartOfList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPartOfList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPartOf(): void;
+  getPartOf(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPartOf(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPartOf(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -12919,9 +12919,9 @@ export class QICoreObservation extends jspb.Message {
   getStatus(): QICoreObservation.StatusCode | undefined;
   setStatus(value?: QICoreObservation.StatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -12934,9 +12934,9 @@ export class QICoreObservation extends jspb.Message {
   getSubject(): proto_r4_core_datatypes_pb.Reference | undefined;
   setSubject(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearFocusList(): void;
-  getFocusList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setFocusList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearFocus(): void;
+  getFocus(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setFocus(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addFocus(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasEncounter(): boolean;
@@ -12954,9 +12954,9 @@ export class QICoreObservation extends jspb.Message {
   getIssued(): proto_r4_core_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_r4_core_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -12969,14 +12969,14 @@ export class QICoreObservation extends jspb.Message {
   getDataAbsentReason(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setDataAbsentReason(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearInterpretationList(): void;
-  getInterpretationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setInterpretationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearInterpretation(): void;
+  getInterpretation(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setInterpretation(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addInterpretation(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   hasBodySite(): boolean;
@@ -12999,24 +12999,24 @@ export class QICoreObservation extends jspb.Message {
   getDevice(): proto_r4_core_datatypes_pb.Reference | undefined;
   setDevice(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReferenceRangeList(): void;
-  getReferenceRangeList(): Array<QICoreObservation.ReferenceRange>;
-  setReferenceRangeList(value: Array<QICoreObservation.ReferenceRange>): void;
+  clearReferenceRange(): void;
+  getReferenceRange(): Array<QICoreObservation.ReferenceRange>;
+  setReferenceRange(value: Array<QICoreObservation.ReferenceRange>): void;
   addReferenceRange(value?: QICoreObservation.ReferenceRange, index?: number): QICoreObservation.ReferenceRange;
 
-  clearHasMemberList(): void;
-  getHasMemberList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setHasMemberList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearHasMember(): void;
+  getHasMember(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setHasMember(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addHasMember(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearDerivedFromList(): void;
-  getDerivedFromList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setDerivedFromList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearDerivedFrom(): void;
+  getDerivedFrom(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setDerivedFrom(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addDerivedFrom(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearComponentList(): void;
-  getComponentList(): Array<QICoreObservation.Component>;
-  setComponentList(value: Array<QICoreObservation.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<QICoreObservation.Component>;
+  setComponent(value: Array<QICoreObservation.Component>): void;
   addComponent(value?: QICoreObservation.Component, index?: number): QICoreObservation.Component;
 
   hasBodyPosition(): boolean;
@@ -13046,33 +13046,33 @@ export namespace QICoreObservation {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    partOfList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    partOf: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: QICoreObservation.StatusCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    focusList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    focus: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     effective?: QICoreObservation.EffectiveX.AsObject,
     issued?: proto_r4_core_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     value?: QICoreObservation.ValueX.AsObject,
     dataAbsentReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    interpretationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    interpretation: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
     bodySite?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     method?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     specimen?: proto_r4_core_datatypes_pb.Reference.AsObject,
     device?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    referenceRangeList: Array<QICoreObservation.ReferenceRange.AsObject>,
-    hasMemberList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    derivedFromList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    componentList: Array<QICoreObservation.Component.AsObject>,
+    referenceRange: Array<QICoreObservation.ReferenceRange.AsObject>,
+    hasMember: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    derivedFrom: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    component: Array<QICoreObservation.Component.AsObject>,
     bodyPosition?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     delta?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
   }
@@ -13086,9 +13086,9 @@ export namespace QICoreObservation {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -13105,7 +13105,7 @@ export namespace QICoreObservation {
     export type AsObject = {
       value: proto_r4_core_codes_pb.ObservationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.ObservationStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -13262,14 +13262,14 @@ export namespace QICoreObservation {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -13287,9 +13287,9 @@ export namespace QICoreObservation {
     getType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasAge(): boolean;
@@ -13315,12 +13315,12 @@ export namespace QICoreObservation {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       low?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       high?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       age?: proto_r4_core_datatypes_pb.Range.AsObject,
       text?: proto_r4_core_datatypes_pb.String.AsObject,
     }
@@ -13332,14 +13332,14 @@ export namespace QICoreObservation {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -13357,14 +13357,14 @@ export namespace QICoreObservation {
     getDataAbsentReason(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setDataAbsentReason(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearInterpretationList(): void;
-    getInterpretationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setInterpretationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearInterpretation(): void;
+    getInterpretation(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setInterpretation(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addInterpretation(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<QICoreObservation.ReferenceRange>;
-    setReferenceRangeList(value: Array<QICoreObservation.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<QICoreObservation.ReferenceRange>;
+    setReferenceRange(value: Array<QICoreObservation.ReferenceRange>): void;
     addReferenceRange(value?: QICoreObservation.ReferenceRange, index?: number): QICoreObservation.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -13380,13 +13380,13 @@ export namespace QICoreObservation {
   export namespace Component {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       value?: QICoreObservation.Component.ValueX.AsObject,
       dataAbsentReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      interpretationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      referenceRangeList: Array<QICoreObservation.ReferenceRange.AsObject>,
+      interpretation: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      referenceRange: Array<QICoreObservation.ReferenceRange.AsObject>,
     }
 
     export class ValueX extends jspb.Message {
@@ -13515,24 +13515,24 @@ export class QICoreOrganization extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasActive(): boolean;
@@ -13540,9 +13540,9 @@ export class QICoreOrganization extends jspb.Message {
   getActive(): proto_r4_core_datatypes_pb.Boolean | undefined;
   setActive(value?: proto_r4_core_datatypes_pb.Boolean): void;
 
-  clearTypeList(): void;
-  getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearType(): void;
+  getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasName(): boolean;
@@ -13550,19 +13550,19 @@ export class QICoreOrganization extends jspb.Message {
   getName(): proto_r4_core_datatypes_pb.String | undefined;
   setName(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearAliasList(): void;
-  getAliasList(): Array<proto_r4_core_datatypes_pb.String>;
-  setAliasList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+  clearAlias(): void;
+  getAlias(): Array<proto_r4_core_datatypes_pb.String>;
+  setAlias(value: Array<proto_r4_core_datatypes_pb.String>): void;
   addAlias(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
-  clearTelecomList(): void;
-  getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearTelecom(): void;
+  getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
-  clearAddressList(): void;
-  getAddressList(): Array<proto_r4_core_datatypes_pb.Address>;
-  setAddressList(value: Array<proto_r4_core_datatypes_pb.Address>): void;
+  clearAddress(): void;
+  getAddress(): Array<proto_r4_core_datatypes_pb.Address>;
+  setAddress(value: Array<proto_r4_core_datatypes_pb.Address>): void;
   addAddress(value?: proto_r4_core_datatypes_pb.Address, index?: number): proto_r4_core_datatypes_pb.Address;
 
   hasPartOf(): boolean;
@@ -13570,14 +13570,14 @@ export class QICoreOrganization extends jspb.Message {
   getPartOf(): proto_r4_core_datatypes_pb.Reference | undefined;
   setPartOf(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearContactList(): void;
-  getContactList(): Array<QICoreOrganization.Contact>;
-  setContactList(value: Array<QICoreOrganization.Contact>): void;
+  clearContact(): void;
+  getContact(): Array<QICoreOrganization.Contact>;
+  setContact(value: Array<QICoreOrganization.Contact>): void;
   addContact(value?: QICoreOrganization.Contact, index?: number): QICoreOrganization.Contact;
 
-  clearEndpointList(): void;
-  getEndpointList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setEndpointList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearEndpoint(): void;
+  getEndpoint(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setEndpoint(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addEndpoint(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -13597,19 +13597,19 @@ export namespace QICoreOrganization {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     active?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-    typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     name?: proto_r4_core_datatypes_pb.String.AsObject,
-    aliasList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
-    telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
-    addressList: Array<proto_r4_core_datatypes_pb.Address.AsObject>,
+    alias: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+    telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    address: Array<proto_r4_core_datatypes_pb.Address.AsObject>,
     partOf?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    contactList: Array<QICoreOrganization.Contact.AsObject>,
-    endpointList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contact: Array<QICoreOrganization.Contact.AsObject>,
+    endpoint: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class Contact extends jspb.Message {
@@ -13618,14 +13618,14 @@ export namespace QICoreOrganization {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasPurpose(): boolean;
@@ -13638,9 +13638,9 @@ export namespace QICoreOrganization {
     getName(): proto_r4_core_datatypes_pb.HumanName | undefined;
     setName(value?: proto_r4_core_datatypes_pb.HumanName): void;
 
-    clearTelecomList(): void;
-    getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-    setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+    clearTelecom(): void;
+    getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+    setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
     addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
     hasAddress(): boolean;
@@ -13661,11 +13661,11 @@ export namespace QICoreOrganization {
   export namespace Contact {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       purpose?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       name?: proto_r4_core_datatypes_pb.HumanName.AsObject,
-      telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+      telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
       address?: proto_r4_core_datatypes_pb.Address.AsObject,
     }
   }
@@ -13697,24 +13697,24 @@ export class QICorePatient extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasActive(): boolean;
@@ -13722,14 +13722,14 @@ export class QICorePatient extends jspb.Message {
   getActive(): proto_r4_core_datatypes_pb.Boolean | undefined;
   setActive(value?: proto_r4_core_datatypes_pb.Boolean): void;
 
-  clearNameList(): void;
-  getNameList(): Array<proto_r4_core_datatypes_pb.HumanName>;
-  setNameList(value: Array<proto_r4_core_datatypes_pb.HumanName>): void;
+  clearName(): void;
+  getName(): Array<proto_r4_core_datatypes_pb.HumanName>;
+  setName(value: Array<proto_r4_core_datatypes_pb.HumanName>): void;
   addName(value?: proto_r4_core_datatypes_pb.HumanName, index?: number): proto_r4_core_datatypes_pb.HumanName;
 
-  clearTelecomList(): void;
-  getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearTelecom(): void;
+  getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
   hasGender(): boolean;
@@ -13747,9 +13747,9 @@ export class QICorePatient extends jspb.Message {
   getDeceased(): QICorePatient.DeceasedX | undefined;
   setDeceased(value?: QICorePatient.DeceasedX): void;
 
-  clearAddressList(): void;
-  getAddressList(): Array<proto_r4_core_datatypes_pb.Address>;
-  setAddressList(value: Array<proto_r4_core_datatypes_pb.Address>): void;
+  clearAddress(): void;
+  getAddress(): Array<proto_r4_core_datatypes_pb.Address>;
+  setAddress(value: Array<proto_r4_core_datatypes_pb.Address>): void;
   addAddress(value?: proto_r4_core_datatypes_pb.Address, index?: number): proto_r4_core_datatypes_pb.Address;
 
   hasMaritalStatus(): boolean;
@@ -13762,24 +13762,24 @@ export class QICorePatient extends jspb.Message {
   getMultipleBirth(): QICorePatient.MultipleBirthX | undefined;
   setMultipleBirth(value?: QICorePatient.MultipleBirthX): void;
 
-  clearPhotoList(): void;
-  getPhotoList(): Array<proto_r4_core_datatypes_pb.Attachment>;
-  setPhotoList(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
+  clearPhoto(): void;
+  getPhoto(): Array<proto_r4_core_datatypes_pb.Attachment>;
+  setPhoto(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
   addPhoto(value?: proto_r4_core_datatypes_pb.Attachment, index?: number): proto_r4_core_datatypes_pb.Attachment;
 
-  clearContactList(): void;
-  getContactList(): Array<QICorePatient.Contact>;
-  setContactList(value: Array<QICorePatient.Contact>): void;
+  clearContact(): void;
+  getContact(): Array<QICorePatient.Contact>;
+  setContact(value: Array<QICorePatient.Contact>): void;
   addContact(value?: QICorePatient.Contact, index?: number): QICorePatient.Contact;
 
-  clearCommunicationList(): void;
-  getCommunicationList(): Array<QICorePatient.Communication>;
-  setCommunicationList(value: Array<QICorePatient.Communication>): void;
+  clearCommunication(): void;
+  getCommunication(): Array<QICorePatient.Communication>;
+  setCommunication(value: Array<QICorePatient.Communication>): void;
   addCommunication(value?: QICorePatient.Communication, index?: number): QICorePatient.Communication;
 
-  clearGeneralPractitionerList(): void;
-  getGeneralPractitionerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setGeneralPractitionerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearGeneralPractitioner(): void;
+  getGeneralPractitioner(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setGeneralPractitioner(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addGeneralPractitioner(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasManagingOrganization(): boolean;
@@ -13787,9 +13787,9 @@ export class QICorePatient extends jspb.Message {
   getManagingOrganization(): proto_r4_core_datatypes_pb.Reference | undefined;
   setManagingOrganization(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearLinkList(): void;
-  getLinkList(): Array<QICorePatient.Link>;
-  setLinkList(value: Array<QICorePatient.Link>): void;
+  clearLink(): void;
+  getLink(): Array<QICorePatient.Link>;
+  setLink(value: Array<QICorePatient.Link>): void;
   addLink(value?: QICorePatient.Link, index?: number): QICorePatient.Link;
 
   hasRace(): boolean;
@@ -13817,14 +13817,14 @@ export class QICorePatient extends jspb.Message {
   getBirthPlace(): proto_r4_core_datatypes_pb.Address | undefined;
   setBirthPlace(value?: proto_r4_core_datatypes_pb.Address): void;
 
-  clearDisabilityList(): void;
-  getDisabilityList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setDisabilityList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearDisability(): void;
+  getDisability(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setDisability(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addDisability(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearNationalityList(): void;
-  getNationalityList(): Array<proto_r4_core_extensions_pb.PatientNationality>;
-  setNationalityList(value: Array<proto_r4_core_extensions_pb.PatientNationality>): void;
+  clearNationality(): void;
+  getNationality(): Array<proto_r4_core_extensions_pb.PatientNationality>;
+  setNationality(value: Array<proto_r4_core_extensions_pb.PatientNationality>): void;
   addNationality(value?: proto_r4_core_extensions_pb.PatientNationality, index?: number): proto_r4_core_extensions_pb.PatientNationality;
 
   hasCadavericDonor(): boolean;
@@ -13859,32 +13859,32 @@ export namespace QICorePatient {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     active?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-    nameList: Array<proto_r4_core_datatypes_pb.HumanName.AsObject>,
-    telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    name: Array<proto_r4_core_datatypes_pb.HumanName.AsObject>,
+    telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
     gender?: QICorePatient.GenderCode.AsObject,
     birthDate?: proto_r4_core_datatypes_pb.Date.AsObject,
     deceased?: QICorePatient.DeceasedX.AsObject,
-    addressList: Array<proto_r4_core_datatypes_pb.Address.AsObject>,
+    address: Array<proto_r4_core_datatypes_pb.Address.AsObject>,
     maritalStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     multipleBirth?: QICorePatient.MultipleBirthX.AsObject,
-    photoList: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
-    contactList: Array<QICorePatient.Contact.AsObject>,
-    communicationList: Array<QICorePatient.Communication.AsObject>,
-    generalPractitionerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    photo: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
+    contact: Array<QICorePatient.Contact.AsObject>,
+    communication: Array<QICorePatient.Communication.AsObject>,
+    generalPractitioner: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     managingOrganization?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    linkList: Array<QICorePatient.Link.AsObject>,
+    link: Array<QICorePatient.Link.AsObject>,
     race?: proto_r4_uscore_pb.PatientUSCoreRaceExtension.AsObject,
     ethnicity?: proto_r4_uscore_pb.PatientUSCoreEthnicityExtension.AsObject,
     birthsex?: proto_r4_uscore_pb.PatientUSCoreBirthSexExtension.ValueCode.AsObject,
     religion?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     birthPlace?: proto_r4_core_datatypes_pb.Address.AsObject,
-    disabilityList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    nationalityList: Array<proto_r4_core_extensions_pb.PatientNationality.AsObject>,
+    disability: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    nationality: Array<proto_r4_core_extensions_pb.PatientNationality.AsObject>,
     cadavericDonor?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     militaryService?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     birthTime?: proto_r4_core_datatypes_pb.DateTime.AsObject,
@@ -13899,9 +13899,9 @@ export namespace QICorePatient {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -13918,7 +13918,7 @@ export namespace QICorePatient {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AdministrativeGenderCode.ValueMap[keyof proto_r4_core_codes_pb.AdministrativeGenderCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -13998,19 +13998,19 @@ export namespace QICorePatient {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearRelationshipList(): void;
-    getRelationshipList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setRelationshipList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearRelationship(): void;
+    getRelationship(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setRelationship(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addRelationship(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasName(): boolean;
@@ -14018,9 +14018,9 @@ export namespace QICorePatient {
     getName(): proto_r4_core_datatypes_pb.HumanName | undefined;
     setName(value?: proto_r4_core_datatypes_pb.HumanName): void;
 
-    clearTelecomList(): void;
-    getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-    setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+    clearTelecom(): void;
+    getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+    setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
     addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
     hasAddress(): boolean;
@@ -14056,11 +14056,11 @@ export namespace QICorePatient {
   export namespace Contact {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      relationshipList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      relationship: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       name?: proto_r4_core_datatypes_pb.HumanName.AsObject,
-      telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+      telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
       address?: proto_r4_core_datatypes_pb.Address.AsObject,
       gender?: QICorePatient.Contact.GenderCode.AsObject,
       organization?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -14076,9 +14076,9 @@ export namespace QICorePatient {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -14095,7 +14095,7 @@ export namespace QICorePatient {
       export type AsObject = {
         value: proto_r4_core_codes_pb.AdministrativeGenderCode.ValueMap[keyof proto_r4_core_codes_pb.AdministrativeGenderCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -14106,14 +14106,14 @@ export namespace QICorePatient {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasLanguage(): boolean;
@@ -14139,8 +14139,8 @@ export namespace QICorePatient {
   export namespace Communication {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       language?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       preferred?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     }
@@ -14152,14 +14152,14 @@ export namespace QICorePatient {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasOther(): boolean;
@@ -14185,8 +14185,8 @@ export namespace QICorePatient {
   export namespace Link {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       other?: proto_r4_core_datatypes_pb.Reference.AsObject,
       type?: QICorePatient.Link.TypeCode.AsObject,
     }
@@ -14200,9 +14200,9 @@ export namespace QICorePatient {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -14219,7 +14219,7 @@ export namespace QICorePatient {
       export type AsObject = {
         value: proto_r4_core_codes_pb.LinkTypeCode.ValueMap[keyof proto_r4_core_codes_pb.LinkTypeCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -14251,24 +14251,24 @@ export class QICorePractitioner extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasActive(): boolean;
@@ -14281,14 +14281,14 @@ export class QICorePractitioner extends jspb.Message {
   getName(): proto_r4_core_datatypes_pb.HumanName | undefined;
   setName(value?: proto_r4_core_datatypes_pb.HumanName): void;
 
-  clearTelecomList(): void;
-  getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearTelecom(): void;
+  getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
-  clearAddressList(): void;
-  getAddressList(): Array<proto_r4_core_datatypes_pb.Address>;
-  setAddressList(value: Array<proto_r4_core_datatypes_pb.Address>): void;
+  clearAddress(): void;
+  getAddress(): Array<proto_r4_core_datatypes_pb.Address>;
+  setAddress(value: Array<proto_r4_core_datatypes_pb.Address>): void;
   addAddress(value?: proto_r4_core_datatypes_pb.Address, index?: number): proto_r4_core_datatypes_pb.Address;
 
   hasGender(): boolean;
@@ -14301,19 +14301,19 @@ export class QICorePractitioner extends jspb.Message {
   getBirthDate(): proto_r4_core_datatypes_pb.Date | undefined;
   setBirthDate(value?: proto_r4_core_datatypes_pb.Date): void;
 
-  clearPhotoList(): void;
-  getPhotoList(): Array<proto_r4_core_datatypes_pb.Attachment>;
-  setPhotoList(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
+  clearPhoto(): void;
+  getPhoto(): Array<proto_r4_core_datatypes_pb.Attachment>;
+  setPhoto(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
   addPhoto(value?: proto_r4_core_datatypes_pb.Attachment, index?: number): proto_r4_core_datatypes_pb.Attachment;
 
-  clearQualificationList(): void;
-  getQualificationList(): Array<QICorePractitioner.Qualification>;
-  setQualificationList(value: Array<QICorePractitioner.Qualification>): void;
+  clearQualification(): void;
+  getQualification(): Array<QICorePractitioner.Qualification>;
+  setQualification(value: Array<QICorePractitioner.Qualification>): void;
   addQualification(value?: QICorePractitioner.Qualification, index?: number): QICorePractitioner.Qualification;
 
-  clearCommunicationList(): void;
-  getCommunicationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCommunicationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCommunication(): void;
+  getCommunication(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCommunication(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCommunication(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   serializeBinary(): Uint8Array;
@@ -14333,19 +14333,19 @@ export namespace QICorePractitioner {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     active?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     name?: proto_r4_core_datatypes_pb.HumanName.AsObject,
-    telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
-    addressList: Array<proto_r4_core_datatypes_pb.Address.AsObject>,
+    telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    address: Array<proto_r4_core_datatypes_pb.Address.AsObject>,
     gender?: QICorePractitioner.GenderCode.AsObject,
     birthDate?: proto_r4_core_datatypes_pb.Date.AsObject,
-    photoList: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
-    qualificationList: Array<QICorePractitioner.Qualification.AsObject>,
-    communicationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    photo: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
+    qualification: Array<QICorePractitioner.Qualification.AsObject>,
+    communication: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
   }
 
   export class GenderCode extends jspb.Message {
@@ -14357,9 +14357,9 @@ export namespace QICorePractitioner {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -14376,7 +14376,7 @@ export namespace QICorePractitioner {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AdministrativeGenderCode.ValueMap[keyof proto_r4_core_codes_pb.AdministrativeGenderCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -14386,19 +14386,19 @@ export namespace QICorePractitioner {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearIdentifierList(): void;
-    getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-    setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+    clearIdentifier(): void;
+    getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+    setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
     addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
     hasCode(): boolean;
@@ -14429,9 +14429,9 @@ export namespace QICorePractitioner {
   export namespace Qualification {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       period?: proto_r4_core_datatypes_pb.Period.AsObject,
       issuer?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -14465,39 +14465,39 @@ export class QICorePractitionerRole extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearHealthcareServiceList(): void;
-  getHealthcareServiceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setHealthcareServiceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearHealthcareService(): void;
+  getHealthcareService(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setHealthcareService(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addHealthcareService(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearTelecomList(): void;
-  getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearTelecom(): void;
+  getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
-  clearAvailableTimeList(): void;
-  getAvailableTimeList(): Array<QICorePractitionerRole.AvailableTime>;
-  setAvailableTimeList(value: Array<QICorePractitionerRole.AvailableTime>): void;
+  clearAvailableTime(): void;
+  getAvailableTime(): Array<QICorePractitionerRole.AvailableTime>;
+  setAvailableTime(value: Array<QICorePractitionerRole.AvailableTime>): void;
   addAvailableTime(value?: QICorePractitionerRole.AvailableTime, index?: number): QICorePractitionerRole.AvailableTime;
 
-  clearNotAvailableList(): void;
-  getNotAvailableList(): Array<QICorePractitionerRole.NotAvailable>;
-  setNotAvailableList(value: Array<QICorePractitionerRole.NotAvailable>): void;
+  clearNotAvailable(): void;
+  getNotAvailable(): Array<QICorePractitionerRole.NotAvailable>;
+  setNotAvailable(value: Array<QICorePractitionerRole.NotAvailable>): void;
   addNotAvailable(value?: QICorePractitionerRole.NotAvailable, index?: number): QICorePractitionerRole.NotAvailable;
 
   hasAvailabilityExceptions(): boolean;
@@ -14505,9 +14505,9 @@ export class QICorePractitionerRole extends jspb.Message {
   getAvailabilityExceptions(): proto_r4_core_datatypes_pb.String | undefined;
   setAvailabilityExceptions(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearEndpointList(): void;
-  getEndpointList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setEndpointList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearEndpoint(): void;
+  getEndpoint(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setEndpoint(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addEndpoint(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -14527,15 +14527,15 @@ export namespace QICorePractitionerRole {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    healthcareServiceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
-    availableTimeList: Array<QICorePractitionerRole.AvailableTime.AsObject>,
-    notAvailableList: Array<QICorePractitionerRole.NotAvailable.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    healthcareService: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    availableTime: Array<QICorePractitionerRole.AvailableTime.AsObject>,
+    notAvailable: Array<QICorePractitionerRole.NotAvailable.AsObject>,
     availabilityExceptions?: proto_r4_core_datatypes_pb.String.AsObject,
-    endpointList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    endpoint: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class AvailableTime extends jspb.Message {
@@ -14544,19 +14544,19 @@ export namespace QICorePractitionerRole {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearDaysOfWeekList(): void;
-    getDaysOfWeekList(): Array<QICorePractitionerRole.AvailableTime.DaysOfWeekCode>;
-    setDaysOfWeekList(value: Array<QICorePractitionerRole.AvailableTime.DaysOfWeekCode>): void;
+    clearDaysOfWeek(): void;
+    getDaysOfWeek(): Array<QICorePractitionerRole.AvailableTime.DaysOfWeekCode>;
+    setDaysOfWeek(value: Array<QICorePractitionerRole.AvailableTime.DaysOfWeekCode>): void;
     addDaysOfWeek(value?: QICorePractitionerRole.AvailableTime.DaysOfWeekCode, index?: number): QICorePractitionerRole.AvailableTime.DaysOfWeekCode;
 
     hasAllDay(): boolean;
@@ -14587,9 +14587,9 @@ export namespace QICorePractitionerRole {
   export namespace AvailableTime {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      daysOfWeekList: Array<QICorePractitionerRole.AvailableTime.DaysOfWeekCode.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      daysOfWeek: Array<QICorePractitionerRole.AvailableTime.DaysOfWeekCode.AsObject>,
       allDay?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       availableStartTime?: proto_r4_core_datatypes_pb.Time.AsObject,
       availableEndTime?: proto_r4_core_datatypes_pb.Time.AsObject,
@@ -14604,9 +14604,9 @@ export namespace QICorePractitionerRole {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -14623,7 +14623,7 @@ export namespace QICorePractitionerRole {
       export type AsObject = {
         value: proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap[keyof proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -14634,14 +14634,14 @@ export namespace QICorePractitionerRole {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasDescription(): boolean;
@@ -14667,8 +14667,8 @@ export namespace QICorePractitionerRole {
   export namespace NotAvailable {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       description?: proto_r4_core_datatypes_pb.String.AsObject,
       during?: proto_r4_core_datatypes_pb.Period.AsObject,
     }
@@ -14701,44 +14701,44 @@ export class QICoreProcedure extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearInstantiatesCanonicalList(): void;
-  getInstantiatesCanonicalList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-  setInstantiatesCanonicalList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+  clearInstantiatesCanonical(): void;
+  getInstantiatesCanonical(): Array<proto_r4_core_datatypes_pb.Canonical>;
+  setInstantiatesCanonical(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
   addInstantiatesCanonical(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
-  clearInstantiatesUriList(): void;
-  getInstantiatesUriList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setInstantiatesUriList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearInstantiatesUri(): void;
+  getInstantiatesUri(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setInstantiatesUri(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addInstantiatesUri(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearPartOfList(): void;
-  getPartOfList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPartOfList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPartOf(): void;
+  getPartOf(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPartOf(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPartOf(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -14786,9 +14786,9 @@ export class QICoreProcedure extends jspb.Message {
   getAsserter(): proto_r4_core_datatypes_pb.Reference | undefined;
   setAsserter(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<QICoreProcedure.Performer>;
-  setPerformerList(value: Array<QICoreProcedure.Performer>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<QICoreProcedure.Performer>;
+  setPerformer(value: Array<QICoreProcedure.Performer>): void;
   addPerformer(value?: QICoreProcedure.Performer, index?: number): QICoreProcedure.Performer;
 
   hasLocation(): boolean;
@@ -14796,19 +14796,19 @@ export class QICoreProcedure extends jspb.Message {
   getLocation(): proto_r4_core_datatypes_pb.Reference | undefined;
   setLocation(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearBodySiteList(): void;
-  getBodySiteList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setBodySiteList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearBodySite(): void;
+  getBodySite(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setBodySite(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addBodySite(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasOutcome(): boolean;
@@ -14816,49 +14816,49 @@ export class QICoreProcedure extends jspb.Message {
   getOutcome(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setOutcome(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearReportList(): void;
-  getReportList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReportList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReport(): void;
+  getReport(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReport(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReport(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearComplicationList(): void;
-  getComplicationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setComplicationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearComplication(): void;
+  getComplication(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setComplication(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addComplication(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearComplicationDetailList(): void;
-  getComplicationDetailList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setComplicationDetailList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearComplicationDetail(): void;
+  getComplicationDetail(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setComplicationDetail(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addComplicationDetail(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearFollowUpList(): void;
-  getFollowUpList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setFollowUpList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearFollowUp(): void;
+  getFollowUp(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setFollowUp(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addFollowUp(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearFocalDeviceList(): void;
-  getFocalDeviceList(): Array<QICoreProcedure.FocalDevice>;
-  setFocalDeviceList(value: Array<QICoreProcedure.FocalDevice>): void;
+  clearFocalDevice(): void;
+  getFocalDevice(): Array<QICoreProcedure.FocalDevice>;
+  setFocalDevice(value: Array<QICoreProcedure.FocalDevice>): void;
   addFocalDevice(value?: QICoreProcedure.FocalDevice, index?: number): QICoreProcedure.FocalDevice;
 
-  clearUsedReferenceList(): void;
-  getUsedReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setUsedReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearUsedReference(): void;
+  getUsedReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setUsedReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addUsedReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearUsedCodeList(): void;
-  getUsedCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setUsedCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearUsedCode(): void;
+  getUsedCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setUsedCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addUsedCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearApproachBodyStructureList(): void;
-  getApproachBodyStructureList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setApproachBodyStructureList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearApproachBodyStructure(): void;
+  getApproachBodyStructure(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setApproachBodyStructure(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addApproachBodyStructure(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasIncisionDateTime(): boolean;
@@ -14883,14 +14883,14 @@ export namespace QICoreProcedure {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    instantiatesCanonicalList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
-    instantiatesUriList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    partOfList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    instantiatesCanonical: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+    instantiatesUri: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    partOf: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: QICoreProcedure.StatusCode.AsObject,
     statusReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -14900,21 +14900,21 @@ export namespace QICoreProcedure {
     performed?: QICoreProcedure.PerformedX.AsObject,
     recorder?: proto_r4_core_datatypes_pb.Reference.AsObject,
     asserter?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    performerList: Array<QICoreProcedure.Performer.AsObject>,
+    performer: Array<QICoreProcedure.Performer.AsObject>,
     location?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    bodySiteList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    bodySite: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     outcome?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    reportList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    complicationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    complicationDetailList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    followUpList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    focalDeviceList: Array<QICoreProcedure.FocalDevice.AsObject>,
-    usedReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    usedCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    approachBodyStructureList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    report: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    complication: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    complicationDetail: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    followUp: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    focalDevice: Array<QICoreProcedure.FocalDevice.AsObject>,
+    usedReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    usedCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    approachBodyStructure: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     incisionDateTime?: proto_r4_core_datatypes_pb.DateTime.AsObject,
   }
 
@@ -14927,9 +14927,9 @@ export namespace QICoreProcedure {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -14946,7 +14946,7 @@ export namespace QICoreProcedure {
     export type AsObject = {
       value: proto_r4_core_codes_pb.EventStatusCode.ValueMap[keyof proto_r4_core_codes_pb.EventStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -14991,14 +14991,14 @@ export namespace QICoreProcedure {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasFunction(): boolean;
@@ -15029,8 +15029,8 @@ export namespace QICoreProcedure {
   export namespace Performer {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       pb_function?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       actor?: proto_r4_core_datatypes_pb.Reference.AsObject,
       onBehalfOf?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -15043,14 +15043,14 @@ export namespace QICoreProcedure {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasAction(): boolean;
@@ -15076,8 +15076,8 @@ export namespace QICoreProcedure {
   export namespace FocalDevice {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       action?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       manipulated?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
@@ -15110,24 +15110,24 @@ export class QICoreRelatedPerson extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasActive(): boolean;
@@ -15140,19 +15140,19 @@ export class QICoreRelatedPerson extends jspb.Message {
   getPatient(): proto_r4_core_datatypes_pb.Reference | undefined;
   setPatient(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearRelationshipList(): void;
-  getRelationshipList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setRelationshipList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearRelationship(): void;
+  getRelationship(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setRelationship(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addRelationship(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearNameList(): void;
-  getNameList(): Array<proto_r4_core_datatypes_pb.HumanName>;
-  setNameList(value: Array<proto_r4_core_datatypes_pb.HumanName>): void;
+  clearName(): void;
+  getName(): Array<proto_r4_core_datatypes_pb.HumanName>;
+  setName(value: Array<proto_r4_core_datatypes_pb.HumanName>): void;
   addName(value?: proto_r4_core_datatypes_pb.HumanName, index?: number): proto_r4_core_datatypes_pb.HumanName;
 
-  clearTelecomList(): void;
-  getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearTelecom(): void;
+  getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
   hasGender(): boolean;
@@ -15165,14 +15165,14 @@ export class QICoreRelatedPerson extends jspb.Message {
   getBirthDate(): proto_r4_core_datatypes_pb.Date | undefined;
   setBirthDate(value?: proto_r4_core_datatypes_pb.Date): void;
 
-  clearAddressList(): void;
-  getAddressList(): Array<proto_r4_core_datatypes_pb.Address>;
-  setAddressList(value: Array<proto_r4_core_datatypes_pb.Address>): void;
+  clearAddress(): void;
+  getAddress(): Array<proto_r4_core_datatypes_pb.Address>;
+  setAddress(value: Array<proto_r4_core_datatypes_pb.Address>): void;
   addAddress(value?: proto_r4_core_datatypes_pb.Address, index?: number): proto_r4_core_datatypes_pb.Address;
 
-  clearPhotoList(): void;
-  getPhotoList(): Array<proto_r4_core_datatypes_pb.Attachment>;
-  setPhotoList(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
+  clearPhoto(): void;
+  getPhoto(): Array<proto_r4_core_datatypes_pb.Attachment>;
+  setPhoto(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
   addPhoto(value?: proto_r4_core_datatypes_pb.Attachment, index?: number): proto_r4_core_datatypes_pb.Attachment;
 
   hasPeriod(): boolean;
@@ -15180,9 +15180,9 @@ export class QICoreRelatedPerson extends jspb.Message {
   getPeriod(): proto_r4_core_datatypes_pb.Period | undefined;
   setPeriod(value?: proto_r4_core_datatypes_pb.Period): void;
 
-  clearCommunicationList(): void;
-  getCommunicationList(): Array<QICoreRelatedPerson.Communication>;
-  setCommunicationList(value: Array<QICoreRelatedPerson.Communication>): void;
+  clearCommunication(): void;
+  getCommunication(): Array<QICoreRelatedPerson.Communication>;
+  setCommunication(value: Array<QICoreRelatedPerson.Communication>): void;
   addCommunication(value?: QICoreRelatedPerson.Communication, index?: number): QICoreRelatedPerson.Communication;
 
   serializeBinary(): Uint8Array;
@@ -15202,21 +15202,21 @@ export namespace QICoreRelatedPerson {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     active?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     patient?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    relationshipList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    nameList: Array<proto_r4_core_datatypes_pb.HumanName.AsObject>,
-    telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    relationship: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    name: Array<proto_r4_core_datatypes_pb.HumanName.AsObject>,
+    telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
     gender?: QICoreRelatedPerson.GenderCode.AsObject,
     birthDate?: proto_r4_core_datatypes_pb.Date.AsObject,
-    addressList: Array<proto_r4_core_datatypes_pb.Address.AsObject>,
-    photoList: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
+    address: Array<proto_r4_core_datatypes_pb.Address.AsObject>,
+    photo: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
     period?: proto_r4_core_datatypes_pb.Period.AsObject,
-    communicationList: Array<QICoreRelatedPerson.Communication.AsObject>,
+    communication: Array<QICoreRelatedPerson.Communication.AsObject>,
   }
 
   export class GenderCode extends jspb.Message {
@@ -15228,9 +15228,9 @@ export namespace QICoreRelatedPerson {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -15247,7 +15247,7 @@ export namespace QICoreRelatedPerson {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AdministrativeGenderCode.ValueMap[keyof proto_r4_core_codes_pb.AdministrativeGenderCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -15257,14 +15257,14 @@ export namespace QICoreRelatedPerson {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasLanguage(): boolean;
@@ -15290,8 +15290,8 @@ export namespace QICoreRelatedPerson {
   export namespace Communication {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       language?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       preferred?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     }
@@ -15387,44 +15387,44 @@ export class QICoreServiceRequest extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearInstantiatesCanonicalList(): void;
-  getInstantiatesCanonicalList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-  setInstantiatesCanonicalList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+  clearInstantiatesCanonical(): void;
+  getInstantiatesCanonical(): Array<proto_r4_core_datatypes_pb.Canonical>;
+  setInstantiatesCanonical(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
   addInstantiatesCanonical(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
-  clearInstantiatesUriList(): void;
-  getInstantiatesUriList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setInstantiatesUriList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearInstantiatesUri(): void;
+  getInstantiatesUri(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setInstantiatesUri(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addInstantiatesUri(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearReplacesList(): void;
-  getReplacesList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReplacesList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReplaces(): void;
+  getReplaces(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReplaces(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReplaces(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasRequisition(): boolean;
@@ -15442,9 +15442,9 @@ export class QICoreServiceRequest extends jspb.Message {
   getIntent(): QICoreServiceRequest.IntentCode | undefined;
   setIntent(value?: QICoreServiceRequest.IntentCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasPriority(): boolean;
@@ -15462,9 +15462,9 @@ export class QICoreServiceRequest extends jspb.Message {
   getCode(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setCode(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearOrderDetailList(): void;
-  getOrderDetailList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setOrderDetailList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearOrderDetail(): void;
+  getOrderDetail(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setOrderDetail(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addOrderDetail(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasQuantity(): boolean;
@@ -15507,54 +15507,54 @@ export class QICoreServiceRequest extends jspb.Message {
   getPerformerType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setPerformerType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearLocationCodeList(): void;
-  getLocationCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setLocationCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearLocationCode(): void;
+  getLocationCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setLocationCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addLocationCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearLocationReferenceList(): void;
-  getLocationReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setLocationReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearLocationReference(): void;
+  getLocationReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setLocationReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addLocationReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearInsuranceList(): void;
-  getInsuranceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setInsuranceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearInsurance(): void;
+  getInsurance(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setInsurance(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addInsurance(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearSupportingInfoList(): void;
-  getSupportingInfoList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSupportingInfoList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSupportingInfo(): void;
+  getSupportingInfo(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSupportingInfo(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSupportingInfo(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearSpecimenList(): void;
-  getSpecimenList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSpecimenList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSpecimen(): void;
+  getSpecimen(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSpecimen(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSpecimen(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearBodySiteList(): void;
-  getBodySiteList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setBodySiteList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearBodySite(): void;
+  getBodySite(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setBodySite(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addBodySite(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   hasPatientInstruction(): boolean;
@@ -15562,9 +15562,9 @@ export class QICoreServiceRequest extends jspb.Message {
   getPatientInstruction(): proto_r4_core_datatypes_pb.String | undefined;
   setPatientInstruction(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearRelevantHistoryList(): void;
-  getRelevantHistoryList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setRelevantHistoryList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearRelevantHistory(): void;
+  getRelevantHistory(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setRelevantHistory(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addRelevantHistory(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatusReason(): boolean;
@@ -15572,9 +15572,9 @@ export class QICoreServiceRequest extends jspb.Message {
   getStatusReason(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setStatusReason(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearApproachBodyStructureList(): void;
-  getApproachBodyStructureList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setApproachBodyStructureList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearApproachBodyStructure(): void;
+  getApproachBodyStructure(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setApproachBodyStructure(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addApproachBodyStructure(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasAppropriatenessScore(): boolean;
@@ -15599,22 +15599,22 @@ export namespace QICoreServiceRequest {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    instantiatesCanonicalList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
-    instantiatesUriList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    replacesList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    instantiatesCanonical: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+    instantiatesUri: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    replaces: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     requisition?: proto_r4_core_datatypes_pb.Identifier.AsObject,
     status?: QICoreServiceRequest.StatusCode.AsObject,
     intent?: QICoreServiceRequest.IntentCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     priority?: QICoreServiceRequest.PriorityCode.AsObject,
     doNotPerform?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    orderDetailList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    orderDetail: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     quantity?: QICoreServiceRequest.QuantityX.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -15623,20 +15623,20 @@ export namespace QICoreServiceRequest {
     authoredOn?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     requester?: proto_r4_core_datatypes_pb.Reference.AsObject,
     performerType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    performerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    locationCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    locationReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    insuranceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    supportingInfoList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    specimenList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    bodySiteList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    performer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    locationCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    locationReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    insurance: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    supportingInfo: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    specimen: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    bodySite: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
     patientInstruction?: proto_r4_core_datatypes_pb.String.AsObject,
-    relevantHistoryList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    relevantHistory: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     statusReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    approachBodyStructureList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    approachBodyStructure: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     appropriatenessScore?: ServiceRequestQICoreServiceRequestAppropriatenessScore.ValueX.AsObject,
   }
 
@@ -15649,9 +15649,9 @@ export namespace QICoreServiceRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -15668,7 +15668,7 @@ export namespace QICoreServiceRequest {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestStatusCode.ValueMap[keyof proto_r4_core_codes_pb.RequestStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -15681,9 +15681,9 @@ export namespace QICoreServiceRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -15700,7 +15700,7 @@ export namespace QICoreServiceRequest {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestIntentCode.ValueMap[keyof proto_r4_core_codes_pb.RequestIntentCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -15713,9 +15713,9 @@ export namespace QICoreServiceRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -15732,7 +15732,7 @@ export namespace QICoreServiceRequest {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestPriorityCode.ValueMap[keyof proto_r4_core_codes_pb.RequestPriorityCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -15882,24 +15882,24 @@ export class QICoreSpecimen extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasAccessionIdentifier(): boolean;
@@ -15927,14 +15927,14 @@ export class QICoreSpecimen extends jspb.Message {
   getReceivedTime(): proto_r4_core_datatypes_pb.DateTime | undefined;
   setReceivedTime(value?: proto_r4_core_datatypes_pb.DateTime): void;
 
-  clearParentList(): void;
-  getParentList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setParentList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearParent(): void;
+  getParent(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setParent(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addParent(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearRequestList(): void;
-  getRequestList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setRequestList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearRequest(): void;
+  getRequest(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setRequest(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addRequest(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasCollection(): boolean;
@@ -15942,24 +15942,24 @@ export class QICoreSpecimen extends jspb.Message {
   getCollection(): QICoreSpecimen.Collection | undefined;
   setCollection(value?: QICoreSpecimen.Collection): void;
 
-  clearProcessingList(): void;
-  getProcessingList(): Array<QICoreSpecimen.Processing>;
-  setProcessingList(value: Array<QICoreSpecimen.Processing>): void;
+  clearProcessing(): void;
+  getProcessing(): Array<QICoreSpecimen.Processing>;
+  setProcessing(value: Array<QICoreSpecimen.Processing>): void;
   addProcessing(value?: QICoreSpecimen.Processing, index?: number): QICoreSpecimen.Processing;
 
-  clearContainerList(): void;
-  getContainerList(): Array<QICoreSpecimen.Container>;
-  setContainerList(value: Array<QICoreSpecimen.Container>): void;
+  clearContainer(): void;
+  getContainer(): Array<QICoreSpecimen.Container>;
+  setContainer(value: Array<QICoreSpecimen.Container>): void;
   addContainer(value?: QICoreSpecimen.Container, index?: number): QICoreSpecimen.Container;
 
-  clearConditionList(): void;
-  getConditionList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setConditionList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCondition(): void;
+  getCondition(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCondition(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCondition(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   serializeBinary(): Uint8Array;
@@ -15979,22 +15979,22 @@ export namespace QICoreSpecimen {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     accessionIdentifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
     status?: QICoreSpecimen.StatusCode.AsObject,
     type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     receivedTime?: proto_r4_core_datatypes_pb.DateTime.AsObject,
-    parentList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    requestList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    parent: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    request: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     collection?: QICoreSpecimen.Collection.AsObject,
-    processingList: Array<QICoreSpecimen.Processing.AsObject>,
-    containerList: Array<QICoreSpecimen.Container.AsObject>,
-    conditionList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    processing: Array<QICoreSpecimen.Processing.AsObject>,
+    container: Array<QICoreSpecimen.Container.AsObject>,
+    condition: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -16006,9 +16006,9 @@ export namespace QICoreSpecimen {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -16025,7 +16025,7 @@ export namespace QICoreSpecimen {
     export type AsObject = {
       value: proto_r4_core_codes_pb.SpecimenStatusCode.ValueMap[keyof proto_r4_core_codes_pb.SpecimenStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -16035,14 +16035,14 @@ export namespace QICoreSpecimen {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCollector(): boolean;
@@ -16093,8 +16093,8 @@ export namespace QICoreSpecimen {
   export namespace Collection {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       collector?: proto_r4_core_datatypes_pb.Reference.AsObject,
       collected?: QICoreSpecimen.Collection.CollectedX.AsObject,
       duration?: proto_r4_core_datatypes_pb.Duration.AsObject,
@@ -16181,14 +16181,14 @@ export namespace QICoreSpecimen {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasDescription(): boolean;
@@ -16201,9 +16201,9 @@ export namespace QICoreSpecimen {
     getProcedure(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setProcedure(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearAdditiveList(): void;
-    getAdditiveList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setAdditiveList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearAdditive(): void;
+    getAdditive(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setAdditive(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addAdditive(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     hasTime(): boolean;
@@ -16224,11 +16224,11 @@ export namespace QICoreSpecimen {
   export namespace Processing {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       description?: proto_r4_core_datatypes_pb.String.AsObject,
       procedure?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      additiveList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      additive: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
       time?: QICoreSpecimen.Processing.TimeX.AsObject,
     }
 
@@ -16274,19 +16274,19 @@ export namespace QICoreSpecimen {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearIdentifierList(): void;
-    getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-    setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+    clearIdentifier(): void;
+    getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+    setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
     addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
     hasDescription(): boolean;
@@ -16332,9 +16332,9 @@ export namespace QICoreSpecimen {
   export namespace Container {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
       description?: proto_r4_core_datatypes_pb.String.AsObject,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       capacity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
@@ -16406,24 +16406,24 @@ export class QICoreSubstance extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -16431,9 +16431,9 @@ export class QICoreSubstance extends jspb.Message {
   getStatus(): QICoreSubstance.StatusCode | undefined;
   setStatus(value?: QICoreSubstance.StatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -16446,14 +16446,14 @@ export class QICoreSubstance extends jspb.Message {
   getDescription(): proto_r4_core_datatypes_pb.String | undefined;
   setDescription(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearInstanceList(): void;
-  getInstanceList(): Array<QICoreSubstance.Instance>;
-  setInstanceList(value: Array<QICoreSubstance.Instance>): void;
+  clearInstance(): void;
+  getInstance(): Array<QICoreSubstance.Instance>;
+  setInstance(value: Array<QICoreSubstance.Instance>): void;
   addInstance(value?: QICoreSubstance.Instance, index?: number): QICoreSubstance.Instance;
 
-  clearIngredientList(): void;
-  getIngredientList(): Array<QICoreSubstance.Ingredient>;
-  setIngredientList(value: Array<QICoreSubstance.Ingredient>): void;
+  clearIngredient(): void;
+  getIngredient(): Array<QICoreSubstance.Ingredient>;
+  setIngredient(value: Array<QICoreSubstance.Ingredient>): void;
   addIngredient(value?: QICoreSubstance.Ingredient, index?: number): QICoreSubstance.Ingredient;
 
   serializeBinary(): Uint8Array;
@@ -16473,16 +16473,16 @@ export namespace QICoreSubstance {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: QICoreSubstance.StatusCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     description?: proto_r4_core_datatypes_pb.String.AsObject,
-    instanceList: Array<QICoreSubstance.Instance.AsObject>,
-    ingredientList: Array<QICoreSubstance.Ingredient.AsObject>,
+    instance: Array<QICoreSubstance.Instance.AsObject>,
+    ingredient: Array<QICoreSubstance.Ingredient.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -16494,9 +16494,9 @@ export namespace QICoreSubstance {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -16513,7 +16513,7 @@ export namespace QICoreSubstance {
     export type AsObject = {
       value: proto_r4_core_codes_pb.FHIRSubstanceStatusCode.ValueMap[keyof proto_r4_core_codes_pb.FHIRSubstanceStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -16523,14 +16523,14 @@ export namespace QICoreSubstance {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasIdentifier(): boolean;
@@ -16561,8 +16561,8 @@ export namespace QICoreSubstance {
   export namespace Instance {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       identifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
       expiry?: proto_r4_core_datatypes_pb.DateTime.AsObject,
       quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
@@ -16575,14 +16575,14 @@ export namespace QICoreSubstance {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasQuantity(): boolean;
@@ -16608,8 +16608,8 @@ export namespace QICoreSubstance {
   export namespace Ingredient {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       quantity?: proto_r4_core_datatypes_pb.Ratio.AsObject,
       substance?: QICoreSubstance.Ingredient.SubstanceX.AsObject,
     }
@@ -16670,19 +16670,19 @@ export class QICoreTask extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasInstantiatesCanonical(): boolean;
@@ -16695,9 +16695,9 @@ export class QICoreTask extends jspb.Message {
   getInstantiatesUri(): proto_r4_core_datatypes_pb.Uri | undefined;
   setInstantiatesUri(value?: proto_r4_core_datatypes_pb.Uri): void;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasGroupIdentifier(): boolean;
@@ -16705,9 +16705,9 @@ export class QICoreTask extends jspb.Message {
   getGroupIdentifier(): proto_r4_core_datatypes_pb.Identifier | undefined;
   setGroupIdentifier(value?: proto_r4_core_datatypes_pb.Identifier): void;
 
-  clearPartOfList(): void;
-  getPartOfList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPartOfList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPartOf(): void;
+  getPartOf(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPartOf(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPartOf(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatusReason(): boolean;
@@ -16755,9 +16755,9 @@ export class QICoreTask extends jspb.Message {
   getRequester(): proto_r4_core_datatypes_pb.Reference | undefined;
   setRequester(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearPerformerTypeList(): void;
-  getPerformerTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setPerformerTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearPerformerType(): void;
+  getPerformerType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setPerformerType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addPerformerType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasOwner(): boolean;
@@ -16780,19 +16780,19 @@ export class QICoreTask extends jspb.Message {
   getReasonReference(): proto_r4_core_datatypes_pb.Reference | undefined;
   setReasonReference(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearInsuranceList(): void;
-  getInsuranceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setInsuranceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearInsurance(): void;
+  getInsurance(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setInsurance(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addInsurance(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearRelevantHistoryList(): void;
-  getRelevantHistoryList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setRelevantHistoryList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearRelevantHistory(): void;
+  getRelevantHistory(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setRelevantHistory(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addRelevantHistory(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasRestriction(): boolean;
@@ -16800,14 +16800,14 @@ export class QICoreTask extends jspb.Message {
   getRestriction(): QICoreTask.Restriction | undefined;
   setRestriction(value?: QICoreTask.Restriction): void;
 
-  clearInputList(): void;
-  getInputList(): Array<QICoreTask.Parameter>;
-  setInputList(value: Array<QICoreTask.Parameter>): void;
+  clearInput(): void;
+  getInput(): Array<QICoreTask.Parameter>;
+  setInput(value: Array<QICoreTask.Parameter>): void;
   addInput(value?: QICoreTask.Parameter, index?: number): QICoreTask.Parameter;
 
-  clearOutputList(): void;
-  getOutputList(): Array<QICoreTask.Output>;
-  setOutputList(value: Array<QICoreTask.Output>): void;
+  clearOutput(): void;
+  getOutput(): Array<QICoreTask.Output>;
+  setOutput(value: Array<QICoreTask.Output>): void;
   addOutput(value?: QICoreTask.Output, index?: number): QICoreTask.Output;
 
   serializeBinary(): Uint8Array;
@@ -16827,14 +16827,14 @@ export namespace QICoreTask {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     instantiatesCanonical?: proto_r4_core_datatypes_pb.Canonical.AsObject,
     instantiatesUri?: proto_r4_core_datatypes_pb.Uri.AsObject,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     groupIdentifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
-    partOfList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    partOf: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     statusReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     businessStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     description?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -16844,17 +16844,17 @@ export namespace QICoreTask {
     authoredOn?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     lastModified?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     requester?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    performerTypeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    performerType: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     owner?: proto_r4_core_datatypes_pb.Reference.AsObject,
     location?: proto_r4_core_datatypes_pb.Reference.AsObject,
     reasonCode?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     reasonReference?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    insuranceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    relevantHistoryList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    insurance: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    relevantHistory: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     restriction?: QICoreTask.Restriction.AsObject,
-    inputList: Array<QICoreTask.Parameter.AsObject>,
-    outputList: Array<QICoreTask.Output.AsObject>,
+    input: Array<QICoreTask.Parameter.AsObject>,
+    output: Array<QICoreTask.Output.AsObject>,
   }
 
   export class Restriction extends jspb.Message {
@@ -16863,14 +16863,14 @@ export namespace QICoreTask {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasRepetitions(): boolean;
@@ -16883,9 +16883,9 @@ export namespace QICoreTask {
     getPeriod(): proto_r4_core_datatypes_pb.Period | undefined;
     setPeriod(value?: proto_r4_core_datatypes_pb.Period): void;
 
-    clearRecipientList(): void;
-    getRecipientList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setRecipientList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearRecipient(): void;
+    getRecipient(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setRecipient(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addRecipient(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     serializeBinary(): Uint8Array;
@@ -16901,11 +16901,11 @@ export namespace QICoreTask {
   export namespace Restriction {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       repetitions?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
       period?: proto_r4_core_datatypes_pb.Period.AsObject,
-      recipientList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      recipient: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     }
   }
 
@@ -16915,14 +16915,14 @@ export namespace QICoreTask {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -16948,8 +16948,8 @@ export namespace QICoreTask {
   export namespace Parameter {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       value?: QICoreTask.Parameter.ValueX.AsObject,
     }
@@ -17325,14 +17325,14 @@ export namespace QICoreTask {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -17358,8 +17358,8 @@ export namespace QICoreTask {
   export namespace Output {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       value?: QICoreTask.Output.ValueX.AsObject,
     }

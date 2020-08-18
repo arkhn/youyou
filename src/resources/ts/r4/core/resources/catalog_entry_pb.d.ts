@@ -33,24 +33,24 @@ export class CatalogEntry extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasType(): boolean;
@@ -68,14 +68,14 @@ export class CatalogEntry extends jspb.Message {
   getReferencedItem(): proto_r4_core_datatypes_pb.Reference | undefined;
   setReferencedItem(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearAdditionalIdentifierList(): void;
-  getAdditionalIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setAdditionalIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearAdditionalIdentifier(): void;
+  getAdditionalIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setAdditionalIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addAdditionalIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearClassificationList(): void;
-  getClassificationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setClassificationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearClassification(): void;
+  getClassification(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setClassification(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addClassification(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasStatus(): boolean;
@@ -98,19 +98,19 @@ export class CatalogEntry extends jspb.Message {
   getLastUpdated(): proto_r4_core_datatypes_pb.DateTime | undefined;
   setLastUpdated(value?: proto_r4_core_datatypes_pb.DateTime): void;
 
-  clearAdditionalCharacteristicList(): void;
-  getAdditionalCharacteristicList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setAdditionalCharacteristicList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearAdditionalCharacteristic(): void;
+  getAdditionalCharacteristic(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setAdditionalCharacteristic(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addAdditionalCharacteristic(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearAdditionalClassificationList(): void;
-  getAdditionalClassificationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setAdditionalClassificationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearAdditionalClassification(): void;
+  getAdditionalClassification(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setAdditionalClassification(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addAdditionalClassification(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearRelatedEntryList(): void;
-  getRelatedEntryList(): Array<CatalogEntry.RelatedEntry>;
-  setRelatedEntryList(value: Array<CatalogEntry.RelatedEntry>): void;
+  clearRelatedEntry(): void;
+  getRelatedEntry(): Array<CatalogEntry.RelatedEntry>;
+  setRelatedEntry(value: Array<CatalogEntry.RelatedEntry>): void;
   addRelatedEntry(value?: CatalogEntry.RelatedEntry, index?: number): CatalogEntry.RelatedEntry;
 
   serializeBinary(): Uint8Array;
@@ -130,22 +130,22 @@ export namespace CatalogEntry {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     orderable?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     referencedItem?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    additionalIdentifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    classificationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    additionalIdentifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    classification: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     status?: CatalogEntry.StatusCode.AsObject,
     validityPeriod?: proto_r4_core_datatypes_pb.Period.AsObject,
     validTo?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     lastUpdated?: proto_r4_core_datatypes_pb.DateTime.AsObject,
-    additionalCharacteristicList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    additionalClassificationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    relatedEntryList: Array<CatalogEntry.RelatedEntry.AsObject>,
+    additionalCharacteristic: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    additionalClassification: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    relatedEntry: Array<CatalogEntry.RelatedEntry.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -157,9 +157,9 @@ export namespace CatalogEntry {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -176,7 +176,7 @@ export namespace CatalogEntry {
     export type AsObject = {
       value: proto_r4_core_codes_pb.PublicationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.PublicationStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -186,14 +186,14 @@ export namespace CatalogEntry {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasRelationtype(): boolean;
@@ -219,8 +219,8 @@ export namespace CatalogEntry {
   export namespace RelatedEntry {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       relationtype?: CatalogEntry.RelatedEntry.RelationtypeCode.AsObject,
       item?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
@@ -234,9 +234,9 @@ export namespace CatalogEntry {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -253,7 +253,7 @@ export namespace CatalogEntry {
       export type AsObject = {
         value: proto_r4_core_codes_pb.CatalogEntryRelationTypeCode.ValueMap[keyof proto_r4_core_codes_pb.CatalogEntryRelationTypeCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }

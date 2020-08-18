@@ -32,19 +32,19 @@ export class MedicinalProductIngredient extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasIdentifier(): boolean;
@@ -62,14 +62,14 @@ export class MedicinalProductIngredient extends jspb.Message {
   getAllergenicIndicator(): proto_r4_core_datatypes_pb.Boolean | undefined;
   setAllergenicIndicator(value?: proto_r4_core_datatypes_pb.Boolean): void;
 
-  clearManufacturerList(): void;
-  getManufacturerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setManufacturerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearManufacturer(): void;
+  getManufacturer(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setManufacturer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addManufacturer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearSpecifiedSubstanceList(): void;
-  getSpecifiedSubstanceList(): Array<MedicinalProductIngredient.SpecifiedSubstance>;
-  setSpecifiedSubstanceList(value: Array<MedicinalProductIngredient.SpecifiedSubstance>): void;
+  clearSpecifiedSubstance(): void;
+  getSpecifiedSubstance(): Array<MedicinalProductIngredient.SpecifiedSubstance>;
+  setSpecifiedSubstance(value: Array<MedicinalProductIngredient.SpecifiedSubstance>): void;
   addSpecifiedSubstance(value?: MedicinalProductIngredient.SpecifiedSubstance, index?: number): MedicinalProductIngredient.SpecifiedSubstance;
 
   hasSubstance(): boolean;
@@ -94,14 +94,14 @@ export namespace MedicinalProductIngredient {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     identifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
     role?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     allergenicIndicator?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-    manufacturerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    specifiedSubstanceList: Array<MedicinalProductIngredient.SpecifiedSubstance.AsObject>,
+    manufacturer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    specifiedSubstance: Array<MedicinalProductIngredient.SpecifiedSubstance.AsObject>,
     substance?: MedicinalProductIngredient.Substance.AsObject,
   }
 
@@ -111,14 +111,14 @@ export namespace MedicinalProductIngredient {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -136,9 +136,9 @@ export namespace MedicinalProductIngredient {
     getConfidentiality(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setConfidentiality(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearStrengthList(): void;
-    getStrengthList(): Array<MedicinalProductIngredient.SpecifiedSubstance.Strength>;
-    setStrengthList(value: Array<MedicinalProductIngredient.SpecifiedSubstance.Strength>): void;
+    clearStrength(): void;
+    getStrength(): Array<MedicinalProductIngredient.SpecifiedSubstance.Strength>;
+    setStrength(value: Array<MedicinalProductIngredient.SpecifiedSubstance.Strength>): void;
     addStrength(value?: MedicinalProductIngredient.SpecifiedSubstance.Strength, index?: number): MedicinalProductIngredient.SpecifiedSubstance.Strength;
 
     serializeBinary(): Uint8Array;
@@ -154,12 +154,12 @@ export namespace MedicinalProductIngredient {
   export namespace SpecifiedSubstance {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       group?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       confidentiality?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      strengthList: Array<MedicinalProductIngredient.SpecifiedSubstance.Strength.AsObject>,
+      strength: Array<MedicinalProductIngredient.SpecifiedSubstance.Strength.AsObject>,
     }
 
     export class Strength extends jspb.Message {
@@ -168,14 +168,14 @@ export namespace MedicinalProductIngredient {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasPresentation(): boolean;
@@ -203,14 +203,14 @@ export namespace MedicinalProductIngredient {
       getMeasurementPoint(): proto_r4_core_datatypes_pb.String | undefined;
       setMeasurementPoint(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearCountryList(): void;
-      getCountryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-      setCountryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+      clearCountry(): void;
+      getCountry(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+      setCountry(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
       addCountry(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-      clearReferenceStrengthList(): void;
-      getReferenceStrengthList(): Array<MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength>;
-      setReferenceStrengthList(value: Array<MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength>): void;
+      clearReferenceStrength(): void;
+      getReferenceStrength(): Array<MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength>;
+      setReferenceStrength(value: Array<MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength>): void;
       addReferenceStrength(value?: MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength, index?: number): MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength;
 
       serializeBinary(): Uint8Array;
@@ -226,15 +226,15 @@ export namespace MedicinalProductIngredient {
     export namespace Strength {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         presentation?: proto_r4_core_datatypes_pb.Ratio.AsObject,
         presentationLowLimit?: proto_r4_core_datatypes_pb.Ratio.AsObject,
         concentration?: proto_r4_core_datatypes_pb.Ratio.AsObject,
         concentrationLowLimit?: proto_r4_core_datatypes_pb.Ratio.AsObject,
         measurementPoint?: proto_r4_core_datatypes_pb.String.AsObject,
-        countryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-        referenceStrengthList: Array<MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.AsObject>,
+        country: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+        referenceStrength: Array<MedicinalProductIngredient.SpecifiedSubstance.Strength.ReferenceStrength.AsObject>,
       }
 
       export class ReferenceStrength extends jspb.Message {
@@ -243,14 +243,14 @@ export namespace MedicinalProductIngredient {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         hasSubstance(): boolean;
@@ -273,9 +273,9 @@ export namespace MedicinalProductIngredient {
         getMeasurementPoint(): proto_r4_core_datatypes_pb.String | undefined;
         setMeasurementPoint(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearCountryList(): void;
-        getCountryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-        setCountryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+        clearCountry(): void;
+        getCountry(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+        setCountry(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
         addCountry(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
         serializeBinary(): Uint8Array;
@@ -291,13 +291,13 @@ export namespace MedicinalProductIngredient {
       export namespace ReferenceStrength {
         export type AsObject = {
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
           substance?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
           strength?: proto_r4_core_datatypes_pb.Ratio.AsObject,
           strengthLowLimit?: proto_r4_core_datatypes_pb.Ratio.AsObject,
           measurementPoint?: proto_r4_core_datatypes_pb.String.AsObject,
-          countryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+          country: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
         }
       }
     }
@@ -309,14 +309,14 @@ export namespace MedicinalProductIngredient {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -324,9 +324,9 @@ export namespace MedicinalProductIngredient {
     getCode(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setCode(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearStrengthList(): void;
-    getStrengthList(): Array<MedicinalProductIngredient.SpecifiedSubstance.Strength>;
-    setStrengthList(value: Array<MedicinalProductIngredient.SpecifiedSubstance.Strength>): void;
+    clearStrength(): void;
+    getStrength(): Array<MedicinalProductIngredient.SpecifiedSubstance.Strength>;
+    setStrength(value: Array<MedicinalProductIngredient.SpecifiedSubstance.Strength>): void;
     addStrength(value?: MedicinalProductIngredient.SpecifiedSubstance.Strength, index?: number): MedicinalProductIngredient.SpecifiedSubstance.Strength;
 
     serializeBinary(): Uint8Array;
@@ -342,10 +342,10 @@ export namespace MedicinalProductIngredient {
   export namespace Substance {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      strengthList: Array<MedicinalProductIngredient.SpecifiedSubstance.Strength.AsObject>,
+      strength: Array<MedicinalProductIngredient.SpecifiedSubstance.Strength.AsObject>,
     }
   }
 }

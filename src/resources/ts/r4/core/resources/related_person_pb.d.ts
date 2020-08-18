@@ -33,24 +33,24 @@ export class RelatedPerson extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasActive(): boolean;
@@ -63,19 +63,19 @@ export class RelatedPerson extends jspb.Message {
   getPatient(): proto_r4_core_datatypes_pb.Reference | undefined;
   setPatient(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearRelationshipList(): void;
-  getRelationshipList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setRelationshipList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearRelationship(): void;
+  getRelationship(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setRelationship(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addRelationship(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearNameList(): void;
-  getNameList(): Array<proto_r4_core_datatypes_pb.HumanName>;
-  setNameList(value: Array<proto_r4_core_datatypes_pb.HumanName>): void;
+  clearName(): void;
+  getName(): Array<proto_r4_core_datatypes_pb.HumanName>;
+  setName(value: Array<proto_r4_core_datatypes_pb.HumanName>): void;
   addName(value?: proto_r4_core_datatypes_pb.HumanName, index?: number): proto_r4_core_datatypes_pb.HumanName;
 
-  clearTelecomList(): void;
-  getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearTelecom(): void;
+  getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
   hasGender(): boolean;
@@ -88,14 +88,14 @@ export class RelatedPerson extends jspb.Message {
   getBirthDate(): proto_r4_core_datatypes_pb.Date | undefined;
   setBirthDate(value?: proto_r4_core_datatypes_pb.Date): void;
 
-  clearAddressList(): void;
-  getAddressList(): Array<proto_r4_core_datatypes_pb.Address>;
-  setAddressList(value: Array<proto_r4_core_datatypes_pb.Address>): void;
+  clearAddress(): void;
+  getAddress(): Array<proto_r4_core_datatypes_pb.Address>;
+  setAddress(value: Array<proto_r4_core_datatypes_pb.Address>): void;
   addAddress(value?: proto_r4_core_datatypes_pb.Address, index?: number): proto_r4_core_datatypes_pb.Address;
 
-  clearPhotoList(): void;
-  getPhotoList(): Array<proto_r4_core_datatypes_pb.Attachment>;
-  setPhotoList(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
+  clearPhoto(): void;
+  getPhoto(): Array<proto_r4_core_datatypes_pb.Attachment>;
+  setPhoto(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
   addPhoto(value?: proto_r4_core_datatypes_pb.Attachment, index?: number): proto_r4_core_datatypes_pb.Attachment;
 
   hasPeriod(): boolean;
@@ -103,9 +103,9 @@ export class RelatedPerson extends jspb.Message {
   getPeriod(): proto_r4_core_datatypes_pb.Period | undefined;
   setPeriod(value?: proto_r4_core_datatypes_pb.Period): void;
 
-  clearCommunicationList(): void;
-  getCommunicationList(): Array<RelatedPerson.Communication>;
-  setCommunicationList(value: Array<RelatedPerson.Communication>): void;
+  clearCommunication(): void;
+  getCommunication(): Array<RelatedPerson.Communication>;
+  setCommunication(value: Array<RelatedPerson.Communication>): void;
   addCommunication(value?: RelatedPerson.Communication, index?: number): RelatedPerson.Communication;
 
   serializeBinary(): Uint8Array;
@@ -125,21 +125,21 @@ export namespace RelatedPerson {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     active?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     patient?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    relationshipList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    nameList: Array<proto_r4_core_datatypes_pb.HumanName.AsObject>,
-    telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    relationship: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    name: Array<proto_r4_core_datatypes_pb.HumanName.AsObject>,
+    telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
     gender?: RelatedPerson.GenderCode.AsObject,
     birthDate?: proto_r4_core_datatypes_pb.Date.AsObject,
-    addressList: Array<proto_r4_core_datatypes_pb.Address.AsObject>,
-    photoList: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
+    address: Array<proto_r4_core_datatypes_pb.Address.AsObject>,
+    photo: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
     period?: proto_r4_core_datatypes_pb.Period.AsObject,
-    communicationList: Array<RelatedPerson.Communication.AsObject>,
+    communication: Array<RelatedPerson.Communication.AsObject>,
   }
 
   export class GenderCode extends jspb.Message {
@@ -151,9 +151,9 @@ export namespace RelatedPerson {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -170,7 +170,7 @@ export namespace RelatedPerson {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AdministrativeGenderCode.ValueMap[keyof proto_r4_core_codes_pb.AdministrativeGenderCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -180,14 +180,14 @@ export namespace RelatedPerson {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasLanguage(): boolean;
@@ -213,8 +213,8 @@ export namespace RelatedPerson {
   export namespace Communication {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       language?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       preferred?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     }

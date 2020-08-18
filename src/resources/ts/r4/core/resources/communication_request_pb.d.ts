@@ -33,34 +33,34 @@ export class CommunicationRequest extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearReplacesList(): void;
-  getReplacesList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReplacesList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReplaces(): void;
+  getReplaces(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReplaces(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReplaces(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasGroupIdentifier(): boolean;
@@ -78,9 +78,9 @@ export class CommunicationRequest extends jspb.Message {
   getStatusReason(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setStatusReason(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasPriority(): boolean;
@@ -93,9 +93,9 @@ export class CommunicationRequest extends jspb.Message {
   getDoNotPerform(): proto_r4_core_datatypes_pb.Boolean | undefined;
   setDoNotPerform(value?: proto_r4_core_datatypes_pb.Boolean): void;
 
-  clearMediumList(): void;
-  getMediumList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setMediumList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearMedium(): void;
+  getMedium(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setMedium(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addMedium(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasSubject(): boolean;
@@ -103,9 +103,9 @@ export class CommunicationRequest extends jspb.Message {
   getSubject(): proto_r4_core_datatypes_pb.Reference | undefined;
   setSubject(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearAboutList(): void;
-  getAboutList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setAboutList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearAbout(): void;
+  getAbout(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setAbout(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addAbout(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasEncounter(): boolean;
@@ -113,9 +113,9 @@ export class CommunicationRequest extends jspb.Message {
   getEncounter(): proto_r4_core_datatypes_pb.Reference | undefined;
   setEncounter(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearPayloadList(): void;
-  getPayloadList(): Array<CommunicationRequest.Payload>;
-  setPayloadList(value: Array<CommunicationRequest.Payload>): void;
+  clearPayload(): void;
+  getPayload(): Array<CommunicationRequest.Payload>;
+  setPayload(value: Array<CommunicationRequest.Payload>): void;
   addPayload(value?: CommunicationRequest.Payload, index?: number): CommunicationRequest.Payload;
 
   hasOccurrence(): boolean;
@@ -133,9 +133,9 @@ export class CommunicationRequest extends jspb.Message {
   getRequester(): proto_r4_core_datatypes_pb.Reference | undefined;
   setRequester(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearRecipientList(): void;
-  getRecipientList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setRecipientList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearRecipient(): void;
+  getRecipient(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setRecipient(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addRecipient(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasSender(): boolean;
@@ -143,19 +143,19 @@ export class CommunicationRequest extends jspb.Message {
   getSender(): proto_r4_core_datatypes_pb.Reference | undefined;
   setSender(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   serializeBinary(): Uint8Array;
@@ -175,31 +175,31 @@ export namespace CommunicationRequest {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    replacesList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    replaces: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     groupIdentifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
     status?: CommunicationRequest.StatusCode.AsObject,
     statusReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     priority?: CommunicationRequest.PriorityCode.AsObject,
     doNotPerform?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-    mediumList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    medium: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    aboutList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    about: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    payloadList: Array<CommunicationRequest.Payload.AsObject>,
+    payload: Array<CommunicationRequest.Payload.AsObject>,
     occurrence?: CommunicationRequest.OccurrenceX.AsObject,
     authoredOn?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     requester?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    recipientList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    recipient: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     sender?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -211,9 +211,9 @@ export namespace CommunicationRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -230,7 +230,7 @@ export namespace CommunicationRequest {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestStatusCode.ValueMap[keyof proto_r4_core_codes_pb.RequestStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -243,9 +243,9 @@ export namespace CommunicationRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -262,7 +262,7 @@ export namespace CommunicationRequest {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestPriorityCode.ValueMap[keyof proto_r4_core_codes_pb.RequestPriorityCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -272,14 +272,14 @@ export namespace CommunicationRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasContent(): boolean;
@@ -300,8 +300,8 @@ export namespace CommunicationRequest {
   export namespace Payload {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       content?: CommunicationRequest.Payload.ContentX.AsObject,
     }
 

@@ -33,24 +33,24 @@ export class Account extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -68,9 +68,9 @@ export class Account extends jspb.Message {
   getName(): proto_r4_core_datatypes_pb.String | undefined;
   setName(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearSubjectList(): void;
-  getSubjectList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSubjectList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSubject(): void;
+  getSubject(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSubject(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSubject(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasServicePeriod(): boolean;
@@ -78,9 +78,9 @@ export class Account extends jspb.Message {
   getServicePeriod(): proto_r4_core_datatypes_pb.Period | undefined;
   setServicePeriod(value?: proto_r4_core_datatypes_pb.Period): void;
 
-  clearCoverageList(): void;
-  getCoverageList(): Array<Account.Coverage>;
-  setCoverageList(value: Array<Account.Coverage>): void;
+  clearCoverage(): void;
+  getCoverage(): Array<Account.Coverage>;
+  setCoverage(value: Array<Account.Coverage>): void;
   addCoverage(value?: Account.Coverage, index?: number): Account.Coverage;
 
   hasOwner(): boolean;
@@ -93,9 +93,9 @@ export class Account extends jspb.Message {
   getDescription(): proto_r4_core_datatypes_pb.String | undefined;
   setDescription(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearGuarantorList(): void;
-  getGuarantorList(): Array<Account.Guarantor>;
-  setGuarantorList(value: Array<Account.Guarantor>): void;
+  clearGuarantor(): void;
+  getGuarantor(): Array<Account.Guarantor>;
+  setGuarantor(value: Array<Account.Guarantor>): void;
   addGuarantor(value?: Account.Guarantor, index?: number): Account.Guarantor;
 
   hasPartOf(): boolean;
@@ -120,19 +120,19 @@ export namespace Account {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: Account.StatusCode.AsObject,
     type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     name?: proto_r4_core_datatypes_pb.String.AsObject,
-    subjectList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    subject: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     servicePeriod?: proto_r4_core_datatypes_pb.Period.AsObject,
-    coverageList: Array<Account.Coverage.AsObject>,
+    coverage: Array<Account.Coverage.AsObject>,
     owner?: proto_r4_core_datatypes_pb.Reference.AsObject,
     description?: proto_r4_core_datatypes_pb.String.AsObject,
-    guarantorList: Array<Account.Guarantor.AsObject>,
+    guarantor: Array<Account.Guarantor.AsObject>,
     partOf?: proto_r4_core_datatypes_pb.Reference.AsObject,
   }
 
@@ -145,9 +145,9 @@ export namespace Account {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -164,7 +164,7 @@ export namespace Account {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AccountStatusCode.ValueMap[keyof proto_r4_core_codes_pb.AccountStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -174,14 +174,14 @@ export namespace Account {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCoverage(): boolean;
@@ -207,8 +207,8 @@ export namespace Account {
   export namespace Coverage {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       coverage?: proto_r4_core_datatypes_pb.Reference.AsObject,
       priority?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
     }
@@ -220,14 +220,14 @@ export namespace Account {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasParty(): boolean;
@@ -258,8 +258,8 @@ export namespace Account {
   export namespace Guarantor {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       party?: proto_r4_core_datatypes_pb.Reference.AsObject,
       onHold?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       period?: proto_r4_core_datatypes_pb.Period.AsObject,

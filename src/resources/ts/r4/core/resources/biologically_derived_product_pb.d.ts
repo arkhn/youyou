@@ -33,24 +33,24 @@ export class BiologicallyDerivedProduct extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasProductCategory(): boolean;
@@ -68,9 +68,9 @@ export class BiologicallyDerivedProduct extends jspb.Message {
   getStatus(): BiologicallyDerivedProduct.StatusCode | undefined;
   setStatus(value?: BiologicallyDerivedProduct.StatusCode): void;
 
-  clearRequestList(): void;
-  getRequestList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setRequestList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearRequest(): void;
+  getRequest(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setRequest(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addRequest(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasQuantity(): boolean;
@@ -78,9 +78,9 @@ export class BiologicallyDerivedProduct extends jspb.Message {
   getQuantity(): proto_r4_core_datatypes_pb.Integer | undefined;
   setQuantity(value?: proto_r4_core_datatypes_pb.Integer): void;
 
-  clearParentList(): void;
-  getParentList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setParentList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearParent(): void;
+  getParent(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setParent(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addParent(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasCollection(): boolean;
@@ -88,9 +88,9 @@ export class BiologicallyDerivedProduct extends jspb.Message {
   getCollection(): BiologicallyDerivedProduct.Collection | undefined;
   setCollection(value?: BiologicallyDerivedProduct.Collection): void;
 
-  clearProcessingList(): void;
-  getProcessingList(): Array<BiologicallyDerivedProduct.Processing>;
-  setProcessingList(value: Array<BiologicallyDerivedProduct.Processing>): void;
+  clearProcessing(): void;
+  getProcessing(): Array<BiologicallyDerivedProduct.Processing>;
+  setProcessing(value: Array<BiologicallyDerivedProduct.Processing>): void;
   addProcessing(value?: BiologicallyDerivedProduct.Processing, index?: number): BiologicallyDerivedProduct.Processing;
 
   hasManipulation(): boolean;
@@ -98,9 +98,9 @@ export class BiologicallyDerivedProduct extends jspb.Message {
   getManipulation(): BiologicallyDerivedProduct.Manipulation | undefined;
   setManipulation(value?: BiologicallyDerivedProduct.Manipulation): void;
 
-  clearStorageList(): void;
-  getStorageList(): Array<BiologicallyDerivedProduct.Storage>;
-  setStorageList(value: Array<BiologicallyDerivedProduct.Storage>): void;
+  clearStorage(): void;
+  getStorage(): Array<BiologicallyDerivedProduct.Storage>;
+  setStorage(value: Array<BiologicallyDerivedProduct.Storage>): void;
   addStorage(value?: BiologicallyDerivedProduct.Storage, index?: number): BiologicallyDerivedProduct.Storage;
 
   serializeBinary(): Uint8Array;
@@ -120,20 +120,20 @@ export namespace BiologicallyDerivedProduct {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     productCategory?: BiologicallyDerivedProduct.ProductCategoryCode.AsObject,
     productCode?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     status?: BiologicallyDerivedProduct.StatusCode.AsObject,
-    requestList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    request: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     quantity?: proto_r4_core_datatypes_pb.Integer.AsObject,
-    parentList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    parent: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     collection?: BiologicallyDerivedProduct.Collection.AsObject,
-    processingList: Array<BiologicallyDerivedProduct.Processing.AsObject>,
+    processing: Array<BiologicallyDerivedProduct.Processing.AsObject>,
     manipulation?: BiologicallyDerivedProduct.Manipulation.AsObject,
-    storageList: Array<BiologicallyDerivedProduct.Storage.AsObject>,
+    storage: Array<BiologicallyDerivedProduct.Storage.AsObject>,
   }
 
   export class ProductCategoryCode extends jspb.Message {
@@ -145,9 +145,9 @@ export namespace BiologicallyDerivedProduct {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -164,7 +164,7 @@ export namespace BiologicallyDerivedProduct {
     export type AsObject = {
       value: proto_r4_core_codes_pb.BiologicallyDerivedProductCategoryCode.ValueMap[keyof proto_r4_core_codes_pb.BiologicallyDerivedProductCategoryCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -177,9 +177,9 @@ export namespace BiologicallyDerivedProduct {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -196,7 +196,7 @@ export namespace BiologicallyDerivedProduct {
     export type AsObject = {
       value: proto_r4_core_codes_pb.BiologicallyDerivedProductStatusCode.ValueMap[keyof proto_r4_core_codes_pb.BiologicallyDerivedProductStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -206,14 +206,14 @@ export namespace BiologicallyDerivedProduct {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCollector(): boolean;
@@ -244,8 +244,8 @@ export namespace BiologicallyDerivedProduct {
   export namespace Collection {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       collector?: proto_r4_core_datatypes_pb.Reference.AsObject,
       source?: proto_r4_core_datatypes_pb.Reference.AsObject,
       collected?: BiologicallyDerivedProduct.Collection.CollectedX.AsObject,
@@ -293,14 +293,14 @@ export namespace BiologicallyDerivedProduct {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasDescription(): boolean;
@@ -336,8 +336,8 @@ export namespace BiologicallyDerivedProduct {
   export namespace Processing {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       description?: proto_r4_core_datatypes_pb.String.AsObject,
       procedure?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       additive?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -386,14 +386,14 @@ export namespace BiologicallyDerivedProduct {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasDescription(): boolean;
@@ -419,8 +419,8 @@ export namespace BiologicallyDerivedProduct {
   export namespace Manipulation {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       description?: proto_r4_core_datatypes_pb.String.AsObject,
       time?: BiologicallyDerivedProduct.Manipulation.TimeX.AsObject,
     }
@@ -467,14 +467,14 @@ export namespace BiologicallyDerivedProduct {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasDescription(): boolean;
@@ -510,8 +510,8 @@ export namespace BiologicallyDerivedProduct {
   export namespace Storage {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       description?: proto_r4_core_datatypes_pb.String.AsObject,
       temperature?: proto_r4_core_datatypes_pb.Decimal.AsObject,
       scale?: BiologicallyDerivedProduct.Storage.ScaleCode.AsObject,
@@ -527,9 +527,9 @@ export namespace BiologicallyDerivedProduct {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -546,7 +546,7 @@ export namespace BiologicallyDerivedProduct {
       export type AsObject = {
         value: proto_r4_core_codes_pb.BiologicallyDerivedProductStorageScaleCode.ValueMap[keyof proto_r4_core_codes_pb.BiologicallyDerivedProductStorageScaleCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }

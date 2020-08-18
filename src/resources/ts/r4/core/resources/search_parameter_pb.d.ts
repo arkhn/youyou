@@ -33,19 +33,19 @@ export class SearchParameter extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasUrl(): boolean;
@@ -88,9 +88,9 @@ export class SearchParameter extends jspb.Message {
   getPublisher(): proto_r4_core_datatypes_pb.String | undefined;
   setPublisher(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearContactList(): void;
-  getContactList(): Array<proto_r4_core_datatypes_pb.ContactDetail>;
-  setContactList(value: Array<proto_r4_core_datatypes_pb.ContactDetail>): void;
+  clearContact(): void;
+  getContact(): Array<proto_r4_core_datatypes_pb.ContactDetail>;
+  setContact(value: Array<proto_r4_core_datatypes_pb.ContactDetail>): void;
   addContact(value?: proto_r4_core_datatypes_pb.ContactDetail, index?: number): proto_r4_core_datatypes_pb.ContactDetail;
 
   hasDescription(): boolean;
@@ -98,14 +98,14 @@ export class SearchParameter extends jspb.Message {
   getDescription(): proto_r4_core_datatypes_pb.Markdown | undefined;
   setDescription(value?: proto_r4_core_datatypes_pb.Markdown): void;
 
-  clearUseContextList(): void;
-  getUseContextList(): Array<proto_r4_core_datatypes_pb.UsageContext>;
-  setUseContextList(value: Array<proto_r4_core_datatypes_pb.UsageContext>): void;
+  clearUseContext(): void;
+  getUseContext(): Array<proto_r4_core_datatypes_pb.UsageContext>;
+  setUseContext(value: Array<proto_r4_core_datatypes_pb.UsageContext>): void;
   addUseContext(value?: proto_r4_core_datatypes_pb.UsageContext, index?: number): proto_r4_core_datatypes_pb.UsageContext;
 
-  clearJurisdictionList(): void;
-  getJurisdictionList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setJurisdictionList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearJurisdiction(): void;
+  getJurisdiction(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setJurisdiction(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addJurisdiction(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasPurpose(): boolean;
@@ -118,9 +118,9 @@ export class SearchParameter extends jspb.Message {
   getCode(): proto_r4_core_datatypes_pb.Code | undefined;
   setCode(value?: proto_r4_core_datatypes_pb.Code): void;
 
-  clearBaseList(): void;
-  getBaseList(): Array<SearchParameter.BaseCode>;
-  setBaseList(value: Array<SearchParameter.BaseCode>): void;
+  clearBase(): void;
+  getBase(): Array<SearchParameter.BaseCode>;
+  setBase(value: Array<SearchParameter.BaseCode>): void;
   addBase(value?: SearchParameter.BaseCode, index?: number): SearchParameter.BaseCode;
 
   hasType(): boolean;
@@ -143,9 +143,9 @@ export class SearchParameter extends jspb.Message {
   getXpathUsage(): SearchParameter.XpathUsageCode | undefined;
   setXpathUsage(value?: SearchParameter.XpathUsageCode): void;
 
-  clearTargetList(): void;
-  getTargetList(): Array<SearchParameter.TargetCode>;
-  setTargetList(value: Array<SearchParameter.TargetCode>): void;
+  clearTarget(): void;
+  getTarget(): Array<SearchParameter.TargetCode>;
+  setTarget(value: Array<SearchParameter.TargetCode>): void;
   addTarget(value?: SearchParameter.TargetCode, index?: number): SearchParameter.TargetCode;
 
   hasMultipleOr(): boolean;
@@ -158,24 +158,24 @@ export class SearchParameter extends jspb.Message {
   getMultipleAnd(): proto_r4_core_datatypes_pb.Boolean | undefined;
   setMultipleAnd(value?: proto_r4_core_datatypes_pb.Boolean): void;
 
-  clearComparatorList(): void;
-  getComparatorList(): Array<SearchParameter.ComparatorCode>;
-  setComparatorList(value: Array<SearchParameter.ComparatorCode>): void;
+  clearComparator(): void;
+  getComparator(): Array<SearchParameter.ComparatorCode>;
+  setComparator(value: Array<SearchParameter.ComparatorCode>): void;
   addComparator(value?: SearchParameter.ComparatorCode, index?: number): SearchParameter.ComparatorCode;
 
-  clearModifierList(): void;
-  getModifierList(): Array<SearchParameter.ModifierCode>;
-  setModifierList(value: Array<SearchParameter.ModifierCode>): void;
+  clearModifier(): void;
+  getModifier(): Array<SearchParameter.ModifierCode>;
+  setModifier(value: Array<SearchParameter.ModifierCode>): void;
   addModifier(value?: SearchParameter.ModifierCode, index?: number): SearchParameter.ModifierCode;
 
-  clearChainList(): void;
-  getChainList(): Array<proto_r4_core_datatypes_pb.String>;
-  setChainList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+  clearChain(): void;
+  getChain(): Array<proto_r4_core_datatypes_pb.String>;
+  setChain(value: Array<proto_r4_core_datatypes_pb.String>): void;
   addChain(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
-  clearComponentList(): void;
-  getComponentList(): Array<SearchParameter.Component>;
-  setComponentList(value: Array<SearchParameter.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<SearchParameter.Component>;
+  setComponent(value: Array<SearchParameter.Component>): void;
   addComponent(value?: SearchParameter.Component, index?: number): SearchParameter.Component;
 
   serializeBinary(): Uint8Array;
@@ -195,9 +195,9 @@ export namespace SearchParameter {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     url?: proto_r4_core_datatypes_pb.Uri.AsObject,
     version?: proto_r4_core_datatypes_pb.String.AsObject,
     name?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -206,24 +206,24 @@ export namespace SearchParameter {
     experimental?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     publisher?: proto_r4_core_datatypes_pb.String.AsObject,
-    contactList: Array<proto_r4_core_datatypes_pb.ContactDetail.AsObject>,
+    contact: Array<proto_r4_core_datatypes_pb.ContactDetail.AsObject>,
     description?: proto_r4_core_datatypes_pb.Markdown.AsObject,
-    useContextList: Array<proto_r4_core_datatypes_pb.UsageContext.AsObject>,
-    jurisdictionList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    useContext: Array<proto_r4_core_datatypes_pb.UsageContext.AsObject>,
+    jurisdiction: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     purpose?: proto_r4_core_datatypes_pb.Markdown.AsObject,
     code?: proto_r4_core_datatypes_pb.Code.AsObject,
-    baseList: Array<SearchParameter.BaseCode.AsObject>,
+    base: Array<SearchParameter.BaseCode.AsObject>,
     type?: SearchParameter.TypeCode.AsObject,
     expression?: proto_r4_core_datatypes_pb.String.AsObject,
     xpath?: proto_r4_core_datatypes_pb.String.AsObject,
     xpathUsage?: SearchParameter.XpathUsageCode.AsObject,
-    targetList: Array<SearchParameter.TargetCode.AsObject>,
+    target: Array<SearchParameter.TargetCode.AsObject>,
     multipleOr?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     multipleAnd?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-    comparatorList: Array<SearchParameter.ComparatorCode.AsObject>,
-    modifierList: Array<SearchParameter.ModifierCode.AsObject>,
-    chainList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
-    componentList: Array<SearchParameter.Component.AsObject>,
+    comparator: Array<SearchParameter.ComparatorCode.AsObject>,
+    modifier: Array<SearchParameter.ModifierCode.AsObject>,
+    chain: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+    component: Array<SearchParameter.Component.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -235,9 +235,9 @@ export namespace SearchParameter {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -254,7 +254,7 @@ export namespace SearchParameter {
     export type AsObject = {
       value: proto_r4_core_codes_pb.PublicationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.PublicationStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -267,9 +267,9 @@ export namespace SearchParameter {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -286,7 +286,7 @@ export namespace SearchParameter {
     export type AsObject = {
       value: proto_r4_core_codes_pb.ResourceTypeCode.ValueMap[keyof proto_r4_core_codes_pb.ResourceTypeCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -299,9 +299,9 @@ export namespace SearchParameter {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -318,7 +318,7 @@ export namespace SearchParameter {
     export type AsObject = {
       value: proto_r4_core_codes_pb.SearchParamTypeCode.ValueMap[keyof proto_r4_core_codes_pb.SearchParamTypeCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -331,9 +331,9 @@ export namespace SearchParameter {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -350,7 +350,7 @@ export namespace SearchParameter {
     export type AsObject = {
       value: proto_r4_core_codes_pb.XPathUsageTypeCode.ValueMap[keyof proto_r4_core_codes_pb.XPathUsageTypeCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -363,9 +363,9 @@ export namespace SearchParameter {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -382,7 +382,7 @@ export namespace SearchParameter {
     export type AsObject = {
       value: proto_r4_core_codes_pb.ResourceTypeCode.ValueMap[keyof proto_r4_core_codes_pb.ResourceTypeCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -395,9 +395,9 @@ export namespace SearchParameter {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -414,7 +414,7 @@ export namespace SearchParameter {
     export type AsObject = {
       value: proto_r4_core_codes_pb.SearchComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.SearchComparatorCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -427,9 +427,9 @@ export namespace SearchParameter {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -446,7 +446,7 @@ export namespace SearchParameter {
     export type AsObject = {
       value: proto_r4_core_codes_pb.SearchModifierCode.ValueMap[keyof proto_r4_core_codes_pb.SearchModifierCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -456,14 +456,14 @@ export namespace SearchParameter {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasDefinition(): boolean;
@@ -489,8 +489,8 @@ export namespace SearchParameter {
   export namespace Component {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       definition?: proto_r4_core_datatypes_pb.Canonical.AsObject,
       expression?: proto_r4_core_datatypes_pb.String.AsObject,
     }

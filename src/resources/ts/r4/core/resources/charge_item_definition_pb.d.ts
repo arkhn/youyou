@@ -33,19 +33,19 @@ export class ChargeItemDefinition extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasUrl(): boolean;
@@ -53,9 +53,9 @@ export class ChargeItemDefinition extends jspb.Message {
   getUrl(): proto_r4_core_datatypes_pb.Uri | undefined;
   setUrl(value?: proto_r4_core_datatypes_pb.Uri): void;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasVersion(): boolean;
@@ -68,19 +68,19 @@ export class ChargeItemDefinition extends jspb.Message {
   getTitle(): proto_r4_core_datatypes_pb.String | undefined;
   setTitle(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearDerivedFromUriList(): void;
-  getDerivedFromUriList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setDerivedFromUriList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearDerivedFromUri(): void;
+  getDerivedFromUri(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setDerivedFromUri(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addDerivedFromUri(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
-  clearPartOfList(): void;
-  getPartOfList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-  setPartOfList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+  clearPartOf(): void;
+  getPartOf(): Array<proto_r4_core_datatypes_pb.Canonical>;
+  setPartOf(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
   addPartOf(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
-  clearReplacesList(): void;
-  getReplacesList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-  setReplacesList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+  clearReplaces(): void;
+  getReplaces(): Array<proto_r4_core_datatypes_pb.Canonical>;
+  setReplaces(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
   addReplaces(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
   hasStatus(): boolean;
@@ -103,9 +103,9 @@ export class ChargeItemDefinition extends jspb.Message {
   getPublisher(): proto_r4_core_datatypes_pb.String | undefined;
   setPublisher(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearContactList(): void;
-  getContactList(): Array<proto_r4_core_datatypes_pb.ContactDetail>;
-  setContactList(value: Array<proto_r4_core_datatypes_pb.ContactDetail>): void;
+  clearContact(): void;
+  getContact(): Array<proto_r4_core_datatypes_pb.ContactDetail>;
+  setContact(value: Array<proto_r4_core_datatypes_pb.ContactDetail>): void;
   addContact(value?: proto_r4_core_datatypes_pb.ContactDetail, index?: number): proto_r4_core_datatypes_pb.ContactDetail;
 
   hasDescription(): boolean;
@@ -113,14 +113,14 @@ export class ChargeItemDefinition extends jspb.Message {
   getDescription(): proto_r4_core_datatypes_pb.Markdown | undefined;
   setDescription(value?: proto_r4_core_datatypes_pb.Markdown): void;
 
-  clearUseContextList(): void;
-  getUseContextList(): Array<proto_r4_core_datatypes_pb.UsageContext>;
-  setUseContextList(value: Array<proto_r4_core_datatypes_pb.UsageContext>): void;
+  clearUseContext(): void;
+  getUseContext(): Array<proto_r4_core_datatypes_pb.UsageContext>;
+  setUseContext(value: Array<proto_r4_core_datatypes_pb.UsageContext>): void;
   addUseContext(value?: proto_r4_core_datatypes_pb.UsageContext, index?: number): proto_r4_core_datatypes_pb.UsageContext;
 
-  clearJurisdictionList(): void;
-  getJurisdictionList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setJurisdictionList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearJurisdiction(): void;
+  getJurisdiction(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setJurisdiction(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addJurisdiction(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasCopyright(): boolean;
@@ -148,19 +148,19 @@ export class ChargeItemDefinition extends jspb.Message {
   getCode(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setCode(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearInstanceList(): void;
-  getInstanceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setInstanceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearInstance(): void;
+  getInstance(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setInstance(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addInstance(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearApplicabilityList(): void;
-  getApplicabilityList(): Array<ChargeItemDefinition.Applicability>;
-  setApplicabilityList(value: Array<ChargeItemDefinition.Applicability>): void;
+  clearApplicability(): void;
+  getApplicability(): Array<ChargeItemDefinition.Applicability>;
+  setApplicability(value: Array<ChargeItemDefinition.Applicability>): void;
   addApplicability(value?: ChargeItemDefinition.Applicability, index?: number): ChargeItemDefinition.Applicability;
 
-  clearPropertyGroupList(): void;
-  getPropertyGroupList(): Array<ChargeItemDefinition.PropertyGroup>;
-  setPropertyGroupList(value: Array<ChargeItemDefinition.PropertyGroup>): void;
+  clearPropertyGroup(): void;
+  getPropertyGroup(): Array<ChargeItemDefinition.PropertyGroup>;
+  setPropertyGroup(value: Array<ChargeItemDefinition.PropertyGroup>): void;
   addPropertyGroup(value?: ChargeItemDefinition.PropertyGroup, index?: number): ChargeItemDefinition.PropertyGroup;
 
   serializeBinary(): Uint8Array;
@@ -180,32 +180,32 @@ export namespace ChargeItemDefinition {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     url?: proto_r4_core_datatypes_pb.Uri.AsObject,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     version?: proto_r4_core_datatypes_pb.String.AsObject,
     title?: proto_r4_core_datatypes_pb.String.AsObject,
-    derivedFromUriList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
-    partOfList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
-    replacesList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+    derivedFromUri: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    partOf: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+    replaces: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
     status?: ChargeItemDefinition.StatusCode.AsObject,
     experimental?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     publisher?: proto_r4_core_datatypes_pb.String.AsObject,
-    contactList: Array<proto_r4_core_datatypes_pb.ContactDetail.AsObject>,
+    contact: Array<proto_r4_core_datatypes_pb.ContactDetail.AsObject>,
     description?: proto_r4_core_datatypes_pb.Markdown.AsObject,
-    useContextList: Array<proto_r4_core_datatypes_pb.UsageContext.AsObject>,
-    jurisdictionList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    useContext: Array<proto_r4_core_datatypes_pb.UsageContext.AsObject>,
+    jurisdiction: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     copyright?: proto_r4_core_datatypes_pb.Markdown.AsObject,
     approvalDate?: proto_r4_core_datatypes_pb.Date.AsObject,
     lastReviewDate?: proto_r4_core_datatypes_pb.Date.AsObject,
     effectivePeriod?: proto_r4_core_datatypes_pb.Period.AsObject,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    instanceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    applicabilityList: Array<ChargeItemDefinition.Applicability.AsObject>,
-    propertyGroupList: Array<ChargeItemDefinition.PropertyGroup.AsObject>,
+    instance: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    applicability: Array<ChargeItemDefinition.Applicability.AsObject>,
+    propertyGroup: Array<ChargeItemDefinition.PropertyGroup.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -217,9 +217,9 @@ export namespace ChargeItemDefinition {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -236,7 +236,7 @@ export namespace ChargeItemDefinition {
     export type AsObject = {
       value: proto_r4_core_codes_pb.PublicationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.PublicationStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -246,14 +246,14 @@ export namespace ChargeItemDefinition {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasDescription(): boolean;
@@ -284,8 +284,8 @@ export namespace ChargeItemDefinition {
   export namespace Applicability {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       description?: proto_r4_core_datatypes_pb.String.AsObject,
       language?: proto_r4_core_datatypes_pb.String.AsObject,
       expression?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -298,24 +298,24 @@ export namespace ChargeItemDefinition {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearApplicabilityList(): void;
-    getApplicabilityList(): Array<ChargeItemDefinition.Applicability>;
-    setApplicabilityList(value: Array<ChargeItemDefinition.Applicability>): void;
+    clearApplicability(): void;
+    getApplicability(): Array<ChargeItemDefinition.Applicability>;
+    setApplicability(value: Array<ChargeItemDefinition.Applicability>): void;
     addApplicability(value?: ChargeItemDefinition.Applicability, index?: number): ChargeItemDefinition.Applicability;
 
-    clearPriceComponentList(): void;
-    getPriceComponentList(): Array<ChargeItemDefinition.PropertyGroup.PriceComponent>;
-    setPriceComponentList(value: Array<ChargeItemDefinition.PropertyGroup.PriceComponent>): void;
+    clearPriceComponent(): void;
+    getPriceComponent(): Array<ChargeItemDefinition.PropertyGroup.PriceComponent>;
+    setPriceComponent(value: Array<ChargeItemDefinition.PropertyGroup.PriceComponent>): void;
     addPriceComponent(value?: ChargeItemDefinition.PropertyGroup.PriceComponent, index?: number): ChargeItemDefinition.PropertyGroup.PriceComponent;
 
     serializeBinary(): Uint8Array;
@@ -331,10 +331,10 @@ export namespace ChargeItemDefinition {
   export namespace PropertyGroup {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      applicabilityList: Array<ChargeItemDefinition.Applicability.AsObject>,
-      priceComponentList: Array<ChargeItemDefinition.PropertyGroup.PriceComponent.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      applicability: Array<ChargeItemDefinition.Applicability.AsObject>,
+      priceComponent: Array<ChargeItemDefinition.PropertyGroup.PriceComponent.AsObject>,
     }
 
     export class PriceComponent extends jspb.Message {
@@ -343,14 +343,14 @@ export namespace ChargeItemDefinition {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasType(): boolean;
@@ -386,8 +386,8 @@ export namespace ChargeItemDefinition {
     export namespace PriceComponent {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         type?: ChargeItemDefinition.PropertyGroup.PriceComponent.TypeCode.AsObject,
         code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         factor?: proto_r4_core_datatypes_pb.Decimal.AsObject,
@@ -403,9 +403,9 @@ export namespace ChargeItemDefinition {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         serializeBinary(): Uint8Array;
@@ -422,7 +422,7 @@ export namespace ChargeItemDefinition {
         export type AsObject = {
           value: proto_r4_core_codes_pb.InvoicePriceComponentTypeCode.ValueMap[keyof proto_r4_core_codes_pb.InvoicePriceComponentTypeCode.ValueMap],
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         }
       }
     }

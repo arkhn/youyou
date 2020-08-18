@@ -33,19 +33,19 @@ export class SpecimenDefinition extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasIdentifier(): boolean;
@@ -58,9 +58,9 @@ export class SpecimenDefinition extends jspb.Message {
   getTypeCollected(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setTypeCollected(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearPatientPreparationList(): void;
-  getPatientPreparationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setPatientPreparationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearPatientPreparation(): void;
+  getPatientPreparation(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setPatientPreparation(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addPatientPreparation(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasTimeAspect(): boolean;
@@ -68,14 +68,14 @@ export class SpecimenDefinition extends jspb.Message {
   getTimeAspect(): proto_r4_core_datatypes_pb.String | undefined;
   setTimeAspect(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearCollectionList(): void;
-  getCollectionList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCollectionList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCollection(): void;
+  getCollection(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCollection(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCollection(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearTypeTestedList(): void;
-  getTypeTestedList(): Array<SpecimenDefinition.TypeTested>;
-  setTypeTestedList(value: Array<SpecimenDefinition.TypeTested>): void;
+  clearTypeTested(): void;
+  getTypeTested(): Array<SpecimenDefinition.TypeTested>;
+  setTypeTested(value: Array<SpecimenDefinition.TypeTested>): void;
   addTypeTested(value?: SpecimenDefinition.TypeTested, index?: number): SpecimenDefinition.TypeTested;
 
   serializeBinary(): Uint8Array;
@@ -95,15 +95,15 @@ export namespace SpecimenDefinition {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     identifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
     typeCollected?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    patientPreparationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    patientPreparation: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     timeAspect?: proto_r4_core_datatypes_pb.String.AsObject,
-    collectionList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    typeTestedList: Array<SpecimenDefinition.TypeTested.AsObject>,
+    collection: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    typeTested: Array<SpecimenDefinition.TypeTested.AsObject>,
   }
 
   export class TypeTested extends jspb.Message {
@@ -112,14 +112,14 @@ export namespace SpecimenDefinition {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasIsDerived(): boolean;
@@ -152,14 +152,14 @@ export namespace SpecimenDefinition {
     getRetentionTime(): proto_r4_core_datatypes_pb.Duration | undefined;
     setRetentionTime(value?: proto_r4_core_datatypes_pb.Duration): void;
 
-    clearRejectionCriterionList(): void;
-    getRejectionCriterionList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setRejectionCriterionList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearRejectionCriterion(): void;
+    getRejectionCriterion(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setRejectionCriterion(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addRejectionCriterion(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearHandlingList(): void;
-    getHandlingList(): Array<SpecimenDefinition.TypeTested.Handling>;
-    setHandlingList(value: Array<SpecimenDefinition.TypeTested.Handling>): void;
+    clearHandling(): void;
+    getHandling(): Array<SpecimenDefinition.TypeTested.Handling>;
+    setHandling(value: Array<SpecimenDefinition.TypeTested.Handling>): void;
     addHandling(value?: SpecimenDefinition.TypeTested.Handling, index?: number): SpecimenDefinition.TypeTested.Handling;
 
     serializeBinary(): Uint8Array;
@@ -175,16 +175,16 @@ export namespace SpecimenDefinition {
   export namespace TypeTested {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       isDerived?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       preference?: SpecimenDefinition.TypeTested.PreferenceCode.AsObject,
       container?: SpecimenDefinition.TypeTested.Container.AsObject,
       requirement?: proto_r4_core_datatypes_pb.String.AsObject,
       retentionTime?: proto_r4_core_datatypes_pb.Duration.AsObject,
-      rejectionCriterionList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      handlingList: Array<SpecimenDefinition.TypeTested.Handling.AsObject>,
+      rejectionCriterion: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      handling: Array<SpecimenDefinition.TypeTested.Handling.AsObject>,
     }
 
     export class PreferenceCode extends jspb.Message {
@@ -196,9 +196,9 @@ export namespace SpecimenDefinition {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -215,7 +215,7 @@ export namespace SpecimenDefinition {
       export type AsObject = {
         value: proto_r4_core_codes_pb.SpecimenContainedPreferenceCode.ValueMap[keyof proto_r4_core_codes_pb.SpecimenContainedPreferenceCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
 
@@ -225,14 +225,14 @@ export namespace SpecimenDefinition {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasMaterial(): boolean;
@@ -265,9 +265,9 @@ export namespace SpecimenDefinition {
       getMinimumVolume(): SpecimenDefinition.TypeTested.Container.MinimumVolumeX | undefined;
       setMinimumVolume(value?: SpecimenDefinition.TypeTested.Container.MinimumVolumeX): void;
 
-      clearAdditiveList(): void;
-      getAdditiveList(): Array<SpecimenDefinition.TypeTested.Container.Additive>;
-      setAdditiveList(value: Array<SpecimenDefinition.TypeTested.Container.Additive>): void;
+      clearAdditive(): void;
+      getAdditive(): Array<SpecimenDefinition.TypeTested.Container.Additive>;
+      setAdditive(value: Array<SpecimenDefinition.TypeTested.Container.Additive>): void;
       addAdditive(value?: SpecimenDefinition.TypeTested.Container.Additive, index?: number): SpecimenDefinition.TypeTested.Container.Additive;
 
       hasPreparation(): boolean;
@@ -288,15 +288,15 @@ export namespace SpecimenDefinition {
     export namespace Container {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         material?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         cap?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         description?: proto_r4_core_datatypes_pb.String.AsObject,
         capacity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
         minimumVolume?: SpecimenDefinition.TypeTested.Container.MinimumVolumeX.AsObject,
-        additiveList: Array<SpecimenDefinition.TypeTested.Container.Additive.AsObject>,
+        additive: Array<SpecimenDefinition.TypeTested.Container.Additive.AsObject>,
         preparation?: proto_r4_core_datatypes_pb.String.AsObject,
       }
 
@@ -341,14 +341,14 @@ export namespace SpecimenDefinition {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         hasAdditive(): boolean;
@@ -369,8 +369,8 @@ export namespace SpecimenDefinition {
       export namespace Additive {
         export type AsObject = {
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
           additive?: SpecimenDefinition.TypeTested.Container.Additive.AdditiveX.AsObject,
         }
 
@@ -417,14 +417,14 @@ export namespace SpecimenDefinition {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasTemperatureQualifier(): boolean;
@@ -460,8 +460,8 @@ export namespace SpecimenDefinition {
     export namespace Handling {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         temperatureQualifier?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         temperatureRange?: proto_r4_core_datatypes_pb.Range.AsObject,
         maxDuration?: proto_r4_core_datatypes_pb.Duration.AsObject,

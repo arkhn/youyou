@@ -33,24 +33,24 @@ export class MedicationRequest extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -68,9 +68,9 @@ export class MedicationRequest extends jspb.Message {
   getIntent(): MedicationRequest.IntentCode | undefined;
   setIntent(value?: MedicationRequest.IntentCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasPriority(): boolean;
@@ -103,9 +103,9 @@ export class MedicationRequest extends jspb.Message {
   getEncounter(): proto_r4_core_datatypes_pb.Reference | undefined;
   setEncounter(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearSupportingInformationList(): void;
-  getSupportingInformationList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSupportingInformationList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSupportingInformation(): void;
+  getSupportingInformation(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSupportingInformation(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSupportingInformation(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasAuthoredOn(): boolean;
@@ -133,29 +133,29 @@ export class MedicationRequest extends jspb.Message {
   getRecorder(): proto_r4_core_datatypes_pb.Reference | undefined;
   setRecorder(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearInstantiatesCanonicalList(): void;
-  getInstantiatesCanonicalList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-  setInstantiatesCanonicalList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+  clearInstantiatesCanonical(): void;
+  getInstantiatesCanonical(): Array<proto_r4_core_datatypes_pb.Canonical>;
+  setInstantiatesCanonical(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
   addInstantiatesCanonical(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
-  clearInstantiatesUriList(): void;
-  getInstantiatesUriList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setInstantiatesUriList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearInstantiatesUri(): void;
+  getInstantiatesUri(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setInstantiatesUri(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addInstantiatesUri(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasGroupIdentifier(): boolean;
@@ -168,19 +168,19 @@ export class MedicationRequest extends jspb.Message {
   getCourseOfTherapyType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setCourseOfTherapyType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearInsuranceList(): void;
-  getInsuranceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setInsuranceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearInsurance(): void;
+  getInsurance(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setInsurance(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addInsurance(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearDosageInstructionList(): void;
-  getDosageInstructionList(): Array<proto_r4_core_datatypes_pb.Dosage>;
-  setDosageInstructionList(value: Array<proto_r4_core_datatypes_pb.Dosage>): void;
+  clearDosageInstruction(): void;
+  getDosageInstruction(): Array<proto_r4_core_datatypes_pb.Dosage>;
+  setDosageInstruction(value: Array<proto_r4_core_datatypes_pb.Dosage>): void;
   addDosageInstruction(value?: proto_r4_core_datatypes_pb.Dosage, index?: number): proto_r4_core_datatypes_pb.Dosage;
 
   hasDispenseRequest(): boolean;
@@ -198,14 +198,14 @@ export class MedicationRequest extends jspb.Message {
   getPriorPrescription(): proto_r4_core_datatypes_pb.Reference | undefined;
   setPriorPrescription(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearDetectedIssueList(): void;
-  getDetectedIssueList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setDetectedIssueList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearDetectedIssue(): void;
+  getDetectedIssue(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setDetectedIssue(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addDetectedIssue(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearEventHistoryList(): void;
-  getEventHistoryList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setEventHistoryList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearEventHistory(): void;
+  getEventHistory(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setEventHistory(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addEventHistory(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -225,41 +225,41 @@ export namespace MedicationRequest {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: MedicationRequest.StatusCode.AsObject,
     statusReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     intent?: MedicationRequest.IntentCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     priority?: MedicationRequest.PriorityCode.AsObject,
     doNotPerform?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     reported?: MedicationRequest.ReportedX.AsObject,
     medication?: MedicationRequest.MedicationX.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    supportingInformationList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    supportingInformation: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     authoredOn?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     requester?: proto_r4_core_datatypes_pb.Reference.AsObject,
     performer?: proto_r4_core_datatypes_pb.Reference.AsObject,
     performerType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     recorder?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    instantiatesCanonicalList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
-    instantiatesUriList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    instantiatesCanonical: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+    instantiatesUri: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     groupIdentifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
     courseOfTherapyType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    insuranceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    dosageInstructionList: Array<proto_r4_core_datatypes_pb.Dosage.AsObject>,
+    insurance: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    dosageInstruction: Array<proto_r4_core_datatypes_pb.Dosage.AsObject>,
     dispenseRequest?: MedicationRequest.DispenseRequest.AsObject,
     substitution?: MedicationRequest.Substitution.AsObject,
     priorPrescription?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    detectedIssueList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    eventHistoryList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    detectedIssue: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    eventHistory: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -271,9 +271,9 @@ export namespace MedicationRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -290,7 +290,7 @@ export namespace MedicationRequest {
     export type AsObject = {
       value: proto_r4_core_codes_pb.MedicationrequestStatusCode.ValueMap[keyof proto_r4_core_codes_pb.MedicationrequestStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -303,9 +303,9 @@ export namespace MedicationRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -322,7 +322,7 @@ export namespace MedicationRequest {
     export type AsObject = {
       value: proto_r4_core_codes_pb.MedicationRequestIntentCode.ValueMap[keyof proto_r4_core_codes_pb.MedicationRequestIntentCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -335,9 +335,9 @@ export namespace MedicationRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -354,7 +354,7 @@ export namespace MedicationRequest {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestPriorityCode.ValueMap[keyof proto_r4_core_codes_pb.RequestPriorityCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -434,14 +434,14 @@ export namespace MedicationRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasInitialFill(): boolean;
@@ -492,8 +492,8 @@ export namespace MedicationRequest {
   export namespace DispenseRequest {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       initialFill?: MedicationRequest.DispenseRequest.InitialFill.AsObject,
       dispenseInterval?: proto_r4_core_datatypes_pb.Duration.AsObject,
       validityPeriod?: proto_r4_core_datatypes_pb.Period.AsObject,
@@ -509,14 +509,14 @@ export namespace MedicationRequest {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasQuantity(): boolean;
@@ -542,8 +542,8 @@ export namespace MedicationRequest {
     export namespace InitialFill {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
         duration?: proto_r4_core_datatypes_pb.Duration.AsObject,
       }
@@ -556,14 +556,14 @@ export namespace MedicationRequest {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasAllowed(): boolean;
@@ -589,8 +589,8 @@ export namespace MedicationRequest {
   export namespace Substitution {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       allowed?: MedicationRequest.Substitution.AllowedX.AsObject,
       reason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     }

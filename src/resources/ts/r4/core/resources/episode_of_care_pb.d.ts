@@ -33,24 +33,24 @@ export class EpisodeOfCare extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -58,19 +58,19 @@ export class EpisodeOfCare extends jspb.Message {
   getStatus(): EpisodeOfCare.StatusCode | undefined;
   setStatus(value?: EpisodeOfCare.StatusCode): void;
 
-  clearStatusHistoryList(): void;
-  getStatusHistoryList(): Array<EpisodeOfCare.StatusHistory>;
-  setStatusHistoryList(value: Array<EpisodeOfCare.StatusHistory>): void;
+  clearStatusHistory(): void;
+  getStatusHistory(): Array<EpisodeOfCare.StatusHistory>;
+  setStatusHistory(value: Array<EpisodeOfCare.StatusHistory>): void;
   addStatusHistory(value?: EpisodeOfCare.StatusHistory, index?: number): EpisodeOfCare.StatusHistory;
 
-  clearTypeList(): void;
-  getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearType(): void;
+  getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearDiagnosisList(): void;
-  getDiagnosisList(): Array<EpisodeOfCare.Diagnosis>;
-  setDiagnosisList(value: Array<EpisodeOfCare.Diagnosis>): void;
+  clearDiagnosis(): void;
+  getDiagnosis(): Array<EpisodeOfCare.Diagnosis>;
+  setDiagnosis(value: Array<EpisodeOfCare.Diagnosis>): void;
   addDiagnosis(value?: EpisodeOfCare.Diagnosis, index?: number): EpisodeOfCare.Diagnosis;
 
   hasPatient(): boolean;
@@ -88,9 +88,9 @@ export class EpisodeOfCare extends jspb.Message {
   getPeriod(): proto_r4_core_datatypes_pb.Period | undefined;
   setPeriod(value?: proto_r4_core_datatypes_pb.Period): void;
 
-  clearReferralRequestList(): void;
-  getReferralRequestList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReferralRequestList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReferralRequest(): void;
+  getReferralRequest(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReferralRequest(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReferralRequest(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasCareManager(): boolean;
@@ -98,14 +98,14 @@ export class EpisodeOfCare extends jspb.Message {
   getCareManager(): proto_r4_core_datatypes_pb.Reference | undefined;
   setCareManager(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearTeamList(): void;
-  getTeamList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setTeamList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearTeam(): void;
+  getTeam(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setTeam(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addTeam(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearAccountList(): void;
-  getAccountList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setAccountList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearAccount(): void;
+  getAccount(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setAccount(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addAccount(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -125,21 +125,21 @@ export namespace EpisodeOfCare {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: EpisodeOfCare.StatusCode.AsObject,
-    statusHistoryList: Array<EpisodeOfCare.StatusHistory.AsObject>,
-    typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    diagnosisList: Array<EpisodeOfCare.Diagnosis.AsObject>,
+    statusHistory: Array<EpisodeOfCare.StatusHistory.AsObject>,
+    type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    diagnosis: Array<EpisodeOfCare.Diagnosis.AsObject>,
     patient?: proto_r4_core_datatypes_pb.Reference.AsObject,
     managingOrganization?: proto_r4_core_datatypes_pb.Reference.AsObject,
     period?: proto_r4_core_datatypes_pb.Period.AsObject,
-    referralRequestList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    referralRequest: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     careManager?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    teamList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    accountList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    team: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    account: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -151,9 +151,9 @@ export namespace EpisodeOfCare {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -170,7 +170,7 @@ export namespace EpisodeOfCare {
     export type AsObject = {
       value: proto_r4_core_codes_pb.EpisodeOfCareStatusCode.ValueMap[keyof proto_r4_core_codes_pb.EpisodeOfCareStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -180,14 +180,14 @@ export namespace EpisodeOfCare {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasStatus(): boolean;
@@ -213,8 +213,8 @@ export namespace EpisodeOfCare {
   export namespace StatusHistory {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       status?: EpisodeOfCare.StatusHistory.StatusCode.AsObject,
       period?: proto_r4_core_datatypes_pb.Period.AsObject,
     }
@@ -228,9 +228,9 @@ export namespace EpisodeOfCare {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -247,7 +247,7 @@ export namespace EpisodeOfCare {
       export type AsObject = {
         value: proto_r4_core_codes_pb.EpisodeOfCareStatusCode.ValueMap[keyof proto_r4_core_codes_pb.EpisodeOfCareStatusCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -258,14 +258,14 @@ export namespace EpisodeOfCare {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCondition(): boolean;
@@ -296,8 +296,8 @@ export namespace EpisodeOfCare {
   export namespace Diagnosis {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       condition?: proto_r4_core_datatypes_pb.Reference.AsObject,
       role?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       rank?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,

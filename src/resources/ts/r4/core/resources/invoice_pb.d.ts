@@ -33,24 +33,24 @@ export class Invoice extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -83,9 +83,9 @@ export class Invoice extends jspb.Message {
   getDate(): proto_r4_core_datatypes_pb.DateTime | undefined;
   setDate(value?: proto_r4_core_datatypes_pb.DateTime): void;
 
-  clearParticipantList(): void;
-  getParticipantList(): Array<Invoice.Participant>;
-  setParticipantList(value: Array<Invoice.Participant>): void;
+  clearParticipant(): void;
+  getParticipant(): Array<Invoice.Participant>;
+  setParticipant(value: Array<Invoice.Participant>): void;
   addParticipant(value?: Invoice.Participant, index?: number): Invoice.Participant;
 
   hasIssuer(): boolean;
@@ -98,14 +98,14 @@ export class Invoice extends jspb.Message {
   getAccount(): proto_r4_core_datatypes_pb.Reference | undefined;
   setAccount(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearLineItemList(): void;
-  getLineItemList(): Array<Invoice.LineItem>;
-  setLineItemList(value: Array<Invoice.LineItem>): void;
+  clearLineItem(): void;
+  getLineItem(): Array<Invoice.LineItem>;
+  setLineItem(value: Array<Invoice.LineItem>): void;
   addLineItem(value?: Invoice.LineItem, index?: number): Invoice.LineItem;
 
-  clearTotalPriceComponentList(): void;
-  getTotalPriceComponentList(): Array<Invoice.LineItem.PriceComponent>;
-  setTotalPriceComponentList(value: Array<Invoice.LineItem.PriceComponent>): void;
+  clearTotalPriceComponent(): void;
+  getTotalPriceComponent(): Array<Invoice.LineItem.PriceComponent>;
+  setTotalPriceComponent(value: Array<Invoice.LineItem.PriceComponent>): void;
   addTotalPriceComponent(value?: Invoice.LineItem.PriceComponent, index?: number): Invoice.LineItem.PriceComponent;
 
   hasTotalNet(): boolean;
@@ -123,9 +123,9 @@ export class Invoice extends jspb.Message {
   getPaymentTerms(): proto_r4_core_datatypes_pb.Markdown | undefined;
   setPaymentTerms(value?: proto_r4_core_datatypes_pb.Markdown): void;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   serializeBinary(): Uint8Array;
@@ -145,25 +145,25 @@ export namespace Invoice {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: Invoice.StatusCode.AsObject,
     cancelledReason?: proto_r4_core_datatypes_pb.String.AsObject,
     type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     recipient?: proto_r4_core_datatypes_pb.Reference.AsObject,
     date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
-    participantList: Array<Invoice.Participant.AsObject>,
+    participant: Array<Invoice.Participant.AsObject>,
     issuer?: proto_r4_core_datatypes_pb.Reference.AsObject,
     account?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    lineItemList: Array<Invoice.LineItem.AsObject>,
-    totalPriceComponentList: Array<Invoice.LineItem.PriceComponent.AsObject>,
+    lineItem: Array<Invoice.LineItem.AsObject>,
+    totalPriceComponent: Array<Invoice.LineItem.PriceComponent.AsObject>,
     totalNet?: proto_r4_core_datatypes_pb.Money.AsObject,
     totalGross?: proto_r4_core_datatypes_pb.Money.AsObject,
     paymentTerms?: proto_r4_core_datatypes_pb.Markdown.AsObject,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -175,9 +175,9 @@ export namespace Invoice {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -194,7 +194,7 @@ export namespace Invoice {
     export type AsObject = {
       value: proto_r4_core_codes_pb.InvoiceStatusCode.ValueMap[keyof proto_r4_core_codes_pb.InvoiceStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -204,14 +204,14 @@ export namespace Invoice {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasRole(): boolean;
@@ -237,8 +237,8 @@ export namespace Invoice {
   export namespace Participant {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       role?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       actor?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
@@ -250,14 +250,14 @@ export namespace Invoice {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSequence(): boolean;
@@ -270,9 +270,9 @@ export namespace Invoice {
     getChargeItem(): Invoice.LineItem.ChargeItemX | undefined;
     setChargeItem(value?: Invoice.LineItem.ChargeItemX): void;
 
-    clearPriceComponentList(): void;
-    getPriceComponentList(): Array<Invoice.LineItem.PriceComponent>;
-    setPriceComponentList(value: Array<Invoice.LineItem.PriceComponent>): void;
+    clearPriceComponent(): void;
+    getPriceComponent(): Array<Invoice.LineItem.PriceComponent>;
+    setPriceComponent(value: Array<Invoice.LineItem.PriceComponent>): void;
     addPriceComponent(value?: Invoice.LineItem.PriceComponent, index?: number): Invoice.LineItem.PriceComponent;
 
     serializeBinary(): Uint8Array;
@@ -288,11 +288,11 @@ export namespace Invoice {
   export namespace LineItem {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       sequence?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
       chargeItem?: Invoice.LineItem.ChargeItemX.AsObject,
-      priceComponentList: Array<Invoice.LineItem.PriceComponent.AsObject>,
+      priceComponent: Array<Invoice.LineItem.PriceComponent.AsObject>,
     }
 
     export class ChargeItemX extends jspb.Message {
@@ -336,14 +336,14 @@ export namespace Invoice {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasType(): boolean;
@@ -379,8 +379,8 @@ export namespace Invoice {
     export namespace PriceComponent {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         type?: Invoice.LineItem.PriceComponent.TypeCode.AsObject,
         code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         factor?: proto_r4_core_datatypes_pb.Decimal.AsObject,
@@ -396,9 +396,9 @@ export namespace Invoice {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         serializeBinary(): Uint8Array;
@@ -415,7 +415,7 @@ export namespace Invoice {
         export type AsObject = {
           value: proto_r4_core_codes_pb.InvoicePriceComponentTypeCode.ValueMap[keyof proto_r4_core_codes_pb.InvoicePriceComponentTypeCode.ValueMap],
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         }
       }
     }

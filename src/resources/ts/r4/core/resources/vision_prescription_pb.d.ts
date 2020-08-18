@@ -33,24 +33,24 @@ export class VisionPrescription extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -83,9 +83,9 @@ export class VisionPrescription extends jspb.Message {
   getPrescriber(): proto_r4_core_datatypes_pb.Reference | undefined;
   setPrescriber(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearLensSpecificationList(): void;
-  getLensSpecificationList(): Array<VisionPrescription.LensSpecification>;
-  setLensSpecificationList(value: Array<VisionPrescription.LensSpecification>): void;
+  clearLensSpecification(): void;
+  getLensSpecification(): Array<VisionPrescription.LensSpecification>;
+  setLensSpecification(value: Array<VisionPrescription.LensSpecification>): void;
   addLensSpecification(value?: VisionPrescription.LensSpecification, index?: number): VisionPrescription.LensSpecification;
 
   serializeBinary(): Uint8Array;
@@ -105,17 +105,17 @@ export namespace VisionPrescription {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: VisionPrescription.StatusCode.AsObject,
     created?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     patient?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     dateWritten?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     prescriber?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    lensSpecificationList: Array<VisionPrescription.LensSpecification.AsObject>,
+    lensSpecification: Array<VisionPrescription.LensSpecification.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -127,9 +127,9 @@ export namespace VisionPrescription {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -146,7 +146,7 @@ export namespace VisionPrescription {
     export type AsObject = {
       value: proto_r4_core_codes_pb.FinancialResourceStatusCode.ValueMap[keyof proto_r4_core_codes_pb.FinancialResourceStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -156,14 +156,14 @@ export namespace VisionPrescription {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasProduct(): boolean;
@@ -191,9 +191,9 @@ export namespace VisionPrescription {
     getAxis(): proto_r4_core_datatypes_pb.Integer | undefined;
     setAxis(value?: proto_r4_core_datatypes_pb.Integer): void;
 
-    clearPrismList(): void;
-    getPrismList(): Array<VisionPrescription.LensSpecification.Prism>;
-    setPrismList(value: Array<VisionPrescription.LensSpecification.Prism>): void;
+    clearPrism(): void;
+    getPrism(): Array<VisionPrescription.LensSpecification.Prism>;
+    setPrism(value: Array<VisionPrescription.LensSpecification.Prism>): void;
     addPrism(value?: VisionPrescription.LensSpecification.Prism, index?: number): VisionPrescription.LensSpecification.Prism;
 
     hasAdd(): boolean;
@@ -231,9 +231,9 @@ export namespace VisionPrescription {
     getBrand(): proto_r4_core_datatypes_pb.String | undefined;
     setBrand(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearNoteList(): void;
-    getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-    setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+    clearNote(): void;
+    getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+    setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
     addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
     serializeBinary(): Uint8Array;
@@ -249,14 +249,14 @@ export namespace VisionPrescription {
   export namespace LensSpecification {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       product?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       eye?: VisionPrescription.LensSpecification.EyeCode.AsObject,
       sphere?: proto_r4_core_datatypes_pb.Decimal.AsObject,
       cylinder?: proto_r4_core_datatypes_pb.Decimal.AsObject,
       axis?: proto_r4_core_datatypes_pb.Integer.AsObject,
-      prismList: Array<VisionPrescription.LensSpecification.Prism.AsObject>,
+      prism: Array<VisionPrescription.LensSpecification.Prism.AsObject>,
       add?: proto_r4_core_datatypes_pb.Decimal.AsObject,
       power?: proto_r4_core_datatypes_pb.Decimal.AsObject,
       backCurve?: proto_r4_core_datatypes_pb.Decimal.AsObject,
@@ -264,7 +264,7 @@ export namespace VisionPrescription {
       duration?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       color?: proto_r4_core_datatypes_pb.String.AsObject,
       brand?: proto_r4_core_datatypes_pb.String.AsObject,
-      noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+      note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
     }
 
     export class EyeCode extends jspb.Message {
@@ -276,9 +276,9 @@ export namespace VisionPrescription {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -295,7 +295,7 @@ export namespace VisionPrescription {
       export type AsObject = {
         value: proto_r4_core_codes_pb.VisionEyesCode.ValueMap[keyof proto_r4_core_codes_pb.VisionEyesCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
 
@@ -305,14 +305,14 @@ export namespace VisionPrescription {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasAmount(): boolean;
@@ -338,8 +338,8 @@ export namespace VisionPrescription {
     export namespace Prism {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         amount?: proto_r4_core_datatypes_pb.Decimal.AsObject,
         base?: VisionPrescription.LensSpecification.Prism.BaseCode.AsObject,
       }
@@ -353,9 +353,9 @@ export namespace VisionPrescription {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         serializeBinary(): Uint8Array;
@@ -372,7 +372,7 @@ export namespace VisionPrescription {
         export type AsObject = {
           value: proto_r4_core_codes_pb.VisionBaseCode.ValueMap[keyof proto_r4_core_codes_pb.VisionBaseCode.ValueMap],
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         }
       }
     }

@@ -33,19 +33,19 @@ export class ExampleScenario extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasUrl(): boolean;
@@ -53,9 +53,9 @@ export class ExampleScenario extends jspb.Message {
   getUrl(): proto_r4_core_datatypes_pb.Uri | undefined;
   setUrl(value?: proto_r4_core_datatypes_pb.Uri): void;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasVersion(): boolean;
@@ -88,19 +88,19 @@ export class ExampleScenario extends jspb.Message {
   getPublisher(): proto_r4_core_datatypes_pb.String | undefined;
   setPublisher(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearContactList(): void;
-  getContactList(): Array<proto_r4_core_datatypes_pb.ContactDetail>;
-  setContactList(value: Array<proto_r4_core_datatypes_pb.ContactDetail>): void;
+  clearContact(): void;
+  getContact(): Array<proto_r4_core_datatypes_pb.ContactDetail>;
+  setContact(value: Array<proto_r4_core_datatypes_pb.ContactDetail>): void;
   addContact(value?: proto_r4_core_datatypes_pb.ContactDetail, index?: number): proto_r4_core_datatypes_pb.ContactDetail;
 
-  clearUseContextList(): void;
-  getUseContextList(): Array<proto_r4_core_datatypes_pb.UsageContext>;
-  setUseContextList(value: Array<proto_r4_core_datatypes_pb.UsageContext>): void;
+  clearUseContext(): void;
+  getUseContext(): Array<proto_r4_core_datatypes_pb.UsageContext>;
+  setUseContext(value: Array<proto_r4_core_datatypes_pb.UsageContext>): void;
   addUseContext(value?: proto_r4_core_datatypes_pb.UsageContext, index?: number): proto_r4_core_datatypes_pb.UsageContext;
 
-  clearJurisdictionList(): void;
-  getJurisdictionList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setJurisdictionList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearJurisdiction(): void;
+  getJurisdiction(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setJurisdiction(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addJurisdiction(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasCopyright(): boolean;
@@ -113,24 +113,24 @@ export class ExampleScenario extends jspb.Message {
   getPurpose(): proto_r4_core_datatypes_pb.Markdown | undefined;
   setPurpose(value?: proto_r4_core_datatypes_pb.Markdown): void;
 
-  clearActorList(): void;
-  getActorList(): Array<ExampleScenario.Actor>;
-  setActorList(value: Array<ExampleScenario.Actor>): void;
+  clearActor(): void;
+  getActor(): Array<ExampleScenario.Actor>;
+  setActor(value: Array<ExampleScenario.Actor>): void;
   addActor(value?: ExampleScenario.Actor, index?: number): ExampleScenario.Actor;
 
-  clearInstanceList(): void;
-  getInstanceList(): Array<ExampleScenario.Instance>;
-  setInstanceList(value: Array<ExampleScenario.Instance>): void;
+  clearInstance(): void;
+  getInstance(): Array<ExampleScenario.Instance>;
+  setInstance(value: Array<ExampleScenario.Instance>): void;
   addInstance(value?: ExampleScenario.Instance, index?: number): ExampleScenario.Instance;
 
-  clearProcessList(): void;
-  getProcessList(): Array<ExampleScenario.Process>;
-  setProcessList(value: Array<ExampleScenario.Process>): void;
+  clearProcess(): void;
+  getProcess(): Array<ExampleScenario.Process>;
+  setProcess(value: Array<ExampleScenario.Process>): void;
   addProcess(value?: ExampleScenario.Process, index?: number): ExampleScenario.Process;
 
-  clearWorkflowList(): void;
-  getWorkflowList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-  setWorkflowList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+  clearWorkflow(): void;
+  getWorkflow(): Array<proto_r4_core_datatypes_pb.Canonical>;
+  setWorkflow(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
   addWorkflow(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
   serializeBinary(): Uint8Array;
@@ -150,26 +150,26 @@ export namespace ExampleScenario {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     url?: proto_r4_core_datatypes_pb.Uri.AsObject,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     version?: proto_r4_core_datatypes_pb.String.AsObject,
     name?: proto_r4_core_datatypes_pb.String.AsObject,
     status?: ExampleScenario.StatusCode.AsObject,
     experimental?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     publisher?: proto_r4_core_datatypes_pb.String.AsObject,
-    contactList: Array<proto_r4_core_datatypes_pb.ContactDetail.AsObject>,
-    useContextList: Array<proto_r4_core_datatypes_pb.UsageContext.AsObject>,
-    jurisdictionList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    contact: Array<proto_r4_core_datatypes_pb.ContactDetail.AsObject>,
+    useContext: Array<proto_r4_core_datatypes_pb.UsageContext.AsObject>,
+    jurisdiction: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     copyright?: proto_r4_core_datatypes_pb.Markdown.AsObject,
     purpose?: proto_r4_core_datatypes_pb.Markdown.AsObject,
-    actorList: Array<ExampleScenario.Actor.AsObject>,
-    instanceList: Array<ExampleScenario.Instance.AsObject>,
-    processList: Array<ExampleScenario.Process.AsObject>,
-    workflowList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+    actor: Array<ExampleScenario.Actor.AsObject>,
+    instance: Array<ExampleScenario.Instance.AsObject>,
+    process: Array<ExampleScenario.Process.AsObject>,
+    workflow: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -181,9 +181,9 @@ export namespace ExampleScenario {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -200,7 +200,7 @@ export namespace ExampleScenario {
     export type AsObject = {
       value: proto_r4_core_codes_pb.PublicationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.PublicationStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -210,14 +210,14 @@ export namespace ExampleScenario {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasActorId(): boolean;
@@ -253,8 +253,8 @@ export namespace ExampleScenario {
   export namespace Actor {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       actorId?: proto_r4_core_datatypes_pb.String.AsObject,
       type?: ExampleScenario.Actor.TypeCode.AsObject,
       name?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -270,9 +270,9 @@ export namespace ExampleScenario {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -289,7 +289,7 @@ export namespace ExampleScenario {
       export type AsObject = {
         value: proto_r4_core_codes_pb.ExampleScenarioActorTypeCode.ValueMap[keyof proto_r4_core_codes_pb.ExampleScenarioActorTypeCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -300,14 +300,14 @@ export namespace ExampleScenario {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasResourceId(): boolean;
@@ -330,14 +330,14 @@ export namespace ExampleScenario {
     getDescription(): proto_r4_core_datatypes_pb.Markdown | undefined;
     setDescription(value?: proto_r4_core_datatypes_pb.Markdown): void;
 
-    clearVersionList(): void;
-    getVersionList(): Array<ExampleScenario.Instance.Version>;
-    setVersionList(value: Array<ExampleScenario.Instance.Version>): void;
+    clearVersion(): void;
+    getVersion(): Array<ExampleScenario.Instance.Version>;
+    setVersion(value: Array<ExampleScenario.Instance.Version>): void;
     addVersion(value?: ExampleScenario.Instance.Version, index?: number): ExampleScenario.Instance.Version;
 
-    clearContainedInstanceList(): void;
-    getContainedInstanceList(): Array<ExampleScenario.Instance.ContainedInstance>;
-    setContainedInstanceList(value: Array<ExampleScenario.Instance.ContainedInstance>): void;
+    clearContainedInstance(): void;
+    getContainedInstance(): Array<ExampleScenario.Instance.ContainedInstance>;
+    setContainedInstance(value: Array<ExampleScenario.Instance.ContainedInstance>): void;
     addContainedInstance(value?: ExampleScenario.Instance.ContainedInstance, index?: number): ExampleScenario.Instance.ContainedInstance;
 
     serializeBinary(): Uint8Array;
@@ -353,14 +353,14 @@ export namespace ExampleScenario {
   export namespace Instance {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       resourceId?: proto_r4_core_datatypes_pb.String.AsObject,
       resourceType?: ExampleScenario.Instance.ResourceTypeCode.AsObject,
       name?: proto_r4_core_datatypes_pb.String.AsObject,
       description?: proto_r4_core_datatypes_pb.Markdown.AsObject,
-      versionList: Array<ExampleScenario.Instance.Version.AsObject>,
-      containedInstanceList: Array<ExampleScenario.Instance.ContainedInstance.AsObject>,
+      version: Array<ExampleScenario.Instance.Version.AsObject>,
+      containedInstance: Array<ExampleScenario.Instance.ContainedInstance.AsObject>,
     }
 
     export class ResourceTypeCode extends jspb.Message {
@@ -372,9 +372,9 @@ export namespace ExampleScenario {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -391,7 +391,7 @@ export namespace ExampleScenario {
       export type AsObject = {
         value: proto_r4_core_codes_pb.ResourceTypeCode.ValueMap[keyof proto_r4_core_codes_pb.ResourceTypeCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
 
@@ -401,14 +401,14 @@ export namespace ExampleScenario {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasVersionId(): boolean;
@@ -434,8 +434,8 @@ export namespace ExampleScenario {
     export namespace Version {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         versionId?: proto_r4_core_datatypes_pb.String.AsObject,
         description?: proto_r4_core_datatypes_pb.Markdown.AsObject,
       }
@@ -447,14 +447,14 @@ export namespace ExampleScenario {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasResourceId(): boolean;
@@ -480,8 +480,8 @@ export namespace ExampleScenario {
     export namespace ContainedInstance {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         resourceId?: proto_r4_core_datatypes_pb.String.AsObject,
         versionId?: proto_r4_core_datatypes_pb.String.AsObject,
       }
@@ -494,14 +494,14 @@ export namespace ExampleScenario {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasTitle(): boolean;
@@ -524,9 +524,9 @@ export namespace ExampleScenario {
     getPostConditions(): proto_r4_core_datatypes_pb.Markdown | undefined;
     setPostConditions(value?: proto_r4_core_datatypes_pb.Markdown): void;
 
-    clearStepList(): void;
-    getStepList(): Array<ExampleScenario.Process.Step>;
-    setStepList(value: Array<ExampleScenario.Process.Step>): void;
+    clearStep(): void;
+    getStep(): Array<ExampleScenario.Process.Step>;
+    setStep(value: Array<ExampleScenario.Process.Step>): void;
     addStep(value?: ExampleScenario.Process.Step, index?: number): ExampleScenario.Process.Step;
 
     serializeBinary(): Uint8Array;
@@ -542,13 +542,13 @@ export namespace ExampleScenario {
   export namespace Process {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       title?: proto_r4_core_datatypes_pb.String.AsObject,
       description?: proto_r4_core_datatypes_pb.Markdown.AsObject,
       preConditions?: proto_r4_core_datatypes_pb.Markdown.AsObject,
       postConditions?: proto_r4_core_datatypes_pb.Markdown.AsObject,
-      stepList: Array<ExampleScenario.Process.Step.AsObject>,
+      step: Array<ExampleScenario.Process.Step.AsObject>,
     }
 
     export class Step extends jspb.Message {
@@ -557,19 +557,19 @@ export namespace ExampleScenario {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearProcessList(): void;
-      getProcessList(): Array<ExampleScenario.Process>;
-      setProcessList(value: Array<ExampleScenario.Process>): void;
+      clearProcess(): void;
+      getProcess(): Array<ExampleScenario.Process>;
+      setProcess(value: Array<ExampleScenario.Process>): void;
       addProcess(value?: ExampleScenario.Process, index?: number): ExampleScenario.Process;
 
       hasPause(): boolean;
@@ -582,9 +582,9 @@ export namespace ExampleScenario {
       getOperation(): ExampleScenario.Process.Step.Operation | undefined;
       setOperation(value?: ExampleScenario.Process.Step.Operation): void;
 
-      clearAlternativeList(): void;
-      getAlternativeList(): Array<ExampleScenario.Process.Step.Alternative>;
-      setAlternativeList(value: Array<ExampleScenario.Process.Step.Alternative>): void;
+      clearAlternative(): void;
+      getAlternative(): Array<ExampleScenario.Process.Step.Alternative>;
+      setAlternative(value: Array<ExampleScenario.Process.Step.Alternative>): void;
       addAlternative(value?: ExampleScenario.Process.Step.Alternative, index?: number): ExampleScenario.Process.Step.Alternative;
 
       serializeBinary(): Uint8Array;
@@ -600,12 +600,12 @@ export namespace ExampleScenario {
     export namespace Step {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        processList: Array<ExampleScenario.Process.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        process: Array<ExampleScenario.Process.AsObject>,
         pause?: proto_r4_core_datatypes_pb.Boolean.AsObject,
         operation?: ExampleScenario.Process.Step.Operation.AsObject,
-        alternativeList: Array<ExampleScenario.Process.Step.Alternative.AsObject>,
+        alternative: Array<ExampleScenario.Process.Step.Alternative.AsObject>,
       }
 
       export class Operation extends jspb.Message {
@@ -614,14 +614,14 @@ export namespace ExampleScenario {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         hasNumber(): boolean;
@@ -687,8 +687,8 @@ export namespace ExampleScenario {
       export namespace Operation {
         export type AsObject = {
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
           number?: proto_r4_core_datatypes_pb.String.AsObject,
           type?: proto_r4_core_datatypes_pb.String.AsObject,
           name?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -708,14 +708,14 @@ export namespace ExampleScenario {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         hasTitle(): boolean;
@@ -728,9 +728,9 @@ export namespace ExampleScenario {
         getDescription(): proto_r4_core_datatypes_pb.Markdown | undefined;
         setDescription(value?: proto_r4_core_datatypes_pb.Markdown): void;
 
-        clearStepList(): void;
-        getStepList(): Array<ExampleScenario.Process.Step>;
-        setStepList(value: Array<ExampleScenario.Process.Step>): void;
+        clearStep(): void;
+        getStep(): Array<ExampleScenario.Process.Step>;
+        setStep(value: Array<ExampleScenario.Process.Step>): void;
         addStep(value?: ExampleScenario.Process.Step, index?: number): ExampleScenario.Process.Step;
 
         serializeBinary(): Uint8Array;
@@ -746,11 +746,11 @@ export namespace ExampleScenario {
       export namespace Alternative {
         export type AsObject = {
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
           title?: proto_r4_core_datatypes_pb.String.AsObject,
           description?: proto_r4_core_datatypes_pb.Markdown.AsObject,
-          stepList: Array<ExampleScenario.Process.Step.AsObject>,
+          step: Array<ExampleScenario.Process.Step.AsObject>,
         }
       }
     }

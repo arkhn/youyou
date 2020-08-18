@@ -33,24 +33,24 @@ export class AllergyIntolerance extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasClinicalStatus(): boolean;
@@ -68,9 +68,9 @@ export class AllergyIntolerance extends jspb.Message {
   getType(): AllergyIntolerance.TypeCode | undefined;
   setType(value?: AllergyIntolerance.TypeCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<AllergyIntolerance.CategoryCode>;
-  setCategoryList(value: Array<AllergyIntolerance.CategoryCode>): void;
+  clearCategory(): void;
+  getCategory(): Array<AllergyIntolerance.CategoryCode>;
+  setCategory(value: Array<AllergyIntolerance.CategoryCode>): void;
   addCategory(value?: AllergyIntolerance.CategoryCode, index?: number): AllergyIntolerance.CategoryCode;
 
   hasCriticality(): boolean;
@@ -118,14 +118,14 @@ export class AllergyIntolerance extends jspb.Message {
   getLastOccurrence(): proto_r4_core_datatypes_pb.DateTime | undefined;
   setLastOccurrence(value?: proto_r4_core_datatypes_pb.DateTime): void;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearReactionList(): void;
-  getReactionList(): Array<AllergyIntolerance.Reaction>;
-  setReactionList(value: Array<AllergyIntolerance.Reaction>): void;
+  clearReaction(): void;
+  getReaction(): Array<AllergyIntolerance.Reaction>;
+  setReaction(value: Array<AllergyIntolerance.Reaction>): void;
   addReaction(value?: AllergyIntolerance.Reaction, index?: number): AllergyIntolerance.Reaction;
 
   serializeBinary(): Uint8Array;
@@ -145,14 +145,14 @@ export namespace AllergyIntolerance {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     clinicalStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     verificationStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     type?: AllergyIntolerance.TypeCode.AsObject,
-    categoryList: Array<AllergyIntolerance.CategoryCode.AsObject>,
+    category: Array<AllergyIntolerance.CategoryCode.AsObject>,
     criticality?: AllergyIntolerance.CriticalityCode.AsObject,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     patient?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -162,8 +162,8 @@ export namespace AllergyIntolerance {
     recorder?: proto_r4_core_datatypes_pb.Reference.AsObject,
     asserter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     lastOccurrence?: proto_r4_core_datatypes_pb.DateTime.AsObject,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    reactionList: Array<AllergyIntolerance.Reaction.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    reaction: Array<AllergyIntolerance.Reaction.AsObject>,
   }
 
   export class TypeCode extends jspb.Message {
@@ -175,9 +175,9 @@ export namespace AllergyIntolerance {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -194,7 +194,7 @@ export namespace AllergyIntolerance {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AllergyIntoleranceTypeCode.ValueMap[keyof proto_r4_core_codes_pb.AllergyIntoleranceTypeCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -207,9 +207,9 @@ export namespace AllergyIntolerance {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -226,7 +226,7 @@ export namespace AllergyIntolerance {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AllergyIntoleranceCategoryCode.ValueMap[keyof proto_r4_core_codes_pb.AllergyIntoleranceCategoryCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -239,9 +239,9 @@ export namespace AllergyIntolerance {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -258,7 +258,7 @@ export namespace AllergyIntolerance {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AllergyIntoleranceCriticalityCode.ValueMap[keyof proto_r4_core_codes_pb.AllergyIntoleranceCriticalityCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -324,14 +324,14 @@ export namespace AllergyIntolerance {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSubstance(): boolean;
@@ -339,9 +339,9 @@ export namespace AllergyIntolerance {
     getSubstance(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setSubstance(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearManifestationList(): void;
-    getManifestationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setManifestationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearManifestation(): void;
+    getManifestation(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setManifestation(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addManifestation(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasDescription(): boolean;
@@ -364,9 +364,9 @@ export namespace AllergyIntolerance {
     getExposureRoute(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setExposureRoute(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearNoteList(): void;
-    getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-    setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+    clearNote(): void;
+    getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+    setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
     addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
     serializeBinary(): Uint8Array;
@@ -382,15 +382,15 @@ export namespace AllergyIntolerance {
   export namespace Reaction {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       substance?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      manifestationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      manifestation: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       description?: proto_r4_core_datatypes_pb.String.AsObject,
       onset?: proto_r4_core_datatypes_pb.DateTime.AsObject,
       severity?: AllergyIntolerance.Reaction.SeverityCode.AsObject,
       exposureRoute?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+      note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
     }
 
     export class SeverityCode extends jspb.Message {
@@ -402,9 +402,9 @@ export namespace AllergyIntolerance {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -421,7 +421,7 @@ export namespace AllergyIntolerance {
       export type AsObject = {
         value: proto_r4_core_codes_pb.AllergyIntoleranceSeverityCode.ValueMap[keyof proto_r4_core_codes_pb.AllergyIntoleranceSeverityCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }

@@ -34,24 +34,24 @@ export class Task extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasInstantiatesCanonical(): boolean;
@@ -64,9 +64,9 @@ export class Task extends jspb.Message {
   getInstantiatesUri(): proto_r4_core_datatypes_pb.Uri | undefined;
   setInstantiatesUri(value?: proto_r4_core_datatypes_pb.Uri): void;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasGroupIdentifier(): boolean;
@@ -74,9 +74,9 @@ export class Task extends jspb.Message {
   getGroupIdentifier(): proto_r4_core_datatypes_pb.Identifier | undefined;
   setGroupIdentifier(value?: proto_r4_core_datatypes_pb.Identifier): void;
 
-  clearPartOfList(): void;
-  getPartOfList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPartOfList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPartOf(): void;
+  getPartOf(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPartOf(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPartOf(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -149,9 +149,9 @@ export class Task extends jspb.Message {
   getRequester(): proto_r4_core_datatypes_pb.Reference | undefined;
   setRequester(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearPerformerTypeList(): void;
-  getPerformerTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setPerformerTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearPerformerType(): void;
+  getPerformerType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setPerformerType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addPerformerType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasOwner(): boolean;
@@ -174,19 +174,19 @@ export class Task extends jspb.Message {
   getReasonReference(): proto_r4_core_datatypes_pb.Reference | undefined;
   setReasonReference(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearInsuranceList(): void;
-  getInsuranceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setInsuranceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearInsurance(): void;
+  getInsurance(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setInsurance(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addInsurance(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearRelevantHistoryList(): void;
-  getRelevantHistoryList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setRelevantHistoryList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearRelevantHistory(): void;
+  getRelevantHistory(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setRelevantHistory(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addRelevantHistory(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasRestriction(): boolean;
@@ -194,14 +194,14 @@ export class Task extends jspb.Message {
   getRestriction(): Task.Restriction | undefined;
   setRestriction(value?: Task.Restriction): void;
 
-  clearInputList(): void;
-  getInputList(): Array<Task.Parameter>;
-  setInputList(value: Array<Task.Parameter>): void;
+  clearInput(): void;
+  getInput(): Array<Task.Parameter>;
+  setInput(value: Array<Task.Parameter>): void;
   addInput(value?: Task.Parameter, index?: number): Task.Parameter;
 
-  clearOutputList(): void;
-  getOutputList(): Array<Task.Output>;
-  setOutputList(value: Array<Task.Output>): void;
+  clearOutput(): void;
+  getOutput(): Array<Task.Output>;
+  setOutput(value: Array<Task.Output>): void;
   addOutput(value?: Task.Output, index?: number): Task.Output;
 
   serializeBinary(): Uint8Array;
@@ -221,15 +221,15 @@ export namespace Task {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     instantiatesCanonical?: proto_r4_core_datatypes_pb.Canonical.AsObject,
     instantiatesUri?: proto_r4_core_datatypes_pb.Uri.AsObject,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     groupIdentifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
-    partOfList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    partOf: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: Task.StatusCode.AsObject,
     statusReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     businessStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -244,17 +244,17 @@ export namespace Task {
     authoredOn?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     lastModified?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     requester?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    performerTypeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    performerType: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     owner?: proto_r4_core_datatypes_pb.Reference.AsObject,
     location?: proto_r4_core_datatypes_pb.Reference.AsObject,
     reasonCode?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     reasonReference?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    insuranceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    relevantHistoryList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    insurance: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    relevantHistory: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     restriction?: Task.Restriction.AsObject,
-    inputList: Array<Task.Parameter.AsObject>,
-    outputList: Array<Task.Output.AsObject>,
+    input: Array<Task.Parameter.AsObject>,
+    output: Array<Task.Output.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -266,9 +266,9 @@ export namespace Task {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -285,7 +285,7 @@ export namespace Task {
     export type AsObject = {
       value: proto_r4_core_codes_pb.TaskStatusCode.ValueMap[keyof proto_r4_core_codes_pb.TaskStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -298,9 +298,9 @@ export namespace Task {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -317,7 +317,7 @@ export namespace Task {
     export type AsObject = {
       value: proto_r4_core_valuesets_pb.TaskIntentValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.TaskIntentValueSet.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -330,9 +330,9 @@ export namespace Task {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -349,7 +349,7 @@ export namespace Task {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestPriorityCode.ValueMap[keyof proto_r4_core_codes_pb.RequestPriorityCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -359,14 +359,14 @@ export namespace Task {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasRepetitions(): boolean;
@@ -379,9 +379,9 @@ export namespace Task {
     getPeriod(): proto_r4_core_datatypes_pb.Period | undefined;
     setPeriod(value?: proto_r4_core_datatypes_pb.Period): void;
 
-    clearRecipientList(): void;
-    getRecipientList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setRecipientList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearRecipient(): void;
+    getRecipient(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setRecipient(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addRecipient(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     serializeBinary(): Uint8Array;
@@ -397,11 +397,11 @@ export namespace Task {
   export namespace Restriction {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       repetitions?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
       period?: proto_r4_core_datatypes_pb.Period.AsObject,
-      recipientList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      recipient: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     }
   }
 
@@ -411,14 +411,14 @@ export namespace Task {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -444,8 +444,8 @@ export namespace Task {
   export namespace Parameter {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       value?: Task.Parameter.ValueX.AsObject,
     }
@@ -828,14 +828,14 @@ export namespace Task {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -861,8 +861,8 @@ export namespace Task {
   export namespace Output {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       value?: Task.Output.ValueX.AsObject,
     }

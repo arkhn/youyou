@@ -33,24 +33,24 @@ export class Provenance extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearTargetList(): void;
-  getTargetList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setTargetList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearTarget(): void;
+  getTarget(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setTarget(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addTarget(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasOccurred(): boolean;
@@ -63,9 +63,9 @@ export class Provenance extends jspb.Message {
   getRecorded(): proto_r4_core_datatypes_pb.Instant | undefined;
   setRecorded(value?: proto_r4_core_datatypes_pb.Instant): void;
 
-  clearPolicyList(): void;
-  getPolicyList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setPolicyList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearPolicy(): void;
+  getPolicy(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setPolicy(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addPolicy(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
   hasLocation(): boolean;
@@ -73,9 +73,9 @@ export class Provenance extends jspb.Message {
   getLocation(): proto_r4_core_datatypes_pb.Reference | undefined;
   setLocation(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReasonList(): void;
-  getReasonList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReason(): void;
+  getReason(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReason(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReason(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasActivity(): boolean;
@@ -83,19 +83,19 @@ export class Provenance extends jspb.Message {
   getActivity(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setActivity(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearAgentList(): void;
-  getAgentList(): Array<Provenance.Agent>;
-  setAgentList(value: Array<Provenance.Agent>): void;
+  clearAgent(): void;
+  getAgent(): Array<Provenance.Agent>;
+  setAgent(value: Array<Provenance.Agent>): void;
   addAgent(value?: Provenance.Agent, index?: number): Provenance.Agent;
 
-  clearEntityList(): void;
-  getEntityList(): Array<Provenance.Entity>;
-  setEntityList(value: Array<Provenance.Entity>): void;
+  clearEntity(): void;
+  getEntity(): Array<Provenance.Entity>;
+  setEntity(value: Array<Provenance.Entity>): void;
   addEntity(value?: Provenance.Entity, index?: number): Provenance.Entity;
 
-  clearSignatureList(): void;
-  getSignatureList(): Array<proto_r4_core_datatypes_pb.Signature>;
-  setSignatureList(value: Array<proto_r4_core_datatypes_pb.Signature>): void;
+  clearSignature(): void;
+  getSignature(): Array<proto_r4_core_datatypes_pb.Signature>;
+  setSignature(value: Array<proto_r4_core_datatypes_pb.Signature>): void;
   addSignature(value?: proto_r4_core_datatypes_pb.Signature, index?: number): proto_r4_core_datatypes_pb.Signature;
 
   serializeBinary(): Uint8Array;
@@ -115,19 +115,19 @@ export namespace Provenance {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    targetList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    target: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     occurred?: Provenance.OccurredX.AsObject,
     recorded?: proto_r4_core_datatypes_pb.Instant.AsObject,
-    policyList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    policy: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
     location?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    reasonList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reason: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     activity?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    agentList: Array<Provenance.Agent.AsObject>,
-    entityList: Array<Provenance.Entity.AsObject>,
-    signatureList: Array<proto_r4_core_datatypes_pb.Signature.AsObject>,
+    agent: Array<Provenance.Agent.AsObject>,
+    entity: Array<Provenance.Entity.AsObject>,
+    signature: Array<proto_r4_core_datatypes_pb.Signature.AsObject>,
   }
 
   export class OccurredX extends jspb.Message {
@@ -171,14 +171,14 @@ export namespace Provenance {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -186,9 +186,9 @@ export namespace Provenance {
     getType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearRoleList(): void;
-    getRoleList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setRoleList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearRole(): void;
+    getRole(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setRole(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addRole(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasWho(): boolean;
@@ -214,10 +214,10 @@ export namespace Provenance {
   export namespace Agent {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      roleList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      role: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       who?: proto_r4_core_datatypes_pb.Reference.AsObject,
       onBehalfOf?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
@@ -229,14 +229,14 @@ export namespace Provenance {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasRole(): boolean;
@@ -249,9 +249,9 @@ export namespace Provenance {
     getWhat(): proto_r4_core_datatypes_pb.Reference | undefined;
     setWhat(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-    clearAgentList(): void;
-    getAgentList(): Array<Provenance.Agent>;
-    setAgentList(value: Array<Provenance.Agent>): void;
+    clearAgent(): void;
+    getAgent(): Array<Provenance.Agent>;
+    setAgent(value: Array<Provenance.Agent>): void;
     addAgent(value?: Provenance.Agent, index?: number): Provenance.Agent;
 
     serializeBinary(): Uint8Array;
@@ -267,11 +267,11 @@ export namespace Provenance {
   export namespace Entity {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       role?: Provenance.Entity.RoleCode.AsObject,
       what?: proto_r4_core_datatypes_pb.Reference.AsObject,
-      agentList: Array<Provenance.Agent.AsObject>,
+      agent: Array<Provenance.Agent.AsObject>,
     }
 
     export class RoleCode extends jspb.Message {
@@ -283,9 +283,9 @@ export namespace Provenance {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -302,7 +302,7 @@ export namespace Provenance {
       export type AsObject = {
         value: proto_r4_core_codes_pb.ProvenanceEntityRoleCode.ValueMap[keyof proto_r4_core_codes_pb.ProvenanceEntityRoleCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }

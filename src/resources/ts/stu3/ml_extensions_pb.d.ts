@@ -11,9 +11,9 @@ export class EventLabel extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasPatient(): boolean;
@@ -36,9 +36,9 @@ export class EventLabel extends jspb.Message {
   getSource(): proto_stu3_datatypes_pb.Reference | undefined;
   setSource(value?: proto_stu3_datatypes_pb.Reference): void;
 
-  clearLabelList(): void;
-  getLabelList(): Array<EventLabel.Label>;
-  setLabelList(value: Array<EventLabel.Label>): void;
+  clearLabel(): void;
+  getLabel(): Array<EventLabel.Label>;
+  setLabel(value: Array<EventLabel.Label>): void;
   addLabel(value?: EventLabel.Label, index?: number): EventLabel.Label;
 
   serializeBinary(): Uint8Array;
@@ -54,12 +54,12 @@ export class EventLabel extends jspb.Message {
 export namespace EventLabel {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     patient?: proto_stu3_datatypes_pb.Reference.AsObject,
     type?: proto_stu3_datatypes_pb.Coding.AsObject,
     eventTime?: proto_stu3_datatypes_pb.DateTime.AsObject,
     source?: proto_stu3_datatypes_pb.Reference.AsObject,
-    labelList: Array<EventLabel.Label.AsObject>,
+    label: Array<EventLabel.Label.AsObject>,
   }
 
   export class Label extends jspb.Message {

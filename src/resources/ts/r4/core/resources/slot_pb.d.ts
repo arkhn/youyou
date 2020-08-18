@@ -33,39 +33,39 @@ export class Slot extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearServiceCategoryList(): void;
-  getServiceCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setServiceCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearServiceCategory(): void;
+  getServiceCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setServiceCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addServiceCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearServiceTypeList(): void;
-  getServiceTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setServiceTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearServiceType(): void;
+  getServiceType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setServiceType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addServiceType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearSpecialtyList(): void;
-  getSpecialtyList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setSpecialtyList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearSpecialty(): void;
+  getSpecialty(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setSpecialty(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addSpecialty(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasAppointmentType(): boolean;
@@ -120,13 +120,13 @@ export namespace Slot {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    serviceCategoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    serviceTypeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    specialtyList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    serviceCategory: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    serviceType: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    specialty: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     appointmentType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     schedule?: proto_r4_core_datatypes_pb.Reference.AsObject,
     status?: Slot.StatusCode.AsObject,
@@ -145,9 +145,9 @@ export namespace Slot {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -164,7 +164,7 @@ export namespace Slot {
     export type AsObject = {
       value: proto_r4_core_codes_pb.SlotStatusCode.ValueMap[keyof proto_r4_core_codes_pb.SlotStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 }

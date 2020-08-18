@@ -33,39 +33,39 @@ export class NutritionOrder extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearInstantiatesCanonicalList(): void;
-  getInstantiatesCanonicalList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-  setInstantiatesCanonicalList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+  clearInstantiatesCanonical(): void;
+  getInstantiatesCanonical(): Array<proto_r4_core_datatypes_pb.Canonical>;
+  setInstantiatesCanonical(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
   addInstantiatesCanonical(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
-  clearInstantiatesUriList(): void;
-  getInstantiatesUriList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setInstantiatesUriList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearInstantiatesUri(): void;
+  getInstantiatesUri(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setInstantiatesUri(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addInstantiatesUri(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
-  clearInstantiatesList(): void;
-  getInstantiatesList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setInstantiatesList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearInstantiates(): void;
+  getInstantiates(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setInstantiates(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addInstantiates(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
   hasStatus(): boolean;
@@ -98,19 +98,19 @@ export class NutritionOrder extends jspb.Message {
   getOrderer(): proto_r4_core_datatypes_pb.Reference | undefined;
   setOrderer(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearAllergyIntoleranceList(): void;
-  getAllergyIntoleranceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setAllergyIntoleranceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearAllergyIntolerance(): void;
+  getAllergyIntolerance(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setAllergyIntolerance(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addAllergyIntolerance(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearFoodPreferenceModifierList(): void;
-  getFoodPreferenceModifierList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setFoodPreferenceModifierList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearFoodPreferenceModifier(): void;
+  getFoodPreferenceModifier(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setFoodPreferenceModifier(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addFoodPreferenceModifier(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearExcludeFoodModifierList(): void;
-  getExcludeFoodModifierList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setExcludeFoodModifierList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearExcludeFoodModifier(): void;
+  getExcludeFoodModifier(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setExcludeFoodModifier(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addExcludeFoodModifier(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasOralDiet(): boolean;
@@ -118,9 +118,9 @@ export class NutritionOrder extends jspb.Message {
   getOralDiet(): NutritionOrder.OralDiet | undefined;
   setOralDiet(value?: NutritionOrder.OralDiet): void;
 
-  clearSupplementList(): void;
-  getSupplementList(): Array<NutritionOrder.Supplement>;
-  setSupplementList(value: Array<NutritionOrder.Supplement>): void;
+  clearSupplement(): void;
+  getSupplement(): Array<NutritionOrder.Supplement>;
+  setSupplement(value: Array<NutritionOrder.Supplement>): void;
   addSupplement(value?: NutritionOrder.Supplement, index?: number): NutritionOrder.Supplement;
 
   hasEnteralFormula(): boolean;
@@ -128,9 +128,9 @@ export class NutritionOrder extends jspb.Message {
   getEnteralFormula(): NutritionOrder.EnteralFormula | undefined;
   setEnteralFormula(value?: NutritionOrder.EnteralFormula): void;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   serializeBinary(): Uint8Array;
@@ -150,26 +150,26 @@ export namespace NutritionOrder {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    instantiatesCanonicalList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
-    instantiatesUriList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
-    instantiatesList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    instantiatesCanonical: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+    instantiatesUri: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    instantiates: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
     status?: NutritionOrder.StatusCode.AsObject,
     intent?: NutritionOrder.IntentCode.AsObject,
     patient?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     dateTime?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     orderer?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    allergyIntoleranceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    foodPreferenceModifierList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    excludeFoodModifierList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    allergyIntolerance: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    foodPreferenceModifier: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    excludeFoodModifier: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     oralDiet?: NutritionOrder.OralDiet.AsObject,
-    supplementList: Array<NutritionOrder.Supplement.AsObject>,
+    supplement: Array<NutritionOrder.Supplement.AsObject>,
     enteralFormula?: NutritionOrder.EnteralFormula.AsObject,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -181,9 +181,9 @@ export namespace NutritionOrder {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -200,7 +200,7 @@ export namespace NutritionOrder {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestStatusCode.ValueMap[keyof proto_r4_core_codes_pb.RequestStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -213,9 +213,9 @@ export namespace NutritionOrder {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -232,7 +232,7 @@ export namespace NutritionOrder {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestIntentCode.ValueMap[keyof proto_r4_core_codes_pb.RequestIntentCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -242,39 +242,39 @@ export namespace NutritionOrder {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearTypeList(): void;
-    getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearType(): void;
+    getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearScheduleList(): void;
-    getScheduleList(): Array<proto_r4_core_datatypes_pb.Timing>;
-    setScheduleList(value: Array<proto_r4_core_datatypes_pb.Timing>): void;
+    clearSchedule(): void;
+    getSchedule(): Array<proto_r4_core_datatypes_pb.Timing>;
+    setSchedule(value: Array<proto_r4_core_datatypes_pb.Timing>): void;
     addSchedule(value?: proto_r4_core_datatypes_pb.Timing, index?: number): proto_r4_core_datatypes_pb.Timing;
 
-    clearNutrientList(): void;
-    getNutrientList(): Array<NutritionOrder.OralDiet.Nutrient>;
-    setNutrientList(value: Array<NutritionOrder.OralDiet.Nutrient>): void;
+    clearNutrient(): void;
+    getNutrient(): Array<NutritionOrder.OralDiet.Nutrient>;
+    setNutrient(value: Array<NutritionOrder.OralDiet.Nutrient>): void;
     addNutrient(value?: NutritionOrder.OralDiet.Nutrient, index?: number): NutritionOrder.OralDiet.Nutrient;
 
-    clearTextureList(): void;
-    getTextureList(): Array<NutritionOrder.OralDiet.Texture>;
-    setTextureList(value: Array<NutritionOrder.OralDiet.Texture>): void;
+    clearTexture(): void;
+    getTexture(): Array<NutritionOrder.OralDiet.Texture>;
+    setTexture(value: Array<NutritionOrder.OralDiet.Texture>): void;
     addTexture(value?: NutritionOrder.OralDiet.Texture, index?: number): NutritionOrder.OralDiet.Texture;
 
-    clearFluidConsistencyTypeList(): void;
-    getFluidConsistencyTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setFluidConsistencyTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearFluidConsistencyType(): void;
+    getFluidConsistencyType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setFluidConsistencyType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addFluidConsistencyType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasInstruction(): boolean;
@@ -295,13 +295,13 @@ export namespace NutritionOrder {
   export namespace OralDiet {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      scheduleList: Array<proto_r4_core_datatypes_pb.Timing.AsObject>,
-      nutrientList: Array<NutritionOrder.OralDiet.Nutrient.AsObject>,
-      textureList: Array<NutritionOrder.OralDiet.Texture.AsObject>,
-      fluidConsistencyTypeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      schedule: Array<proto_r4_core_datatypes_pb.Timing.AsObject>,
+      nutrient: Array<NutritionOrder.OralDiet.Nutrient.AsObject>,
+      texture: Array<NutritionOrder.OralDiet.Texture.AsObject>,
+      fluidConsistencyType: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       instruction?: proto_r4_core_datatypes_pb.String.AsObject,
     }
 
@@ -311,14 +311,14 @@ export namespace NutritionOrder {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasModifier(): boolean;
@@ -344,8 +344,8 @@ export namespace NutritionOrder {
     export namespace Nutrient {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         modifier?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         amount?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       }
@@ -357,14 +357,14 @@ export namespace NutritionOrder {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasModifier(): boolean;
@@ -390,8 +390,8 @@ export namespace NutritionOrder {
     export namespace Texture {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         modifier?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         foodType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       }
@@ -404,14 +404,14 @@ export namespace NutritionOrder {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -424,9 +424,9 @@ export namespace NutritionOrder {
     getProductName(): proto_r4_core_datatypes_pb.String | undefined;
     setProductName(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearScheduleList(): void;
-    getScheduleList(): Array<proto_r4_core_datatypes_pb.Timing>;
-    setScheduleList(value: Array<proto_r4_core_datatypes_pb.Timing>): void;
+    clearSchedule(): void;
+    getSchedule(): Array<proto_r4_core_datatypes_pb.Timing>;
+    setSchedule(value: Array<proto_r4_core_datatypes_pb.Timing>): void;
     addSchedule(value?: proto_r4_core_datatypes_pb.Timing, index?: number): proto_r4_core_datatypes_pb.Timing;
 
     hasQuantity(): boolean;
@@ -452,11 +452,11 @@ export namespace NutritionOrder {
   export namespace Supplement {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       productName?: proto_r4_core_datatypes_pb.String.AsObject,
-      scheduleList: Array<proto_r4_core_datatypes_pb.Timing.AsObject>,
+      schedule: Array<proto_r4_core_datatypes_pb.Timing.AsObject>,
       quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       instruction?: proto_r4_core_datatypes_pb.String.AsObject,
     }
@@ -468,14 +468,14 @@ export namespace NutritionOrder {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasBaseFormulaType(): boolean;
@@ -508,9 +508,9 @@ export namespace NutritionOrder {
     getRouteofAdministration(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setRouteofAdministration(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearAdministrationList(): void;
-    getAdministrationList(): Array<NutritionOrder.EnteralFormula.Administration>;
-    setAdministrationList(value: Array<NutritionOrder.EnteralFormula.Administration>): void;
+    clearAdministration(): void;
+    getAdministration(): Array<NutritionOrder.EnteralFormula.Administration>;
+    setAdministration(value: Array<NutritionOrder.EnteralFormula.Administration>): void;
     addAdministration(value?: NutritionOrder.EnteralFormula.Administration, index?: number): NutritionOrder.EnteralFormula.Administration;
 
     hasMaxVolumeToDeliver(): boolean;
@@ -536,15 +536,15 @@ export namespace NutritionOrder {
   export namespace EnteralFormula {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       baseFormulaType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       baseFormulaProductName?: proto_r4_core_datatypes_pb.String.AsObject,
       additiveType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       additiveProductName?: proto_r4_core_datatypes_pb.String.AsObject,
       caloricDensity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       routeofAdministration?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      administrationList: Array<NutritionOrder.EnteralFormula.Administration.AsObject>,
+      administration: Array<NutritionOrder.EnteralFormula.Administration.AsObject>,
       maxVolumeToDeliver?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       administrationInstruction?: proto_r4_core_datatypes_pb.String.AsObject,
     }
@@ -555,14 +555,14 @@ export namespace NutritionOrder {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasSchedule(): boolean;
@@ -593,8 +593,8 @@ export namespace NutritionOrder {
     export namespace Administration {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         schedule?: proto_r4_core_datatypes_pb.Timing.AsObject,
         quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
         rate?: NutritionOrder.EnteralFormula.Administration.RateX.AsObject,

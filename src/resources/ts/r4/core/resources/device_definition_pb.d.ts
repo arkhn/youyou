@@ -33,29 +33,29 @@ export class DeviceDefinition extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearUdiDeviceIdentifierList(): void;
-  getUdiDeviceIdentifierList(): Array<DeviceDefinition.UdiDeviceIdentifier>;
-  setUdiDeviceIdentifierList(value: Array<DeviceDefinition.UdiDeviceIdentifier>): void;
+  clearUdiDeviceIdentifier(): void;
+  getUdiDeviceIdentifier(): Array<DeviceDefinition.UdiDeviceIdentifier>;
+  setUdiDeviceIdentifier(value: Array<DeviceDefinition.UdiDeviceIdentifier>): void;
   addUdiDeviceIdentifier(value?: DeviceDefinition.UdiDeviceIdentifier, index?: number): DeviceDefinition.UdiDeviceIdentifier;
 
   hasManufacturer(): boolean;
@@ -63,9 +63,9 @@ export class DeviceDefinition extends jspb.Message {
   getManufacturer(): DeviceDefinition.ManufacturerX | undefined;
   setManufacturer(value?: DeviceDefinition.ManufacturerX): void;
 
-  clearDeviceNameList(): void;
-  getDeviceNameList(): Array<DeviceDefinition.DeviceName>;
-  setDeviceNameList(value: Array<DeviceDefinition.DeviceName>): void;
+  clearDeviceName(): void;
+  getDeviceName(): Array<DeviceDefinition.DeviceName>;
+  setDeviceName(value: Array<DeviceDefinition.DeviceName>): void;
   addDeviceName(value?: DeviceDefinition.DeviceName, index?: number): DeviceDefinition.DeviceName;
 
   hasModelNumber(): boolean;
@@ -78,24 +78,24 @@ export class DeviceDefinition extends jspb.Message {
   getType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearSpecializationList(): void;
-  getSpecializationList(): Array<DeviceDefinition.Specialization>;
-  setSpecializationList(value: Array<DeviceDefinition.Specialization>): void;
+  clearSpecialization(): void;
+  getSpecialization(): Array<DeviceDefinition.Specialization>;
+  setSpecialization(value: Array<DeviceDefinition.Specialization>): void;
   addSpecialization(value?: DeviceDefinition.Specialization, index?: number): DeviceDefinition.Specialization;
 
-  clearVersionList(): void;
-  getVersionList(): Array<proto_r4_core_datatypes_pb.String>;
-  setVersionList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+  clearVersion(): void;
+  getVersion(): Array<proto_r4_core_datatypes_pb.String>;
+  setVersion(value: Array<proto_r4_core_datatypes_pb.String>): void;
   addVersion(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
-  clearSafetyList(): void;
-  getSafetyList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setSafetyList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearSafety(): void;
+  getSafety(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setSafety(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addSafety(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearShelfLifeStorageList(): void;
-  getShelfLifeStorageList(): Array<proto_r4_core_datatypes_pb.ProductShelfLife>;
-  setShelfLifeStorageList(value: Array<proto_r4_core_datatypes_pb.ProductShelfLife>): void;
+  clearShelfLifeStorage(): void;
+  getShelfLifeStorage(): Array<proto_r4_core_datatypes_pb.ProductShelfLife>;
+  setShelfLifeStorage(value: Array<proto_r4_core_datatypes_pb.ProductShelfLife>): void;
   addShelfLifeStorage(value?: proto_r4_core_datatypes_pb.ProductShelfLife, index?: number): proto_r4_core_datatypes_pb.ProductShelfLife;
 
   hasPhysicalCharacteristics(): boolean;
@@ -103,19 +103,19 @@ export class DeviceDefinition extends jspb.Message {
   getPhysicalCharacteristics(): proto_r4_core_datatypes_pb.ProdCharacteristic | undefined;
   setPhysicalCharacteristics(value?: proto_r4_core_datatypes_pb.ProdCharacteristic): void;
 
-  clearLanguageCodeList(): void;
-  getLanguageCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setLanguageCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearLanguageCode(): void;
+  getLanguageCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setLanguageCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addLanguageCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearCapabilityList(): void;
-  getCapabilityList(): Array<DeviceDefinition.Capability>;
-  setCapabilityList(value: Array<DeviceDefinition.Capability>): void;
+  clearCapability(): void;
+  getCapability(): Array<DeviceDefinition.Capability>;
+  setCapability(value: Array<DeviceDefinition.Capability>): void;
   addCapability(value?: DeviceDefinition.Capability, index?: number): DeviceDefinition.Capability;
 
-  clearPropertyList(): void;
-  getPropertyList(): Array<DeviceDefinition.Property>;
-  setPropertyList(value: Array<DeviceDefinition.Property>): void;
+  clearProperty(): void;
+  getProperty(): Array<DeviceDefinition.Property>;
+  setProperty(value: Array<DeviceDefinition.Property>): void;
   addProperty(value?: DeviceDefinition.Property, index?: number): DeviceDefinition.Property;
 
   hasOwner(): boolean;
@@ -123,9 +123,9 @@ export class DeviceDefinition extends jspb.Message {
   getOwner(): proto_r4_core_datatypes_pb.Reference | undefined;
   setOwner(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearContactList(): void;
-  getContactList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setContactList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearContact(): void;
+  getContact(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setContact(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addContact(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
   hasUrl(): boolean;
@@ -138,9 +138,9 @@ export class DeviceDefinition extends jspb.Message {
   getOnlineInformation(): proto_r4_core_datatypes_pb.Uri | undefined;
   setOnlineInformation(value?: proto_r4_core_datatypes_pb.Uri): void;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   hasQuantity(): boolean;
@@ -153,9 +153,9 @@ export class DeviceDefinition extends jspb.Message {
   getParentDevice(): proto_r4_core_datatypes_pb.Reference | undefined;
   setParentDevice(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearMaterialList(): void;
-  getMaterialList(): Array<DeviceDefinition.Material>;
-  setMaterialList(value: Array<DeviceDefinition.Material>): void;
+  clearMaterial(): void;
+  getMaterial(): Array<DeviceDefinition.Material>;
+  setMaterial(value: Array<DeviceDefinition.Material>): void;
   addMaterial(value?: DeviceDefinition.Material, index?: number): DeviceDefinition.Material;
 
   serializeBinary(): Uint8Array;
@@ -175,31 +175,31 @@ export namespace DeviceDefinition {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    udiDeviceIdentifierList: Array<DeviceDefinition.UdiDeviceIdentifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    udiDeviceIdentifier: Array<DeviceDefinition.UdiDeviceIdentifier.AsObject>,
     manufacturer?: DeviceDefinition.ManufacturerX.AsObject,
-    deviceNameList: Array<DeviceDefinition.DeviceName.AsObject>,
+    deviceName: Array<DeviceDefinition.DeviceName.AsObject>,
     modelNumber?: proto_r4_core_datatypes_pb.String.AsObject,
     type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    specializationList: Array<DeviceDefinition.Specialization.AsObject>,
-    versionList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
-    safetyList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    shelfLifeStorageList: Array<proto_r4_core_datatypes_pb.ProductShelfLife.AsObject>,
+    specialization: Array<DeviceDefinition.Specialization.AsObject>,
+    version: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+    safety: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    shelfLifeStorage: Array<proto_r4_core_datatypes_pb.ProductShelfLife.AsObject>,
     physicalCharacteristics?: proto_r4_core_datatypes_pb.ProdCharacteristic.AsObject,
-    languageCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    capabilityList: Array<DeviceDefinition.Capability.AsObject>,
-    propertyList: Array<DeviceDefinition.Property.AsObject>,
+    languageCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    capability: Array<DeviceDefinition.Capability.AsObject>,
+    property: Array<DeviceDefinition.Property.AsObject>,
     owner?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    contactList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    contact: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
     url?: proto_r4_core_datatypes_pb.Uri.AsObject,
     onlineInformation?: proto_r4_core_datatypes_pb.Uri.AsObject,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
     quantity?: proto_r4_core_datatypes_pb.Quantity.AsObject,
     parentDevice?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    materialList: Array<DeviceDefinition.Material.AsObject>,
+    material: Array<DeviceDefinition.Material.AsObject>,
   }
 
   export class UdiDeviceIdentifier extends jspb.Message {
@@ -208,14 +208,14 @@ export namespace DeviceDefinition {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasDeviceIdentifier(): boolean;
@@ -246,8 +246,8 @@ export namespace DeviceDefinition {
   export namespace UdiDeviceIdentifier {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       deviceIdentifier?: proto_r4_core_datatypes_pb.String.AsObject,
       issuer?: proto_r4_core_datatypes_pb.Uri.AsObject,
       jurisdiction?: proto_r4_core_datatypes_pb.Uri.AsObject,
@@ -295,14 +295,14 @@ export namespace DeviceDefinition {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasName(): boolean;
@@ -328,8 +328,8 @@ export namespace DeviceDefinition {
   export namespace DeviceName {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       name?: proto_r4_core_datatypes_pb.String.AsObject,
       type?: DeviceDefinition.DeviceName.TypeCode.AsObject,
     }
@@ -343,9 +343,9 @@ export namespace DeviceDefinition {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -362,7 +362,7 @@ export namespace DeviceDefinition {
       export type AsObject = {
         value: proto_r4_core_codes_pb.DeviceNameTypeCode.ValueMap[keyof proto_r4_core_codes_pb.DeviceNameTypeCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -373,14 +373,14 @@ export namespace DeviceDefinition {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSystemType(): boolean;
@@ -406,8 +406,8 @@ export namespace DeviceDefinition {
   export namespace Specialization {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       systemType?: proto_r4_core_datatypes_pb.String.AsObject,
       version?: proto_r4_core_datatypes_pb.String.AsObject,
     }
@@ -419,14 +419,14 @@ export namespace DeviceDefinition {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -434,9 +434,9 @@ export namespace DeviceDefinition {
     getType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearDescriptionList(): void;
-    getDescriptionList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setDescriptionList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearDescription(): void;
+    getDescription(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setDescription(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addDescription(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     serializeBinary(): Uint8Array;
@@ -452,10 +452,10 @@ export namespace DeviceDefinition {
   export namespace Capability {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      descriptionList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      description: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     }
   }
 
@@ -465,14 +465,14 @@ export namespace DeviceDefinition {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -480,14 +480,14 @@ export namespace DeviceDefinition {
     getType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearValueQuantityList(): void;
-    getValueQuantityList(): Array<proto_r4_core_datatypes_pb.Quantity>;
-    setValueQuantityList(value: Array<proto_r4_core_datatypes_pb.Quantity>): void;
+    clearValueQuantity(): void;
+    getValueQuantity(): Array<proto_r4_core_datatypes_pb.Quantity>;
+    setValueQuantity(value: Array<proto_r4_core_datatypes_pb.Quantity>): void;
     addValueQuantity(value?: proto_r4_core_datatypes_pb.Quantity, index?: number): proto_r4_core_datatypes_pb.Quantity;
 
-    clearValueCodeList(): void;
-    getValueCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setValueCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearValueCode(): void;
+    getValueCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setValueCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addValueCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     serializeBinary(): Uint8Array;
@@ -503,11 +503,11 @@ export namespace DeviceDefinition {
   export namespace Property {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      valueQuantityList: Array<proto_r4_core_datatypes_pb.Quantity.AsObject>,
-      valueCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      valueQuantity: Array<proto_r4_core_datatypes_pb.Quantity.AsObject>,
+      valueCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     }
   }
 
@@ -517,14 +517,14 @@ export namespace DeviceDefinition {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSubstance(): boolean;
@@ -555,8 +555,8 @@ export namespace DeviceDefinition {
   export namespace Material {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       substance?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       alternate?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       allergenicIndicator?: proto_r4_core_datatypes_pb.Boolean.AsObject,

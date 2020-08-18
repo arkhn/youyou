@@ -35,44 +35,44 @@ export class USCoreProcedureProfile extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearInstantiatesCanonicalList(): void;
-  getInstantiatesCanonicalList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-  setInstantiatesCanonicalList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+  clearInstantiatesCanonical(): void;
+  getInstantiatesCanonical(): Array<proto_r4_core_datatypes_pb.Canonical>;
+  setInstantiatesCanonical(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
   addInstantiatesCanonical(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
-  clearInstantiatesUriList(): void;
-  getInstantiatesUriList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setInstantiatesUriList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearInstantiatesUri(): void;
+  getInstantiatesUri(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setInstantiatesUri(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addInstantiatesUri(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearPartOfList(): void;
-  getPartOfList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPartOfList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPartOf(): void;
+  getPartOf(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPartOf(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPartOf(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -120,9 +120,9 @@ export class USCoreProcedureProfile extends jspb.Message {
   getAsserter(): proto_r4_core_datatypes_pb.Reference | undefined;
   setAsserter(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<USCoreProcedureProfile.Performer>;
-  setPerformerList(value: Array<USCoreProcedureProfile.Performer>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<USCoreProcedureProfile.Performer>;
+  setPerformer(value: Array<USCoreProcedureProfile.Performer>): void;
   addPerformer(value?: USCoreProcedureProfile.Performer, index?: number): USCoreProcedureProfile.Performer;
 
   hasLocation(): boolean;
@@ -130,19 +130,19 @@ export class USCoreProcedureProfile extends jspb.Message {
   getLocation(): proto_r4_core_datatypes_pb.Reference | undefined;
   setLocation(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearBodySiteList(): void;
-  getBodySiteList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setBodySiteList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearBodySite(): void;
+  getBodySite(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setBodySite(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addBodySite(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasOutcome(): boolean;
@@ -150,44 +150,44 @@ export class USCoreProcedureProfile extends jspb.Message {
   getOutcome(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setOutcome(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearReportList(): void;
-  getReportList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReportList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReport(): void;
+  getReport(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReport(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReport(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearComplicationList(): void;
-  getComplicationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setComplicationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearComplication(): void;
+  getComplication(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setComplication(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addComplication(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearComplicationDetailList(): void;
-  getComplicationDetailList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setComplicationDetailList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearComplicationDetail(): void;
+  getComplicationDetail(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setComplicationDetail(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addComplicationDetail(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearFollowUpList(): void;
-  getFollowUpList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setFollowUpList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearFollowUp(): void;
+  getFollowUp(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setFollowUp(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addFollowUp(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearFocalDeviceList(): void;
-  getFocalDeviceList(): Array<USCoreProcedureProfile.FocalDevice>;
-  setFocalDeviceList(value: Array<USCoreProcedureProfile.FocalDevice>): void;
+  clearFocalDevice(): void;
+  getFocalDevice(): Array<USCoreProcedureProfile.FocalDevice>;
+  setFocalDevice(value: Array<USCoreProcedureProfile.FocalDevice>): void;
   addFocalDevice(value?: USCoreProcedureProfile.FocalDevice, index?: number): USCoreProcedureProfile.FocalDevice;
 
-  clearUsedReferenceList(): void;
-  getUsedReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setUsedReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearUsedReference(): void;
+  getUsedReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setUsedReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addUsedReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearUsedCodeList(): void;
-  getUsedCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setUsedCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearUsedCode(): void;
+  getUsedCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setUsedCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addUsedCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   serializeBinary(): Uint8Array;
@@ -207,14 +207,14 @@ export namespace USCoreProcedureProfile {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    instantiatesCanonicalList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
-    instantiatesUriList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    partOfList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    instantiatesCanonical: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+    instantiatesUri: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    partOf: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: USCoreProcedureProfile.StatusCode.AsObject,
     statusReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     category?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -224,20 +224,20 @@ export namespace USCoreProcedureProfile {
     performed?: USCoreProcedureProfile.PerformedX.AsObject,
     recorder?: proto_r4_core_datatypes_pb.Reference.AsObject,
     asserter?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    performerList: Array<USCoreProcedureProfile.Performer.AsObject>,
+    performer: Array<USCoreProcedureProfile.Performer.AsObject>,
     location?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    bodySiteList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    bodySite: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     outcome?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    reportList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    complicationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    complicationDetailList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    followUpList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    focalDeviceList: Array<USCoreProcedureProfile.FocalDevice.AsObject>,
-    usedReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    usedCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    report: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    complication: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    complicationDetail: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    followUp: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    focalDevice: Array<USCoreProcedureProfile.FocalDevice.AsObject>,
+    usedReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    usedCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -249,9 +249,9 @@ export namespace USCoreProcedureProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -268,7 +268,7 @@ export namespace USCoreProcedureProfile {
     export type AsObject = {
       value: proto_r4_core_codes_pb.EventStatusCode.ValueMap[keyof proto_r4_core_codes_pb.EventStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -313,14 +313,14 @@ export namespace USCoreProcedureProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasFunction(): boolean;
@@ -351,8 +351,8 @@ export namespace USCoreProcedureProfile {
   export namespace Performer {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       pb_function?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       actor?: proto_r4_core_datatypes_pb.Reference.AsObject,
       onBehalfOf?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -365,14 +365,14 @@ export namespace USCoreProcedureProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasAction(): boolean;
@@ -398,8 +398,8 @@ export namespace USCoreProcedureProfile {
   export namespace FocalDevice {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       action?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       manipulated?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
@@ -432,24 +432,24 @@ export class USCorePractitionerProfile extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasActive(): boolean;
@@ -457,19 +457,19 @@ export class USCorePractitionerProfile extends jspb.Message {
   getActive(): proto_r4_core_datatypes_pb.Boolean | undefined;
   setActive(value?: proto_r4_core_datatypes_pb.Boolean): void;
 
-  clearNameList(): void;
-  getNameList(): Array<proto_r4_core_datatypes_pb.HumanName>;
-  setNameList(value: Array<proto_r4_core_datatypes_pb.HumanName>): void;
+  clearName(): void;
+  getName(): Array<proto_r4_core_datatypes_pb.HumanName>;
+  setName(value: Array<proto_r4_core_datatypes_pb.HumanName>): void;
   addName(value?: proto_r4_core_datatypes_pb.HumanName, index?: number): proto_r4_core_datatypes_pb.HumanName;
 
-  clearTelecomList(): void;
-  getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearTelecom(): void;
+  getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
-  clearAddressList(): void;
-  getAddressList(): Array<proto_r4_core_datatypes_pb.Address>;
-  setAddressList(value: Array<proto_r4_core_datatypes_pb.Address>): void;
+  clearAddress(): void;
+  getAddress(): Array<proto_r4_core_datatypes_pb.Address>;
+  setAddress(value: Array<proto_r4_core_datatypes_pb.Address>): void;
   addAddress(value?: proto_r4_core_datatypes_pb.Address, index?: number): proto_r4_core_datatypes_pb.Address;
 
   hasGender(): boolean;
@@ -482,19 +482,19 @@ export class USCorePractitionerProfile extends jspb.Message {
   getBirthDate(): proto_r4_core_datatypes_pb.Date | undefined;
   setBirthDate(value?: proto_r4_core_datatypes_pb.Date): void;
 
-  clearPhotoList(): void;
-  getPhotoList(): Array<proto_r4_core_datatypes_pb.Attachment>;
-  setPhotoList(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
+  clearPhoto(): void;
+  getPhoto(): Array<proto_r4_core_datatypes_pb.Attachment>;
+  setPhoto(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
   addPhoto(value?: proto_r4_core_datatypes_pb.Attachment, index?: number): proto_r4_core_datatypes_pb.Attachment;
 
-  clearQualificationList(): void;
-  getQualificationList(): Array<USCorePractitionerProfile.Qualification>;
-  setQualificationList(value: Array<USCorePractitionerProfile.Qualification>): void;
+  clearQualification(): void;
+  getQualification(): Array<USCorePractitionerProfile.Qualification>;
+  setQualification(value: Array<USCorePractitionerProfile.Qualification>): void;
   addQualification(value?: USCorePractitionerProfile.Qualification, index?: number): USCorePractitionerProfile.Qualification;
 
-  clearCommunicationList(): void;
-  getCommunicationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCommunicationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCommunication(): void;
+  getCommunication(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCommunication(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCommunication(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   serializeBinary(): Uint8Array;
@@ -514,19 +514,19 @@ export namespace USCorePractitionerProfile {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     active?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-    nameList: Array<proto_r4_core_datatypes_pb.HumanName.AsObject>,
-    telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
-    addressList: Array<proto_r4_core_datatypes_pb.Address.AsObject>,
+    name: Array<proto_r4_core_datatypes_pb.HumanName.AsObject>,
+    telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    address: Array<proto_r4_core_datatypes_pb.Address.AsObject>,
     gender?: USCorePractitionerProfile.GenderCode.AsObject,
     birthDate?: proto_r4_core_datatypes_pb.Date.AsObject,
-    photoList: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
-    qualificationList: Array<USCorePractitionerProfile.Qualification.AsObject>,
-    communicationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    photo: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
+    qualification: Array<USCorePractitionerProfile.Qualification.AsObject>,
+    communication: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
   }
 
   export class GenderCode extends jspb.Message {
@@ -538,9 +538,9 @@ export namespace USCorePractitionerProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -557,7 +557,7 @@ export namespace USCorePractitionerProfile {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AdministrativeGenderCode.ValueMap[keyof proto_r4_core_codes_pb.AdministrativeGenderCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -567,19 +567,19 @@ export namespace USCorePractitionerProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearIdentifierList(): void;
-    getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-    setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+    clearIdentifier(): void;
+    getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+    setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
     addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
     hasCode(): boolean;
@@ -610,9 +610,9 @@ export namespace USCorePractitionerProfile {
   export namespace Qualification {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       period?: proto_r4_core_datatypes_pb.Period.AsObject,
       issuer?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -646,29 +646,29 @@ export class USCoreDiagnosticReportProfileLaboratoryReporting extends jspb.Messa
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -676,9 +676,9 @@ export class USCoreDiagnosticReportProfileLaboratoryReporting extends jspb.Messa
   getStatus(): USCoreDiagnosticReportProfileLaboratoryReporting.StatusCode | undefined;
   setStatus(value?: USCoreDiagnosticReportProfileLaboratoryReporting.StatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -706,34 +706,34 @@ export class USCoreDiagnosticReportProfileLaboratoryReporting extends jspb.Messa
   getIssued(): proto_r4_core_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_r4_core_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearResultsInterpreterList(): void;
-  getResultsInterpreterList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setResultsInterpreterList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearResultsInterpreter(): void;
+  getResultsInterpreter(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setResultsInterpreter(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addResultsInterpreter(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearSpecimenList(): void;
-  getSpecimenList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSpecimenList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSpecimen(): void;
+  getSpecimen(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSpecimen(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSpecimen(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearResultList(): void;
-  getResultList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setResultList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearResult(): void;
+  getResult(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setResult(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addResult(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearImagingStudyList(): void;
-  getImagingStudyList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setImagingStudyList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearImagingStudy(): void;
+  getImagingStudy(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setImagingStudy(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addImagingStudy(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearMediaList(): void;
-  getMediaList(): Array<USCoreDiagnosticReportProfileLaboratoryReporting.Media>;
-  setMediaList(value: Array<USCoreDiagnosticReportProfileLaboratoryReporting.Media>): void;
+  clearMedia(): void;
+  getMedia(): Array<USCoreDiagnosticReportProfileLaboratoryReporting.Media>;
+  setMedia(value: Array<USCoreDiagnosticReportProfileLaboratoryReporting.Media>): void;
   addMedia(value?: USCoreDiagnosticReportProfileLaboratoryReporting.Media, index?: number): USCoreDiagnosticReportProfileLaboratoryReporting.Media;
 
   hasConclusion(): boolean;
@@ -741,14 +741,14 @@ export class USCoreDiagnosticReportProfileLaboratoryReporting extends jspb.Messa
   getConclusion(): proto_r4_core_datatypes_pb.String | undefined;
   setConclusion(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearConclusionCodeList(): void;
-  getConclusionCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setConclusionCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearConclusionCode(): void;
+  getConclusionCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setConclusionCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addConclusionCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearPresentedFormList(): void;
-  getPresentedFormList(): Array<proto_r4_core_datatypes_pb.Attachment>;
-  setPresentedFormList(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
+  clearPresentedForm(): void;
+  getPresentedForm(): Array<proto_r4_core_datatypes_pb.Attachment>;
+  setPresentedForm(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
   addPresentedForm(value?: proto_r4_core_datatypes_pb.Attachment, index?: number): proto_r4_core_datatypes_pb.Attachment;
 
   serializeBinary(): Uint8Array;
@@ -768,27 +768,27 @@ export namespace USCoreDiagnosticReportProfileLaboratoryReporting {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: USCoreDiagnosticReportProfileLaboratoryReporting.StatusCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     effective?: USCoreDiagnosticReportProfileLaboratoryReporting.EffectiveX.AsObject,
     issued?: proto_r4_core_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    resultsInterpreterList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    specimenList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    resultList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    imagingStudyList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    mediaList: Array<USCoreDiagnosticReportProfileLaboratoryReporting.Media.AsObject>,
+    performer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    resultsInterpreter: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    specimen: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    result: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    imagingStudy: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    media: Array<USCoreDiagnosticReportProfileLaboratoryReporting.Media.AsObject>,
     conclusion?: proto_r4_core_datatypes_pb.String.AsObject,
-    conclusionCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    presentedFormList: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
+    conclusionCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    presentedForm: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -800,9 +800,9 @@ export namespace USCoreDiagnosticReportProfileLaboratoryReporting {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -819,7 +819,7 @@ export namespace USCoreDiagnosticReportProfileLaboratoryReporting {
     export type AsObject = {
       value: proto_r4_core_codes_pb.DiagnosticReportStatusCode.ValueMap[keyof proto_r4_core_codes_pb.DiagnosticReportStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -864,14 +864,14 @@ export namespace USCoreDiagnosticReportProfileLaboratoryReporting {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasComment(): boolean;
@@ -897,8 +897,8 @@ export namespace USCoreDiagnosticReportProfileLaboratoryReporting {
   export namespace Media {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       comment?: proto_r4_core_datatypes_pb.String.AsObject,
       link?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
@@ -931,34 +931,34 @@ export class USCorePediatricWeightForHeightObservationProfile extends jspb.Messa
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearPartOfList(): void;
-  getPartOfList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPartOfList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPartOf(): void;
+  getPartOf(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPartOf(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPartOf(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -966,9 +966,9 @@ export class USCorePediatricWeightForHeightObservationProfile extends jspb.Messa
   getStatus(): USCorePediatricWeightForHeightObservationProfile.StatusCode | undefined;
   setStatus(value?: USCorePediatricWeightForHeightObservationProfile.StatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -981,9 +981,9 @@ export class USCorePediatricWeightForHeightObservationProfile extends jspb.Messa
   getSubject(): proto_r4_core_datatypes_pb.Reference | undefined;
   setSubject(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearFocusList(): void;
-  getFocusList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setFocusList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearFocus(): void;
+  getFocus(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setFocus(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addFocus(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasEncounter(): boolean;
@@ -1001,9 +1001,9 @@ export class USCorePediatricWeightForHeightObservationProfile extends jspb.Messa
   getIssued(): proto_r4_core_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_r4_core_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -1016,14 +1016,14 @@ export class USCorePediatricWeightForHeightObservationProfile extends jspb.Messa
   getDataAbsentReason(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setDataAbsentReason(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearInterpretationList(): void;
-  getInterpretationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setInterpretationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearInterpretation(): void;
+  getInterpretation(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setInterpretation(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addInterpretation(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   hasBodySite(): boolean;
@@ -1046,24 +1046,24 @@ export class USCorePediatricWeightForHeightObservationProfile extends jspb.Messa
   getDevice(): proto_r4_core_datatypes_pb.Reference | undefined;
   setDevice(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReferenceRangeList(): void;
-  getReferenceRangeList(): Array<USCorePediatricWeightForHeightObservationProfile.ReferenceRange>;
-  setReferenceRangeList(value: Array<USCorePediatricWeightForHeightObservationProfile.ReferenceRange>): void;
+  clearReferenceRange(): void;
+  getReferenceRange(): Array<USCorePediatricWeightForHeightObservationProfile.ReferenceRange>;
+  setReferenceRange(value: Array<USCorePediatricWeightForHeightObservationProfile.ReferenceRange>): void;
   addReferenceRange(value?: USCorePediatricWeightForHeightObservationProfile.ReferenceRange, index?: number): USCorePediatricWeightForHeightObservationProfile.ReferenceRange;
 
-  clearHasMemberList(): void;
-  getHasMemberList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setHasMemberList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearHasMember(): void;
+  getHasMember(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setHasMember(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addHasMember(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearDerivedFromList(): void;
-  getDerivedFromList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setDerivedFromList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearDerivedFrom(): void;
+  getDerivedFrom(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setDerivedFrom(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addDerivedFrom(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearComponentList(): void;
-  getComponentList(): Array<USCorePediatricWeightForHeightObservationProfile.Component>;
-  setComponentList(value: Array<USCorePediatricWeightForHeightObservationProfile.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<USCorePediatricWeightForHeightObservationProfile.Component>;
+  setComponent(value: Array<USCorePediatricWeightForHeightObservationProfile.Component>): void;
   addComponent(value?: USCorePediatricWeightForHeightObservationProfile.Component, index?: number): USCorePediatricWeightForHeightObservationProfile.Component;
 
   serializeBinary(): Uint8Array;
@@ -1083,33 +1083,33 @@ export namespace USCorePediatricWeightForHeightObservationProfile {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    partOfList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    partOf: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: USCorePediatricWeightForHeightObservationProfile.StatusCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    focusList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    focus: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     effective?: USCorePediatricWeightForHeightObservationProfile.EffectiveX.AsObject,
     issued?: proto_r4_core_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     value?: USCorePediatricWeightForHeightObservationProfile.ValueX.AsObject,
     dataAbsentReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    interpretationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    interpretation: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
     bodySite?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     method?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     specimen?: proto_r4_core_datatypes_pb.Reference.AsObject,
     device?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    referenceRangeList: Array<USCorePediatricWeightForHeightObservationProfile.ReferenceRange.AsObject>,
-    hasMemberList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    derivedFromList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    componentList: Array<USCorePediatricWeightForHeightObservationProfile.Component.AsObject>,
+    referenceRange: Array<USCorePediatricWeightForHeightObservationProfile.ReferenceRange.AsObject>,
+    hasMember: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    derivedFrom: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    component: Array<USCorePediatricWeightForHeightObservationProfile.Component.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -1121,9 +1121,9 @@ export namespace USCorePediatricWeightForHeightObservationProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -1140,7 +1140,7 @@ export namespace USCorePediatricWeightForHeightObservationProfile {
     export type AsObject = {
       value: proto_r4_core_codes_pb.ObservationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.ObservationStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -1213,14 +1213,14 @@ export namespace USCorePediatricWeightForHeightObservationProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -1238,9 +1238,9 @@ export namespace USCorePediatricWeightForHeightObservationProfile {
     getType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasAge(): boolean;
@@ -1266,12 +1266,12 @@ export namespace USCorePediatricWeightForHeightObservationProfile {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       low?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       high?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       age?: proto_r4_core_datatypes_pb.Range.AsObject,
       text?: proto_r4_core_datatypes_pb.String.AsObject,
     }
@@ -1283,14 +1283,14 @@ export namespace USCorePediatricWeightForHeightObservationProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -1308,14 +1308,14 @@ export namespace USCorePediatricWeightForHeightObservationProfile {
     getDataAbsentReason(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setDataAbsentReason(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearInterpretationList(): void;
-    getInterpretationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setInterpretationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearInterpretation(): void;
+    getInterpretation(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setInterpretation(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addInterpretation(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<USCorePediatricWeightForHeightObservationProfile.ReferenceRange>;
-    setReferenceRangeList(value: Array<USCorePediatricWeightForHeightObservationProfile.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<USCorePediatricWeightForHeightObservationProfile.ReferenceRange>;
+    setReferenceRange(value: Array<USCorePediatricWeightForHeightObservationProfile.ReferenceRange>): void;
     addReferenceRange(value?: USCorePediatricWeightForHeightObservationProfile.ReferenceRange, index?: number): USCorePediatricWeightForHeightObservationProfile.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -1331,13 +1331,13 @@ export namespace USCorePediatricWeightForHeightObservationProfile {
   export namespace Component {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       value?: USCorePediatricWeightForHeightObservationProfile.Component.ValueX.AsObject,
       dataAbsentReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      interpretationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      referenceRangeList: Array<USCorePediatricWeightForHeightObservationProfile.ReferenceRange.AsObject>,
+      interpretation: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      referenceRange: Array<USCorePediatricWeightForHeightObservationProfile.ReferenceRange.AsObject>,
     }
 
     export class ValueX extends jspb.Message {
@@ -1466,24 +1466,24 @@ export class USCoreEncounterProfile extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -1491,9 +1491,9 @@ export class USCoreEncounterProfile extends jspb.Message {
   getStatus(): USCoreEncounterProfile.StatusCode | undefined;
   setStatus(value?: USCoreEncounterProfile.StatusCode): void;
 
-  clearStatusHistoryList(): void;
-  getStatusHistoryList(): Array<USCoreEncounterProfile.StatusHistory>;
-  setStatusHistoryList(value: Array<USCoreEncounterProfile.StatusHistory>): void;
+  clearStatusHistory(): void;
+  getStatusHistory(): Array<USCoreEncounterProfile.StatusHistory>;
+  setStatusHistory(value: Array<USCoreEncounterProfile.StatusHistory>): void;
   addStatusHistory(value?: USCoreEncounterProfile.StatusHistory, index?: number): USCoreEncounterProfile.StatusHistory;
 
   hasClassValue(): boolean;
@@ -1501,14 +1501,14 @@ export class USCoreEncounterProfile extends jspb.Message {
   getClassValue(): proto_r4_core_datatypes_pb.Coding | undefined;
   setClassValue(value?: proto_r4_core_datatypes_pb.Coding): void;
 
-  clearClassHistoryList(): void;
-  getClassHistoryList(): Array<USCoreEncounterProfile.ClassHistory>;
-  setClassHistoryList(value: Array<USCoreEncounterProfile.ClassHistory>): void;
+  clearClassHistory(): void;
+  getClassHistory(): Array<USCoreEncounterProfile.ClassHistory>;
+  setClassHistory(value: Array<USCoreEncounterProfile.ClassHistory>): void;
   addClassHistory(value?: USCoreEncounterProfile.ClassHistory, index?: number): USCoreEncounterProfile.ClassHistory;
 
-  clearTypeList(): void;
-  getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearType(): void;
+  getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasServiceType(): boolean;
@@ -1526,24 +1526,24 @@ export class USCoreEncounterProfile extends jspb.Message {
   getSubject(): proto_r4_core_datatypes_pb.Reference | undefined;
   setSubject(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearEpisodeOfCareList(): void;
-  getEpisodeOfCareList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setEpisodeOfCareList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearEpisodeOfCare(): void;
+  getEpisodeOfCare(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setEpisodeOfCare(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addEpisodeOfCare(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearParticipantList(): void;
-  getParticipantList(): Array<USCoreEncounterProfile.Participant>;
-  setParticipantList(value: Array<USCoreEncounterProfile.Participant>): void;
+  clearParticipant(): void;
+  getParticipant(): Array<USCoreEncounterProfile.Participant>;
+  setParticipant(value: Array<USCoreEncounterProfile.Participant>): void;
   addParticipant(value?: USCoreEncounterProfile.Participant, index?: number): USCoreEncounterProfile.Participant;
 
-  clearAppointmentList(): void;
-  getAppointmentList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setAppointmentList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearAppointment(): void;
+  getAppointment(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setAppointment(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addAppointment(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasPeriod(): boolean;
@@ -1556,24 +1556,24 @@ export class USCoreEncounterProfile extends jspb.Message {
   getLength(): proto_r4_core_datatypes_pb.Duration | undefined;
   setLength(value?: proto_r4_core_datatypes_pb.Duration): void;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearDiagnosisList(): void;
-  getDiagnosisList(): Array<USCoreEncounterProfile.Diagnosis>;
-  setDiagnosisList(value: Array<USCoreEncounterProfile.Diagnosis>): void;
+  clearDiagnosis(): void;
+  getDiagnosis(): Array<USCoreEncounterProfile.Diagnosis>;
+  setDiagnosis(value: Array<USCoreEncounterProfile.Diagnosis>): void;
   addDiagnosis(value?: USCoreEncounterProfile.Diagnosis, index?: number): USCoreEncounterProfile.Diagnosis;
 
-  clearAccountList(): void;
-  getAccountList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setAccountList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearAccount(): void;
+  getAccount(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setAccount(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addAccount(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasHospitalization(): boolean;
@@ -1581,9 +1581,9 @@ export class USCoreEncounterProfile extends jspb.Message {
   getHospitalization(): USCoreEncounterProfile.Hospitalization | undefined;
   setHospitalization(value?: USCoreEncounterProfile.Hospitalization): void;
 
-  clearLocationList(): void;
-  getLocationList(): Array<USCoreEncounterProfile.Location>;
-  setLocationList(value: Array<USCoreEncounterProfile.Location>): void;
+  clearLocation(): void;
+  getLocation(): Array<USCoreEncounterProfile.Location>;
+  setLocation(value: Array<USCoreEncounterProfile.Location>): void;
   addLocation(value?: USCoreEncounterProfile.Location, index?: number): USCoreEncounterProfile.Location;
 
   hasServiceProvider(): boolean;
@@ -1613,30 +1613,30 @@ export namespace USCoreEncounterProfile {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: USCoreEncounterProfile.StatusCode.AsObject,
-    statusHistoryList: Array<USCoreEncounterProfile.StatusHistory.AsObject>,
+    statusHistory: Array<USCoreEncounterProfile.StatusHistory.AsObject>,
     classValue?: proto_r4_core_datatypes_pb.Coding.AsObject,
-    classHistoryList: Array<USCoreEncounterProfile.ClassHistory.AsObject>,
-    typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    classHistory: Array<USCoreEncounterProfile.ClassHistory.AsObject>,
+    type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     serviceType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     priority?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    episodeOfCareList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    participantList: Array<USCoreEncounterProfile.Participant.AsObject>,
-    appointmentList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    episodeOfCare: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    participant: Array<USCoreEncounterProfile.Participant.AsObject>,
+    appointment: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     period?: proto_r4_core_datatypes_pb.Period.AsObject,
     length?: proto_r4_core_datatypes_pb.Duration.AsObject,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    diagnosisList: Array<USCoreEncounterProfile.Diagnosis.AsObject>,
-    accountList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    diagnosis: Array<USCoreEncounterProfile.Diagnosis.AsObject>,
+    account: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     hospitalization?: USCoreEncounterProfile.Hospitalization.AsObject,
-    locationList: Array<USCoreEncounterProfile.Location.AsObject>,
+    location: Array<USCoreEncounterProfile.Location.AsObject>,
     serviceProvider?: proto_r4_core_datatypes_pb.Reference.AsObject,
     partOf?: proto_r4_core_datatypes_pb.Reference.AsObject,
   }
@@ -1650,9 +1650,9 @@ export namespace USCoreEncounterProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -1669,7 +1669,7 @@ export namespace USCoreEncounterProfile {
     export type AsObject = {
       value: proto_r4_core_codes_pb.EncounterStatusCode.ValueMap[keyof proto_r4_core_codes_pb.EncounterStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -1679,14 +1679,14 @@ export namespace USCoreEncounterProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasStatus(): boolean;
@@ -1712,8 +1712,8 @@ export namespace USCoreEncounterProfile {
   export namespace StatusHistory {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       status?: USCoreEncounterProfile.StatusHistory.StatusCode.AsObject,
       period?: proto_r4_core_datatypes_pb.Period.AsObject,
     }
@@ -1727,9 +1727,9 @@ export namespace USCoreEncounterProfile {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -1746,7 +1746,7 @@ export namespace USCoreEncounterProfile {
       export type AsObject = {
         value: proto_r4_core_codes_pb.EncounterStatusCode.ValueMap[keyof proto_r4_core_codes_pb.EncounterStatusCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -1757,14 +1757,14 @@ export namespace USCoreEncounterProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasClassValue(): boolean;
@@ -1790,8 +1790,8 @@ export namespace USCoreEncounterProfile {
   export namespace ClassHistory {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       classValue?: proto_r4_core_datatypes_pb.Coding.AsObject,
       period?: proto_r4_core_datatypes_pb.Period.AsObject,
     }
@@ -1803,19 +1803,19 @@ export namespace USCoreEncounterProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearTypeList(): void;
-    getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearType(): void;
+    getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasPeriod(): boolean;
@@ -1841,9 +1841,9 @@ export namespace USCoreEncounterProfile {
   export namespace Participant {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       period?: proto_r4_core_datatypes_pb.Period.AsObject,
       individual?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
@@ -1855,14 +1855,14 @@ export namespace USCoreEncounterProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCondition(): boolean;
@@ -1893,8 +1893,8 @@ export namespace USCoreEncounterProfile {
   export namespace Diagnosis {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       condition?: proto_r4_core_datatypes_pb.Reference.AsObject,
       use?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       rank?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
@@ -1907,14 +1907,14 @@ export namespace USCoreEncounterProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasPreAdmissionIdentifier(): boolean;
@@ -1937,19 +1937,19 @@ export namespace USCoreEncounterProfile {
     getReAdmission(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setReAdmission(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearDietPreferenceList(): void;
-    getDietPreferenceList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setDietPreferenceList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearDietPreference(): void;
+    getDietPreference(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setDietPreference(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addDietPreference(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearSpecialCourtesyList(): void;
-    getSpecialCourtesyList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setSpecialCourtesyList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearSpecialCourtesy(): void;
+    getSpecialCourtesy(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setSpecialCourtesy(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addSpecialCourtesy(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearSpecialArrangementList(): void;
-    getSpecialArrangementList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setSpecialArrangementList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearSpecialArrangement(): void;
+    getSpecialArrangement(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setSpecialArrangement(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addSpecialArrangement(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasDestination(): boolean;
@@ -1975,15 +1975,15 @@ export namespace USCoreEncounterProfile {
   export namespace Hospitalization {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       preAdmissionIdentifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
       origin?: proto_r4_core_datatypes_pb.Reference.AsObject,
       admitSource?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       reAdmission?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      dietPreferenceList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      specialCourtesyList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      specialArrangementList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      dietPreference: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      specialCourtesy: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      specialArrangement: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       destination?: proto_r4_core_datatypes_pb.Reference.AsObject,
       dischargeDisposition?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     }
@@ -1995,14 +1995,14 @@ export namespace USCoreEncounterProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasLocation(): boolean;
@@ -2038,8 +2038,8 @@ export namespace USCoreEncounterProfile {
   export namespace Location {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       location?: proto_r4_core_datatypes_pb.Reference.AsObject,
       status?: USCoreEncounterProfile.Location.StatusCode.AsObject,
       physicalType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -2055,9 +2055,9 @@ export namespace USCoreEncounterProfile {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -2074,7 +2074,7 @@ export namespace USCoreEncounterProfile {
       export type AsObject = {
         value: proto_r4_core_codes_pb.EncounterLocationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.EncounterLocationStatusCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -2106,19 +2106,19 @@ export class USCoreDocumentReferenceProfile extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasMasterIdentifier(): boolean;
@@ -2126,9 +2126,9 @@ export class USCoreDocumentReferenceProfile extends jspb.Message {
   getMasterIdentifier(): proto_r4_core_datatypes_pb.Identifier | undefined;
   setMasterIdentifier(value?: proto_r4_core_datatypes_pb.Identifier): void;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -2146,9 +2146,9 @@ export class USCoreDocumentReferenceProfile extends jspb.Message {
   getType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasSubject(): boolean;
@@ -2161,9 +2161,9 @@ export class USCoreDocumentReferenceProfile extends jspb.Message {
   getDate(): proto_r4_core_datatypes_pb.Instant | undefined;
   setDate(value?: proto_r4_core_datatypes_pb.Instant): void;
 
-  clearAuthorList(): void;
-  getAuthorList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setAuthorList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearAuthor(): void;
+  getAuthor(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setAuthor(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addAuthor(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasAuthenticator(): boolean;
@@ -2176,9 +2176,9 @@ export class USCoreDocumentReferenceProfile extends jspb.Message {
   getCustodian(): proto_r4_core_datatypes_pb.Reference | undefined;
   setCustodian(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearRelatesToList(): void;
-  getRelatesToList(): Array<USCoreDocumentReferenceProfile.RelatesTo>;
-  setRelatesToList(value: Array<USCoreDocumentReferenceProfile.RelatesTo>): void;
+  clearRelatesTo(): void;
+  getRelatesTo(): Array<USCoreDocumentReferenceProfile.RelatesTo>;
+  setRelatesTo(value: Array<USCoreDocumentReferenceProfile.RelatesTo>): void;
   addRelatesTo(value?: USCoreDocumentReferenceProfile.RelatesTo, index?: number): USCoreDocumentReferenceProfile.RelatesTo;
 
   hasDescription(): boolean;
@@ -2186,9 +2186,9 @@ export class USCoreDocumentReferenceProfile extends jspb.Message {
   getDescription(): proto_r4_core_datatypes_pb.String | undefined;
   setDescription(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearSecurityLabelList(): void;
-  getSecurityLabelList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setSecurityLabelList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearSecurityLabel(): void;
+  getSecurityLabel(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setSecurityLabel(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addSecurityLabel(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasContent(): boolean;
@@ -2218,23 +2218,23 @@ export namespace USCoreDocumentReferenceProfile {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     masterIdentifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: USCoreDocumentReferenceProfile.StatusCode.AsObject,
     docStatus?: USCoreDocumentReferenceProfile.DocStatusCode.AsObject,
     type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     date?: proto_r4_core_datatypes_pb.Instant.AsObject,
-    authorList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    author: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     authenticator?: proto_r4_core_datatypes_pb.Reference.AsObject,
     custodian?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    relatesToList: Array<USCoreDocumentReferenceProfile.RelatesTo.AsObject>,
+    relatesTo: Array<USCoreDocumentReferenceProfile.RelatesTo.AsObject>,
     description?: proto_r4_core_datatypes_pb.String.AsObject,
-    securityLabelList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    securityLabel: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     content?: USCoreDocumentReferenceProfile.Content.AsObject,
     context?: USCoreDocumentReferenceProfile.Context.AsObject,
   }
@@ -2248,9 +2248,9 @@ export namespace USCoreDocumentReferenceProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -2267,7 +2267,7 @@ export namespace USCoreDocumentReferenceProfile {
     export type AsObject = {
       value: proto_r4_core_codes_pb.DocumentReferenceStatusCode.ValueMap[keyof proto_r4_core_codes_pb.DocumentReferenceStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -2280,9 +2280,9 @@ export namespace USCoreDocumentReferenceProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -2299,7 +2299,7 @@ export namespace USCoreDocumentReferenceProfile {
     export type AsObject = {
       value: proto_r4_core_codes_pb.CompositionStatusCode.ValueMap[keyof proto_r4_core_codes_pb.CompositionStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -2309,14 +2309,14 @@ export namespace USCoreDocumentReferenceProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -2342,8 +2342,8 @@ export namespace USCoreDocumentReferenceProfile {
   export namespace RelatesTo {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       code?: USCoreDocumentReferenceProfile.RelatesTo.CodeType.AsObject,
       target?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
@@ -2357,9 +2357,9 @@ export namespace USCoreDocumentReferenceProfile {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -2376,7 +2376,7 @@ export namespace USCoreDocumentReferenceProfile {
       export type AsObject = {
         value: proto_r4_core_codes_pb.DocumentRelationshipTypeCode.ValueMap[keyof proto_r4_core_codes_pb.DocumentRelationshipTypeCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -2387,14 +2387,14 @@ export namespace USCoreDocumentReferenceProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasAttachment(): boolean;
@@ -2420,8 +2420,8 @@ export namespace USCoreDocumentReferenceProfile {
   export namespace Content {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       attachment?: proto_r4_core_datatypes_pb.Attachment.AsObject,
       format?: proto_r4_core_datatypes_pb.Coding.AsObject,
     }
@@ -2433,14 +2433,14 @@ export namespace USCoreDocumentReferenceProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasEncounter(): boolean;
@@ -2448,9 +2448,9 @@ export namespace USCoreDocumentReferenceProfile {
     getEncounter(): proto_r4_core_datatypes_pb.Reference | undefined;
     setEncounter(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-    clearEventList(): void;
-    getEventList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setEventList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearEvent(): void;
+    getEvent(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setEvent(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addEvent(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasPeriod(): boolean;
@@ -2473,9 +2473,9 @@ export namespace USCoreDocumentReferenceProfile {
     getSourcePatientInfo(): proto_r4_core_datatypes_pb.Reference | undefined;
     setSourcePatientInfo(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-    clearRelatedList(): void;
-    getRelatedList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setRelatedList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearRelated(): void;
+    getRelated(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setRelated(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addRelated(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     serializeBinary(): Uint8Array;
@@ -2491,15 +2491,15 @@ export namespace USCoreDocumentReferenceProfile {
   export namespace Context {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
-      eventList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      event: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       period?: proto_r4_core_datatypes_pb.Period.AsObject,
       facilityType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       practiceSetting?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       sourcePatientInfo?: proto_r4_core_datatypes_pb.Reference.AsObject,
-      relatedList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      related: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     }
   }
 }
@@ -2530,24 +2530,24 @@ export class USCoreCareTeam extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -2555,9 +2555,9 @@ export class USCoreCareTeam extends jspb.Message {
   getStatus(): USCoreCareTeam.StatusCode | undefined;
   setStatus(value?: USCoreCareTeam.StatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasName(): boolean;
@@ -2580,34 +2580,34 @@ export class USCoreCareTeam extends jspb.Message {
   getPeriod(): proto_r4_core_datatypes_pb.Period | undefined;
   setPeriod(value?: proto_r4_core_datatypes_pb.Period): void;
 
-  clearParticipantList(): void;
-  getParticipantList(): Array<USCoreCareTeam.Participant>;
-  setParticipantList(value: Array<USCoreCareTeam.Participant>): void;
+  clearParticipant(): void;
+  getParticipant(): Array<USCoreCareTeam.Participant>;
+  setParticipant(value: Array<USCoreCareTeam.Participant>): void;
   addParticipant(value?: USCoreCareTeam.Participant, index?: number): USCoreCareTeam.Participant;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearManagingOrganizationList(): void;
-  getManagingOrganizationList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setManagingOrganizationList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearManagingOrganization(): void;
+  getManagingOrganization(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setManagingOrganization(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addManagingOrganization(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearTelecomList(): void;
-  getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearTelecom(): void;
+  getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   serializeBinary(): Uint8Array;
@@ -2627,22 +2627,22 @@ export namespace USCoreCareTeam {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: USCoreCareTeam.StatusCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     name?: proto_r4_core_datatypes_pb.String.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     period?: proto_r4_core_datatypes_pb.Period.AsObject,
-    participantList: Array<USCoreCareTeam.Participant.AsObject>,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    managingOrganizationList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    participant: Array<USCoreCareTeam.Participant.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    managingOrganization: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -2654,9 +2654,9 @@ export namespace USCoreCareTeam {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -2673,7 +2673,7 @@ export namespace USCoreCareTeam {
     export type AsObject = {
       value: proto_r4_core_codes_pb.CareTeamStatusCode.ValueMap[keyof proto_r4_core_codes_pb.CareTeamStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -2683,14 +2683,14 @@ export namespace USCoreCareTeam {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasRole(): boolean;
@@ -2726,8 +2726,8 @@ export namespace USCoreCareTeam {
   export namespace Participant {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       role?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       member?: proto_r4_core_datatypes_pb.Reference.AsObject,
       onBehalfOf?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -2762,24 +2762,24 @@ export class USCoreProvenance extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearTargetList(): void;
-  getTargetList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setTargetList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearTarget(): void;
+  getTarget(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setTarget(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addTarget(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasOccurred(): boolean;
@@ -2792,9 +2792,9 @@ export class USCoreProvenance extends jspb.Message {
   getRecorded(): proto_r4_core_datatypes_pb.Instant | undefined;
   setRecorded(value?: proto_r4_core_datatypes_pb.Instant): void;
 
-  clearPolicyList(): void;
-  getPolicyList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setPolicyList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearPolicy(): void;
+  getPolicy(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setPolicy(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addPolicy(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
   hasLocation(): boolean;
@@ -2802,9 +2802,9 @@ export class USCoreProvenance extends jspb.Message {
   getLocation(): proto_r4_core_datatypes_pb.Reference | undefined;
   setLocation(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReasonList(): void;
-  getReasonList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReason(): void;
+  getReason(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReason(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReason(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasActivity(): boolean;
@@ -2812,19 +2812,19 @@ export class USCoreProvenance extends jspb.Message {
   getActivity(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setActivity(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearAgentList(): void;
-  getAgentList(): Array<USCoreProvenance.Agent>;
-  setAgentList(value: Array<USCoreProvenance.Agent>): void;
+  clearAgent(): void;
+  getAgent(): Array<USCoreProvenance.Agent>;
+  setAgent(value: Array<USCoreProvenance.Agent>): void;
   addAgent(value?: USCoreProvenance.Agent, index?: number): USCoreProvenance.Agent;
 
-  clearEntityList(): void;
-  getEntityList(): Array<USCoreProvenance.Entity>;
-  setEntityList(value: Array<USCoreProvenance.Entity>): void;
+  clearEntity(): void;
+  getEntity(): Array<USCoreProvenance.Entity>;
+  setEntity(value: Array<USCoreProvenance.Entity>): void;
   addEntity(value?: USCoreProvenance.Entity, index?: number): USCoreProvenance.Entity;
 
-  clearSignatureList(): void;
-  getSignatureList(): Array<proto_r4_core_datatypes_pb.Signature>;
-  setSignatureList(value: Array<proto_r4_core_datatypes_pb.Signature>): void;
+  clearSignature(): void;
+  getSignature(): Array<proto_r4_core_datatypes_pb.Signature>;
+  setSignature(value: Array<proto_r4_core_datatypes_pb.Signature>): void;
   addSignature(value?: proto_r4_core_datatypes_pb.Signature, index?: number): proto_r4_core_datatypes_pb.Signature;
 
   serializeBinary(): Uint8Array;
@@ -2844,19 +2844,19 @@ export namespace USCoreProvenance {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    targetList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    target: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     occurred?: USCoreProvenance.OccurredX.AsObject,
     recorded?: proto_r4_core_datatypes_pb.Instant.AsObject,
-    policyList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    policy: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
     location?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    reasonList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reason: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     activity?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    agentList: Array<USCoreProvenance.Agent.AsObject>,
-    entityList: Array<USCoreProvenance.Entity.AsObject>,
-    signatureList: Array<proto_r4_core_datatypes_pb.Signature.AsObject>,
+    agent: Array<USCoreProvenance.Agent.AsObject>,
+    entity: Array<USCoreProvenance.Entity.AsObject>,
+    signature: Array<proto_r4_core_datatypes_pb.Signature.AsObject>,
   }
 
   export class OccurredX extends jspb.Message {
@@ -2900,14 +2900,14 @@ export namespace USCoreProvenance {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -2915,9 +2915,9 @@ export namespace USCoreProvenance {
     getType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearRoleList(): void;
-    getRoleList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setRoleList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearRole(): void;
+    getRole(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setRole(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addRole(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasWho(): boolean;
@@ -2943,10 +2943,10 @@ export namespace USCoreProvenance {
   export namespace Agent {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      roleList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      role: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       who?: proto_r4_core_datatypes_pb.Reference.AsObject,
       onBehalfOf?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
@@ -2958,14 +2958,14 @@ export namespace USCoreProvenance {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasRole(): boolean;
@@ -2978,9 +2978,9 @@ export namespace USCoreProvenance {
     getWhat(): proto_r4_core_datatypes_pb.Reference | undefined;
     setWhat(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-    clearAgentList(): void;
-    getAgentList(): Array<USCoreProvenance.Agent>;
-    setAgentList(value: Array<USCoreProvenance.Agent>): void;
+    clearAgent(): void;
+    getAgent(): Array<USCoreProvenance.Agent>;
+    setAgent(value: Array<USCoreProvenance.Agent>): void;
     addAgent(value?: USCoreProvenance.Agent, index?: number): USCoreProvenance.Agent;
 
     serializeBinary(): Uint8Array;
@@ -2996,11 +2996,11 @@ export namespace USCoreProvenance {
   export namespace Entity {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       role?: USCoreProvenance.Entity.RoleCode.AsObject,
       what?: proto_r4_core_datatypes_pb.Reference.AsObject,
-      agentList: Array<USCoreProvenance.Agent.AsObject>,
+      agent: Array<USCoreProvenance.Agent.AsObject>,
     }
 
     export class RoleCode extends jspb.Message {
@@ -3012,9 +3012,9 @@ export namespace USCoreProvenance {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -3031,7 +3031,7 @@ export namespace USCoreProvenance {
       export type AsObject = {
         value: proto_r4_core_codes_pb.ProvenanceEntityRoleCode.ValueMap[keyof proto_r4_core_codes_pb.ProvenanceEntityRoleCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -3063,24 +3063,24 @@ export class USCoreImmunizationProfile extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -3163,24 +3163,24 @@ export class USCoreImmunizationProfile extends jspb.Message {
   getDoseQuantity(): proto_r4_core_datatypes_pb.SimpleQuantity | undefined;
   setDoseQuantity(value?: proto_r4_core_datatypes_pb.SimpleQuantity): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<USCoreImmunizationProfile.Performer>;
-  setPerformerList(value: Array<USCoreImmunizationProfile.Performer>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<USCoreImmunizationProfile.Performer>;
+  setPerformer(value: Array<USCoreImmunizationProfile.Performer>): void;
   addPerformer(value?: USCoreImmunizationProfile.Performer, index?: number): USCoreImmunizationProfile.Performer;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasIsSubpotent(): boolean;
@@ -3188,19 +3188,19 @@ export class USCoreImmunizationProfile extends jspb.Message {
   getIsSubpotent(): proto_r4_core_datatypes_pb.Boolean | undefined;
   setIsSubpotent(value?: proto_r4_core_datatypes_pb.Boolean): void;
 
-  clearSubpotentReasonList(): void;
-  getSubpotentReasonList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setSubpotentReasonList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearSubpotentReason(): void;
+  getSubpotentReason(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setSubpotentReason(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addSubpotentReason(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearEducationList(): void;
-  getEducationList(): Array<USCoreImmunizationProfile.Education>;
-  setEducationList(value: Array<USCoreImmunizationProfile.Education>): void;
+  clearEducation(): void;
+  getEducation(): Array<USCoreImmunizationProfile.Education>;
+  setEducation(value: Array<USCoreImmunizationProfile.Education>): void;
   addEducation(value?: USCoreImmunizationProfile.Education, index?: number): USCoreImmunizationProfile.Education;
 
-  clearProgramEligibilityList(): void;
-  getProgramEligibilityList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setProgramEligibilityList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearProgramEligibility(): void;
+  getProgramEligibility(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setProgramEligibility(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addProgramEligibility(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasFundingSource(): boolean;
@@ -3208,14 +3208,14 @@ export class USCoreImmunizationProfile extends jspb.Message {
   getFundingSource(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setFundingSource(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearReactionList(): void;
-  getReactionList(): Array<USCoreImmunizationProfile.Reaction>;
-  setReactionList(value: Array<USCoreImmunizationProfile.Reaction>): void;
+  clearReaction(): void;
+  getReaction(): Array<USCoreImmunizationProfile.Reaction>;
+  setReaction(value: Array<USCoreImmunizationProfile.Reaction>): void;
   addReaction(value?: USCoreImmunizationProfile.Reaction, index?: number): USCoreImmunizationProfile.Reaction;
 
-  clearProtocolAppliedList(): void;
-  getProtocolAppliedList(): Array<USCoreImmunizationProfile.ProtocolApplied>;
-  setProtocolAppliedList(value: Array<USCoreImmunizationProfile.ProtocolApplied>): void;
+  clearProtocolApplied(): void;
+  getProtocolApplied(): Array<USCoreImmunizationProfile.ProtocolApplied>;
+  setProtocolApplied(value: Array<USCoreImmunizationProfile.ProtocolApplied>): void;
   addProtocolApplied(value?: USCoreImmunizationProfile.ProtocolApplied, index?: number): USCoreImmunizationProfile.ProtocolApplied;
 
   serializeBinary(): Uint8Array;
@@ -3235,10 +3235,10 @@ export namespace USCoreImmunizationProfile {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: USCoreImmunizationProfile.StatusCode.AsObject,
     statusReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     vaccineCode?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -3255,17 +3255,17 @@ export namespace USCoreImmunizationProfile {
     site?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     route?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     doseQuantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
-    performerList: Array<USCoreImmunizationProfile.Performer.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    performer: Array<USCoreImmunizationProfile.Performer.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     isSubpotent?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-    subpotentReasonList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    educationList: Array<USCoreImmunizationProfile.Education.AsObject>,
-    programEligibilityList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    subpotentReason: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    education: Array<USCoreImmunizationProfile.Education.AsObject>,
+    programEligibility: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     fundingSource?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    reactionList: Array<USCoreImmunizationProfile.Reaction.AsObject>,
-    protocolAppliedList: Array<USCoreImmunizationProfile.ProtocolApplied.AsObject>,
+    reaction: Array<USCoreImmunizationProfile.Reaction.AsObject>,
+    protocolApplied: Array<USCoreImmunizationProfile.ProtocolApplied.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -3277,9 +3277,9 @@ export namespace USCoreImmunizationProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -3296,7 +3296,7 @@ export namespace USCoreImmunizationProfile {
     export type AsObject = {
       value: proto_r4_core_valuesets_pb.ImmunizationStatusCodesValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.ImmunizationStatusCodesValueSet.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -3341,14 +3341,14 @@ export namespace USCoreImmunizationProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasFunction(): boolean;
@@ -3374,8 +3374,8 @@ export namespace USCoreImmunizationProfile {
   export namespace Performer {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       pb_function?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       actor?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
@@ -3387,14 +3387,14 @@ export namespace USCoreImmunizationProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasDocumentType(): boolean;
@@ -3430,8 +3430,8 @@ export namespace USCoreImmunizationProfile {
   export namespace Education {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       documentType?: proto_r4_core_datatypes_pb.String.AsObject,
       reference?: proto_r4_core_datatypes_pb.Uri.AsObject,
       publicationDate?: proto_r4_core_datatypes_pb.DateTime.AsObject,
@@ -3445,14 +3445,14 @@ export namespace USCoreImmunizationProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasDate(): boolean;
@@ -3483,8 +3483,8 @@ export namespace USCoreImmunizationProfile {
   export namespace Reaction {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
       detail?: proto_r4_core_datatypes_pb.Reference.AsObject,
       reported?: proto_r4_core_datatypes_pb.Boolean.AsObject,
@@ -3497,14 +3497,14 @@ export namespace USCoreImmunizationProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSeries(): boolean;
@@ -3517,9 +3517,9 @@ export namespace USCoreImmunizationProfile {
     getAuthority(): proto_r4_core_datatypes_pb.Reference | undefined;
     setAuthority(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-    clearTargetDiseaseList(): void;
-    getTargetDiseaseList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setTargetDiseaseList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearTargetDisease(): void;
+    getTargetDisease(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setTargetDisease(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addTargetDisease(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasDoseNumber(): boolean;
@@ -3545,11 +3545,11 @@ export namespace USCoreImmunizationProfile {
   export namespace ProtocolApplied {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       series?: proto_r4_core_datatypes_pb.String.AsObject,
       authority?: proto_r4_core_datatypes_pb.Reference.AsObject,
-      targetDiseaseList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      targetDisease: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       doseNumber?: USCoreImmunizationProfile.ProtocolApplied.DoseNumberX.AsObject,
       seriesDoses?: USCoreImmunizationProfile.ProtocolApplied.SeriesDosesX.AsObject,
     }
@@ -3632,9 +3632,9 @@ export class PatientUSCoreBirthSexExtension extends jspb.Message {
   getId(): proto_r4_core_datatypes_pb.String | undefined;
   setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasValueCode(): boolean;
@@ -3655,7 +3655,7 @@ export class PatientUSCoreBirthSexExtension extends jspb.Message {
 export namespace PatientUSCoreBirthSexExtension {
   export type AsObject = {
     id?: proto_r4_core_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     valueCode?: PatientUSCoreBirthSexExtension.ValueCode.AsObject,
   }
 
@@ -3668,9 +3668,9 @@ export namespace PatientUSCoreBirthSexExtension {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -3687,7 +3687,7 @@ export namespace PatientUSCoreBirthSexExtension {
     export type AsObject = {
       value: proto_r4_uscore_codes_pb.BirthSexValueSet.ValueMap[keyof proto_r4_uscore_codes_pb.BirthSexValueSet.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 }
@@ -3718,29 +3718,29 @@ export class USCoreDiagnosticReportProfileNoteExchange extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -3748,9 +3748,9 @@ export class USCoreDiagnosticReportProfileNoteExchange extends jspb.Message {
   getStatus(): USCoreDiagnosticReportProfileNoteExchange.StatusCode | undefined;
   setStatus(value?: USCoreDiagnosticReportProfileNoteExchange.StatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -3778,34 +3778,34 @@ export class USCoreDiagnosticReportProfileNoteExchange extends jspb.Message {
   getIssued(): proto_r4_core_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_r4_core_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearResultsInterpreterList(): void;
-  getResultsInterpreterList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setResultsInterpreterList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearResultsInterpreter(): void;
+  getResultsInterpreter(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setResultsInterpreter(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addResultsInterpreter(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearSpecimenList(): void;
-  getSpecimenList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSpecimenList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSpecimen(): void;
+  getSpecimen(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSpecimen(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSpecimen(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearResultList(): void;
-  getResultList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setResultList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearResult(): void;
+  getResult(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setResult(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addResult(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearImagingStudyList(): void;
-  getImagingStudyList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setImagingStudyList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearImagingStudy(): void;
+  getImagingStudy(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setImagingStudy(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addImagingStudy(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearMediaList(): void;
-  getMediaList(): Array<USCoreDiagnosticReportProfileNoteExchange.Media>;
-  setMediaList(value: Array<USCoreDiagnosticReportProfileNoteExchange.Media>): void;
+  clearMedia(): void;
+  getMedia(): Array<USCoreDiagnosticReportProfileNoteExchange.Media>;
+  setMedia(value: Array<USCoreDiagnosticReportProfileNoteExchange.Media>): void;
   addMedia(value?: USCoreDiagnosticReportProfileNoteExchange.Media, index?: number): USCoreDiagnosticReportProfileNoteExchange.Media;
 
   hasConclusion(): boolean;
@@ -3813,14 +3813,14 @@ export class USCoreDiagnosticReportProfileNoteExchange extends jspb.Message {
   getConclusion(): proto_r4_core_datatypes_pb.String | undefined;
   setConclusion(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearConclusionCodeList(): void;
-  getConclusionCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setConclusionCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearConclusionCode(): void;
+  getConclusionCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setConclusionCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addConclusionCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearPresentedFormList(): void;
-  getPresentedFormList(): Array<proto_r4_core_datatypes_pb.Attachment>;
-  setPresentedFormList(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
+  clearPresentedForm(): void;
+  getPresentedForm(): Array<proto_r4_core_datatypes_pb.Attachment>;
+  setPresentedForm(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
   addPresentedForm(value?: proto_r4_core_datatypes_pb.Attachment, index?: number): proto_r4_core_datatypes_pb.Attachment;
 
   serializeBinary(): Uint8Array;
@@ -3840,27 +3840,27 @@ export namespace USCoreDiagnosticReportProfileNoteExchange {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: USCoreDiagnosticReportProfileNoteExchange.StatusCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     effective?: USCoreDiagnosticReportProfileNoteExchange.EffectiveX.AsObject,
     issued?: proto_r4_core_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    resultsInterpreterList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    specimenList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    resultList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    imagingStudyList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    mediaList: Array<USCoreDiagnosticReportProfileNoteExchange.Media.AsObject>,
+    performer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    resultsInterpreter: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    specimen: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    result: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    imagingStudy: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    media: Array<USCoreDiagnosticReportProfileNoteExchange.Media.AsObject>,
     conclusion?: proto_r4_core_datatypes_pb.String.AsObject,
-    conclusionCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    presentedFormList: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
+    conclusionCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    presentedForm: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -3872,9 +3872,9 @@ export namespace USCoreDiagnosticReportProfileNoteExchange {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -3891,7 +3891,7 @@ export namespace USCoreDiagnosticReportProfileNoteExchange {
     export type AsObject = {
       value: proto_r4_core_codes_pb.DiagnosticReportStatusCode.ValueMap[keyof proto_r4_core_codes_pb.DiagnosticReportStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -3936,14 +3936,14 @@ export namespace USCoreDiagnosticReportProfileNoteExchange {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasComment(): boolean;
@@ -3969,8 +3969,8 @@ export namespace USCoreDiagnosticReportProfileNoteExchange {
   export namespace Media {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       comment?: proto_r4_core_datatypes_pb.String.AsObject,
       link?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
@@ -4003,34 +4003,34 @@ export class USCoreLaboratoryResultObservationProfile extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearPartOfList(): void;
-  getPartOfList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPartOfList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPartOf(): void;
+  getPartOf(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPartOf(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPartOf(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -4038,9 +4038,9 @@ export class USCoreLaboratoryResultObservationProfile extends jspb.Message {
   getStatus(): USCoreLaboratoryResultObservationProfile.StatusCode | undefined;
   setStatus(value?: USCoreLaboratoryResultObservationProfile.StatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -4053,9 +4053,9 @@ export class USCoreLaboratoryResultObservationProfile extends jspb.Message {
   getSubject(): proto_r4_core_datatypes_pb.Reference | undefined;
   setSubject(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearFocusList(): void;
-  getFocusList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setFocusList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearFocus(): void;
+  getFocus(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setFocus(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addFocus(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasEncounter(): boolean;
@@ -4073,9 +4073,9 @@ export class USCoreLaboratoryResultObservationProfile extends jspb.Message {
   getIssued(): proto_r4_core_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_r4_core_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -4088,14 +4088,14 @@ export class USCoreLaboratoryResultObservationProfile extends jspb.Message {
   getDataAbsentReason(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setDataAbsentReason(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearInterpretationList(): void;
-  getInterpretationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setInterpretationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearInterpretation(): void;
+  getInterpretation(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setInterpretation(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addInterpretation(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   hasBodySite(): boolean;
@@ -4118,24 +4118,24 @@ export class USCoreLaboratoryResultObservationProfile extends jspb.Message {
   getDevice(): proto_r4_core_datatypes_pb.Reference | undefined;
   setDevice(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReferenceRangeList(): void;
-  getReferenceRangeList(): Array<USCoreLaboratoryResultObservationProfile.ReferenceRange>;
-  setReferenceRangeList(value: Array<USCoreLaboratoryResultObservationProfile.ReferenceRange>): void;
+  clearReferenceRange(): void;
+  getReferenceRange(): Array<USCoreLaboratoryResultObservationProfile.ReferenceRange>;
+  setReferenceRange(value: Array<USCoreLaboratoryResultObservationProfile.ReferenceRange>): void;
   addReferenceRange(value?: USCoreLaboratoryResultObservationProfile.ReferenceRange, index?: number): USCoreLaboratoryResultObservationProfile.ReferenceRange;
 
-  clearHasMemberList(): void;
-  getHasMemberList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setHasMemberList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearHasMember(): void;
+  getHasMember(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setHasMember(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addHasMember(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearDerivedFromList(): void;
-  getDerivedFromList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setDerivedFromList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearDerivedFrom(): void;
+  getDerivedFrom(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setDerivedFrom(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addDerivedFrom(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearComponentList(): void;
-  getComponentList(): Array<USCoreLaboratoryResultObservationProfile.Component>;
-  setComponentList(value: Array<USCoreLaboratoryResultObservationProfile.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<USCoreLaboratoryResultObservationProfile.Component>;
+  setComponent(value: Array<USCoreLaboratoryResultObservationProfile.Component>): void;
   addComponent(value?: USCoreLaboratoryResultObservationProfile.Component, index?: number): USCoreLaboratoryResultObservationProfile.Component;
 
   serializeBinary(): Uint8Array;
@@ -4155,33 +4155,33 @@ export namespace USCoreLaboratoryResultObservationProfile {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    partOfList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    partOf: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: USCoreLaboratoryResultObservationProfile.StatusCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    focusList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    focus: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     effective?: USCoreLaboratoryResultObservationProfile.EffectiveX.AsObject,
     issued?: proto_r4_core_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     value?: USCoreLaboratoryResultObservationProfile.ValueX.AsObject,
     dataAbsentReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    interpretationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    interpretation: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
     bodySite?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     method?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     specimen?: proto_r4_core_datatypes_pb.Reference.AsObject,
     device?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    referenceRangeList: Array<USCoreLaboratoryResultObservationProfile.ReferenceRange.AsObject>,
-    hasMemberList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    derivedFromList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    componentList: Array<USCoreLaboratoryResultObservationProfile.Component.AsObject>,
+    referenceRange: Array<USCoreLaboratoryResultObservationProfile.ReferenceRange.AsObject>,
+    hasMember: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    derivedFrom: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    component: Array<USCoreLaboratoryResultObservationProfile.Component.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -4193,9 +4193,9 @@ export namespace USCoreLaboratoryResultObservationProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -4212,7 +4212,7 @@ export namespace USCoreLaboratoryResultObservationProfile {
     export type AsObject = {
       value: proto_r4_core_codes_pb.ObservationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.ObservationStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -4355,14 +4355,14 @@ export namespace USCoreLaboratoryResultObservationProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -4380,9 +4380,9 @@ export namespace USCoreLaboratoryResultObservationProfile {
     getType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasAge(): boolean;
@@ -4408,12 +4408,12 @@ export namespace USCoreLaboratoryResultObservationProfile {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       low?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       high?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       age?: proto_r4_core_datatypes_pb.Range.AsObject,
       text?: proto_r4_core_datatypes_pb.String.AsObject,
     }
@@ -4425,14 +4425,14 @@ export namespace USCoreLaboratoryResultObservationProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -4450,14 +4450,14 @@ export namespace USCoreLaboratoryResultObservationProfile {
     getDataAbsentReason(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setDataAbsentReason(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearInterpretationList(): void;
-    getInterpretationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setInterpretationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearInterpretation(): void;
+    getInterpretation(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setInterpretation(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addInterpretation(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<USCoreLaboratoryResultObservationProfile.ReferenceRange>;
-    setReferenceRangeList(value: Array<USCoreLaboratoryResultObservationProfile.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<USCoreLaboratoryResultObservationProfile.ReferenceRange>;
+    setReferenceRange(value: Array<USCoreLaboratoryResultObservationProfile.ReferenceRange>): void;
     addReferenceRange(value?: USCoreLaboratoryResultObservationProfile.ReferenceRange, index?: number): USCoreLaboratoryResultObservationProfile.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -4473,13 +4473,13 @@ export namespace USCoreLaboratoryResultObservationProfile {
   export namespace Component {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       value?: USCoreLaboratoryResultObservationProfile.Component.ValueX.AsObject,
       dataAbsentReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      interpretationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      referenceRangeList: Array<USCoreLaboratoryResultObservationProfile.ReferenceRange.AsObject>,
+      interpretation: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      referenceRange: Array<USCoreLaboratoryResultObservationProfile.ReferenceRange.AsObject>,
     }
 
     export class ValueX extends jspb.Message {
@@ -4608,24 +4608,24 @@ export class USCoreLocation extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -4643,9 +4643,9 @@ export class USCoreLocation extends jspb.Message {
   getName(): proto_r4_core_datatypes_pb.String | undefined;
   setName(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearAliasList(): void;
-  getAliasList(): Array<proto_r4_core_datatypes_pb.String>;
-  setAliasList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+  clearAlias(): void;
+  getAlias(): Array<proto_r4_core_datatypes_pb.String>;
+  setAlias(value: Array<proto_r4_core_datatypes_pb.String>): void;
   addAlias(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
   hasDescription(): boolean;
@@ -4658,14 +4658,14 @@ export class USCoreLocation extends jspb.Message {
   getMode(): USCoreLocation.ModeCode | undefined;
   setMode(value?: USCoreLocation.ModeCode): void;
 
-  clearTypeList(): void;
-  getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearType(): void;
+  getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearTelecomList(): void;
-  getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearTelecom(): void;
+  getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
   hasAddress(): boolean;
@@ -4693,9 +4693,9 @@ export class USCoreLocation extends jspb.Message {
   getPartOf(): proto_r4_core_datatypes_pb.Reference | undefined;
   setPartOf(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearHoursOfOperationList(): void;
-  getHoursOfOperationList(): Array<USCoreLocation.HoursOfOperation>;
-  setHoursOfOperationList(value: Array<USCoreLocation.HoursOfOperation>): void;
+  clearHoursOfOperation(): void;
+  getHoursOfOperation(): Array<USCoreLocation.HoursOfOperation>;
+  setHoursOfOperation(value: Array<USCoreLocation.HoursOfOperation>): void;
   addHoursOfOperation(value?: USCoreLocation.HoursOfOperation, index?: number): USCoreLocation.HoursOfOperation;
 
   hasAvailabilityExceptions(): boolean;
@@ -4703,9 +4703,9 @@ export class USCoreLocation extends jspb.Message {
   getAvailabilityExceptions(): proto_r4_core_datatypes_pb.String | undefined;
   setAvailabilityExceptions(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearEndpointList(): void;
-  getEndpointList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setEndpointList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearEndpoint(): void;
+  getEndpoint(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setEndpoint(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addEndpoint(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -4725,26 +4725,26 @@ export namespace USCoreLocation {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: USCoreLocation.StatusCode.AsObject,
     operationalStatus?: proto_r4_core_datatypes_pb.Coding.AsObject,
     name?: proto_r4_core_datatypes_pb.String.AsObject,
-    aliasList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+    alias: Array<proto_r4_core_datatypes_pb.String.AsObject>,
     description?: proto_r4_core_datatypes_pb.String.AsObject,
     mode?: USCoreLocation.ModeCode.AsObject,
-    typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
     address?: proto_r4_core_datatypes_pb.Address.AsObject,
     physicalType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     position?: USCoreLocation.Position.AsObject,
     managingOrganization?: proto_r4_core_datatypes_pb.Reference.AsObject,
     partOf?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    hoursOfOperationList: Array<USCoreLocation.HoursOfOperation.AsObject>,
+    hoursOfOperation: Array<USCoreLocation.HoursOfOperation.AsObject>,
     availabilityExceptions?: proto_r4_core_datatypes_pb.String.AsObject,
-    endpointList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    endpoint: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -4756,9 +4756,9 @@ export namespace USCoreLocation {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -4775,7 +4775,7 @@ export namespace USCoreLocation {
     export type AsObject = {
       value: proto_r4_core_codes_pb.LocationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.LocationStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -4788,9 +4788,9 @@ export namespace USCoreLocation {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -4807,7 +4807,7 @@ export namespace USCoreLocation {
     export type AsObject = {
       value: proto_r4_core_codes_pb.LocationModeCode.ValueMap[keyof proto_r4_core_codes_pb.LocationModeCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -4817,14 +4817,14 @@ export namespace USCoreLocation {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasLongitude(): boolean;
@@ -4855,8 +4855,8 @@ export namespace USCoreLocation {
   export namespace Position {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       longitude?: proto_r4_core_datatypes_pb.Decimal.AsObject,
       latitude?: proto_r4_core_datatypes_pb.Decimal.AsObject,
       altitude?: proto_r4_core_datatypes_pb.Decimal.AsObject,
@@ -4869,19 +4869,19 @@ export namespace USCoreLocation {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearDaysOfWeekList(): void;
-    getDaysOfWeekList(): Array<USCoreLocation.HoursOfOperation.DaysOfWeekCode>;
-    setDaysOfWeekList(value: Array<USCoreLocation.HoursOfOperation.DaysOfWeekCode>): void;
+    clearDaysOfWeek(): void;
+    getDaysOfWeek(): Array<USCoreLocation.HoursOfOperation.DaysOfWeekCode>;
+    setDaysOfWeek(value: Array<USCoreLocation.HoursOfOperation.DaysOfWeekCode>): void;
     addDaysOfWeek(value?: USCoreLocation.HoursOfOperation.DaysOfWeekCode, index?: number): USCoreLocation.HoursOfOperation.DaysOfWeekCode;
 
     hasAllDay(): boolean;
@@ -4912,9 +4912,9 @@ export namespace USCoreLocation {
   export namespace HoursOfOperation {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      daysOfWeekList: Array<USCoreLocation.HoursOfOperation.DaysOfWeekCode.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      daysOfWeek: Array<USCoreLocation.HoursOfOperation.DaysOfWeekCode.AsObject>,
       allDay?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       openingTime?: proto_r4_core_datatypes_pb.Time.AsObject,
       closingTime?: proto_r4_core_datatypes_pb.Time.AsObject,
@@ -4929,9 +4929,9 @@ export namespace USCoreLocation {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -4948,7 +4948,7 @@ export namespace USCoreLocation {
       export type AsObject = {
         value: proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap[keyof proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -4980,24 +4980,24 @@ export class UsCoreCondition extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasClinicalStatus(): boolean;
@@ -5010,9 +5010,9 @@ export class UsCoreCondition extends jspb.Message {
   getVerificationStatus(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setVerificationStatus(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasSeverity(): boolean;
@@ -5025,9 +5025,9 @@ export class UsCoreCondition extends jspb.Message {
   getCode(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setCode(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearBodySiteList(): void;
-  getBodySiteList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setBodySiteList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearBodySite(): void;
+  getBodySite(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setBodySite(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addBodySite(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasSubject(): boolean;
@@ -5065,19 +5065,19 @@ export class UsCoreCondition extends jspb.Message {
   getAsserter(): proto_r4_core_datatypes_pb.Reference | undefined;
   setAsserter(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearStageList(): void;
-  getStageList(): Array<UsCoreCondition.Stage>;
-  setStageList(value: Array<UsCoreCondition.Stage>): void;
+  clearStage(): void;
+  getStage(): Array<UsCoreCondition.Stage>;
+  setStage(value: Array<UsCoreCondition.Stage>): void;
   addStage(value?: UsCoreCondition.Stage, index?: number): UsCoreCondition.Stage;
 
-  clearEvidenceList(): void;
-  getEvidenceList(): Array<UsCoreCondition.Evidence>;
-  setEvidenceList(value: Array<UsCoreCondition.Evidence>): void;
+  clearEvidence(): void;
+  getEvidence(): Array<UsCoreCondition.Evidence>;
+  setEvidence(value: Array<UsCoreCondition.Evidence>): void;
   addEvidence(value?: UsCoreCondition.Evidence, index?: number): UsCoreCondition.Evidence;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   serializeBinary(): Uint8Array;
@@ -5097,16 +5097,16 @@ export namespace UsCoreCondition {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     clinicalStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     verificationStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     severity?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    bodySiteList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    bodySite: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     onset?: UsCoreCondition.OnsetX.AsObject,
@@ -5114,9 +5114,9 @@ export namespace UsCoreCondition {
     recordedDate?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     recorder?: proto_r4_core_datatypes_pb.Reference.AsObject,
     asserter?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    stageList: Array<UsCoreCondition.Stage.AsObject>,
-    evidenceList: Array<UsCoreCondition.Evidence.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    stage: Array<UsCoreCondition.Stage.AsObject>,
+    evidence: Array<UsCoreCondition.Evidence.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
   }
 
   export class OnsetX extends jspb.Message {
@@ -5237,14 +5237,14 @@ export namespace UsCoreCondition {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSummary(): boolean;
@@ -5252,9 +5252,9 @@ export namespace UsCoreCondition {
     getSummary(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setSummary(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearAssessmentList(): void;
-    getAssessmentList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setAssessmentList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearAssessment(): void;
+    getAssessment(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setAssessment(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addAssessment(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     hasType(): boolean;
@@ -5275,10 +5275,10 @@ export namespace UsCoreCondition {
   export namespace Stage {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       summary?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      assessmentList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      assessment: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     }
   }
@@ -5289,24 +5289,24 @@ export namespace UsCoreCondition {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearCodeList(): void;
-    getCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearCode(): void;
+    getCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearDetailList(): void;
-    getDetailList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setDetailList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearDetail(): void;
+    getDetail(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setDetail(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addDetail(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     serializeBinary(): Uint8Array;
@@ -5322,10 +5322,10 @@ export namespace UsCoreCondition {
   export namespace Evidence {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      codeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      detailList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      code: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      detail: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     }
   }
 }
@@ -5356,34 +5356,34 @@ export class USCorePulseOximetryProfile extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearPartOfList(): void;
-  getPartOfList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPartOfList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPartOf(): void;
+  getPartOf(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPartOf(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPartOf(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -5391,9 +5391,9 @@ export class USCorePulseOximetryProfile extends jspb.Message {
   getStatus(): USCorePulseOximetryProfile.StatusCode | undefined;
   setStatus(value?: USCorePulseOximetryProfile.StatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -5406,9 +5406,9 @@ export class USCorePulseOximetryProfile extends jspb.Message {
   getSubject(): proto_r4_core_datatypes_pb.Reference | undefined;
   setSubject(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearFocusList(): void;
-  getFocusList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setFocusList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearFocus(): void;
+  getFocus(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setFocus(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addFocus(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasEncounter(): boolean;
@@ -5426,9 +5426,9 @@ export class USCorePulseOximetryProfile extends jspb.Message {
   getIssued(): proto_r4_core_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_r4_core_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -5441,14 +5441,14 @@ export class USCorePulseOximetryProfile extends jspb.Message {
   getDataAbsentReason(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setDataAbsentReason(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearInterpretationList(): void;
-  getInterpretationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setInterpretationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearInterpretation(): void;
+  getInterpretation(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setInterpretation(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addInterpretation(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   hasBodySite(): boolean;
@@ -5471,24 +5471,24 @@ export class USCorePulseOximetryProfile extends jspb.Message {
   getDevice(): proto_r4_core_datatypes_pb.Reference | undefined;
   setDevice(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReferenceRangeList(): void;
-  getReferenceRangeList(): Array<USCorePulseOximetryProfile.ReferenceRange>;
-  setReferenceRangeList(value: Array<USCorePulseOximetryProfile.ReferenceRange>): void;
+  clearReferenceRange(): void;
+  getReferenceRange(): Array<USCorePulseOximetryProfile.ReferenceRange>;
+  setReferenceRange(value: Array<USCorePulseOximetryProfile.ReferenceRange>): void;
   addReferenceRange(value?: USCorePulseOximetryProfile.ReferenceRange, index?: number): USCorePulseOximetryProfile.ReferenceRange;
 
-  clearHasMemberList(): void;
-  getHasMemberList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setHasMemberList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearHasMember(): void;
+  getHasMember(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setHasMember(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addHasMember(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearDerivedFromList(): void;
-  getDerivedFromList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setDerivedFromList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearDerivedFrom(): void;
+  getDerivedFrom(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setDerivedFrom(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addDerivedFrom(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearComponentList(): void;
-  getComponentList(): Array<USCorePulseOximetryProfile.Component>;
-  setComponentList(value: Array<USCorePulseOximetryProfile.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<USCorePulseOximetryProfile.Component>;
+  setComponent(value: Array<USCorePulseOximetryProfile.Component>): void;
   addComponent(value?: USCorePulseOximetryProfile.Component, index?: number): USCorePulseOximetryProfile.Component;
 
   serializeBinary(): Uint8Array;
@@ -5508,33 +5508,33 @@ export namespace USCorePulseOximetryProfile {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    partOfList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    partOf: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: USCorePulseOximetryProfile.StatusCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     code?: USCorePulseOximetryProfile.CodeableConceptForCode.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    focusList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    focus: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     effective?: USCorePulseOximetryProfile.EffectiveX.AsObject,
     issued?: proto_r4_core_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     value?: USCorePulseOximetryProfile.ValueX.AsObject,
     dataAbsentReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    interpretationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    interpretation: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
     bodySite?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     method?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     specimen?: proto_r4_core_datatypes_pb.Reference.AsObject,
     device?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    referenceRangeList: Array<USCorePulseOximetryProfile.ReferenceRange.AsObject>,
-    hasMemberList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    derivedFromList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    componentList: Array<USCorePulseOximetryProfile.Component.AsObject>,
+    referenceRange: Array<USCorePulseOximetryProfile.ReferenceRange.AsObject>,
+    hasMember: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    derivedFrom: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    component: Array<USCorePulseOximetryProfile.Component.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -5546,9 +5546,9 @@ export namespace USCorePulseOximetryProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -5565,7 +5565,7 @@ export namespace USCorePulseOximetryProfile {
     export type AsObject = {
       value: proto_r4_core_codes_pb.ObservationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.ObservationStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -5575,14 +5575,14 @@ export namespace USCorePulseOximetryProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearCodingList(): void;
-    getCodingList(): Array<proto_r4_core_datatypes_pb.Coding>;
-    setCodingList(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
+    clearCoding(): void;
+    getCoding(): Array<proto_r4_core_datatypes_pb.Coding>;
+    setCoding(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
     addCoding(value?: proto_r4_core_datatypes_pb.Coding, index?: number): proto_r4_core_datatypes_pb.Coding;
 
     hasText(): boolean;
@@ -5613,8 +5613,8 @@ export namespace USCorePulseOximetryProfile {
   export namespace CodeableConceptForCode {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      codingList: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      coding: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
       text?: proto_r4_core_datatypes_pb.String.AsObject,
       oxygenSatCode?: proto_r4_core_datatypes_pb.CodingWithFixedCode.AsObject,
       pulseOx?: proto_r4_core_datatypes_pb.CodingWithFixedCode.AsObject,
@@ -5690,14 +5690,14 @@ export namespace USCorePulseOximetryProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -5715,9 +5715,9 @@ export namespace USCorePulseOximetryProfile {
     getType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasAge(): boolean;
@@ -5743,12 +5743,12 @@ export namespace USCorePulseOximetryProfile {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       low?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       high?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       age?: proto_r4_core_datatypes_pb.Range.AsObject,
       text?: proto_r4_core_datatypes_pb.String.AsObject,
     }
@@ -5760,14 +5760,14 @@ export namespace USCorePulseOximetryProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -5785,14 +5785,14 @@ export namespace USCorePulseOximetryProfile {
     getDataAbsentReason(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setDataAbsentReason(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearInterpretationList(): void;
-    getInterpretationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setInterpretationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearInterpretation(): void;
+    getInterpretation(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setInterpretation(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addInterpretation(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<USCorePulseOximetryProfile.ReferenceRange>;
-    setReferenceRangeList(value: Array<USCorePulseOximetryProfile.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<USCorePulseOximetryProfile.ReferenceRange>;
+    setReferenceRange(value: Array<USCorePulseOximetryProfile.ReferenceRange>): void;
     addReferenceRange(value?: USCorePulseOximetryProfile.ReferenceRange, index?: number): USCorePulseOximetryProfile.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -5808,13 +5808,13 @@ export namespace USCorePulseOximetryProfile {
   export namespace Component {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       value?: USCorePulseOximetryProfile.Component.ValueX.AsObject,
       dataAbsentReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      interpretationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      referenceRangeList: Array<USCorePulseOximetryProfile.ReferenceRange.AsObject>,
+      interpretation: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      referenceRange: Array<USCorePulseOximetryProfile.ReferenceRange.AsObject>,
     }
 
     export class ValueX extends jspb.Message {
@@ -5943,24 +5943,24 @@ export class USCoreImplantableDeviceProfile extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasDefinition(): boolean;
@@ -5978,9 +5978,9 @@ export class USCoreImplantableDeviceProfile extends jspb.Message {
   getStatus(): USCoreImplantableDeviceProfile.StatusCode | undefined;
   setStatus(value?: USCoreImplantableDeviceProfile.StatusCode): void;
 
-  clearStatusReasonList(): void;
-  getStatusReasonList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setStatusReasonList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearStatusReason(): void;
+  getStatusReason(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setStatusReason(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addStatusReason(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasDistinctIdentifier(): boolean;
@@ -6013,9 +6013,9 @@ export class USCoreImplantableDeviceProfile extends jspb.Message {
   getSerialNumber(): proto_r4_core_datatypes_pb.String | undefined;
   setSerialNumber(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearDeviceNameList(): void;
-  getDeviceNameList(): Array<USCoreImplantableDeviceProfile.DeviceName>;
-  setDeviceNameList(value: Array<USCoreImplantableDeviceProfile.DeviceName>): void;
+  clearDeviceName(): void;
+  getDeviceName(): Array<USCoreImplantableDeviceProfile.DeviceName>;
+  setDeviceName(value: Array<USCoreImplantableDeviceProfile.DeviceName>): void;
   addDeviceName(value?: USCoreImplantableDeviceProfile.DeviceName, index?: number): USCoreImplantableDeviceProfile.DeviceName;
 
   hasModelNumber(): boolean;
@@ -6033,19 +6033,19 @@ export class USCoreImplantableDeviceProfile extends jspb.Message {
   getType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearSpecializationList(): void;
-  getSpecializationList(): Array<USCoreImplantableDeviceProfile.Specialization>;
-  setSpecializationList(value: Array<USCoreImplantableDeviceProfile.Specialization>): void;
+  clearSpecialization(): void;
+  getSpecialization(): Array<USCoreImplantableDeviceProfile.Specialization>;
+  setSpecialization(value: Array<USCoreImplantableDeviceProfile.Specialization>): void;
   addSpecialization(value?: USCoreImplantableDeviceProfile.Specialization, index?: number): USCoreImplantableDeviceProfile.Specialization;
 
-  clearVersionList(): void;
-  getVersionList(): Array<USCoreImplantableDeviceProfile.Version>;
-  setVersionList(value: Array<USCoreImplantableDeviceProfile.Version>): void;
+  clearVersion(): void;
+  getVersion(): Array<USCoreImplantableDeviceProfile.Version>;
+  setVersion(value: Array<USCoreImplantableDeviceProfile.Version>): void;
   addVersion(value?: USCoreImplantableDeviceProfile.Version, index?: number): USCoreImplantableDeviceProfile.Version;
 
-  clearPropertyList(): void;
-  getPropertyList(): Array<USCoreImplantableDeviceProfile.Property>;
-  setPropertyList(value: Array<USCoreImplantableDeviceProfile.Property>): void;
+  clearProperty(): void;
+  getProperty(): Array<USCoreImplantableDeviceProfile.Property>;
+  setProperty(value: Array<USCoreImplantableDeviceProfile.Property>): void;
   addProperty(value?: USCoreImplantableDeviceProfile.Property, index?: number): USCoreImplantableDeviceProfile.Property;
 
   hasPatient(): boolean;
@@ -6058,9 +6058,9 @@ export class USCoreImplantableDeviceProfile extends jspb.Message {
   getOwner(): proto_r4_core_datatypes_pb.Reference | undefined;
   setOwner(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearContactList(): void;
-  getContactList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setContactList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearContact(): void;
+  getContact(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setContact(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addContact(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
   hasLocation(): boolean;
@@ -6073,14 +6073,14 @@ export class USCoreImplantableDeviceProfile extends jspb.Message {
   getUrl(): proto_r4_core_datatypes_pb.Uri | undefined;
   setUrl(value?: proto_r4_core_datatypes_pb.Uri): void;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearSafetyList(): void;
-  getSafetyList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setSafetyList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearSafety(): void;
+  getSafety(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setSafety(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addSafety(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasParent(): boolean;
@@ -6105,34 +6105,34 @@ export namespace USCoreImplantableDeviceProfile {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     definition?: proto_r4_core_datatypes_pb.Reference.AsObject,
     udiCarrier?: USCoreImplantableDeviceProfile.UdiCarrier.AsObject,
     status?: USCoreImplantableDeviceProfile.StatusCode.AsObject,
-    statusReasonList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    statusReason: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     distinctIdentifier?: proto_r4_core_datatypes_pb.String.AsObject,
     manufacturer?: proto_r4_core_datatypes_pb.String.AsObject,
     manufactureDate?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     expirationDate?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     lotNumber?: proto_r4_core_datatypes_pb.String.AsObject,
     serialNumber?: proto_r4_core_datatypes_pb.String.AsObject,
-    deviceNameList: Array<USCoreImplantableDeviceProfile.DeviceName.AsObject>,
+    deviceName: Array<USCoreImplantableDeviceProfile.DeviceName.AsObject>,
     modelNumber?: proto_r4_core_datatypes_pb.String.AsObject,
     partNumber?: proto_r4_core_datatypes_pb.String.AsObject,
     type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    specializationList: Array<USCoreImplantableDeviceProfile.Specialization.AsObject>,
-    versionList: Array<USCoreImplantableDeviceProfile.Version.AsObject>,
-    propertyList: Array<USCoreImplantableDeviceProfile.Property.AsObject>,
+    specialization: Array<USCoreImplantableDeviceProfile.Specialization.AsObject>,
+    version: Array<USCoreImplantableDeviceProfile.Version.AsObject>,
+    property: Array<USCoreImplantableDeviceProfile.Property.AsObject>,
     patient?: proto_r4_core_datatypes_pb.Reference.AsObject,
     owner?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    contactList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    contact: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
     location?: proto_r4_core_datatypes_pb.Reference.AsObject,
     url?: proto_r4_core_datatypes_pb.Uri.AsObject,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    safetyList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    safety: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     parent?: proto_r4_core_datatypes_pb.Reference.AsObject,
   }
 
@@ -6142,14 +6142,14 @@ export namespace USCoreImplantableDeviceProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasDeviceIdentifier(): boolean;
@@ -6195,8 +6195,8 @@ export namespace USCoreImplantableDeviceProfile {
   export namespace UdiCarrier {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       deviceIdentifier?: proto_r4_core_datatypes_pb.String.AsObject,
       issuer?: proto_r4_core_datatypes_pb.Uri.AsObject,
       jurisdiction?: proto_r4_core_datatypes_pb.Uri.AsObject,
@@ -6214,9 +6214,9 @@ export namespace USCoreImplantableDeviceProfile {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -6233,7 +6233,7 @@ export namespace USCoreImplantableDeviceProfile {
       export type AsObject = {
         value: proto_r4_core_codes_pb.UDIEntryTypeCode.ValueMap[keyof proto_r4_core_codes_pb.UDIEntryTypeCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -6247,9 +6247,9 @@ export namespace USCoreImplantableDeviceProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -6266,7 +6266,7 @@ export namespace USCoreImplantableDeviceProfile {
     export type AsObject = {
       value: proto_r4_core_codes_pb.FHIRDeviceStatusCode.ValueMap[keyof proto_r4_core_codes_pb.FHIRDeviceStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -6276,14 +6276,14 @@ export namespace USCoreImplantableDeviceProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasName(): boolean;
@@ -6309,8 +6309,8 @@ export namespace USCoreImplantableDeviceProfile {
   export namespace DeviceName {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       name?: proto_r4_core_datatypes_pb.String.AsObject,
       type?: USCoreImplantableDeviceProfile.DeviceName.TypeCode.AsObject,
     }
@@ -6324,9 +6324,9 @@ export namespace USCoreImplantableDeviceProfile {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -6343,7 +6343,7 @@ export namespace USCoreImplantableDeviceProfile {
       export type AsObject = {
         value: proto_r4_core_codes_pb.DeviceNameTypeCode.ValueMap[keyof proto_r4_core_codes_pb.DeviceNameTypeCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -6354,14 +6354,14 @@ export namespace USCoreImplantableDeviceProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSystemType(): boolean;
@@ -6387,8 +6387,8 @@ export namespace USCoreImplantableDeviceProfile {
   export namespace Specialization {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       systemType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       version?: proto_r4_core_datatypes_pb.String.AsObject,
     }
@@ -6400,14 +6400,14 @@ export namespace USCoreImplantableDeviceProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -6438,8 +6438,8 @@ export namespace USCoreImplantableDeviceProfile {
   export namespace Version {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       component?: proto_r4_core_datatypes_pb.Identifier.AsObject,
       value?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -6452,14 +6452,14 @@ export namespace USCoreImplantableDeviceProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -6467,14 +6467,14 @@ export namespace USCoreImplantableDeviceProfile {
     getType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearValueQuantityList(): void;
-    getValueQuantityList(): Array<proto_r4_core_datatypes_pb.Quantity>;
-    setValueQuantityList(value: Array<proto_r4_core_datatypes_pb.Quantity>): void;
+    clearValueQuantity(): void;
+    getValueQuantity(): Array<proto_r4_core_datatypes_pb.Quantity>;
+    setValueQuantity(value: Array<proto_r4_core_datatypes_pb.Quantity>): void;
     addValueQuantity(value?: proto_r4_core_datatypes_pb.Quantity, index?: number): proto_r4_core_datatypes_pb.Quantity;
 
-    clearValueCodeList(): void;
-    getValueCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setValueCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearValueCode(): void;
+    getValueCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setValueCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addValueCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     serializeBinary(): Uint8Array;
@@ -6490,11 +6490,11 @@ export namespace USCoreImplantableDeviceProfile {
   export namespace Property {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      valueQuantityList: Array<proto_r4_core_datatypes_pb.Quantity.AsObject>,
-      valueCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      valueQuantity: Array<proto_r4_core_datatypes_pb.Quantity.AsObject>,
+      valueCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     }
   }
 }
@@ -6525,24 +6525,24 @@ export class USCoreMedicationRequestProfile extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -6560,9 +6560,9 @@ export class USCoreMedicationRequestProfile extends jspb.Message {
   getIntent(): USCoreMedicationRequestProfile.IntentCode | undefined;
   setIntent(value?: USCoreMedicationRequestProfile.IntentCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasPriority(): boolean;
@@ -6595,9 +6595,9 @@ export class USCoreMedicationRequestProfile extends jspb.Message {
   getEncounter(): proto_r4_core_datatypes_pb.Reference | undefined;
   setEncounter(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearSupportingInformationList(): void;
-  getSupportingInformationList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSupportingInformationList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSupportingInformation(): void;
+  getSupportingInformation(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSupportingInformation(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSupportingInformation(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasAuthoredOn(): boolean;
@@ -6625,29 +6625,29 @@ export class USCoreMedicationRequestProfile extends jspb.Message {
   getRecorder(): proto_r4_core_datatypes_pb.Reference | undefined;
   setRecorder(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearInstantiatesCanonicalList(): void;
-  getInstantiatesCanonicalList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-  setInstantiatesCanonicalList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+  clearInstantiatesCanonical(): void;
+  getInstantiatesCanonical(): Array<proto_r4_core_datatypes_pb.Canonical>;
+  setInstantiatesCanonical(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
   addInstantiatesCanonical(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
-  clearInstantiatesUriList(): void;
-  getInstantiatesUriList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setInstantiatesUriList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearInstantiatesUri(): void;
+  getInstantiatesUri(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setInstantiatesUri(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addInstantiatesUri(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasGroupIdentifier(): boolean;
@@ -6660,19 +6660,19 @@ export class USCoreMedicationRequestProfile extends jspb.Message {
   getCourseOfTherapyType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setCourseOfTherapyType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearInsuranceList(): void;
-  getInsuranceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setInsuranceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearInsurance(): void;
+  getInsurance(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setInsurance(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addInsurance(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearDosageInstructionList(): void;
-  getDosageInstructionList(): Array<proto_r4_core_datatypes_pb.Dosage>;
-  setDosageInstructionList(value: Array<proto_r4_core_datatypes_pb.Dosage>): void;
+  clearDosageInstruction(): void;
+  getDosageInstruction(): Array<proto_r4_core_datatypes_pb.Dosage>;
+  setDosageInstruction(value: Array<proto_r4_core_datatypes_pb.Dosage>): void;
   addDosageInstruction(value?: proto_r4_core_datatypes_pb.Dosage, index?: number): proto_r4_core_datatypes_pb.Dosage;
 
   hasDispenseRequest(): boolean;
@@ -6690,14 +6690,14 @@ export class USCoreMedicationRequestProfile extends jspb.Message {
   getPriorPrescription(): proto_r4_core_datatypes_pb.Reference | undefined;
   setPriorPrescription(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearDetectedIssueList(): void;
-  getDetectedIssueList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setDetectedIssueList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearDetectedIssue(): void;
+  getDetectedIssue(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setDetectedIssue(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addDetectedIssue(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearEventHistoryList(): void;
-  getEventHistoryList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setEventHistoryList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearEventHistory(): void;
+  getEventHistory(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setEventHistory(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addEventHistory(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -6717,41 +6717,41 @@ export namespace USCoreMedicationRequestProfile {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: USCoreMedicationRequestProfile.StatusCode.AsObject,
     statusReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     intent?: USCoreMedicationRequestProfile.IntentCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     priority?: USCoreMedicationRequestProfile.PriorityCode.AsObject,
     doNotPerform?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     reported?: USCoreMedicationRequestProfile.ReportedX.AsObject,
     medication?: USCoreMedicationRequestProfile.MedicationX.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    supportingInformationList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    supportingInformation: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     authoredOn?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     requester?: proto_r4_core_datatypes_pb.Reference.AsObject,
     performer?: proto_r4_core_datatypes_pb.Reference.AsObject,
     performerType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     recorder?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    instantiatesCanonicalList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
-    instantiatesUriList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    instantiatesCanonical: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+    instantiatesUri: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     groupIdentifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
     courseOfTherapyType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    insuranceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    dosageInstructionList: Array<proto_r4_core_datatypes_pb.Dosage.AsObject>,
+    insurance: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    dosageInstruction: Array<proto_r4_core_datatypes_pb.Dosage.AsObject>,
     dispenseRequest?: USCoreMedicationRequestProfile.DispenseRequest.AsObject,
     substitution?: USCoreMedicationRequestProfile.Substitution.AsObject,
     priorPrescription?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    detectedIssueList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    eventHistoryList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    detectedIssue: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    eventHistory: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -6763,9 +6763,9 @@ export namespace USCoreMedicationRequestProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -6782,7 +6782,7 @@ export namespace USCoreMedicationRequestProfile {
     export type AsObject = {
       value: proto_r4_core_codes_pb.MedicationrequestStatusCode.ValueMap[keyof proto_r4_core_codes_pb.MedicationrequestStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -6795,9 +6795,9 @@ export namespace USCoreMedicationRequestProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -6814,7 +6814,7 @@ export namespace USCoreMedicationRequestProfile {
     export type AsObject = {
       value: proto_r4_core_codes_pb.MedicationRequestIntentCode.ValueMap[keyof proto_r4_core_codes_pb.MedicationRequestIntentCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -6827,9 +6827,9 @@ export namespace USCoreMedicationRequestProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -6846,7 +6846,7 @@ export namespace USCoreMedicationRequestProfile {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestPriorityCode.ValueMap[keyof proto_r4_core_codes_pb.RequestPriorityCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -6926,14 +6926,14 @@ export namespace USCoreMedicationRequestProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasInitialFill(): boolean;
@@ -6984,8 +6984,8 @@ export namespace USCoreMedicationRequestProfile {
   export namespace DispenseRequest {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       initialFill?: USCoreMedicationRequestProfile.DispenseRequest.InitialFill.AsObject,
       dispenseInterval?: proto_r4_core_datatypes_pb.Duration.AsObject,
       validityPeriod?: proto_r4_core_datatypes_pb.Period.AsObject,
@@ -7001,14 +7001,14 @@ export namespace USCoreMedicationRequestProfile {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasQuantity(): boolean;
@@ -7034,8 +7034,8 @@ export namespace USCoreMedicationRequestProfile {
     export namespace InitialFill {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
         duration?: proto_r4_core_datatypes_pb.Duration.AsObject,
       }
@@ -7048,14 +7048,14 @@ export namespace USCoreMedicationRequestProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasAllowed(): boolean;
@@ -7081,8 +7081,8 @@ export namespace USCoreMedicationRequestProfile {
   export namespace Substitution {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       allowed?: USCoreMedicationRequestProfile.Substitution.AllowedX.AsObject,
       reason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     }
@@ -7150,24 +7150,24 @@ export class USCoreMedicationProfile extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasCode(): boolean;
@@ -7195,9 +7195,9 @@ export class USCoreMedicationProfile extends jspb.Message {
   getAmount(): proto_r4_core_datatypes_pb.Ratio | undefined;
   setAmount(value?: proto_r4_core_datatypes_pb.Ratio): void;
 
-  clearIngredientList(): void;
-  getIngredientList(): Array<USCoreMedicationProfile.Ingredient>;
-  setIngredientList(value: Array<USCoreMedicationProfile.Ingredient>): void;
+  clearIngredient(): void;
+  getIngredient(): Array<USCoreMedicationProfile.Ingredient>;
+  setIngredient(value: Array<USCoreMedicationProfile.Ingredient>): void;
   addIngredient(value?: USCoreMedicationProfile.Ingredient, index?: number): USCoreMedicationProfile.Ingredient;
 
   hasBatch(): boolean;
@@ -7222,16 +7222,16 @@ export namespace USCoreMedicationProfile {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     status?: USCoreMedicationProfile.StatusCode.AsObject,
     manufacturer?: proto_r4_core_datatypes_pb.Reference.AsObject,
     form?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     amount?: proto_r4_core_datatypes_pb.Ratio.AsObject,
-    ingredientList: Array<USCoreMedicationProfile.Ingredient.AsObject>,
+    ingredient: Array<USCoreMedicationProfile.Ingredient.AsObject>,
     batch?: USCoreMedicationProfile.Batch.AsObject,
   }
 
@@ -7244,9 +7244,9 @@ export namespace USCoreMedicationProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -7263,7 +7263,7 @@ export namespace USCoreMedicationProfile {
     export type AsObject = {
       value: proto_r4_core_codes_pb.MedicationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.MedicationStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -7273,14 +7273,14 @@ export namespace USCoreMedicationProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasItem(): boolean;
@@ -7311,8 +7311,8 @@ export namespace USCoreMedicationProfile {
   export namespace Ingredient {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       item?: USCoreMedicationProfile.Ingredient.ItemX.AsObject,
       isActive?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       strength?: proto_r4_core_datatypes_pb.Ratio.AsObject,
@@ -7360,14 +7360,14 @@ export namespace USCoreMedicationProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasLotNumber(): boolean;
@@ -7393,8 +7393,8 @@ export namespace USCoreMedicationProfile {
   export namespace Batch {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       lotNumber?: proto_r4_core_datatypes_pb.String.AsObject,
       expirationDate?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     }
@@ -7427,24 +7427,24 @@ export class USCoreGoalProfile extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasLifecycleStatus(): boolean;
@@ -7457,9 +7457,9 @@ export class USCoreGoalProfile extends jspb.Message {
   getAchievementStatus(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setAchievementStatus(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasPriority(): boolean;
@@ -7482,9 +7482,9 @@ export class USCoreGoalProfile extends jspb.Message {
   getStart(): USCoreGoalProfile.StartX | undefined;
   setStart(value?: USCoreGoalProfile.StartX): void;
 
-  clearTargetList(): void;
-  getTargetList(): Array<USCoreGoalProfile.Target>;
-  setTargetList(value: Array<USCoreGoalProfile.Target>): void;
+  clearTarget(): void;
+  getTarget(): Array<USCoreGoalProfile.Target>;
+  setTarget(value: Array<USCoreGoalProfile.Target>): void;
   addTarget(value?: USCoreGoalProfile.Target, index?: number): USCoreGoalProfile.Target;
 
   hasStatusDate(): boolean;
@@ -7502,24 +7502,24 @@ export class USCoreGoalProfile extends jspb.Message {
   getExpressedBy(): proto_r4_core_datatypes_pb.Reference | undefined;
   setExpressedBy(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearAddressesList(): void;
-  getAddressesList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setAddressesList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearAddresses(): void;
+  getAddresses(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setAddresses(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addAddresses(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearOutcomeCodeList(): void;
-  getOutcomeCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setOutcomeCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearOutcomeCode(): void;
+  getOutcomeCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setOutcomeCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addOutcomeCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearOutcomeReferenceList(): void;
-  getOutcomeReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setOutcomeReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearOutcomeReference(): void;
+  getOutcomeReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setOutcomeReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addOutcomeReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -7539,25 +7539,25 @@ export namespace USCoreGoalProfile {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     lifecycleStatus?: USCoreGoalProfile.LifecycleStatusCode.AsObject,
     achievementStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     priority?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     description?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
     start?: USCoreGoalProfile.StartX.AsObject,
-    targetList: Array<USCoreGoalProfile.Target.AsObject>,
+    target: Array<USCoreGoalProfile.Target.AsObject>,
     statusDate?: proto_r4_core_datatypes_pb.Date.AsObject,
     statusReason?: proto_r4_core_datatypes_pb.String.AsObject,
     expressedBy?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    addressesList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    outcomeCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    outcomeReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    addresses: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    outcomeCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    outcomeReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class LifecycleStatusCode extends jspb.Message {
@@ -7569,9 +7569,9 @@ export namespace USCoreGoalProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -7588,7 +7588,7 @@ export namespace USCoreGoalProfile {
     export type AsObject = {
       value: proto_r4_core_codes_pb.GoalLifecycleStatusCode.ValueMap[keyof proto_r4_core_codes_pb.GoalLifecycleStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -7633,14 +7633,14 @@ export namespace USCoreGoalProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasMeasure(): boolean;
@@ -7671,8 +7671,8 @@ export namespace USCoreGoalProfile {
   export namespace Target {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       measure?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       detail?: USCoreGoalProfile.Target.DetailX.AsObject,
       due?: USCoreGoalProfile.Target.DueX.AsObject,
@@ -7784,19 +7784,19 @@ export class PatientUSCoreRaceExtension extends jspb.Message {
   getId(): proto_r4_core_datatypes_pb.String | undefined;
   setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearOmbCategoryList(): void;
-  getOmbCategoryList(): Array<PatientUSCoreRaceExtension.OmbCategoryCoding>;
-  setOmbCategoryList(value: Array<PatientUSCoreRaceExtension.OmbCategoryCoding>): void;
+  clearOmbCategory(): void;
+  getOmbCategory(): Array<PatientUSCoreRaceExtension.OmbCategoryCoding>;
+  setOmbCategory(value: Array<PatientUSCoreRaceExtension.OmbCategoryCoding>): void;
   addOmbCategory(value?: PatientUSCoreRaceExtension.OmbCategoryCoding, index?: number): PatientUSCoreRaceExtension.OmbCategoryCoding;
 
-  clearDetailedList(): void;
-  getDetailedList(): Array<PatientUSCoreRaceExtension.DetailedCoding>;
-  setDetailedList(value: Array<PatientUSCoreRaceExtension.DetailedCoding>): void;
+  clearDetailed(): void;
+  getDetailed(): Array<PatientUSCoreRaceExtension.DetailedCoding>;
+  setDetailed(value: Array<PatientUSCoreRaceExtension.DetailedCoding>): void;
   addDetailed(value?: PatientUSCoreRaceExtension.DetailedCoding, index?: number): PatientUSCoreRaceExtension.DetailedCoding;
 
   hasText(): boolean;
@@ -7817,9 +7817,9 @@ export class PatientUSCoreRaceExtension extends jspb.Message {
 export namespace PatientUSCoreRaceExtension {
   export type AsObject = {
     id?: proto_r4_core_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    ombCategoryList: Array<PatientUSCoreRaceExtension.OmbCategoryCoding.AsObject>,
-    detailedList: Array<PatientUSCoreRaceExtension.DetailedCoding.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    ombCategory: Array<PatientUSCoreRaceExtension.OmbCategoryCoding.AsObject>,
+    detailed: Array<PatientUSCoreRaceExtension.DetailedCoding.AsObject>,
     text?: proto_r4_core_datatypes_pb.String.AsObject,
   }
 
@@ -7829,9 +7829,9 @@ export namespace PatientUSCoreRaceExtension {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasVersion(): boolean;
@@ -7867,7 +7867,7 @@ export namespace PatientUSCoreRaceExtension {
   export namespace OmbCategoryCoding {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       version?: proto_r4_core_datatypes_pb.String.AsObject,
       code?: PatientUSCoreRaceExtension.OmbCategoryCoding.BoundCode.AsObject,
       display?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -7883,9 +7883,9 @@ export namespace PatientUSCoreRaceExtension {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -7902,7 +7902,7 @@ export namespace PatientUSCoreRaceExtension {
       export type AsObject = {
         value: proto_r4_uscore_codes_pb.OmbRaceCategoriesValueSet.ValueMap[keyof proto_r4_uscore_codes_pb.OmbRaceCategoriesValueSet.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -7913,9 +7913,9 @@ export namespace PatientUSCoreRaceExtension {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasVersion(): boolean;
@@ -7951,7 +7951,7 @@ export namespace PatientUSCoreRaceExtension {
   export namespace DetailedCoding {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       version?: proto_r4_core_datatypes_pb.String.AsObject,
       code?: PatientUSCoreRaceExtension.DetailedCoding.BoundCode.AsObject,
       display?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -7967,9 +7967,9 @@ export namespace PatientUSCoreRaceExtension {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -7986,7 +7986,7 @@ export namespace PatientUSCoreRaceExtension {
       export type AsObject = {
         value: proto_r4_uscore_codes_pb.DetailedRaceValueSet.ValueMap[keyof proto_r4_uscore_codes_pb.DetailedRaceValueSet.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -8018,24 +8018,24 @@ export class USCorePractitionerRoleProfile extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasActive(): boolean;
@@ -8058,39 +8058,39 @@ export class USCorePractitionerRoleProfile extends jspb.Message {
   getOrganization(): proto_r4_core_datatypes_pb.Reference | undefined;
   setOrganization(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearCodeList(): void;
-  getCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCode(): void;
+  getCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearSpecialtyList(): void;
-  getSpecialtyList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setSpecialtyList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearSpecialty(): void;
+  getSpecialty(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setSpecialty(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addSpecialty(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearLocationList(): void;
-  getLocationList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setLocationList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearLocation(): void;
+  getLocation(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setLocation(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addLocation(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearHealthcareServiceList(): void;
-  getHealthcareServiceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setHealthcareServiceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearHealthcareService(): void;
+  getHealthcareService(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setHealthcareService(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addHealthcareService(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearTelecomList(): void;
-  getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearTelecom(): void;
+  getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
-  clearAvailableTimeList(): void;
-  getAvailableTimeList(): Array<USCorePractitionerRoleProfile.AvailableTime>;
-  setAvailableTimeList(value: Array<USCorePractitionerRoleProfile.AvailableTime>): void;
+  clearAvailableTime(): void;
+  getAvailableTime(): Array<USCorePractitionerRoleProfile.AvailableTime>;
+  setAvailableTime(value: Array<USCorePractitionerRoleProfile.AvailableTime>): void;
   addAvailableTime(value?: USCorePractitionerRoleProfile.AvailableTime, index?: number): USCorePractitionerRoleProfile.AvailableTime;
 
-  clearNotAvailableList(): void;
-  getNotAvailableList(): Array<USCorePractitionerRoleProfile.NotAvailable>;
-  setNotAvailableList(value: Array<USCorePractitionerRoleProfile.NotAvailable>): void;
+  clearNotAvailable(): void;
+  getNotAvailable(): Array<USCorePractitionerRoleProfile.NotAvailable>;
+  setNotAvailable(value: Array<USCorePractitionerRoleProfile.NotAvailable>): void;
   addNotAvailable(value?: USCorePractitionerRoleProfile.NotAvailable, index?: number): USCorePractitionerRoleProfile.NotAvailable;
 
   hasAvailabilityExceptions(): boolean;
@@ -8098,9 +8098,9 @@ export class USCorePractitionerRoleProfile extends jspb.Message {
   getAvailabilityExceptions(): proto_r4_core_datatypes_pb.String | undefined;
   setAvailabilityExceptions(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearEndpointList(): void;
-  getEndpointList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setEndpointList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearEndpoint(): void;
+  getEndpoint(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setEndpoint(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addEndpoint(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -8120,23 +8120,23 @@ export namespace USCorePractitionerRoleProfile {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     active?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     period?: proto_r4_core_datatypes_pb.Period.AsObject,
     practitioner?: proto_r4_core_datatypes_pb.Reference.AsObject,
     organization?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    codeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    specialtyList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    locationList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    healthcareServiceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
-    availableTimeList: Array<USCorePractitionerRoleProfile.AvailableTime.AsObject>,
-    notAvailableList: Array<USCorePractitionerRoleProfile.NotAvailable.AsObject>,
+    code: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    specialty: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    location: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    healthcareService: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    availableTime: Array<USCorePractitionerRoleProfile.AvailableTime.AsObject>,
+    notAvailable: Array<USCorePractitionerRoleProfile.NotAvailable.AsObject>,
     availabilityExceptions?: proto_r4_core_datatypes_pb.String.AsObject,
-    endpointList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    endpoint: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class AvailableTime extends jspb.Message {
@@ -8145,19 +8145,19 @@ export namespace USCorePractitionerRoleProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearDaysOfWeekList(): void;
-    getDaysOfWeekList(): Array<USCorePractitionerRoleProfile.AvailableTime.DaysOfWeekCode>;
-    setDaysOfWeekList(value: Array<USCorePractitionerRoleProfile.AvailableTime.DaysOfWeekCode>): void;
+    clearDaysOfWeek(): void;
+    getDaysOfWeek(): Array<USCorePractitionerRoleProfile.AvailableTime.DaysOfWeekCode>;
+    setDaysOfWeek(value: Array<USCorePractitionerRoleProfile.AvailableTime.DaysOfWeekCode>): void;
     addDaysOfWeek(value?: USCorePractitionerRoleProfile.AvailableTime.DaysOfWeekCode, index?: number): USCorePractitionerRoleProfile.AvailableTime.DaysOfWeekCode;
 
     hasAllDay(): boolean;
@@ -8188,9 +8188,9 @@ export namespace USCorePractitionerRoleProfile {
   export namespace AvailableTime {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      daysOfWeekList: Array<USCorePractitionerRoleProfile.AvailableTime.DaysOfWeekCode.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      daysOfWeek: Array<USCorePractitionerRoleProfile.AvailableTime.DaysOfWeekCode.AsObject>,
       allDay?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       availableStartTime?: proto_r4_core_datatypes_pb.Time.AsObject,
       availableEndTime?: proto_r4_core_datatypes_pb.Time.AsObject,
@@ -8205,9 +8205,9 @@ export namespace USCorePractitionerRoleProfile {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -8224,7 +8224,7 @@ export namespace USCorePractitionerRoleProfile {
       export type AsObject = {
         value: proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap[keyof proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -8235,14 +8235,14 @@ export namespace USCorePractitionerRoleProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasDescription(): boolean;
@@ -8268,8 +8268,8 @@ export namespace USCorePractitionerRoleProfile {
   export namespace NotAvailable {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       description?: proto_r4_core_datatypes_pb.String.AsObject,
       during?: proto_r4_core_datatypes_pb.Period.AsObject,
     }
@@ -8302,24 +8302,24 @@ export class USCoreAllergyIntolerance extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasClinicalStatus(): boolean;
@@ -8337,9 +8337,9 @@ export class USCoreAllergyIntolerance extends jspb.Message {
   getType(): USCoreAllergyIntolerance.TypeCode | undefined;
   setType(value?: USCoreAllergyIntolerance.TypeCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<USCoreAllergyIntolerance.CategoryCode>;
-  setCategoryList(value: Array<USCoreAllergyIntolerance.CategoryCode>): void;
+  clearCategory(): void;
+  getCategory(): Array<USCoreAllergyIntolerance.CategoryCode>;
+  setCategory(value: Array<USCoreAllergyIntolerance.CategoryCode>): void;
   addCategory(value?: USCoreAllergyIntolerance.CategoryCode, index?: number): USCoreAllergyIntolerance.CategoryCode;
 
   hasCriticality(): boolean;
@@ -8387,14 +8387,14 @@ export class USCoreAllergyIntolerance extends jspb.Message {
   getLastOccurrence(): proto_r4_core_datatypes_pb.DateTime | undefined;
   setLastOccurrence(value?: proto_r4_core_datatypes_pb.DateTime): void;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-  clearReactionList(): void;
-  getReactionList(): Array<USCoreAllergyIntolerance.Reaction>;
-  setReactionList(value: Array<USCoreAllergyIntolerance.Reaction>): void;
+  clearReaction(): void;
+  getReaction(): Array<USCoreAllergyIntolerance.Reaction>;
+  setReaction(value: Array<USCoreAllergyIntolerance.Reaction>): void;
   addReaction(value?: USCoreAllergyIntolerance.Reaction, index?: number): USCoreAllergyIntolerance.Reaction;
 
   serializeBinary(): Uint8Array;
@@ -8414,14 +8414,14 @@ export namespace USCoreAllergyIntolerance {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     clinicalStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     verificationStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     type?: USCoreAllergyIntolerance.TypeCode.AsObject,
-    categoryList: Array<USCoreAllergyIntolerance.CategoryCode.AsObject>,
+    category: Array<USCoreAllergyIntolerance.CategoryCode.AsObject>,
     criticality?: USCoreAllergyIntolerance.CriticalityCode.AsObject,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     patient?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -8431,8 +8431,8 @@ export namespace USCoreAllergyIntolerance {
     recorder?: proto_r4_core_datatypes_pb.Reference.AsObject,
     asserter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     lastOccurrence?: proto_r4_core_datatypes_pb.DateTime.AsObject,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-    reactionList: Array<USCoreAllergyIntolerance.Reaction.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    reaction: Array<USCoreAllergyIntolerance.Reaction.AsObject>,
   }
 
   export class TypeCode extends jspb.Message {
@@ -8444,9 +8444,9 @@ export namespace USCoreAllergyIntolerance {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -8463,7 +8463,7 @@ export namespace USCoreAllergyIntolerance {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AllergyIntoleranceTypeCode.ValueMap[keyof proto_r4_core_codes_pb.AllergyIntoleranceTypeCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -8476,9 +8476,9 @@ export namespace USCoreAllergyIntolerance {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -8495,7 +8495,7 @@ export namespace USCoreAllergyIntolerance {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AllergyIntoleranceCategoryCode.ValueMap[keyof proto_r4_core_codes_pb.AllergyIntoleranceCategoryCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -8508,9 +8508,9 @@ export namespace USCoreAllergyIntolerance {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -8527,7 +8527,7 @@ export namespace USCoreAllergyIntolerance {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AllergyIntoleranceCriticalityCode.ValueMap[keyof proto_r4_core_codes_pb.AllergyIntoleranceCriticalityCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -8593,14 +8593,14 @@ export namespace USCoreAllergyIntolerance {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSubstance(): boolean;
@@ -8608,9 +8608,9 @@ export namespace USCoreAllergyIntolerance {
     getSubstance(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setSubstance(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearManifestationList(): void;
-    getManifestationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setManifestationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearManifestation(): void;
+    getManifestation(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setManifestation(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addManifestation(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasDescription(): boolean;
@@ -8633,9 +8633,9 @@ export namespace USCoreAllergyIntolerance {
     getExposureRoute(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setExposureRoute(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearNoteList(): void;
-    getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-    setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+    clearNote(): void;
+    getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+    setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
     addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
     serializeBinary(): Uint8Array;
@@ -8651,15 +8651,15 @@ export namespace USCoreAllergyIntolerance {
   export namespace Reaction {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       substance?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      manifestationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      manifestation: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       description?: proto_r4_core_datatypes_pb.String.AsObject,
       onset?: proto_r4_core_datatypes_pb.DateTime.AsObject,
       severity?: USCoreAllergyIntolerance.Reaction.SeverityCode.AsObject,
       exposureRoute?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+      note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
     }
 
     export class SeverityCode extends jspb.Message {
@@ -8671,9 +8671,9 @@ export namespace USCoreAllergyIntolerance {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -8690,7 +8690,7 @@ export namespace USCoreAllergyIntolerance {
       export type AsObject = {
         value: proto_r4_core_codes_pb.AllergyIntoleranceSeverityCode.ValueMap[keyof proto_r4_core_codes_pb.AllergyIntoleranceSeverityCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -8722,49 +8722,49 @@ export class USCoreCarePlanProfile extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearInstantiatesCanonicalList(): void;
-  getInstantiatesCanonicalList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-  setInstantiatesCanonicalList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+  clearInstantiatesCanonical(): void;
+  getInstantiatesCanonical(): Array<proto_r4_core_datatypes_pb.Canonical>;
+  setInstantiatesCanonical(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
   addInstantiatesCanonical(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
-  clearInstantiatesUriList(): void;
-  getInstantiatesUriList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setInstantiatesUriList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearInstantiatesUri(): void;
+  getInstantiatesUri(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setInstantiatesUri(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addInstantiatesUri(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearReplacesList(): void;
-  getReplacesList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReplacesList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReplaces(): void;
+  getReplaces(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReplaces(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReplaces(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearPartOfList(): void;
-  getPartOfList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPartOfList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPartOf(): void;
+  getPartOf(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPartOf(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPartOf(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -8777,9 +8777,9 @@ export class USCoreCarePlanProfile extends jspb.Message {
   getIntent(): USCoreCarePlanProfile.IntentCode | undefined;
   setIntent(value?: USCoreCarePlanProfile.IntentCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasTitle(): boolean;
@@ -8817,39 +8817,39 @@ export class USCoreCarePlanProfile extends jspb.Message {
   getAuthor(): proto_r4_core_datatypes_pb.Reference | undefined;
   setAuthor(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearContributorList(): void;
-  getContributorList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setContributorList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearContributor(): void;
+  getContributor(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setContributor(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addContributor(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearCareTeamList(): void;
-  getCareTeamList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setCareTeamList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearCareTeam(): void;
+  getCareTeam(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setCareTeam(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addCareTeam(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearAddressesList(): void;
-  getAddressesList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setAddressesList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearAddresses(): void;
+  getAddresses(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setAddresses(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addAddresses(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearSupportingInfoList(): void;
-  getSupportingInfoList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSupportingInfoList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSupportingInfo(): void;
+  getSupportingInfo(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSupportingInfo(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSupportingInfo(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearGoalList(): void;
-  getGoalList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setGoalList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearGoal(): void;
+  getGoal(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setGoal(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addGoal(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearActivityList(): void;
-  getActivityList(): Array<USCoreCarePlanProfile.Activity>;
-  setActivityList(value: Array<USCoreCarePlanProfile.Activity>): void;
+  clearActivity(): void;
+  getActivity(): Array<USCoreCarePlanProfile.Activity>;
+  setActivity(value: Array<USCoreCarePlanProfile.Activity>): void;
   addActivity(value?: USCoreCarePlanProfile.Activity, index?: number): USCoreCarePlanProfile.Activity;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   serializeBinary(): Uint8Array;
@@ -8869,18 +8869,18 @@ export namespace USCoreCarePlanProfile {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    instantiatesCanonicalList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
-    instantiatesUriList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    replacesList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    partOfList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    instantiatesCanonical: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+    instantiatesUri: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    replaces: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    partOf: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: USCoreCarePlanProfile.StatusCode.AsObject,
     intent?: USCoreCarePlanProfile.IntentCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     title?: proto_r4_core_datatypes_pb.String.AsObject,
     description?: proto_r4_core_datatypes_pb.String.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -8888,13 +8888,13 @@ export namespace USCoreCarePlanProfile {
     period?: proto_r4_core_datatypes_pb.Period.AsObject,
     created?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     author?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    contributorList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    careTeamList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    addressesList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    supportingInfoList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    goalList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    activityList: Array<USCoreCarePlanProfile.Activity.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    contributor: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    careTeam: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    addresses: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    supportingInfo: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    goal: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    activity: Array<USCoreCarePlanProfile.Activity.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -8906,9 +8906,9 @@ export namespace USCoreCarePlanProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -8925,7 +8925,7 @@ export namespace USCoreCarePlanProfile {
     export type AsObject = {
       value: proto_r4_core_codes_pb.RequestStatusCode.ValueMap[keyof proto_r4_core_codes_pb.RequestStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -8938,9 +8938,9 @@ export namespace USCoreCarePlanProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -8957,7 +8957,7 @@ export namespace USCoreCarePlanProfile {
     export type AsObject = {
       value: proto_r4_core_valuesets_pb.CarePlanIntentValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.CarePlanIntentValueSet.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -8967,29 +8967,29 @@ export namespace USCoreCarePlanProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearOutcomeCodeableConceptList(): void;
-    getOutcomeCodeableConceptList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setOutcomeCodeableConceptList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearOutcomeCodeableConcept(): void;
+    getOutcomeCodeableConcept(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setOutcomeCodeableConcept(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addOutcomeCodeableConcept(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearOutcomeReferenceList(): void;
-    getOutcomeReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setOutcomeReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearOutcomeReference(): void;
+    getOutcomeReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setOutcomeReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addOutcomeReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-    clearProgressList(): void;
-    getProgressList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-    setProgressList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+    clearProgress(): void;
+    getProgress(): Array<proto_r4_core_datatypes_pb.Annotation>;
+    setProgress(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
     addProgress(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
     hasReference(): boolean;
@@ -9015,11 +9015,11 @@ export namespace USCoreCarePlanProfile {
   export namespace Activity {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      outcomeCodeableConceptList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      outcomeReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-      progressList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      outcomeCodeableConcept: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      outcomeReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      progress: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
       reference?: proto_r4_core_datatypes_pb.Reference.AsObject,
       detail?: USCoreCarePlanProfile.Activity.Detail.AsObject,
     }
@@ -9030,14 +9030,14 @@ export namespace USCoreCarePlanProfile {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasKind(): boolean;
@@ -9045,14 +9045,14 @@ export namespace USCoreCarePlanProfile {
       getKind(): USCoreCarePlanProfile.Activity.Detail.KindCode | undefined;
       setKind(value?: USCoreCarePlanProfile.Activity.Detail.KindCode): void;
 
-      clearInstantiatesCanonicalList(): void;
-      getInstantiatesCanonicalList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-      setInstantiatesCanonicalList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+      clearInstantiatesCanonical(): void;
+      getInstantiatesCanonical(): Array<proto_r4_core_datatypes_pb.Canonical>;
+      setInstantiatesCanonical(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
       addInstantiatesCanonical(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
-      clearInstantiatesUriList(): void;
-      getInstantiatesUriList(): Array<proto_r4_core_datatypes_pb.Uri>;
-      setInstantiatesUriList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+      clearInstantiatesUri(): void;
+      getInstantiatesUri(): Array<proto_r4_core_datatypes_pb.Uri>;
+      setInstantiatesUri(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
       addInstantiatesUri(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
       hasCode(): boolean;
@@ -9060,19 +9060,19 @@ export namespace USCoreCarePlanProfile {
       getCode(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
       setCode(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-      clearReasonCodeList(): void;
-      getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-      setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+      clearReasonCode(): void;
+      getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+      setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
       addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-      clearReasonReferenceList(): void;
-      getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-      setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+      clearReasonReference(): void;
+      getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+      setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
       addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-      clearGoalList(): void;
-      getGoalList(): Array<proto_r4_core_datatypes_pb.Reference>;
-      setGoalList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+      clearGoal(): void;
+      getGoal(): Array<proto_r4_core_datatypes_pb.Reference>;
+      setGoal(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
       addGoal(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
       hasStatus(): boolean;
@@ -9100,9 +9100,9 @@ export namespace USCoreCarePlanProfile {
       getLocation(): proto_r4_core_datatypes_pb.Reference | undefined;
       setLocation(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-      clearPerformerList(): void;
-      getPerformerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-      setPerformerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+      clearPerformer(): void;
+      getPerformer(): Array<proto_r4_core_datatypes_pb.Reference>;
+      setPerformer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
       addPerformer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
       hasProduct(): boolean;
@@ -9138,21 +9138,21 @@ export namespace USCoreCarePlanProfile {
     export namespace Detail {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         kind?: USCoreCarePlanProfile.Activity.Detail.KindCode.AsObject,
-        instantiatesCanonicalList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
-        instantiatesUriList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+        instantiatesCanonical: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+        instantiatesUri: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
         code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-        reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-        reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-        goalList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+        reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+        reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+        goal: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
         status?: USCoreCarePlanProfile.Activity.Detail.StatusCode.AsObject,
         statusReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         doNotPerform?: proto_r4_core_datatypes_pb.Boolean.AsObject,
         scheduled?: USCoreCarePlanProfile.Activity.Detail.ScheduledX.AsObject,
         location?: proto_r4_core_datatypes_pb.Reference.AsObject,
-        performerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+        performer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
         product?: USCoreCarePlanProfile.Activity.Detail.ProductX.AsObject,
         dailyAmount?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
         quantity?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
@@ -9168,9 +9168,9 @@ export namespace USCoreCarePlanProfile {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         serializeBinary(): Uint8Array;
@@ -9187,7 +9187,7 @@ export namespace USCoreCarePlanProfile {
         export type AsObject = {
           value: proto_r4_core_valuesets_pb.CarePlanActivityKindValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.CarePlanActivityKindValueSet.ValueMap],
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         }
       }
 
@@ -9200,9 +9200,9 @@ export namespace USCoreCarePlanProfile {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         serializeBinary(): Uint8Array;
@@ -9219,7 +9219,7 @@ export namespace USCoreCarePlanProfile {
         export type AsObject = {
           value: proto_r4_core_codes_pb.CarePlanActivityStatusCode.ValueMap[keyof proto_r4_core_codes_pb.CarePlanActivityStatusCode.ValueMap],
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         }
       }
 
@@ -9329,24 +9329,24 @@ export class USCorePatientProfile extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasActive(): boolean;
@@ -9354,14 +9354,14 @@ export class USCorePatientProfile extends jspb.Message {
   getActive(): proto_r4_core_datatypes_pb.Boolean | undefined;
   setActive(value?: proto_r4_core_datatypes_pb.Boolean): void;
 
-  clearNameList(): void;
-  getNameList(): Array<proto_r4_core_datatypes_pb.HumanName>;
-  setNameList(value: Array<proto_r4_core_datatypes_pb.HumanName>): void;
+  clearName(): void;
+  getName(): Array<proto_r4_core_datatypes_pb.HumanName>;
+  setName(value: Array<proto_r4_core_datatypes_pb.HumanName>): void;
   addName(value?: proto_r4_core_datatypes_pb.HumanName, index?: number): proto_r4_core_datatypes_pb.HumanName;
 
-  clearTelecomList(): void;
-  getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearTelecom(): void;
+  getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
   hasGender(): boolean;
@@ -9379,9 +9379,9 @@ export class USCorePatientProfile extends jspb.Message {
   getDeceased(): USCorePatientProfile.DeceasedX | undefined;
   setDeceased(value?: USCorePatientProfile.DeceasedX): void;
 
-  clearAddressList(): void;
-  getAddressList(): Array<proto_r4_core_datatypes_pb.Address>;
-  setAddressList(value: Array<proto_r4_core_datatypes_pb.Address>): void;
+  clearAddress(): void;
+  getAddress(): Array<proto_r4_core_datatypes_pb.Address>;
+  setAddress(value: Array<proto_r4_core_datatypes_pb.Address>): void;
   addAddress(value?: proto_r4_core_datatypes_pb.Address, index?: number): proto_r4_core_datatypes_pb.Address;
 
   hasMaritalStatus(): boolean;
@@ -9394,24 +9394,24 @@ export class USCorePatientProfile extends jspb.Message {
   getMultipleBirth(): USCorePatientProfile.MultipleBirthX | undefined;
   setMultipleBirth(value?: USCorePatientProfile.MultipleBirthX): void;
 
-  clearPhotoList(): void;
-  getPhotoList(): Array<proto_r4_core_datatypes_pb.Attachment>;
-  setPhotoList(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
+  clearPhoto(): void;
+  getPhoto(): Array<proto_r4_core_datatypes_pb.Attachment>;
+  setPhoto(value: Array<proto_r4_core_datatypes_pb.Attachment>): void;
   addPhoto(value?: proto_r4_core_datatypes_pb.Attachment, index?: number): proto_r4_core_datatypes_pb.Attachment;
 
-  clearContactList(): void;
-  getContactList(): Array<USCorePatientProfile.Contact>;
-  setContactList(value: Array<USCorePatientProfile.Contact>): void;
+  clearContact(): void;
+  getContact(): Array<USCorePatientProfile.Contact>;
+  setContact(value: Array<USCorePatientProfile.Contact>): void;
   addContact(value?: USCorePatientProfile.Contact, index?: number): USCorePatientProfile.Contact;
 
-  clearCommunicationList(): void;
-  getCommunicationList(): Array<USCorePatientProfile.Communication>;
-  setCommunicationList(value: Array<USCorePatientProfile.Communication>): void;
+  clearCommunication(): void;
+  getCommunication(): Array<USCorePatientProfile.Communication>;
+  setCommunication(value: Array<USCorePatientProfile.Communication>): void;
   addCommunication(value?: USCorePatientProfile.Communication, index?: number): USCorePatientProfile.Communication;
 
-  clearGeneralPractitionerList(): void;
-  getGeneralPractitionerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setGeneralPractitionerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearGeneralPractitioner(): void;
+  getGeneralPractitioner(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setGeneralPractitioner(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addGeneralPractitioner(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasManagingOrganization(): boolean;
@@ -9419,9 +9419,9 @@ export class USCorePatientProfile extends jspb.Message {
   getManagingOrganization(): proto_r4_core_datatypes_pb.Reference | undefined;
   setManagingOrganization(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearLinkList(): void;
-  getLinkList(): Array<USCorePatientProfile.Link>;
-  setLinkList(value: Array<USCorePatientProfile.Link>): void;
+  clearLink(): void;
+  getLink(): Array<USCorePatientProfile.Link>;
+  setLink(value: Array<USCorePatientProfile.Link>): void;
   addLink(value?: USCorePatientProfile.Link, index?: number): USCorePatientProfile.Link;
 
   hasRace(): boolean;
@@ -9456,25 +9456,25 @@ export namespace USCorePatientProfile {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     active?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-    nameList: Array<proto_r4_core_datatypes_pb.HumanName.AsObject>,
-    telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    name: Array<proto_r4_core_datatypes_pb.HumanName.AsObject>,
+    telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
     gender?: USCorePatientProfile.GenderCode.AsObject,
     birthDate?: proto_r4_core_datatypes_pb.Date.AsObject,
     deceased?: USCorePatientProfile.DeceasedX.AsObject,
-    addressList: Array<proto_r4_core_datatypes_pb.Address.AsObject>,
+    address: Array<proto_r4_core_datatypes_pb.Address.AsObject>,
     maritalStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     multipleBirth?: USCorePatientProfile.MultipleBirthX.AsObject,
-    photoList: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
-    contactList: Array<USCorePatientProfile.Contact.AsObject>,
-    communicationList: Array<USCorePatientProfile.Communication.AsObject>,
-    generalPractitionerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    photo: Array<proto_r4_core_datatypes_pb.Attachment.AsObject>,
+    contact: Array<USCorePatientProfile.Contact.AsObject>,
+    communication: Array<USCorePatientProfile.Communication.AsObject>,
+    generalPractitioner: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     managingOrganization?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    linkList: Array<USCorePatientProfile.Link.AsObject>,
+    link: Array<USCorePatientProfile.Link.AsObject>,
     race?: PatientUSCoreRaceExtension.AsObject,
     ethnicity?: PatientUSCoreEthnicityExtension.AsObject,
     birthsex?: PatientUSCoreBirthSexExtension.ValueCode.AsObject,
@@ -9489,9 +9489,9 @@ export namespace USCorePatientProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -9508,7 +9508,7 @@ export namespace USCorePatientProfile {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AdministrativeGenderCode.ValueMap[keyof proto_r4_core_codes_pb.AdministrativeGenderCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -9588,19 +9588,19 @@ export namespace USCorePatientProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearRelationshipList(): void;
-    getRelationshipList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setRelationshipList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearRelationship(): void;
+    getRelationship(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setRelationship(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addRelationship(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasName(): boolean;
@@ -9608,9 +9608,9 @@ export namespace USCorePatientProfile {
     getName(): proto_r4_core_datatypes_pb.HumanName | undefined;
     setName(value?: proto_r4_core_datatypes_pb.HumanName): void;
 
-    clearTelecomList(): void;
-    getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-    setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+    clearTelecom(): void;
+    getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+    setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
     addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
     hasAddress(): boolean;
@@ -9646,11 +9646,11 @@ export namespace USCorePatientProfile {
   export namespace Contact {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      relationshipList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      relationship: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       name?: proto_r4_core_datatypes_pb.HumanName.AsObject,
-      telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+      telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
       address?: proto_r4_core_datatypes_pb.Address.AsObject,
       gender?: USCorePatientProfile.Contact.GenderCode.AsObject,
       organization?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -9666,9 +9666,9 @@ export namespace USCorePatientProfile {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -9685,7 +9685,7 @@ export namespace USCorePatientProfile {
       export type AsObject = {
         value: proto_r4_core_codes_pb.AdministrativeGenderCode.ValueMap[keyof proto_r4_core_codes_pb.AdministrativeGenderCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -9696,14 +9696,14 @@ export namespace USCorePatientProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasLanguage(): boolean;
@@ -9729,8 +9729,8 @@ export namespace USCorePatientProfile {
   export namespace Communication {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       language?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       preferred?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     }
@@ -9742,14 +9742,14 @@ export namespace USCorePatientProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasOther(): boolean;
@@ -9775,8 +9775,8 @@ export namespace USCorePatientProfile {
   export namespace Link {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       other?: proto_r4_core_datatypes_pb.Reference.AsObject,
       type?: USCorePatientProfile.Link.TypeCode.AsObject,
     }
@@ -9790,9 +9790,9 @@ export namespace USCorePatientProfile {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -9809,7 +9809,7 @@ export namespace USCorePatientProfile {
       export type AsObject = {
         value: proto_r4_core_codes_pb.LinkTypeCode.ValueMap[keyof proto_r4_core_codes_pb.LinkTypeCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -9821,9 +9821,9 @@ export class PatientUSCoreEthnicityExtension extends jspb.Message {
   getId(): proto_r4_core_datatypes_pb.String | undefined;
   setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasOmbCategory(): boolean;
@@ -9831,9 +9831,9 @@ export class PatientUSCoreEthnicityExtension extends jspb.Message {
   getOmbCategory(): PatientUSCoreEthnicityExtension.OmbCategoryCoding | undefined;
   setOmbCategory(value?: PatientUSCoreEthnicityExtension.OmbCategoryCoding): void;
 
-  clearDetailedList(): void;
-  getDetailedList(): Array<PatientUSCoreEthnicityExtension.DetailedCoding>;
-  setDetailedList(value: Array<PatientUSCoreEthnicityExtension.DetailedCoding>): void;
+  clearDetailed(): void;
+  getDetailed(): Array<PatientUSCoreEthnicityExtension.DetailedCoding>;
+  setDetailed(value: Array<PatientUSCoreEthnicityExtension.DetailedCoding>): void;
   addDetailed(value?: PatientUSCoreEthnicityExtension.DetailedCoding, index?: number): PatientUSCoreEthnicityExtension.DetailedCoding;
 
   hasText(): boolean;
@@ -9854,9 +9854,9 @@ export class PatientUSCoreEthnicityExtension extends jspb.Message {
 export namespace PatientUSCoreEthnicityExtension {
   export type AsObject = {
     id?: proto_r4_core_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     ombCategory?: PatientUSCoreEthnicityExtension.OmbCategoryCoding.AsObject,
-    detailedList: Array<PatientUSCoreEthnicityExtension.DetailedCoding.AsObject>,
+    detailed: Array<PatientUSCoreEthnicityExtension.DetailedCoding.AsObject>,
     text?: proto_r4_core_datatypes_pb.String.AsObject,
   }
 
@@ -9866,9 +9866,9 @@ export namespace PatientUSCoreEthnicityExtension {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasVersion(): boolean;
@@ -9904,7 +9904,7 @@ export namespace PatientUSCoreEthnicityExtension {
   export namespace OmbCategoryCoding {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       version?: proto_r4_core_datatypes_pb.String.AsObject,
       code?: PatientUSCoreEthnicityExtension.OmbCategoryCoding.BoundCode.AsObject,
       display?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -9920,9 +9920,9 @@ export namespace PatientUSCoreEthnicityExtension {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -9939,7 +9939,7 @@ export namespace PatientUSCoreEthnicityExtension {
       export type AsObject = {
         value: proto_r4_uscore_codes_pb.OmbEthnicityCategoriesValueSet.ValueMap[keyof proto_r4_uscore_codes_pb.OmbEthnicityCategoriesValueSet.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -9950,9 +9950,9 @@ export namespace PatientUSCoreEthnicityExtension {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasVersion(): boolean;
@@ -9988,7 +9988,7 @@ export namespace PatientUSCoreEthnicityExtension {
   export namespace DetailedCoding {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       version?: proto_r4_core_datatypes_pb.String.AsObject,
       code?: PatientUSCoreEthnicityExtension.DetailedCoding.BoundCode.AsObject,
       display?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -10004,9 +10004,9 @@ export namespace PatientUSCoreEthnicityExtension {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -10023,7 +10023,7 @@ export namespace PatientUSCoreEthnicityExtension {
       export type AsObject = {
         value: proto_r4_uscore_codes_pb.DetailedEthnicityValueSet.ValueMap[keyof proto_r4_uscore_codes_pb.DetailedEthnicityValueSet.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -10035,9 +10035,9 @@ export class UsCoreDirectEmail extends jspb.Message {
   getId(): proto_r4_core_datatypes_pb.String | undefined;
   setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasValueBoolean(): boolean;
@@ -10058,7 +10058,7 @@ export class UsCoreDirectEmail extends jspb.Message {
 export namespace UsCoreDirectEmail {
   export type AsObject = {
     id?: proto_r4_core_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     valueBoolean?: proto_r4_core_datatypes_pb.Boolean.AsObject,
   }
 }
@@ -10089,34 +10089,34 @@ export class USCoreSmokingStatusProfile extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearPartOfList(): void;
-  getPartOfList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPartOfList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPartOf(): void;
+  getPartOf(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPartOf(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPartOf(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -10124,9 +10124,9 @@ export class USCoreSmokingStatusProfile extends jspb.Message {
   getStatus(): USCoreSmokingStatusProfile.StatusCode | undefined;
   setStatus(value?: USCoreSmokingStatusProfile.StatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -10139,9 +10139,9 @@ export class USCoreSmokingStatusProfile extends jspb.Message {
   getSubject(): proto_r4_core_datatypes_pb.Reference | undefined;
   setSubject(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearFocusList(): void;
-  getFocusList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setFocusList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearFocus(): void;
+  getFocus(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setFocus(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addFocus(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasEncounter(): boolean;
@@ -10159,9 +10159,9 @@ export class USCoreSmokingStatusProfile extends jspb.Message {
   getIssued(): proto_r4_core_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_r4_core_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -10174,14 +10174,14 @@ export class USCoreSmokingStatusProfile extends jspb.Message {
   getDataAbsentReason(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setDataAbsentReason(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearInterpretationList(): void;
-  getInterpretationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setInterpretationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearInterpretation(): void;
+  getInterpretation(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setInterpretation(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addInterpretation(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   hasBodySite(): boolean;
@@ -10204,24 +10204,24 @@ export class USCoreSmokingStatusProfile extends jspb.Message {
   getDevice(): proto_r4_core_datatypes_pb.Reference | undefined;
   setDevice(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReferenceRangeList(): void;
-  getReferenceRangeList(): Array<USCoreSmokingStatusProfile.ReferenceRange>;
-  setReferenceRangeList(value: Array<USCoreSmokingStatusProfile.ReferenceRange>): void;
+  clearReferenceRange(): void;
+  getReferenceRange(): Array<USCoreSmokingStatusProfile.ReferenceRange>;
+  setReferenceRange(value: Array<USCoreSmokingStatusProfile.ReferenceRange>): void;
   addReferenceRange(value?: USCoreSmokingStatusProfile.ReferenceRange, index?: number): USCoreSmokingStatusProfile.ReferenceRange;
 
-  clearHasMemberList(): void;
-  getHasMemberList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setHasMemberList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearHasMember(): void;
+  getHasMember(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setHasMember(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addHasMember(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearDerivedFromList(): void;
-  getDerivedFromList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setDerivedFromList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearDerivedFrom(): void;
+  getDerivedFrom(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setDerivedFrom(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addDerivedFrom(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearComponentList(): void;
-  getComponentList(): Array<USCoreSmokingStatusProfile.Component>;
-  setComponentList(value: Array<USCoreSmokingStatusProfile.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<USCoreSmokingStatusProfile.Component>;
+  setComponent(value: Array<USCoreSmokingStatusProfile.Component>): void;
   addComponent(value?: USCoreSmokingStatusProfile.Component, index?: number): USCoreSmokingStatusProfile.Component;
 
   serializeBinary(): Uint8Array;
@@ -10241,33 +10241,33 @@ export namespace USCoreSmokingStatusProfile {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    partOfList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    partOf: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: USCoreSmokingStatusProfile.StatusCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    focusList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    focus: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     effective?: USCoreSmokingStatusProfile.EffectiveX.AsObject,
     issued?: proto_r4_core_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     value?: USCoreSmokingStatusProfile.ValueX.AsObject,
     dataAbsentReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    interpretationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    interpretation: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
     bodySite?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     method?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     specimen?: proto_r4_core_datatypes_pb.Reference.AsObject,
     device?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    referenceRangeList: Array<USCoreSmokingStatusProfile.ReferenceRange.AsObject>,
-    hasMemberList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    derivedFromList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    componentList: Array<USCoreSmokingStatusProfile.Component.AsObject>,
+    referenceRange: Array<USCoreSmokingStatusProfile.ReferenceRange.AsObject>,
+    hasMember: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    derivedFrom: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    component: Array<USCoreSmokingStatusProfile.Component.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -10279,9 +10279,9 @@ export namespace USCoreSmokingStatusProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -10298,7 +10298,7 @@ export namespace USCoreSmokingStatusProfile {
     export type AsObject = {
       value: proto_r4_uscore_codes_pb.USCoreObservationSmokingStatusStatusValueSet.ValueMap[keyof proto_r4_uscore_codes_pb.USCoreObservationSmokingStatusStatusValueSet.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -10385,14 +10385,14 @@ export namespace USCoreSmokingStatusProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -10410,9 +10410,9 @@ export namespace USCoreSmokingStatusProfile {
     getType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasAge(): boolean;
@@ -10438,12 +10438,12 @@ export namespace USCoreSmokingStatusProfile {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       low?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       high?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       age?: proto_r4_core_datatypes_pb.Range.AsObject,
       text?: proto_r4_core_datatypes_pb.String.AsObject,
     }
@@ -10455,14 +10455,14 @@ export namespace USCoreSmokingStatusProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -10480,14 +10480,14 @@ export namespace USCoreSmokingStatusProfile {
     getDataAbsentReason(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setDataAbsentReason(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearInterpretationList(): void;
-    getInterpretationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setInterpretationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearInterpretation(): void;
+    getInterpretation(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setInterpretation(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addInterpretation(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<USCoreSmokingStatusProfile.ReferenceRange>;
-    setReferenceRangeList(value: Array<USCoreSmokingStatusProfile.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<USCoreSmokingStatusProfile.ReferenceRange>;
+    setReferenceRange(value: Array<USCoreSmokingStatusProfile.ReferenceRange>): void;
     addReferenceRange(value?: USCoreSmokingStatusProfile.ReferenceRange, index?: number): USCoreSmokingStatusProfile.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -10503,13 +10503,13 @@ export namespace USCoreSmokingStatusProfile {
   export namespace Component {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       value?: USCoreSmokingStatusProfile.Component.ValueX.AsObject,
       dataAbsentReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      interpretationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      referenceRangeList: Array<USCoreSmokingStatusProfile.ReferenceRange.AsObject>,
+      interpretation: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      referenceRange: Array<USCoreSmokingStatusProfile.ReferenceRange.AsObject>,
     }
 
     export class ValueX extends jspb.Message {
@@ -10638,24 +10638,24 @@ export class USCoreOrganizationProfile extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasActive(): boolean;
@@ -10663,9 +10663,9 @@ export class USCoreOrganizationProfile extends jspb.Message {
   getActive(): proto_r4_core_datatypes_pb.Boolean | undefined;
   setActive(value?: proto_r4_core_datatypes_pb.Boolean): void;
 
-  clearTypeList(): void;
-  getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearType(): void;
+  getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasName(): boolean;
@@ -10673,19 +10673,19 @@ export class USCoreOrganizationProfile extends jspb.Message {
   getName(): proto_r4_core_datatypes_pb.String | undefined;
   setName(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearAliasList(): void;
-  getAliasList(): Array<proto_r4_core_datatypes_pb.String>;
-  setAliasList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+  clearAlias(): void;
+  getAlias(): Array<proto_r4_core_datatypes_pb.String>;
+  setAlias(value: Array<proto_r4_core_datatypes_pb.String>): void;
   addAlias(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
-  clearTelecomList(): void;
-  getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearTelecom(): void;
+  getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
-  clearAddressList(): void;
-  getAddressList(): Array<proto_r4_core_datatypes_pb.Address>;
-  setAddressList(value: Array<proto_r4_core_datatypes_pb.Address>): void;
+  clearAddress(): void;
+  getAddress(): Array<proto_r4_core_datatypes_pb.Address>;
+  setAddress(value: Array<proto_r4_core_datatypes_pb.Address>): void;
   addAddress(value?: proto_r4_core_datatypes_pb.Address, index?: number): proto_r4_core_datatypes_pb.Address;
 
   hasPartOf(): boolean;
@@ -10693,14 +10693,14 @@ export class USCoreOrganizationProfile extends jspb.Message {
   getPartOf(): proto_r4_core_datatypes_pb.Reference | undefined;
   setPartOf(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearContactList(): void;
-  getContactList(): Array<USCoreOrganizationProfile.Contact>;
-  setContactList(value: Array<USCoreOrganizationProfile.Contact>): void;
+  clearContact(): void;
+  getContact(): Array<USCoreOrganizationProfile.Contact>;
+  setContact(value: Array<USCoreOrganizationProfile.Contact>): void;
   addContact(value?: USCoreOrganizationProfile.Contact, index?: number): USCoreOrganizationProfile.Contact;
 
-  clearEndpointList(): void;
-  getEndpointList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setEndpointList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearEndpoint(): void;
+  getEndpoint(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setEndpoint(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addEndpoint(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -10720,19 +10720,19 @@ export namespace USCoreOrganizationProfile {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     active?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-    typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     name?: proto_r4_core_datatypes_pb.String.AsObject,
-    aliasList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
-    telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
-    addressList: Array<proto_r4_core_datatypes_pb.Address.AsObject>,
+    alias: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+    telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    address: Array<proto_r4_core_datatypes_pb.Address.AsObject>,
     partOf?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    contactList: Array<USCoreOrganizationProfile.Contact.AsObject>,
-    endpointList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contact: Array<USCoreOrganizationProfile.Contact.AsObject>,
+    endpoint: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class Contact extends jspb.Message {
@@ -10741,14 +10741,14 @@ export namespace USCoreOrganizationProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasPurpose(): boolean;
@@ -10761,9 +10761,9 @@ export namespace USCoreOrganizationProfile {
     getName(): proto_r4_core_datatypes_pb.HumanName | undefined;
     setName(value?: proto_r4_core_datatypes_pb.HumanName): void;
 
-    clearTelecomList(): void;
-    getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-    setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+    clearTelecom(): void;
+    getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+    setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
     addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
     hasAddress(): boolean;
@@ -10784,11 +10784,11 @@ export namespace USCoreOrganizationProfile {
   export namespace Contact {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       purpose?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       name?: proto_r4_core_datatypes_pb.HumanName.AsObject,
-      telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+      telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
       address?: proto_r4_core_datatypes_pb.Address.AsObject,
     }
   }
@@ -10820,34 +10820,34 @@ export class USCorePediatricBMIforAgeObservationProfile extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearPartOfList(): void;
-  getPartOfList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPartOfList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPartOf(): void;
+  getPartOf(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPartOf(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPartOf(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStatus(): boolean;
@@ -10855,9 +10855,9 @@ export class USCorePediatricBMIforAgeObservationProfile extends jspb.Message {
   getStatus(): USCorePediatricBMIforAgeObservationProfile.StatusCode | undefined;
   setStatus(value?: USCorePediatricBMIforAgeObservationProfile.StatusCode): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasCode(): boolean;
@@ -10870,9 +10870,9 @@ export class USCorePediatricBMIforAgeObservationProfile extends jspb.Message {
   getSubject(): proto_r4_core_datatypes_pb.Reference | undefined;
   setSubject(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearFocusList(): void;
-  getFocusList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setFocusList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearFocus(): void;
+  getFocus(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setFocus(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addFocus(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasEncounter(): boolean;
@@ -10890,9 +10890,9 @@ export class USCorePediatricBMIforAgeObservationProfile extends jspb.Message {
   getIssued(): proto_r4_core_datatypes_pb.Instant | undefined;
   setIssued(value?: proto_r4_core_datatypes_pb.Instant): void;
 
-  clearPerformerList(): void;
-  getPerformerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPerformerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPerformer(): void;
+  getPerformer(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPerformer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPerformer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasValue(): boolean;
@@ -10905,14 +10905,14 @@ export class USCorePediatricBMIforAgeObservationProfile extends jspb.Message {
   getDataAbsentReason(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setDataAbsentReason(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearInterpretationList(): void;
-  getInterpretationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setInterpretationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearInterpretation(): void;
+  getInterpretation(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setInterpretation(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addInterpretation(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   hasBodySite(): boolean;
@@ -10935,24 +10935,24 @@ export class USCorePediatricBMIforAgeObservationProfile extends jspb.Message {
   getDevice(): proto_r4_core_datatypes_pb.Reference | undefined;
   setDevice(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearReferenceRangeList(): void;
-  getReferenceRangeList(): Array<USCorePediatricBMIforAgeObservationProfile.ReferenceRange>;
-  setReferenceRangeList(value: Array<USCorePediatricBMIforAgeObservationProfile.ReferenceRange>): void;
+  clearReferenceRange(): void;
+  getReferenceRange(): Array<USCorePediatricBMIforAgeObservationProfile.ReferenceRange>;
+  setReferenceRange(value: Array<USCorePediatricBMIforAgeObservationProfile.ReferenceRange>): void;
   addReferenceRange(value?: USCorePediatricBMIforAgeObservationProfile.ReferenceRange, index?: number): USCorePediatricBMIforAgeObservationProfile.ReferenceRange;
 
-  clearHasMemberList(): void;
-  getHasMemberList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setHasMemberList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearHasMember(): void;
+  getHasMember(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setHasMember(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addHasMember(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearDerivedFromList(): void;
-  getDerivedFromList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setDerivedFromList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearDerivedFrom(): void;
+  getDerivedFrom(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setDerivedFrom(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addDerivedFrom(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearComponentList(): void;
-  getComponentList(): Array<USCorePediatricBMIforAgeObservationProfile.Component>;
-  setComponentList(value: Array<USCorePediatricBMIforAgeObservationProfile.Component>): void;
+  clearComponent(): void;
+  getComponent(): Array<USCorePediatricBMIforAgeObservationProfile.Component>;
+  setComponent(value: Array<USCorePediatricBMIforAgeObservationProfile.Component>): void;
   addComponent(value?: USCorePediatricBMIforAgeObservationProfile.Component, index?: number): USCorePediatricBMIforAgeObservationProfile.Component;
 
   serializeBinary(): Uint8Array;
@@ -10972,33 +10972,33 @@ export namespace USCorePediatricBMIforAgeObservationProfile {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    partOfList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    partOf: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     status?: USCorePediatricBMIforAgeObservationProfile.StatusCode.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     subject?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    focusList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    focus: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     encounter?: proto_r4_core_datatypes_pb.Reference.AsObject,
     effective?: USCorePediatricBMIforAgeObservationProfile.EffectiveX.AsObject,
     issued?: proto_r4_core_datatypes_pb.Instant.AsObject,
-    performerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    performer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     value?: USCorePediatricBMIforAgeObservationProfile.ValueX.AsObject,
     dataAbsentReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    interpretationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    interpretation: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
     bodySite?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     method?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     specimen?: proto_r4_core_datatypes_pb.Reference.AsObject,
     device?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    referenceRangeList: Array<USCorePediatricBMIforAgeObservationProfile.ReferenceRange.AsObject>,
-    hasMemberList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    derivedFromList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    componentList: Array<USCorePediatricBMIforAgeObservationProfile.Component.AsObject>,
+    referenceRange: Array<USCorePediatricBMIforAgeObservationProfile.ReferenceRange.AsObject>,
+    hasMember: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    derivedFrom: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    component: Array<USCorePediatricBMIforAgeObservationProfile.Component.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -11010,9 +11010,9 @@ export namespace USCorePediatricBMIforAgeObservationProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -11029,7 +11029,7 @@ export namespace USCorePediatricBMIforAgeObservationProfile {
     export type AsObject = {
       value: proto_r4_core_codes_pb.ObservationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.ObservationStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -11102,14 +11102,14 @@ export namespace USCorePediatricBMIforAgeObservationProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasLow(): boolean;
@@ -11127,9 +11127,9 @@ export namespace USCorePediatricBMIforAgeObservationProfile {
     getType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearAppliesToList(): void;
-    getAppliesToList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setAppliesToList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearAppliesTo(): void;
+    getAppliesTo(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setAppliesTo(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addAppliesTo(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasAge(): boolean;
@@ -11155,12 +11155,12 @@ export namespace USCorePediatricBMIforAgeObservationProfile {
   export namespace ReferenceRange {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       low?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       high?: proto_r4_core_datatypes_pb.SimpleQuantity.AsObject,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      appliesToList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      appliesTo: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       age?: proto_r4_core_datatypes_pb.Range.AsObject,
       text?: proto_r4_core_datatypes_pb.String.AsObject,
     }
@@ -11172,14 +11172,14 @@ export namespace USCorePediatricBMIforAgeObservationProfile {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -11197,14 +11197,14 @@ export namespace USCorePediatricBMIforAgeObservationProfile {
     getDataAbsentReason(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setDataAbsentReason(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearInterpretationList(): void;
-    getInterpretationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setInterpretationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearInterpretation(): void;
+    getInterpretation(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setInterpretation(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addInterpretation(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearReferenceRangeList(): void;
-    getReferenceRangeList(): Array<USCorePediatricBMIforAgeObservationProfile.ReferenceRange>;
-    setReferenceRangeList(value: Array<USCorePediatricBMIforAgeObservationProfile.ReferenceRange>): void;
+    clearReferenceRange(): void;
+    getReferenceRange(): Array<USCorePediatricBMIforAgeObservationProfile.ReferenceRange>;
+    setReferenceRange(value: Array<USCorePediatricBMIforAgeObservationProfile.ReferenceRange>): void;
     addReferenceRange(value?: USCorePediatricBMIforAgeObservationProfile.ReferenceRange, index?: number): USCorePediatricBMIforAgeObservationProfile.ReferenceRange;
 
     serializeBinary(): Uint8Array;
@@ -11220,13 +11220,13 @@ export namespace USCorePediatricBMIforAgeObservationProfile {
   export namespace Component {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       value?: USCorePediatricBMIforAgeObservationProfile.Component.ValueX.AsObject,
       dataAbsentReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      interpretationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      referenceRangeList: Array<USCorePediatricBMIforAgeObservationProfile.ReferenceRange.AsObject>,
+      interpretation: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      referenceRange: Array<USCorePediatricBMIforAgeObservationProfile.ReferenceRange.AsObject>,
     }
 
     export class ValueX extends jspb.Message {

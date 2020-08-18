@@ -33,19 +33,19 @@ export class ValueSet extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasUrl(): boolean;
@@ -53,9 +53,9 @@ export class ValueSet extends jspb.Message {
   getUrl(): proto_r4_core_datatypes_pb.Uri | undefined;
   setUrl(value?: proto_r4_core_datatypes_pb.Uri): void;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasVersion(): boolean;
@@ -93,9 +93,9 @@ export class ValueSet extends jspb.Message {
   getPublisher(): proto_r4_core_datatypes_pb.String | undefined;
   setPublisher(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearContactList(): void;
-  getContactList(): Array<proto_r4_core_datatypes_pb.ContactDetail>;
-  setContactList(value: Array<proto_r4_core_datatypes_pb.ContactDetail>): void;
+  clearContact(): void;
+  getContact(): Array<proto_r4_core_datatypes_pb.ContactDetail>;
+  setContact(value: Array<proto_r4_core_datatypes_pb.ContactDetail>): void;
   addContact(value?: proto_r4_core_datatypes_pb.ContactDetail, index?: number): proto_r4_core_datatypes_pb.ContactDetail;
 
   hasDescription(): boolean;
@@ -103,14 +103,14 @@ export class ValueSet extends jspb.Message {
   getDescription(): proto_r4_core_datatypes_pb.Markdown | undefined;
   setDescription(value?: proto_r4_core_datatypes_pb.Markdown): void;
 
-  clearUseContextList(): void;
-  getUseContextList(): Array<proto_r4_core_datatypes_pb.UsageContext>;
-  setUseContextList(value: Array<proto_r4_core_datatypes_pb.UsageContext>): void;
+  clearUseContext(): void;
+  getUseContext(): Array<proto_r4_core_datatypes_pb.UsageContext>;
+  setUseContext(value: Array<proto_r4_core_datatypes_pb.UsageContext>): void;
   addUseContext(value?: proto_r4_core_datatypes_pb.UsageContext, index?: number): proto_r4_core_datatypes_pb.UsageContext;
 
-  clearJurisdictionList(): void;
-  getJurisdictionList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setJurisdictionList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearJurisdiction(): void;
+  getJurisdiction(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setJurisdiction(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addJurisdiction(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasImmutable(): boolean;
@@ -155,11 +155,11 @@ export namespace ValueSet {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     url?: proto_r4_core_datatypes_pb.Uri.AsObject,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     version?: proto_r4_core_datatypes_pb.String.AsObject,
     name?: proto_r4_core_datatypes_pb.String.AsObject,
     title?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -167,10 +167,10 @@ export namespace ValueSet {
     experimental?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     publisher?: proto_r4_core_datatypes_pb.String.AsObject,
-    contactList: Array<proto_r4_core_datatypes_pb.ContactDetail.AsObject>,
+    contact: Array<proto_r4_core_datatypes_pb.ContactDetail.AsObject>,
     description?: proto_r4_core_datatypes_pb.Markdown.AsObject,
-    useContextList: Array<proto_r4_core_datatypes_pb.UsageContext.AsObject>,
-    jurisdictionList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    useContext: Array<proto_r4_core_datatypes_pb.UsageContext.AsObject>,
+    jurisdiction: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     immutable?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     purpose?: proto_r4_core_datatypes_pb.Markdown.AsObject,
     copyright?: proto_r4_core_datatypes_pb.Markdown.AsObject,
@@ -187,9 +187,9 @@ export namespace ValueSet {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -206,7 +206,7 @@ export namespace ValueSet {
     export type AsObject = {
       value: proto_r4_core_codes_pb.PublicationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.PublicationStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -216,14 +216,14 @@ export namespace ValueSet {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasLockedDate(): boolean;
@@ -236,14 +236,14 @@ export namespace ValueSet {
     getInactive(): proto_r4_core_datatypes_pb.Boolean | undefined;
     setInactive(value?: proto_r4_core_datatypes_pb.Boolean): void;
 
-    clearIncludeList(): void;
-    getIncludeList(): Array<ValueSet.Compose.ConceptSet>;
-    setIncludeList(value: Array<ValueSet.Compose.ConceptSet>): void;
+    clearInclude(): void;
+    getInclude(): Array<ValueSet.Compose.ConceptSet>;
+    setInclude(value: Array<ValueSet.Compose.ConceptSet>): void;
     addInclude(value?: ValueSet.Compose.ConceptSet, index?: number): ValueSet.Compose.ConceptSet;
 
-    clearExcludeList(): void;
-    getExcludeList(): Array<ValueSet.Compose.ConceptSet>;
-    setExcludeList(value: Array<ValueSet.Compose.ConceptSet>): void;
+    clearExclude(): void;
+    getExclude(): Array<ValueSet.Compose.ConceptSet>;
+    setExclude(value: Array<ValueSet.Compose.ConceptSet>): void;
     addExclude(value?: ValueSet.Compose.ConceptSet, index?: number): ValueSet.Compose.ConceptSet;
 
     serializeBinary(): Uint8Array;
@@ -259,12 +259,12 @@ export namespace ValueSet {
   export namespace Compose {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       lockedDate?: proto_r4_core_datatypes_pb.Date.AsObject,
       inactive?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-      includeList: Array<ValueSet.Compose.ConceptSet.AsObject>,
-      excludeList: Array<ValueSet.Compose.ConceptSet.AsObject>,
+      include: Array<ValueSet.Compose.ConceptSet.AsObject>,
+      exclude: Array<ValueSet.Compose.ConceptSet.AsObject>,
     }
 
     export class ConceptSet extends jspb.Message {
@@ -273,14 +273,14 @@ export namespace ValueSet {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasSystem(): boolean;
@@ -293,19 +293,19 @@ export namespace ValueSet {
       getVersion(): proto_r4_core_datatypes_pb.String | undefined;
       setVersion(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearConceptList(): void;
-      getConceptList(): Array<ValueSet.Compose.ConceptSet.ConceptReference>;
-      setConceptList(value: Array<ValueSet.Compose.ConceptSet.ConceptReference>): void;
+      clearConcept(): void;
+      getConcept(): Array<ValueSet.Compose.ConceptSet.ConceptReference>;
+      setConcept(value: Array<ValueSet.Compose.ConceptSet.ConceptReference>): void;
       addConcept(value?: ValueSet.Compose.ConceptSet.ConceptReference, index?: number): ValueSet.Compose.ConceptSet.ConceptReference;
 
-      clearFilterList(): void;
-      getFilterList(): Array<ValueSet.Compose.ConceptSet.Filter>;
-      setFilterList(value: Array<ValueSet.Compose.ConceptSet.Filter>): void;
+      clearFilter(): void;
+      getFilter(): Array<ValueSet.Compose.ConceptSet.Filter>;
+      setFilter(value: Array<ValueSet.Compose.ConceptSet.Filter>): void;
       addFilter(value?: ValueSet.Compose.ConceptSet.Filter, index?: number): ValueSet.Compose.ConceptSet.Filter;
 
-      clearValueSetList(): void;
-      getValueSetList(): Array<proto_r4_core_datatypes_pb.Canonical>;
-      setValueSetList(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
+      clearValueSet(): void;
+      getValueSet(): Array<proto_r4_core_datatypes_pb.Canonical>;
+      setValueSet(value: Array<proto_r4_core_datatypes_pb.Canonical>): void;
       addValueSet(value?: proto_r4_core_datatypes_pb.Canonical, index?: number): proto_r4_core_datatypes_pb.Canonical;
 
       serializeBinary(): Uint8Array;
@@ -321,13 +321,13 @@ export namespace ValueSet {
     export namespace ConceptSet {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         system?: proto_r4_core_datatypes_pb.Uri.AsObject,
         version?: proto_r4_core_datatypes_pb.String.AsObject,
-        conceptList: Array<ValueSet.Compose.ConceptSet.ConceptReference.AsObject>,
-        filterList: Array<ValueSet.Compose.ConceptSet.Filter.AsObject>,
-        valueSetList: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
+        concept: Array<ValueSet.Compose.ConceptSet.ConceptReference.AsObject>,
+        filter: Array<ValueSet.Compose.ConceptSet.Filter.AsObject>,
+        valueSet: Array<proto_r4_core_datatypes_pb.Canonical.AsObject>,
       }
 
       export class ConceptReference extends jspb.Message {
@@ -336,14 +336,14 @@ export namespace ValueSet {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         hasCode(): boolean;
@@ -356,9 +356,9 @@ export namespace ValueSet {
         getDisplay(): proto_r4_core_datatypes_pb.String | undefined;
         setDisplay(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearDesignationList(): void;
-        getDesignationList(): Array<ValueSet.Compose.ConceptSet.ConceptReference.Designation>;
-        setDesignationList(value: Array<ValueSet.Compose.ConceptSet.ConceptReference.Designation>): void;
+        clearDesignation(): void;
+        getDesignation(): Array<ValueSet.Compose.ConceptSet.ConceptReference.Designation>;
+        setDesignation(value: Array<ValueSet.Compose.ConceptSet.ConceptReference.Designation>): void;
         addDesignation(value?: ValueSet.Compose.ConceptSet.ConceptReference.Designation, index?: number): ValueSet.Compose.ConceptSet.ConceptReference.Designation;
 
         serializeBinary(): Uint8Array;
@@ -374,11 +374,11 @@ export namespace ValueSet {
       export namespace ConceptReference {
         export type AsObject = {
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
           code?: proto_r4_core_datatypes_pb.Code.AsObject,
           display?: proto_r4_core_datatypes_pb.String.AsObject,
-          designationList: Array<ValueSet.Compose.ConceptSet.ConceptReference.Designation.AsObject>,
+          designation: Array<ValueSet.Compose.ConceptSet.ConceptReference.Designation.AsObject>,
         }
 
         export class Designation extends jspb.Message {
@@ -387,14 +387,14 @@ export namespace ValueSet {
           getId(): proto_r4_core_datatypes_pb.String | undefined;
           setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-          clearExtensionList(): void;
-          getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-          setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+          clearExtension(): void;
+          getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+          setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
           addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-          clearModifierExtensionList(): void;
-          getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-          setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+          clearModifierExtension(): void;
+          getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+          setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
           addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
           hasLanguage(): boolean;
@@ -425,8 +425,8 @@ export namespace ValueSet {
         export namespace Designation {
           export type AsObject = {
             id?: proto_r4_core_datatypes_pb.String.AsObject,
-            extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-            modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+            extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+            modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
             language?: proto_r4_core_datatypes_pb.Code.AsObject,
             use?: proto_r4_core_datatypes_pb.Coding.AsObject,
             value?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -440,14 +440,14 @@ export namespace ValueSet {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         hasProperty(): boolean;
@@ -478,8 +478,8 @@ export namespace ValueSet {
       export namespace Filter {
         export type AsObject = {
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
           property?: proto_r4_core_datatypes_pb.Code.AsObject,
           op?: ValueSet.Compose.ConceptSet.Filter.OpCode.AsObject,
           value?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -494,9 +494,9 @@ export namespace ValueSet {
           getId(): proto_r4_core_datatypes_pb.String | undefined;
           setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-          clearExtensionList(): void;
-          getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-          setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+          clearExtension(): void;
+          getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+          setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
           addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
           serializeBinary(): Uint8Array;
@@ -513,7 +513,7 @@ export namespace ValueSet {
           export type AsObject = {
             value: proto_r4_core_codes_pb.FilterOperatorCode.ValueMap[keyof proto_r4_core_codes_pb.FilterOperatorCode.ValueMap],
             id?: proto_r4_core_datatypes_pb.String.AsObject,
-            extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+            extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
           }
         }
       }
@@ -526,14 +526,14 @@ export namespace ValueSet {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasIdentifier(): boolean;
@@ -556,14 +556,14 @@ export namespace ValueSet {
     getOffset(): proto_r4_core_datatypes_pb.Integer | undefined;
     setOffset(value?: proto_r4_core_datatypes_pb.Integer): void;
 
-    clearParameterList(): void;
-    getParameterList(): Array<ValueSet.Expansion.Parameter>;
-    setParameterList(value: Array<ValueSet.Expansion.Parameter>): void;
+    clearParameter(): void;
+    getParameter(): Array<ValueSet.Expansion.Parameter>;
+    setParameter(value: Array<ValueSet.Expansion.Parameter>): void;
     addParameter(value?: ValueSet.Expansion.Parameter, index?: number): ValueSet.Expansion.Parameter;
 
-    clearContainsList(): void;
-    getContainsList(): Array<ValueSet.Expansion.Contains>;
-    setContainsList(value: Array<ValueSet.Expansion.Contains>): void;
+    clearContains(): void;
+    getContains(): Array<ValueSet.Expansion.Contains>;
+    setContains(value: Array<ValueSet.Expansion.Contains>): void;
     addContains(value?: ValueSet.Expansion.Contains, index?: number): ValueSet.Expansion.Contains;
 
     serializeBinary(): Uint8Array;
@@ -579,14 +579,14 @@ export namespace ValueSet {
   export namespace Expansion {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       identifier?: proto_r4_core_datatypes_pb.Uri.AsObject,
       timestamp?: proto_r4_core_datatypes_pb.DateTime.AsObject,
       total?: proto_r4_core_datatypes_pb.Integer.AsObject,
       offset?: proto_r4_core_datatypes_pb.Integer.AsObject,
-      parameterList: Array<ValueSet.Expansion.Parameter.AsObject>,
-      containsList: Array<ValueSet.Expansion.Contains.AsObject>,
+      parameter: Array<ValueSet.Expansion.Parameter.AsObject>,
+      contains: Array<ValueSet.Expansion.Contains.AsObject>,
     }
 
     export class Parameter extends jspb.Message {
@@ -595,14 +595,14 @@ export namespace ValueSet {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasName(): boolean;
@@ -628,8 +628,8 @@ export namespace ValueSet {
     export namespace Parameter {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         name?: proto_r4_core_datatypes_pb.String.AsObject,
         value?: ValueSet.Expansion.Parameter.ValueX.AsObject,
       }
@@ -711,14 +711,14 @@ export namespace ValueSet {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasSystem(): boolean;
@@ -751,14 +751,14 @@ export namespace ValueSet {
       getDisplay(): proto_r4_core_datatypes_pb.String | undefined;
       setDisplay(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearDesignationList(): void;
-      getDesignationList(): Array<ValueSet.Compose.ConceptSet.ConceptReference.Designation>;
-      setDesignationList(value: Array<ValueSet.Compose.ConceptSet.ConceptReference.Designation>): void;
+      clearDesignation(): void;
+      getDesignation(): Array<ValueSet.Compose.ConceptSet.ConceptReference.Designation>;
+      setDesignation(value: Array<ValueSet.Compose.ConceptSet.ConceptReference.Designation>): void;
       addDesignation(value?: ValueSet.Compose.ConceptSet.ConceptReference.Designation, index?: number): ValueSet.Compose.ConceptSet.ConceptReference.Designation;
 
-      clearContainsList(): void;
-      getContainsList(): Array<ValueSet.Expansion.Contains>;
-      setContainsList(value: Array<ValueSet.Expansion.Contains>): void;
+      clearContains(): void;
+      getContains(): Array<ValueSet.Expansion.Contains>;
+      setContains(value: Array<ValueSet.Expansion.Contains>): void;
       addContains(value?: ValueSet.Expansion.Contains, index?: number): ValueSet.Expansion.Contains;
 
       serializeBinary(): Uint8Array;
@@ -774,16 +774,16 @@ export namespace ValueSet {
     export namespace Contains {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         system?: proto_r4_core_datatypes_pb.Uri.AsObject,
         pb_abstract?: proto_r4_core_datatypes_pb.Boolean.AsObject,
         inactive?: proto_r4_core_datatypes_pb.Boolean.AsObject,
         version?: proto_r4_core_datatypes_pb.String.AsObject,
         code?: proto_r4_core_datatypes_pb.Code.AsObject,
         display?: proto_r4_core_datatypes_pb.String.AsObject,
-        designationList: Array<ValueSet.Compose.ConceptSet.ConceptReference.Designation.AsObject>,
-        containsList: Array<ValueSet.Expansion.Contains.AsObject>,
+        designation: Array<ValueSet.Compose.ConceptSet.ConceptReference.Designation.AsObject>,
+        contains: Array<ValueSet.Expansion.Contains.AsObject>,
       }
     }
   }

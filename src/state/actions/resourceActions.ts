@@ -1,4 +1,4 @@
-import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
+import { StructureDefinition } from "../../resources/ts/r4/core/resources/structure_definition_pb";
 import { DataFetched } from "../reducers/resource";
 
 export const SELECT_RESOURCE = 'SELECT_RESOURCE';
@@ -12,7 +12,7 @@ export const SELECT_ATTRIBUTE = 'SELECT_ATTRIBUTE';
 
 export type SelectResourceAction = {
     type: typeof SELECT_RESOURCE,
-    payload: string
+    payload: number
 }
 
 export type GetFetchStartAction = {
@@ -31,7 +31,7 @@ export type GetIdsFailureAction = {
 
 export type GetStructureDefSuccessAction = {
     type: typeof GET_STRUCTUREDEF_SUCCESS,
-    payload: IStructureDefinition | null,
+    payload: StructureDefinition.AsObject | null,
 }
 
 export type GetStructureDefFailureAction = {
@@ -71,7 +71,7 @@ export const getIdsFailure = (error: Error): GetIdsFailureAction => {
     }
 }
 
-export const getStructureDefSuccess = (data: IStructureDefinition): GetStructureDefSuccessAction => {
+export const getStructureDefSuccess = (data: StructureDefinition.AsObject): GetStructureDefSuccessAction => {
     return {
         type: GET_STRUCTUREDEF_SUCCESS,
         payload: data

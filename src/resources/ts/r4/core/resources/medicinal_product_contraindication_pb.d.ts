@@ -32,24 +32,24 @@ export class MedicinalProductContraindication extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearSubjectList(): void;
-  getSubjectList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSubjectList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSubject(): void;
+  getSubject(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSubject(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSubject(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasDisease(): boolean;
@@ -62,24 +62,24 @@ export class MedicinalProductContraindication extends jspb.Message {
   getDiseaseStatus(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setDiseaseStatus(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearComorbidityList(): void;
-  getComorbidityList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setComorbidityList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearComorbidity(): void;
+  getComorbidity(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setComorbidity(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addComorbidity(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearTherapeuticIndicationList(): void;
-  getTherapeuticIndicationList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setTherapeuticIndicationList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearTherapeuticIndication(): void;
+  getTherapeuticIndication(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setTherapeuticIndication(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addTherapeuticIndication(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearOtherTherapyList(): void;
-  getOtherTherapyList(): Array<MedicinalProductContraindication.OtherTherapy>;
-  setOtherTherapyList(value: Array<MedicinalProductContraindication.OtherTherapy>): void;
+  clearOtherTherapy(): void;
+  getOtherTherapy(): Array<MedicinalProductContraindication.OtherTherapy>;
+  setOtherTherapy(value: Array<MedicinalProductContraindication.OtherTherapy>): void;
   addOtherTherapy(value?: MedicinalProductContraindication.OtherTherapy, index?: number): MedicinalProductContraindication.OtherTherapy;
 
-  clearPopulationList(): void;
-  getPopulationList(): Array<proto_r4_core_datatypes_pb.Population>;
-  setPopulationList(value: Array<proto_r4_core_datatypes_pb.Population>): void;
+  clearPopulation(): void;
+  getPopulation(): Array<proto_r4_core_datatypes_pb.Population>;
+  setPopulation(value: Array<proto_r4_core_datatypes_pb.Population>): void;
   addPopulation(value?: proto_r4_core_datatypes_pb.Population, index?: number): proto_r4_core_datatypes_pb.Population;
 
   serializeBinary(): Uint8Array;
@@ -99,16 +99,16 @@ export namespace MedicinalProductContraindication {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    subjectList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    subject: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     disease?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     diseaseStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    comorbidityList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    therapeuticIndicationList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    otherTherapyList: Array<MedicinalProductContraindication.OtherTherapy.AsObject>,
-    populationList: Array<proto_r4_core_datatypes_pb.Population.AsObject>,
+    comorbidity: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    therapeuticIndication: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    otherTherapy: Array<MedicinalProductContraindication.OtherTherapy.AsObject>,
+    population: Array<proto_r4_core_datatypes_pb.Population.AsObject>,
   }
 
   export class OtherTherapy extends jspb.Message {
@@ -117,14 +117,14 @@ export namespace MedicinalProductContraindication {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasTherapyRelationshipType(): boolean;
@@ -150,8 +150,8 @@ export namespace MedicinalProductContraindication {
   export namespace OtherTherapy {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       therapyRelationshipType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       medication?: MedicinalProductContraindication.OtherTherapy.MedicationX.AsObject,
     }

@@ -33,29 +33,29 @@ export class VerificationResult extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearTargetList(): void;
-  getTargetList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setTargetList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearTarget(): void;
+  getTarget(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setTarget(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addTarget(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearTargetLocationList(): void;
-  getTargetLocationList(): Array<proto_r4_core_datatypes_pb.String>;
-  setTargetLocationList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+  clearTargetLocation(): void;
+  getTargetLocation(): Array<proto_r4_core_datatypes_pb.String>;
+  setTargetLocation(value: Array<proto_r4_core_datatypes_pb.String>): void;
   addTargetLocation(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
   hasNeed(): boolean;
@@ -78,9 +78,9 @@ export class VerificationResult extends jspb.Message {
   getValidationType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setValidationType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearValidationProcessList(): void;
-  getValidationProcessList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setValidationProcessList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearValidationProcess(): void;
+  getValidationProcess(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setValidationProcess(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addValidationProcess(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasFrequency(): boolean;
@@ -103,9 +103,9 @@ export class VerificationResult extends jspb.Message {
   getFailureAction(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setFailureAction(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearPrimarySourceList(): void;
-  getPrimarySourceList(): Array<VerificationResult.PrimarySource>;
-  setPrimarySourceList(value: Array<VerificationResult.PrimarySource>): void;
+  clearPrimarySource(): void;
+  getPrimarySource(): Array<VerificationResult.PrimarySource>;
+  setPrimarySource(value: Array<VerificationResult.PrimarySource>): void;
   addPrimarySource(value?: VerificationResult.PrimarySource, index?: number): VerificationResult.PrimarySource;
 
   hasAttestation(): boolean;
@@ -113,9 +113,9 @@ export class VerificationResult extends jspb.Message {
   getAttestation(): VerificationResult.Attestation | undefined;
   setAttestation(value?: VerificationResult.Attestation): void;
 
-  clearValidatorList(): void;
-  getValidatorList(): Array<VerificationResult.Validator>;
-  setValidatorList(value: Array<VerificationResult.Validator>): void;
+  clearValidator(): void;
+  getValidator(): Array<VerificationResult.Validator>;
+  setValidator(value: Array<VerificationResult.Validator>): void;
   addValidator(value?: VerificationResult.Validator, index?: number): VerificationResult.Validator;
 
   serializeBinary(): Uint8Array;
@@ -135,23 +135,23 @@ export namespace VerificationResult {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    targetList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    targetLocationList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    target: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    targetLocation: Array<proto_r4_core_datatypes_pb.String.AsObject>,
     need?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     status?: VerificationResult.StatusCode.AsObject,
     statusDate?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     validationType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    validationProcessList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    validationProcess: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     frequency?: proto_r4_core_datatypes_pb.Timing.AsObject,
     lastPerformed?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     nextScheduled?: proto_r4_core_datatypes_pb.Date.AsObject,
     failureAction?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    primarySourceList: Array<VerificationResult.PrimarySource.AsObject>,
+    primarySource: Array<VerificationResult.PrimarySource.AsObject>,
     attestation?: VerificationResult.Attestation.AsObject,
-    validatorList: Array<VerificationResult.Validator.AsObject>,
+    validator: Array<VerificationResult.Validator.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -163,9 +163,9 @@ export namespace VerificationResult {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -182,7 +182,7 @@ export namespace VerificationResult {
     export type AsObject = {
       value: proto_r4_core_codes_pb.StatusCode.ValueMap[keyof proto_r4_core_codes_pb.StatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -192,14 +192,14 @@ export namespace VerificationResult {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasWho(): boolean;
@@ -207,14 +207,14 @@ export namespace VerificationResult {
     getWho(): proto_r4_core_datatypes_pb.Reference | undefined;
     setWho(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-    clearTypeList(): void;
-    getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearType(): void;
+    getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearCommunicationMethodList(): void;
-    getCommunicationMethodList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setCommunicationMethodList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearCommunicationMethod(): void;
+    getCommunicationMethod(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setCommunicationMethod(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addCommunicationMethod(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasValidationStatus(): boolean;
@@ -232,9 +232,9 @@ export namespace VerificationResult {
     getCanPushUpdates(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setCanPushUpdates(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearPushTypeAvailableList(): void;
-    getPushTypeAvailableList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setPushTypeAvailableList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearPushTypeAvailable(): void;
+    getPushTypeAvailable(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setPushTypeAvailable(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addPushTypeAvailable(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     serializeBinary(): Uint8Array;
@@ -250,15 +250,15 @@ export namespace VerificationResult {
   export namespace PrimarySource {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       who?: proto_r4_core_datatypes_pb.Reference.AsObject,
-      typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      communicationMethodList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      communicationMethod: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       validationStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       validationDate?: proto_r4_core_datatypes_pb.DateTime.AsObject,
       canPushUpdates?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      pushTypeAvailableList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      pushTypeAvailable: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     }
   }
 
@@ -268,14 +268,14 @@ export namespace VerificationResult {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasWho(): boolean;
@@ -331,8 +331,8 @@ export namespace VerificationResult {
   export namespace Attestation {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       who?: proto_r4_core_datatypes_pb.Reference.AsObject,
       onBehalfOf?: proto_r4_core_datatypes_pb.Reference.AsObject,
       communicationMethod?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -350,14 +350,14 @@ export namespace VerificationResult {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasOrganization(): boolean;
@@ -388,8 +388,8 @@ export namespace VerificationResult {
   export namespace Validator {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       organization?: proto_r4_core_datatypes_pb.Reference.AsObject,
       identityCertificate?: proto_r4_core_datatypes_pb.String.AsObject,
       attestationSignature?: proto_r4_core_datatypes_pb.Signature.AsObject,

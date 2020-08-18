@@ -14,9 +14,9 @@ export class AbstractTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -33,7 +33,7 @@ export namespace AbstractTypeCode {
   export type AsObject = {
     value: AbstractTypeCode.ValueMap[keyof AbstractTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -54,9 +54,9 @@ export class AggregationModeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -73,7 +73,7 @@ export namespace AggregationModeCode {
   export type AsObject = {
     value: AggregationModeCode.ValueMap[keyof AggregationModeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -95,9 +95,9 @@ export class BindingStrengthCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -114,7 +114,7 @@ export namespace BindingStrengthCode {
   export type AsObject = {
     value: BindingStrengthCode.ValueMap[keyof BindingStrengthCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -137,9 +137,9 @@ export class ConstraintSeverityCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -156,7 +156,7 @@ export namespace ConstraintSeverityCode {
   export type AsObject = {
     value: ConstraintSeverityCode.ValueMap[keyof ConstraintSeverityCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -177,9 +177,9 @@ export class SlicingRulesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -196,7 +196,7 @@ export namespace SlicingRulesCode {
   export type AsObject = {
     value: SlicingRulesCode.ValueMap[keyof SlicingRulesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -218,9 +218,9 @@ export class DiscriminatorTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -237,7 +237,7 @@ export namespace DiscriminatorTypeCode {
   export type AsObject = {
     value: DiscriminatorTypeCode.ValueMap[keyof DiscriminatorTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -261,9 +261,9 @@ export class PropertyRepresentationCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -280,7 +280,7 @@ export namespace PropertyRepresentationCode {
   export type AsObject = {
     value: PropertyRepresentationCode.ValueMap[keyof PropertyRepresentationCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -304,9 +304,9 @@ export class ReferenceVersionRulesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -323,7 +323,7 @@ export namespace ReferenceVersionRulesCode {
   export type AsObject = {
     value: ReferenceVersionRulesCode.ValueMap[keyof ReferenceVersionRulesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -345,9 +345,9 @@ export class AccountStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -364,7 +364,7 @@ export namespace AccountStatusCode {
   export type AsObject = {
     value: AccountStatusCode.ValueMap[keyof AccountStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -386,9 +386,9 @@ export class ActionCardinalityBehaviorCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -405,7 +405,7 @@ export namespace ActionCardinalityBehaviorCode {
   export type AsObject = {
     value: ActionCardinalityBehaviorCode.ValueMap[keyof ActionCardinalityBehaviorCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -426,9 +426,9 @@ export class ActionConditionKindCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -445,7 +445,7 @@ export namespace ActionConditionKindCode {
   export type AsObject = {
     value: ActionConditionKindCode.ValueMap[keyof ActionConditionKindCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -467,9 +467,9 @@ export class ActionGroupingBehaviorCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -486,7 +486,7 @@ export namespace ActionGroupingBehaviorCode {
   export type AsObject = {
     value: ActionGroupingBehaviorCode.ValueMap[keyof ActionGroupingBehaviorCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -508,9 +508,9 @@ export class ActionListCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -527,7 +527,7 @@ export namespace ActionListCode {
   export type AsObject = {
     value: ActionListCode.ValueMap[keyof ActionListCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -550,9 +550,9 @@ export class ActionParticipantTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -569,7 +569,7 @@ export namespace ActionParticipantTypeCode {
   export type AsObject = {
     value: ActionParticipantTypeCode.ValueMap[keyof ActionParticipantTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -591,9 +591,9 @@ export class ActionPrecheckBehaviorCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -610,7 +610,7 @@ export namespace ActionPrecheckBehaviorCode {
   export type AsObject = {
     value: ActionPrecheckBehaviorCode.ValueMap[keyof ActionPrecheckBehaviorCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -631,9 +631,9 @@ export class ActionRelationshipTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -650,7 +650,7 @@ export namespace ActionRelationshipTypeCode {
   export type AsObject = {
     value: ActionRelationshipTypeCode.ValueMap[keyof ActionRelationshipTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -678,9 +678,9 @@ export class ActionRequiredBehaviorCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -697,7 +697,7 @@ export namespace ActionRequiredBehaviorCode {
   export type AsObject = {
     value: ActionRequiredBehaviorCode.ValueMap[keyof ActionRequiredBehaviorCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -719,9 +719,9 @@ export class ActionSelectionBehaviorCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -738,7 +738,7 @@ export namespace ActionSelectionBehaviorCode {
   export type AsObject = {
     value: ActionSelectionBehaviorCode.ValueMap[keyof ActionSelectionBehaviorCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -763,9 +763,9 @@ export class ActionTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -782,7 +782,7 @@ export namespace ActionTypeCode {
   export type AsObject = {
     value: ActionTypeCode.ValueMap[keyof ActionTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -805,9 +805,9 @@ export class ActivityDefinitionCategoryCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -824,7 +824,7 @@ export namespace ActivityDefinitionCategoryCode {
   export type AsObject = {
     value: ActivityDefinitionCategoryCode.ValueMap[keyof ActivityDefinitionCategoryCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -846,9 +846,9 @@ export class AdministrativeGenderCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -865,7 +865,7 @@ export namespace AdministrativeGenderCode {
   export type AsObject = {
     value: AdministrativeGenderCode.ValueMap[keyof AdministrativeGenderCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -888,9 +888,9 @@ export class AdverseEventCategoryCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -907,7 +907,7 @@ export namespace AdverseEventCategoryCode {
   export type AsObject = {
     value: AdverseEventCategoryCode.ValueMap[keyof AdverseEventCategoryCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -928,9 +928,9 @@ export class AdverseEventCausalityAssessmentCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -947,7 +947,7 @@ export namespace AdverseEventCausalityAssessmentCode {
   export type AsObject = {
     value: AdverseEventCausalityAssessmentCode.ValueMap[keyof AdverseEventCausalityAssessmentCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -968,9 +968,9 @@ export class AdverseEventCausalityCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -987,7 +987,7 @@ export namespace AdverseEventCausalityCode {
   export type AsObject = {
     value: AdverseEventCausalityCode.ValueMap[keyof AdverseEventCausalityCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1008,9 +1008,9 @@ export class AdverseEventCausalityMethodCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1027,7 +1027,7 @@ export namespace AdverseEventCausalityMethodCode {
   export type AsObject = {
     value: AdverseEventCausalityMethodCode.ValueMap[keyof AdverseEventCausalityMethodCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1048,9 +1048,9 @@ export class AdverseEventCausalityResultCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1067,7 +1067,7 @@ export namespace AdverseEventCausalityResultCode {
   export type AsObject = {
     value: AdverseEventCausalityResultCode.ValueMap[keyof AdverseEventCausalityResultCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1088,9 +1088,9 @@ export class AdverseEventOutcomeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1107,7 +1107,7 @@ export namespace AdverseEventOutcomeCode {
   export type AsObject = {
     value: AdverseEventOutcomeCode.ValueMap[keyof AdverseEventOutcomeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1132,9 +1132,9 @@ export class AdverseEventSeriousnessCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1151,7 +1151,7 @@ export namespace AdverseEventSeriousnessCode {
   export type AsObject = {
     value: AdverseEventSeriousnessCode.ValueMap[keyof AdverseEventSeriousnessCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1173,9 +1173,9 @@ export class AllergyIntoleranceSubstanceExposureRiskCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1192,7 +1192,7 @@ export namespace AllergyIntoleranceSubstanceExposureRiskCode {
   export type AsObject = {
     value: AllergyIntoleranceSubstanceExposureRiskCode.ValueMap[keyof AllergyIntoleranceSubstanceExposureRiskCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1213,9 +1213,9 @@ export class AllergyIntoleranceClinicalStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1232,7 +1232,7 @@ export namespace AllergyIntoleranceClinicalStatusCode {
   export type AsObject = {
     value: AllergyIntoleranceClinicalStatusCode.ValueMap[keyof AllergyIntoleranceClinicalStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1254,9 +1254,9 @@ export class AllergyIntoleranceCategoryCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1273,7 +1273,7 @@ export namespace AllergyIntoleranceCategoryCode {
   export type AsObject = {
     value: AllergyIntoleranceCategoryCode.ValueMap[keyof AllergyIntoleranceCategoryCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1296,9 +1296,9 @@ export class AllergyIntoleranceCriticalityCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1315,7 +1315,7 @@ export namespace AllergyIntoleranceCriticalityCode {
   export type AsObject = {
     value: AllergyIntoleranceCriticalityCode.ValueMap[keyof AllergyIntoleranceCriticalityCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1337,9 +1337,9 @@ export class AllergyIntoleranceTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1356,7 +1356,7 @@ export namespace AllergyIntoleranceTypeCode {
   export type AsObject = {
     value: AllergyIntoleranceTypeCode.ValueMap[keyof AllergyIntoleranceTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1377,9 +1377,9 @@ export class AllergyIntoleranceVerificationStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1396,7 +1396,7 @@ export namespace AllergyIntoleranceVerificationStatusCode {
   export type AsObject = {
     value: AllergyIntoleranceVerificationStatusCode.ValueMap[keyof AllergyIntoleranceVerificationStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1419,9 +1419,9 @@ export class GenderStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1438,7 +1438,7 @@ export namespace GenderStatusCode {
   export type AsObject = {
     value: GenderStatusCode.ValueMap[keyof GenderStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1460,9 +1460,9 @@ export class AppointmentStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1479,7 +1479,7 @@ export namespace AppointmentStatusCode {
   export type AsObject = {
     value: AppointmentStatusCode.ValueMap[keyof AppointmentStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1506,9 +1506,9 @@ export class AssertionDirectionTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1525,7 +1525,7 @@ export namespace AssertionDirectionTypeCode {
   export type AsObject = {
     value: AssertionDirectionTypeCode.ValueMap[keyof AssertionDirectionTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1546,9 +1546,9 @@ export class AssertionOperatorTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1565,7 +1565,7 @@ export namespace AssertionOperatorTypeCode {
   export type AsObject = {
     value: AssertionOperatorTypeCode.ValueMap[keyof AssertionOperatorTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1595,9 +1595,9 @@ export class AssertionResponseTypesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1614,7 +1614,7 @@ export namespace AssertionResponseTypesCode {
   export type AsObject = {
     value: AssertionResponseTypesCode.ValueMap[keyof AssertionResponseTypesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1645,9 +1645,9 @@ export class AuditEventActionCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1664,7 +1664,7 @@ export namespace AuditEventActionCode {
   export type AsObject = {
     value: AuditEventActionCode.ValueMap[keyof AuditEventActionCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1688,9 +1688,9 @@ export class AuditEventOutcomeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1707,7 +1707,7 @@ export namespace AuditEventOutcomeCode {
   export type AsObject = {
     value: AuditEventOutcomeCode.ValueMap[keyof AuditEventOutcomeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1730,9 +1730,9 @@ export class BasicResourceTypesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1749,7 +1749,7 @@ export namespace BasicResourceTypesCode {
   export type AsObject = {
     value: BasicResourceTypesCode.ValueMap[keyof BasicResourceTypesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1784,9 +1784,9 @@ export class BundleTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1803,7 +1803,7 @@ export namespace BundleTypeCode {
   export type AsObject = {
     value: BundleTypeCode.ValueMap[keyof BundleTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1831,9 +1831,9 @@ export class CapabilityStatementKindCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1850,7 +1850,7 @@ export namespace CapabilityStatementKindCode {
   export type AsObject = {
     value: CapabilityStatementKindCode.ValueMap[keyof CapabilityStatementKindCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1872,9 +1872,9 @@ export class CarePlanActivityCategoryCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1891,7 +1891,7 @@ export namespace CarePlanActivityCategoryCode {
   export type AsObject = {
     value: CarePlanActivityCategoryCode.ValueMap[keyof CarePlanActivityCategoryCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1917,9 +1917,9 @@ export class CarePlanActivityStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1936,7 +1936,7 @@ export namespace CarePlanActivityStatusCode {
   export type AsObject = {
     value: CarePlanActivityStatusCode.ValueMap[keyof CarePlanActivityStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -1962,9 +1962,9 @@ export class CarePlanIntentCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -1981,7 +1981,7 @@ export namespace CarePlanIntentCode {
   export type AsObject = {
     value: CarePlanIntentCode.ValueMap[keyof CarePlanIntentCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2004,9 +2004,9 @@ export class CarePlanStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2023,7 +2023,7 @@ export namespace CarePlanStatusCode {
   export type AsObject = {
     value: CarePlanStatusCode.ValueMap[keyof CarePlanStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2049,9 +2049,9 @@ export class CareTeamCategoryCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2068,7 +2068,7 @@ export namespace CareTeamCategoryCode {
   export type AsObject = {
     value: CareTeamCategoryCode.ValueMap[keyof CareTeamCategoryCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2093,9 +2093,9 @@ export class CareTeamStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2112,7 +2112,7 @@ export namespace CareTeamStatusCode {
   export type AsObject = {
     value: CareTeamStatusCode.ValueMap[keyof CareTeamStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2136,9 +2136,9 @@ export class ChargeItemStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2155,7 +2155,7 @@ export namespace ChargeItemStatusCode {
   export type AsObject = {
     value: ChargeItemStatusCode.ValueMap[keyof ChargeItemStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2181,9 +2181,9 @@ export class ChoiceListOrientationCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2200,7 +2200,7 @@ export namespace ChoiceListOrientationCode {
   export type AsObject = {
     value: ChoiceListOrientationCode.ValueMap[keyof ChoiceListOrientationCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2221,9 +2221,9 @@ export class UseCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2240,7 +2240,7 @@ export namespace UseCode {
   export type AsObject = {
     value: UseCode.ValueMap[keyof UseCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2263,9 +2263,9 @@ export class ClassificationOrContextCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2282,7 +2282,7 @@ export namespace ClassificationOrContextCode {
   export type AsObject = {
     value: ClassificationOrContextCode.ValueMap[keyof ClassificationOrContextCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2303,9 +2303,9 @@ export class ClinicalImpressionStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2322,7 +2322,7 @@ export namespace ClinicalImpressionStatusCode {
   export type AsObject = {
     value: ClinicalImpressionStatusCode.ValueMap[keyof ClinicalImpressionStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2344,9 +2344,9 @@ export class CodeSystemContentModeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2363,7 +2363,7 @@ export namespace CodeSystemContentModeCode {
   export type AsObject = {
     value: CodeSystemContentModeCode.ValueMap[keyof CodeSystemContentModeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2386,9 +2386,9 @@ export class CodeSystemHierarchyMeaningCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2405,7 +2405,7 @@ export namespace CodeSystemHierarchyMeaningCode {
   export type AsObject = {
     value: CodeSystemHierarchyMeaningCode.ValueMap[keyof CodeSystemHierarchyMeaningCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2428,9 +2428,9 @@ export class CommonTagsCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2447,7 +2447,7 @@ export namespace CommonTagsCode {
   export type AsObject = {
     value: CommonTagsCode.ValueMap[keyof CommonTagsCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2467,9 +2467,9 @@ export class CommunicationCategoryCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2486,7 +2486,7 @@ export namespace CommunicationCategoryCode {
   export type AsObject = {
     value: CommunicationCategoryCode.ValueMap[keyof CommunicationCategoryCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2509,9 +2509,9 @@ export class CommunicationNotDoneReasonCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2528,7 +2528,7 @@ export namespace CommunicationNotDoneReasonCode {
   export type AsObject = {
     value: CommunicationNotDoneReasonCode.ValueMap[keyof CommunicationNotDoneReasonCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2553,9 +2553,9 @@ export class CompartmentTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2572,7 +2572,7 @@ export namespace CompartmentTypeCode {
   export type AsObject = {
     value: CompartmentTypeCode.ValueMap[keyof CompartmentTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2596,9 +2596,9 @@ export class CompositeMeasureScoringCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2615,7 +2615,7 @@ export namespace CompositeMeasureScoringCode {
   export type AsObject = {
     value: CompositeMeasureScoringCode.ValueMap[keyof CompositeMeasureScoringCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2638,9 +2638,9 @@ export class CompositionAttestationModeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2657,7 +2657,7 @@ export namespace CompositionAttestationModeCode {
   export type AsObject = {
     value: CompositionAttestationModeCode.ValueMap[keyof CompositionAttestationModeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2680,9 +2680,9 @@ export class CompositionStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2699,7 +2699,7 @@ export namespace CompositionStatusCode {
   export type AsObject = {
     value: CompositionStatusCode.ValueMap[keyof CompositionStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2722,9 +2722,9 @@ export class ConceptMapEquivalenceCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2741,7 +2741,7 @@ export namespace ConceptMapEquivalenceCode {
   export type AsObject = {
     value: ConceptMapEquivalenceCode.ValueMap[keyof ConceptMapEquivalenceCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2770,9 +2770,9 @@ export class ConceptMapGroupUnmappedModeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2789,7 +2789,7 @@ export namespace ConceptMapGroupUnmappedModeCode {
   export type AsObject = {
     value: ConceptMapGroupUnmappedModeCode.ValueMap[keyof ConceptMapGroupUnmappedModeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2811,9 +2811,9 @@ export class PropertyTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2830,7 +2830,7 @@ export namespace PropertyTypeCode {
   export type AsObject = {
     value: PropertyTypeCode.ValueMap[keyof PropertyTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2855,9 +2855,9 @@ export class ConditionalDeleteStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2874,7 +2874,7 @@ export namespace ConditionalDeleteStatusCode {
   export type AsObject = {
     value: ConditionalDeleteStatusCode.ValueMap[keyof ConditionalDeleteStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2896,9 +2896,9 @@ export class ConditionalReadStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2915,7 +2915,7 @@ export namespace ConditionalReadStatusCode {
   export type AsObject = {
     value: ConditionalReadStatusCode.ValueMap[keyof ConditionalReadStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2938,9 +2938,9 @@ export class ConditionCategoryCodesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2957,7 +2957,7 @@ export namespace ConditionCategoryCodesCode {
   export type AsObject = {
     value: ConditionCategoryCodesCode.ValueMap[keyof ConditionCategoryCodesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -2978,9 +2978,9 @@ export class ConditionClinicalStatusCodesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -2997,7 +2997,7 @@ export namespace ConditionClinicalStatusCodesCode {
   export type AsObject = {
     value: ConditionClinicalStatusCodesCode.ValueMap[keyof ConditionClinicalStatusCodesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3021,9 +3021,9 @@ export class ConditionStateCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -3040,7 +3040,7 @@ export namespace ConditionStateCode {
   export type AsObject = {
     value: ConditionStateCode.ValueMap[keyof ConditionStateCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3062,9 +3062,9 @@ export class ConditionVerificationStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -3081,7 +3081,7 @@ export namespace ConditionVerificationStatusCode {
   export type AsObject = {
     value: ConditionVerificationStatusCode.ValueMap[keyof ConditionVerificationStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3106,9 +3106,9 @@ export class ConformanceExpectationCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -3125,7 +3125,7 @@ export namespace ConformanceExpectationCode {
   export type AsObject = {
     value: ConformanceExpectationCode.ValueMap[keyof ConformanceExpectationCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3148,9 +3148,9 @@ export class ConsentDataMeaningCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -3167,7 +3167,7 @@ export namespace ConsentDataMeaningCode {
   export type AsObject = {
     value: ConsentDataMeaningCode.ValueMap[keyof ConsentDataMeaningCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3190,9 +3190,9 @@ export class ConsentExceptTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -3209,7 +3209,7 @@ export namespace ConsentExceptTypeCode {
   export type AsObject = {
     value: ConsentExceptTypeCode.ValueMap[keyof ConsentExceptTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3230,9 +3230,9 @@ export class ConsentStateCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -3249,7 +3249,7 @@ export namespace ConsentStateCode {
   export type AsObject = {
     value: ConsentStateCode.ValueMap[keyof ConsentStateCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3274,9 +3274,9 @@ export class ContactEntityTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -3293,7 +3293,7 @@ export namespace ContactEntityTypeCode {
   export type AsObject = {
     value: ContactEntityTypeCode.ValueMap[keyof ContactEntityTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3318,9 +3318,9 @@ export class ContentTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -3337,7 +3337,7 @@ export namespace ContentTypeCode {
   export type AsObject = {
     value: ContentTypeCode.ValueMap[keyof ContentTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3360,9 +3360,9 @@ export class ContractResourceStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -3379,7 +3379,7 @@ export namespace ContractResourceStatusCode {
   export type AsObject = {
     value: ContractResourceStatusCode.ValueMap[keyof ContractResourceStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3413,9 +3413,9 @@ export class ContributorTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -3432,7 +3432,7 @@ export namespace ContributorTypeCode {
   export type AsObject = {
     value: ContributorTypeCode.ValueMap[keyof ContributorTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3455,9 +3455,9 @@ export class CopyNumberEventCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -3474,7 +3474,7 @@ export namespace CopyNumberEventCode {
   export type AsObject = {
     value: CopyNumberEventCode.ValueMap[keyof CopyNumberEventCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3496,9 +3496,9 @@ export class DataAbsentReasonCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -3515,7 +3515,7 @@ export namespace DataAbsentReasonCode {
   export type AsObject = {
     value: DataAbsentReasonCode.ValueMap[keyof DataAbsentReasonCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3544,9 +3544,9 @@ export class DataElementStringencyCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -3563,7 +3563,7 @@ export namespace DataElementStringencyCode {
   export type AsObject = {
     value: DataElementStringencyCode.ValueMap[keyof DataElementStringencyCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3588,9 +3588,9 @@ export class TriggerTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -3607,7 +3607,7 @@ export namespace TriggerTypeCode {
   export type AsObject = {
     value: TriggerTypeCode.ValueMap[keyof TriggerTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3633,9 +3633,9 @@ export class DataTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -3652,7 +3652,7 @@ export namespace DataTypeCode {
   export type AsObject = {
     value: DataTypeCode.ValueMap[keyof DataTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3725,9 +3725,9 @@ export class FHIRAllTypesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -3744,7 +3744,7 @@ export namespace FHIRAllTypesCode {
   export type AsObject = {
     value: FHIRAllTypesCode.ValueMap[keyof FHIRAllTypesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -3865,7 +3865,7 @@ export namespace FHIRAllTypesCode {
     IMPLEMENTATION_GUIDE: 114;
     LIBRARY: 115;
     LINKAGE: 116;
-    LIST: 117;
+    : 117;
     LOCATION: 118;
     MEASURE: 119;
     MEASURE_REPORT: 120;
@@ -3938,9 +3938,9 @@ export class FHIRDefinedTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -3957,7 +3957,7 @@ export namespace FHIRDefinedTypeCode {
   export type AsObject = {
     value: FHIRDefinedTypeCode.ValueMap[keyof FHIRDefinedTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4078,7 +4078,7 @@ export namespace FHIRDefinedTypeCode {
     IMPLEMENTATION_GUIDE: 114;
     LIBRARY: 115;
     LINKAGE: 116;
-    LIST: 117;
+    : 117;
     LOCATION: 118;
     MEASURE: 119;
     MEASURE_REPORT: 120;
@@ -4149,9 +4149,9 @@ export class FHIRDefinedTypeExtCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -4168,7 +4168,7 @@ export namespace FHIRDefinedTypeExtCode {
   export type AsObject = {
     value: string,
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 }
 
@@ -4181,9 +4181,9 @@ export class DefinitionStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -4200,7 +4200,7 @@ export namespace DefinitionStatusCode {
   export type AsObject = {
     value: DefinitionStatusCode.ValueMap[keyof DefinitionStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4223,9 +4223,9 @@ export class DefinitionTopicCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -4242,7 +4242,7 @@ export namespace DefinitionTopicCode {
   export type AsObject = {
     value: DefinitionTopicCode.ValueMap[keyof DefinitionTopicCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4264,9 +4264,9 @@ export class DetectedIssueSeverityCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -4283,7 +4283,7 @@ export namespace DetectedIssueSeverityCode {
   export type AsObject = {
     value: DetectedIssueSeverityCode.ValueMap[keyof DetectedIssueSeverityCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4305,9 +4305,9 @@ export class DeviceUseStatementStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -4324,7 +4324,7 @@ export namespace DeviceUseStatementStatusCode {
   export type AsObject = {
     value: DeviceUseStatementStatusCode.ValueMap[keyof DeviceUseStatementStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4349,9 +4349,9 @@ export class FHIRDeviceStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -4368,7 +4368,7 @@ export namespace FHIRDeviceStatusCode {
   export type AsObject = {
     value: FHIRDeviceStatusCode.ValueMap[keyof FHIRDeviceStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4391,9 +4391,9 @@ export class DiagnosisRoleCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -4410,7 +4410,7 @@ export namespace DiagnosisRoleCode {
   export type AsObject = {
     value: DiagnosisRoleCode.ValueMap[keyof DiagnosisRoleCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4436,9 +4436,9 @@ export class DiagnosticReportStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -4455,7 +4455,7 @@ export namespace DiagnosticReportStatusCode {
   export type AsObject = {
     value: DiagnosticReportStatusCode.ValueMap[keyof DiagnosticReportStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4484,9 +4484,9 @@ export class DigitalMediaTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -4503,7 +4503,7 @@ export namespace DigitalMediaTypeCode {
   export type AsObject = {
     value: DigitalMediaTypeCode.ValueMap[keyof DigitalMediaTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4525,9 +4525,9 @@ export class DocumentModeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -4544,7 +4544,7 @@ export namespace DocumentModeCode {
   export type AsObject = {
     value: DocumentModeCode.ValueMap[keyof DocumentModeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4565,9 +4565,9 @@ export class DocumentReferenceStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -4584,7 +4584,7 @@ export namespace DocumentReferenceStatusCode {
   export type AsObject = {
     value: DocumentReferenceStatusCode.ValueMap[keyof DocumentReferenceStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4606,9 +4606,9 @@ export class DocumentRelationshipTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -4625,7 +4625,7 @@ export namespace DocumentRelationshipTypeCode {
   export type AsObject = {
     value: DocumentRelationshipTypeCode.ValueMap[keyof DocumentRelationshipTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4648,9 +4648,9 @@ export class AdmitSourceCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -4667,7 +4667,7 @@ export namespace AdmitSourceCode {
   export type AsObject = {
     value: AdmitSourceCode.ValueMap[keyof AdmitSourceCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4696,9 +4696,9 @@ export class DietCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -4715,7 +4715,7 @@ export namespace DietCode {
   export type AsObject = {
     value: DietCode.ValueMap[keyof DietCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4741,9 +4741,9 @@ export class DischargeDispositionCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -4760,7 +4760,7 @@ export namespace DischargeDispositionCode {
   export type AsObject = {
     value: DischargeDispositionCode.ValueMap[keyof DischargeDispositionCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4789,9 +4789,9 @@ export class EncounterLocationStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -4808,7 +4808,7 @@ export namespace EncounterLocationStatusCode {
   export type AsObject = {
     value: EncounterLocationStatusCode.ValueMap[keyof EncounterLocationStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4831,9 +4831,9 @@ export class SpecialArrangementsCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -4850,7 +4850,7 @@ export namespace SpecialArrangementsCode {
   export type AsObject = {
     value: SpecialArrangementsCode.ValueMap[keyof SpecialArrangementsCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4874,9 +4874,9 @@ export class EncounterStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -4893,7 +4893,7 @@ export namespace EncounterStatusCode {
   export type AsObject = {
     value: EncounterStatusCode.ValueMap[keyof EncounterStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4921,9 +4921,9 @@ export class EncounterTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -4940,7 +4940,7 @@ export namespace EncounterTypeCode {
   export type AsObject = {
     value: EncounterTypeCode.ValueMap[keyof EncounterTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -4963,9 +4963,9 @@ export class EndpointStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -4982,7 +4982,7 @@ export namespace EndpointStatusCode {
   export type AsObject = {
     value: EndpointStatusCode.ValueMap[keyof EndpointStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5007,9 +5007,9 @@ export class EntityNamePartQualifierCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5026,7 +5026,7 @@ export namespace EntityNamePartQualifierCode {
   export type AsObject = {
     value: EntityNamePartQualifierCode.ValueMap[keyof EntityNamePartQualifierCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5056,9 +5056,9 @@ export class EnteralFormulaAdditiveTypeCodeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5075,7 +5075,7 @@ export namespace EnteralFormulaAdditiveTypeCodeCode {
   export type AsObject = {
     value: EnteralFormulaAdditiveTypeCodeCode.ValueMap[keyof EnteralFormulaAdditiveTypeCodeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5099,9 +5099,9 @@ export class EpisodeOfCareStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5118,13 +5118,13 @@ export namespace EpisodeOfCareStatusCode {
   export type AsObject = {
     value: EpisodeOfCareStatusCode.ValueMap[keyof EpisodeOfCareStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
     INVALID_UNINITIALIZED: 0;
     PLANNED: 1;
-    WAITLIST: 2;
+    WAIT: 2;
     ACTIVE: 3;
     ONHOLD: 4;
     FINISHED: 5;
@@ -5144,9 +5144,9 @@ export class EpisodeOfCareTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5163,7 +5163,7 @@ export namespace EpisodeOfCareTypeCode {
   export type AsObject = {
     value: EpisodeOfCareTypeCode.ValueMap[keyof EpisodeOfCareTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5187,9 +5187,9 @@ export class EventCapabilityModeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5206,7 +5206,7 @@ export namespace EventCapabilityModeCode {
   export type AsObject = {
     value: EventCapabilityModeCode.ValueMap[keyof EventCapabilityModeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5227,9 +5227,9 @@ export class EventStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5246,7 +5246,7 @@ export namespace EventStatusCode {
   export type AsObject = {
     value: EventStatusCode.ValueMap[keyof EventStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5272,9 +5272,9 @@ export class ClaimPayeeResourceTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5291,7 +5291,7 @@ export namespace ClaimPayeeResourceTypeCode {
   export type AsObject = {
     value: ClaimPayeeResourceTypeCode.ValueMap[keyof ClaimPayeeResourceTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5314,9 +5314,9 @@ export class ExplanationOfBenefitStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5333,7 +5333,7 @@ export namespace ExplanationOfBenefitStatusCode {
   export type AsObject = {
     value: ExplanationOfBenefitStatusCode.ValueMap[keyof ExplanationOfBenefitStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5356,9 +5356,9 @@ export class ExtensionContextCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5375,7 +5375,7 @@ export namespace ExtensionContextCode {
   export type AsObject = {
     value: ExtensionContextCode.ValueMap[keyof ExtensionContextCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5397,9 +5397,9 @@ export class FilterOperatorCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5416,7 +5416,7 @@ export namespace FilterOperatorCode {
   export type AsObject = {
     value: FilterOperatorCode.ValueMap[keyof FilterOperatorCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5444,9 +5444,9 @@ export class FlagCategoryCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5463,7 +5463,7 @@ export namespace FlagCategoryCode {
   export type AsObject = {
     value: FlagCategoryCode.ValueMap[keyof FlagCategoryCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5487,9 +5487,9 @@ export class FlagPriorityCodesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5506,7 +5506,7 @@ export namespace FlagPriorityCodesCode {
   export type AsObject = {
     value: FlagPriorityCodesCode.ValueMap[keyof FlagPriorityCodesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5529,9 +5529,9 @@ export class FlagStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5548,7 +5548,7 @@ export namespace FlagStatusCode {
   export type AsObject = {
     value: FlagStatusCode.ValueMap[keyof FlagStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5570,9 +5570,9 @@ export class FinancialResourceStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5589,7 +5589,7 @@ export namespace FinancialResourceStatusCode {
   export type AsObject = {
     value: FinancialResourceStatusCode.ValueMap[keyof FinancialResourceStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5612,9 +5612,9 @@ export class GoalAcceptanceStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5631,7 +5631,7 @@ export namespace GoalAcceptanceStatusCode {
   export type AsObject = {
     value: GoalAcceptanceStatusCode.ValueMap[keyof GoalAcceptanceStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5653,9 +5653,9 @@ export class GoalCategoryCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5672,7 +5672,7 @@ export namespace GoalCategoryCode {
   export type AsObject = {
     value: GoalCategoryCode.ValueMap[keyof GoalCategoryCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5696,9 +5696,9 @@ export class GoalPriorityCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5715,7 +5715,7 @@ export namespace GoalPriorityCode {
   export type AsObject = {
     value: GoalPriorityCode.ValueMap[keyof GoalPriorityCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5737,9 +5737,9 @@ export class GoalRelationshipTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5756,7 +5756,7 @@ export namespace GoalRelationshipTypeCode {
   export type AsObject = {
     value: GoalRelationshipTypeCode.ValueMap[keyof GoalRelationshipTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5780,9 +5780,9 @@ export class GoalStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5799,7 +5799,7 @@ export namespace GoalStatusCode {
   export type AsObject = {
     value: GoalStatusCode.ValueMap[keyof GoalStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5831,9 +5831,9 @@ export class GoalStatusReasonCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5850,7 +5850,7 @@ export namespace GoalStatusReasonCode {
   export type AsObject = {
     value: GoalStatusReasonCode.ValueMap[keyof GoalStatusReasonCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5878,9 +5878,9 @@ export class GraphCompartmentRuleCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5897,7 +5897,7 @@ export namespace GraphCompartmentRuleCode {
   export type AsObject = {
     value: GraphCompartmentRuleCode.ValueMap[keyof GraphCompartmentRuleCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5920,9 +5920,9 @@ export class GroupTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5939,7 +5939,7 @@ export namespace GroupTypeCode {
   export type AsObject = {
     value: GroupTypeCode.ValueMap[keyof GroupTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -5964,9 +5964,9 @@ export class GuidanceResponseStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -5983,7 +5983,7 @@ export namespace GuidanceResponseStatusCode {
   export type AsObject = {
     value: GuidanceResponseStatusCode.ValueMap[keyof GuidanceResponseStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6008,9 +6008,9 @@ export class GuideDependencyTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6027,7 +6027,7 @@ export namespace GuideDependencyTypeCode {
   export type AsObject = {
     value: GuideDependencyTypeCode.ValueMap[keyof GuideDependencyTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6048,9 +6048,9 @@ export class GuidePageKindCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6067,14 +6067,14 @@ export namespace GuidePageKindCode {
   export type AsObject = {
     value: GuidePageKindCode.ValueMap[keyof GuidePageKindCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
     INVALID_UNINITIALIZED: 0;
     PAGE: 1;
     EXAMPLE: 2;
-    LIST: 3;
+    : 3;
     INCLUDE: 4;
     DIRECTORY: 5;
     DICTIONARY: 6;
@@ -6094,9 +6094,9 @@ export class FamilyHistoryNotDoneReasonCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6113,7 +6113,7 @@ export namespace FamilyHistoryNotDoneReasonCode {
   export type AsObject = {
     value: FamilyHistoryNotDoneReasonCode.ValueMap[keyof FamilyHistoryNotDoneReasonCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6136,9 +6136,9 @@ export class FamilyHistoryStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6155,7 +6155,7 @@ export namespace FamilyHistoryStatusCode {
   export type AsObject = {
     value: FamilyHistoryStatusCode.ValueMap[keyof FamilyHistoryStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6178,9 +6178,9 @@ export class HL7WorkgroupCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6197,7 +6197,7 @@ export namespace HL7WorkgroupCode {
   export type AsObject = {
     value: HL7WorkgroupCode.ValueMap[keyof HL7WorkgroupCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6239,9 +6239,9 @@ export class TestScriptRequestMethodCodeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6258,7 +6258,7 @@ export namespace TestScriptRequestMethodCodeCode {
   export type AsObject = {
     value: TestScriptRequestMethodCodeCode.ValueMap[keyof TestScriptRequestMethodCodeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6283,9 +6283,9 @@ export class HTTPVerbCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6302,7 +6302,7 @@ export namespace HTTPVerbCode {
   export type AsObject = {
     value: HTTPVerbCode.ValueMap[keyof HTTPVerbCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6325,9 +6325,9 @@ export class IdentityAssuranceLevelCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6344,7 +6344,7 @@ export namespace IdentityAssuranceLevelCode {
   export type AsObject = {
     value: IdentityAssuranceLevelCode.ValueMap[keyof IdentityAssuranceLevelCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6367,9 +6367,9 @@ export class ImmunizationOriginCodesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6386,7 +6386,7 @@ export namespace ImmunizationOriginCodesCode {
   export type AsObject = {
     value: ImmunizationOriginCodesCode.ValueMap[keyof ImmunizationOriginCodesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6409,9 +6409,9 @@ export class ImmunizationRecommendationDateCriterionCodesCode extends jspb.Messa
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6428,7 +6428,7 @@ export namespace ImmunizationRecommendationDateCriterionCodesCode {
   export type AsObject = {
     value: ImmunizationRecommendationDateCriterionCodesCode.ValueMap[keyof ImmunizationRecommendationDateCriterionCodesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6452,9 +6452,9 @@ export class ImmunizationRecommendationStatusCodesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6471,7 +6471,7 @@ export namespace ImmunizationRecommendationStatusCodesCode {
   export type AsObject = {
     value: ImmunizationRecommendationStatusCodesCode.ValueMap[keyof ImmunizationRecommendationStatusCodesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6492,9 +6492,9 @@ export class ImmunizationStatusCodesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6511,7 +6511,7 @@ export namespace ImmunizationStatusCodesCode {
   export type AsObject = {
     value: ImmunizationStatusCodesCode.ValueMap[keyof ImmunizationStatusCodesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6532,9 +6532,9 @@ export class ImplantStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6551,7 +6551,7 @@ export namespace ImplantStatusCode {
   export type AsObject = {
     value: ImplantStatusCode.ValueMap[keyof ImplantStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6574,9 +6574,9 @@ export class InstanceAvailabilityCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6593,7 +6593,7 @@ export namespace InstanceAvailabilityCode {
   export type AsObject = {
     value: InstanceAvailabilityCode.ValueMap[keyof InstanceAvailabilityCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6616,9 +6616,9 @@ export class IssueSeverityCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6635,7 +6635,7 @@ export namespace IssueSeverityCode {
   export type AsObject = {
     value: IssueSeverityCode.ValueMap[keyof IssueSeverityCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6658,9 +6658,9 @@ export class IssueTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6677,7 +6677,7 @@ export namespace IssueTypeCode {
   export type AsObject = {
     value: IssueTypeCode.ValueMap[keyof IssueTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6725,9 +6725,9 @@ export class QuestionnaireItemTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6744,7 +6744,7 @@ export namespace QuestionnaireItemTypeCode {
   export type AsObject = {
     value: QuestionnaireItemTypeCode.ValueMap[keyof QuestionnaireItemTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6780,9 +6780,9 @@ export class LibraryTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6799,7 +6799,7 @@ export namespace LibraryTypeCode {
   export type AsObject = {
     value: LibraryTypeCode.ValueMap[keyof LibraryTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6822,9 +6822,9 @@ export class LinkageTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6841,7 +6841,7 @@ export namespace LinkageTypeCode {
   export type AsObject = {
     value: LinkageTypeCode.ValueMap[keyof LinkageTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6863,9 +6863,9 @@ export class LinkTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6882,7 +6882,7 @@ export namespace LinkTypeCode {
   export type AsObject = {
     value: LinkTypeCode.ValueMap[keyof LinkTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6905,9 +6905,9 @@ export class ListEmptyReasonsCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6924,7 +6924,7 @@ export namespace ListEmptyReasonsCode {
   export type AsObject = {
     value: ListEmptyReasonsCode.ValueMap[keyof ListEmptyReasonsCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6949,9 +6949,9 @@ export class ExampleUseCodesforListCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -6968,7 +6968,7 @@ export namespace ExampleUseCodesforListCode {
   export type AsObject = {
     value: ExampleUseCodesforListCode.ValueMap[keyof ExampleUseCodesforListCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -6978,7 +6978,7 @@ export namespace ExampleUseCodesforListCode {
     ALLERGIES: 3;
     MEDICATIONS: 4;
     PROBLEMS: 5;
-    WORKLIST: 6;
+    WORK: 6;
     WAITING: 7;
     PROTOCOLS: 8;
     PLANS: 9;
@@ -6996,9 +6996,9 @@ export class ListModeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7015,7 +7015,7 @@ export namespace ListModeCode {
   export type AsObject = {
     value: ListModeCode.ValueMap[keyof ListModeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7037,9 +7037,9 @@ export class ListOrderCodesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7056,7 +7056,7 @@ export namespace ListOrderCodesCode {
   export type AsObject = {
     value: ListOrderCodesCode.ValueMap[keyof ListOrderCodesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7083,9 +7083,9 @@ export class ListStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7102,7 +7102,7 @@ export namespace ListStatusCode {
   export type AsObject = {
     value: ListStatusCode.ValueMap[keyof ListStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7124,9 +7124,9 @@ export class LocationModeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7143,7 +7143,7 @@ export namespace LocationModeCode {
   export type AsObject = {
     value: LocationModeCode.ValueMap[keyof LocationModeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7164,9 +7164,9 @@ export class LocationTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7183,7 +7183,7 @@ export namespace LocationTypeCode {
   export type AsObject = {
     value: LocationTypeCode.ValueMap[keyof LocationTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7216,9 +7216,9 @@ export class LocationStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7235,7 +7235,7 @@ export namespace LocationStatusCode {
   export type AsObject = {
     value: LocationStatusCode.ValueMap[keyof LocationStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7257,9 +7257,9 @@ export class ProbabilityDistributionTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7276,7 +7276,7 @@ export namespace ProbabilityDistributionTypeCode {
   export type AsObject = {
     value: ProbabilityDistributionTypeCode.ValueMap[keyof ProbabilityDistributionTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7304,9 +7304,9 @@ export class StructureMapContextTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7323,7 +7323,7 @@ export namespace StructureMapContextTypeCode {
   export type AsObject = {
     value: StructureMapContextTypeCode.ValueMap[keyof StructureMapContextTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7344,9 +7344,9 @@ export class StructureMapGroupTypeModeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7363,7 +7363,7 @@ export namespace StructureMapGroupTypeModeCode {
   export type AsObject = {
     value: StructureMapGroupTypeModeCode.ValueMap[keyof StructureMapGroupTypeModeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7385,9 +7385,9 @@ export class StructureMapInputModeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7404,7 +7404,7 @@ export namespace StructureMapInputModeCode {
   export type AsObject = {
     value: StructureMapInputModeCode.ValueMap[keyof StructureMapInputModeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7425,9 +7425,9 @@ export class StructureMapModelModeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7444,7 +7444,7 @@ export namespace StructureMapModelModeCode {
   export type AsObject = {
     value: StructureMapModelModeCode.ValueMap[keyof StructureMapModelModeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7467,9 +7467,9 @@ export class StructureMapSourceListModeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7486,7 +7486,7 @@ export namespace StructureMapSourceListModeCode {
   export type AsObject = {
     value: StructureMapSourceListModeCode.ValueMap[keyof StructureMapSourceListModeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7510,9 +7510,9 @@ export class StructureMapTargetListModeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7529,7 +7529,7 @@ export namespace StructureMapTargetListModeCode {
   export type AsObject = {
     value: StructureMapTargetListModeCode.ValueMap[keyof StructureMapTargetListModeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7552,9 +7552,9 @@ export class StructureMapTransformCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7571,7 +7571,7 @@ export namespace StructureMapTransformCode {
   export type AsObject = {
     value: StructureMapTransformCode.ValueMap[keyof StructureMapTransformCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7607,9 +7607,9 @@ export class MatchGradeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7626,7 +7626,7 @@ export namespace MatchGradeCode {
   export type AsObject = {
     value: MatchGradeCode.ValueMap[keyof MatchGradeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7649,9 +7649,9 @@ export class MeasureDataUsageCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7668,7 +7668,7 @@ export namespace MeasureDataUsageCode {
   export type AsObject = {
     value: MeasureDataUsageCode.ValueMap[keyof MeasureDataUsageCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7689,9 +7689,9 @@ export class MeasmntPrincipleCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7708,7 +7708,7 @@ export namespace MeasmntPrincipleCode {
   export type AsObject = {
     value: MeasmntPrincipleCode.ValueMap[keyof MeasmntPrincipleCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7738,9 +7738,9 @@ export class MeasurePopulationTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7757,7 +7757,7 @@ export namespace MeasurePopulationTypeCode {
   export type AsObject = {
     value: MeasurePopulationTypeCode.ValueMap[keyof MeasurePopulationTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7785,9 +7785,9 @@ export class MeasureReportStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7804,7 +7804,7 @@ export namespace MeasureReportStatusCode {
   export type AsObject = {
     value: MeasureReportStatusCode.ValueMap[keyof MeasureReportStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7826,9 +7826,9 @@ export class MeasureReportTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7845,13 +7845,13 @@ export namespace MeasureReportTypeCode {
   export type AsObject = {
     value: MeasureReportTypeCode.ValueMap[keyof MeasureReportTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
     INVALID_UNINITIALIZED: 0;
     INDIVIDUAL: 1;
-    PATIENT_LIST: 2;
+    PATIENT_: 2;
     SUMMARY: 3;
   }
 
@@ -7867,9 +7867,9 @@ export class MeasureScoringCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7886,7 +7886,7 @@ export namespace MeasureScoringCode {
   export type AsObject = {
     value: MeasureScoringCode.ValueMap[keyof MeasureScoringCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7909,9 +7909,9 @@ export class MeasureTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7928,7 +7928,7 @@ export namespace MeasureTypeCode {
   export type AsObject = {
     value: MeasureTypeCode.ValueMap[keyof MeasureTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7952,9 +7952,9 @@ export class MedicationAdministrationCategoryCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -7971,7 +7971,7 @@ export namespace MedicationAdministrationCategoryCode {
   export type AsObject = {
     value: MedicationAdministrationCategoryCode.ValueMap[keyof MedicationAdministrationCategoryCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -7993,9 +7993,9 @@ export class MedicationAdministrationStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8012,7 +8012,7 @@ export namespace MedicationAdministrationStatusCode {
   export type AsObject = {
     value: MedicationAdministrationStatusCode.ValueMap[keyof MedicationAdministrationStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8037,9 +8037,9 @@ export class MedicationDispenseCategoryCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8056,7 +8056,7 @@ export namespace MedicationDispenseCategoryCode {
   export type AsObject = {
     value: MedicationDispenseCategoryCode.ValueMap[keyof MedicationDispenseCategoryCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8078,9 +8078,9 @@ export class MedicationDispenseStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8097,7 +8097,7 @@ export namespace MedicationDispenseStatusCode {
   export type AsObject = {
     value: MedicationDispenseStatusCode.ValueMap[keyof MedicationDispenseStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8122,9 +8122,9 @@ export class MedicationContainerCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8141,7 +8141,7 @@ export namespace MedicationContainerCode {
   export type AsObject = {
     value: MedicationContainerCode.ValueMap[keyof MedicationContainerCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8168,9 +8168,9 @@ export class MedicationRequestCategoryCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8187,7 +8187,7 @@ export namespace MedicationRequestCategoryCode {
   export type AsObject = {
     value: MedicationRequestCategoryCode.ValueMap[keyof MedicationRequestCategoryCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8209,9 +8209,9 @@ export class MedicationRequestIntentCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8228,7 +8228,7 @@ export namespace MedicationRequestIntentCode {
   export type AsObject = {
     value: MedicationRequestIntentCode.ValueMap[keyof MedicationRequestIntentCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8251,9 +8251,9 @@ export class MedicationRequestPriorityCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8270,7 +8270,7 @@ export namespace MedicationRequestPriorityCode {
   export type AsObject = {
     value: MedicationRequestPriorityCode.ValueMap[keyof MedicationRequestPriorityCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8293,9 +8293,9 @@ export class MedicationRequestStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8312,7 +8312,7 @@ export namespace MedicationRequestStatusCode {
   export type AsObject = {
     value: MedicationRequestStatusCode.ValueMap[keyof MedicationRequestStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8339,9 +8339,9 @@ export class MedicationStatementCategoryCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8358,7 +8358,7 @@ export namespace MedicationStatementCategoryCode {
   export type AsObject = {
     value: MedicationStatementCategoryCode.ValueMap[keyof MedicationStatementCategoryCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8381,9 +8381,9 @@ export class MedicationStatementStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8400,7 +8400,7 @@ export namespace MedicationStatementStatusCode {
   export type AsObject = {
     value: MedicationStatementStatusCode.ValueMap[keyof MedicationStatementStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8425,9 +8425,9 @@ export class MedicationStatementTakenCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8444,7 +8444,7 @@ export namespace MedicationStatementTakenCode {
   export type AsObject = {
     value: MedicationStatementTakenCode.ValueMap[keyof MedicationStatementTakenCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8467,9 +8467,9 @@ export class MedicationStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8486,7 +8486,7 @@ export namespace MedicationStatusCode {
   export type AsObject = {
     value: MedicationStatusCode.ValueMap[keyof MedicationStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8508,9 +8508,9 @@ export class MessageEventCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8527,7 +8527,7 @@ export namespace MessageEventCode {
   export type AsObject = {
     value: MessageEventCode.ValueMap[keyof MessageEventCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8558,9 +8558,9 @@ export class MessageHeaderResponseRequestCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8577,7 +8577,7 @@ export namespace MessageHeaderResponseRequestCode {
   export type AsObject = {
     value: MessageHeaderResponseRequestCode.ValueMap[keyof MessageHeaderResponseRequestCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8600,9 +8600,9 @@ export class ExampleMessageReasonCodesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8619,7 +8619,7 @@ export namespace ExampleMessageReasonCodesCode {
   export type AsObject = {
     value: ExampleMessageReasonCodesCode.ValueMap[keyof ExampleMessageReasonCodesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8644,9 +8644,9 @@ export class MessageSignificanceCategoryCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8663,7 +8663,7 @@ export namespace MessageSignificanceCategoryCode {
   export type AsObject = {
     value: MessageSignificanceCategoryCode.ValueMap[keyof MessageSignificanceCategoryCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8685,9 +8685,9 @@ export class MessageTransportCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8704,7 +8704,7 @@ export namespace MessageTransportCode {
   export type AsObject = {
     value: MessageTransportCode.ValueMap[keyof MessageTransportCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8726,9 +8726,9 @@ export class DeviceMetricCalibrationStateCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8745,7 +8745,7 @@ export namespace DeviceMetricCalibrationStateCode {
   export type AsObject = {
     value: DeviceMetricCalibrationStateCode.ValueMap[keyof DeviceMetricCalibrationStateCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8768,9 +8768,9 @@ export class DeviceMetricCalibrationTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8787,7 +8787,7 @@ export namespace DeviceMetricCalibrationTypeCode {
   export type AsObject = {
     value: DeviceMetricCalibrationTypeCode.ValueMap[keyof DeviceMetricCalibrationTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8810,9 +8810,9 @@ export class DeviceMetricCategoryCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8829,7 +8829,7 @@ export namespace DeviceMetricCategoryCode {
   export type AsObject = {
     value: DeviceMetricCategoryCode.ValueMap[keyof DeviceMetricCategoryCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8852,9 +8852,9 @@ export class DeviceMetricColorCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8871,7 +8871,7 @@ export namespace DeviceMetricColorCode {
   export type AsObject = {
     value: DeviceMetricColorCode.ValueMap[keyof DeviceMetricColorCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8898,9 +8898,9 @@ export class DeviceMetricOperationalStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8917,7 +8917,7 @@ export namespace DeviceMetricOperationalStatusCode {
   export type AsObject = {
     value: DeviceMetricOperationalStatusCode.ValueMap[keyof DeviceMetricOperationalStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8940,9 +8940,9 @@ export class HumanNameAssemblyOrderCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -8959,7 +8959,7 @@ export namespace HumanNameAssemblyOrderCode {
   export type AsObject = {
     value: HumanNameAssemblyOrderCode.ValueMap[keyof HumanNameAssemblyOrderCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -8982,9 +8982,9 @@ export class NameRepresentationUseCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9001,7 +9001,7 @@ export namespace NameRepresentationUseCode {
   export type AsObject = {
     value: NameRepresentationUseCode.ValueMap[keyof NameRepresentationUseCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9023,9 +9023,9 @@ export class NamingSystemIdentifierTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9042,7 +9042,7 @@ export namespace NamingSystemIdentifierTypeCode {
   export type AsObject = {
     value: NamingSystemIdentifierTypeCode.ValueMap[keyof NamingSystemIdentifierTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9065,9 +9065,9 @@ export class NamingSystemTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9084,7 +9084,7 @@ export namespace NamingSystemTypeCode {
   export type AsObject = {
     value: NamingSystemTypeCode.ValueMap[keyof NamingSystemTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9106,9 +9106,9 @@ export class AuditEventAgentNetworkTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9125,7 +9125,7 @@ export namespace AuditEventAgentNetworkTypeCode {
   export type AsObject = {
     value: AuditEventAgentNetworkTypeCode.ValueMap[keyof AuditEventAgentNetworkTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9149,9 +9149,9 @@ export class NoteTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9168,7 +9168,7 @@ export namespace NoteTypeCode {
   export type AsObject = {
     value: NoteTypeCode.ValueMap[keyof NoteTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9190,9 +9190,9 @@ export class NullFlavorCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9209,7 +9209,7 @@ export namespace NullFlavorCode {
   export type AsObject = {
     value: NullFlavorCode.ValueMap[keyof NullFlavorCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9245,9 +9245,9 @@ export class NutritionOrderStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9264,7 +9264,7 @@ export namespace NutritionOrderStatusCode {
   export type AsObject = {
     value: NutritionOrderStatusCode.ValueMap[keyof NutritionOrderStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9292,9 +9292,9 @@ export class ObservationCategoryCodesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9311,7 +9311,7 @@ export namespace ObservationCategoryCodesCode {
   export type AsObject = {
     value: ObservationCategoryCodesCode.ValueMap[keyof ObservationCategoryCodesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9338,9 +9338,9 @@ export class ObservationRelationshipTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9357,7 +9357,7 @@ export namespace ObservationRelationshipTypeCode {
   export type AsObject = {
     value: ObservationRelationshipTypeCode.ValueMap[keyof ObservationRelationshipTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9382,9 +9382,9 @@ export class StatisticsCodeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9401,7 +9401,7 @@ export namespace StatisticsCodeCode {
   export type AsObject = {
     value: StatisticsCodeCode.ValueMap[keyof StatisticsCodeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9441,9 +9441,9 @@ export class ObservationStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9460,7 +9460,7 @@ export namespace ObservationStatusCode {
   export type AsObject = {
     value: ObservationStatusCode.ValueMap[keyof ObservationStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9487,9 +9487,9 @@ export class DeviceComponentOperationalStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9506,7 +9506,7 @@ export namespace DeviceComponentOperationalStatusCode {
   export type AsObject = {
     value: DeviceComponentOperationalStatusCode.ValueMap[keyof DeviceComponentOperationalStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9532,9 +9532,9 @@ export class OperationKindCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9551,7 +9551,7 @@ export namespace OperationKindCode {
   export type AsObject = {
     value: OperationKindCode.ValueMap[keyof OperationKindCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9572,9 +9572,9 @@ export class OperationOutcomeCodesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9591,7 +9591,7 @@ export namespace OperationOutcomeCodesCode {
   export type AsObject = {
     value: OperationOutcomeCodesCode.ValueMap[keyof OperationOutcomeCodesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9660,9 +9660,9 @@ export class NarrativeStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9679,7 +9679,7 @@ export namespace NarrativeStatusCode {
   export type AsObject = {
     value: NarrativeStatusCode.ValueMap[keyof NarrativeStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9702,9 +9702,9 @@ export class OperationParameterUseCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9721,7 +9721,7 @@ export namespace OperationParameterUseCode {
   export type AsObject = {
     value: OperationParameterUseCode.ValueMap[keyof OperationParameterUseCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9742,9 +9742,9 @@ export class OrganizationTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9761,7 +9761,7 @@ export namespace OrganizationTypeCode {
   export type AsObject = {
     value: OrganizationTypeCode.ValueMap[keyof OrganizationTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9791,9 +9791,9 @@ export class DeviceComponentParameterGroupCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9810,7 +9810,7 @@ export namespace DeviceComponentParameterGroupCode {
   export type AsObject = {
     value: DeviceComponentParameterGroupCode.ValueMap[keyof DeviceComponentParameterGroupCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9838,9 +9838,9 @@ export class ParticipantRequiredCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9857,7 +9857,7 @@ export namespace ParticipantRequiredCode {
   export type AsObject = {
     value: ParticipantRequiredCode.ValueMap[keyof ParticipantRequiredCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9879,9 +9879,9 @@ export class ParticipationStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9898,7 +9898,7 @@ export namespace ParticipationStatusCode {
   export type AsObject = {
     value: ParticipationStatusCode.ValueMap[keyof ParticipationStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9921,9 +9921,9 @@ export class PlanDefinitionTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9940,7 +9940,7 @@ export namespace PlanDefinitionTypeCode {
   export type AsObject = {
     value: PlanDefinitionTypeCode.ValueMap[keyof PlanDefinitionTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -9962,9 +9962,9 @@ export class PostalAddressUseTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -9981,7 +9981,7 @@ export namespace PostalAddressUseTypeCode {
   export type AsObject = {
     value: PostalAddressUseTypeCode.ValueMap[keyof PostalAddressUseTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10008,9 +10008,9 @@ export class PractitionerRoleCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10027,7 +10027,7 @@ export namespace PractitionerRoleCode {
   export type AsObject = {
     value: PractitionerRoleCode.ValueMap[keyof PractitionerRoleCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10052,9 +10052,9 @@ export class PractitionerSpecialtyCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10071,7 +10071,7 @@ export namespace PractitionerSpecialtyCode {
   export type AsObject = {
     value: PractitionerSpecialtyCode.ValueMap[keyof PractitionerSpecialtyCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10095,9 +10095,9 @@ export class ProcedureProgressStatusCodesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10114,7 +10114,7 @@ export namespace ProcedureProgressStatusCodesCode {
   export type AsObject = {
     value: ProcedureProgressStatusCodesCode.ValueMap[keyof ProcedureProgressStatusCodesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10139,9 +10139,9 @@ export class ProvenanceEntityRoleCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10158,7 +10158,7 @@ export namespace ProvenanceEntityRoleCode {
   export type AsObject = {
     value: ProvenanceEntityRoleCode.ValueMap[keyof ProvenanceEntityRoleCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10182,9 +10182,9 @@ export class PublicationStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10201,7 +10201,7 @@ export namespace PublicationStatusCode {
   export type AsObject = {
     value: PublicationStatusCode.ValueMap[keyof PublicationStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10224,9 +10224,9 @@ export class QualityTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10243,7 +10243,7 @@ export namespace QualityTypeCode {
   export type AsObject = {
     value: QualityTypeCode.ValueMap[keyof QualityTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10265,9 +10265,9 @@ export class MaxOccursCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10284,7 +10284,7 @@ export namespace MaxOccursCode {
   export type AsObject = {
     value: MaxOccursCode.ValueMap[keyof MaxOccursCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10304,9 +10304,9 @@ export class QuestionnaireResponseStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10323,7 +10323,7 @@ export namespace QuestionnaireResponseStatusCode {
   export type AsObject = {
     value: QuestionnaireResponseStatusCode.ValueMap[keyof QuestionnaireResponseStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10347,9 +10347,9 @@ export class QuestionnaireTextCategoriesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10366,7 +10366,7 @@ export namespace QuestionnaireTextCategoriesCode {
   export type AsObject = {
     value: QuestionnaireTextCategoriesCode.ValueMap[keyof QuestionnaireTextCategoriesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10387,9 +10387,9 @@ export class QuestionnaireItemUIControlCodesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10406,12 +10406,12 @@ export namespace QuestionnaireItemUIControlCodesCode {
   export type AsObject = {
     value: QuestionnaireItemUIControlCodesCode.ValueMap[keyof QuestionnaireItemUIControlCodesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
     INVALID_UNINITIALIZED: 0;
-    LIST: 1;
+    : 1;
     TABLE: 2;
     HEADER: 3;
     FOOTER: 4;
@@ -10444,9 +10444,9 @@ export class QuestionnaireItemUsageModeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10463,7 +10463,7 @@ export namespace QuestionnaireItemUsageModeCode {
   export type AsObject = {
     value: QuestionnaireItemUsageModeCode.ValueMap[keyof QuestionnaireItemUsageModeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10487,9 +10487,9 @@ export class AllergyIntoleranceCertaintyCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10506,7 +10506,7 @@ export namespace AllergyIntoleranceCertaintyCode {
   export type AsObject = {
     value: AllergyIntoleranceCertaintyCode.ValueMap[keyof AllergyIntoleranceCertaintyCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10529,9 +10529,9 @@ export class AllergyIntoleranceSeverityCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10548,7 +10548,7 @@ export namespace AllergyIntoleranceSeverityCode {
   export type AsObject = {
     value: AllergyIntoleranceSeverityCode.ValueMap[keyof AllergyIntoleranceSeverityCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10570,9 +10570,9 @@ export class ReasonMedicationGivenCodesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10589,7 +10589,7 @@ export namespace ReasonMedicationGivenCodesCode {
   export type AsObject = {
     value: ReasonMedicationGivenCodesCode.ValueMap[keyof ReasonMedicationGivenCodesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10611,9 +10611,9 @@ export class ReferenceHandlingPolicyCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10630,7 +10630,7 @@ export namespace ReferenceHandlingPolicyCode {
   export type AsObject = {
     value: ReferenceHandlingPolicyCode.ValueMap[keyof ReferenceHandlingPolicyCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10654,9 +10654,9 @@ export class RelatedArtifactTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10673,7 +10673,7 @@ export namespace RelatedArtifactTypeCode {
   export type AsObject = {
     value: RelatedArtifactTypeCode.ValueMap[keyof RelatedArtifactTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10700,9 +10700,9 @@ export class ObservationReferenceRangeMeaningCodesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10719,7 +10719,7 @@ export namespace ObservationReferenceRangeMeaningCodesCode {
   export type AsObject = {
     value: ObservationReferenceRangeMeaningCodesCode.ValueMap[keyof ObservationReferenceRangeMeaningCodesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10749,9 +10749,9 @@ export class TestReportActionResultCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10768,7 +10768,7 @@ export namespace TestReportActionResultCode {
   export type AsObject = {
     value: TestReportActionResultCode.ValueMap[keyof TestReportActionResultCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10792,9 +10792,9 @@ export class TestReportParticipantTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10811,7 +10811,7 @@ export namespace TestReportParticipantTypeCode {
   export type AsObject = {
     value: TestReportParticipantTypeCode.ValueMap[keyof TestReportParticipantTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10833,9 +10833,9 @@ export class TestReportResultCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10852,7 +10852,7 @@ export namespace TestReportResultCode {
   export type AsObject = {
     value: TestReportResultCode.ValueMap[keyof TestReportResultCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10874,9 +10874,9 @@ export class TestReportStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10893,7 +10893,7 @@ export namespace TestReportStatusCode {
   export type AsObject = {
     value: TestReportStatusCode.ValueMap[keyof TestReportStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10917,9 +10917,9 @@ export class RepositoryTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10936,7 +10936,7 @@ export namespace RepositoryTypeCode {
   export type AsObject = {
     value: RepositoryTypeCode.ValueMap[keyof RepositoryTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -10960,9 +10960,9 @@ export class RequestIntentCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -10979,7 +10979,7 @@ export namespace RequestIntentCode {
   export type AsObject = {
     value: RequestIntentCode.ValueMap[keyof RequestIntentCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11006,9 +11006,9 @@ export class RequestPriorityCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -11025,7 +11025,7 @@ export namespace RequestPriorityCode {
   export type AsObject = {
     value: RequestPriorityCode.ValueMap[keyof RequestPriorityCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11048,9 +11048,9 @@ export class RequestStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -11067,7 +11067,7 @@ export namespace RequestStatusCode {
   export type AsObject = {
     value: RequestStatusCode.ValueMap[keyof RequestStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11093,9 +11093,9 @@ export class ResearchStudyStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -11112,7 +11112,7 @@ export namespace ResearchStudyStatusCode {
   export type AsObject = {
     value: ResearchStudyStatusCode.ValueMap[keyof ResearchStudyStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11137,9 +11137,9 @@ export class ResearchSubjectStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -11156,7 +11156,7 @@ export namespace ResearchSubjectStatusCode {
   export type AsObject = {
     value: ResearchSubjectStatusCode.ValueMap[keyof ResearchSubjectStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11181,9 +11181,9 @@ export class PayeeResourceTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -11200,7 +11200,7 @@ export namespace PayeeResourceTypeCode {
   export type AsObject = {
     value: PayeeResourceTypeCode.ValueMap[keyof PayeeResourceTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11223,9 +11223,9 @@ export class ResourceTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -11242,7 +11242,7 @@ export namespace ResourceTypeCode {
   export type AsObject = {
     value: ResourceTypeCode.ValueMap[keyof ResourceTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11309,7 +11309,7 @@ export namespace ResourceTypeCode {
     IMPLEMENTATION_GUIDE: 60;
     LIBRARY: 61;
     LINKAGE: 62;
-    LIST: 63;
+    : 63;
     LOCATION: 64;
     MEASURE: 65;
     MEASURE_REPORT: 66;
@@ -11380,9 +11380,9 @@ export class ResourceValidationModeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -11399,7 +11399,7 @@ export namespace ResourceValidationModeCode {
   export type AsObject = {
     value: ResourceValidationModeCode.ValueMap[keyof ResourceValidationModeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11421,9 +11421,9 @@ export class ResponseTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -11440,7 +11440,7 @@ export namespace ResponseTypeCode {
   export type AsObject = {
     value: ResponseTypeCode.ValueMap[keyof ResponseTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11462,9 +11462,9 @@ export class RestfulCapabilityModeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -11481,7 +11481,7 @@ export namespace RestfulCapabilityModeCode {
   export type AsObject = {
     value: RestfulCapabilityModeCode.ValueMap[keyof RestfulCapabilityModeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11502,9 +11502,9 @@ export class RestfulSecurityServiceCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -11521,7 +11521,7 @@ export namespace RestfulSecurityServiceCode {
   export type AsObject = {
     value: RestfulSecurityServiceCode.ValueMap[keyof RestfulSecurityServiceCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11546,9 +11546,9 @@ export class RiskProbabilityCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -11565,7 +11565,7 @@ export namespace RiskProbabilityCode {
   export type AsObject = {
     value: RiskProbabilityCode.ValueMap[keyof RiskProbabilityCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11589,9 +11589,9 @@ export class SearchComparatorCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -11608,7 +11608,7 @@ export namespace SearchComparatorCode {
   export type AsObject = {
     value: SearchComparatorCode.ValueMap[keyof SearchComparatorCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11636,9 +11636,9 @@ export class SearchEntryModeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -11655,7 +11655,7 @@ export namespace SearchEntryModeCode {
   export type AsObject = {
     value: SearchEntryModeCode.ValueMap[keyof SearchEntryModeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11677,9 +11677,9 @@ export class SearchModifierCodeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -11696,7 +11696,7 @@ export namespace SearchModifierCodeCode {
   export type AsObject = {
     value: SearchModifierCodeCode.ValueMap[keyof SearchModifierCodeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11725,9 +11725,9 @@ export class SearchParamTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -11744,7 +11744,7 @@ export namespace SearchParamTypeCode {
   export type AsObject = {
     value: SearchParamTypeCode.ValueMap[keyof SearchParamTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11771,9 +11771,9 @@ export class XPathUsageTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -11790,7 +11790,7 @@ export namespace XPathUsageTypeCode {
   export type AsObject = {
     value: XPathUsageTypeCode.ValueMap[keyof XPathUsageTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11814,9 +11814,9 @@ export class SequenceTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -11833,7 +11833,7 @@ export namespace SequenceTypeCode {
   export type AsObject = {
     value: SequenceTypeCode.ValueMap[keyof SequenceTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11855,9 +11855,9 @@ export class ServiceProvisionConditionsCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -11874,7 +11874,7 @@ export namespace ServiceProvisionConditionsCode {
   export type AsObject = {
     value: ServiceProvisionConditionsCode.ValueMap[keyof ServiceProvisionConditionsCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11896,9 +11896,9 @@ export class ReferralMethodCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -11915,7 +11915,7 @@ export namespace ReferralMethodCode {
   export type AsObject = {
     value: ReferralMethodCode.ValueMap[keyof ReferralMethodCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11939,9 +11939,9 @@ export class SlotStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -11958,7 +11958,7 @@ export namespace SlotStatusCode {
   export type AsObject = {
     value: SlotStatusCode.ValueMap[keyof SlotStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -11982,9 +11982,9 @@ export class SpecialValuesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12001,7 +12001,7 @@ export namespace SpecialValuesCode {
   export type AsObject = {
     value: SpecialValuesCode.ValueMap[keyof SpecialValuesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12026,9 +12026,9 @@ export class DeviceSpecificationSpecTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12045,7 +12045,7 @@ export namespace DeviceSpecificationSpecTypeCode {
   export type AsObject = {
     value: DeviceSpecificationSpecTypeCode.ValueMap[keyof DeviceSpecificationSpecTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12072,9 +12072,9 @@ export class SpecimenStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12091,7 +12091,7 @@ export namespace SpecimenStatusCode {
   export type AsObject = {
     value: SpecimenStatusCode.ValueMap[keyof SpecimenStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12114,9 +12114,9 @@ export class StructureDefinitionKindCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12133,7 +12133,7 @@ export namespace StructureDefinitionKindCode {
   export type AsObject = {
     value: StructureDefinitionKindCode.ValueMap[keyof StructureDefinitionKindCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12156,9 +12156,9 @@ export class SubscriptionChannelTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12175,7 +12175,7 @@ export namespace SubscriptionChannelTypeCode {
   export type AsObject = {
     value: SubscriptionChannelTypeCode.ValueMap[keyof SubscriptionChannelTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12199,9 +12199,9 @@ export class SubscriptionStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12218,7 +12218,7 @@ export namespace SubscriptionStatusCode {
   export type AsObject = {
     value: SubscriptionStatusCode.ValueMap[keyof SubscriptionStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12241,9 +12241,9 @@ export class SubscriptionTagCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12260,7 +12260,7 @@ export namespace SubscriptionTagCode {
   export type AsObject = {
     value: SubscriptionTagCode.ValueMap[keyof SubscriptionTagCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12281,9 +12281,9 @@ export class SubstanceCategoryCodesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12300,7 +12300,7 @@ export namespace SubstanceCategoryCodesCode {
   export type AsObject = {
     value: SubstanceCategoryCodesCode.ValueMap[keyof SubstanceCategoryCodesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12326,9 +12326,9 @@ export class FHIRSubstanceStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12345,7 +12345,7 @@ export namespace FHIRSubstanceStatusCode {
   export type AsObject = {
     value: FHIRSubstanceStatusCode.ValueMap[keyof FHIRSubstanceStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12367,9 +12367,9 @@ export class SupplyDeliveryStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12386,7 +12386,7 @@ export namespace SupplyDeliveryStatusCode {
   export type AsObject = {
     value: SupplyDeliveryStatusCode.ValueMap[keyof SupplyDeliveryStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12409,9 +12409,9 @@ export class SupplyItemTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12428,7 +12428,7 @@ export namespace SupplyItemTypeCode {
   export type AsObject = {
     value: SupplyItemTypeCode.ValueMap[keyof SupplyItemTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12449,9 +12449,9 @@ export class SupplyTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12468,7 +12468,7 @@ export namespace SupplyTypeCode {
   export type AsObject = {
     value: SupplyTypeCode.ValueMap[keyof SupplyTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12489,9 +12489,9 @@ export class SupplyRequestReasonCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12508,7 +12508,7 @@ export namespace SupplyRequestReasonCode {
   export type AsObject = {
     value: SupplyRequestReasonCode.ValueMap[keyof SupplyRequestReasonCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12529,9 +12529,9 @@ export class SupplyRequestStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12548,7 +12548,7 @@ export namespace SupplyRequestStatusCode {
   export type AsObject = {
     value: SupplyRequestStatusCode.ValueMap[keyof SupplyRequestStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12574,9 +12574,9 @@ export class SystemRestfulInteractionCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12593,7 +12593,7 @@ export namespace SystemRestfulInteractionCode {
   export type AsObject = {
     value: SystemRestfulInteractionCode.ValueMap[keyof SystemRestfulInteractionCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12616,9 +12616,9 @@ export class SystemVersionProcessingModeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12635,7 +12635,7 @@ export namespace SystemVersionProcessingModeCode {
   export type AsObject = {
     value: SystemVersionProcessingModeCode.ValueMap[keyof SystemVersionProcessingModeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12657,9 +12657,9 @@ export class TaskPerformerTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12676,7 +12676,7 @@ export namespace TaskPerformerTypeCode {
   export type AsObject = {
     value: TaskPerformerTypeCode.ValueMap[keyof TaskPerformerTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12703,9 +12703,9 @@ export class TemplateStatusCodeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12722,7 +12722,7 @@ export namespace TemplateStatusCodeCode {
   export type AsObject = {
     value: TemplateStatusCodeCode.ValueMap[keyof TemplateStatusCodeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12749,9 +12749,9 @@ export class TaskStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12768,7 +12768,7 @@ export namespace TaskStatusCode {
   export type AsObject = {
     value: TaskStatusCode.ValueMap[keyof TaskStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12799,9 +12799,9 @@ export class TestScriptOperationCodeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12818,7 +12818,7 @@ export namespace TestScriptOperationCodeCode {
   export type AsObject = {
     value: TestScriptOperationCodeCode.ValueMap[keyof TestScriptOperationCodeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12890,9 +12890,9 @@ export class TestScriptProfileDestinationTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12909,7 +12909,7 @@ export namespace TestScriptProfileDestinationTypeCode {
   export type AsObject = {
     value: TestScriptProfileDestinationTypeCode.ValueMap[keyof TestScriptProfileDestinationTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12932,9 +12932,9 @@ export class TestScriptProfileOriginTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12951,7 +12951,7 @@ export namespace TestScriptProfileOriginTypeCode {
   export type AsObject = {
     value: TestScriptProfileOriginTypeCode.ValueMap[keyof TestScriptProfileOriginTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -12972,9 +12972,9 @@ export class TransactionModeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -12991,7 +12991,7 @@ export namespace TransactionModeCode {
   export type AsObject = {
     value: TransactionModeCode.ValueMap[keyof TransactionModeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -13014,9 +13014,9 @@ export class TypeDerivationRuleCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -13033,7 +13033,7 @@ export namespace TypeDerivationRuleCode {
   export type AsObject = {
     value: TypeDerivationRuleCode.ValueMap[keyof TypeDerivationRuleCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -13054,9 +13054,9 @@ export class TypeRestfulInteractionCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -13073,7 +13073,7 @@ export namespace TypeRestfulInteractionCode {
   export type AsObject = {
     value: TypeRestfulInteractionCode.ValueMap[keyof TypeRestfulInteractionCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -13101,9 +13101,9 @@ export class UDIEntryTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -13120,7 +13120,7 @@ export namespace UDIEntryTypeCode {
   export type AsObject = {
     value: UDIEntryTypeCode.ValueMap[keyof UDIEntryTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -13145,9 +13145,9 @@ export class UnknownContentCodeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -13164,7 +13164,7 @@ export namespace UnknownContentCodeCode {
   export type AsObject = {
     value: UnknownContentCodeCode.ValueMap[keyof UnknownContentCodeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -13187,9 +13187,9 @@ export class UsageContextTypeCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -13206,7 +13206,7 @@ export namespace UsageContextTypeCode {
   export type AsObject = {
     value: UsageContextTypeCode.ValueMap[keyof UsageContextTypeCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -13233,9 +13233,9 @@ export class ConfidentialityClassificationCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -13252,7 +13252,7 @@ export namespace ConfidentialityClassificationCode {
   export type AsObject = {
     value: ConfidentialityClassificationCode.ValueMap[keyof ConfidentialityClassificationCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -13277,9 +13277,9 @@ export class VaccinationProtocolDoseStatuscodesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -13296,7 +13296,7 @@ export namespace VaccinationProtocolDoseStatuscodesCode {
   export type AsObject = {
     value: VaccinationProtocolDoseStatuscodesCode.ValueMap[keyof VaccinationProtocolDoseStatuscodesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -13317,9 +13317,9 @@ export class VaccinationProtocolDoseStatusReasoncodesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -13336,7 +13336,7 @@ export namespace VaccinationProtocolDoseStatusReasoncodesCode {
   export type AsObject = {
     value: VaccinationProtocolDoseStatusReasoncodesCode.ValueMap[keyof VaccinationProtocolDoseStatusReasoncodesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -13360,9 +13360,9 @@ export class sequenceStatusCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -13379,7 +13379,7 @@ export namespace sequenceStatusCode {
   export type AsObject = {
     value: sequenceStatusCode.ValueMap[keyof sequenceStatusCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -13401,9 +13401,9 @@ export class ResourceVersionPolicyCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -13420,7 +13420,7 @@ export namespace ResourceVersionPolicyCode {
   export type AsObject = {
     value: ResourceVersionPolicyCode.ValueMap[keyof ResourceVersionPolicyCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -13442,9 +13442,9 @@ export class VisionBaseCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -13461,7 +13461,7 @@ export namespace VisionBaseCode {
   export type AsObject = {
     value: VisionBaseCode.ValueMap[keyof VisionBaseCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {
@@ -13484,9 +13484,9 @@ export class VisionEyesCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -13503,7 +13503,7 @@ export namespace VisionEyesCode {
   export type AsObject = {
     value: VisionEyesCode.ValueMap[keyof VisionEyesCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {

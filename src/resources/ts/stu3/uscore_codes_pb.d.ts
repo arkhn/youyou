@@ -14,9 +14,9 @@ export class UsCoreBirthSexCode extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -33,7 +33,7 @@ export namespace UsCoreBirthSexCode {
   export type AsObject = {
     value: UsCoreBirthSexCode.ValueMap[keyof UsCoreBirthSexCode.ValueMap],
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 
   export interface ValueMap {

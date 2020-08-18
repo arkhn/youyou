@@ -32,19 +32,19 @@ export class SubstanceNucleicAcid extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasSequenceType(): boolean;
@@ -67,9 +67,9 @@ export class SubstanceNucleicAcid extends jspb.Message {
   getOligoNucleotideType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setOligoNucleotideType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearSubunitList(): void;
-  getSubunitList(): Array<SubstanceNucleicAcid.Subunit>;
-  setSubunitList(value: Array<SubstanceNucleicAcid.Subunit>): void;
+  clearSubunit(): void;
+  getSubunit(): Array<SubstanceNucleicAcid.Subunit>;
+  setSubunit(value: Array<SubstanceNucleicAcid.Subunit>): void;
   addSubunit(value?: SubstanceNucleicAcid.Subunit, index?: number): SubstanceNucleicAcid.Subunit;
 
   serializeBinary(): Uint8Array;
@@ -89,14 +89,14 @@ export namespace SubstanceNucleicAcid {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     sequenceType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     numberOfSubunits?: proto_r4_core_datatypes_pb.Integer.AsObject,
     areaOfHybridisation?: proto_r4_core_datatypes_pb.String.AsObject,
     oligoNucleotideType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    subunitList: Array<SubstanceNucleicAcid.Subunit.AsObject>,
+    subunit: Array<SubstanceNucleicAcid.Subunit.AsObject>,
   }
 
   export class Subunit extends jspb.Message {
@@ -105,14 +105,14 @@ export namespace SubstanceNucleicAcid {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSubunit(): boolean;
@@ -145,14 +145,14 @@ export namespace SubstanceNucleicAcid {
     getThreePrime(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setThreePrime(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearLinkageList(): void;
-    getLinkageList(): Array<SubstanceNucleicAcid.Subunit.Linkage>;
-    setLinkageList(value: Array<SubstanceNucleicAcid.Subunit.Linkage>): void;
+    clearLinkage(): void;
+    getLinkage(): Array<SubstanceNucleicAcid.Subunit.Linkage>;
+    setLinkage(value: Array<SubstanceNucleicAcid.Subunit.Linkage>): void;
     addLinkage(value?: SubstanceNucleicAcid.Subunit.Linkage, index?: number): SubstanceNucleicAcid.Subunit.Linkage;
 
-    clearSugarList(): void;
-    getSugarList(): Array<SubstanceNucleicAcid.Subunit.Sugar>;
-    setSugarList(value: Array<SubstanceNucleicAcid.Subunit.Sugar>): void;
+    clearSugar(): void;
+    getSugar(): Array<SubstanceNucleicAcid.Subunit.Sugar>;
+    setSugar(value: Array<SubstanceNucleicAcid.Subunit.Sugar>): void;
     addSugar(value?: SubstanceNucleicAcid.Subunit.Sugar, index?: number): SubstanceNucleicAcid.Subunit.Sugar;
 
     serializeBinary(): Uint8Array;
@@ -168,16 +168,16 @@ export namespace SubstanceNucleicAcid {
   export namespace Subunit {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       subunit?: proto_r4_core_datatypes_pb.Integer.AsObject,
       sequence?: proto_r4_core_datatypes_pb.String.AsObject,
       length?: proto_r4_core_datatypes_pb.Integer.AsObject,
       sequenceAttachment?: proto_r4_core_datatypes_pb.Attachment.AsObject,
       fivePrime?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       threePrime?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      linkageList: Array<SubstanceNucleicAcid.Subunit.Linkage.AsObject>,
-      sugarList: Array<SubstanceNucleicAcid.Subunit.Sugar.AsObject>,
+      linkage: Array<SubstanceNucleicAcid.Subunit.Linkage.AsObject>,
+      sugar: Array<SubstanceNucleicAcid.Subunit.Sugar.AsObject>,
     }
 
     export class Linkage extends jspb.Message {
@@ -186,14 +186,14 @@ export namespace SubstanceNucleicAcid {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasConnectivity(): boolean;
@@ -229,8 +229,8 @@ export namespace SubstanceNucleicAcid {
     export namespace Linkage {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         connectivity?: proto_r4_core_datatypes_pb.String.AsObject,
         identifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
         name?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -244,14 +244,14 @@ export namespace SubstanceNucleicAcid {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasIdentifier(): boolean;
@@ -282,8 +282,8 @@ export namespace SubstanceNucleicAcid {
     export namespace Sugar {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         identifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
         name?: proto_r4_core_datatypes_pb.String.AsObject,
         residueSite?: proto_r4_core_datatypes_pb.String.AsObject,

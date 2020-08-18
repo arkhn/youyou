@@ -33,19 +33,19 @@ export class ConceptMap extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasUrl(): boolean;
@@ -93,9 +93,9 @@ export class ConceptMap extends jspb.Message {
   getPublisher(): proto_r4_core_datatypes_pb.String | undefined;
   setPublisher(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearContactList(): void;
-  getContactList(): Array<proto_r4_core_datatypes_pb.ContactDetail>;
-  setContactList(value: Array<proto_r4_core_datatypes_pb.ContactDetail>): void;
+  clearContact(): void;
+  getContact(): Array<proto_r4_core_datatypes_pb.ContactDetail>;
+  setContact(value: Array<proto_r4_core_datatypes_pb.ContactDetail>): void;
   addContact(value?: proto_r4_core_datatypes_pb.ContactDetail, index?: number): proto_r4_core_datatypes_pb.ContactDetail;
 
   hasDescription(): boolean;
@@ -103,14 +103,14 @@ export class ConceptMap extends jspb.Message {
   getDescription(): proto_r4_core_datatypes_pb.Markdown | undefined;
   setDescription(value?: proto_r4_core_datatypes_pb.Markdown): void;
 
-  clearUseContextList(): void;
-  getUseContextList(): Array<proto_r4_core_datatypes_pb.UsageContext>;
-  setUseContextList(value: Array<proto_r4_core_datatypes_pb.UsageContext>): void;
+  clearUseContext(): void;
+  getUseContext(): Array<proto_r4_core_datatypes_pb.UsageContext>;
+  setUseContext(value: Array<proto_r4_core_datatypes_pb.UsageContext>): void;
   addUseContext(value?: proto_r4_core_datatypes_pb.UsageContext, index?: number): proto_r4_core_datatypes_pb.UsageContext;
 
-  clearJurisdictionList(): void;
-  getJurisdictionList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setJurisdictionList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearJurisdiction(): void;
+  getJurisdiction(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setJurisdiction(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addJurisdiction(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasPurpose(): boolean;
@@ -133,9 +133,9 @@ export class ConceptMap extends jspb.Message {
   getTarget(): ConceptMap.TargetX | undefined;
   setTarget(value?: ConceptMap.TargetX): void;
 
-  clearGroupList(): void;
-  getGroupList(): Array<ConceptMap.Group>;
-  setGroupList(value: Array<ConceptMap.Group>): void;
+  clearGroup(): void;
+  getGroup(): Array<ConceptMap.Group>;
+  setGroup(value: Array<ConceptMap.Group>): void;
   addGroup(value?: ConceptMap.Group, index?: number): ConceptMap.Group;
 
   serializeBinary(): Uint8Array;
@@ -155,9 +155,9 @@ export namespace ConceptMap {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     url?: proto_r4_core_datatypes_pb.Uri.AsObject,
     identifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
     version?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -167,15 +167,15 @@ export namespace ConceptMap {
     experimental?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     publisher?: proto_r4_core_datatypes_pb.String.AsObject,
-    contactList: Array<proto_r4_core_datatypes_pb.ContactDetail.AsObject>,
+    contact: Array<proto_r4_core_datatypes_pb.ContactDetail.AsObject>,
     description?: proto_r4_core_datatypes_pb.Markdown.AsObject,
-    useContextList: Array<proto_r4_core_datatypes_pb.UsageContext.AsObject>,
-    jurisdictionList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    useContext: Array<proto_r4_core_datatypes_pb.UsageContext.AsObject>,
+    jurisdiction: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     purpose?: proto_r4_core_datatypes_pb.Markdown.AsObject,
     copyright?: proto_r4_core_datatypes_pb.Markdown.AsObject,
     source?: ConceptMap.SourceX.AsObject,
     target?: ConceptMap.TargetX.AsObject,
-    groupList: Array<ConceptMap.Group.AsObject>,
+    group: Array<ConceptMap.Group.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -187,9 +187,9 @@ export namespace ConceptMap {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -206,7 +206,7 @@ export namespace ConceptMap {
     export type AsObject = {
       value: proto_r4_core_codes_pb.PublicationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.PublicationStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -286,14 +286,14 @@ export namespace ConceptMap {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSource(): boolean;
@@ -316,9 +316,9 @@ export namespace ConceptMap {
     getTargetVersion(): proto_r4_core_datatypes_pb.String | undefined;
     setTargetVersion(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearElementList(): void;
-    getElementList(): Array<ConceptMap.Group.SourceElement>;
-    setElementList(value: Array<ConceptMap.Group.SourceElement>): void;
+    clearElement(): void;
+    getElement(): Array<ConceptMap.Group.SourceElement>;
+    setElement(value: Array<ConceptMap.Group.SourceElement>): void;
     addElement(value?: ConceptMap.Group.SourceElement, index?: number): ConceptMap.Group.SourceElement;
 
     hasUnmapped(): boolean;
@@ -339,13 +339,13 @@ export namespace ConceptMap {
   export namespace Group {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       source?: proto_r4_core_datatypes_pb.Uri.AsObject,
       sourceVersion?: proto_r4_core_datatypes_pb.String.AsObject,
       target?: proto_r4_core_datatypes_pb.Uri.AsObject,
       targetVersion?: proto_r4_core_datatypes_pb.String.AsObject,
-      elementList: Array<ConceptMap.Group.SourceElement.AsObject>,
+      element: Array<ConceptMap.Group.SourceElement.AsObject>,
       unmapped?: ConceptMap.Group.Unmapped.AsObject,
     }
 
@@ -355,14 +355,14 @@ export namespace ConceptMap {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasCode(): boolean;
@@ -375,9 +375,9 @@ export namespace ConceptMap {
       getDisplay(): proto_r4_core_datatypes_pb.String | undefined;
       setDisplay(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearTargetList(): void;
-      getTargetList(): Array<ConceptMap.Group.SourceElement.TargetElement>;
-      setTargetList(value: Array<ConceptMap.Group.SourceElement.TargetElement>): void;
+      clearTarget(): void;
+      getTarget(): Array<ConceptMap.Group.SourceElement.TargetElement>;
+      setTarget(value: Array<ConceptMap.Group.SourceElement.TargetElement>): void;
       addTarget(value?: ConceptMap.Group.SourceElement.TargetElement, index?: number): ConceptMap.Group.SourceElement.TargetElement;
 
       serializeBinary(): Uint8Array;
@@ -393,11 +393,11 @@ export namespace ConceptMap {
     export namespace SourceElement {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         code?: proto_r4_core_datatypes_pb.Code.AsObject,
         display?: proto_r4_core_datatypes_pb.String.AsObject,
-        targetList: Array<ConceptMap.Group.SourceElement.TargetElement.AsObject>,
+        target: Array<ConceptMap.Group.SourceElement.TargetElement.AsObject>,
       }
 
       export class TargetElement extends jspb.Message {
@@ -406,14 +406,14 @@ export namespace ConceptMap {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         hasCode(): boolean;
@@ -436,14 +436,14 @@ export namespace ConceptMap {
         getComment(): proto_r4_core_datatypes_pb.String | undefined;
         setComment(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearDependsOnList(): void;
-        getDependsOnList(): Array<ConceptMap.Group.SourceElement.TargetElement.OtherElement>;
-        setDependsOnList(value: Array<ConceptMap.Group.SourceElement.TargetElement.OtherElement>): void;
+        clearDependsOn(): void;
+        getDependsOn(): Array<ConceptMap.Group.SourceElement.TargetElement.OtherElement>;
+        setDependsOn(value: Array<ConceptMap.Group.SourceElement.TargetElement.OtherElement>): void;
         addDependsOn(value?: ConceptMap.Group.SourceElement.TargetElement.OtherElement, index?: number): ConceptMap.Group.SourceElement.TargetElement.OtherElement;
 
-        clearProductList(): void;
-        getProductList(): Array<ConceptMap.Group.SourceElement.TargetElement.OtherElement>;
-        setProductList(value: Array<ConceptMap.Group.SourceElement.TargetElement.OtherElement>): void;
+        clearProduct(): void;
+        getProduct(): Array<ConceptMap.Group.SourceElement.TargetElement.OtherElement>;
+        setProduct(value: Array<ConceptMap.Group.SourceElement.TargetElement.OtherElement>): void;
         addProduct(value?: ConceptMap.Group.SourceElement.TargetElement.OtherElement, index?: number): ConceptMap.Group.SourceElement.TargetElement.OtherElement;
 
         serializeBinary(): Uint8Array;
@@ -459,14 +459,14 @@ export namespace ConceptMap {
       export namespace TargetElement {
         export type AsObject = {
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
           code?: proto_r4_core_datatypes_pb.Code.AsObject,
           display?: proto_r4_core_datatypes_pb.String.AsObject,
           equivalence?: ConceptMap.Group.SourceElement.TargetElement.EquivalenceCode.AsObject,
           comment?: proto_r4_core_datatypes_pb.String.AsObject,
-          dependsOnList: Array<ConceptMap.Group.SourceElement.TargetElement.OtherElement.AsObject>,
-          productList: Array<ConceptMap.Group.SourceElement.TargetElement.OtherElement.AsObject>,
+          dependsOn: Array<ConceptMap.Group.SourceElement.TargetElement.OtherElement.AsObject>,
+          product: Array<ConceptMap.Group.SourceElement.TargetElement.OtherElement.AsObject>,
         }
 
         export class EquivalenceCode extends jspb.Message {
@@ -478,9 +478,9 @@ export namespace ConceptMap {
           getId(): proto_r4_core_datatypes_pb.String | undefined;
           setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-          clearExtensionList(): void;
-          getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-          setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+          clearExtension(): void;
+          getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+          setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
           addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
           serializeBinary(): Uint8Array;
@@ -497,7 +497,7 @@ export namespace ConceptMap {
           export type AsObject = {
             value: proto_r4_core_codes_pb.ConceptMapEquivalenceCode.ValueMap[keyof proto_r4_core_codes_pb.ConceptMapEquivalenceCode.ValueMap],
             id?: proto_r4_core_datatypes_pb.String.AsObject,
-            extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+            extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
           }
         }
 
@@ -507,14 +507,14 @@ export namespace ConceptMap {
           getId(): proto_r4_core_datatypes_pb.String | undefined;
           setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-          clearExtensionList(): void;
-          getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-          setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+          clearExtension(): void;
+          getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+          setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
           addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-          clearModifierExtensionList(): void;
-          getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-          setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+          clearModifierExtension(): void;
+          getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+          setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
           addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
           hasProperty(): boolean;
@@ -550,8 +550,8 @@ export namespace ConceptMap {
         export namespace OtherElement {
           export type AsObject = {
             id?: proto_r4_core_datatypes_pb.String.AsObject,
-            extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-            modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+            extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+            modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
             property?: proto_r4_core_datatypes_pb.Uri.AsObject,
             system?: proto_r4_core_datatypes_pb.Canonical.AsObject,
             value?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -567,14 +567,14 @@ export namespace ConceptMap {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasMode(): boolean;
@@ -610,8 +610,8 @@ export namespace ConceptMap {
     export namespace Unmapped {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         mode?: ConceptMap.Group.Unmapped.ModeCode.AsObject,
         code?: proto_r4_core_datatypes_pb.Code.AsObject,
         display?: proto_r4_core_datatypes_pb.String.AsObject,
@@ -627,9 +627,9 @@ export namespace ConceptMap {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         serializeBinary(): Uint8Array;
@@ -646,7 +646,7 @@ export namespace ConceptMap {
         export type AsObject = {
           value: proto_r4_core_codes_pb.ConceptMapGroupUnmappedModeCode.ValueMap[keyof proto_r4_core_codes_pb.ConceptMapGroupUnmappedModeCode.ValueMap],
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         }
       }
     }

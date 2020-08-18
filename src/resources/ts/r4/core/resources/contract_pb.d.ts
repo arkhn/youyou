@@ -33,24 +33,24 @@ export class Contract extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasUrl(): boolean;
@@ -103,24 +103,24 @@ export class Contract extends jspb.Message {
   getExpirationType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setExpirationType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearSubjectList(): void;
-  getSubjectList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSubjectList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSubject(): void;
+  getSubject(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSubject(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSubject(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearAuthorityList(): void;
-  getAuthorityList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setAuthorityList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearAuthority(): void;
+  getAuthority(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setAuthority(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addAuthority(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearDomainList(): void;
-  getDomainList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setDomainList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearDomain(): void;
+  getDomain(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setDomain(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addDomain(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearSiteList(): void;
-  getSiteList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSiteList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSite(): void;
+  getSite(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSite(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSite(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasName(): boolean;
@@ -138,9 +138,9 @@ export class Contract extends jspb.Message {
   getSubtitle(): proto_r4_core_datatypes_pb.String | undefined;
   setSubtitle(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearAliasList(): void;
-  getAliasList(): Array<proto_r4_core_datatypes_pb.String>;
-  setAliasList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+  clearAlias(): void;
+  getAlias(): Array<proto_r4_core_datatypes_pb.String>;
+  setAlias(value: Array<proto_r4_core_datatypes_pb.String>): void;
   addAlias(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
   hasAuthor(): boolean;
@@ -163,9 +163,9 @@ export class Contract extends jspb.Message {
   getType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearSubTypeList(): void;
-  getSubTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setSubTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearSubType(): void;
+  getSubType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setSubType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addSubType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasContentDefinition(): boolean;
@@ -173,39 +173,39 @@ export class Contract extends jspb.Message {
   getContentDefinition(): Contract.ContentDefinition | undefined;
   setContentDefinition(value?: Contract.ContentDefinition): void;
 
-  clearTermList(): void;
-  getTermList(): Array<Contract.Term>;
-  setTermList(value: Array<Contract.Term>): void;
+  clearTerm(): void;
+  getTerm(): Array<Contract.Term>;
+  setTerm(value: Array<Contract.Term>): void;
   addTerm(value?: Contract.Term, index?: number): Contract.Term;
 
-  clearSupportingInfoList(): void;
-  getSupportingInfoList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSupportingInfoList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSupportingInfo(): void;
+  getSupportingInfo(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSupportingInfo(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSupportingInfo(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearRelevantHistoryList(): void;
-  getRelevantHistoryList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setRelevantHistoryList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearRelevantHistory(): void;
+  getRelevantHistory(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setRelevantHistory(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addRelevantHistory(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearSignerList(): void;
-  getSignerList(): Array<Contract.Signatory>;
-  setSignerList(value: Array<Contract.Signatory>): void;
+  clearSigner(): void;
+  getSigner(): Array<Contract.Signatory>;
+  setSigner(value: Array<Contract.Signatory>): void;
   addSigner(value?: Contract.Signatory, index?: number): Contract.Signatory;
 
-  clearFriendlyList(): void;
-  getFriendlyList(): Array<Contract.FriendlyLanguage>;
-  setFriendlyList(value: Array<Contract.FriendlyLanguage>): void;
+  clearFriendly(): void;
+  getFriendly(): Array<Contract.FriendlyLanguage>;
+  setFriendly(value: Array<Contract.FriendlyLanguage>): void;
   addFriendly(value?: Contract.FriendlyLanguage, index?: number): Contract.FriendlyLanguage;
 
-  clearLegalList(): void;
-  getLegalList(): Array<Contract.LegalLanguage>;
-  setLegalList(value: Array<Contract.LegalLanguage>): void;
+  clearLegal(): void;
+  getLegal(): Array<Contract.LegalLanguage>;
+  setLegal(value: Array<Contract.LegalLanguage>): void;
   addLegal(value?: Contract.LegalLanguage, index?: number): Contract.LegalLanguage;
 
-  clearRuleList(): void;
-  getRuleList(): Array<Contract.ComputableLanguage>;
-  setRuleList(value: Array<Contract.ComputableLanguage>): void;
+  clearRule(): void;
+  getRule(): Array<Contract.ComputableLanguage>;
+  setRule(value: Array<Contract.ComputableLanguage>): void;
   addRule(value?: Contract.ComputableLanguage, index?: number): Contract.ComputableLanguage;
 
   hasLegallyBinding(): boolean;
@@ -230,10 +230,10 @@ export namespace Contract {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     url?: proto_r4_core_datatypes_pb.Uri.AsObject,
     version?: proto_r4_core_datatypes_pb.String.AsObject,
     status?: Contract.StatusCode.AsObject,
@@ -244,27 +244,27 @@ export namespace Contract {
     issued?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     applies?: proto_r4_core_datatypes_pb.Period.AsObject,
     expirationType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    subjectList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    authorityList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    domainList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    siteList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    subject: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    authority: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    domain: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    site: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     name?: proto_r4_core_datatypes_pb.String.AsObject,
     title?: proto_r4_core_datatypes_pb.String.AsObject,
     subtitle?: proto_r4_core_datatypes_pb.String.AsObject,
-    aliasList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+    alias: Array<proto_r4_core_datatypes_pb.String.AsObject>,
     author?: proto_r4_core_datatypes_pb.Reference.AsObject,
     scope?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     topic?: Contract.TopicX.AsObject,
     type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    subTypeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    subType: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     contentDefinition?: Contract.ContentDefinition.AsObject,
-    termList: Array<Contract.Term.AsObject>,
-    supportingInfoList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    relevantHistoryList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    signerList: Array<Contract.Signatory.AsObject>,
-    friendlyList: Array<Contract.FriendlyLanguage.AsObject>,
-    legalList: Array<Contract.LegalLanguage.AsObject>,
-    ruleList: Array<Contract.ComputableLanguage.AsObject>,
+    term: Array<Contract.Term.AsObject>,
+    supportingInfo: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    relevantHistory: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    signer: Array<Contract.Signatory.AsObject>,
+    friendly: Array<Contract.FriendlyLanguage.AsObject>,
+    legal: Array<Contract.LegalLanguage.AsObject>,
+    rule: Array<Contract.ComputableLanguage.AsObject>,
     legallyBinding?: Contract.LegallyBindingX.AsObject,
   }
 
@@ -277,9 +277,9 @@ export namespace Contract {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -296,7 +296,7 @@ export namespace Contract {
     export type AsObject = {
       value: proto_r4_core_codes_pb.ContractResourceStatusCode.ValueMap[keyof proto_r4_core_codes_pb.ContractResourceStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -341,14 +341,14 @@ export namespace Contract {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -394,8 +394,8 @@ export namespace Contract {
   export namespace ContentDefinition {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       subType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       publisher?: proto_r4_core_datatypes_pb.Reference.AsObject,
@@ -413,9 +413,9 @@ export namespace Contract {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -432,7 +432,7 @@ export namespace Contract {
       export type AsObject = {
         value: proto_r4_core_codes_pb.ContractResourcePublicationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.ContractResourcePublicationStatusCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -443,14 +443,14 @@ export namespace Contract {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasIdentifier(): boolean;
@@ -488,9 +488,9 @@ export namespace Contract {
     getText(): proto_r4_core_datatypes_pb.String | undefined;
     setText(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearSecurityLabelList(): void;
-    getSecurityLabelList(): Array<Contract.Term.SecurityLabel>;
-    setSecurityLabelList(value: Array<Contract.Term.SecurityLabel>): void;
+    clearSecurityLabel(): void;
+    getSecurityLabel(): Array<Contract.Term.SecurityLabel>;
+    setSecurityLabel(value: Array<Contract.Term.SecurityLabel>): void;
     addSecurityLabel(value?: Contract.Term.SecurityLabel, index?: number): Contract.Term.SecurityLabel;
 
     hasOffer(): boolean;
@@ -498,19 +498,19 @@ export namespace Contract {
     getOffer(): Contract.Term.ContractOffer | undefined;
     setOffer(value?: Contract.Term.ContractOffer): void;
 
-    clearAssetList(): void;
-    getAssetList(): Array<Contract.Term.ContractAsset>;
-    setAssetList(value: Array<Contract.Term.ContractAsset>): void;
+    clearAsset(): void;
+    getAsset(): Array<Contract.Term.ContractAsset>;
+    setAsset(value: Array<Contract.Term.ContractAsset>): void;
     addAsset(value?: Contract.Term.ContractAsset, index?: number): Contract.Term.ContractAsset;
 
-    clearActionList(): void;
-    getActionList(): Array<Contract.Term.Action>;
-    setActionList(value: Array<Contract.Term.Action>): void;
+    clearAction(): void;
+    getAction(): Array<Contract.Term.Action>;
+    setAction(value: Array<Contract.Term.Action>): void;
     addAction(value?: Contract.Term.Action, index?: number): Contract.Term.Action;
 
-    clearGroupList(): void;
-    getGroupList(): Array<Contract.Term>;
-    setGroupList(value: Array<Contract.Term>): void;
+    clearGroup(): void;
+    getGroup(): Array<Contract.Term>;
+    setGroup(value: Array<Contract.Term>): void;
     addGroup(value?: Contract.Term, index?: number): Contract.Term;
 
     serializeBinary(): Uint8Array;
@@ -526,8 +526,8 @@ export namespace Contract {
   export namespace Term {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       identifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
       issued?: proto_r4_core_datatypes_pb.DateTime.AsObject,
       applies?: proto_r4_core_datatypes_pb.Period.AsObject,
@@ -535,11 +535,11 @@ export namespace Contract {
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       subType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       text?: proto_r4_core_datatypes_pb.String.AsObject,
-      securityLabelList: Array<Contract.Term.SecurityLabel.AsObject>,
+      securityLabel: Array<Contract.Term.SecurityLabel.AsObject>,
       offer?: Contract.Term.ContractOffer.AsObject,
-      assetList: Array<Contract.Term.ContractAsset.AsObject>,
-      actionList: Array<Contract.Term.Action.AsObject>,
-      groupList: Array<Contract.Term.AsObject>,
+      asset: Array<Contract.Term.ContractAsset.AsObject>,
+      action: Array<Contract.Term.Action.AsObject>,
+      group: Array<Contract.Term.AsObject>,
     }
 
     export class TopicX extends jspb.Message {
@@ -583,19 +583,19 @@ export namespace Contract {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearNumberList(): void;
-      getNumberList(): Array<proto_r4_core_datatypes_pb.UnsignedInt>;
-      setNumberList(value: Array<proto_r4_core_datatypes_pb.UnsignedInt>): void;
+      clearNumber(): void;
+      getNumber(): Array<proto_r4_core_datatypes_pb.UnsignedInt>;
+      setNumber(value: Array<proto_r4_core_datatypes_pb.UnsignedInt>): void;
       addNumber(value?: proto_r4_core_datatypes_pb.UnsignedInt, index?: number): proto_r4_core_datatypes_pb.UnsignedInt;
 
       hasClassification(): boolean;
@@ -603,14 +603,14 @@ export namespace Contract {
       getClassification(): proto_r4_core_datatypes_pb.Coding | undefined;
       setClassification(value?: proto_r4_core_datatypes_pb.Coding): void;
 
-      clearCategoryList(): void;
-      getCategoryList(): Array<proto_r4_core_datatypes_pb.Coding>;
-      setCategoryList(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
+      clearCategory(): void;
+      getCategory(): Array<proto_r4_core_datatypes_pb.Coding>;
+      setCategory(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
       addCategory(value?: proto_r4_core_datatypes_pb.Coding, index?: number): proto_r4_core_datatypes_pb.Coding;
 
-      clearControlList(): void;
-      getControlList(): Array<proto_r4_core_datatypes_pb.Coding>;
-      setControlList(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
+      clearControl(): void;
+      getControl(): Array<proto_r4_core_datatypes_pb.Coding>;
+      setControl(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
       addControl(value?: proto_r4_core_datatypes_pb.Coding, index?: number): proto_r4_core_datatypes_pb.Coding;
 
       serializeBinary(): Uint8Array;
@@ -626,12 +626,12 @@ export namespace Contract {
     export namespace SecurityLabel {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        numberList: Array<proto_r4_core_datatypes_pb.UnsignedInt.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        number: Array<proto_r4_core_datatypes_pb.UnsignedInt.AsObject>,
         classification?: proto_r4_core_datatypes_pb.Coding.AsObject,
-        categoryList: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
-        controlList: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
+        category: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
+        control: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
       }
     }
 
@@ -641,24 +641,24 @@ export namespace Contract {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearIdentifierList(): void;
-      getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-      setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+      clearIdentifier(): void;
+      getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+      setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
       addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-      clearPartyList(): void;
-      getPartyList(): Array<Contract.Term.ContractOffer.ContractParty>;
-      setPartyList(value: Array<Contract.Term.ContractOffer.ContractParty>): void;
+      clearParty(): void;
+      getParty(): Array<Contract.Term.ContractOffer.ContractParty>;
+      setParty(value: Array<Contract.Term.ContractOffer.ContractParty>): void;
       addParty(value?: Contract.Term.ContractOffer.ContractParty, index?: number): Contract.Term.ContractOffer.ContractParty;
 
       hasTopic(): boolean;
@@ -676,14 +676,14 @@ export namespace Contract {
       getDecision(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
       setDecision(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-      clearDecisionModeList(): void;
-      getDecisionModeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-      setDecisionModeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+      clearDecisionMode(): void;
+      getDecisionMode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+      setDecisionMode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
       addDecisionMode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-      clearAnswerList(): void;
-      getAnswerList(): Array<Contract.Term.ContractOffer.Answer>;
-      setAnswerList(value: Array<Contract.Term.ContractOffer.Answer>): void;
+      clearAnswer(): void;
+      getAnswer(): Array<Contract.Term.ContractOffer.Answer>;
+      setAnswer(value: Array<Contract.Term.ContractOffer.Answer>): void;
       addAnswer(value?: Contract.Term.ContractOffer.Answer, index?: number): Contract.Term.ContractOffer.Answer;
 
       hasText(): boolean;
@@ -691,14 +691,14 @@ export namespace Contract {
       getText(): proto_r4_core_datatypes_pb.String | undefined;
       setText(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearLinkIdList(): void;
-      getLinkIdList(): Array<proto_r4_core_datatypes_pb.String>;
-      setLinkIdList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+      clearLinkId(): void;
+      getLinkId(): Array<proto_r4_core_datatypes_pb.String>;
+      setLinkId(value: Array<proto_r4_core_datatypes_pb.String>): void;
       addLinkId(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
-      clearSecurityLabelNumberList(): void;
-      getSecurityLabelNumberList(): Array<proto_r4_core_datatypes_pb.UnsignedInt>;
-      setSecurityLabelNumberList(value: Array<proto_r4_core_datatypes_pb.UnsignedInt>): void;
+      clearSecurityLabelNumber(): void;
+      getSecurityLabelNumber(): Array<proto_r4_core_datatypes_pb.UnsignedInt>;
+      setSecurityLabelNumber(value: Array<proto_r4_core_datatypes_pb.UnsignedInt>): void;
       addSecurityLabelNumber(value?: proto_r4_core_datatypes_pb.UnsignedInt, index?: number): proto_r4_core_datatypes_pb.UnsignedInt;
 
       serializeBinary(): Uint8Array;
@@ -714,18 +714,18 @@ export namespace Contract {
     export namespace ContractOffer {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-        partyList: Array<Contract.Term.ContractOffer.ContractParty.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+        party: Array<Contract.Term.ContractOffer.ContractParty.AsObject>,
         topic?: proto_r4_core_datatypes_pb.Reference.AsObject,
         type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         decision?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-        decisionModeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-        answerList: Array<Contract.Term.ContractOffer.Answer.AsObject>,
+        decisionMode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+        answer: Array<Contract.Term.ContractOffer.Answer.AsObject>,
         text?: proto_r4_core_datatypes_pb.String.AsObject,
-        linkIdList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
-        securityLabelNumberList: Array<proto_r4_core_datatypes_pb.UnsignedInt.AsObject>,
+        linkId: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+        securityLabelNumber: Array<proto_r4_core_datatypes_pb.UnsignedInt.AsObject>,
       }
 
       export class ContractParty extends jspb.Message {
@@ -734,19 +734,19 @@ export namespace Contract {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearReferenceList(): void;
-        getReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-        setReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+        clearReference(): void;
+        getReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+        setReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
         addReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
         hasRole(): boolean;
@@ -767,9 +767,9 @@ export namespace Contract {
       export namespace ContractParty {
         export type AsObject = {
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          referenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          reference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
           role?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         }
       }
@@ -780,14 +780,14 @@ export namespace Contract {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         hasValue(): boolean;
@@ -808,8 +808,8 @@ export namespace Contract {
       export namespace Answer {
         export type AsObject = {
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
           value?: Contract.Term.ContractOffer.Answer.ValueX.AsObject,
         }
 
@@ -926,14 +926,14 @@ export namespace Contract {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasScope(): boolean;
@@ -941,19 +941,19 @@ export namespace Contract {
       getScope(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
       setScope(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-      clearTypeList(): void;
-      getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-      setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+      clearType(): void;
+      getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+      setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
       addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-      clearTypeReferenceList(): void;
-      getTypeReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-      setTypeReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+      clearTypeReference(): void;
+      getTypeReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+      setTypeReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
       addTypeReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-      clearSubtypeList(): void;
-      getSubtypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-      setSubtypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+      clearSubtype(): void;
+      getSubtype(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+      setSubtype(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
       addSubtype(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
       hasRelationship(): boolean;
@@ -961,9 +961,9 @@ export namespace Contract {
       getRelationship(): proto_r4_core_datatypes_pb.Coding | undefined;
       setRelationship(value?: proto_r4_core_datatypes_pb.Coding): void;
 
-      clearContextList(): void;
-      getContextList(): Array<Contract.Term.ContractAsset.AssetContext>;
-      setContextList(value: Array<Contract.Term.ContractAsset.AssetContext>): void;
+      clearContext(): void;
+      getContext(): Array<Contract.Term.ContractAsset.AssetContext>;
+      setContext(value: Array<Contract.Term.ContractAsset.AssetContext>): void;
       addContext(value?: Contract.Term.ContractAsset.AssetContext, index?: number): Contract.Term.ContractAsset.AssetContext;
 
       hasCondition(): boolean;
@@ -971,19 +971,19 @@ export namespace Contract {
       getCondition(): proto_r4_core_datatypes_pb.String | undefined;
       setCondition(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearPeriodTypeList(): void;
-      getPeriodTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-      setPeriodTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+      clearPeriodType(): void;
+      getPeriodType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+      setPeriodType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
       addPeriodType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-      clearPeriodList(): void;
-      getPeriodList(): Array<proto_r4_core_datatypes_pb.Period>;
-      setPeriodList(value: Array<proto_r4_core_datatypes_pb.Period>): void;
+      clearPeriod(): void;
+      getPeriod(): Array<proto_r4_core_datatypes_pb.Period>;
+      setPeriod(value: Array<proto_r4_core_datatypes_pb.Period>): void;
       addPeriod(value?: proto_r4_core_datatypes_pb.Period, index?: number): proto_r4_core_datatypes_pb.Period;
 
-      clearUsePeriodList(): void;
-      getUsePeriodList(): Array<proto_r4_core_datatypes_pb.Period>;
-      setUsePeriodList(value: Array<proto_r4_core_datatypes_pb.Period>): void;
+      clearUsePeriod(): void;
+      getUsePeriod(): Array<proto_r4_core_datatypes_pb.Period>;
+      setUsePeriod(value: Array<proto_r4_core_datatypes_pb.Period>): void;
       addUsePeriod(value?: proto_r4_core_datatypes_pb.Period, index?: number): proto_r4_core_datatypes_pb.Period;
 
       hasText(): boolean;
@@ -991,24 +991,24 @@ export namespace Contract {
       getText(): proto_r4_core_datatypes_pb.String | undefined;
       setText(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearLinkIdList(): void;
-      getLinkIdList(): Array<proto_r4_core_datatypes_pb.String>;
-      setLinkIdList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+      clearLinkId(): void;
+      getLinkId(): Array<proto_r4_core_datatypes_pb.String>;
+      setLinkId(value: Array<proto_r4_core_datatypes_pb.String>): void;
       addLinkId(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
-      clearAnswerList(): void;
-      getAnswerList(): Array<Contract.Term.ContractOffer.Answer>;
-      setAnswerList(value: Array<Contract.Term.ContractOffer.Answer>): void;
+      clearAnswer(): void;
+      getAnswer(): Array<Contract.Term.ContractOffer.Answer>;
+      setAnswer(value: Array<Contract.Term.ContractOffer.Answer>): void;
       addAnswer(value?: Contract.Term.ContractOffer.Answer, index?: number): Contract.Term.ContractOffer.Answer;
 
-      clearSecurityLabelNumberList(): void;
-      getSecurityLabelNumberList(): Array<proto_r4_core_datatypes_pb.UnsignedInt>;
-      setSecurityLabelNumberList(value: Array<proto_r4_core_datatypes_pb.UnsignedInt>): void;
+      clearSecurityLabelNumber(): void;
+      getSecurityLabelNumber(): Array<proto_r4_core_datatypes_pb.UnsignedInt>;
+      setSecurityLabelNumber(value: Array<proto_r4_core_datatypes_pb.UnsignedInt>): void;
       addSecurityLabelNumber(value?: proto_r4_core_datatypes_pb.UnsignedInt, index?: number): proto_r4_core_datatypes_pb.UnsignedInt;
 
-      clearValuedItemList(): void;
-      getValuedItemList(): Array<Contract.Term.ContractAsset.ValuedItem>;
-      setValuedItemList(value: Array<Contract.Term.ContractAsset.ValuedItem>): void;
+      clearValuedItem(): void;
+      getValuedItem(): Array<Contract.Term.ContractAsset.ValuedItem>;
+      setValuedItem(value: Array<Contract.Term.ContractAsset.ValuedItem>): void;
       addValuedItem(value?: Contract.Term.ContractAsset.ValuedItem, index?: number): Contract.Term.ContractAsset.ValuedItem;
 
       serializeBinary(): Uint8Array;
@@ -1024,23 +1024,23 @@ export namespace Contract {
     export namespace ContractAsset {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         scope?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-        typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-        typeReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-        subtypeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+        type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+        typeReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+        subtype: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
         relationship?: proto_r4_core_datatypes_pb.Coding.AsObject,
-        contextList: Array<Contract.Term.ContractAsset.AssetContext.AsObject>,
+        context: Array<Contract.Term.ContractAsset.AssetContext.AsObject>,
         condition?: proto_r4_core_datatypes_pb.String.AsObject,
-        periodTypeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-        periodList: Array<proto_r4_core_datatypes_pb.Period.AsObject>,
-        usePeriodList: Array<proto_r4_core_datatypes_pb.Period.AsObject>,
+        periodType: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+        period: Array<proto_r4_core_datatypes_pb.Period.AsObject>,
+        usePeriod: Array<proto_r4_core_datatypes_pb.Period.AsObject>,
         text?: proto_r4_core_datatypes_pb.String.AsObject,
-        linkIdList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
-        answerList: Array<Contract.Term.ContractOffer.Answer.AsObject>,
-        securityLabelNumberList: Array<proto_r4_core_datatypes_pb.UnsignedInt.AsObject>,
-        valuedItemList: Array<Contract.Term.ContractAsset.ValuedItem.AsObject>,
+        linkId: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+        answer: Array<Contract.Term.ContractOffer.Answer.AsObject>,
+        securityLabelNumber: Array<proto_r4_core_datatypes_pb.UnsignedInt.AsObject>,
+        valuedItem: Array<Contract.Term.ContractAsset.ValuedItem.AsObject>,
       }
 
       export class AssetContext extends jspb.Message {
@@ -1049,14 +1049,14 @@ export namespace Contract {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         hasReference(): boolean;
@@ -1064,9 +1064,9 @@ export namespace Contract {
         getReference(): proto_r4_core_datatypes_pb.Reference | undefined;
         setReference(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-        clearCodeList(): void;
-        getCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-        setCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+        clearCode(): void;
+        getCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+        setCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
         addCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
         hasText(): boolean;
@@ -1087,10 +1087,10 @@ export namespace Contract {
       export namespace AssetContext {
         export type AsObject = {
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
           reference?: proto_r4_core_datatypes_pb.Reference.AsObject,
-          codeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+          code: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
           text?: proto_r4_core_datatypes_pb.String.AsObject,
         }
       }
@@ -1101,14 +1101,14 @@ export namespace Contract {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         hasEntity(): boolean;
@@ -1171,14 +1171,14 @@ export namespace Contract {
         getRecipient(): proto_r4_core_datatypes_pb.Reference | undefined;
         setRecipient(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-        clearLinkIdList(): void;
-        getLinkIdList(): Array<proto_r4_core_datatypes_pb.String>;
-        setLinkIdList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+        clearLinkId(): void;
+        getLinkId(): Array<proto_r4_core_datatypes_pb.String>;
+        setLinkId(value: Array<proto_r4_core_datatypes_pb.String>): void;
         addLinkId(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
-        clearSecurityLabelNumberList(): void;
-        getSecurityLabelNumberList(): Array<proto_r4_core_datatypes_pb.UnsignedInt>;
-        setSecurityLabelNumberList(value: Array<proto_r4_core_datatypes_pb.UnsignedInt>): void;
+        clearSecurityLabelNumber(): void;
+        getSecurityLabelNumber(): Array<proto_r4_core_datatypes_pb.UnsignedInt>;
+        setSecurityLabelNumber(value: Array<proto_r4_core_datatypes_pb.UnsignedInt>): void;
         addSecurityLabelNumber(value?: proto_r4_core_datatypes_pb.UnsignedInt, index?: number): proto_r4_core_datatypes_pb.UnsignedInt;
 
         serializeBinary(): Uint8Array;
@@ -1194,8 +1194,8 @@ export namespace Contract {
       export namespace ValuedItem {
         export type AsObject = {
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
           entity?: Contract.Term.ContractAsset.ValuedItem.EntityX.AsObject,
           identifier?: proto_r4_core_datatypes_pb.Identifier.AsObject,
           effectiveTime?: proto_r4_core_datatypes_pb.DateTime.AsObject,
@@ -1208,8 +1208,8 @@ export namespace Contract {
           paymentDate?: proto_r4_core_datatypes_pb.DateTime.AsObject,
           responsible?: proto_r4_core_datatypes_pb.Reference.AsObject,
           recipient?: proto_r4_core_datatypes_pb.Reference.AsObject,
-          linkIdList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
-          securityLabelNumberList: Array<proto_r4_core_datatypes_pb.UnsignedInt.AsObject>,
+          linkId: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+          securityLabelNumber: Array<proto_r4_core_datatypes_pb.UnsignedInt.AsObject>,
         }
 
         export class EntityX extends jspb.Message {
@@ -1255,14 +1255,14 @@ export namespace Contract {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasDoNotPerform(): boolean;
@@ -1275,9 +1275,9 @@ export namespace Contract {
       getType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
       setType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-      clearSubjectList(): void;
-      getSubjectList(): Array<Contract.Term.Action.ActionSubject>;
-      setSubjectList(value: Array<Contract.Term.Action.ActionSubject>): void;
+      clearSubject(): void;
+      getSubject(): Array<Contract.Term.Action.ActionSubject>;
+      setSubject(value: Array<Contract.Term.Action.ActionSubject>): void;
       addSubject(value?: Contract.Term.Action.ActionSubject, index?: number): Contract.Term.Action.ActionSubject;
 
       hasIntent(): boolean;
@@ -1285,9 +1285,9 @@ export namespace Contract {
       getIntent(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
       setIntent(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-      clearLinkIdList(): void;
-      getLinkIdList(): Array<proto_r4_core_datatypes_pb.String>;
-      setLinkIdList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+      clearLinkId(): void;
+      getLinkId(): Array<proto_r4_core_datatypes_pb.String>;
+      setLinkId(value: Array<proto_r4_core_datatypes_pb.String>): void;
       addLinkId(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
       hasStatus(): boolean;
@@ -1300,9 +1300,9 @@ export namespace Contract {
       getContext(): proto_r4_core_datatypes_pb.Reference | undefined;
       setContext(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-      clearContextLinkIdList(): void;
-      getContextLinkIdList(): Array<proto_r4_core_datatypes_pb.String>;
-      setContextLinkIdList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+      clearContextLinkId(): void;
+      getContextLinkId(): Array<proto_r4_core_datatypes_pb.String>;
+      setContextLinkId(value: Array<proto_r4_core_datatypes_pb.String>): void;
       addContextLinkId(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
       hasOccurrence(): boolean;
@@ -1310,19 +1310,19 @@ export namespace Contract {
       getOccurrence(): Contract.Term.Action.OccurrenceX | undefined;
       setOccurrence(value?: Contract.Term.Action.OccurrenceX): void;
 
-      clearRequesterList(): void;
-      getRequesterList(): Array<proto_r4_core_datatypes_pb.Reference>;
-      setRequesterList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+      clearRequester(): void;
+      getRequester(): Array<proto_r4_core_datatypes_pb.Reference>;
+      setRequester(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
       addRequester(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-      clearRequesterLinkIdList(): void;
-      getRequesterLinkIdList(): Array<proto_r4_core_datatypes_pb.String>;
-      setRequesterLinkIdList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+      clearRequesterLinkId(): void;
+      getRequesterLinkId(): Array<proto_r4_core_datatypes_pb.String>;
+      setRequesterLinkId(value: Array<proto_r4_core_datatypes_pb.String>): void;
       addRequesterLinkId(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
-      clearPerformerTypeList(): void;
-      getPerformerTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-      setPerformerTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+      clearPerformerType(): void;
+      getPerformerType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+      setPerformerType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
       addPerformerType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
       hasPerformerRole(): boolean;
@@ -1335,39 +1335,39 @@ export namespace Contract {
       getPerformer(): proto_r4_core_datatypes_pb.Reference | undefined;
       setPerformer(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-      clearPerformerLinkIdList(): void;
-      getPerformerLinkIdList(): Array<proto_r4_core_datatypes_pb.String>;
-      setPerformerLinkIdList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+      clearPerformerLinkId(): void;
+      getPerformerLinkId(): Array<proto_r4_core_datatypes_pb.String>;
+      setPerformerLinkId(value: Array<proto_r4_core_datatypes_pb.String>): void;
       addPerformerLinkId(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
-      clearReasonCodeList(): void;
-      getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-      setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+      clearReasonCode(): void;
+      getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+      setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
       addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-      clearReasonReferenceList(): void;
-      getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-      setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+      clearReasonReference(): void;
+      getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+      setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
       addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-      clearReasonList(): void;
-      getReasonList(): Array<proto_r4_core_datatypes_pb.String>;
-      setReasonList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+      clearReason(): void;
+      getReason(): Array<proto_r4_core_datatypes_pb.String>;
+      setReason(value: Array<proto_r4_core_datatypes_pb.String>): void;
       addReason(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
-      clearReasonLinkIdList(): void;
-      getReasonLinkIdList(): Array<proto_r4_core_datatypes_pb.String>;
-      setReasonLinkIdList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+      clearReasonLinkId(): void;
+      getReasonLinkId(): Array<proto_r4_core_datatypes_pb.String>;
+      setReasonLinkId(value: Array<proto_r4_core_datatypes_pb.String>): void;
       addReasonLinkId(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
-      clearNoteList(): void;
-      getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-      setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+      clearNote(): void;
+      getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+      setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
       addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
-      clearSecurityLabelNumberList(): void;
-      getSecurityLabelNumberList(): Array<proto_r4_core_datatypes_pb.UnsignedInt>;
-      setSecurityLabelNumberList(value: Array<proto_r4_core_datatypes_pb.UnsignedInt>): void;
+      clearSecurityLabelNumber(): void;
+      getSecurityLabelNumber(): Array<proto_r4_core_datatypes_pb.UnsignedInt>;
+      setSecurityLabelNumber(value: Array<proto_r4_core_datatypes_pb.UnsignedInt>): void;
       addSecurityLabelNumber(value?: proto_r4_core_datatypes_pb.UnsignedInt, index?: number): proto_r4_core_datatypes_pb.UnsignedInt;
 
       serializeBinary(): Uint8Array;
@@ -1383,29 +1383,29 @@ export namespace Contract {
     export namespace Action {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         doNotPerform?: proto_r4_core_datatypes_pb.Boolean.AsObject,
         type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-        subjectList: Array<Contract.Term.Action.ActionSubject.AsObject>,
+        subject: Array<Contract.Term.Action.ActionSubject.AsObject>,
         intent?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-        linkIdList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+        linkId: Array<proto_r4_core_datatypes_pb.String.AsObject>,
         status?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         context?: proto_r4_core_datatypes_pb.Reference.AsObject,
-        contextLinkIdList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+        contextLinkId: Array<proto_r4_core_datatypes_pb.String.AsObject>,
         occurrence?: Contract.Term.Action.OccurrenceX.AsObject,
-        requesterList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-        requesterLinkIdList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
-        performerTypeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+        requester: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+        requesterLinkId: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+        performerType: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
         performerRole?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         performer?: proto_r4_core_datatypes_pb.Reference.AsObject,
-        performerLinkIdList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
-        reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-        reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-        reasonList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
-        reasonLinkIdList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
-        noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
-        securityLabelNumberList: Array<proto_r4_core_datatypes_pb.UnsignedInt.AsObject>,
+        performerLinkId: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+        reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+        reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+        reason: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+        reasonLinkId: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+        note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+        securityLabelNumber: Array<proto_r4_core_datatypes_pb.UnsignedInt.AsObject>,
       }
 
       export class ActionSubject extends jspb.Message {
@@ -1414,19 +1414,19 @@ export namespace Contract {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearModifierExtensionList(): void;
-        getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearModifierExtension(): void;
+        getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-        clearReferenceList(): void;
-        getReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-        setReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+        clearReference(): void;
+        getReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+        setReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
         addReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
         hasRole(): boolean;
@@ -1447,9 +1447,9 @@ export namespace Contract {
       export namespace ActionSubject {
         export type AsObject = {
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-          referenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          reference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
           role?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         }
       }
@@ -1504,14 +1504,14 @@ export namespace Contract {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -1524,9 +1524,9 @@ export namespace Contract {
     getParty(): proto_r4_core_datatypes_pb.Reference | undefined;
     setParty(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-    clearSignatureList(): void;
-    getSignatureList(): Array<proto_r4_core_datatypes_pb.Signature>;
-    setSignatureList(value: Array<proto_r4_core_datatypes_pb.Signature>): void;
+    clearSignature(): void;
+    getSignature(): Array<proto_r4_core_datatypes_pb.Signature>;
+    setSignature(value: Array<proto_r4_core_datatypes_pb.Signature>): void;
     addSignature(value?: proto_r4_core_datatypes_pb.Signature, index?: number): proto_r4_core_datatypes_pb.Signature;
 
     serializeBinary(): Uint8Array;
@@ -1542,11 +1542,11 @@ export namespace Contract {
   export namespace Signatory {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.Coding.AsObject,
       party?: proto_r4_core_datatypes_pb.Reference.AsObject,
-      signatureList: Array<proto_r4_core_datatypes_pb.Signature.AsObject>,
+      signature: Array<proto_r4_core_datatypes_pb.Signature.AsObject>,
     }
   }
 
@@ -1556,14 +1556,14 @@ export namespace Contract {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasContent(): boolean;
@@ -1584,8 +1584,8 @@ export namespace Contract {
   export namespace FriendlyLanguage {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       content?: Contract.FriendlyLanguage.ContentX.AsObject,
     }
 
@@ -1631,14 +1631,14 @@ export namespace Contract {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasContent(): boolean;
@@ -1659,8 +1659,8 @@ export namespace Contract {
   export namespace LegalLanguage {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       content?: Contract.LegalLanguage.ContentX.AsObject,
     }
 
@@ -1706,14 +1706,14 @@ export namespace Contract {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasContent(): boolean;
@@ -1734,8 +1734,8 @@ export namespace Contract {
   export namespace ComputableLanguage {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       content?: Contract.ComputableLanguage.ContentX.AsObject,
     }
 

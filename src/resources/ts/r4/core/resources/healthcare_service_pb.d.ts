@@ -33,24 +33,24 @@ export class HealthcareService extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasActive(): boolean;
@@ -63,24 +63,24 @@ export class HealthcareService extends jspb.Message {
   getProvidedBy(): proto_r4_core_datatypes_pb.Reference | undefined;
   setProvidedBy(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearCategoryList(): void;
-  getCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCategory(): void;
+  getCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearTypeList(): void;
-  getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearType(): void;
+  getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearSpecialtyList(): void;
-  getSpecialtyList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setSpecialtyList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearSpecialty(): void;
+  getSpecialty(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setSpecialty(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addSpecialty(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearLocationList(): void;
-  getLocationList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setLocationList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearLocation(): void;
+  getLocation(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setLocation(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addLocation(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasName(): boolean;
@@ -103,44 +103,44 @@ export class HealthcareService extends jspb.Message {
   getPhoto(): proto_r4_core_datatypes_pb.Attachment | undefined;
   setPhoto(value?: proto_r4_core_datatypes_pb.Attachment): void;
 
-  clearTelecomList(): void;
-  getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearTelecom(): void;
+  getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
-  clearCoverageAreaList(): void;
-  getCoverageAreaList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setCoverageAreaList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearCoverageArea(): void;
+  getCoverageArea(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setCoverageArea(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addCoverageArea(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearServiceProvisionCodeList(): void;
-  getServiceProvisionCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setServiceProvisionCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearServiceProvisionCode(): void;
+  getServiceProvisionCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setServiceProvisionCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addServiceProvisionCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearEligibilityList(): void;
-  getEligibilityList(): Array<HealthcareService.Eligibility>;
-  setEligibilityList(value: Array<HealthcareService.Eligibility>): void;
+  clearEligibility(): void;
+  getEligibility(): Array<HealthcareService.Eligibility>;
+  setEligibility(value: Array<HealthcareService.Eligibility>): void;
   addEligibility(value?: HealthcareService.Eligibility, index?: number): HealthcareService.Eligibility;
 
-  clearProgramList(): void;
-  getProgramList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setProgramList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearProgram(): void;
+  getProgram(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setProgram(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addProgram(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearCharacteristicList(): void;
-  getCharacteristicList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCharacteristicList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCharacteristic(): void;
+  getCharacteristic(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCharacteristic(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCharacteristic(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearCommunicationList(): void;
-  getCommunicationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCommunicationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCommunication(): void;
+  getCommunication(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCommunication(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCommunication(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReferralMethodList(): void;
-  getReferralMethodList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReferralMethodList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReferralMethod(): void;
+  getReferralMethod(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReferralMethod(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReferralMethod(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasAppointmentRequired(): boolean;
@@ -148,14 +148,14 @@ export class HealthcareService extends jspb.Message {
   getAppointmentRequired(): proto_r4_core_datatypes_pb.Boolean | undefined;
   setAppointmentRequired(value?: proto_r4_core_datatypes_pb.Boolean): void;
 
-  clearAvailableTimeList(): void;
-  getAvailableTimeList(): Array<HealthcareService.AvailableTime>;
-  setAvailableTimeList(value: Array<HealthcareService.AvailableTime>): void;
+  clearAvailableTime(): void;
+  getAvailableTime(): Array<HealthcareService.AvailableTime>;
+  setAvailableTime(value: Array<HealthcareService.AvailableTime>): void;
   addAvailableTime(value?: HealthcareService.AvailableTime, index?: number): HealthcareService.AvailableTime;
 
-  clearNotAvailableList(): void;
-  getNotAvailableList(): Array<HealthcareService.NotAvailable>;
-  setNotAvailableList(value: Array<HealthcareService.NotAvailable>): void;
+  clearNotAvailable(): void;
+  getNotAvailable(): Array<HealthcareService.NotAvailable>;
+  setNotAvailable(value: Array<HealthcareService.NotAvailable>): void;
   addNotAvailable(value?: HealthcareService.NotAvailable, index?: number): HealthcareService.NotAvailable;
 
   hasAvailabilityExceptions(): boolean;
@@ -163,9 +163,9 @@ export class HealthcareService extends jspb.Message {
   getAvailabilityExceptions(): proto_r4_core_datatypes_pb.String | undefined;
   setAvailabilityExceptions(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearEndpointList(): void;
-  getEndpointList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setEndpointList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearEndpoint(): void;
+  getEndpoint(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setEndpoint(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addEndpoint(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -185,33 +185,33 @@ export namespace HealthcareService {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     active?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     providedBy?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    categoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    specialtyList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    locationList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    category: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    specialty: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    location: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     name?: proto_r4_core_datatypes_pb.String.AsObject,
     comment?: proto_r4_core_datatypes_pb.String.AsObject,
     extraDetails?: proto_r4_core_datatypes_pb.Markdown.AsObject,
     photo?: proto_r4_core_datatypes_pb.Attachment.AsObject,
-    telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
-    coverageAreaList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    serviceProvisionCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    eligibilityList: Array<HealthcareService.Eligibility.AsObject>,
-    programList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    characteristicList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    communicationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    referralMethodList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    coverageArea: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    serviceProvisionCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    eligibility: Array<HealthcareService.Eligibility.AsObject>,
+    program: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    characteristic: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    communication: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    referralMethod: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     appointmentRequired?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-    availableTimeList: Array<HealthcareService.AvailableTime.AsObject>,
-    notAvailableList: Array<HealthcareService.NotAvailable.AsObject>,
+    availableTime: Array<HealthcareService.AvailableTime.AsObject>,
+    notAvailable: Array<HealthcareService.NotAvailable.AsObject>,
     availabilityExceptions?: proto_r4_core_datatypes_pb.String.AsObject,
-    endpointList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    endpoint: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class Eligibility extends jspb.Message {
@@ -220,14 +220,14 @@ export namespace HealthcareService {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -253,8 +253,8 @@ export namespace HealthcareService {
   export namespace Eligibility {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       comment?: proto_r4_core_datatypes_pb.Markdown.AsObject,
     }
@@ -266,19 +266,19 @@ export namespace HealthcareService {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearDaysOfWeekList(): void;
-    getDaysOfWeekList(): Array<HealthcareService.AvailableTime.DaysOfWeekCode>;
-    setDaysOfWeekList(value: Array<HealthcareService.AvailableTime.DaysOfWeekCode>): void;
+    clearDaysOfWeek(): void;
+    getDaysOfWeek(): Array<HealthcareService.AvailableTime.DaysOfWeekCode>;
+    setDaysOfWeek(value: Array<HealthcareService.AvailableTime.DaysOfWeekCode>): void;
     addDaysOfWeek(value?: HealthcareService.AvailableTime.DaysOfWeekCode, index?: number): HealthcareService.AvailableTime.DaysOfWeekCode;
 
     hasAllDay(): boolean;
@@ -309,9 +309,9 @@ export namespace HealthcareService {
   export namespace AvailableTime {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      daysOfWeekList: Array<HealthcareService.AvailableTime.DaysOfWeekCode.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      daysOfWeek: Array<HealthcareService.AvailableTime.DaysOfWeekCode.AsObject>,
       allDay?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       availableStartTime?: proto_r4_core_datatypes_pb.Time.AsObject,
       availableEndTime?: proto_r4_core_datatypes_pb.Time.AsObject,
@@ -326,9 +326,9 @@ export namespace HealthcareService {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -345,7 +345,7 @@ export namespace HealthcareService {
       export type AsObject = {
         value: proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap[keyof proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -356,14 +356,14 @@ export namespace HealthcareService {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasDescription(): boolean;
@@ -389,8 +389,8 @@ export namespace HealthcareService {
   export namespace NotAvailable {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       description?: proto_r4_core_datatypes_pb.String.AsObject,
       during?: proto_r4_core_datatypes_pb.Period.AsObject,
     }

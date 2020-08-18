@@ -33,24 +33,24 @@ export class Endpoint extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -73,9 +73,9 @@ export class Endpoint extends jspb.Message {
   getManagingOrganization(): proto_r4_core_datatypes_pb.Reference | undefined;
   setManagingOrganization(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearContactList(): void;
-  getContactList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setContactList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearContact(): void;
+  getContact(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setContact(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addContact(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
   hasPeriod(): boolean;
@@ -83,14 +83,14 @@ export class Endpoint extends jspb.Message {
   getPeriod(): proto_r4_core_datatypes_pb.Period | undefined;
   setPeriod(value?: proto_r4_core_datatypes_pb.Period): void;
 
-  clearPayloadTypeList(): void;
-  getPayloadTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setPayloadTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearPayloadType(): void;
+  getPayloadType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setPayloadType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addPayloadType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearPayloadMimeTypeList(): void;
-  getPayloadMimeTypeList(): Array<Endpoint.PayloadMimeTypeCode>;
-  setPayloadMimeTypeList(value: Array<Endpoint.PayloadMimeTypeCode>): void;
+  clearPayloadMimeType(): void;
+  getPayloadMimeType(): Array<Endpoint.PayloadMimeTypeCode>;
+  setPayloadMimeType(value: Array<Endpoint.PayloadMimeTypeCode>): void;
   addPayloadMimeType(value?: Endpoint.PayloadMimeTypeCode, index?: number): Endpoint.PayloadMimeTypeCode;
 
   hasAddress(): boolean;
@@ -98,9 +98,9 @@ export class Endpoint extends jspb.Message {
   getAddress(): proto_r4_core_datatypes_pb.Url | undefined;
   setAddress(value?: proto_r4_core_datatypes_pb.Url): void;
 
-  clearHeaderList(): void;
-  getHeaderList(): Array<proto_r4_core_datatypes_pb.String>;
-  setHeaderList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+  clearHeader(): void;
+  getHeader(): Array<proto_r4_core_datatypes_pb.String>;
+  setHeader(value: Array<proto_r4_core_datatypes_pb.String>): void;
   addHeader(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
   serializeBinary(): Uint8Array;
@@ -120,20 +120,20 @@ export namespace Endpoint {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: Endpoint.StatusCode.AsObject,
     connectionType?: proto_r4_core_datatypes_pb.Coding.AsObject,
     name?: proto_r4_core_datatypes_pb.String.AsObject,
     managingOrganization?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    contactList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    contact: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
     period?: proto_r4_core_datatypes_pb.Period.AsObject,
-    payloadTypeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    payloadMimeTypeList: Array<Endpoint.PayloadMimeTypeCode.AsObject>,
+    payloadType: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    payloadMimeType: Array<Endpoint.PayloadMimeTypeCode.AsObject>,
     address?: proto_r4_core_datatypes_pb.Url.AsObject,
-    headerList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+    header: Array<proto_r4_core_datatypes_pb.String.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -145,9 +145,9 @@ export namespace Endpoint {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -164,7 +164,7 @@ export namespace Endpoint {
     export type AsObject = {
       value: proto_r4_core_codes_pb.EndpointStatusCode.ValueMap[keyof proto_r4_core_codes_pb.EndpointStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -174,9 +174,9 @@ export namespace Endpoint {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     getValue(): string;
@@ -195,7 +195,7 @@ export namespace Endpoint {
   export namespace PayloadMimeTypeCode {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       value: string,
     }
   }

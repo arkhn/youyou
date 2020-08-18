@@ -33,24 +33,24 @@ export class ImmunizationEvaluation extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -88,9 +88,9 @@ export class ImmunizationEvaluation extends jspb.Message {
   getDoseStatus(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setDoseStatus(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearDoseStatusReasonList(): void;
-  getDoseStatusReasonList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setDoseStatusReasonList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearDoseStatusReason(): void;
+  getDoseStatusReason(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setDoseStatusReason(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addDoseStatusReason(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasDescription(): boolean;
@@ -130,10 +130,10 @@ export namespace ImmunizationEvaluation {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: ImmunizationEvaluation.StatusCode.AsObject,
     patient?: proto_r4_core_datatypes_pb.Reference.AsObject,
     date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
@@ -141,7 +141,7 @@ export namespace ImmunizationEvaluation {
     targetDisease?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     immunizationEvent?: proto_r4_core_datatypes_pb.Reference.AsObject,
     doseStatus?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    doseStatusReasonList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    doseStatusReason: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     description?: proto_r4_core_datatypes_pb.String.AsObject,
     series?: proto_r4_core_datatypes_pb.String.AsObject,
     doseNumber?: ImmunizationEvaluation.DoseNumberX.AsObject,
@@ -157,9 +157,9 @@ export namespace ImmunizationEvaluation {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -176,7 +176,7 @@ export namespace ImmunizationEvaluation {
     export type AsObject = {
       value: proto_r4_core_valuesets_pb.ImmunizationEvaluationStatusCodesValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.ImmunizationEvaluationStatusCodesValueSet.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 

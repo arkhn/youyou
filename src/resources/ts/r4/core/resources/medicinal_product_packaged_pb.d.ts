@@ -32,29 +32,29 @@ export class MedicinalProductPackaged extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearSubjectList(): void;
-  getSubjectList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSubjectList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSubject(): void;
+  getSubject(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSubject(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSubject(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasDescription(): boolean;
@@ -67,9 +67,9 @@ export class MedicinalProductPackaged extends jspb.Message {
   getLegalStatusOfSupply(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setLegalStatusOfSupply(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearMarketingStatusList(): void;
-  getMarketingStatusList(): Array<proto_r4_core_datatypes_pb.MarketingStatus>;
-  setMarketingStatusList(value: Array<proto_r4_core_datatypes_pb.MarketingStatus>): void;
+  clearMarketingStatus(): void;
+  getMarketingStatus(): Array<proto_r4_core_datatypes_pb.MarketingStatus>;
+  setMarketingStatus(value: Array<proto_r4_core_datatypes_pb.MarketingStatus>): void;
   addMarketingStatus(value?: proto_r4_core_datatypes_pb.MarketingStatus, index?: number): proto_r4_core_datatypes_pb.MarketingStatus;
 
   hasMarketingAuthorization(): boolean;
@@ -77,19 +77,19 @@ export class MedicinalProductPackaged extends jspb.Message {
   getMarketingAuthorization(): proto_r4_core_datatypes_pb.Reference | undefined;
   setMarketingAuthorization(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearManufacturerList(): void;
-  getManufacturerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setManufacturerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearManufacturer(): void;
+  getManufacturer(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setManufacturer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addManufacturer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearBatchIdentifierList(): void;
-  getBatchIdentifierList(): Array<MedicinalProductPackaged.BatchIdentifier>;
-  setBatchIdentifierList(value: Array<MedicinalProductPackaged.BatchIdentifier>): void;
+  clearBatchIdentifier(): void;
+  getBatchIdentifier(): Array<MedicinalProductPackaged.BatchIdentifier>;
+  setBatchIdentifier(value: Array<MedicinalProductPackaged.BatchIdentifier>): void;
   addBatchIdentifier(value?: MedicinalProductPackaged.BatchIdentifier, index?: number): MedicinalProductPackaged.BatchIdentifier;
 
-  clearPackageItemList(): void;
-  getPackageItemList(): Array<MedicinalProductPackaged.PackageItem>;
-  setPackageItemList(value: Array<MedicinalProductPackaged.PackageItem>): void;
+  clearPackageItem(): void;
+  getPackageItem(): Array<MedicinalProductPackaged.PackageItem>;
+  setPackageItem(value: Array<MedicinalProductPackaged.PackageItem>): void;
   addPackageItem(value?: MedicinalProductPackaged.PackageItem, index?: number): MedicinalProductPackaged.PackageItem;
 
   serializeBinary(): Uint8Array;
@@ -109,18 +109,18 @@ export namespace MedicinalProductPackaged {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    subjectList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    subject: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     description?: proto_r4_core_datatypes_pb.String.AsObject,
     legalStatusOfSupply?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    marketingStatusList: Array<proto_r4_core_datatypes_pb.MarketingStatus.AsObject>,
+    marketingStatus: Array<proto_r4_core_datatypes_pb.MarketingStatus.AsObject>,
     marketingAuthorization?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    manufacturerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    batchIdentifierList: Array<MedicinalProductPackaged.BatchIdentifier.AsObject>,
-    packageItemList: Array<MedicinalProductPackaged.PackageItem.AsObject>,
+    manufacturer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    batchIdentifier: Array<MedicinalProductPackaged.BatchIdentifier.AsObject>,
+    packageItem: Array<MedicinalProductPackaged.PackageItem.AsObject>,
   }
 
   export class BatchIdentifier extends jspb.Message {
@@ -129,14 +129,14 @@ export namespace MedicinalProductPackaged {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasOuterPackaging(): boolean;
@@ -162,8 +162,8 @@ export namespace MedicinalProductPackaged {
   export namespace BatchIdentifier {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       outerPackaging?: proto_r4_core_datatypes_pb.Identifier.AsObject,
       immediatePackaging?: proto_r4_core_datatypes_pb.Identifier.AsObject,
     }
@@ -175,19 +175,19 @@ export namespace MedicinalProductPackaged {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearIdentifierList(): void;
-    getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-    setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+    clearIdentifier(): void;
+    getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+    setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
     addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
     hasType(): boolean;
@@ -200,29 +200,29 @@ export namespace MedicinalProductPackaged {
     getQuantity(): proto_r4_core_datatypes_pb.Quantity | undefined;
     setQuantity(value?: proto_r4_core_datatypes_pb.Quantity): void;
 
-    clearMaterialList(): void;
-    getMaterialList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setMaterialList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearMaterial(): void;
+    getMaterial(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setMaterial(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addMaterial(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearAlternateMaterialList(): void;
-    getAlternateMaterialList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setAlternateMaterialList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearAlternateMaterial(): void;
+    getAlternateMaterial(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setAlternateMaterial(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addAlternateMaterial(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearDeviceList(): void;
-    getDeviceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setDeviceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearDevice(): void;
+    getDevice(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setDevice(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addDevice(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-    clearManufacturedItemList(): void;
-    getManufacturedItemList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setManufacturedItemList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearManufacturedItem(): void;
+    getManufacturedItem(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setManufacturedItem(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addManufacturedItem(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-    clearPackageItemList(): void;
-    getPackageItemList(): Array<MedicinalProductPackaged.PackageItem>;
-    setPackageItemList(value: Array<MedicinalProductPackaged.PackageItem>): void;
+    clearPackageItem(): void;
+    getPackageItem(): Array<MedicinalProductPackaged.PackageItem>;
+    setPackageItem(value: Array<MedicinalProductPackaged.PackageItem>): void;
     addPackageItem(value?: MedicinalProductPackaged.PackageItem, index?: number): MedicinalProductPackaged.PackageItem;
 
     hasPhysicalCharacteristics(): boolean;
@@ -230,19 +230,19 @@ export namespace MedicinalProductPackaged {
     getPhysicalCharacteristics(): proto_r4_core_datatypes_pb.ProdCharacteristic | undefined;
     setPhysicalCharacteristics(value?: proto_r4_core_datatypes_pb.ProdCharacteristic): void;
 
-    clearOtherCharacteristicsList(): void;
-    getOtherCharacteristicsList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setOtherCharacteristicsList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearOtherCharacteristics(): void;
+    getOtherCharacteristics(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setOtherCharacteristics(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addOtherCharacteristics(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-    clearShelfLifeStorageList(): void;
-    getShelfLifeStorageList(): Array<proto_r4_core_datatypes_pb.ProductShelfLife>;
-    setShelfLifeStorageList(value: Array<proto_r4_core_datatypes_pb.ProductShelfLife>): void;
+    clearShelfLifeStorage(): void;
+    getShelfLifeStorage(): Array<proto_r4_core_datatypes_pb.ProductShelfLife>;
+    setShelfLifeStorage(value: Array<proto_r4_core_datatypes_pb.ProductShelfLife>): void;
     addShelfLifeStorage(value?: proto_r4_core_datatypes_pb.ProductShelfLife, index?: number): proto_r4_core_datatypes_pb.ProductShelfLife;
 
-    clearManufacturerList(): void;
-    getManufacturerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setManufacturerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearManufacturer(): void;
+    getManufacturer(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setManufacturer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addManufacturer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     serializeBinary(): Uint8Array;
@@ -258,20 +258,20 @@ export namespace MedicinalProductPackaged {
   export namespace PackageItem {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       quantity?: proto_r4_core_datatypes_pb.Quantity.AsObject,
-      materialList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      alternateMaterialList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      deviceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-      manufacturedItemList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-      packageItemList: Array<MedicinalProductPackaged.PackageItem.AsObject>,
+      material: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      alternateMaterial: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      device: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      manufacturedItem: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      packageItem: Array<MedicinalProductPackaged.PackageItem.AsObject>,
       physicalCharacteristics?: proto_r4_core_datatypes_pb.ProdCharacteristic.AsObject,
-      otherCharacteristicsList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-      shelfLifeStorageList: Array<proto_r4_core_datatypes_pb.ProductShelfLife.AsObject>,
-      manufacturerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      otherCharacteristics: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      shelfLifeStorage: Array<proto_r4_core_datatypes_pb.ProductShelfLife.AsObject>,
+      manufacturer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     }
   }
 }

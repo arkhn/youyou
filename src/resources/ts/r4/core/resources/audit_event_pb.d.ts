@@ -33,19 +33,19 @@ export class AuditEvent extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
   hasType(): boolean;
@@ -53,9 +53,9 @@ export class AuditEvent extends jspb.Message {
   getType(): proto_r4_core_datatypes_pb.Coding | undefined;
   setType(value?: proto_r4_core_datatypes_pb.Coding): void;
 
-  clearSubtypeList(): void;
-  getSubtypeList(): Array<proto_r4_core_datatypes_pb.Coding>;
-  setSubtypeList(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
+  clearSubtype(): void;
+  getSubtype(): Array<proto_r4_core_datatypes_pb.Coding>;
+  setSubtype(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
   addSubtype(value?: proto_r4_core_datatypes_pb.Coding, index?: number): proto_r4_core_datatypes_pb.Coding;
 
   hasAction(): boolean;
@@ -83,14 +83,14 @@ export class AuditEvent extends jspb.Message {
   getOutcomeDesc(): proto_r4_core_datatypes_pb.String | undefined;
   setOutcomeDesc(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearPurposeOfEventList(): void;
-  getPurposeOfEventList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setPurposeOfEventList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearPurposeOfEvent(): void;
+  getPurposeOfEvent(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setPurposeOfEvent(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addPurposeOfEvent(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearAgentList(): void;
-  getAgentList(): Array<AuditEvent.Agent>;
-  setAgentList(value: Array<AuditEvent.Agent>): void;
+  clearAgent(): void;
+  getAgent(): Array<AuditEvent.Agent>;
+  setAgent(value: Array<AuditEvent.Agent>): void;
   addAgent(value?: AuditEvent.Agent, index?: number): AuditEvent.Agent;
 
   hasSource(): boolean;
@@ -98,9 +98,9 @@ export class AuditEvent extends jspb.Message {
   getSource(): AuditEvent.Source | undefined;
   setSource(value?: AuditEvent.Source): void;
 
-  clearEntityList(): void;
-  getEntityList(): Array<AuditEvent.Entity>;
-  setEntityList(value: Array<AuditEvent.Entity>): void;
+  clearEntity(): void;
+  getEntity(): Array<AuditEvent.Entity>;
+  setEntity(value: Array<AuditEvent.Entity>): void;
   addEntity(value?: AuditEvent.Entity, index?: number): AuditEvent.Entity;
 
   serializeBinary(): Uint8Array;
@@ -120,20 +120,20 @@ export namespace AuditEvent {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     type?: proto_r4_core_datatypes_pb.Coding.AsObject,
-    subtypeList: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
+    subtype: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
     action?: AuditEvent.ActionCode.AsObject,
     period?: proto_r4_core_datatypes_pb.Period.AsObject,
     recorded?: proto_r4_core_datatypes_pb.Instant.AsObject,
     outcome?: AuditEvent.OutcomeCode.AsObject,
     outcomeDesc?: proto_r4_core_datatypes_pb.String.AsObject,
-    purposeOfEventList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    agentList: Array<AuditEvent.Agent.AsObject>,
+    purposeOfEvent: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    agent: Array<AuditEvent.Agent.AsObject>,
     source?: AuditEvent.Source.AsObject,
-    entityList: Array<AuditEvent.Entity.AsObject>,
+    entity: Array<AuditEvent.Entity.AsObject>,
   }
 
   export class ActionCode extends jspb.Message {
@@ -145,9 +145,9 @@ export namespace AuditEvent {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -164,7 +164,7 @@ export namespace AuditEvent {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AuditEventActionCode.ValueMap[keyof proto_r4_core_codes_pb.AuditEventActionCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -177,9 +177,9 @@ export namespace AuditEvent {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -196,7 +196,7 @@ export namespace AuditEvent {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AuditEventOutcomeCode.ValueMap[keyof proto_r4_core_codes_pb.AuditEventOutcomeCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -206,14 +206,14 @@ export namespace AuditEvent {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
@@ -221,9 +221,9 @@ export namespace AuditEvent {
     getType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearRoleList(): void;
-    getRoleList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setRoleList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearRole(): void;
+    getRole(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setRole(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addRole(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasWho(): boolean;
@@ -251,9 +251,9 @@ export namespace AuditEvent {
     getLocation(): proto_r4_core_datatypes_pb.Reference | undefined;
     setLocation(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-    clearPolicyList(): void;
-    getPolicyList(): Array<proto_r4_core_datatypes_pb.Uri>;
-    setPolicyList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+    clearPolicy(): void;
+    getPolicy(): Array<proto_r4_core_datatypes_pb.Uri>;
+    setPolicy(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
     addPolicy(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
     hasMedia(): boolean;
@@ -266,9 +266,9 @@ export namespace AuditEvent {
     getNetwork(): AuditEvent.Agent.Network | undefined;
     setNetwork(value?: AuditEvent.Agent.Network): void;
 
-    clearPurposeOfUseList(): void;
-    getPurposeOfUseList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setPurposeOfUseList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearPurposeOfUse(): void;
+    getPurposeOfUse(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setPurposeOfUse(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addPurposeOfUse(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     serializeBinary(): Uint8Array;
@@ -284,19 +284,19 @@ export namespace AuditEvent {
   export namespace Agent {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      roleList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      role: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       who?: proto_r4_core_datatypes_pb.Reference.AsObject,
       altId?: proto_r4_core_datatypes_pb.String.AsObject,
       name?: proto_r4_core_datatypes_pb.String.AsObject,
       requestor?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       location?: proto_r4_core_datatypes_pb.Reference.AsObject,
-      policyList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+      policy: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
       media?: proto_r4_core_datatypes_pb.Coding.AsObject,
       network?: AuditEvent.Agent.Network.AsObject,
-      purposeOfUseList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      purposeOfUse: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     }
 
     export class Network extends jspb.Message {
@@ -305,14 +305,14 @@ export namespace AuditEvent {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasAddress(): boolean;
@@ -338,8 +338,8 @@ export namespace AuditEvent {
     export namespace Network {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         address?: proto_r4_core_datatypes_pb.String.AsObject,
         type?: AuditEvent.Agent.Network.TypeCode.AsObject,
       }
@@ -353,9 +353,9 @@ export namespace AuditEvent {
         getId(): proto_r4_core_datatypes_pb.String | undefined;
         setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-        clearExtensionList(): void;
-        getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-        setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+        clearExtension(): void;
+        getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+        setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
         addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
         serializeBinary(): Uint8Array;
@@ -372,7 +372,7 @@ export namespace AuditEvent {
         export type AsObject = {
           value: proto_r4_core_codes_pb.AuditEventAgentNetworkTypeCode.ValueMap[keyof proto_r4_core_codes_pb.AuditEventAgentNetworkTypeCode.ValueMap],
           id?: proto_r4_core_datatypes_pb.String.AsObject,
-          extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+          extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         }
       }
     }
@@ -384,14 +384,14 @@ export namespace AuditEvent {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasSite(): boolean;
@@ -404,9 +404,9 @@ export namespace AuditEvent {
     getObserver(): proto_r4_core_datatypes_pb.Reference | undefined;
     setObserver(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-    clearTypeList(): void;
-    getTypeList(): Array<proto_r4_core_datatypes_pb.Coding>;
-    setTypeList(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
+    clearType(): void;
+    getType(): Array<proto_r4_core_datatypes_pb.Coding>;
+    setType(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
     addType(value?: proto_r4_core_datatypes_pb.Coding, index?: number): proto_r4_core_datatypes_pb.Coding;
 
     serializeBinary(): Uint8Array;
@@ -422,11 +422,11 @@ export namespace AuditEvent {
   export namespace Source {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       site?: proto_r4_core_datatypes_pb.String.AsObject,
       observer?: proto_r4_core_datatypes_pb.Reference.AsObject,
-      typeList: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
+      type: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
     }
   }
 
@@ -436,14 +436,14 @@ export namespace AuditEvent {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasWhat(): boolean;
@@ -466,9 +466,9 @@ export namespace AuditEvent {
     getLifecycle(): proto_r4_core_datatypes_pb.Coding | undefined;
     setLifecycle(value?: proto_r4_core_datatypes_pb.Coding): void;
 
-    clearSecurityLabelList(): void;
-    getSecurityLabelList(): Array<proto_r4_core_datatypes_pb.Coding>;
-    setSecurityLabelList(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
+    clearSecurityLabel(): void;
+    getSecurityLabel(): Array<proto_r4_core_datatypes_pb.Coding>;
+    setSecurityLabel(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
     addSecurityLabel(value?: proto_r4_core_datatypes_pb.Coding, index?: number): proto_r4_core_datatypes_pb.Coding;
 
     hasName(): boolean;
@@ -486,9 +486,9 @@ export namespace AuditEvent {
     getQuery(): proto_r4_core_datatypes_pb.Base64Binary | undefined;
     setQuery(value?: proto_r4_core_datatypes_pb.Base64Binary): void;
 
-    clearDetailList(): void;
-    getDetailList(): Array<AuditEvent.Entity.Detail>;
-    setDetailList(value: Array<AuditEvent.Entity.Detail>): void;
+    clearDetail(): void;
+    getDetail(): Array<AuditEvent.Entity.Detail>;
+    setDetail(value: Array<AuditEvent.Entity.Detail>): void;
     addDetail(value?: AuditEvent.Entity.Detail, index?: number): AuditEvent.Entity.Detail;
 
     serializeBinary(): Uint8Array;
@@ -504,17 +504,17 @@ export namespace AuditEvent {
   export namespace Entity {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       what?: proto_r4_core_datatypes_pb.Reference.AsObject,
       type?: proto_r4_core_datatypes_pb.Coding.AsObject,
       role?: proto_r4_core_datatypes_pb.Coding.AsObject,
       lifecycle?: proto_r4_core_datatypes_pb.Coding.AsObject,
-      securityLabelList: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
+      securityLabel: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
       name?: proto_r4_core_datatypes_pb.String.AsObject,
       description?: proto_r4_core_datatypes_pb.String.AsObject,
       query?: proto_r4_core_datatypes_pb.Base64Binary.AsObject,
-      detailList: Array<AuditEvent.Entity.Detail.AsObject>,
+      detail: Array<AuditEvent.Entity.Detail.AsObject>,
     }
 
     export class Detail extends jspb.Message {
@@ -523,14 +523,14 @@ export namespace AuditEvent {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasType(): boolean;
@@ -556,8 +556,8 @@ export namespace AuditEvent {
     export namespace Detail {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         type?: proto_r4_core_datatypes_pb.String.AsObject,
         value?: AuditEvent.Entity.Detail.ValueX.AsObject,
       }

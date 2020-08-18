@@ -27,9 +27,9 @@ export class Parameters extends jspb.Message {
   getLanguage(): proto_r4_core_datatypes_pb.Code | undefined;
   setLanguage(value?: proto_r4_core_datatypes_pb.Code): void;
 
-  clearParameterList(): void;
-  getParameterList(): Array<Parameters.Parameter>;
-  setParameterList(value: Array<Parameters.Parameter>): void;
+  clearParameter(): void;
+  getParameter(): Array<Parameters.Parameter>;
+  setParameter(value: Array<Parameters.Parameter>): void;
   addParameter(value?: Parameters.Parameter, index?: number): Parameters.Parameter;
 
   serializeBinary(): Uint8Array;
@@ -48,7 +48,7 @@ export namespace Parameters {
     meta?: proto_r4_core_datatypes_pb.Meta.AsObject,
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
-    parameterList: Array<Parameters.Parameter.AsObject>,
+    parameter: Array<Parameters.Parameter.AsObject>,
   }
 
   export class Parameter extends jspb.Message {
@@ -57,14 +57,14 @@ export namespace Parameters {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasName(): boolean;
@@ -82,9 +82,9 @@ export namespace Parameters {
     getResource(): google_protobuf_any_pb.Any | undefined;
     setResource(value?: google_protobuf_any_pb.Any): void;
 
-    clearPartList(): void;
-    getPartList(): Array<Parameters.Parameter>;
-    setPartList(value: Array<Parameters.Parameter>): void;
+    clearPart(): void;
+    getPart(): Array<Parameters.Parameter>;
+    setPart(value: Array<Parameters.Parameter>): void;
     addPart(value?: Parameters.Parameter, index?: number): Parameters.Parameter;
 
     serializeBinary(): Uint8Array;
@@ -100,12 +100,12 @@ export namespace Parameters {
   export namespace Parameter {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       name?: proto_r4_core_datatypes_pb.String.AsObject,
       value?: Parameters.Parameter.ValueX.AsObject,
       resource?: google_protobuf_any_pb.Any.AsObject,
-      partList: Array<Parameters.Parameter.AsObject>,
+      part: Array<Parameters.Parameter.AsObject>,
     }
 
     export class ValueX extends jspb.Message {

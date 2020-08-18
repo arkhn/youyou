@@ -32,24 +32,24 @@ export class Schedule extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasActive(): boolean;
@@ -57,24 +57,24 @@ export class Schedule extends jspb.Message {
   getActive(): proto_r4_core_datatypes_pb.Boolean | undefined;
   setActive(value?: proto_r4_core_datatypes_pb.Boolean): void;
 
-  clearServiceCategoryList(): void;
-  getServiceCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setServiceCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearServiceCategory(): void;
+  getServiceCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setServiceCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addServiceCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearServiceTypeList(): void;
-  getServiceTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setServiceTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearServiceType(): void;
+  getServiceType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setServiceType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addServiceType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearSpecialtyList(): void;
-  getSpecialtyList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setSpecialtyList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearSpecialty(): void;
+  getSpecialty(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setSpecialty(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addSpecialty(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearActorList(): void;
-  getActorList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setActorList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearActor(): void;
+  getActor(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setActor(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addActor(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasPlanningHorizon(): boolean;
@@ -104,15 +104,15 @@ export namespace Schedule {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     active?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-    serviceCategoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    serviceTypeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    specialtyList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    actorList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    serviceCategory: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    serviceType: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    specialty: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    actor: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     planningHorizon?: proto_r4_core_datatypes_pb.Period.AsObject,
     comment?: proto_r4_core_datatypes_pb.String.AsObject,
   }

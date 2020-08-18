@@ -4,14 +4,14 @@
 import * as jspb from "google-protobuf";
 
 export class ResourceConfig extends jspb.Message {
-  clearDefaultTimestampFieldsList(): void;
-  getDefaultTimestampFieldsList(): Array<string>;
-  setDefaultTimestampFieldsList(value: Array<string>): void;
+  clearDefaultTimestampFields(): void;
+  getDefaultTimestampFields(): Array<string>;
+  setDefaultTimestampFields(value: Array<string>): void;
   addDefaultTimestampFields(value: string, index?: number): string;
 
-  clearTimestampOverrideList(): void;
-  getTimestampOverrideList(): Array<ResourceConfig.TimestampOverride>;
-  setTimestampOverrideList(value: Array<ResourceConfig.TimestampOverride>): void;
+  clearTimestampOverride(): void;
+  getTimestampOverride(): Array<ResourceConfig.TimestampOverride>;
+  setTimestampOverride(value: Array<ResourceConfig.TimestampOverride>): void;
   addTimestampOverride(value?: ResourceConfig.TimestampOverride, index?: number): ResourceConfig.TimestampOverride;
 
   serializeBinary(): Uint8Array;
@@ -26,17 +26,17 @@ export class ResourceConfig extends jspb.Message {
 
 export namespace ResourceConfig {
   export type AsObject = {
-    defaultTimestampFieldsList: Array<string>,
-    timestampOverrideList: Array<ResourceConfig.TimestampOverride.AsObject>,
+    defaultTimestampFields: Array<string>,
+    timestampOverride: Array<ResourceConfig.TimestampOverride.AsObject>,
   }
 
   export class TimestampOverride extends jspb.Message {
     getTimestampField(): string;
     setTimestampField(value: string): void;
 
-    clearResourceFieldList(): void;
-    getResourceFieldList(): Array<string>;
-    setResourceFieldList(value: Array<string>): void;
+    clearResourceField(): void;
+    getResourceField(): Array<string>;
+    setResourceField(value: Array<string>): void;
     addResourceField(value: string, index?: number): string;
 
     serializeBinary(): Uint8Array;
@@ -52,7 +52,7 @@ export namespace ResourceConfig {
   export namespace TimestampOverride {
     export type AsObject = {
       timestampField: string,
-      resourceFieldList: Array<string>,
+      resourceField: Array<string>,
     }
   }
 }

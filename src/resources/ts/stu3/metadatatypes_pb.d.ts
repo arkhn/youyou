@@ -12,14 +12,14 @@ export class BackboneElement extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -35,8 +35,8 @@ export class BackboneElement extends jspb.Message {
 export namespace BackboneElement {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 }
 
@@ -46,9 +46,9 @@ export class ContactDetail extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasName(): boolean;
@@ -56,9 +56,9 @@ export class ContactDetail extends jspb.Message {
   getName(): proto_stu3_datatypes_pb.String | undefined;
   setName(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearTelecomList(): void;
-  getTelecomList(): Array<proto_stu3_datatypes_pb.ContactPoint>;
-  setTelecomList(value: Array<proto_stu3_datatypes_pb.ContactPoint>): void;
+  clearTelecom(): void;
+  getTelecom(): Array<proto_stu3_datatypes_pb.ContactPoint>;
+  setTelecom(value: Array<proto_stu3_datatypes_pb.ContactPoint>): void;
   addTelecom(value?: proto_stu3_datatypes_pb.ContactPoint, index?: number): proto_stu3_datatypes_pb.ContactPoint;
 
   serializeBinary(): Uint8Array;
@@ -74,9 +74,9 @@ export class ContactDetail extends jspb.Message {
 export namespace ContactDetail {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     name?: proto_stu3_datatypes_pb.String.AsObject,
-    telecomList: Array<proto_stu3_datatypes_pb.ContactPoint.AsObject>,
+    telecom: Array<proto_stu3_datatypes_pb.ContactPoint.AsObject>,
   }
 }
 
@@ -86,9 +86,9 @@ export class Contributor extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasType(): boolean;
@@ -101,9 +101,9 @@ export class Contributor extends jspb.Message {
   getName(): proto_stu3_datatypes_pb.String | undefined;
   setName(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearContactList(): void;
-  getContactList(): Array<ContactDetail>;
-  setContactList(value: Array<ContactDetail>): void;
+  clearContact(): void;
+  getContact(): Array<ContactDetail>;
+  setContact(value: Array<ContactDetail>): void;
   addContact(value?: ContactDetail, index?: number): ContactDetail;
 
   serializeBinary(): Uint8Array;
@@ -119,10 +119,10 @@ export class Contributor extends jspb.Message {
 export namespace Contributor {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     type?: proto_stu3_codes_pb.ContributorTypeCode.AsObject,
     name?: proto_stu3_datatypes_pb.String.AsObject,
-    contactList: Array<ContactDetail.AsObject>,
+    contact: Array<ContactDetail.AsObject>,
   }
 }
 
@@ -132,9 +132,9 @@ export class DataRequirement extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasType(): boolean;
@@ -142,24 +142,24 @@ export class DataRequirement extends jspb.Message {
   getType(): proto_stu3_codes_pb.FHIRAllTypesCode | undefined;
   setType(value?: proto_stu3_codes_pb.FHIRAllTypesCode): void;
 
-  clearProfileList(): void;
-  getProfileList(): Array<proto_stu3_datatypes_pb.Uri>;
-  setProfileList(value: Array<proto_stu3_datatypes_pb.Uri>): void;
+  clearProfile(): void;
+  getProfile(): Array<proto_stu3_datatypes_pb.Uri>;
+  setProfile(value: Array<proto_stu3_datatypes_pb.Uri>): void;
   addProfile(value?: proto_stu3_datatypes_pb.Uri, index?: number): proto_stu3_datatypes_pb.Uri;
 
-  clearMustSupportList(): void;
-  getMustSupportList(): Array<proto_stu3_datatypes_pb.String>;
-  setMustSupportList(value: Array<proto_stu3_datatypes_pb.String>): void;
+  clearMustSupport(): void;
+  getMustSupport(): Array<proto_stu3_datatypes_pb.String>;
+  setMustSupport(value: Array<proto_stu3_datatypes_pb.String>): void;
   addMustSupport(value?: proto_stu3_datatypes_pb.String, index?: number): proto_stu3_datatypes_pb.String;
 
-  clearCodeFilterList(): void;
-  getCodeFilterList(): Array<DataRequirement.CodeFilter>;
-  setCodeFilterList(value: Array<DataRequirement.CodeFilter>): void;
+  clearCodeFilter(): void;
+  getCodeFilter(): Array<DataRequirement.CodeFilter>;
+  setCodeFilter(value: Array<DataRequirement.CodeFilter>): void;
   addCodeFilter(value?: DataRequirement.CodeFilter, index?: number): DataRequirement.CodeFilter;
 
-  clearDateFilterList(): void;
-  getDateFilterList(): Array<DataRequirement.DateFilter>;
-  setDateFilterList(value: Array<DataRequirement.DateFilter>): void;
+  clearDateFilter(): void;
+  getDateFilter(): Array<DataRequirement.DateFilter>;
+  setDateFilter(value: Array<DataRequirement.DateFilter>): void;
   addDateFilter(value?: DataRequirement.DateFilter, index?: number): DataRequirement.DateFilter;
 
   serializeBinary(): Uint8Array;
@@ -175,12 +175,12 @@ export class DataRequirement extends jspb.Message {
 export namespace DataRequirement {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     type?: proto_stu3_codes_pb.FHIRAllTypesCode.AsObject,
-    profileList: Array<proto_stu3_datatypes_pb.Uri.AsObject>,
-    mustSupportList: Array<proto_stu3_datatypes_pb.String.AsObject>,
-    codeFilterList: Array<DataRequirement.CodeFilter.AsObject>,
-    dateFilterList: Array<DataRequirement.DateFilter.AsObject>,
+    profile: Array<proto_stu3_datatypes_pb.Uri.AsObject>,
+    mustSupport: Array<proto_stu3_datatypes_pb.String.AsObject>,
+    codeFilter: Array<DataRequirement.CodeFilter.AsObject>,
+    dateFilter: Array<DataRequirement.DateFilter.AsObject>,
   }
 
   export class CodeFilter extends jspb.Message {
@@ -189,9 +189,9 @@ export namespace DataRequirement {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasPath(): boolean;
@@ -204,19 +204,19 @@ export namespace DataRequirement {
     getValueSet(): DataRequirement.CodeFilter.ValueSet | undefined;
     setValueSet(value?: DataRequirement.CodeFilter.ValueSet): void;
 
-    clearValueCodeList(): void;
-    getValueCodeList(): Array<proto_stu3_datatypes_pb.Code>;
-    setValueCodeList(value: Array<proto_stu3_datatypes_pb.Code>): void;
+    clearValueCode(): void;
+    getValueCode(): Array<proto_stu3_datatypes_pb.Code>;
+    setValueCode(value: Array<proto_stu3_datatypes_pb.Code>): void;
     addValueCode(value?: proto_stu3_datatypes_pb.Code, index?: number): proto_stu3_datatypes_pb.Code;
 
-    clearValueCodingList(): void;
-    getValueCodingList(): Array<proto_stu3_datatypes_pb.Coding>;
-    setValueCodingList(value: Array<proto_stu3_datatypes_pb.Coding>): void;
+    clearValueCoding(): void;
+    getValueCoding(): Array<proto_stu3_datatypes_pb.Coding>;
+    setValueCoding(value: Array<proto_stu3_datatypes_pb.Coding>): void;
     addValueCoding(value?: proto_stu3_datatypes_pb.Coding, index?: number): proto_stu3_datatypes_pb.Coding;
 
-    clearValueCodeableConceptList(): void;
-    getValueCodeableConceptList(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
-    setValueCodeableConceptList(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
+    clearValueCodeableConcept(): void;
+    getValueCodeableConcept(): Array<proto_stu3_datatypes_pb.CodeableConcept>;
+    setValueCodeableConcept(value: Array<proto_stu3_datatypes_pb.CodeableConcept>): void;
     addValueCodeableConcept(value?: proto_stu3_datatypes_pb.CodeableConcept, index?: number): proto_stu3_datatypes_pb.CodeableConcept;
 
     serializeBinary(): Uint8Array;
@@ -232,12 +232,12 @@ export namespace DataRequirement {
   export namespace CodeFilter {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       path?: proto_stu3_datatypes_pb.String.AsObject,
       valueSet?: DataRequirement.CodeFilter.ValueSet.AsObject,
-      valueCodeList: Array<proto_stu3_datatypes_pb.Code.AsObject>,
-      valueCodingList: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
-      valueCodeableConceptList: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
+      valueCode: Array<proto_stu3_datatypes_pb.Code.AsObject>,
+      valueCoding: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
+      valueCodeableConcept: Array<proto_stu3_datatypes_pb.CodeableConcept.AsObject>,
     }
 
     export class ValueSet extends jspb.Message {
@@ -282,9 +282,9 @@ export namespace DataRequirement {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasPath(): boolean;
@@ -310,7 +310,7 @@ export namespace DataRequirement {
   export namespace DateFilter {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       path?: proto_stu3_datatypes_pb.String.AsObject,
       value?: DataRequirement.DateFilter.Value.AsObject,
     }
@@ -365,9 +365,9 @@ export class Element extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   serializeBinary(): Uint8Array;
@@ -383,7 +383,7 @@ export class Element extends jspb.Message {
 export namespace Element {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
   }
 }
 
@@ -393,9 +393,9 @@ export class ElementDefinition extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasPath(): boolean;
@@ -403,9 +403,9 @@ export class ElementDefinition extends jspb.Message {
   getPath(): proto_stu3_datatypes_pb.String | undefined;
   setPath(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearRepresentationList(): void;
-  getRepresentationList(): Array<proto_stu3_codes_pb.PropertyRepresentationCode>;
-  setRepresentationList(value: Array<proto_stu3_codes_pb.PropertyRepresentationCode>): void;
+  clearRepresentation(): void;
+  getRepresentation(): Array<proto_stu3_codes_pb.PropertyRepresentationCode>;
+  setRepresentation(value: Array<proto_stu3_codes_pb.PropertyRepresentationCode>): void;
   addRepresentation(value?: proto_stu3_codes_pb.PropertyRepresentationCode, index?: number): proto_stu3_codes_pb.PropertyRepresentationCode;
 
   hasSliceName(): boolean;
@@ -418,9 +418,9 @@ export class ElementDefinition extends jspb.Message {
   getLabel(): proto_stu3_datatypes_pb.String | undefined;
   setLabel(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearCodeList(): void;
-  getCodeList(): Array<proto_stu3_datatypes_pb.Coding>;
-  setCodeList(value: Array<proto_stu3_datatypes_pb.Coding>): void;
+  clearCode(): void;
+  getCode(): Array<proto_stu3_datatypes_pb.Coding>;
+  setCode(value: Array<proto_stu3_datatypes_pb.Coding>): void;
   addCode(value?: proto_stu3_datatypes_pb.Coding, index?: number): proto_stu3_datatypes_pb.Coding;
 
   hasSlicing(): boolean;
@@ -448,9 +448,9 @@ export class ElementDefinition extends jspb.Message {
   getRequirements(): proto_stu3_datatypes_pb.Markdown | undefined;
   setRequirements(value?: proto_stu3_datatypes_pb.Markdown): void;
 
-  clearAliasList(): void;
-  getAliasList(): Array<proto_stu3_datatypes_pb.String>;
-  setAliasList(value: Array<proto_stu3_datatypes_pb.String>): void;
+  clearAlias(): void;
+  getAlias(): Array<proto_stu3_datatypes_pb.String>;
+  setAlias(value: Array<proto_stu3_datatypes_pb.String>): void;
   addAlias(value?: proto_stu3_datatypes_pb.String, index?: number): proto_stu3_datatypes_pb.String;
 
   hasMin(): boolean;
@@ -473,9 +473,9 @@ export class ElementDefinition extends jspb.Message {
   getContentReference(): proto_stu3_datatypes_pb.Uri | undefined;
   setContentReference(value?: proto_stu3_datatypes_pb.Uri): void;
 
-  clearTypeList(): void;
-  getTypeList(): Array<ElementDefinition.TypeRef>;
-  setTypeList(value: Array<ElementDefinition.TypeRef>): void;
+  clearType(): void;
+  getType(): Array<ElementDefinition.TypeRef>;
+  setType(value: Array<ElementDefinition.TypeRef>): void;
   addType(value?: ElementDefinition.TypeRef, index?: number): ElementDefinition.TypeRef;
 
   hasDefaultValue(): boolean;
@@ -503,9 +503,9 @@ export class ElementDefinition extends jspb.Message {
   getPattern(): ElementDefinition.Pattern | undefined;
   setPattern(value?: ElementDefinition.Pattern): void;
 
-  clearExampleList(): void;
-  getExampleList(): Array<ElementDefinition.Example>;
-  setExampleList(value: Array<ElementDefinition.Example>): void;
+  clearExample(): void;
+  getExample(): Array<ElementDefinition.Example>;
+  setExample(value: Array<ElementDefinition.Example>): void;
   addExample(value?: ElementDefinition.Example, index?: number): ElementDefinition.Example;
 
   hasMinValue(): boolean;
@@ -523,14 +523,14 @@ export class ElementDefinition extends jspb.Message {
   getMaxLength(): proto_stu3_datatypes_pb.Integer | undefined;
   setMaxLength(value?: proto_stu3_datatypes_pb.Integer): void;
 
-  clearConditionList(): void;
-  getConditionList(): Array<proto_stu3_datatypes_pb.Id>;
-  setConditionList(value: Array<proto_stu3_datatypes_pb.Id>): void;
+  clearCondition(): void;
+  getCondition(): Array<proto_stu3_datatypes_pb.Id>;
+  setCondition(value: Array<proto_stu3_datatypes_pb.Id>): void;
   addCondition(value?: proto_stu3_datatypes_pb.Id, index?: number): proto_stu3_datatypes_pb.Id;
 
-  clearConstraintList(): void;
-  getConstraintList(): Array<ElementDefinition.Constraint>;
-  setConstraintList(value: Array<ElementDefinition.Constraint>): void;
+  clearConstraint(): void;
+  getConstraint(): Array<ElementDefinition.Constraint>;
+  setConstraint(value: Array<ElementDefinition.Constraint>): void;
   addConstraint(value?: ElementDefinition.Constraint, index?: number): ElementDefinition.Constraint;
 
   hasMustSupport(): boolean;
@@ -553,9 +553,9 @@ export class ElementDefinition extends jspb.Message {
   getBinding(): ElementDefinition.ElementDefinitionBinding | undefined;
   setBinding(value?: ElementDefinition.ElementDefinitionBinding): void;
 
-  clearMappingList(): void;
-  getMappingList(): Array<ElementDefinition.Mapping>;
-  setMappingList(value: Array<ElementDefinition.Mapping>): void;
+  clearMapping(): void;
+  getMapping(): Array<ElementDefinition.Mapping>;
+  setMapping(value: Array<ElementDefinition.Mapping>): void;
   addMapping(value?: ElementDefinition.Mapping, index?: number): ElementDefinition.Mapping;
 
   serializeBinary(): Uint8Array;
@@ -571,39 +571,39 @@ export class ElementDefinition extends jspb.Message {
 export namespace ElementDefinition {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     path?: proto_stu3_datatypes_pb.String.AsObject,
-    representationList: Array<proto_stu3_codes_pb.PropertyRepresentationCode.AsObject>,
+    representation: Array<proto_stu3_codes_pb.PropertyRepresentationCode.AsObject>,
     sliceName?: proto_stu3_datatypes_pb.String.AsObject,
     label?: proto_stu3_datatypes_pb.String.AsObject,
-    codeList: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
+    code: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
     slicing?: ElementDefinition.Slicing.AsObject,
     pb_short?: proto_stu3_datatypes_pb.String.AsObject,
     definition?: proto_stu3_datatypes_pb.Markdown.AsObject,
     comment?: proto_stu3_datatypes_pb.Markdown.AsObject,
     requirements?: proto_stu3_datatypes_pb.Markdown.AsObject,
-    aliasList: Array<proto_stu3_datatypes_pb.String.AsObject>,
+    alias: Array<proto_stu3_datatypes_pb.String.AsObject>,
     min?: proto_stu3_datatypes_pb.UnsignedInt.AsObject,
     max?: proto_stu3_datatypes_pb.String.AsObject,
     base?: ElementDefinition.Base.AsObject,
     contentReference?: proto_stu3_datatypes_pb.Uri.AsObject,
-    typeList: Array<ElementDefinition.TypeRef.AsObject>,
+    type: Array<ElementDefinition.TypeRef.AsObject>,
     defaultValue?: ElementDefinition.DefaultValue.AsObject,
     meaningWhenMissing?: proto_stu3_datatypes_pb.Markdown.AsObject,
     orderMeaning?: proto_stu3_datatypes_pb.String.AsObject,
     fixed?: ElementDefinition.Fixed.AsObject,
     pattern?: ElementDefinition.Pattern.AsObject,
-    exampleList: Array<ElementDefinition.Example.AsObject>,
+    example: Array<ElementDefinition.Example.AsObject>,
     minValue?: ElementDefinition.MinValue.AsObject,
     maxValue?: ElementDefinition.MaxValue.AsObject,
     maxLength?: proto_stu3_datatypes_pb.Integer.AsObject,
-    conditionList: Array<proto_stu3_datatypes_pb.Id.AsObject>,
-    constraintList: Array<ElementDefinition.Constraint.AsObject>,
+    condition: Array<proto_stu3_datatypes_pb.Id.AsObject>,
+    constraint: Array<ElementDefinition.Constraint.AsObject>,
     mustSupport?: proto_stu3_datatypes_pb.Boolean.AsObject,
     isModifier?: proto_stu3_datatypes_pb.Boolean.AsObject,
     isSummary?: proto_stu3_datatypes_pb.Boolean.AsObject,
     binding?: ElementDefinition.ElementDefinitionBinding.AsObject,
-    mappingList: Array<ElementDefinition.Mapping.AsObject>,
+    mapping: Array<ElementDefinition.Mapping.AsObject>,
   }
 
   export class Slicing extends jspb.Message {
@@ -612,14 +612,14 @@ export namespace ElementDefinition {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
-    clearDiscriminatorList(): void;
-    getDiscriminatorList(): Array<ElementDefinition.Slicing.Discriminator>;
-    setDiscriminatorList(value: Array<ElementDefinition.Slicing.Discriminator>): void;
+    clearDiscriminator(): void;
+    getDiscriminator(): Array<ElementDefinition.Slicing.Discriminator>;
+    setDiscriminator(value: Array<ElementDefinition.Slicing.Discriminator>): void;
     addDiscriminator(value?: ElementDefinition.Slicing.Discriminator, index?: number): ElementDefinition.Slicing.Discriminator;
 
     hasDescription(): boolean;
@@ -650,8 +650,8 @@ export namespace ElementDefinition {
   export namespace Slicing {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
-      discriminatorList: Array<ElementDefinition.Slicing.Discriminator.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      discriminator: Array<ElementDefinition.Slicing.Discriminator.AsObject>,
       description?: proto_stu3_datatypes_pb.String.AsObject,
       ordered?: proto_stu3_datatypes_pb.Boolean.AsObject,
       rules?: proto_stu3_codes_pb.SlicingRulesCode.AsObject,
@@ -663,9 +663,9 @@ export namespace ElementDefinition {
       getId(): proto_stu3_datatypes_pb.String | undefined;
       setId(value?: proto_stu3_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
       addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
       hasType(): boolean;
@@ -691,7 +691,7 @@ export namespace ElementDefinition {
     export namespace Discriminator {
       export type AsObject = {
         id?: proto_stu3_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
         type?: proto_stu3_codes_pb.DiscriminatorTypeCode.AsObject,
         path?: proto_stu3_datatypes_pb.String.AsObject,
       }
@@ -704,9 +704,9 @@ export namespace ElementDefinition {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasPath(): boolean;
@@ -737,7 +737,7 @@ export namespace ElementDefinition {
   export namespace Base {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       path?: proto_stu3_datatypes_pb.String.AsObject,
       min?: proto_stu3_datatypes_pb.UnsignedInt.AsObject,
       max?: proto_stu3_datatypes_pb.String.AsObject,
@@ -750,9 +750,9 @@ export namespace ElementDefinition {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -770,9 +770,9 @@ export namespace ElementDefinition {
     getTargetProfile(): proto_stu3_datatypes_pb.Uri | undefined;
     setTargetProfile(value?: proto_stu3_datatypes_pb.Uri): void;
 
-    clearAggregationList(): void;
-    getAggregationList(): Array<proto_stu3_codes_pb.AggregationModeCode>;
-    setAggregationList(value: Array<proto_stu3_codes_pb.AggregationModeCode>): void;
+    clearAggregation(): void;
+    getAggregation(): Array<proto_stu3_codes_pb.AggregationModeCode>;
+    setAggregation(value: Array<proto_stu3_codes_pb.AggregationModeCode>): void;
     addAggregation(value?: proto_stu3_codes_pb.AggregationModeCode, index?: number): proto_stu3_codes_pb.AggregationModeCode;
 
     hasVersioning(): boolean;
@@ -793,11 +793,11 @@ export namespace ElementDefinition {
   export namespace TypeRef {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       code?: proto_stu3_datatypes_pb.Uri.AsObject,
       profile?: proto_stu3_datatypes_pb.Uri.AsObject,
       targetProfile?: proto_stu3_datatypes_pb.Uri.AsObject,
-      aggregationList: Array<proto_stu3_codes_pb.AggregationModeCode.AsObject>,
+      aggregation: Array<proto_stu3_codes_pb.AggregationModeCode.AsObject>,
       versioning?: proto_stu3_codes_pb.ReferenceVersionRulesCode.AsObject,
     }
   }
@@ -1669,9 +1669,9 @@ export namespace ElementDefinition {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasLabel(): boolean;
@@ -1697,7 +1697,7 @@ export namespace ElementDefinition {
   export namespace Example {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       label?: proto_stu3_datatypes_pb.String.AsObject,
       value?: ElementDefinition.Example.Value.AsObject,
     }
@@ -2164,9 +2164,9 @@ export namespace ElementDefinition {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasKey(): boolean;
@@ -2217,7 +2217,7 @@ export namespace ElementDefinition {
   export namespace Constraint {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       key?: proto_stu3_datatypes_pb.Id.AsObject,
       requirements?: proto_stu3_datatypes_pb.String.AsObject,
       severity?: proto_stu3_codes_pb.ConstraintSeverityCode.AsObject,
@@ -2234,9 +2234,9 @@ export namespace ElementDefinition {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasStrength(): boolean;
@@ -2267,7 +2267,7 @@ export namespace ElementDefinition {
   export namespace ElementDefinitionBinding {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       strength?: proto_stu3_codes_pb.BindingStrengthCode.AsObject,
       description?: proto_stu3_datatypes_pb.String.AsObject,
       valueSet?: ElementDefinition.ElementDefinitionBinding.ValueSet.AsObject,
@@ -2315,9 +2315,9 @@ export namespace ElementDefinition {
     getId(): proto_stu3_datatypes_pb.String | undefined;
     setId(value?: proto_stu3_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
     addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
     hasIdentity(): boolean;
@@ -2353,7 +2353,7 @@ export namespace ElementDefinition {
   export namespace Mapping {
     export type AsObject = {
       id?: proto_stu3_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
       identity?: proto_stu3_datatypes_pb.Id.AsObject,
       language?: proto_stu3_datatypes_pb.MimeTypeCode.AsObject,
       map?: proto_stu3_datatypes_pb.String.AsObject,
@@ -2368,9 +2368,9 @@ export class Narrative extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasStatus(): boolean;
@@ -2396,7 +2396,7 @@ export class Narrative extends jspb.Message {
 export namespace Narrative {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     status?: proto_stu3_codes_pb.NarrativeStatusCode.AsObject,
     div?: proto_stu3_datatypes_pb.Xhtml.AsObject,
   }
@@ -2408,9 +2408,9 @@ export class ParameterDefinition extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasName(): boolean;
@@ -2461,7 +2461,7 @@ export class ParameterDefinition extends jspb.Message {
 export namespace ParameterDefinition {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     name?: proto_stu3_datatypes_pb.Code.AsObject,
     use?: proto_stu3_codes_pb.OperationParameterUseCode.AsObject,
     min?: proto_stu3_datatypes_pb.Integer.AsObject,
@@ -2478,9 +2478,9 @@ export class RelatedArtifact extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasType(): boolean;
@@ -2526,7 +2526,7 @@ export class RelatedArtifact extends jspb.Message {
 export namespace RelatedArtifact {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     type?: proto_stu3_codes_pb.RelatedArtifactTypeCode.AsObject,
     display?: proto_stu3_datatypes_pb.String.AsObject,
     citation?: proto_stu3_datatypes_pb.String.AsObject,
@@ -2542,9 +2542,9 @@ export class TriggerDefinition extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasType(): boolean;
@@ -2580,7 +2580,7 @@ export class TriggerDefinition extends jspb.Message {
 export namespace TriggerDefinition {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     type?: proto_stu3_codes_pb.TriggerTypeCode.AsObject,
     eventName?: proto_stu3_datatypes_pb.String.AsObject,
     eventTiming?: TriggerDefinition.EventTiming.AsObject,
@@ -2643,9 +2643,9 @@ export class UsageContext extends jspb.Message {
   getId(): proto_stu3_datatypes_pb.String | undefined;
   setId(value?: proto_stu3_datatypes_pb.String): void;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_stu3_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_stu3_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_stu3_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_stu3_datatypes_pb.Extension>): void;
   addExtension(value?: proto_stu3_datatypes_pb.Extension, index?: number): proto_stu3_datatypes_pb.Extension;
 
   hasCode(): boolean;
@@ -2671,7 +2671,7 @@ export class UsageContext extends jspb.Message {
 export namespace UsageContext {
   export type AsObject = {
     id?: proto_stu3_datatypes_pb.String.AsObject,
-    extensionList: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
+    extension: Array<proto_stu3_datatypes_pb.Extension.AsObject>,
     code?: proto_stu3_datatypes_pb.Coding.AsObject,
     value?: UsageContext.Value.AsObject,
   }

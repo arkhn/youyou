@@ -33,24 +33,24 @@ export class PractitionerRole extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasActive(): boolean;
@@ -73,39 +73,39 @@ export class PractitionerRole extends jspb.Message {
   getOrganization(): proto_r4_core_datatypes_pb.Reference | undefined;
   setOrganization(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearCodeList(): void;
-  getCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearCode(): void;
+  getCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearSpecialtyList(): void;
-  getSpecialtyList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setSpecialtyList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearSpecialty(): void;
+  getSpecialty(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setSpecialty(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addSpecialty(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearLocationList(): void;
-  getLocationList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setLocationList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearLocation(): void;
+  getLocation(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setLocation(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addLocation(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearHealthcareServiceList(): void;
-  getHealthcareServiceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setHealthcareServiceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearHealthcareService(): void;
+  getHealthcareService(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setHealthcareService(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addHealthcareService(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearTelecomList(): void;
-  getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearTelecom(): void;
+  getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
-  clearAvailableTimeList(): void;
-  getAvailableTimeList(): Array<PractitionerRole.AvailableTime>;
-  setAvailableTimeList(value: Array<PractitionerRole.AvailableTime>): void;
+  clearAvailableTime(): void;
+  getAvailableTime(): Array<PractitionerRole.AvailableTime>;
+  setAvailableTime(value: Array<PractitionerRole.AvailableTime>): void;
   addAvailableTime(value?: PractitionerRole.AvailableTime, index?: number): PractitionerRole.AvailableTime;
 
-  clearNotAvailableList(): void;
-  getNotAvailableList(): Array<PractitionerRole.NotAvailable>;
-  setNotAvailableList(value: Array<PractitionerRole.NotAvailable>): void;
+  clearNotAvailable(): void;
+  getNotAvailable(): Array<PractitionerRole.NotAvailable>;
+  setNotAvailable(value: Array<PractitionerRole.NotAvailable>): void;
   addNotAvailable(value?: PractitionerRole.NotAvailable, index?: number): PractitionerRole.NotAvailable;
 
   hasAvailabilityExceptions(): boolean;
@@ -113,9 +113,9 @@ export class PractitionerRole extends jspb.Message {
   getAvailabilityExceptions(): proto_r4_core_datatypes_pb.String | undefined;
   setAvailabilityExceptions(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearEndpointList(): void;
-  getEndpointList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setEndpointList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearEndpoint(): void;
+  getEndpoint(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setEndpoint(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addEndpoint(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -135,23 +135,23 @@ export namespace PractitionerRole {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     active?: proto_r4_core_datatypes_pb.Boolean.AsObject,
     period?: proto_r4_core_datatypes_pb.Period.AsObject,
     practitioner?: proto_r4_core_datatypes_pb.Reference.AsObject,
     organization?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    codeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    specialtyList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    locationList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    healthcareServiceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
-    availableTimeList: Array<PractitionerRole.AvailableTime.AsObject>,
-    notAvailableList: Array<PractitionerRole.NotAvailable.AsObject>,
+    code: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    specialty: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    location: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    healthcareService: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    availableTime: Array<PractitionerRole.AvailableTime.AsObject>,
+    notAvailable: Array<PractitionerRole.NotAvailable.AsObject>,
     availabilityExceptions?: proto_r4_core_datatypes_pb.String.AsObject,
-    endpointList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    endpoint: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class AvailableTime extends jspb.Message {
@@ -160,19 +160,19 @@ export namespace PractitionerRole {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearDaysOfWeekList(): void;
-    getDaysOfWeekList(): Array<PractitionerRole.AvailableTime.DaysOfWeekCode>;
-    setDaysOfWeekList(value: Array<PractitionerRole.AvailableTime.DaysOfWeekCode>): void;
+    clearDaysOfWeek(): void;
+    getDaysOfWeek(): Array<PractitionerRole.AvailableTime.DaysOfWeekCode>;
+    setDaysOfWeek(value: Array<PractitionerRole.AvailableTime.DaysOfWeekCode>): void;
     addDaysOfWeek(value?: PractitionerRole.AvailableTime.DaysOfWeekCode, index?: number): PractitionerRole.AvailableTime.DaysOfWeekCode;
 
     hasAllDay(): boolean;
@@ -203,9 +203,9 @@ export namespace PractitionerRole {
   export namespace AvailableTime {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      daysOfWeekList: Array<PractitionerRole.AvailableTime.DaysOfWeekCode.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      daysOfWeek: Array<PractitionerRole.AvailableTime.DaysOfWeekCode.AsObject>,
       allDay?: proto_r4_core_datatypes_pb.Boolean.AsObject,
       availableStartTime?: proto_r4_core_datatypes_pb.Time.AsObject,
       availableEndTime?: proto_r4_core_datatypes_pb.Time.AsObject,
@@ -220,9 +220,9 @@ export namespace PractitionerRole {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -239,7 +239,7 @@ export namespace PractitionerRole {
       export type AsObject = {
         value: proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap[keyof proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }
@@ -250,14 +250,14 @@ export namespace PractitionerRole {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasDescription(): boolean;
@@ -283,8 +283,8 @@ export namespace PractitionerRole {
   export namespace NotAvailable {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       description?: proto_r4_core_datatypes_pb.String.AsObject,
       during?: proto_r4_core_datatypes_pb.Period.AsObject,
     }

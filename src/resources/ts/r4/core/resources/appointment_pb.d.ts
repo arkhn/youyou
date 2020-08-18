@@ -33,24 +33,24 @@ export class Appointment extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -63,19 +63,19 @@ export class Appointment extends jspb.Message {
   getCancelationReason(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setCancelationReason(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearServiceCategoryList(): void;
-  getServiceCategoryList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setServiceCategoryList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearServiceCategory(): void;
+  getServiceCategory(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setServiceCategory(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addServiceCategory(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearServiceTypeList(): void;
-  getServiceTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setServiceTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearServiceType(): void;
+  getServiceType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setServiceType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addServiceType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearSpecialtyList(): void;
-  getSpecialtyList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setSpecialtyList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearSpecialty(): void;
+  getSpecialty(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setSpecialty(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addSpecialty(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasAppointmentType(): boolean;
@@ -83,14 +83,14 @@ export class Appointment extends jspb.Message {
   getAppointmentType(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setAppointmentType(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearReasonCodeList(): void;
-  getReasonCodeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setReasonCodeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearReasonCode(): void;
+  getReasonCode(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setReasonCode(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addReasonCode(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearReasonReferenceList(): void;
-  getReasonReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setReasonReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearReasonReference(): void;
+  getReasonReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setReasonReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addReasonReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasPriority(): boolean;
@@ -103,9 +103,9 @@ export class Appointment extends jspb.Message {
   getDescription(): proto_r4_core_datatypes_pb.String | undefined;
   setDescription(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearSupportingInformationList(): void;
-  getSupportingInformationList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSupportingInformationList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSupportingInformation(): void;
+  getSupportingInformation(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSupportingInformation(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSupportingInformation(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasStart(): boolean;
@@ -123,9 +123,9 @@ export class Appointment extends jspb.Message {
   getMinutesDuration(): proto_r4_core_datatypes_pb.PositiveInt | undefined;
   setMinutesDuration(value?: proto_r4_core_datatypes_pb.PositiveInt): void;
 
-  clearSlotList(): void;
-  getSlotList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSlotList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSlot(): void;
+  getSlot(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSlot(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSlot(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasCreated(): boolean;
@@ -143,19 +143,19 @@ export class Appointment extends jspb.Message {
   getPatientInstruction(): proto_r4_core_datatypes_pb.String | undefined;
   setPatientInstruction(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearBasedOnList(): void;
-  getBasedOnList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setBasedOnList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearBasedOn(): void;
+  getBasedOn(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setBasedOn(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addBasedOn(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearParticipantList(): void;
-  getParticipantList(): Array<Appointment.Participant>;
-  setParticipantList(value: Array<Appointment.Participant>): void;
+  clearParticipant(): void;
+  getParticipant(): Array<Appointment.Participant>;
+  setParticipant(value: Array<Appointment.Participant>): void;
   addParticipant(value?: Appointment.Participant, index?: number): Appointment.Participant;
 
-  clearRequestedPeriodList(): void;
-  getRequestedPeriodList(): Array<proto_r4_core_datatypes_pb.Period>;
-  setRequestedPeriodList(value: Array<proto_r4_core_datatypes_pb.Period>): void;
+  clearRequestedPeriod(): void;
+  getRequestedPeriod(): Array<proto_r4_core_datatypes_pb.Period>;
+  setRequestedPeriod(value: Array<proto_r4_core_datatypes_pb.Period>): void;
   addRequestedPeriod(value?: proto_r4_core_datatypes_pb.Period, index?: number): proto_r4_core_datatypes_pb.Period;
 
   serializeBinary(): Uint8Array;
@@ -175,31 +175,31 @@ export namespace Appointment {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: Appointment.StatusCode.AsObject,
     cancelationReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    serviceCategoryList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    serviceTypeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    specialtyList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    serviceCategory: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    serviceType: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    specialty: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     appointmentType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    reasonCodeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    reasonReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    reasonCode: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    reasonReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     priority?: proto_r4_core_datatypes_pb.UnsignedInt.AsObject,
     description?: proto_r4_core_datatypes_pb.String.AsObject,
-    supportingInformationList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    supportingInformation: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     start?: proto_r4_core_datatypes_pb.Instant.AsObject,
     end?: proto_r4_core_datatypes_pb.Instant.AsObject,
     minutesDuration?: proto_r4_core_datatypes_pb.PositiveInt.AsObject,
-    slotList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    slot: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     created?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     comment?: proto_r4_core_datatypes_pb.String.AsObject,
     patientInstruction?: proto_r4_core_datatypes_pb.String.AsObject,
-    basedOnList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    participantList: Array<Appointment.Participant.AsObject>,
-    requestedPeriodList: Array<proto_r4_core_datatypes_pb.Period.AsObject>,
+    basedOn: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    participant: Array<Appointment.Participant.AsObject>,
+    requestedPeriod: Array<proto_r4_core_datatypes_pb.Period.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -211,9 +211,9 @@ export namespace Appointment {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -230,7 +230,7 @@ export namespace Appointment {
     export type AsObject = {
       value: proto_r4_core_codes_pb.AppointmentStatusCode.ValueMap[keyof proto_r4_core_codes_pb.AppointmentStatusCode.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -240,19 +240,19 @@ export namespace Appointment {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearTypeList(): void;
-    getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-    setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+    clearType(): void;
+    getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+    setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
     addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
     hasActor(): boolean;
@@ -288,9 +288,9 @@ export namespace Appointment {
   export namespace Participant {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
       actor?: proto_r4_core_datatypes_pb.Reference.AsObject,
       required?: Appointment.Participant.RequiredCode.AsObject,
       status?: Appointment.Participant.StatusCode.AsObject,
@@ -306,9 +306,9 @@ export namespace Appointment {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -325,7 +325,7 @@ export namespace Appointment {
       export type AsObject = {
         value: proto_r4_core_codes_pb.ParticipantRequiredCode.ValueMap[keyof proto_r4_core_codes_pb.ParticipantRequiredCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
 
@@ -338,9 +338,9 @@ export namespace Appointment {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
@@ -357,7 +357,7 @@ export namespace Appointment {
       export type AsObject = {
         value: proto_r4_core_codes_pb.ParticipationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.ParticipationStatusCode.ValueMap],
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       }
     }
   }

@@ -33,24 +33,24 @@ export class ClinicalImpression extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasStatus(): boolean;
@@ -103,19 +103,19 @@ export class ClinicalImpression extends jspb.Message {
   getPrevious(): proto_r4_core_datatypes_pb.Reference | undefined;
   setPrevious(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearProblemList(): void;
-  getProblemList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setProblemList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearProblem(): void;
+  getProblem(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setProblem(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addProblem(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearInvestigationList(): void;
-  getInvestigationList(): Array<ClinicalImpression.Investigation>;
-  setInvestigationList(value: Array<ClinicalImpression.Investigation>): void;
+  clearInvestigation(): void;
+  getInvestigation(): Array<ClinicalImpression.Investigation>;
+  setInvestigation(value: Array<ClinicalImpression.Investigation>): void;
   addInvestigation(value?: ClinicalImpression.Investigation, index?: number): ClinicalImpression.Investigation;
 
-  clearProtocolList(): void;
-  getProtocolList(): Array<proto_r4_core_datatypes_pb.Uri>;
-  setProtocolList(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
+  clearProtocol(): void;
+  getProtocol(): Array<proto_r4_core_datatypes_pb.Uri>;
+  setProtocol(value: Array<proto_r4_core_datatypes_pb.Uri>): void;
   addProtocol(value?: proto_r4_core_datatypes_pb.Uri, index?: number): proto_r4_core_datatypes_pb.Uri;
 
   hasSummary(): boolean;
@@ -123,29 +123,29 @@ export class ClinicalImpression extends jspb.Message {
   getSummary(): proto_r4_core_datatypes_pb.String | undefined;
   setSummary(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearFindingList(): void;
-  getFindingList(): Array<ClinicalImpression.Finding>;
-  setFindingList(value: Array<ClinicalImpression.Finding>): void;
+  clearFinding(): void;
+  getFinding(): Array<ClinicalImpression.Finding>;
+  setFinding(value: Array<ClinicalImpression.Finding>): void;
   addFinding(value?: ClinicalImpression.Finding, index?: number): ClinicalImpression.Finding;
 
-  clearPrognosisCodeableConceptList(): void;
-  getPrognosisCodeableConceptList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setPrognosisCodeableConceptList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearPrognosisCodeableConcept(): void;
+  getPrognosisCodeableConcept(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setPrognosisCodeableConcept(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addPrognosisCodeableConcept(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearPrognosisReferenceList(): void;
-  getPrognosisReferenceList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPrognosisReferenceList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPrognosisReference(): void;
+  getPrognosisReference(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPrognosisReference(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPrognosisReference(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearSupportingInfoList(): void;
-  getSupportingInfoList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSupportingInfoList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSupportingInfo(): void;
+  getSupportingInfo(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSupportingInfo(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSupportingInfo(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearNoteList(): void;
-  getNoteList(): Array<proto_r4_core_datatypes_pb.Annotation>;
-  setNoteList(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
+  clearNote(): void;
+  getNote(): Array<proto_r4_core_datatypes_pb.Annotation>;
+  setNote(value: Array<proto_r4_core_datatypes_pb.Annotation>): void;
   addNote(value?: proto_r4_core_datatypes_pb.Annotation, index?: number): proto_r4_core_datatypes_pb.Annotation;
 
   serializeBinary(): Uint8Array;
@@ -165,10 +165,10 @@ export namespace ClinicalImpression {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     status?: ClinicalImpression.StatusCode.AsObject,
     statusReason?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -179,15 +179,15 @@ export namespace ClinicalImpression {
     date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
     assessor?: proto_r4_core_datatypes_pb.Reference.AsObject,
     previous?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    problemList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    investigationList: Array<ClinicalImpression.Investigation.AsObject>,
-    protocolList: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
+    problem: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    investigation: Array<ClinicalImpression.Investigation.AsObject>,
+    protocol: Array<proto_r4_core_datatypes_pb.Uri.AsObject>,
     summary?: proto_r4_core_datatypes_pb.String.AsObject,
-    findingList: Array<ClinicalImpression.Finding.AsObject>,
-    prognosisCodeableConceptList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    prognosisReferenceList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    supportingInfoList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    noteList: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
+    finding: Array<ClinicalImpression.Finding.AsObject>,
+    prognosisCodeableConcept: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    prognosisReference: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    supportingInfo: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    note: Array<proto_r4_core_datatypes_pb.Annotation.AsObject>,
   }
 
   export class StatusCode extends jspb.Message {
@@ -199,9 +199,9 @@ export namespace ClinicalImpression {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
@@ -218,7 +218,7 @@ export namespace ClinicalImpression {
     export type AsObject = {
       value: proto_r4_core_valuesets_pb.ClinicalImpressionStatusValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.ClinicalImpressionStatusValueSet.ValueMap],
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
     }
   }
 
@@ -263,14 +263,14 @@ export namespace ClinicalImpression {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasCode(): boolean;
@@ -278,9 +278,9 @@ export namespace ClinicalImpression {
     getCode(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setCode(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearItemList(): void;
-    getItemList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setItemList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearItem(): void;
+    getItem(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setItem(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addItem(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     serializeBinary(): Uint8Array;
@@ -296,10 +296,10 @@ export namespace ClinicalImpression {
   export namespace Investigation {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       code?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      itemList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      item: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     }
   }
 
@@ -309,14 +309,14 @@ export namespace ClinicalImpression {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasItemCodeableConcept(): boolean;
@@ -347,8 +347,8 @@ export namespace ClinicalImpression {
   export namespace Finding {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       itemCodeableConcept?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       itemReference?: proto_r4_core_datatypes_pb.Reference.AsObject,
       basis?: proto_r4_core_datatypes_pb.String.AsObject,

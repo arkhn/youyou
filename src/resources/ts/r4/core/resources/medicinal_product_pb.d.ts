@@ -32,24 +32,24 @@ export class MedicinalProduct extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasType(): boolean;
@@ -77,9 +77,9 @@ export class MedicinalProduct extends jspb.Message {
   getAdditionalMonitoringIndicator(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setAdditionalMonitoringIndicator(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearSpecialMeasuresList(): void;
-  getSpecialMeasuresList(): Array<proto_r4_core_datatypes_pb.String>;
-  setSpecialMeasuresList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+  clearSpecialMeasures(): void;
+  getSpecialMeasures(): Array<proto_r4_core_datatypes_pb.String>;
+  setSpecialMeasures(value: Array<proto_r4_core_datatypes_pb.String>): void;
   addSpecialMeasures(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
   hasPaediatricUseIndicator(): boolean;
@@ -87,64 +87,64 @@ export class MedicinalProduct extends jspb.Message {
   getPaediatricUseIndicator(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setPaediatricUseIndicator(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearProductClassificationList(): void;
-  getProductClassificationList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setProductClassificationList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearProductClassification(): void;
+  getProductClassification(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setProductClassification(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addProductClassification(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
-  clearMarketingStatusList(): void;
-  getMarketingStatusList(): Array<proto_r4_core_datatypes_pb.MarketingStatus>;
-  setMarketingStatusList(value: Array<proto_r4_core_datatypes_pb.MarketingStatus>): void;
+  clearMarketingStatus(): void;
+  getMarketingStatus(): Array<proto_r4_core_datatypes_pb.MarketingStatus>;
+  setMarketingStatus(value: Array<proto_r4_core_datatypes_pb.MarketingStatus>): void;
   addMarketingStatus(value?: proto_r4_core_datatypes_pb.MarketingStatus, index?: number): proto_r4_core_datatypes_pb.MarketingStatus;
 
-  clearPharmaceuticalProductList(): void;
-  getPharmaceuticalProductList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPharmaceuticalProductList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPharmaceuticalProduct(): void;
+  getPharmaceuticalProduct(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPharmaceuticalProduct(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPharmaceuticalProduct(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearPackagedMedicinalProductList(): void;
-  getPackagedMedicinalProductList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setPackagedMedicinalProductList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearPackagedMedicinalProduct(): void;
+  getPackagedMedicinalProduct(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setPackagedMedicinalProduct(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addPackagedMedicinalProduct(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearAttachedDocumentList(): void;
-  getAttachedDocumentList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setAttachedDocumentList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearAttachedDocument(): void;
+  getAttachedDocument(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setAttachedDocument(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addAttachedDocument(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearMasterFileList(): void;
-  getMasterFileList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setMasterFileList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearMasterFile(): void;
+  getMasterFile(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setMasterFile(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addMasterFile(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearContactList(): void;
-  getContactList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setContactList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearContact(): void;
+  getContact(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setContact(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addContact(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearClinicalTrialList(): void;
-  getClinicalTrialList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setClinicalTrialList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearClinicalTrial(): void;
+  getClinicalTrial(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setClinicalTrial(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addClinicalTrial(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
-  clearNameList(): void;
-  getNameList(): Array<MedicinalProduct.Name>;
-  setNameList(value: Array<MedicinalProduct.Name>): void;
+  clearName(): void;
+  getName(): Array<MedicinalProduct.Name>;
+  setName(value: Array<MedicinalProduct.Name>): void;
   addName(value?: MedicinalProduct.Name, index?: number): MedicinalProduct.Name;
 
-  clearCrossReferenceList(): void;
-  getCrossReferenceList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setCrossReferenceList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearCrossReference(): void;
+  getCrossReference(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setCrossReference(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addCrossReference(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
-  clearManufacturingBusinessOperationList(): void;
-  getManufacturingBusinessOperationList(): Array<MedicinalProduct.ManufacturingBusinessOperation>;
-  setManufacturingBusinessOperationList(value: Array<MedicinalProduct.ManufacturingBusinessOperation>): void;
+  clearManufacturingBusinessOperation(): void;
+  getManufacturingBusinessOperation(): Array<MedicinalProduct.ManufacturingBusinessOperation>;
+  setManufacturingBusinessOperation(value: Array<MedicinalProduct.ManufacturingBusinessOperation>): void;
   addManufacturingBusinessOperation(value?: MedicinalProduct.ManufacturingBusinessOperation, index?: number): MedicinalProduct.ManufacturingBusinessOperation;
 
-  clearSpecialDesignationList(): void;
-  getSpecialDesignationList(): Array<MedicinalProduct.SpecialDesignation>;
-  setSpecialDesignationList(value: Array<MedicinalProduct.SpecialDesignation>): void;
+  clearSpecialDesignation(): void;
+  getSpecialDesignation(): Array<MedicinalProduct.SpecialDesignation>;
+  setSpecialDesignation(value: Array<MedicinalProduct.SpecialDesignation>): void;
   addSpecialDesignation(value?: MedicinalProduct.SpecialDesignation, index?: number): MedicinalProduct.SpecialDesignation;
 
   serializeBinary(): Uint8Array;
@@ -164,29 +164,29 @@ export namespace MedicinalProduct {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     domain?: proto_r4_core_datatypes_pb.Coding.AsObject,
     combinedPharmaceuticalDoseForm?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     legalStatusOfSupply?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     additionalMonitoringIndicator?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    specialMeasuresList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+    specialMeasures: Array<proto_r4_core_datatypes_pb.String.AsObject>,
     paediatricUseIndicator?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    productClassificationList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    marketingStatusList: Array<proto_r4_core_datatypes_pb.MarketingStatus.AsObject>,
-    pharmaceuticalProductList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    packagedMedicinalProductList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    attachedDocumentList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    masterFileList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    contactList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    clinicalTrialList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
-    nameList: Array<MedicinalProduct.Name.AsObject>,
-    crossReferenceList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    manufacturingBusinessOperationList: Array<MedicinalProduct.ManufacturingBusinessOperation.AsObject>,
-    specialDesignationList: Array<MedicinalProduct.SpecialDesignation.AsObject>,
+    productClassification: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    marketingStatus: Array<proto_r4_core_datatypes_pb.MarketingStatus.AsObject>,
+    pharmaceuticalProduct: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    packagedMedicinalProduct: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    attachedDocument: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    masterFile: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contact: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    clinicalTrial: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    name: Array<MedicinalProduct.Name.AsObject>,
+    crossReference: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    manufacturingBusinessOperation: Array<MedicinalProduct.ManufacturingBusinessOperation.AsObject>,
+    specialDesignation: Array<MedicinalProduct.SpecialDesignation.AsObject>,
   }
 
   export class Name extends jspb.Message {
@@ -195,14 +195,14 @@ export namespace MedicinalProduct {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasProductName(): boolean;
@@ -210,14 +210,14 @@ export namespace MedicinalProduct {
     getProductName(): proto_r4_core_datatypes_pb.String | undefined;
     setProductName(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearNamePartList(): void;
-    getNamePartList(): Array<MedicinalProduct.Name.NamePart>;
-    setNamePartList(value: Array<MedicinalProduct.Name.NamePart>): void;
+    clearNamePart(): void;
+    getNamePart(): Array<MedicinalProduct.Name.NamePart>;
+    setNamePart(value: Array<MedicinalProduct.Name.NamePart>): void;
     addNamePart(value?: MedicinalProduct.Name.NamePart, index?: number): MedicinalProduct.Name.NamePart;
 
-    clearCountryLanguageList(): void;
-    getCountryLanguageList(): Array<MedicinalProduct.Name.CountryLanguage>;
-    setCountryLanguageList(value: Array<MedicinalProduct.Name.CountryLanguage>): void;
+    clearCountryLanguage(): void;
+    getCountryLanguage(): Array<MedicinalProduct.Name.CountryLanguage>;
+    setCountryLanguage(value: Array<MedicinalProduct.Name.CountryLanguage>): void;
     addCountryLanguage(value?: MedicinalProduct.Name.CountryLanguage, index?: number): MedicinalProduct.Name.CountryLanguage;
 
     serializeBinary(): Uint8Array;
@@ -233,11 +233,11 @@ export namespace MedicinalProduct {
   export namespace Name {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       productName?: proto_r4_core_datatypes_pb.String.AsObject,
-      namePartList: Array<MedicinalProduct.Name.NamePart.AsObject>,
-      countryLanguageList: Array<MedicinalProduct.Name.CountryLanguage.AsObject>,
+      namePart: Array<MedicinalProduct.Name.NamePart.AsObject>,
+      countryLanguage: Array<MedicinalProduct.Name.CountryLanguage.AsObject>,
     }
 
     export class NamePart extends jspb.Message {
@@ -246,14 +246,14 @@ export namespace MedicinalProduct {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasPart(): boolean;
@@ -279,8 +279,8 @@ export namespace MedicinalProduct {
     export namespace NamePart {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         part?: proto_r4_core_datatypes_pb.String.AsObject,
         type?: proto_r4_core_datatypes_pb.Coding.AsObject,
       }
@@ -292,14 +292,14 @@ export namespace MedicinalProduct {
       getId(): proto_r4_core_datatypes_pb.String | undefined;
       setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-      clearExtensionList(): void;
-      getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearExtension(): void;
+      getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-      clearModifierExtensionList(): void;
-      getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-      setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+      clearModifierExtension(): void;
+      getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+      setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
       addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
       hasCountry(): boolean;
@@ -330,8 +330,8 @@ export namespace MedicinalProduct {
     export namespace CountryLanguage {
       export type AsObject = {
         id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-        modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+        modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
         country?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         jurisdiction?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
         language?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
@@ -345,14 +345,14 @@ export namespace MedicinalProduct {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasOperationType(): boolean;
@@ -375,9 +375,9 @@ export namespace MedicinalProduct {
     getConfidentialityIndicator(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
     setConfidentialityIndicator(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-    clearManufacturerList(): void;
-    getManufacturerList(): Array<proto_r4_core_datatypes_pb.Reference>;
-    setManufacturerList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+    clearManufacturer(): void;
+    getManufacturer(): Array<proto_r4_core_datatypes_pb.Reference>;
+    setManufacturer(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
     addManufacturer(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
     hasRegulator(): boolean;
@@ -398,13 +398,13 @@ export namespace MedicinalProduct {
   export namespace ManufacturingBusinessOperation {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       operationType?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       authorisationReferenceNumber?: proto_r4_core_datatypes_pb.Identifier.AsObject,
       effectiveDate?: proto_r4_core_datatypes_pb.DateTime.AsObject,
       confidentialityIndicator?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-      manufacturerList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+      manufacturer: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
       regulator?: proto_r4_core_datatypes_pb.Reference.AsObject,
     }
   }
@@ -415,19 +415,19 @@ export namespace MedicinalProduct {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearIdentifierList(): void;
-    getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-    setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+    clearIdentifier(): void;
+    getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+    setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
     addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
     hasType(): boolean;
@@ -473,9 +473,9 @@ export namespace MedicinalProduct {
   export namespace SpecialDesignation {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
       type?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       intendedUse?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       indication?: MedicinalProduct.SpecialDesignation.IndicationX.AsObject,

@@ -32,24 +32,24 @@ export class MedicinalProductUndesirableEffect extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearSubjectList(): void;
-  getSubjectList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setSubjectList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearSubject(): void;
+  getSubject(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setSubject(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addSubject(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   hasSymptomConditionEffect(): boolean;
@@ -67,9 +67,9 @@ export class MedicinalProductUndesirableEffect extends jspb.Message {
   getFrequencyOfOccurrence(): proto_r4_core_datatypes_pb.CodeableConcept | undefined;
   setFrequencyOfOccurrence(value?: proto_r4_core_datatypes_pb.CodeableConcept): void;
 
-  clearPopulationList(): void;
-  getPopulationList(): Array<proto_r4_core_datatypes_pb.Population>;
-  setPopulationList(value: Array<proto_r4_core_datatypes_pb.Population>): void;
+  clearPopulation(): void;
+  getPopulation(): Array<proto_r4_core_datatypes_pb.Population>;
+  setPopulation(value: Array<proto_r4_core_datatypes_pb.Population>): void;
   addPopulation(value?: proto_r4_core_datatypes_pb.Population, index?: number): proto_r4_core_datatypes_pb.Population;
 
   serializeBinary(): Uint8Array;
@@ -89,14 +89,14 @@ export namespace MedicinalProductUndesirableEffect {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    subjectList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    subject: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
     symptomConditionEffect?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     classification?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
     frequencyOfOccurrence?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
-    populationList: Array<proto_r4_core_datatypes_pb.Population.AsObject>,
+    population: Array<proto_r4_core_datatypes_pb.Population.AsObject>,
   }
 }
 

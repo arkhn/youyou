@@ -32,24 +32,24 @@ export class Organization extends jspb.Message {
   getText(): proto_r4_core_datatypes_pb.Narrative | undefined;
   setText(value?: proto_r4_core_datatypes_pb.Narrative): void;
 
-  clearContainedList(): void;
-  getContainedList(): Array<google_protobuf_any_pb.Any>;
-  setContainedList(value: Array<google_protobuf_any_pb.Any>): void;
+  clearContained(): void;
+  getContained(): Array<google_protobuf_any_pb.Any>;
+  setContained(value: Array<google_protobuf_any_pb.Any>): void;
   addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
 
-  clearExtensionList(): void;
-  getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearExtension(): void;
+  getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearModifierExtensionList(): void;
-  getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+  clearModifierExtension(): void;
+  getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
   addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-  clearIdentifierList(): void;
-  getIdentifierList(): Array<proto_r4_core_datatypes_pb.Identifier>;
-  setIdentifierList(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
+  clearIdentifier(): void;
+  getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
+  setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
   addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
 
   hasActive(): boolean;
@@ -57,9 +57,9 @@ export class Organization extends jspb.Message {
   getActive(): proto_r4_core_datatypes_pb.Boolean | undefined;
   setActive(value?: proto_r4_core_datatypes_pb.Boolean): void;
 
-  clearTypeList(): void;
-  getTypeList(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setTypeList(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
+  clearType(): void;
+  getType(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
+  setType(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
   addType(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasName(): boolean;
@@ -67,19 +67,19 @@ export class Organization extends jspb.Message {
   getName(): proto_r4_core_datatypes_pb.String | undefined;
   setName(value?: proto_r4_core_datatypes_pb.String): void;
 
-  clearAliasList(): void;
-  getAliasList(): Array<proto_r4_core_datatypes_pb.String>;
-  setAliasList(value: Array<proto_r4_core_datatypes_pb.String>): void;
+  clearAlias(): void;
+  getAlias(): Array<proto_r4_core_datatypes_pb.String>;
+  setAlias(value: Array<proto_r4_core_datatypes_pb.String>): void;
   addAlias(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
 
-  clearTelecomList(): void;
-  getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-  setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+  clearTelecom(): void;
+  getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+  setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
   addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
-  clearAddressList(): void;
-  getAddressList(): Array<proto_r4_core_datatypes_pb.Address>;
-  setAddressList(value: Array<proto_r4_core_datatypes_pb.Address>): void;
+  clearAddress(): void;
+  getAddress(): Array<proto_r4_core_datatypes_pb.Address>;
+  setAddress(value: Array<proto_r4_core_datatypes_pb.Address>): void;
   addAddress(value?: proto_r4_core_datatypes_pb.Address, index?: number): proto_r4_core_datatypes_pb.Address;
 
   hasPartOf(): boolean;
@@ -87,14 +87,14 @@ export class Organization extends jspb.Message {
   getPartOf(): proto_r4_core_datatypes_pb.Reference | undefined;
   setPartOf(value?: proto_r4_core_datatypes_pb.Reference): void;
 
-  clearContactList(): void;
-  getContactList(): Array<Organization.Contact>;
-  setContactList(value: Array<Organization.Contact>): void;
+  clearContact(): void;
+  getContact(): Array<Organization.Contact>;
+  setContact(value: Array<Organization.Contact>): void;
   addContact(value?: Organization.Contact, index?: number): Organization.Contact;
 
-  clearEndpointList(): void;
-  getEndpointList(): Array<proto_r4_core_datatypes_pb.Reference>;
-  setEndpointList(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
+  clearEndpoint(): void;
+  getEndpoint(): Array<proto_r4_core_datatypes_pb.Reference>;
+  setEndpoint(value: Array<proto_r4_core_datatypes_pb.Reference>): void;
   addEndpoint(value?: proto_r4_core_datatypes_pb.Reference, index?: number): proto_r4_core_datatypes_pb.Reference;
 
   serializeBinary(): Uint8Array;
@@ -114,19 +114,19 @@ export namespace Organization {
     implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
     language?: proto_r4_core_datatypes_pb.Code.AsObject,
     text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    containedList: Array<google_protobuf_any_pb.Any.AsObject>,
-    extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    identifierList: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
+    contained: Array<google_protobuf_any_pb.Any.AsObject>,
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
     active?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-    typeList: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
+    type: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
     name?: proto_r4_core_datatypes_pb.String.AsObject,
-    aliasList: Array<proto_r4_core_datatypes_pb.String.AsObject>,
-    telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
-    addressList: Array<proto_r4_core_datatypes_pb.Address.AsObject>,
+    alias: Array<proto_r4_core_datatypes_pb.String.AsObject>,
+    telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+    address: Array<proto_r4_core_datatypes_pb.Address.AsObject>,
     partOf?: proto_r4_core_datatypes_pb.Reference.AsObject,
-    contactList: Array<Organization.Contact.AsObject>,
-    endpointList: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
+    contact: Array<Organization.Contact.AsObject>,
+    endpoint: Array<proto_r4_core_datatypes_pb.Reference.AsObject>,
   }
 
   export class Contact extends jspb.Message {
@@ -135,14 +135,14 @@ export namespace Organization {
     getId(): proto_r4_core_datatypes_pb.String | undefined;
     setId(value?: proto_r4_core_datatypes_pb.String): void;
 
-    clearExtensionList(): void;
-    getExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearExtension(): void;
+    getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
-    clearModifierExtensionList(): void;
-    getModifierExtensionList(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtensionList(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
+    clearModifierExtension(): void;
+    getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
+    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
     addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
 
     hasPurpose(): boolean;
@@ -155,9 +155,9 @@ export namespace Organization {
     getName(): proto_r4_core_datatypes_pb.HumanName | undefined;
     setName(value?: proto_r4_core_datatypes_pb.HumanName): void;
 
-    clearTelecomList(): void;
-    getTelecomList(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
-    setTelecomList(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
+    clearTelecom(): void;
+    getTelecom(): Array<proto_r4_core_datatypes_pb.ContactPoint>;
+    setTelecom(value: Array<proto_r4_core_datatypes_pb.ContactPoint>): void;
     addTelecom(value?: proto_r4_core_datatypes_pb.ContactPoint, index?: number): proto_r4_core_datatypes_pb.ContactPoint;
 
     hasAddress(): boolean;
@@ -178,11 +178,11 @@ export namespace Organization {
   export namespace Contact {
     export type AsObject = {
       id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtensionList: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
       purpose?: proto_r4_core_datatypes_pb.CodeableConcept.AsObject,
       name?: proto_r4_core_datatypes_pb.HumanName.AsObject,
-      telecomList: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
+      telecom: Array<proto_r4_core_datatypes_pb.ContactPoint.AsObject>,
       address?: proto_r4_core_datatypes_pb.Address.AsObject,
     }
   }

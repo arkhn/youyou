@@ -644,7 +644,7 @@ export namespace AppointmentStatusCode {
     NOSHOW: 7;
     ENTERED_IN_ERROR: 8;
     CHECKED_IN: 9;
-    WAITLIST: 10;
+    WAIT: 10;
   }
 
   export const Value: ValueMap;
@@ -2501,7 +2501,7 @@ export namespace EpisodeOfCareStatusCode {
   export interface ValueMap {
     INVALID_UNINITIALIZED: 0;
     PLANNED: 1;
-    WAITLIST: 2;
+    WAIT: 2;
     ACTIVE: 3;
     ONHOLD: 4;
     FINISHED: 5;
@@ -3847,7 +3847,7 @@ export namespace MeasureReportTypeCode {
   export interface ValueMap {
     INVALID_UNINITIALIZED: 0;
     INDIVIDUAL: 1;
-    SUBJECT_LIST: 2;
+    SUBJECT_: 2;
     SUMMARY: 3;
     DATA_COLLECTION: 4;
   }
@@ -5169,7 +5169,7 @@ export namespace ResourceTypeCode {
     INVOICE: 68;
     LIBRARY: 69;
     LINKAGE: 70;
-    LIST: 71;
+    : 71;
     LOCATION: 72;
     MEASURE: 73;
     MEASURE_REPORT: 74;
