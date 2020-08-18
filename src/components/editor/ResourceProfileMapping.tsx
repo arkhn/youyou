@@ -1,10 +1,10 @@
 import React from 'react';
-import { IStructureDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { useDispatch } from 'react-redux';
 import { selectAttributeId } from '../../state/actions/resourceActions';
+import { StructureDefinition } from '../../resources/ts/r4/core/resources/structure_definition_pb';
 
 type ResourceProfileMappingProps = {
-    profile: IStructureDefinition | null
+    profile: StructureDefinition.AsObject | null
 }
 
 const ResourceProfileMapping: React.FC<ResourceProfileMappingProps > = ({profile}) => {

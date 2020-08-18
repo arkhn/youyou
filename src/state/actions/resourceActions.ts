@@ -12,7 +12,7 @@ export const SELECT_ATTRIBUTE = 'SELECT_ATTRIBUTE';
 
 export type SelectResourceAction = {
     type: typeof SELECT_RESOURCE,
-    payload: number
+    payload: string
 }
 
 export type GetFetchStartAction = {

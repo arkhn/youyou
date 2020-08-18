@@ -5169,7 +5169,7 @@ export namespace ResourceTypeCode {
     INVOICE: 68;
     LIBRARY: 69;
     LINKAGE: 70;
-    : 71;
+    LIST: 71;
     LOCATION: 72;
     MEASURE: 73;
     MEASURE_REPORT: 74;

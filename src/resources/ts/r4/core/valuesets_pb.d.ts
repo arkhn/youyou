@@ -390,7 +390,7 @@ export namespace FHIRAllTypesValueSet {
     INVOICE: 131;
     LIBRARY: 132;
     LINKAGE: 133;
-    : 134;
+    LIST: 134;
     LOCATION: 135;
     MEASURE: 136;
     MEASURE_REPORT: 137;
@@ -625,7 +625,7 @@ export namespace FHIRDefinedTypeValueSet {
     INVOICE: 131;
     LIBRARY: 132;
     LINKAGE: 133;
-    : 134;
+    LIST: 134;
     LOCATION: 135;
     MEASURE: 136;
     MEASURE_REPORT: 137;

@@ -3,7 +3,7 @@ import AttributeEditor from './AttributeEditor';
 import ResourceProfileMapping from './ResourceProfileMapping';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../state/store';
-import { IElementDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
+import {ElementDefinition } from "../../resources/ts/r4/core/datatypes_pb"
 
 const Editor: React.FC<{}> = () => {
     const { loading, profile, selectedAttributeId } = useSelector((state: RootState) => state.resource);
@@ -12,7 +12,7 @@ const Editor: React.FC<{}> = () => {
     const state = useSelector((state: RootState) => state.resource);
     console.log(state);
 
-    let attribute: IElementDefinition | null = null;
+    let attribute: ElementDefinition.AsObject | null = null;
 
     if (loading === true ){
         return <div>Loading ...</div>

@@ -1,16 +1,16 @@
 import React from 'react';
-import { IElementDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
+import { ElementDefinition } from "../../resources/ts/r4/core/datatypes_pb"
 
 type AttributeEditorProps = {
-    attribute: IElementDefinition | null
+    attribute: ElementDefinition.AsObject | null
 }
 
 const AttributeEditor: React.FC<AttributeEditorProps> = ({attribute}) =>  {
-    console.log(attribute?.min, attribute?.max)
+    console.log(attribute?.min , attribute?.max)
 
     // 0...*    00  01  0*  11  1*
     
-    const isDisabledInput = (cardiMin: any, cardiMax: any, min: any, max: any) => {
+    const isDisabledInput = (cardiMin: any, cardiMax: any, min: Number, max: String) => {
         console.log(min, max, cardiMin, cardiMax)
         if (min >= cardiMin){
             if (cardiMax === "1"){
@@ -31,7 +31,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({attribute}) =>  {
         console.log(cardiMin, cardiMax)
         return (
             <form>
-                <input type="text" placeholder={cardiMin} /><br />
+                <input type="text" placeholder="0" /><br />
                 <input type="text" placeholder={cardiMax} /><br />
                 <input type="button" value="0...0" disabled={isDisabledInput(cardiMin, cardiMax, 0, "0")} /><br />
                 <input type="button" value="0...1" disabled={isDisabledInput(cardiMin, cardiMax, 0, "1")}/><br />

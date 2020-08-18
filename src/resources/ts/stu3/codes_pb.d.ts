@@ -3865,7 +3865,7 @@ export namespace FHIRAllTypesCode {
     IMPLEMENTATION_GUIDE: 114;
     LIBRARY: 115;
     LINKAGE: 116;
-    : 117;
+    LIST: 117;
     LOCATION: 118;
     MEASURE: 119;
     MEASURE_REPORT: 120;
@@ -4078,7 +4078,7 @@ export namespace FHIRDefinedTypeCode {
     IMPLEMENTATION_GUIDE: 114;
     LIBRARY: 115;
     LINKAGE: 116;
-    : 117;
+    LIST: 117;
     LOCATION: 118;
     MEASURE: 119;
     MEASURE_REPORT: 120;
@@ -6074,7 +6074,7 @@ export namespace GuidePageKindCode {
     INVALID_UNINITIALIZED: 0;
     PAGE: 1;
     EXAMPLE: 2;
-    : 3;
+    LIST: 3;
     INCLUDE: 4;
     DIRECTORY: 5;
     DICTIONARY: 6;
@@ -10411,7 +10411,7 @@ export namespace QuestionnaireItemUIControlCodesCode {
 
   export interface ValueMap {
     INVALID_UNINITIALIZED: 0;
-    : 1;
+    LIST: 1;
     TABLE: 2;
     HEADER: 3;
     FOOTER: 4;
@@ -11309,7 +11309,7 @@ export namespace ResourceTypeCode {
     IMPLEMENTATION_GUIDE: 60;
     LIBRARY: 61;
     LINKAGE: 62;
-    : 63;
+    LIST: 63;
     LOCATION: 64;
     MEASURE: 65;
     MEASURE_REPORT: 66;
