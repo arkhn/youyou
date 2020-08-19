@@ -5,6 +5,7 @@ import { Action } from 'redux';
 import { getFetchStart, getIdsSuccess, getIdsFailure, getStructureDefSuccess, getStructureDefFailure } from './actions/resourceActions';
 import { FetchedData } from './../types';
 import { AxiosResponse } from 'axios';
+import { String } from '../resources/ts/proto/r4/core/datatypes_pb';
 
 // FETCH ALL RESOURCE IDS
 export const requestIds = () => {
@@ -22,7 +23,7 @@ export const requestIds = () => {
 }
 
 // FETCH RESOURCE SELECTED
-export const requestResource = (resource: string) => {
+export const requestResource = (resource: String.AsObject) => {
     return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
         dispatch(getFetchStart())
         const response: AxiosResponse<any> = await api.get(`/StructureDefinition?kind=resource&derivation=specialization&id=${resource}`)

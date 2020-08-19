@@ -3,7 +3,7 @@ import AttributeEditor from './AttributeEditor';
 import ResourceProfileMapping from './ResourceProfileMapping';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../state/store';
-import {ElementDefinition } from "../../resources/ts/r4/core/datatypes_pb"
+import { ElementDefinition } from "../../resources/ts/proto/r4/core/datatypes_pb"
 
 const Editor: React.FC<{}> = () => {
     const { loading, profile, selectedAttributeId } = useSelector((state: RootState) => state.resource);
@@ -19,12 +19,14 @@ const Editor: React.FC<{}> = () => {
     };
 
     if (selectedAttributeId){
-        profile?.snapshot?.element.map((element) => {
+        profile?.snapshot?.element.map((element: ElementDefinition.AsObject) => {
             if (element.id === selectedAttributeId){
                 attribute = element;
             }
         })
     }
+
+    console.log(selectedAttributeId)
 
     return (
         <div>

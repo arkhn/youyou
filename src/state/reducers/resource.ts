@@ -1,15 +1,16 @@
-import { StructureDefinition } from '../../resources/ts/r4/core/resources/structure_definition_pb';
+import { StructureDefinition } from '../../resources/ts/proto/r4/core/resources/structure_definition_pb';
 import { ResourceAction, SELECT_RESOURCE, GET_IDS_SUCCESS, GetIdsFailureAction, GetFetchStartAction, GetIdsSuccessAction, GET_FETCH_START, GET_IDS_FAILURE, GetStructureDefFailureAction, GetStructureDefSuccessAction, GET_STRUCTUREDEF_SUCCESS, GET_STRUCTUREDEF_FAILURE, SELECT_ATTRIBUTE, SelectAttributeAction } from '../actions/resourceActions';
+import { String } from '../../resources/ts/proto/r4/core/datatypes_pb';
 
 export type DataFetched = {
-    id: string
+    id: String.AsObject
 }
 
 export type ResourceState = {
     data: DataFetched[];
     profile: StructureDefinition.AsObject | null;
-    selectedResourceId: string | null;
-    selectedAttributeId: string | null;
+    selectedResourceId: String.AsObject | null;
+    selectedAttributeId: String.AsObject | undefined;
     loading: boolean;
     error: Error | null;
 }
@@ -18,7 +19,7 @@ const initialState: ResourceState = {
     data: [],
     profile: null,
     selectedResourceId: null,
-    selectedAttributeId: null,
+    selectedAttributeId: undefined,
     loading: false,
     error: null
 }

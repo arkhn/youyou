@@ -1,5 +1,6 @@
-import { StructureDefinition } from "../../resources/ts/r4/core/resources/structure_definition_pb";
+import { StructureDefinition } from "../../resources/ts/proto/r4/core/resources/structure_definition_pb";
 import { DataFetched } from "../reducers/resource";
+import { String } from "../../resources/ts/proto/r4/core/datatypes_pb";
 
 export const SELECT_RESOURCE = 'SELECT_RESOURCE';
 export const GET_FETCH_START = 'GET_FETCH_START';
@@ -12,7 +13,7 @@ export const SELECT_ATTRIBUTE = 'SELECT_ATTRIBUTE';
 
 export type SelectResourceAction = {
     type: typeof SELECT_RESOURCE,
-    payload: string
+    payload: String.AsObject | null,
 }
 
 export type GetFetchStartAction = {
@@ -41,10 +42,10 @@ export type GetStructureDefFailureAction = {
 
 export type SelectAttributeAction = {
     type: typeof SELECT_ATTRIBUTE,
-    payload: string | null,
+    payload: String.AsObject | undefined,
 }
 
-export const selectResource = (id: string): SelectResourceAction => {
+export const selectResource = (id: String.AsObject): SelectResourceAction => {
     return {
         type: SELECT_RESOURCE,
         payload: id 
@@ -85,7 +86,7 @@ export const getStructureDefFailure = (error: Error): GetStructureDefFailureActi
     }
 }
 
-export const selectAttributeId = (data: string): SelectAttributeAction => {
+export const selectAttributeId = (data: String.AsObject | undefined): SelectAttributeAction => {
     return {
         type: SELECT_ATTRIBUTE,
         payload: data
