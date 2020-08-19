@@ -26,7 +26,6 @@ const Editor: React.FC<{}> = () => {
         <div>
             <h1>Profile Editor for {profile?.id}</h1>
             <AttributeEditor attribute={attribute}/>
-            <hr />
             <ResourceProfileMapping profile={profile}/>
         </div>
     );
