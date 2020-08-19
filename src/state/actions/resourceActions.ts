@@ -48,7 +48,7 @@ export type SelectAttributeAction = {
 export const selectResource = (id: String.AsObject): SelectResourceAction => {
     return {
         type: SELECT_RESOURCE,
-        payload: id 
+        payload: id
     }
 }
 
