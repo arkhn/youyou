@@ -7,10 +7,6 @@ import { ElementDefinition } from "../../resources/ts/proto/r4/core/datatypes_pb
 
 const Editor: React.FC<{}> = () => {
     const { loading, profile, selectedAttributeId } = useSelector((state: RootState) => state.resource);
-    
-    // to delete before push
-    const state = useSelector((state: RootState) => state.resource);
-    console.log(state);
 
     let attribute: ElementDefinition.AsObject | null = null;
 
@@ -25,8 +21,6 @@ const Editor: React.FC<{}> = () => {
             }
         })
     }
-
-    console.log(selectedAttributeId)
 
     return (
         <div>
