@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ElementDefinition } from "../../resources/ts/proto/r4/core/datatypes_pb"
+import { ElementDefinition, UnsignedInt, String } from "../../resources/ts/proto/r4/core/datatypes_pb"
 import { StructureDefinition } from '../../resources/ts/proto/r4/core/resources/structure_definition_pb';
 
 type AttributeEditorProps = {
@@ -8,10 +8,8 @@ type AttributeEditorProps = {
 }
 
 const AttributeEditor: React.FC<AttributeEditorProps> = ({attribute, profile}) =>  {
-    const [min, setMin] = useState(Number(attribute?.min));
-    const [max, setMax] = useState(attribute?.max?.toString());
-
-    console.log(min, max);
+    const [minState, setMinState] = useState(Number(attribute?.base?.min));
+    const [maxState, setMaxState] = useState(attribute?.base?.max?.toString());
 
     const isDisabledInput = (cardiMin: number | undefined, cardiMax: string | undefined, min: number, max: string) => {
         if (cardiMin !== undefined && cardiMax !== undefined && min >= cardiMin){
@@ -30,17 +28,27 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({attribute, profile}) =
 
     const changeCardinality = (cardinality: string): void => {
         const cardiTab = cardinality.split("|");
-        setMin(Number(cardiTab[0]));
-        setMax(cardiTab[1]);
+        setMinState(Number(cardiTab[0]));
+        setMaxState(cardiTab[1]);
     }
 
     const changeProfile = () => {
-        console.log("hello")
+        if (attribute){
+            const cardinalityEditor = attribute;
+            //const profileEditor = profile;
+            cardinalityEditor.min = minState as unknown as UnsignedInt.AsObject;
+            cardinalityEditor.max = maxState as unknown as String.AsObject;
+/*             profileEditor.snapshot.element.map((attrib) => {
+                if (attrib.id = attribute.id){
+                    console.log(attribute)
+                }
+            }) */            
+        }
     }
 
     const handleCardinality = () => {
-        const cardiMax: string | undefined = attribute?.max?.toString();
-        const cardiMin: number | undefined = Number(attribute?.min);
+        const cardiMax: string | undefined = attribute?.base?.max?.toString();
+        const cardiMin: number | undefined = Number(attribute?.base?.min);
         
         
         return (

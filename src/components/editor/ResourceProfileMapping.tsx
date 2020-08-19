@@ -5,18 +5,17 @@ import { StructureDefinition } from '../../resources/ts/proto/r4/core/resources/
 import * as proto_r4_core_datatypes_pb from '../../resources/ts/proto/r4/core/datatypes_pb';
 
 type ResourceProfileMappingProps = {
-    resource: StructureDefinition.AsObject | null
+    profile: StructureDefinition.AsObject | null
 }
 
-const ResourceProfileMapping: React.FC<ResourceProfileMappingProps > = ({resource}) => {
+const ResourceProfileMapping: React.FC<ResourceProfileMappingProps > = ({profile}) => {
     const dispatch = useDispatch();
-    const attributes: Array<proto_r4_core_datatypes_pb.ElementDefinition.AsObject> | undefined = resource?.snapshot?.element;
+    const attributes: Array<proto_r4_core_datatypes_pb.ElementDefinition.AsObject> | undefined = profile?.snapshot?.element;
 
     const renderTree: JSX.Element[] | undefined = attributes?.map((attribute: proto_r4_core_datatypes_pb.ElementDefinition.AsObject, index: number) => {
         return (
             <div key={index} onClick={() => {
                 dispatch(selectAttributeId(attribute?.id))
-                console.log(attribute)
             }}>{attribute.id}</div>
         );
     });
