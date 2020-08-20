@@ -6,12 +6,14 @@ import { requestIds } from "../state/thunkMiddleware";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Editor from "./editor/Editor";
 import { PersistGate } from "redux-persist/integration/react";
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 const App = () => {
   /* @ts-ignore */
   store.dispatch(requestIds());
   return (
     <Provider store={store}>
+      <CssBaseline />
       <PersistGate loading={null} persistor={persistor}>
       <Router>
         <Switch>
