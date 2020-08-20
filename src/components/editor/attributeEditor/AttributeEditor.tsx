@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { ElementDefinition, UnsignedInt, String } from "../../resources/ts/proto/r4/core/datatypes_pb"
-import { StructureDefinition } from '../../resources/ts/proto/r4/core/resources/structure_definition_pb';
+import { ElementDefinition, UnsignedInt, String } from "../../../resources/ts/proto/r4/core/datatypes_pb"
+import { StructureDefinition } from '../../../resources/ts/proto/r4/core/resources/structure_definition_pb';
 import { useDispatch } from 'react-redux';
-import { getStructureDefSuccess } from '../../state/actions/resourceActions';
+import { getStructureDefSuccess } from '../../../state/actions/resourceActions';
+import { Typography } from '@material-ui/core';
 
 type AttributeEditorProps = {
     attribute: ElementDefinition.AsObject | null,
@@ -64,7 +65,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({attribute, profile}) =
     return (
         <>
             <h2>AttributeEditor</h2>
-            <p>Cardinality</p>
+            <Typography variant="h1">Cardinality</Typography>
             <p>{attribute?.id}</p>
             <p>Cardinality min: { attribute?.min }</p>
             <p>Cardinality max: { attribute?.max }</p>

@@ -1,6 +1,6 @@
 import React from 'react';
-import AttributeEditor from './AttributeEditor';
-import ResourceProfileMapping from './ResourceProfileMapping';
+import AttributeEditor from './attributeEditor/AttributeEditor';
+import ResourceProfileMapping from './resourceProfileMapping/ResourceProfileMapping';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../state/store';
 import { ElementDefinition } from "../../resources/ts/proto/r4/core/datatypes_pb";

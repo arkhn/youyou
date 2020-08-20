@@ -5,32 +5,8 @@ import { selectResource } from '../../state/actions/resourceActions';
 import { Link } from 'react-router-dom';
 import { DataFetched } from '../../state/reducers/resource';
 import { requestResource } from '../../state/thunkMiddleware';
-import { Typography } from '@material-ui/core';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme) => ({
-    cards: {
-        width: "100%",
-        display: "flex",
-        flexWrap: "wrap",
-        padding: 5
-    },
-    card: {
-        height: 116,
-        width: "15vw",
-        margin: 5
-    },
-    content: {
-        height: "100%",
-        padding: 20,
-        textAlign: 'center'
-    },
-    text: {
-        textDecoration: "none"
-    }
-}))
+import { Card, CardActionArea, Typography } from '@material-ui/core';
+import useStyles from './style';
 
 const Homepage: React.FC<{}> = () => {
     const { loading, data } = useSelector((state: RootState) => state.resource);

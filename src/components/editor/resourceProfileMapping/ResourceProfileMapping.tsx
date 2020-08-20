@@ -1,8 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { selectAttributeId } from '../../state/actions/resourceActions';
-import { StructureDefinition } from '../../resources/ts/proto/r4/core/resources/structure_definition_pb';
-import * as proto_r4_core_datatypes_pb from '../../resources/ts/proto/r4/core/datatypes_pb';
+import { selectAttributeId } from '../../../state/actions/resourceActions';
+import { StructureDefinition } from '../../../resources/ts/proto/r4/core/resources/structure_definition_pb';
+import * as proto_r4_core_datatypes_pb from '../../../resources/ts/proto/r4/core/datatypes_pb';
 
 type ResourceProfileMappingProps = {
     profile: StructureDefinition.AsObject | null
