@@ -8,7 +8,6 @@ export type DataFetched = {
 
 export type ResourceState = {
     data: DataFetched[];
-    resource: StructureDefinition.AsObject | null;
     profile: StructureDefinition.AsObject | null;
     selectedResourceId: String.AsObject | null;
     selectedAttributeId: String.AsObject | undefined;
@@ -18,7 +17,6 @@ export type ResourceState = {
 
 const initialState: ResourceState = { 
     data: [],
-    resource: null,
     profile: null,
     selectedResourceId: null,
     selectedAttributeId: undefined,
@@ -58,7 +56,6 @@ export const resource = (state: ResourceState = initialState, action: AllResourc
             return {
                 ...state,
                 loading: false,
-                resource: action.payload,
                 profile: action.payload,
                 error: null
             }

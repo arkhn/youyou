@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { ElementDefinition, UnsignedInt, String } from "../../resources/ts/proto/r4/core/datatypes_pb"
 import { StructureDefinition } from '../../resources/ts/proto/r4/core/resources/structure_definition_pb';
+import { useDispatch } from 'react-redux';
+import { getStructureDefSuccess } from '../../state/actions/resourceActions';
 
 type AttributeEditorProps = {
     attribute: ElementDefinition.AsObject | null,
@@ -10,6 +12,7 @@ type AttributeEditorProps = {
 const AttributeEditor: React.FC<AttributeEditorProps> = ({attribute, profile}) =>  {
     const [minState, setMinState] = useState(Number(attribute?.base?.min));
     const [maxState, setMaxState] = useState(attribute?.base?.max?.toString());
+    const dispatch = useDispatch();
 
     const isDisabledInput = (cardiMin: number | undefined, cardiMax: string | undefined, min: number, max: string) => {
         if (cardiMin !== undefined && cardiMax !== undefined && min >= cardiMin){
@@ -32,17 +35,12 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({attribute, profile}) =
         setMaxState(cardiTab[1]);
     }
 
-    const changeProfile = () => {
-        if (attribute){
+    const changeProfileState = () => {
+        if (attribute && profile){
             const cardinalityEditor = attribute;
-            //const profileEditor = profile;
             cardinalityEditor.min = minState as unknown as UnsignedInt.AsObject;
             cardinalityEditor.max = maxState as unknown as String.AsObject;
-/*             profileEditor.snapshot.element.map((attrib) => {
-                if (attrib.id = attribute.id){
-                    console.log(attribute)
-                }
-            }) */            
+            dispatch(getStructureDefSuccess(profile));
         }
     }
 
@@ -58,7 +56,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({attribute, profile}) =
                 <input type="radio" name="cardinality" onChange={(e) => changeCardinality(e.target.value)} value="0|*" disabled={isDisabledInput(cardiMin, cardiMax, 0, "*")}/><label>0...*</label><br />
                 <input type="radio" name="cardinality" onChange={(e) => changeCardinality(e.target.value)} value="1|1" disabled={isDisabledInput(cardiMin, cardiMax, 1, "1")}/><label>1...1</label><br />
                 <input type="radio" name="cardinality" onChange={(e) => changeCardinality(e.target.value)} value="1|*" disabled={isDisabledInput(cardiMin, cardiMax, 1, "*")}/><label>1...*</label><br />
-                <input type="button" value="submit" onClick={() => changeProfile()}/>
+                <input type="button" value="submit" onClick={() => changeProfileState()}/>
             </form>
         )
     }
