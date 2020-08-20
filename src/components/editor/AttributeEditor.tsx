@@ -30,9 +30,9 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({attribute, profile}) =
     }
 
     const changeCardinality = (cardinality: string): void => {
-        const cardiTab = cardinality.split("|");
-        setMinState(Number(cardiTab[0]));
-        setMaxState(cardiTab[1]);
+        const cardinalityValues = cardinality.split("|");
+        setMinState(Number(cardinalityValues[0]));
+        setMaxState(cardinalityValues[1]);
     }
 
     const changeProfileState = () => {
@@ -66,6 +66,8 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({attribute, profile}) =
             <h2>AttributeEditor</h2>
             <p>Cardinality</p>
             <p>{attribute?.id}</p>
+            <p>Cardinality min: { attribute?.min }</p>
+            <p>Cardinality max: { attribute?.max }</p>
             {handleCardinality()}
         </>
     )

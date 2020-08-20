@@ -3,7 +3,8 @@ import AttributeEditor from './AttributeEditor';
 import ResourceProfileMapping from './ResourceProfileMapping';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../state/store';
-import { ElementDefinition } from "../../resources/ts/proto/r4/core/datatypes_pb"
+import { ElementDefinition } from "../../resources/ts/proto/r4/core/datatypes_pb";
+import ReactJson from 'react-json-view';
 
 const Editor: React.FC<{}> = () => {
     const { loading, profile, selectedAttributeId } = useSelector((state: RootState) => state.resource);
@@ -22,11 +23,18 @@ const Editor: React.FC<{}> = () => {
         })
     }
 
+    const renderJsonViewer = () => {
+        if (profile){
+            return <ReactJson src={profile} />  
+        }
+    }
+
     return (
         <div>
             <h1>Profile Editor for {profile?.id}</h1>
             <AttributeEditor attribute={attribute} profile={profile}/>
             <ResourceProfileMapping profile={profile}/>
+            {renderJsonViewer()}
         </div>
     );
 };
