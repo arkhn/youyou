@@ -5,9 +5,9 @@ import { selectResource } from '../../state/actions/resourceActions';
 import { Link } from 'react-router-dom';
 import { DataFetched } from '../../state/reducers/resource';
 import { requestResource } from '../../state/thunkMiddleware';
-import { Card, CardActionArea, Typography, Grid } from '@material-ui/core';
+import { Card, CardActionArea, Typography, Grid, CircularProgress } from '@material-ui/core';
 import useStyles from './style';
-import FhirLogo from '../../assets/img/fhir-logo'
+import { ReactComponent as FhirLogo } from '../../assets/img/fhir-logo.svg'
 import NavBar from './navBar/NavBar';
 
 const Homepage: React.FC<{}> = () => {
@@ -31,7 +31,7 @@ const Homepage: React.FC<{}> = () => {
                     <Card className={classes.itemCard}>
                         <CardActionArea className={classes.itemCardAction}>
                             <Typography className={classes.itemText} variant="h6">{title.replace(/([A-Z])/g, ' $1').trim()}</Typography>
-                            <FhirLogo classId={classes.fhirLogo}/>
+                            <FhirLogo className={classes.fhirLogo} />
                         </CardActionArea>
                     </Card>
                 </Link>
@@ -40,8 +40,12 @@ const Homepage: React.FC<{}> = () => {
     })
 
     if (loading === true) {
-        return <p>Loading...</p>
-    };
+        return (
+            <section className={classes.loader}>
+                <CircularProgress color="primary"/>
+            </section>
+        );
+    }
 
     return (
         <>

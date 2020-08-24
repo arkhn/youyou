@@ -5,7 +5,12 @@ const useStyles = makeStyles((theme) => ({
         background: theme.palette.background.paper,
     },
     toolBar: {
-        paddingLeft: 32
+        paddingLeft: 40
+    },
+    logo: {
+        height: 27,
+        width: 21,
+        marginRight: 16
     }
 }))
 
