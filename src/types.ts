@@ -1,4 +1,4 @@
 export type FetchedData = {
-    resource: string,
-    search: any
-}
+  resource: string;
+  search: any;
+};
