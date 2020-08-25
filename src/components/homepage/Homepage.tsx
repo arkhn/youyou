@@ -28,15 +28,15 @@ const Homepage: React.FC<{}> = () => {
     }
   };
 
-  const mapAllResources = data?.map((data: DataFetched, index: number) => {
-    const title: string = (data.id as unknown) as string;
+  const mapAllResources = data?.map((resource: DataFetched, index: number) => {
+    const title: string = (resource.id as unknown) as string;
 
     return (
       <Grid className={classes.gridItem} item xs={5} sm={4} md={2} key={index}>
         <Link
           className={classes.itemLink}
           to="/editprofile"
-          onClick={(): void => dispatchResourceSelected(data)}
+          onClick={(): void => dispatchResourceSelected(resource)}
         >
           <Card className={classes.itemCard}>
             <CardActionArea className={classes.itemCardAction}>

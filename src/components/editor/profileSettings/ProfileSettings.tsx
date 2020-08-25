@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import {
   String,
   DateTime,
+  Markdown,
 } from "../../../resources/ts/proto/r4/core/datatypes_pb";
 import { getStructureDefSuccess } from "../../../state/actions/resourceActions";
 
@@ -17,30 +18,20 @@ const ProfileSettings: React.FC<ProfileSettingsProps> = ({ profile }) => {
   const [date, setDate] = useState(
     new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString()
   );
-  const [name, setName] = useState(() => {
-    if (profile) {
-      return profile.name;
-    } else {
-      return null;
-    }
-  });
-  const [description, setDescription] = useState(() => {
-    if (profile) {
-      return profile.description;
-    } else {
-      return null;
-    }
-  });
+  const [name, setName] = useState(profile ? profile.name : null);
+  const [description, setDescription] = useState(
+    profile ? profile.description : null
+  );
 
-  const editName = (e: any) => {
-    setName(e.target.value);
+  const editName = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setName((e.target.value as unknown) as String.AsObject);
   };
 
-  const editDescription = (e: any) => {
-    setDescription(e.target.value);
+  const editDescription = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setDescription((e.target.value as unknown) as Markdown.AsObject);
   };
 
-  const editTime = (e: any) => {
+  const editTime = (e: React.ChangeEvent<HTMLInputElement>) => {
     const date = new Date(e.target.value);
     setDate(
       new Date(date.getTime() - date.getTimezoneOffset() * 60000).toISOString()
