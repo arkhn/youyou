@@ -15,15 +15,20 @@ const Editor: React.FC<{}> = () => {
   );
   const profileSettings: String.AsObject = ("profileSettings" as unknown) as String.AsObject;
 
-  let attribute: ElementDefinition.AsObject | null = null;
+  let attribute: ElementDefinition.AsObject | undefined = undefined;
 
   if (selectedAttributeId && selectedAttributeId !== profileSettings) {
-    profile?.snapshot?.element.map((element: ElementDefinition.AsObject) => {
+    /* profile?.snapshot?.element.map((element: ElementDefinition.AsObject) => {
       if (element.id === selectedAttributeId) {
         attribute = element;
       }
-    });
+    }); */
+    attribute = profile?.snapshot?.element.find(
+      (attribute) => attribute.id === selectedAttributeId
+    );
   }
+
+  console.log(attribute);
 
   const renderAttributeEditor = () => {
     if (selectedAttributeId === profileSettings) {
