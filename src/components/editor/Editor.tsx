@@ -10,7 +10,7 @@ import {
 } from "../../resources/ts/proto/r4/core/datatypes_pb";
 
 const Editor: React.FC<{}> = () => {
-  const { loading, profile, selectedAttributeId } = useSelector(
+  const { loading, structureDefinition, selectedAttributeId } = useSelector(
     (state: RootState) => state.resource
   );
   const profileSettings: String.AsObject = ("profileSettings" as unknown) as String.AsObject;
@@ -18,16 +18,18 @@ const Editor: React.FC<{}> = () => {
   let attribute: ElementDefinition.AsObject | undefined = undefined;
 
   if (selectedAttributeId && selectedAttributeId !== profileSettings) {
-    attribute = profile?.snapshot?.element.find(
+    attribute = structureDefinition?.snapshot?.element.find(
       (attribute) => attribute.id === selectedAttributeId
     );
   }
 
   const renderAttributeEditor = () => {
     if (selectedAttributeId === profileSettings) {
-      return <ProfileSettings profile={profile} />;
+      return <ProfileSettings profile={structureDefinition} />;
     } else {
-      return <AttributeEditor attribute={attribute} profile={profile} />;
+      return (
+        <AttributeEditor attribute={attribute} profile={structureDefinition} />
+      );
     }
   };
 
@@ -35,21 +37,21 @@ const Editor: React.FC<{}> = () => {
     return <div>Loading ...</div>;
   }
 
-  if (profile) {
+  if (structureDefinition) {
     return (
       <div>
-        <h1>Profile Editor for {profile.id}</h1>
+        <h1>Profile Editor for {structureDefinition.id}</h1>
         <a
           href={
             "data:json/plain;charset=utf-8," +
-            encodeURIComponent(JSON.stringify(profile, null, 2))
+            encodeURIComponent(JSON.stringify(structureDefinition, null, 2))
           }
-          download={profile.name + ".json"}
+          download={structureDefinition.name + ".json"}
         >
           <button>Download</button>
         </a>
         {renderAttributeEditor()}
-        <ResourceProfileMapping profile={profile} />
+        <ResourceProfileMapping profile={structureDefinition} />
       </div>
     );
   }

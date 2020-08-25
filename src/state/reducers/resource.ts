@@ -22,8 +22,8 @@ export type DataFetched = {
 };
 
 export type ResourceState = {
-  data: DataFetched[];
-  profile: StructureDefinition.AsObject | null;
+  resources: DataFetched[];
+  structureDefinition: StructureDefinition.AsObject | null;
   selectedResourceId: String.AsObject | null;
   selectedAttributeId: String.AsObject | undefined;
   loading: boolean;
@@ -31,8 +31,8 @@ export type ResourceState = {
 };
 
 const initialState: ResourceState = {
-  data: [],
-  profile: null,
+  resources: [],
+  structureDefinition: null,
   selectedResourceId: null,
   selectedAttributeId: undefined,
   loading: false,
@@ -67,28 +67,28 @@ export const resource = (
       return {
         ...state,
         loading: false,
-        data: action.payload,
+        resources: action.payload,
         error: null,
       };
     case GET_IDS_FAILURE:
       return {
         ...state,
         loading: false,
-        data: [],
+        resources: [],
         error: action.payload,
       };
     case GET_STRUCTUREDEF_SUCCESS:
       return {
         ...state,
         loading: false,
-        profile: action.payload,
+        structureDefinition: action.payload,
         error: null,
       };
     case GET_STRUCTUREDEF_FAILURE:
       return {
         ...state,
         loading: false,
-        profile: null,
+        structureDefinition: null,
         error: action.payload,
       };
     case SELECT_ATTRIBUTE:
