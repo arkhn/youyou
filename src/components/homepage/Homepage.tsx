@@ -1,45 +1,77 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../../state/store';
-import { selectResource } from '../../state/actions/resourceActions';
-import { Link } from 'react-router-dom';
-import { DataFetched } from '../../state/reducers/resource';
-import { requestResource } from '../../state/thunkMiddleware';
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "../../state/store";
+import { selectResource } from "../../state/actions/resourceActions";
+import { Link } from "react-router-dom";
+import { DataFetched } from "../../state/reducers/resource";
+import { requestResource } from "../../state/thunkMiddleware";
+import {
+  Card,
+  CardActionArea,
+  Typography,
+  Grid,
+  CircularProgress,
+} from "@material-ui/core";
+import useStyles from "./style";
+import { ReactComponent as FhirLogo } from "../../assets/img/fhir-logo.svg";
+import NavBar from "./navBar/NavBar";
 
 const Homepage: React.FC<{}> = () => {
-    const { loading, data } = useSelector((state: RootState) => state.resource);
-    const dispatch = useDispatch();
-    const dispatchResourceSelected = (data: DataFetched): void => {
-        if (data.id) {
-            dispatch(selectResource(data.id));
-            dispatch(requestResource(data.id));
-        };
-    };
+  const { loading, data } = useSelector((state: RootState) => state.resource);
+  const dispatch = useDispatch();
+  const classes = useStyles();
 
-    const mapAllResources = data?.map((data: DataFetched, index: number) => {
-        return (
-            <Link to="/editprofile" key={index}>
-                <button onClick={
-                    (): void => {
-                        dispatchResourceSelected(data);
-                    }
-                }>
-                    {data.id}
-                </button>
-            </Link>
-        );
-    })
+  const dispatchResourceSelected = (data: DataFetched): void => {
+    if (data.id) {
+      dispatch(selectResource(data.id));
+      dispatch(requestResource(data.id));
+    }
+  };
 
-    if (loading === true) {
-        return <p>Loading...</p>
-    };
+  const mapAllResources = data?.map((resource: DataFetched, index: number) => {
+    const title: string = (resource.id as unknown) as string;
 
     return (
-        <div>
-            {mapAllResources}
-        </div>
+      <Grid className={classes.gridItem} item xs={5} sm={4} md={2} key={index}>
+        <Link
+          className={classes.itemLink}
+          to="/editprofile"
+          onClick={(): void => dispatchResourceSelected(resource)}
+        >
+          <Card className={classes.itemCard}>
+            <CardActionArea className={classes.itemCardAction}>
+              <Typography className={classes.itemText} variant="h6">
+                {title.replace(/([A-Z])/g, " $1").trim()}
+              </Typography>
+              <FhirLogo className={classes.fhirLogo} />
+            </CardActionArea>
+          </Card>
+        </Link>
+      </Grid>
     );
+  });
 
-}
+  if (loading === true) {
+    return (
+      <section className={classes.loader}>
+        <CircularProgress color="primary" />
+      </section>
+    );
+  }
+
+  return (
+    <>
+      <NavBar />
+      <section className={classes.homepage}>
+        <Typography className={classes.homepageText}>
+          Select a profile you want to edit.
+        </Typography>
+        <Grid container spacing={2} className={classes.grid}>
+          {mapAllResources}
+        </Grid>
+      </section>
+    </>
+  );
+};
 
 export default Homepage;
