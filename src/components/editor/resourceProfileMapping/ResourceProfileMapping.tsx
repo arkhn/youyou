@@ -11,7 +11,8 @@ type ResourceProfileMappingProps = {
 const ResourceProfileMapping: React.FC<ResourceProfileMappingProps > = ({profile}) => {
     const dispatch = useDispatch();
     const attributes: Array<proto_r4_core_datatypes_pb.ElementDefinition.AsObject> | undefined = profile?.snapshot?.element;
-
+    const profileSettings: proto_r4_core_datatypes_pb.String.AsObject = 'profileSettings' as unknown as proto_r4_core_datatypes_pb.String.AsObject;
+    
     const renderTree: JSX.Element[] | undefined = attributes?.map((attribute: proto_r4_core_datatypes_pb.ElementDefinition.AsObject, index: number) => {
         return (
             <div key={index} onClick={() => {
@@ -22,7 +23,7 @@ const ResourceProfileMapping: React.FC<ResourceProfileMappingProps > = ({profile
 
     return (
         <div>
-            <p>Profil Settings</p>
+            <div onClick={() => dispatch(selectAttributeId(profileSettings))}>Profile Settings</div>
             {renderTree}
         </div>
     );

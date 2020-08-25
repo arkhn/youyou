@@ -49,7 +49,6 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({attribute, profile}) =
         const cardiMax: string | undefined = attribute?.base?.max?.toString();
         const cardiMin: number | undefined = Number(attribute?.base?.min);
         
-        
         return (
             <form>
                 <input type="radio" name="cardinality" onChange={(e) => changeCardinality(e.target.value)} value="0|0" disabled={isDisabledInput(cardiMin, cardiMax, 0, "0")}/><label>0...0</label><br />
@@ -64,7 +63,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({attribute, profile}) =
 
     return (
         <>
-            <h2>AttributeEditor</h2>
+            <Typography variant="h2">AttributeEditor</Typography>
             <Typography variant="h1">Cardinality</Typography>
             <p>{attribute?.id}</p>
             <p>Cardinality min: { attribute?.min }</p>
