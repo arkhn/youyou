@@ -23,8 +23,6 @@ const Editor: React.FC<{}> = () => {
     );
   }
 
-  console.log(attribute);
-
   const renderAttributeEditor = () => {
     if (selectedAttributeId === profileSettings) {
       return <ProfileSettings profile={profile} />;

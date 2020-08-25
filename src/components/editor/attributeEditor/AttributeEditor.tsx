@@ -10,7 +10,7 @@ import { getStructureDefSuccess } from "../../../state/actions/resourceActions";
 import { Typography } from "@material-ui/core";
 
 type AttributeEditorProps = {
-  attribute: ElementDefinition.AsObject | null;
+  attribute: ElementDefinition.AsObject | undefined;
   profile: StructureDefinition.AsObject | null;
 };
 
