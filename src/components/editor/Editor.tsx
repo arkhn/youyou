@@ -18,11 +18,6 @@ const Editor: React.FC<{}> = () => {
   let attribute: ElementDefinition.AsObject | undefined = undefined;
 
   if (selectedAttributeId && selectedAttributeId !== profileSettings) {
-    /* profile?.snapshot?.element.map((element: ElementDefinition.AsObject) => {
-      if (element.id === selectedAttributeId) {
-        attribute = element;
-      }
-    }); */
     attribute = profile?.snapshot?.element.find(
       (attribute) => attribute.id === selectedAttributeId
     );
