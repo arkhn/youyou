@@ -15,7 +15,7 @@ const ResourceProfileMapping: React.FC<ResourceProfileMappingProps> = ({
   const attributes:
     | Array<proto_r4_core_datatypes_pb.ElementDefinition.AsObject>
     | undefined = profile?.snapshot?.element;
-  const profileSettings: proto_r4_core_datatypes_pb.String.AsObject = ("profileSettings" as unknown) as proto_r4_core_datatypes_pb.String.AsObject;
+  const structuredefSettings: proto_r4_core_datatypes_pb.String.AsObject = ("structuredefSettings" as unknown) as proto_r4_core_datatypes_pb.String.AsObject;
 
   const renderTree: JSX.Element[] | undefined = attributes?.map(
     (
@@ -37,8 +37,8 @@ const ResourceProfileMapping: React.FC<ResourceProfileMappingProps> = ({
 
   return (
     <div>
-      <div onClick={() => dispatch(selectAttributeId(profileSettings))}>
-        Profile Settings
+      <div onClick={() => dispatch(selectAttributeId(structuredefSettings))}>
+        Structure definition Settings
       </div>
       {renderTree}
     </div>

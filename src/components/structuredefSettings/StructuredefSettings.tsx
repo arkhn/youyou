@@ -1,18 +1,20 @@
 import React, { useState } from "react";
-import { StructureDefinition } from "../../../resources/ts/proto/r4/core/resources/structure_definition_pb";
+import { StructureDefinition } from "../../resources/ts/proto/r4/core/resources/structure_definition_pb";
 import { useDispatch } from "react-redux";
 import {
   String,
   DateTime,
   Markdown,
-} from "../../../resources/ts/proto/r4/core/datatypes_pb";
-import { getStructureDefSuccess } from "../../../state/actions/resourceActions";
+} from "../../resources/ts/proto/r4/core/datatypes_pb";
+import { getStructureDefSuccess } from "../../state/actions/resourceActions";
 
-type ProfileSettingsProps = {
+type StructuredefSettingsProps = {
   profile: StructureDefinition.AsObject | null;
 };
 
-const ProfileSettings: React.FC<ProfileSettingsProps> = ({ profile }) => {
+const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
+  profile,
+}) => {
   const dispatch = useDispatch();
 
   const [date, setDate] = useState(
@@ -50,7 +52,7 @@ const ProfileSettings: React.FC<ProfileSettingsProps> = ({ profile }) => {
 
   return (
     <>
-      <h2>Profile Settings</h2>
+      <h2>Structure definition Settings</h2>
       <label htmlFor="name">Name of profile</label>
       <input type="text" name="name" onChange={(e) => editName(e)} />
       <br />
@@ -68,4 +70,4 @@ const ProfileSettings: React.FC<ProfileSettingsProps> = ({ profile }) => {
   );
 };
 
-export default ProfileSettings;
+export default StructuredefSettings;
