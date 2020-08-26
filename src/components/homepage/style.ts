@@ -5,46 +5,46 @@ const useStyles = makeStyles((theme: Theme) => ({
     height: "100vh",
     display: "flex",
     justifyContent: "center",
-    alignItems: "center",
+    alignItems: "center"
   },
   homepage: {
-    margin: 32,
+    margin: 32
   },
   homepageText: {
     marginLeft: 8,
     marginBottom: 24,
-    color: theme.palette.primary.main,
+    color: theme.palette.primary.main
   },
   grid: {
     width: "100%",
-    margin: 0,
+    margin: 0
   },
   gridItem: {
-    height: 116,
+    height: 116
   },
   itemCardAction: {
     height: "100%",
-    padding: 10,
+    padding: 10
   },
   itemLink: {
-    textDecoration: "none",
+    textDecoration: "none"
   },
   itemCard: {
     height: "100%",
     boxShadow: "1px 1px 5px rgba(0, 0, 0, 0.25)",
-    borderRadius: 8,
+    borderRadius: 8
   },
   itemText: {
     zIndex: 2,
     position: "relative",
     textAlign: "center",
-    color: theme.palette.primary.dark,
+    color: theme.palette.primary.dark
   },
   fhirLogo: {
     position: "absolute",
     right: 0,
-    bottom: 0,
-  },
+    bottom: 0
+  }
 }));
 
 export default useStyles;
