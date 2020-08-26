@@ -62,7 +62,7 @@ const Homepage: React.FC<{}> = () => {
     }
   );
 
-  if (loading === true) {
+  if (loading) {
     return (
       <section className={classes.loader}>
         <CircularProgress color="primary" />

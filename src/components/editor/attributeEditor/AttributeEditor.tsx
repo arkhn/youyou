@@ -28,16 +28,13 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
     min: number,
     max: string
   ) => {
-    if (cardiMin !== undefined && cardiMax !== undefined && min >= cardiMin) {
-      if (cardiMax === "1") {
-        if (max === "1" || max === "0") {
-          return false;
-        }
-      } else if (cardiMax === "*") {
-        if (max === "*" || max === "1" || max === "0") {
-          return false;
-        }
-      }
+    if (
+      cardiMin !== undefined &&
+      cardiMax !== undefined &&
+      min >= cardiMin &&
+      (cardiMax === "*" || (cardiMax === "1" && (max === "1" || max === "0")))
+    ) {
+      return false;
     }
     return true;
   };
