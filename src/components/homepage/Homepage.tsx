@@ -72,7 +72,11 @@ const Homepage: React.FC<{}> = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <Navbar buttonType="extension" />
+=======
+      <Header buttonType="extension" />
+>>>>>>> creating extensionGenerator page
       <section className={classes.homepage}>
         <Typography className={classes.homepageText}>
           Select a profile you want to edit.
