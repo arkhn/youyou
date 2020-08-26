@@ -25,10 +25,13 @@ const Editor: React.FC<{}> = () => {
 
   const renderAttributeEditor = () => {
     if (selectedAttributeId === structuredefSettings) {
-      return <StructuredefSettings profile={structureDefinition} />;
+      return <StructuredefSettings structureDefinition={structureDefinition} />;
     } else {
       return (
-        <AttributeEditor attribute={attribute} profile={structureDefinition} />
+        <AttributeEditor
+          attribute={attribute}
+          structureDefinition={structureDefinition}
+        />
       );
     }
   };
