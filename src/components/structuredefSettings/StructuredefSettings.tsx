@@ -8,7 +8,6 @@ import {
   Uri,
   Id,
   Boolean,
-  Code,
 } from "../../resources/ts/proto/r4/core/datatypes_pb";
 import { getStructureDefSuccess } from "../../state/actions/resourceActions";
 
@@ -39,6 +38,13 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
   );
   const [status, setStatus] = useState(
     structureDefinition ? structureDefinition.status : null
+  );
+  const [experimental, setExperimental] = useState(
+    structureDefinition
+      ? structureDefinition.experimental
+        ? structureDefinition.experimental
+        : null
+      : null
   );
   const [description, setDescription] = useState(
     structureDefinition ? structureDefinition.description : null
@@ -71,6 +77,13 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
       (e.target.value as unknown) as StructureDefinition.StatusCode.AsObject
     );
   };
+  const addExperimental = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.checked) {
+      setExperimental((true as unknown) as Boolean.AsObject);
+    } else {
+      setExperimental((false as unknown) as Boolean.AsObject);
+    }
+  };
   const editDate = (e: React.ChangeEvent<HTMLInputElement>) => {
     const date = new Date(e.target.value);
     setDate(
@@ -86,11 +99,13 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
   const editPurpose = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPurpose((e.target.value as unknown) as Markdown.AsObject);
   };
+  // required
   const editKind = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setKind(
       (e.target.value as unknown) as StructureDefinition.KindCode.AsObject
     );
   };
+  // required
   const editAbstract = (e: React.ChangeEvent<HTMLInputElement>) => {
     setAbstract((e.target.checked as unknown) as Boolean.AsObject);
   };
@@ -109,9 +124,17 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
       structureToEdit.date = (date as unknown) as DateTime.AsObject;
       structureToEdit.publisher = publisher as String.AsObject;
       structureToEdit.description = description as String.AsObject;
-      structureDefinition.purpose = purpose as Markdown.AsObject;
-      structureDefinition.kind = kind as StructureDefinition.KindCode.AsObject;
-      structureDefinition.abstract = abstract as Boolean.AsObject;
+      structureToEdit.purpose = purpose as Markdown.AsObject;
+      structureToEdit.kind = kind as StructureDefinition.KindCode.AsObject;
+      structureToEdit.abstract = abstract as Boolean.AsObject;
+      if (
+        structureToEdit.experimental &&
+        experimental === ((false as unknown) as Boolean.AsObject)
+      ) {
+        delete structureToEdit.experimental;
+      } else if (!structureToEdit.experimental && experimental) {
+        structureToEdit.experimental = experimental as Boolean.AsObject;
+      }
       dispatch(getStructureDefSuccess(structureToEdit));
     }
   };
@@ -170,6 +193,13 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
           onChange={(e) => editAbstract(e)}
         />
         <label htmlFor="abstract">abstract</label>
+        <br />
+        <input
+          type="checkbox"
+          name="experimental"
+          onChange={(e) => addExperimental(e)}
+        />
+        <label htmlFor="experimental">experimental</label>
         <br />
         <input
           type="submit"
