@@ -1,7 +1,7 @@
 import React from "react";
 import AttributeEditor from "./attributeEditor/AttributeEditor";
 import ResourceProfileMapping from "./resourceProfileMapping/ResourceProfileMapping";
-import ProfileSettings from "./profileSettings/ProfileSettings";
+import StructuredefSettings from "../structuredefSettings/StructuredefSettings";
 import { useSelector } from "react-redux";
 import { RootState } from "../../state/store";
 import {
@@ -13,19 +13,19 @@ const Editor: React.FC<{}> = () => {
   const { loading, structureDefinition, selectedAttributeId } = useSelector(
     (state: RootState) => state.resource
   );
-  const profileSettings: String.AsObject = ("profileSettings" as unknown) as String.AsObject;
+  const structuredefSettings: String.AsObject = ("structuredefSettings" as unknown) as String.AsObject;
 
   let attribute: ElementDefinition.AsObject | undefined = undefined;
 
-  if (selectedAttributeId && selectedAttributeId !== profileSettings) {
+  if (selectedAttributeId && selectedAttributeId !== structuredefSettings) {
     attribute = structureDefinition?.snapshot?.element.find(
       (attribute) => attribute.id === selectedAttributeId
     );
   }
 
   const renderAttributeEditor = () => {
-    if (selectedAttributeId === profileSettings) {
-      return <ProfileSettings profile={structureDefinition} />;
+    if (selectedAttributeId === structuredefSettings) {
+      return <StructuredefSettings profile={structureDefinition} />;
     } else {
       return (
         <AttributeEditor attribute={attribute} profile={structureDefinition} />
