@@ -3,13 +3,22 @@ import { StructureDefinition } from "../../resources/ts/proto/r4/core/resources/
 import { useDispatch } from "react-redux";
 import {
   String,
-  DateTime,
   Markdown,
   Uri,
+  DateTime,
   Id,
   Boolean,
 } from "../../resources/ts/proto/r4/core/datatypes_pb";
 import { getStructureDefSuccess } from "../../state/actions/resourceActions";
+import {
+  createExperimental,
+  createTitle,
+  createCopyright,
+  createPurpose,
+  createPublisher,
+  createId,
+  createDescription,
+} from "./utils";
 
 type StructuredefSettingsProps = {
   structureDefinition: StructureDefinition.AsObject | null;
@@ -19,44 +28,51 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
   structureDefinition,
 }) => {
   const dispatch = useDispatch();
-  console.log(structureDefinition);
   // LOCAL STATES
   const [id, setId] = useState(
-    structureDefinition ? structureDefinition.id : null
+    structureDefinition ? structureDefinition.id : ""
   );
   const [url, setUrl] = useState(
-    structureDefinition ? structureDefinition.url : null
+    structureDefinition ? structureDefinition.url : ""
   );
   const [name, setName] = useState(
-    structureDefinition ? structureDefinition.name : null
+    structureDefinition ? structureDefinition.name : ""
+  );
+  const [publisher, setPublisher] = useState(
+    structureDefinition ? structureDefinition.publisher : ""
+  );
+  const [title, setTitle] = useState(
+    structureDefinition && structureDefinition.title
+      ? structureDefinition.title
+      : ""
+  );
+  const [status, setStatus] = useState(
+    structureDefinition ? structureDefinition.status : ""
+  );
+  const [experimental, setExperimental] = useState(
+    structureDefinition && structureDefinition.experimental
+      ? structureDefinition.experimental
+      : ""
   );
   const [date, setDate] = useState(
     new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString()
   );
-  const [publisher, setPublisher] = useState(
-    structureDefinition ? structureDefinition.publisher : null
-  );
-  const [status, setStatus] = useState(
-    structureDefinition ? structureDefinition.status : null
-  );
-  const [experimental, setExperimental] = useState(
-    structureDefinition
-      ? structureDefinition.experimental
-        ? structureDefinition.experimental
-        : null
-      : null
-  );
   const [description, setDescription] = useState(
-    structureDefinition ? structureDefinition.description : null
+    structureDefinition ? structureDefinition.description : ""
   );
   const [purpose, setPurpose] = useState(
-    structureDefinition ? structureDefinition.purpose : null
+    structureDefinition ? structureDefinition.purpose : ""
+  );
+  const [copyright, setCopyright] = useState(
+    structureDefinition && structureDefinition.copyright
+      ? structureDefinition.copyright
+      : ""
   );
   const [kind, setKind] = useState(
-    structureDefinition ? structureDefinition.kind : null
+    structureDefinition ? structureDefinition.kind : ""
   );
   const [abstract, setAbstract] = useState(
-    structureDefinition ? structureDefinition.abstract : null
+    structureDefinition ? structureDefinition.abstract : ""
   );
 
   // LOCAL ACTIONS
@@ -66,6 +82,9 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
   // required
   const editUrl = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUrl((e.target.value as unknown) as Uri.AsObject);
+  };
+  const editTitle = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setTitle((e.target.value as unknown) as String.AsObject);
   };
   // required
   const editName = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -77,7 +96,7 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
       (e.target.value as unknown) as StructureDefinition.StatusCode.AsObject
     );
   };
-  const addExperimental = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const editExperimental = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.checked) {
       setExperimental((true as unknown) as Boolean.AsObject);
     } else {
@@ -99,6 +118,9 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
   const editPurpose = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPurpose((e.target.value as unknown) as Markdown.AsObject);
   };
+  const editCopyright = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setCopyright((e.target.value as unknown) as Markdown.AsObject);
+  };
   // required
   const editKind = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setKind(
@@ -117,24 +139,21 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
     if (structureDefinition) {
       e.preventDefault();
       const structureToEdit = structureDefinition;
-      structureToEdit.id = id as Id.AsObject;
+      // content required
       structureToEdit.url = url as Uri.AsObject;
       structureToEdit.name = name as String.AsObject;
-      structureToEdit.status = status as StructureDefinition.StatusCode.AsObject;
-      structureToEdit.date = (date as unknown) as DateTime.AsObject;
-      structureToEdit.publisher = publisher as String.AsObject;
-      structureToEdit.description = description as String.AsObject;
-      structureToEdit.purpose = purpose as Markdown.AsObject;
       structureToEdit.kind = kind as StructureDefinition.KindCode.AsObject;
       structureToEdit.abstract = abstract as Boolean.AsObject;
-      if (
-        structureToEdit.experimental &&
-        experimental === ((false as unknown) as Boolean.AsObject)
-      ) {
-        delete structureToEdit.experimental;
-      } else if (!structureToEdit.experimental && experimental) {
-        structureToEdit.experimental = experimental as Boolean.AsObject;
-      }
+      structureToEdit.status = status as StructureDefinition.StatusCode.AsObject;
+      // content not required
+      structureToEdit.date = (date as unknown) as DateTime.AsObject;
+      createId(structureToEdit, id as Id.AsObject);
+      createPublisher(structureToEdit, publisher as String.AsObject);
+      createDescription(structureToEdit, description as String.AsObject);
+      createPurpose(structureToEdit, purpose);
+      createExperimental(structureToEdit, experimental);
+      createTitle(structureToEdit, title);
+      createCopyright(structureToEdit, copyright);
       dispatch(getStructureDefSuccess(structureToEdit));
     }
   };
@@ -144,30 +163,62 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
       <h2>Structure definition Settings</h2>
       <form action="">
         <label htmlFor="name">Name of profile</label>
-        <input type="text" name="name" onChange={(e) => editName(e)} />
+        <input
+          type="text"
+          name="name"
+          value={(name as unknown) as string}
+          onChange={(e) => editName(e)}
+        />
         <br />
         <label htmlFor="description">Description</label>
         <input
           type="text"
           name="description"
+          value={(description as unknown) as string}
           onChange={(e) => editDescription(e)}
         />
         <br />
         <label htmlFor="url">url</label>
-        <input type="url" name="url" onChange={(e) => editUrl(e)} />
+        <input
+          type="url"
+          name="url"
+          value={(url as unknown) as string}
+          onChange={(e) => editUrl(e)}
+        />
         <br />
         <label htmlFor="id">id</label>
-        <input type="text" name="id" onChange={(e) => editId(e)} />
+        <input
+          type="text"
+          name="id"
+          value={(id as unknown) as string}
+          onChange={(e) => editId(e)}
+        />
         <br />
         <label htmlFor="publisher">publisher</label>
         <input
           type="text"
           name="publisher"
+          value={(publisher as unknown) as string}
           onChange={(e) => editPublisher(e)}
         />
         <br />
+        <label htmlFor="copyright">copyright</label>
+        <input
+          type="text"
+          name="copyright"
+          value={(copyright as unknown) as string}
+          onChange={(e) => editCopyright(e)}
+        />
+        <br />
+        <label htmlFor="title">title</label>
+        <input type="text" name="title" onChange={(e) => editTitle(e)} />
+        <br />
         <label htmlFor="status">Status</label>
-        <select name="status" onChange={(e) => editStatus(e)}>
+        <select
+          name="status"
+          onChange={(e) => editStatus(e)}
+          defaultValue={(status as unknown) as string}
+        >
           <option value="active">active</option>
           <option value="draft">draft</option>
           <option value="retired">retired</option>
@@ -175,7 +226,11 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
         </select>
         <br />
         <label htmlFor="kind">Kind</label>
-        <select name="kind" onChange={(e) => editKind(e)}>
+        <select
+          name="kind"
+          onChange={(e) => editKind(e)}
+          defaultValue={(kind as unknown) as string}
+        >
           <option value="resource">resource</option>
           <option value="primitive-type">primitive type</option>
           <option value="complex-type">complex type</option>
@@ -197,7 +252,7 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
         <input
           type="checkbox"
           name="experimental"
-          onChange={(e) => addExperimental(e)}
+          onChange={(e) => editExperimental(e)}
         />
         <label htmlFor="experimental">experimental</label>
         <br />

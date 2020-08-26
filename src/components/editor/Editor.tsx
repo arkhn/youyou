@@ -43,7 +43,7 @@ const Editor: React.FC<{}> = () => {
   if (structureDefinition) {
     return (
       <div>
-        <h1>Profile Editor for {structureDefinition.id}</h1>
+        <h1>Profile Editor for {structureDefinition.type}</h1>
         <a
           href={
             "data:json/plain;charset=utf-8," +
