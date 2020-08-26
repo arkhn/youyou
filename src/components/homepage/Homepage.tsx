@@ -10,11 +10,11 @@ import {
   CardActionArea,
   Typography,
   Grid,
-  CircularProgress,
+  CircularProgress
 } from "@material-ui/core";
 import useStyles from "./style";
 import { ReactComponent as FhirLogo } from "../../assets/img/fhir-logo.svg";
-import NavBar from "./navBar/NavBar";
+import Header from "../header/Header";
 
 const Homepage: React.FC<{}> = () => {
   const { loading, resources } = useSelector(
@@ -72,7 +72,7 @@ const Homepage: React.FC<{}> = () => {
 
   return (
     <>
-      <NavBar />
+      <Header buttonType="extension" />
       <section className={classes.homepage}>
         <Typography className={classes.homepageText}>
           Select a profile you want to edit.
