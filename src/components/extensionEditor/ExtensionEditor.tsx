@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../../state/store";
 
 import StructuredefSettings from "../structuredefSettings/StructuredefSettings";

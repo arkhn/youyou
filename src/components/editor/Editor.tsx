@@ -28,7 +28,10 @@ const Editor: React.FC<{}> = () => {
   ) => {
     if (selectedAttributeId === structuredefSettings) {
       return (
-        <StructuredefSettings profile={structureDefinition} type="resource" />
+        <StructuredefSettings
+          structureDefinition={structureDefinition}
+          type="resource"
+        />
       );
     } else {
       return (
