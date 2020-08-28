@@ -43,7 +43,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({ structureDef }) => {
   let extensionElement = getDifferentialElementById("Extension");
 
   const [short, setShort] = useState(
-    (extensionElement.short as unknown) as string
+    ((extensionElement.short as unknown) as string) | ""
   );
   const [definition, setDefinition] = useState(
     (extensionElement.definition as unknown) as string
@@ -61,15 +61,14 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({ structureDef }) => {
 
   const handleEditExtension = (e: any) => {
     e.preventDefault();
-    if (structureDef) {
-      let extensionElement = getDifferentialElementById("Extension");
-      if (extensionElement) {
-        extensionElement.short = (short as unknown) as String.AsObject;
-        extensionElement.definition = (definition as unknown) as String.AsObject;
-        extensionElement.comment = (comment as unknown) as String.AsObject;
-        extensionElement.min = (minCardinality as unknown) as UnsignedInt.AsObject;
-        extensionElement.max = (maxCardinality as unknown) as String.AsObject;
-      }
+    let extensionElement = getDifferentialElementById("Extension");
+
+    if (extensionElement) {
+      extensionElement.short = (short as unknown) as String.AsObject;
+      extensionElement.definition = (definition as unknown) as String.AsObject;
+      extensionElement.comment = (comment as unknown) as String.AsObject;
+      extensionElement.min = (minCardinality as unknown) as UnsignedInt.AsObject;
+      extensionElement.max = (maxCardinality as unknown) as String.AsObject;
     }
   };
 
