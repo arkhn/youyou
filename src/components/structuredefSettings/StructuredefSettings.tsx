@@ -10,15 +10,7 @@ import {
   Boolean,
 } from "../../resources/ts/proto/r4/core/datatypes_pb";
 import { getStructureDefSuccess } from "../../state/actions/resourceActions";
-import {
-  editExperimental,
-  editTitle,
-  editCopyright,
-  editPurpose,
-  editPublisher,
-  editId,
-  editDescription,
-} from "./utils";
+import { editAttribute } from "./utils";
 
 type StructuredefSettingsProps = {
   structureDefinition: StructureDefinition.AsObject;
@@ -63,13 +55,21 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
       structureDefinitonToEdit.status = status as StructureDefinition.StatusCode.AsObject;
       // content not required
       structureDefinitonToEdit.date = (date as unknown) as DateTime.AsObject;
-      editId(structureDefinitonToEdit, id as Id.AsObject);
-      editPublisher(structureDefinitonToEdit, publisher as String.AsObject);
-      editDescription(structureDefinitonToEdit, description as String.AsObject);
-      editPurpose(structureDefinitonToEdit, purpose);
-      editExperimental(structureDefinitonToEdit, experimental);
-      editTitle(structureDefinitonToEdit, title);
-      editCopyright(structureDefinitonToEdit, copyright);
+      editAttribute(structureDefinitonToEdit, "id", id as Id.AsObject);
+      editAttribute(
+        structureDefinitonToEdit,
+        "publisher",
+        publisher as String.AsObject
+      );
+      editAttribute(
+        structureDefinitonToEdit,
+        "description",
+        description as String.AsObject
+      );
+      editAttribute(structureDefinitonToEdit, "purpose", purpose);
+      editAttribute(structureDefinitonToEdit, "experimental", experimental);
+      editAttribute(structureDefinitonToEdit, "title", title);
+      editAttribute(structureDefinitonToEdit, "copyright", copyright);
       dispatch(getStructureDefSuccess(structureDefinitonToEdit));
     }
   };
