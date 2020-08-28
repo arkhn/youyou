@@ -11,12 +11,12 @@ import { Typography } from "@material-ui/core";
 
 type AttributeEditorProps = {
   attribute: ElementDefinition.AsObject | undefined;
-  profile: StructureDefinition.AsObject | null;
+  structureDefinition: StructureDefinition.AsObject | null;
 };
 
 const AttributeEditor: React.FC<AttributeEditorProps> = ({
   attribute,
-  profile,
+  structureDefinition,
 }) => {
   const [minState, setMinState] = useState(Number(attribute?.base?.min));
   const [maxState, setMaxState] = useState(attribute?.base?.max?.toString());
@@ -28,16 +28,13 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
     min: number,
     max: string
   ) => {
-    if (cardiMin !== undefined && cardiMax !== undefined && min >= cardiMin) {
-      if (cardiMax === "1") {
-        if (max === "1" || max === "0") {
-          return false;
-        }
-      } else if (cardiMax === "*") {
-        if (max === "*" || max === "1" || max === "0") {
-          return false;
-        }
-      }
+    if (
+      cardiMin !== undefined &&
+      cardiMax !== undefined &&
+      min >= cardiMin &&
+      (cardiMax === "*" || (cardiMax === "1" && (max === "1" || max === "0")))
+    ) {
+      return false;
     }
     return true;
   };
@@ -49,11 +46,11 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
   };
 
   const changeProfileState = () => {
-    if (attribute && profile) {
+    if (attribute && structureDefinition) {
       const cardinalityEditor = attribute;
       cardinalityEditor.min = (minState as unknown) as UnsignedInt.AsObject;
       cardinalityEditor.max = (maxState as unknown) as String.AsObject;
-      dispatch(getStructureDefSuccess(profile));
+      dispatch(getStructureDefSuccess(structureDefinition));
     }
   };
 

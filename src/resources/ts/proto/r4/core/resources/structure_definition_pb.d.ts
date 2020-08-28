@@ -36,17 +36,28 @@ export class StructureDefinition extends jspb.Message {
   clearContained(): void;
   getContained(): Array<google_protobuf_any_pb.Any>;
   setContained(value: Array<google_protobuf_any_pb.Any>): void;
-  addContained(value?: google_protobuf_any_pb.Any, index?: number): google_protobuf_any_pb.Any;
+  addContained(
+    value?: google_protobuf_any_pb.Any,
+    index?: number
+  ): google_protobuf_any_pb.Any;
 
   clearExtension(): void;
   getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
   setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
-  addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
+  addExtension(
+    value?: proto_r4_core_datatypes_pb.Extension,
+    index?: number
+  ): proto_r4_core_datatypes_pb.Extension;
 
   clearModifierExtension(): void;
   getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
-  setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
-  addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
+  setModifierExtension(
+    value: Array<proto_r4_core_datatypes_pb.Extension>
+  ): void;
+  addModifierExtension(
+    value?: proto_r4_core_datatypes_pb.Extension,
+    index?: number
+  ): proto_r4_core_datatypes_pb.Extension;
 
   hasUrl(): boolean;
   clearUrl(): void;
@@ -56,7 +67,10 @@ export class StructureDefinition extends jspb.Message {
   clearIdentifier(): void;
   getIdentifier(): Array<proto_r4_core_datatypes_pb.Identifier>;
   setIdentifier(value: Array<proto_r4_core_datatypes_pb.Identifier>): void;
-  addIdentifier(value?: proto_r4_core_datatypes_pb.Identifier, index?: number): proto_r4_core_datatypes_pb.Identifier;
+  addIdentifier(
+    value?: proto_r4_core_datatypes_pb.Identifier,
+    index?: number
+  ): proto_r4_core_datatypes_pb.Identifier;
 
   hasVersion(): boolean;
   clearVersion(): void;
@@ -96,7 +110,10 @@ export class StructureDefinition extends jspb.Message {
   clearContact(): void;
   getContact(): Array<proto_r4_core_datatypes_pb.ContactDetail>;
   setContact(value: Array<proto_r4_core_datatypes_pb.ContactDetail>): void;
-  addContact(value?: proto_r4_core_datatypes_pb.ContactDetail, index?: number): proto_r4_core_datatypes_pb.ContactDetail;
+  addContact(
+    value?: proto_r4_core_datatypes_pb.ContactDetail,
+    index?: number
+  ): proto_r4_core_datatypes_pb.ContactDetail;
 
   hasDescription(): boolean;
   clearDescription(): void;
@@ -106,12 +123,20 @@ export class StructureDefinition extends jspb.Message {
   clearUseContext(): void;
   getUseContext(): Array<proto_r4_core_datatypes_pb.UsageContext>;
   setUseContext(value: Array<proto_r4_core_datatypes_pb.UsageContext>): void;
-  addUseContext(value?: proto_r4_core_datatypes_pb.UsageContext, index?: number): proto_r4_core_datatypes_pb.UsageContext;
+  addUseContext(
+    value?: proto_r4_core_datatypes_pb.UsageContext,
+    index?: number
+  ): proto_r4_core_datatypes_pb.UsageContext;
 
   clearJurisdiction(): void;
   getJurisdiction(): Array<proto_r4_core_datatypes_pb.CodeableConcept>;
-  setJurisdiction(value: Array<proto_r4_core_datatypes_pb.CodeableConcept>): void;
-  addJurisdiction(value?: proto_r4_core_datatypes_pb.CodeableConcept, index?: number): proto_r4_core_datatypes_pb.CodeableConcept;
+  setJurisdiction(
+    value: Array<proto_r4_core_datatypes_pb.CodeableConcept>
+  ): void;
+  addJurisdiction(
+    value?: proto_r4_core_datatypes_pb.CodeableConcept,
+    index?: number
+  ): proto_r4_core_datatypes_pb.CodeableConcept;
 
   hasPurpose(): boolean;
   clearPurpose(): void;
@@ -126,7 +151,10 @@ export class StructureDefinition extends jspb.Message {
   clearKeyword(): void;
   getKeyword(): Array<proto_r4_core_datatypes_pb.Coding>;
   setKeyword(value: Array<proto_r4_core_datatypes_pb.Coding>): void;
-  addKeyword(value?: proto_r4_core_datatypes_pb.Coding, index?: number): proto_r4_core_datatypes_pb.Coding;
+  addKeyword(
+    value?: proto_r4_core_datatypes_pb.Coding,
+    index?: number
+  ): proto_r4_core_datatypes_pb.Coding;
 
   hasFhirVersion(): boolean;
   clearFhirVersion(): void;
@@ -136,7 +164,10 @@ export class StructureDefinition extends jspb.Message {
   clearMapping(): void;
   getMapping(): Array<StructureDefinition.Mapping>;
   setMapping(value: Array<StructureDefinition.Mapping>): void;
-  addMapping(value?: StructureDefinition.Mapping, index?: number): StructureDefinition.Mapping;
+  addMapping(
+    value?: StructureDefinition.Mapping,
+    index?: number
+  ): StructureDefinition.Mapping;
 
   hasKind(): boolean;
   clearKind(): void;
@@ -151,12 +182,18 @@ export class StructureDefinition extends jspb.Message {
   clearContext(): void;
   getContext(): Array<StructureDefinition.Context>;
   setContext(value: Array<StructureDefinition.Context>): void;
-  addContext(value?: StructureDefinition.Context, index?: number): StructureDefinition.Context;
+  addContext(
+    value?: StructureDefinition.Context,
+    index?: number
+  ): StructureDefinition.Context;
 
   clearContextInvariant(): void;
   getContextInvariant(): Array<proto_r4_core_datatypes_pb.String>;
   setContextInvariant(value: Array<proto_r4_core_datatypes_pb.String>): void;
-  addContextInvariant(value?: proto_r4_core_datatypes_pb.String, index?: number): proto_r4_core_datatypes_pb.String;
+  addContextInvariant(
+    value?: proto_r4_core_datatypes_pb.String,
+    index?: number
+  ): proto_r4_core_datatypes_pb.String;
 
   hasType(): boolean;
   clearType(): void;
@@ -185,56 +222,69 @@ export class StructureDefinition extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): StructureDefinition.AsObject;
-  static toObject(includeInstance: boolean, msg: StructureDefinition): StructureDefinition.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: StructureDefinition, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: StructureDefinition
+  ): StructureDefinition.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: StructureDefinition,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): StructureDefinition;
-  static deserializeBinaryFromReader(message: StructureDefinition, reader: jspb.BinaryReader): StructureDefinition;
+  static deserializeBinaryFromReader(
+    message: StructureDefinition,
+    reader: jspb.BinaryReader
+  ): StructureDefinition;
 }
 
 export namespace StructureDefinition {
   export type AsObject = {
-    id?: proto_r4_core_datatypes_pb.Id.AsObject,
-    meta?: proto_r4_core_datatypes_pb.Meta.AsObject,
-    implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject,
-    language?: proto_r4_core_datatypes_pb.Code.AsObject,
-    text?: proto_r4_core_datatypes_pb.Narrative.AsObject,
-    contained: Array<google_protobuf_any_pb.Any.AsObject>,
-    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    url?: proto_r4_core_datatypes_pb.Uri.AsObject,
-    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>,
-    version?: proto_r4_core_datatypes_pb.String.AsObject,
-    name?: proto_r4_core_datatypes_pb.String.AsObject,
-    title?: proto_r4_core_datatypes_pb.String.AsObject,
-    status?: StructureDefinition.StatusCode.AsObject,
-    experimental?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-    date?: proto_r4_core_datatypes_pb.DateTime.AsObject,
-    publisher?: proto_r4_core_datatypes_pb.String.AsObject,
-    contact: Array<proto_r4_core_datatypes_pb.ContactDetail.AsObject>,
-    description?: proto_r4_core_datatypes_pb.Markdown.AsObject,
-    useContext: Array<proto_r4_core_datatypes_pb.UsageContext.AsObject>,
-    jurisdiction: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>,
-    purpose?: proto_r4_core_datatypes_pb.Markdown.AsObject,
-    copyright?: proto_r4_core_datatypes_pb.Markdown.AsObject,
-    keyword: Array<proto_r4_core_datatypes_pb.Coding.AsObject>,
-    fhirVersion?: StructureDefinition.FhirVersionCode.AsObject,
-    mapping: Array<StructureDefinition.Mapping.AsObject>,
-    kind?: StructureDefinition.KindCode.AsObject,
-    pb_abstract?: proto_r4_core_datatypes_pb.Boolean.AsObject,
-    context: Array<StructureDefinition.Context.AsObject>,
-    contextInvariant: Array<proto_r4_core_datatypes_pb.String.AsObject>,
-    type?: proto_r4_core_datatypes_pb.Uri.AsObject,
-    baseDefinition?: proto_r4_core_datatypes_pb.Canonical.AsObject,
-    derivation?: StructureDefinition.DerivationCode.AsObject,
-    snapshot?: StructureDefinition.Snapshot.AsObject,
-    differential?: StructureDefinition.Differential.AsObject,
-  }
+    id?: proto_r4_core_datatypes_pb.Id.AsObject;
+    meta?: proto_r4_core_datatypes_pb.Meta.AsObject;
+    implicitRules?: proto_r4_core_datatypes_pb.Uri.AsObject;
+    language?: proto_r4_core_datatypes_pb.Code.AsObject;
+    text?: proto_r4_core_datatypes_pb.Narrative.AsObject;
+    contained: Array<google_protobuf_any_pb.Any.AsObject>;
+    extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>;
+    modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>;
+    url?: proto_r4_core_datatypes_pb.Uri.AsObject;
+    identifier: Array<proto_r4_core_datatypes_pb.Identifier.AsObject>;
+    version?: proto_r4_core_datatypes_pb.String.AsObject;
+    name?: proto_r4_core_datatypes_pb.String.AsObject;
+    title?: proto_r4_core_datatypes_pb.String.AsObject;
+    status?: StructureDefinition.StatusCode.AsObject;
+    experimental?: proto_r4_core_datatypes_pb.Boolean.AsObject;
+    date?: proto_r4_core_datatypes_pb.DateTime.AsObject;
+    publisher?: proto_r4_core_datatypes_pb.String.AsObject;
+    contact: Array<proto_r4_core_datatypes_pb.ContactDetail.AsObject>;
+    description?: proto_r4_core_datatypes_pb.Markdown.AsObject;
+    useContext: Array<proto_r4_core_datatypes_pb.UsageContext.AsObject>;
+    jurisdiction: Array<proto_r4_core_datatypes_pb.CodeableConcept.AsObject>;
+    purpose?: proto_r4_core_datatypes_pb.Markdown.AsObject;
+    copyright?: proto_r4_core_datatypes_pb.Markdown.AsObject;
+    keyword: Array<proto_r4_core_datatypes_pb.Coding.AsObject>;
+    fhirVersion?: StructureDefinition.FhirVersionCode.AsObject;
+    mapping: Array<StructureDefinition.Mapping.AsObject>;
+    kind?: StructureDefinition.KindCode.AsObject;
+    abstract?: proto_r4_core_datatypes_pb.Boolean.AsObject;
+    context: Array<StructureDefinition.Context.AsObject>;
+    contextInvariant: Array<proto_r4_core_datatypes_pb.String.AsObject>;
+    type?: proto_r4_core_datatypes_pb.Uri.AsObject;
+    baseDefinition?: proto_r4_core_datatypes_pb.Canonical.AsObject;
+    derivation?: StructureDefinition.DerivationCode.AsObject;
+    snapshot?: StructureDefinition.Snapshot.AsObject;
+    differential?: StructureDefinition.Differential.AsObject;
+  };
 
   export class StatusCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.PublicationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.PublicationStatusCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.PublicationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.PublicationStatusCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.PublicationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.PublicationStatusCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -244,29 +294,45 @@ export namespace StructureDefinition {
     clearExtension(): void;
     getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
     setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
-    addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
+    addExtension(
+      value?: proto_r4_core_datatypes_pb.Extension,
+      index?: number
+    ): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): StatusCode.AsObject;
-    static toObject(includeInstance: boolean, msg: StatusCode): StatusCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: StatusCode, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: StatusCode
+    ): StatusCode.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: StatusCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): StatusCode;
-    static deserializeBinaryFromReader(message: StatusCode, reader: jspb.BinaryReader): StatusCode;
+    static deserializeBinaryFromReader(
+      message: StatusCode,
+      reader: jspb.BinaryReader
+    ): StatusCode;
   }
 
   export namespace StatusCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.PublicationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.PublicationStatusCode.ValueMap],
-      id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.PublicationStatusCode.ValueMap[keyof proto_r4_core_codes_pb.PublicationStatusCode.ValueMap];
+      id?: proto_r4_core_datatypes_pb.String.AsObject;
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>;
+    };
   }
 
   export class FhirVersionCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.FHIRVersionCode.ValueMap[keyof proto_r4_core_codes_pb.FHIRVersionCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.FHIRVersionCode.ValueMap[keyof proto_r4_core_codes_pb.FHIRVersionCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.FHIRVersionCode.ValueMap[keyof proto_r4_core_codes_pb.FHIRVersionCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -276,24 +342,38 @@ export namespace StructureDefinition {
     clearExtension(): void;
     getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
     setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
-    addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
+    addExtension(
+      value?: proto_r4_core_datatypes_pb.Extension,
+      index?: number
+    ): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): FhirVersionCode.AsObject;
-    static toObject(includeInstance: boolean, msg: FhirVersionCode): FhirVersionCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: FhirVersionCode, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: FhirVersionCode
+    ): FhirVersionCode.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: FhirVersionCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): FhirVersionCode;
-    static deserializeBinaryFromReader(message: FhirVersionCode, reader: jspb.BinaryReader): FhirVersionCode;
+    static deserializeBinaryFromReader(
+      message: FhirVersionCode,
+      reader: jspb.BinaryReader
+    ): FhirVersionCode;
   }
 
   export namespace FhirVersionCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.FHIRVersionCode.ValueMap[keyof proto_r4_core_codes_pb.FHIRVersionCode.ValueMap],
-      id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.FHIRVersionCode.ValueMap[keyof proto_r4_core_codes_pb.FHIRVersionCode.ValueMap];
+      id?: proto_r4_core_datatypes_pb.String.AsObject;
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>;
+    };
   }
 
   export class Mapping extends jspb.Message {
@@ -305,12 +385,20 @@ export namespace StructureDefinition {
     clearExtension(): void;
     getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
     setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
-    addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
+    addExtension(
+      value?: proto_r4_core_datatypes_pb.Extension,
+      index?: number
+    ): proto_r4_core_datatypes_pb.Extension;
 
     clearModifierExtension(): void;
     getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
-    addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
+    setModifierExtension(
+      value: Array<proto_r4_core_datatypes_pb.Extension>
+    ): void;
+    addModifierExtension(
+      value?: proto_r4_core_datatypes_pb.Extension,
+      index?: number
+    ): proto_r4_core_datatypes_pb.Extension;
 
     hasIdentity(): boolean;
     clearIdentity(): void;
@@ -335,28 +423,38 @@ export namespace StructureDefinition {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Mapping.AsObject;
     static toObject(includeInstance: boolean, msg: Mapping): Mapping.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: Mapping, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: Mapping,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): Mapping;
-    static deserializeBinaryFromReader(message: Mapping, reader: jspb.BinaryReader): Mapping;
+    static deserializeBinaryFromReader(
+      message: Mapping,
+      reader: jspb.BinaryReader
+    ): Mapping;
   }
 
   export namespace Mapping {
     export type AsObject = {
-      id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      identity?: proto_r4_core_datatypes_pb.Id.AsObject,
-      uri?: proto_r4_core_datatypes_pb.Uri.AsObject,
-      name?: proto_r4_core_datatypes_pb.String.AsObject,
-      comment?: proto_r4_core_datatypes_pb.String.AsObject,
-    }
+      id?: proto_r4_core_datatypes_pb.String.AsObject;
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>;
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>;
+      identity?: proto_r4_core_datatypes_pb.Id.AsObject;
+      uri?: proto_r4_core_datatypes_pb.Uri.AsObject;
+      name?: proto_r4_core_datatypes_pb.String.AsObject;
+      comment?: proto_r4_core_datatypes_pb.String.AsObject;
+    };
   }
 
   export class KindCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.StructureDefinitionKindCode.ValueMap[keyof proto_r4_core_codes_pb.StructureDefinitionKindCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.StructureDefinitionKindCode.ValueMap[keyof proto_r4_core_codes_pb.StructureDefinitionKindCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.StructureDefinitionKindCode.ValueMap[keyof proto_r4_core_codes_pb.StructureDefinitionKindCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -366,24 +464,35 @@ export namespace StructureDefinition {
     clearExtension(): void;
     getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
     setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
-    addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
+    addExtension(
+      value?: proto_r4_core_datatypes_pb.Extension,
+      index?: number
+    ): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): KindCode.AsObject;
     static toObject(includeInstance: boolean, msg: KindCode): KindCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: KindCode, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: KindCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): KindCode;
-    static deserializeBinaryFromReader(message: KindCode, reader: jspb.BinaryReader): KindCode;
+    static deserializeBinaryFromReader(
+      message: KindCode,
+      reader: jspb.BinaryReader
+    ): KindCode;
   }
 
   export namespace KindCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.StructureDefinitionKindCode.ValueMap[keyof proto_r4_core_codes_pb.StructureDefinitionKindCode.ValueMap],
-      id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.StructureDefinitionKindCode.ValueMap[keyof proto_r4_core_codes_pb.StructureDefinitionKindCode.ValueMap];
+      id?: proto_r4_core_datatypes_pb.String.AsObject;
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>;
+    };
   }
 
   export class Context extends jspb.Message {
@@ -395,12 +504,20 @@ export namespace StructureDefinition {
     clearExtension(): void;
     getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
     setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
-    addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
+    addExtension(
+      value?: proto_r4_core_datatypes_pb.Extension,
+      index?: number
+    ): proto_r4_core_datatypes_pb.Extension;
 
     clearModifierExtension(): void;
     getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
-    addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
+    setModifierExtension(
+      value: Array<proto_r4_core_datatypes_pb.Extension>
+    ): void;
+    addModifierExtension(
+      value?: proto_r4_core_datatypes_pb.Extension,
+      index?: number
+    ): proto_r4_core_datatypes_pb.Extension;
 
     hasType(): boolean;
     clearType(): void;
@@ -415,25 +532,35 @@ export namespace StructureDefinition {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Context.AsObject;
     static toObject(includeInstance: boolean, msg: Context): Context.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: Context, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: Context,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): Context;
-    static deserializeBinaryFromReader(message: Context, reader: jspb.BinaryReader): Context;
+    static deserializeBinaryFromReader(
+      message: Context,
+      reader: jspb.BinaryReader
+    ): Context;
   }
 
   export namespace Context {
     export type AsObject = {
-      id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      type?: StructureDefinition.Context.TypeCode.AsObject,
-      expression?: proto_r4_core_datatypes_pb.String.AsObject,
-    }
+      id?: proto_r4_core_datatypes_pb.String.AsObject;
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>;
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>;
+      type?: StructureDefinition.Context.TypeCode.AsObject;
+      expression?: proto_r4_core_datatypes_pb.String.AsObject;
+    };
 
     export class TypeCode extends jspb.Message {
       getValue(): proto_r4_core_codes_pb.ExtensionContextTypeCode.ValueMap[keyof proto_r4_core_codes_pb.ExtensionContextTypeCode.ValueMap];
-      setValue(value: proto_r4_core_codes_pb.ExtensionContextTypeCode.ValueMap[keyof proto_r4_core_codes_pb.ExtensionContextTypeCode.ValueMap]): void;
+      setValue(
+        value: proto_r4_core_codes_pb.ExtensionContextTypeCode.ValueMap[keyof proto_r4_core_codes_pb.ExtensionContextTypeCode.ValueMap]
+      ): void;
 
       hasId(): boolean;
       clearId(): void;
@@ -443,30 +570,48 @@ export namespace StructureDefinition {
       clearExtension(): void;
       getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
       setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
-      addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
+      addExtension(
+        value?: proto_r4_core_datatypes_pb.Extension,
+        index?: number
+      ): proto_r4_core_datatypes_pb.Extension;
 
       serializeBinary(): Uint8Array;
       toObject(includeInstance?: boolean): TypeCode.AsObject;
-      static toObject(includeInstance: boolean, msg: TypeCode): TypeCode.AsObject;
-      static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-      static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-      static serializeBinaryToWriter(message: TypeCode, writer: jspb.BinaryWriter): void;
+      static toObject(
+        includeInstance: boolean,
+        msg: TypeCode
+      ): TypeCode.AsObject;
+      static extensions: {
+        [key: number]: jspb.ExtensionFieldInfo<jspb.Message>;
+      };
+      static extensionsBinary: {
+        [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+      };
+      static serializeBinaryToWriter(
+        message: TypeCode,
+        writer: jspb.BinaryWriter
+      ): void;
       static deserializeBinary(bytes: Uint8Array): TypeCode;
-      static deserializeBinaryFromReader(message: TypeCode, reader: jspb.BinaryReader): TypeCode;
+      static deserializeBinaryFromReader(
+        message: TypeCode,
+        reader: jspb.BinaryReader
+      ): TypeCode;
     }
 
     export namespace TypeCode {
       export type AsObject = {
-        value: proto_r4_core_codes_pb.ExtensionContextTypeCode.ValueMap[keyof proto_r4_core_codes_pb.ExtensionContextTypeCode.ValueMap],
-        id?: proto_r4_core_datatypes_pb.String.AsObject,
-        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      }
+        value: proto_r4_core_codes_pb.ExtensionContextTypeCode.ValueMap[keyof proto_r4_core_codes_pb.ExtensionContextTypeCode.ValueMap];
+        id?: proto_r4_core_datatypes_pb.String.AsObject;
+        extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>;
+      };
     }
   }
 
   export class DerivationCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.TypeDerivationRuleCode.ValueMap[keyof proto_r4_core_codes_pb.TypeDerivationRuleCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.TypeDerivationRuleCode.ValueMap[keyof proto_r4_core_codes_pb.TypeDerivationRuleCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.TypeDerivationRuleCode.ValueMap[keyof proto_r4_core_codes_pb.TypeDerivationRuleCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -476,24 +621,38 @@ export namespace StructureDefinition {
     clearExtension(): void;
     getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
     setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
-    addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
+    addExtension(
+      value?: proto_r4_core_datatypes_pb.Extension,
+      index?: number
+    ): proto_r4_core_datatypes_pb.Extension;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): DerivationCode.AsObject;
-    static toObject(includeInstance: boolean, msg: DerivationCode): DerivationCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: DerivationCode, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: DerivationCode
+    ): DerivationCode.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: DerivationCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): DerivationCode;
-    static deserializeBinaryFromReader(message: DerivationCode, reader: jspb.BinaryReader): DerivationCode;
+    static deserializeBinaryFromReader(
+      message: DerivationCode,
+      reader: jspb.BinaryReader
+    ): DerivationCode;
   }
 
   export namespace DerivationCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.TypeDerivationRuleCode.ValueMap[keyof proto_r4_core_codes_pb.TypeDerivationRuleCode.ValueMap],
-      id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.TypeDerivationRuleCode.ValueMap[keyof proto_r4_core_codes_pb.TypeDerivationRuleCode.ValueMap];
+      id?: proto_r4_core_datatypes_pb.String.AsObject;
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>;
+    };
   }
 
   export class Snapshot extends jspb.Message {
@@ -505,35 +664,56 @@ export namespace StructureDefinition {
     clearExtension(): void;
     getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
     setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
-    addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
+    addExtension(
+      value?: proto_r4_core_datatypes_pb.Extension,
+      index?: number
+    ): proto_r4_core_datatypes_pb.Extension;
 
     clearModifierExtension(): void;
     getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
-    addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
+    setModifierExtension(
+      value: Array<proto_r4_core_datatypes_pb.Extension>
+    ): void;
+    addModifierExtension(
+      value?: proto_r4_core_datatypes_pb.Extension,
+      index?: number
+    ): proto_r4_core_datatypes_pb.Extension;
 
     clearElement(): void;
     getElement(): Array<proto_r4_core_datatypes_pb.ElementDefinition>;
-    setElement(value: Array<proto_r4_core_datatypes_pb.ElementDefinition>): void;
-    addElement(value?: proto_r4_core_datatypes_pb.ElementDefinition, index?: number): proto_r4_core_datatypes_pb.ElementDefinition;
+    setElement(
+      value: Array<proto_r4_core_datatypes_pb.ElementDefinition>
+    ): void;
+    addElement(
+      value?: proto_r4_core_datatypes_pb.ElementDefinition,
+      index?: number
+    ): proto_r4_core_datatypes_pb.ElementDefinition;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Snapshot.AsObject;
     static toObject(includeInstance: boolean, msg: Snapshot): Snapshot.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: Snapshot, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: Snapshot,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): Snapshot;
-    static deserializeBinaryFromReader(message: Snapshot, reader: jspb.BinaryReader): Snapshot;
+    static deserializeBinaryFromReader(
+      message: Snapshot,
+      reader: jspb.BinaryReader
+    ): Snapshot;
   }
 
   export namespace Snapshot {
     export type AsObject = {
-      id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      element: Array<proto_r4_core_datatypes_pb.ElementDefinition.AsObject>,
-    }
+      id?: proto_r4_core_datatypes_pb.String.AsObject;
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>;
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>;
+      element: Array<proto_r4_core_datatypes_pb.ElementDefinition.AsObject>;
+    };
   }
 
   export class Differential extends jspb.Message {
@@ -545,35 +725,58 @@ export namespace StructureDefinition {
     clearExtension(): void;
     getExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
     setExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
-    addExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
+    addExtension(
+      value?: proto_r4_core_datatypes_pb.Extension,
+      index?: number
+    ): proto_r4_core_datatypes_pb.Extension;
 
     clearModifierExtension(): void;
     getModifierExtension(): Array<proto_r4_core_datatypes_pb.Extension>;
-    setModifierExtension(value: Array<proto_r4_core_datatypes_pb.Extension>): void;
-    addModifierExtension(value?: proto_r4_core_datatypes_pb.Extension, index?: number): proto_r4_core_datatypes_pb.Extension;
+    setModifierExtension(
+      value: Array<proto_r4_core_datatypes_pb.Extension>
+    ): void;
+    addModifierExtension(
+      value?: proto_r4_core_datatypes_pb.Extension,
+      index?: number
+    ): proto_r4_core_datatypes_pb.Extension;
 
     clearElement(): void;
     getElement(): Array<proto_r4_core_datatypes_pb.ElementDefinition>;
-    setElement(value: Array<proto_r4_core_datatypes_pb.ElementDefinition>): void;
-    addElement(value?: proto_r4_core_datatypes_pb.ElementDefinition, index?: number): proto_r4_core_datatypes_pb.ElementDefinition;
+    setElement(
+      value: Array<proto_r4_core_datatypes_pb.ElementDefinition>
+    ): void;
+    addElement(
+      value?: proto_r4_core_datatypes_pb.ElementDefinition,
+      index?: number
+    ): proto_r4_core_datatypes_pb.ElementDefinition;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Differential.AsObject;
-    static toObject(includeInstance: boolean, msg: Differential): Differential.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: Differential, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: Differential
+    ): Differential.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: Differential,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): Differential;
-    static deserializeBinaryFromReader(message: Differential, reader: jspb.BinaryReader): Differential;
+    static deserializeBinaryFromReader(
+      message: Differential,
+      reader: jspb.BinaryReader
+    ): Differential;
   }
 
   export namespace Differential {
     export type AsObject = {
-      id?: proto_r4_core_datatypes_pb.String.AsObject,
-      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>,
-      element: Array<proto_r4_core_datatypes_pb.ElementDefinition.AsObject>,
-    }
+      id?: proto_r4_core_datatypes_pb.String.AsObject;
+      extension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>;
+      modifierExtension: Array<proto_r4_core_datatypes_pb.Extension.AsObject>;
+      element: Array<proto_r4_core_datatypes_pb.ElementDefinition.AsObject>;
+    };
   }
 }
-

@@ -578,7 +578,7 @@ export namespace ElementDefinition {
     label?: proto_stu3_datatypes_pb.String.AsObject,
     code: Array<proto_stu3_datatypes_pb.Coding.AsObject>,
     slicing?: ElementDefinition.Slicing.AsObject,
-    pb_short?: proto_stu3_datatypes_pb.String.AsObject,
+    short?: proto_stu3_datatypes_pb.String.AsObject,
     definition?: proto_stu3_datatypes_pb.Markdown.AsObject,
     comment?: proto_stu3_datatypes_pb.Markdown.AsObject,
     requirements?: proto_stu3_datatypes_pb.Markdown.AsObject,

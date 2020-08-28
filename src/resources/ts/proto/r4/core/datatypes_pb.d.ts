@@ -24,20 +24,31 @@ export class Base64Binary extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Base64Binary.AsObject;
-  static toObject(includeInstance: boolean, msg: Base64Binary): Base64Binary.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Base64Binary, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: Base64Binary
+  ): Base64Binary.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Base64Binary,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Base64Binary;
-  static deserializeBinaryFromReader(message: Base64Binary, reader: jspb.BinaryReader): Base64Binary;
+  static deserializeBinaryFromReader(
+    message: Base64Binary,
+    reader: jspb.BinaryReader
+  ): Base64Binary;
 }
 
 export namespace Base64Binary {
   export type AsObject = {
-    value: Uint8Array | string,
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    value: Uint8Array | string;
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 }
 
 export class Boolean extends jspb.Message {
@@ -57,19 +68,27 @@ export class Boolean extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Boolean.AsObject;
   static toObject(includeInstance: boolean, msg: Boolean): Boolean.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Boolean, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Boolean,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Boolean;
-  static deserializeBinaryFromReader(message: Boolean, reader: jspb.BinaryReader): Boolean;
+  static deserializeBinaryFromReader(
+    message: Boolean,
+    reader: jspb.BinaryReader
+  ): Boolean;
 }
 
 export namespace Boolean {
   export type AsObject = {
-    value: boolean,
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    value: boolean;
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 }
 
 export class Canonical extends jspb.Message {
@@ -89,19 +108,27 @@ export class Canonical extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Canonical.AsObject;
   static toObject(includeInstance: boolean, msg: Canonical): Canonical.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Canonical, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Canonical,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Canonical;
-  static deserializeBinaryFromReader(message: Canonical, reader: jspb.BinaryReader): Canonical;
+  static deserializeBinaryFromReader(
+    message: Canonical,
+    reader: jspb.BinaryReader
+  ): Canonical;
 }
 
 export namespace Canonical {
   export type AsObject = {
-    value: string,
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    value: string;
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 }
 
 export class Code extends jspb.Message {
@@ -121,19 +148,27 @@ export class Code extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Code.AsObject;
   static toObject(includeInstance: boolean, msg: Code): Code.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Code, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Code,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Code;
-  static deserializeBinaryFromReader(message: Code, reader: jspb.BinaryReader): Code;
+  static deserializeBinaryFromReader(
+    message: Code,
+    reader: jspb.BinaryReader
+  ): Code;
 }
 
 export namespace Code {
   export type AsObject = {
-    value: string,
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    value: string;
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 }
 
 export class Date extends jspb.Message {
@@ -159,21 +194,29 @@ export class Date extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Date.AsObject;
   static toObject(includeInstance: boolean, msg: Date): Date.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Date, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Date,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Date;
-  static deserializeBinaryFromReader(message: Date, reader: jspb.BinaryReader): Date;
+  static deserializeBinaryFromReader(
+    message: Date,
+    reader: jspb.BinaryReader
+  ): Date;
 }
 
 export namespace Date {
   export type AsObject = {
-    valueUs: number,
-    timezone: string,
-    precision: Date.PrecisionMap[keyof Date.PrecisionMap],
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    valueUs: number;
+    timezone: string;
+    precision: Date.PrecisionMap[keyof Date.PrecisionMap];
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 
   export interface PrecisionMap {
     PRECISION_UNSPECIFIED: 0;
@@ -208,21 +251,29 @@ export class DateTime extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DateTime.AsObject;
   static toObject(includeInstance: boolean, msg: DateTime): DateTime.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: DateTime, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: DateTime,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): DateTime;
-  static deserializeBinaryFromReader(message: DateTime, reader: jspb.BinaryReader): DateTime;
+  static deserializeBinaryFromReader(
+    message: DateTime,
+    reader: jspb.BinaryReader
+  ): DateTime;
 }
 
 export namespace DateTime {
   export type AsObject = {
-    valueUs: number,
-    timezone: string,
-    precision: DateTime.PrecisionMap[keyof DateTime.PrecisionMap],
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    valueUs: number;
+    timezone: string;
+    precision: DateTime.PrecisionMap[keyof DateTime.PrecisionMap];
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 
   export interface PrecisionMap {
     PRECISION_UNSPECIFIED: 0;
@@ -254,19 +305,27 @@ export class Decimal extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Decimal.AsObject;
   static toObject(includeInstance: boolean, msg: Decimal): Decimal.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Decimal, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Decimal,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Decimal;
-  static deserializeBinaryFromReader(message: Decimal, reader: jspb.BinaryReader): Decimal;
+  static deserializeBinaryFromReader(
+    message: Decimal,
+    reader: jspb.BinaryReader
+  ): Decimal;
 }
 
 export namespace Decimal {
   export type AsObject = {
-    value: string,
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    value: string;
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 }
 
 export class Id extends jspb.Message {
@@ -286,19 +345,24 @@ export class Id extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Id.AsObject;
   static toObject(includeInstance: boolean, msg: Id): Id.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
   static serializeBinaryToWriter(message: Id, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): Id;
-  static deserializeBinaryFromReader(message: Id, reader: jspb.BinaryReader): Id;
+  static deserializeBinaryFromReader(
+    message: Id,
+    reader: jspb.BinaryReader
+  ): Id;
 }
 
 export namespace Id {
   export type AsObject = {
-    value: string,
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    value: string;
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 }
 
 export class Instant extends jspb.Message {
@@ -324,21 +388,29 @@ export class Instant extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Instant.AsObject;
   static toObject(includeInstance: boolean, msg: Instant): Instant.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Instant, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Instant,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Instant;
-  static deserializeBinaryFromReader(message: Instant, reader: jspb.BinaryReader): Instant;
+  static deserializeBinaryFromReader(
+    message: Instant,
+    reader: jspb.BinaryReader
+  ): Instant;
 }
 
 export namespace Instant {
   export type AsObject = {
-    valueUs: number,
-    timezone: string,
-    precision: Instant.PrecisionMap[keyof Instant.PrecisionMap],
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    valueUs: number;
+    timezone: string;
+    precision: Instant.PrecisionMap[keyof Instant.PrecisionMap];
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 
   export interface PrecisionMap {
     PRECISION_UNSPECIFIED: 0;
@@ -367,19 +439,27 @@ export class Integer extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Integer.AsObject;
   static toObject(includeInstance: boolean, msg: Integer): Integer.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Integer, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Integer,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Integer;
-  static deserializeBinaryFromReader(message: Integer, reader: jspb.BinaryReader): Integer;
+  static deserializeBinaryFromReader(
+    message: Integer,
+    reader: jspb.BinaryReader
+  ): Integer;
 }
 
 export namespace Integer {
   export type AsObject = {
-    value: number,
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    value: number;
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 }
 
 export class Markdown extends jspb.Message {
@@ -399,19 +479,27 @@ export class Markdown extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Markdown.AsObject;
   static toObject(includeInstance: boolean, msg: Markdown): Markdown.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Markdown, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Markdown,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Markdown;
-  static deserializeBinaryFromReader(message: Markdown, reader: jspb.BinaryReader): Markdown;
+  static deserializeBinaryFromReader(
+    message: Markdown,
+    reader: jspb.BinaryReader
+  ): Markdown;
 }
 
 export namespace Markdown {
   export type AsObject = {
-    value: string,
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    value: string;
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 }
 
 export class Oid extends jspb.Message {
@@ -431,19 +519,24 @@ export class Oid extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Oid.AsObject;
   static toObject(includeInstance: boolean, msg: Oid): Oid.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
   static serializeBinaryToWriter(message: Oid, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): Oid;
-  static deserializeBinaryFromReader(message: Oid, reader: jspb.BinaryReader): Oid;
+  static deserializeBinaryFromReader(
+    message: Oid,
+    reader: jspb.BinaryReader
+  ): Oid;
 }
 
 export namespace Oid {
   export type AsObject = {
-    value: string,
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    value: string;
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 }
 
 export class PositiveInt extends jspb.Message {
@@ -462,20 +555,31 @@ export class PositiveInt extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PositiveInt.AsObject;
-  static toObject(includeInstance: boolean, msg: PositiveInt): PositiveInt.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: PositiveInt, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: PositiveInt
+  ): PositiveInt.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: PositiveInt,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): PositiveInt;
-  static deserializeBinaryFromReader(message: PositiveInt, reader: jspb.BinaryReader): PositiveInt;
+  static deserializeBinaryFromReader(
+    message: PositiveInt,
+    reader: jspb.BinaryReader
+  ): PositiveInt;
 }
 
 export namespace PositiveInt {
   export type AsObject = {
-    value: number,
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    value: number;
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 }
 
 export class String extends jspb.Message {
@@ -495,19 +599,27 @@ export class String extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): String.AsObject;
   static toObject(includeInstance: boolean, msg: String): String.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: String, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: String,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): String;
-  static deserializeBinaryFromReader(message: String, reader: jspb.BinaryReader): String;
+  static deserializeBinaryFromReader(
+    message: String,
+    reader: jspb.BinaryReader
+  ): String;
 }
 
 export namespace String {
   export type AsObject = {
-    value: string,
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    value: string;
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 }
 
 export class Time extends jspb.Message {
@@ -530,20 +642,28 @@ export class Time extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Time.AsObject;
   static toObject(includeInstance: boolean, msg: Time): Time.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Time, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Time,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Time;
-  static deserializeBinaryFromReader(message: Time, reader: jspb.BinaryReader): Time;
+  static deserializeBinaryFromReader(
+    message: Time,
+    reader: jspb.BinaryReader
+  ): Time;
 }
 
 export namespace Time {
   export type AsObject = {
-    valueUs: number,
-    precision: Time.PrecisionMap[keyof Time.PrecisionMap],
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    valueUs: number;
+    precision: Time.PrecisionMap[keyof Time.PrecisionMap];
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 
   export interface PrecisionMap {
     PRECISION_UNSPECIFIED: 0;
@@ -571,20 +691,31 @@ export class UnsignedInt extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UnsignedInt.AsObject;
-  static toObject(includeInstance: boolean, msg: UnsignedInt): UnsignedInt.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: UnsignedInt, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: UnsignedInt
+  ): UnsignedInt.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: UnsignedInt,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): UnsignedInt;
-  static deserializeBinaryFromReader(message: UnsignedInt, reader: jspb.BinaryReader): UnsignedInt;
+  static deserializeBinaryFromReader(
+    message: UnsignedInt,
+    reader: jspb.BinaryReader
+  ): UnsignedInt;
 }
 
 export namespace UnsignedInt {
   export type AsObject = {
-    value: number,
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    value: number;
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 }
 
 export class Uri extends jspb.Message {
@@ -604,19 +735,24 @@ export class Uri extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Uri.AsObject;
   static toObject(includeInstance: boolean, msg: Uri): Uri.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
   static serializeBinaryToWriter(message: Uri, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): Uri;
-  static deserializeBinaryFromReader(message: Uri, reader: jspb.BinaryReader): Uri;
+  static deserializeBinaryFromReader(
+    message: Uri,
+    reader: jspb.BinaryReader
+  ): Uri;
 }
 
 export namespace Uri {
   export type AsObject = {
-    value: string,
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    value: string;
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 }
 
 export class Url extends jspb.Message {
@@ -636,19 +772,24 @@ export class Url extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Url.AsObject;
   static toObject(includeInstance: boolean, msg: Url): Url.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
   static serializeBinaryToWriter(message: Url, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): Url;
-  static deserializeBinaryFromReader(message: Url, reader: jspb.BinaryReader): Url;
+  static deserializeBinaryFromReader(
+    message: Url,
+    reader: jspb.BinaryReader
+  ): Url;
 }
 
 export namespace Url {
   export type AsObject = {
-    value: string,
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    value: string;
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 }
 
 export class Uuid extends jspb.Message {
@@ -668,19 +809,27 @@ export class Uuid extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Uuid.AsObject;
   static toObject(includeInstance: boolean, msg: Uuid): Uuid.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Uuid, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Uuid,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Uuid;
-  static deserializeBinaryFromReader(message: Uuid, reader: jspb.BinaryReader): Uuid;
+  static deserializeBinaryFromReader(
+    message: Uuid,
+    reader: jspb.BinaryReader
+  ): Uuid;
 }
 
 export namespace Uuid {
   export type AsObject = {
-    value: string,
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    value: string;
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 }
 
 export class Xhtml extends jspb.Message {
@@ -695,18 +844,26 @@ export class Xhtml extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Xhtml.AsObject;
   static toObject(includeInstance: boolean, msg: Xhtml): Xhtml.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Xhtml, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Xhtml,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Xhtml;
-  static deserializeBinaryFromReader(message: Xhtml, reader: jspb.BinaryReader): Xhtml;
+  static deserializeBinaryFromReader(
+    message: Xhtml,
+    reader: jspb.BinaryReader
+  ): Xhtml;
 }
 
 export namespace Xhtml {
   export type AsObject = {
-    value: string,
-    id?: String.AsObject,
-  }
+    value: string;
+    id?: String.AsObject;
+  };
 }
 
 export class Address extends jspb.Message {
@@ -773,32 +930,42 @@ export class Address extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Address.AsObject;
   static toObject(includeInstance: boolean, msg: Address): Address.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Address, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Address,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Address;
-  static deserializeBinaryFromReader(message: Address, reader: jspb.BinaryReader): Address;
+  static deserializeBinaryFromReader(
+    message: Address,
+    reader: jspb.BinaryReader
+  ): Address;
 }
 
 export namespace Address {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    use?: Address.UseCode.AsObject,
-    type?: Address.TypeCode.AsObject,
-    text?: String.AsObject,
-    line: Array<String.AsObject>,
-    city?: String.AsObject,
-    district?: String.AsObject,
-    state?: String.AsObject,
-    postalCode?: String.AsObject,
-    country?: String.AsObject,
-    period?: Period.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    use?: Address.UseCode.AsObject;
+    type?: Address.TypeCode.AsObject;
+    text?: String.AsObject;
+    line: Array<String.AsObject>;
+    city?: String.AsObject;
+    district?: String.AsObject;
+    state?: String.AsObject;
+    postalCode?: String.AsObject;
+    country?: String.AsObject;
+    period?: Period.AsObject;
+  };
 
   export class UseCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.AddressUseCode.ValueMap[keyof proto_r4_core_codes_pb.AddressUseCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.AddressUseCode.ValueMap[keyof proto_r4_core_codes_pb.AddressUseCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.AddressUseCode.ValueMap[keyof proto_r4_core_codes_pb.AddressUseCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -813,24 +980,34 @@ export namespace Address {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): UseCode.AsObject;
     static toObject(includeInstance: boolean, msg: UseCode): UseCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: UseCode, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: UseCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): UseCode;
-    static deserializeBinaryFromReader(message: UseCode, reader: jspb.BinaryReader): UseCode;
+    static deserializeBinaryFromReader(
+      message: UseCode,
+      reader: jspb.BinaryReader
+    ): UseCode;
   }
 
   export namespace UseCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.AddressUseCode.ValueMap[keyof proto_r4_core_codes_pb.AddressUseCode.ValueMap],
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.AddressUseCode.ValueMap[keyof proto_r4_core_codes_pb.AddressUseCode.ValueMap];
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+    };
   }
 
   export class TypeCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.AddressTypeCode.ValueMap[keyof proto_r4_core_codes_pb.AddressTypeCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.AddressTypeCode.ValueMap[keyof proto_r4_core_codes_pb.AddressTypeCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.AddressTypeCode.ValueMap[keyof proto_r4_core_codes_pb.AddressTypeCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -845,19 +1022,27 @@ export namespace Address {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TypeCode.AsObject;
     static toObject(includeInstance: boolean, msg: TypeCode): TypeCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: TypeCode, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: TypeCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): TypeCode;
-    static deserializeBinaryFromReader(message: TypeCode, reader: jspb.BinaryReader): TypeCode;
+    static deserializeBinaryFromReader(
+      message: TypeCode,
+      reader: jspb.BinaryReader
+    ): TypeCode;
   }
 
   export namespace TypeCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.AddressTypeCode.ValueMap[keyof proto_r4_core_codes_pb.AddressTypeCode.ValueMap],
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.AddressTypeCode.ValueMap[keyof proto_r4_core_codes_pb.AddressTypeCode.ValueMap];
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+    };
   }
 }
 
@@ -900,27 +1085,34 @@ export class Age extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Age.AsObject;
   static toObject(includeInstance: boolean, msg: Age): Age.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
   static serializeBinaryToWriter(message: Age, writer: jspb.BinaryWriter): void;
   static deserializeBinary(bytes: Uint8Array): Age;
-  static deserializeBinaryFromReader(message: Age, reader: jspb.BinaryReader): Age;
+  static deserializeBinaryFromReader(
+    message: Age,
+    reader: jspb.BinaryReader
+  ): Age;
 }
 
 export namespace Age {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    value?: Decimal.AsObject,
-    comparator?: Age.ComparatorCode.AsObject,
-    unit?: String.AsObject,
-    system?: Uri.AsObject,
-    code?: Code.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    value?: Decimal.AsObject;
+    comparator?: Age.ComparatorCode.AsObject;
+    unit?: String.AsObject;
+    system?: Uri.AsObject;
+    code?: Code.AsObject;
+  };
 
   export class ComparatorCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -934,20 +1126,31 @@ export namespace Age {
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): ComparatorCode.AsObject;
-    static toObject(includeInstance: boolean, msg: ComparatorCode): ComparatorCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: ComparatorCode, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: ComparatorCode
+    ): ComparatorCode.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: ComparatorCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): ComparatorCode;
-    static deserializeBinaryFromReader(message: ComparatorCode, reader: jspb.BinaryReader): ComparatorCode;
+    static deserializeBinaryFromReader(
+      message: ComparatorCode,
+      reader: jspb.BinaryReader
+    ): ComparatorCode;
   }
 
   export namespace ComparatorCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap],
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap];
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+    };
   }
 }
 
@@ -979,22 +1182,33 @@ export class Annotation extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Annotation.AsObject;
-  static toObject(includeInstance: boolean, msg: Annotation): Annotation.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Annotation, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: Annotation
+  ): Annotation.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Annotation,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Annotation;
-  static deserializeBinaryFromReader(message: Annotation, reader: jspb.BinaryReader): Annotation;
+  static deserializeBinaryFromReader(
+    message: Annotation,
+    reader: jspb.BinaryReader
+  ): Annotation;
 }
 
 export namespace Annotation {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    author?: Annotation.AuthorX.AsObject,
-    time?: DateTime.AsObject,
-    text?: Markdown.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    author?: Annotation.AuthorX.AsObject;
+    time?: DateTime.AsObject;
+    text?: Markdown.AsObject;
+  };
 
   export class AuthorX extends jspb.Message {
     hasReference(): boolean;
@@ -1011,18 +1225,26 @@ export namespace Annotation {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): AuthorX.AsObject;
     static toObject(includeInstance: boolean, msg: AuthorX): AuthorX.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: AuthorX, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: AuthorX,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): AuthorX;
-    static deserializeBinaryFromReader(message: AuthorX, reader: jspb.BinaryReader): AuthorX;
+    static deserializeBinaryFromReader(
+      message: AuthorX,
+      reader: jspb.BinaryReader
+    ): AuthorX;
   }
 
   export namespace AuthorX {
     export type AsObject = {
-      reference?: Reference.AsObject,
-      stringValue?: String.AsObject,
-    }
+      reference?: Reference.AsObject;
+      stringValue?: String.AsObject;
+    };
 
     export enum ChoiceCase {
       CHOICE_NOT_SET = 0,
@@ -1085,27 +1307,38 @@ export class Attachment extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Attachment.AsObject;
-  static toObject(includeInstance: boolean, msg: Attachment): Attachment.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Attachment, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: Attachment
+  ): Attachment.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Attachment,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Attachment;
-  static deserializeBinaryFromReader(message: Attachment, reader: jspb.BinaryReader): Attachment;
+  static deserializeBinaryFromReader(
+    message: Attachment,
+    reader: jspb.BinaryReader
+  ): Attachment;
 }
 
 export namespace Attachment {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    contentType?: Attachment.ContentTypeCode.AsObject,
-    language?: Code.AsObject,
-    data?: Base64Binary.AsObject,
-    url?: Url.AsObject,
-    size?: UnsignedInt.AsObject,
-    hash?: Base64Binary.AsObject,
-    title?: String.AsObject,
-    creation?: DateTime.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    contentType?: Attachment.ContentTypeCode.AsObject;
+    language?: Code.AsObject;
+    data?: Base64Binary.AsObject;
+    url?: Url.AsObject;
+    size?: UnsignedInt.AsObject;
+    hash?: Base64Binary.AsObject;
+    title?: String.AsObject;
+    creation?: DateTime.AsObject;
+  };
 
   export class ContentTypeCode extends jspb.Message {
     hasId(): boolean;
@@ -1123,20 +1356,31 @@ export namespace Attachment {
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): ContentTypeCode.AsObject;
-    static toObject(includeInstance: boolean, msg: ContentTypeCode): ContentTypeCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: ContentTypeCode, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: ContentTypeCode
+    ): ContentTypeCode.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: ContentTypeCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): ContentTypeCode;
-    static deserializeBinaryFromReader(message: ContentTypeCode, reader: jspb.BinaryReader): ContentTypeCode;
+    static deserializeBinaryFromReader(
+      message: ContentTypeCode,
+      reader: jspb.BinaryReader
+    ): ContentTypeCode;
   }
 
   export namespace ContentTypeCode {
     export type AsObject = {
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-      value: string,
-    }
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+      value: string;
+    };
   }
 }
 
@@ -1158,20 +1402,31 @@ export class BackboneElement extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): BackboneElement.AsObject;
-  static toObject(includeInstance: boolean, msg: BackboneElement): BackboneElement.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: BackboneElement, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: BackboneElement
+  ): BackboneElement.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: BackboneElement,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): BackboneElement;
-  static deserializeBinaryFromReader(message: BackboneElement, reader: jspb.BinaryReader): BackboneElement;
+  static deserializeBinaryFromReader(
+    message: BackboneElement,
+    reader: jspb.BinaryReader
+  ): BackboneElement;
 }
 
 export namespace BackboneElement {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    modifierExtension: Array<Extension.AsObject>,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    modifierExtension: Array<Extension.AsObject>;
+  };
 }
 
 export class CodeableConcept extends jspb.Message {
@@ -1197,21 +1452,32 @@ export class CodeableConcept extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CodeableConcept.AsObject;
-  static toObject(includeInstance: boolean, msg: CodeableConcept): CodeableConcept.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: CodeableConcept, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: CodeableConcept
+  ): CodeableConcept.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: CodeableConcept,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): CodeableConcept;
-  static deserializeBinaryFromReader(message: CodeableConcept, reader: jspb.BinaryReader): CodeableConcept;
+  static deserializeBinaryFromReader(
+    message: CodeableConcept,
+    reader: jspb.BinaryReader
+  ): CodeableConcept;
 }
 
 export namespace CodeableConcept {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    coding: Array<Coding.AsObject>,
-    text?: String.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    coding: Array<Coding.AsObject>;
+    text?: String.AsObject;
+  };
 }
 
 export class Coding extends jspb.Message {
@@ -1253,23 +1519,31 @@ export class Coding extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Coding.AsObject;
   static toObject(includeInstance: boolean, msg: Coding): Coding.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Coding, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Coding,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Coding;
-  static deserializeBinaryFromReader(message: Coding, reader: jspb.BinaryReader): Coding;
+  static deserializeBinaryFromReader(
+    message: Coding,
+    reader: jspb.BinaryReader
+  ): Coding;
 }
 
 export namespace Coding {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    system?: Uri.AsObject,
-    version?: String.AsObject,
-    code?: Code.AsObject,
-    display?: String.AsObject,
-    userSelected?: Boolean.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    system?: Uri.AsObject;
+    version?: String.AsObject;
+    code?: Code.AsObject;
+    display?: String.AsObject;
+    userSelected?: Boolean.AsObject;
+  };
 }
 
 export class ContactDetail extends jspb.Message {
@@ -1295,21 +1569,32 @@ export class ContactDetail extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ContactDetail.AsObject;
-  static toObject(includeInstance: boolean, msg: ContactDetail): ContactDetail.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: ContactDetail, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: ContactDetail
+  ): ContactDetail.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: ContactDetail,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): ContactDetail;
-  static deserializeBinaryFromReader(message: ContactDetail, reader: jspb.BinaryReader): ContactDetail;
+  static deserializeBinaryFromReader(
+    message: ContactDetail,
+    reader: jspb.BinaryReader
+  ): ContactDetail;
 }
 
 export namespace ContactDetail {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    name?: String.AsObject,
-    telecom: Array<ContactPoint.AsObject>,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    name?: String.AsObject;
+    telecom: Array<ContactPoint.AsObject>;
+  };
 }
 
 export class ContactPoint extends jspb.Message {
@@ -1350,28 +1635,41 @@ export class ContactPoint extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ContactPoint.AsObject;
-  static toObject(includeInstance: boolean, msg: ContactPoint): ContactPoint.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: ContactPoint, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: ContactPoint
+  ): ContactPoint.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: ContactPoint,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): ContactPoint;
-  static deserializeBinaryFromReader(message: ContactPoint, reader: jspb.BinaryReader): ContactPoint;
+  static deserializeBinaryFromReader(
+    message: ContactPoint,
+    reader: jspb.BinaryReader
+  ): ContactPoint;
 }
 
 export namespace ContactPoint {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    system?: ContactPoint.SystemCode.AsObject,
-    value?: String.AsObject,
-    use?: ContactPoint.UseCode.AsObject,
-    rank?: PositiveInt.AsObject,
-    period?: Period.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    system?: ContactPoint.SystemCode.AsObject;
+    value?: String.AsObject;
+    use?: ContactPoint.UseCode.AsObject;
+    rank?: PositiveInt.AsObject;
+    period?: Period.AsObject;
+  };
 
   export class SystemCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.ContactPointSystemCode.ValueMap[keyof proto_r4_core_codes_pb.ContactPointSystemCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.ContactPointSystemCode.ValueMap[keyof proto_r4_core_codes_pb.ContactPointSystemCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.ContactPointSystemCode.ValueMap[keyof proto_r4_core_codes_pb.ContactPointSystemCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -1385,25 +1683,38 @@ export namespace ContactPoint {
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): SystemCode.AsObject;
-    static toObject(includeInstance: boolean, msg: SystemCode): SystemCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: SystemCode, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: SystemCode
+    ): SystemCode.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: SystemCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): SystemCode;
-    static deserializeBinaryFromReader(message: SystemCode, reader: jspb.BinaryReader): SystemCode;
+    static deserializeBinaryFromReader(
+      message: SystemCode,
+      reader: jspb.BinaryReader
+    ): SystemCode;
   }
 
   export namespace SystemCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.ContactPointSystemCode.ValueMap[keyof proto_r4_core_codes_pb.ContactPointSystemCode.ValueMap],
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.ContactPointSystemCode.ValueMap[keyof proto_r4_core_codes_pb.ContactPointSystemCode.ValueMap];
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+    };
   }
 
   export class UseCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.ContactPointUseCode.ValueMap[keyof proto_r4_core_codes_pb.ContactPointUseCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.ContactPointUseCode.ValueMap[keyof proto_r4_core_codes_pb.ContactPointUseCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.ContactPointUseCode.ValueMap[keyof proto_r4_core_codes_pb.ContactPointUseCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -1418,19 +1729,27 @@ export namespace ContactPoint {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): UseCode.AsObject;
     static toObject(includeInstance: boolean, msg: UseCode): UseCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: UseCode, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: UseCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): UseCode;
-    static deserializeBinaryFromReader(message: UseCode, reader: jspb.BinaryReader): UseCode;
+    static deserializeBinaryFromReader(
+      message: UseCode,
+      reader: jspb.BinaryReader
+    ): UseCode;
   }
 
   export namespace UseCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.ContactPointUseCode.ValueMap[keyof proto_r4_core_codes_pb.ContactPointUseCode.ValueMap],
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.ContactPointUseCode.ValueMap[keyof proto_r4_core_codes_pb.ContactPointUseCode.ValueMap];
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+    };
   }
 }
 
@@ -1462,26 +1781,39 @@ export class Contributor extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Contributor.AsObject;
-  static toObject(includeInstance: boolean, msg: Contributor): Contributor.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Contributor, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: Contributor
+  ): Contributor.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Contributor,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Contributor;
-  static deserializeBinaryFromReader(message: Contributor, reader: jspb.BinaryReader): Contributor;
+  static deserializeBinaryFromReader(
+    message: Contributor,
+    reader: jspb.BinaryReader
+  ): Contributor;
 }
 
 export namespace Contributor {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    type?: Contributor.TypeCode.AsObject,
-    name?: String.AsObject,
-    contact: Array<ContactDetail.AsObject>,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    type?: Contributor.TypeCode.AsObject;
+    name?: String.AsObject;
+    contact: Array<ContactDetail.AsObject>;
+  };
 
   export class TypeCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.ContributorTypeCode.ValueMap[keyof proto_r4_core_codes_pb.ContributorTypeCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.ContributorTypeCode.ValueMap[keyof proto_r4_core_codes_pb.ContributorTypeCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.ContributorTypeCode.ValueMap[keyof proto_r4_core_codes_pb.ContributorTypeCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -1496,19 +1828,27 @@ export namespace Contributor {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TypeCode.AsObject;
     static toObject(includeInstance: boolean, msg: TypeCode): TypeCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: TypeCode, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: TypeCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): TypeCode;
-    static deserializeBinaryFromReader(message: TypeCode, reader: jspb.BinaryReader): TypeCode;
+    static deserializeBinaryFromReader(
+      message: TypeCode,
+      reader: jspb.BinaryReader
+    ): TypeCode;
   }
 
   export namespace TypeCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.ContributorTypeCode.ValueMap[keyof proto_r4_core_codes_pb.ContributorTypeCode.ValueMap],
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.ContributorTypeCode.ValueMap[keyof proto_r4_core_codes_pb.ContributorTypeCode.ValueMap];
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+    };
   }
 }
 
@@ -1551,27 +1891,37 @@ export class Count extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Count.AsObject;
   static toObject(includeInstance: boolean, msg: Count): Count.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Count, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Count,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Count;
-  static deserializeBinaryFromReader(message: Count, reader: jspb.BinaryReader): Count;
+  static deserializeBinaryFromReader(
+    message: Count,
+    reader: jspb.BinaryReader
+  ): Count;
 }
 
 export namespace Count {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    value?: Decimal.AsObject,
-    comparator?: Count.ComparatorCode.AsObject,
-    unit?: String.AsObject,
-    system?: Uri.AsObject,
-    code?: Code.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    value?: Decimal.AsObject;
+    comparator?: Count.ComparatorCode.AsObject;
+    unit?: String.AsObject;
+    system?: Uri.AsObject;
+    code?: Code.AsObject;
+  };
 
   export class ComparatorCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -1585,20 +1935,31 @@ export namespace Count {
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): ComparatorCode.AsObject;
-    static toObject(includeInstance: boolean, msg: ComparatorCode): ComparatorCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: ComparatorCode, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: ComparatorCode
+    ): ComparatorCode.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: ComparatorCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): ComparatorCode;
-    static deserializeBinaryFromReader(message: ComparatorCode, reader: jspb.BinaryReader): ComparatorCode;
+    static deserializeBinaryFromReader(
+      message: ComparatorCode,
+      reader: jspb.BinaryReader
+    ): ComparatorCode;
   }
 
   export namespace ComparatorCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap],
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap];
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+    };
   }
 }
 
@@ -1636,12 +1997,18 @@ export class DataRequirement extends jspb.Message {
   clearCodeFilter(): void;
   getCodeFilter(): Array<DataRequirement.CodeFilter>;
   setCodeFilter(value: Array<DataRequirement.CodeFilter>): void;
-  addCodeFilter(value?: DataRequirement.CodeFilter, index?: number): DataRequirement.CodeFilter;
+  addCodeFilter(
+    value?: DataRequirement.CodeFilter,
+    index?: number
+  ): DataRequirement.CodeFilter;
 
   clearDateFilter(): void;
   getDateFilter(): Array<DataRequirement.DateFilter>;
   setDateFilter(value: Array<DataRequirement.DateFilter>): void;
-  addDateFilter(value?: DataRequirement.DateFilter, index?: number): DataRequirement.DateFilter;
+  addDateFilter(
+    value?: DataRequirement.DateFilter,
+    index?: number
+  ): DataRequirement.DateFilter;
 
   hasLimit(): boolean;
   clearLimit(): void;
@@ -1655,31 +2022,44 @@ export class DataRequirement extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DataRequirement.AsObject;
-  static toObject(includeInstance: boolean, msg: DataRequirement): DataRequirement.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: DataRequirement, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: DataRequirement
+  ): DataRequirement.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: DataRequirement,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): DataRequirement;
-  static deserializeBinaryFromReader(message: DataRequirement, reader: jspb.BinaryReader): DataRequirement;
+  static deserializeBinaryFromReader(
+    message: DataRequirement,
+    reader: jspb.BinaryReader
+  ): DataRequirement;
 }
 
 export namespace DataRequirement {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    type?: DataRequirement.TypeCode.AsObject,
-    profile: Array<Canonical.AsObject>,
-    subject?: DataRequirement.SubjectX.AsObject,
-    mustSupport: Array<String.AsObject>,
-    codeFilter: Array<DataRequirement.CodeFilter.AsObject>,
-    dateFilter: Array<DataRequirement.DateFilter.AsObject>,
-    limit?: PositiveInt.AsObject,
-    sort: Array<DataRequirement.Sort.AsObject>,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    type?: DataRequirement.TypeCode.AsObject;
+    profile: Array<Canonical.AsObject>;
+    subject?: DataRequirement.SubjectX.AsObject;
+    mustSupport: Array<String.AsObject>;
+    codeFilter: Array<DataRequirement.CodeFilter.AsObject>;
+    dateFilter: Array<DataRequirement.DateFilter.AsObject>;
+    limit?: PositiveInt.AsObject;
+    sort: Array<DataRequirement.Sort.AsObject>;
+  };
 
   export class TypeCode extends jspb.Message {
     getValue(): proto_r4_core_valuesets_pb.FHIRAllTypesValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.FHIRAllTypesValueSet.ValueMap];
-    setValue(value: proto_r4_core_valuesets_pb.FHIRAllTypesValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.FHIRAllTypesValueSet.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_valuesets_pb.FHIRAllTypesValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.FHIRAllTypesValueSet.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -1694,19 +2074,27 @@ export namespace DataRequirement {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TypeCode.AsObject;
     static toObject(includeInstance: boolean, msg: TypeCode): TypeCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: TypeCode, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: TypeCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): TypeCode;
-    static deserializeBinaryFromReader(message: TypeCode, reader: jspb.BinaryReader): TypeCode;
+    static deserializeBinaryFromReader(
+      message: TypeCode,
+      reader: jspb.BinaryReader
+    ): TypeCode;
   }
 
   export namespace TypeCode {
     export type AsObject = {
-      value: proto_r4_core_valuesets_pb.FHIRAllTypesValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.FHIRAllTypesValueSet.ValueMap],
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-    }
+      value: proto_r4_core_valuesets_pb.FHIRAllTypesValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.FHIRAllTypesValueSet.ValueMap];
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+    };
   }
 
   export class SubjectX extends jspb.Message {
@@ -1724,18 +2112,26 @@ export namespace DataRequirement {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): SubjectX.AsObject;
     static toObject(includeInstance: boolean, msg: SubjectX): SubjectX.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: SubjectX, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: SubjectX,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): SubjectX;
-    static deserializeBinaryFromReader(message: SubjectX, reader: jspb.BinaryReader): SubjectX;
+    static deserializeBinaryFromReader(
+      message: SubjectX,
+      reader: jspb.BinaryReader
+    ): SubjectX;
   }
 
   export namespace SubjectX {
     export type AsObject = {
-      codeableConcept?: CodeableConcept.AsObject,
-      reference?: Reference.AsObject,
-    }
+      codeableConcept?: CodeableConcept.AsObject;
+      reference?: Reference.AsObject;
+    };
 
     export enum ChoiceCase {
       CHOICE_NOT_SET = 0,
@@ -1777,23 +2173,34 @@ export namespace DataRequirement {
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): CodeFilter.AsObject;
-    static toObject(includeInstance: boolean, msg: CodeFilter): CodeFilter.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: CodeFilter, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: CodeFilter
+    ): CodeFilter.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: CodeFilter,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): CodeFilter;
-    static deserializeBinaryFromReader(message: CodeFilter, reader: jspb.BinaryReader): CodeFilter;
+    static deserializeBinaryFromReader(
+      message: CodeFilter,
+      reader: jspb.BinaryReader
+    ): CodeFilter;
   }
 
   export namespace CodeFilter {
     export type AsObject = {
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-      path?: String.AsObject,
-      searchParam?: String.AsObject,
-      valueSet?: Canonical.AsObject,
-      code: Array<Coding.AsObject>,
-    }
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+      path?: String.AsObject;
+      searchParam?: String.AsObject;
+      valueSet?: Canonical.AsObject;
+      code: Array<Coding.AsObject>;
+    };
   }
 
   export class DateFilter extends jspb.Message {
@@ -1824,22 +2231,33 @@ export namespace DataRequirement {
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): DateFilter.AsObject;
-    static toObject(includeInstance: boolean, msg: DateFilter): DateFilter.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: DateFilter, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: DateFilter
+    ): DateFilter.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: DateFilter,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): DateFilter;
-    static deserializeBinaryFromReader(message: DateFilter, reader: jspb.BinaryReader): DateFilter;
+    static deserializeBinaryFromReader(
+      message: DateFilter,
+      reader: jspb.BinaryReader
+    ): DateFilter;
   }
 
   export namespace DateFilter {
     export type AsObject = {
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-      path?: String.AsObject,
-      searchParam?: String.AsObject,
-      value?: DataRequirement.DateFilter.ValueX.AsObject,
-    }
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+      path?: String.AsObject;
+      searchParam?: String.AsObject;
+      value?: DataRequirement.DateFilter.ValueX.AsObject;
+    };
 
     export class ValueX extends jspb.Message {
       hasDateTime(): boolean;
@@ -1861,19 +2279,29 @@ export namespace DataRequirement {
       serializeBinary(): Uint8Array;
       toObject(includeInstance?: boolean): ValueX.AsObject;
       static toObject(includeInstance: boolean, msg: ValueX): ValueX.AsObject;
-      static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-      static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-      static serializeBinaryToWriter(message: ValueX, writer: jspb.BinaryWriter): void;
+      static extensions: {
+        [key: number]: jspb.ExtensionFieldInfo<jspb.Message>;
+      };
+      static extensionsBinary: {
+        [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+      };
+      static serializeBinaryToWriter(
+        message: ValueX,
+        writer: jspb.BinaryWriter
+      ): void;
       static deserializeBinary(bytes: Uint8Array): ValueX;
-      static deserializeBinaryFromReader(message: ValueX, reader: jspb.BinaryReader): ValueX;
+      static deserializeBinaryFromReader(
+        message: ValueX,
+        reader: jspb.BinaryReader
+      ): ValueX;
     }
 
     export namespace ValueX {
       export type AsObject = {
-        dateTime?: DateTime.AsObject,
-        period?: Period.AsObject,
-        duration?: Duration.AsObject,
-      }
+        dateTime?: DateTime.AsObject;
+        period?: Period.AsObject;
+        duration?: Duration.AsObject;
+      };
 
       export enum ChoiceCase {
         CHOICE_NOT_SET = 0,
@@ -1908,24 +2336,34 @@ export namespace DataRequirement {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Sort.AsObject;
     static toObject(includeInstance: boolean, msg: Sort): Sort.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: Sort, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: Sort,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): Sort;
-    static deserializeBinaryFromReader(message: Sort, reader: jspb.BinaryReader): Sort;
+    static deserializeBinaryFromReader(
+      message: Sort,
+      reader: jspb.BinaryReader
+    ): Sort;
   }
 
   export namespace Sort {
     export type AsObject = {
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-      path?: String.AsObject,
-      direction?: DataRequirement.Sort.DirectionCode.AsObject,
-    }
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+      path?: String.AsObject;
+      direction?: DataRequirement.Sort.DirectionCode.AsObject;
+    };
 
     export class DirectionCode extends jspb.Message {
       getValue(): proto_r4_core_codes_pb.SortDirectionCode.ValueMap[keyof proto_r4_core_codes_pb.SortDirectionCode.ValueMap];
-      setValue(value: proto_r4_core_codes_pb.SortDirectionCode.ValueMap[keyof proto_r4_core_codes_pb.SortDirectionCode.ValueMap]): void;
+      setValue(
+        value: proto_r4_core_codes_pb.SortDirectionCode.ValueMap[keyof proto_r4_core_codes_pb.SortDirectionCode.ValueMap]
+      ): void;
 
       hasId(): boolean;
       clearId(): void;
@@ -1939,20 +2377,33 @@ export namespace DataRequirement {
 
       serializeBinary(): Uint8Array;
       toObject(includeInstance?: boolean): DirectionCode.AsObject;
-      static toObject(includeInstance: boolean, msg: DirectionCode): DirectionCode.AsObject;
-      static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-      static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-      static serializeBinaryToWriter(message: DirectionCode, writer: jspb.BinaryWriter): void;
+      static toObject(
+        includeInstance: boolean,
+        msg: DirectionCode
+      ): DirectionCode.AsObject;
+      static extensions: {
+        [key: number]: jspb.ExtensionFieldInfo<jspb.Message>;
+      };
+      static extensionsBinary: {
+        [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+      };
+      static serializeBinaryToWriter(
+        message: DirectionCode,
+        writer: jspb.BinaryWriter
+      ): void;
       static deserializeBinary(bytes: Uint8Array): DirectionCode;
-      static deserializeBinaryFromReader(message: DirectionCode, reader: jspb.BinaryReader): DirectionCode;
+      static deserializeBinaryFromReader(
+        message: DirectionCode,
+        reader: jspb.BinaryReader
+      ): DirectionCode;
     }
 
     export namespace DirectionCode {
       export type AsObject = {
-        value: proto_r4_core_codes_pb.SortDirectionCode.ValueMap[keyof proto_r4_core_codes_pb.SortDirectionCode.ValueMap],
-        id?: String.AsObject,
-        extension: Array<Extension.AsObject>,
-      }
+        value: proto_r4_core_codes_pb.SortDirectionCode.ValueMap[keyof proto_r4_core_codes_pb.SortDirectionCode.ValueMap];
+        id?: String.AsObject;
+        extension: Array<Extension.AsObject>;
+      };
     }
   }
 }
@@ -1996,27 +2447,37 @@ export class Distance extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Distance.AsObject;
   static toObject(includeInstance: boolean, msg: Distance): Distance.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Distance, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Distance,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Distance;
-  static deserializeBinaryFromReader(message: Distance, reader: jspb.BinaryReader): Distance;
+  static deserializeBinaryFromReader(
+    message: Distance,
+    reader: jspb.BinaryReader
+  ): Distance;
 }
 
 export namespace Distance {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    value?: Decimal.AsObject,
-    comparator?: Distance.ComparatorCode.AsObject,
-    unit?: String.AsObject,
-    system?: Uri.AsObject,
-    code?: Code.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    value?: Decimal.AsObject;
+    comparator?: Distance.ComparatorCode.AsObject;
+    unit?: String.AsObject;
+    system?: Uri.AsObject;
+    code?: Code.AsObject;
+  };
 
   export class ComparatorCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -2030,20 +2491,31 @@ export namespace Distance {
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): ComparatorCode.AsObject;
-    static toObject(includeInstance: boolean, msg: ComparatorCode): ComparatorCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: ComparatorCode, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: ComparatorCode
+    ): ComparatorCode.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: ComparatorCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): ComparatorCode;
-    static deserializeBinaryFromReader(message: ComparatorCode, reader: jspb.BinaryReader): ComparatorCode;
+    static deserializeBinaryFromReader(
+      message: ComparatorCode,
+      reader: jspb.BinaryReader
+    ): ComparatorCode;
   }
 
   export namespace ComparatorCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap],
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap];
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+    };
   }
 }
 
@@ -2076,7 +2548,10 @@ export class Dosage extends jspb.Message {
   clearAdditionalInstruction(): void;
   getAdditionalInstruction(): Array<CodeableConcept>;
   setAdditionalInstruction(value: Array<CodeableConcept>): void;
-  addAdditionalInstruction(value?: CodeableConcept, index?: number): CodeableConcept;
+  addAdditionalInstruction(
+    value?: CodeableConcept,
+    index?: number
+  ): CodeableConcept;
 
   hasPatientInstruction(): boolean;
   clearPatientInstruction(): void;
@@ -2111,7 +2586,10 @@ export class Dosage extends jspb.Message {
   clearDoseAndRate(): void;
   getDoseAndRate(): Array<Dosage.DoseAndRate>;
   setDoseAndRate(value: Array<Dosage.DoseAndRate>): void;
-  addDoseAndRate(value?: Dosage.DoseAndRate, index?: number): Dosage.DoseAndRate;
+  addDoseAndRate(
+    value?: Dosage.DoseAndRate,
+    index?: number
+  ): Dosage.DoseAndRate;
 
   hasMaxDosePerPeriod(): boolean;
   clearMaxDosePerPeriod(): void;
@@ -2131,32 +2609,40 @@ export class Dosage extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Dosage.AsObject;
   static toObject(includeInstance: boolean, msg: Dosage): Dosage.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Dosage, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Dosage,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Dosage;
-  static deserializeBinaryFromReader(message: Dosage, reader: jspb.BinaryReader): Dosage;
+  static deserializeBinaryFromReader(
+    message: Dosage,
+    reader: jspb.BinaryReader
+  ): Dosage;
 }
 
 export namespace Dosage {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    modifierExtension: Array<Extension.AsObject>,
-    sequence?: Integer.AsObject,
-    text?: String.AsObject,
-    additionalInstruction: Array<CodeableConcept.AsObject>,
-    patientInstruction?: String.AsObject,
-    timing?: Timing.AsObject,
-    asNeeded?: Dosage.AsNeededX.AsObject,
-    site?: CodeableConcept.AsObject,
-    route?: CodeableConcept.AsObject,
-    method?: CodeableConcept.AsObject,
-    doseAndRate: Array<Dosage.DoseAndRate.AsObject>,
-    maxDosePerPeriod?: Ratio.AsObject,
-    maxDosePerAdministration?: SimpleQuantity.AsObject,
-    maxDosePerLifetime?: SimpleQuantity.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    modifierExtension: Array<Extension.AsObject>;
+    sequence?: Integer.AsObject;
+    text?: String.AsObject;
+    additionalInstruction: Array<CodeableConcept.AsObject>;
+    patientInstruction?: String.AsObject;
+    timing?: Timing.AsObject;
+    asNeeded?: Dosage.AsNeededX.AsObject;
+    site?: CodeableConcept.AsObject;
+    route?: CodeableConcept.AsObject;
+    method?: CodeableConcept.AsObject;
+    doseAndRate: Array<Dosage.DoseAndRate.AsObject>;
+    maxDosePerPeriod?: Ratio.AsObject;
+    maxDosePerAdministration?: SimpleQuantity.AsObject;
+    maxDosePerLifetime?: SimpleQuantity.AsObject;
+  };
 
   export class AsNeededX extends jspb.Message {
     hasBoolean(): boolean;
@@ -2172,19 +2658,30 @@ export namespace Dosage {
     getChoiceCase(): AsNeededX.ChoiceCase;
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): AsNeededX.AsObject;
-    static toObject(includeInstance: boolean, msg: AsNeededX): AsNeededX.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: AsNeededX, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: AsNeededX
+    ): AsNeededX.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: AsNeededX,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): AsNeededX;
-    static deserializeBinaryFromReader(message: AsNeededX, reader: jspb.BinaryReader): AsNeededX;
+    static deserializeBinaryFromReader(
+      message: AsNeededX,
+      reader: jspb.BinaryReader
+    ): AsNeededX;
   }
 
   export namespace AsNeededX {
     export type AsObject = {
-      pb_boolean?: Boolean.AsObject,
-      codeableConcept?: CodeableConcept.AsObject,
-    }
+      pb_boolean?: Boolean.AsObject;
+      codeableConcept?: CodeableConcept.AsObject;
+    };
 
     export enum ChoiceCase {
       CHOICE_NOT_SET = 0,
@@ -2221,22 +2718,33 @@ export namespace Dosage {
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): DoseAndRate.AsObject;
-    static toObject(includeInstance: boolean, msg: DoseAndRate): DoseAndRate.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: DoseAndRate, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: DoseAndRate
+    ): DoseAndRate.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: DoseAndRate,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): DoseAndRate;
-    static deserializeBinaryFromReader(message: DoseAndRate, reader: jspb.BinaryReader): DoseAndRate;
+    static deserializeBinaryFromReader(
+      message: DoseAndRate,
+      reader: jspb.BinaryReader
+    ): DoseAndRate;
   }
 
   export namespace DoseAndRate {
     export type AsObject = {
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-      type?: CodeableConcept.AsObject,
-      dose?: Dosage.DoseAndRate.DoseX.AsObject,
-      rate?: Dosage.DoseAndRate.RateX.AsObject,
-    }
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+      type?: CodeableConcept.AsObject;
+      dose?: Dosage.DoseAndRate.DoseX.AsObject;
+      rate?: Dosage.DoseAndRate.RateX.AsObject;
+    };
 
     export class DoseX extends jspb.Message {
       hasRange(): boolean;
@@ -2253,18 +2761,28 @@ export namespace Dosage {
       serializeBinary(): Uint8Array;
       toObject(includeInstance?: boolean): DoseX.AsObject;
       static toObject(includeInstance: boolean, msg: DoseX): DoseX.AsObject;
-      static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-      static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-      static serializeBinaryToWriter(message: DoseX, writer: jspb.BinaryWriter): void;
+      static extensions: {
+        [key: number]: jspb.ExtensionFieldInfo<jspb.Message>;
+      };
+      static extensionsBinary: {
+        [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+      };
+      static serializeBinaryToWriter(
+        message: DoseX,
+        writer: jspb.BinaryWriter
+      ): void;
       static deserializeBinary(bytes: Uint8Array): DoseX;
-      static deserializeBinaryFromReader(message: DoseX, reader: jspb.BinaryReader): DoseX;
+      static deserializeBinaryFromReader(
+        message: DoseX,
+        reader: jspb.BinaryReader
+      ): DoseX;
     }
 
     export namespace DoseX {
       export type AsObject = {
-        range?: Range.AsObject,
-        quantity?: SimpleQuantity.AsObject,
-      }
+        range?: Range.AsObject;
+        quantity?: SimpleQuantity.AsObject;
+      };
 
       export enum ChoiceCase {
         CHOICE_NOT_SET = 0,
@@ -2293,19 +2811,29 @@ export namespace Dosage {
       serializeBinary(): Uint8Array;
       toObject(includeInstance?: boolean): RateX.AsObject;
       static toObject(includeInstance: boolean, msg: RateX): RateX.AsObject;
-      static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-      static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-      static serializeBinaryToWriter(message: RateX, writer: jspb.BinaryWriter): void;
+      static extensions: {
+        [key: number]: jspb.ExtensionFieldInfo<jspb.Message>;
+      };
+      static extensionsBinary: {
+        [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+      };
+      static serializeBinaryToWriter(
+        message: RateX,
+        writer: jspb.BinaryWriter
+      ): void;
       static deserializeBinary(bytes: Uint8Array): RateX;
-      static deserializeBinaryFromReader(message: RateX, reader: jspb.BinaryReader): RateX;
+      static deserializeBinaryFromReader(
+        message: RateX,
+        reader: jspb.BinaryReader
+      ): RateX;
     }
 
     export namespace RateX {
       export type AsObject = {
-        ratio?: Ratio.AsObject,
-        range?: Range.AsObject,
-        quantity?: SimpleQuantity.AsObject,
-      }
+        ratio?: Ratio.AsObject;
+        range?: Range.AsObject;
+        quantity?: SimpleQuantity.AsObject;
+      };
 
       export enum ChoiceCase {
         CHOICE_NOT_SET = 0,
@@ -2356,27 +2884,37 @@ export class Duration extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Duration.AsObject;
   static toObject(includeInstance: boolean, msg: Duration): Duration.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Duration, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Duration,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Duration;
-  static deserializeBinaryFromReader(message: Duration, reader: jspb.BinaryReader): Duration;
+  static deserializeBinaryFromReader(
+    message: Duration,
+    reader: jspb.BinaryReader
+  ): Duration;
 }
 
 export namespace Duration {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    value?: Decimal.AsObject,
-    comparator?: Duration.ComparatorCode.AsObject,
-    unit?: String.AsObject,
-    system?: Uri.AsObject,
-    code?: Code.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    value?: Decimal.AsObject;
+    comparator?: Duration.ComparatorCode.AsObject;
+    unit?: String.AsObject;
+    system?: Uri.AsObject;
+    code?: Code.AsObject;
+  };
 
   export class ComparatorCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -2390,20 +2928,31 @@ export namespace Duration {
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): ComparatorCode.AsObject;
-    static toObject(includeInstance: boolean, msg: ComparatorCode): ComparatorCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: ComparatorCode, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: ComparatorCode
+    ): ComparatorCode.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: ComparatorCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): ComparatorCode;
-    static deserializeBinaryFromReader(message: ComparatorCode, reader: jspb.BinaryReader): ComparatorCode;
+    static deserializeBinaryFromReader(
+      message: ComparatorCode,
+      reader: jspb.BinaryReader
+    ): ComparatorCode;
   }
 
   export namespace ComparatorCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap],
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap];
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+    };
   }
 }
 
@@ -2431,7 +2980,10 @@ export class ElementDefinition extends jspb.Message {
   clearRepresentation(): void;
   getRepresentation(): Array<ElementDefinition.RepresentationCode>;
   setRepresentation(value: Array<ElementDefinition.RepresentationCode>): void;
-  addRepresentation(value?: ElementDefinition.RepresentationCode, index?: number): ElementDefinition.RepresentationCode;
+  addRepresentation(
+    value?: ElementDefinition.RepresentationCode,
+    index?: number
+  ): ElementDefinition.RepresentationCode;
 
   hasSliceName(): boolean;
   clearSliceName(): void;
@@ -2506,7 +3058,10 @@ export class ElementDefinition extends jspb.Message {
   clearType(): void;
   getType(): Array<ElementDefinition.TypeRef>;
   setType(value: Array<ElementDefinition.TypeRef>): void;
-  addType(value?: ElementDefinition.TypeRef, index?: number): ElementDefinition.TypeRef;
+  addType(
+    value?: ElementDefinition.TypeRef,
+    index?: number
+  ): ElementDefinition.TypeRef;
 
   hasDefaultValue(): boolean;
   clearDefaultValue(): void;
@@ -2536,7 +3091,10 @@ export class ElementDefinition extends jspb.Message {
   clearExample(): void;
   getExample(): Array<ElementDefinition.Example>;
   setExample(value: Array<ElementDefinition.Example>): void;
-  addExample(value?: ElementDefinition.Example, index?: number): ElementDefinition.Example;
+  addExample(
+    value?: ElementDefinition.Example,
+    index?: number
+  ): ElementDefinition.Example;
 
   hasMinValue(): boolean;
   clearMinValue(): void;
@@ -2561,7 +3119,10 @@ export class ElementDefinition extends jspb.Message {
   clearConstraint(): void;
   getConstraint(): Array<ElementDefinition.Constraint>;
   setConstraint(value: Array<ElementDefinition.Constraint>): void;
-  addConstraint(value?: ElementDefinition.Constraint, index?: number): ElementDefinition.Constraint;
+  addConstraint(
+    value?: ElementDefinition.Constraint,
+    index?: number
+  ): ElementDefinition.Constraint;
 
   hasMustSupport(): boolean;
   clearMustSupport(): void;
@@ -2591,62 +3152,78 @@ export class ElementDefinition extends jspb.Message {
   clearMapping(): void;
   getMapping(): Array<ElementDefinition.Mapping>;
   setMapping(value: Array<ElementDefinition.Mapping>): void;
-  addMapping(value?: ElementDefinition.Mapping, index?: number): ElementDefinition.Mapping;
+  addMapping(
+    value?: ElementDefinition.Mapping,
+    index?: number
+  ): ElementDefinition.Mapping;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ElementDefinition.AsObject;
-  static toObject(includeInstance: boolean, msg: ElementDefinition): ElementDefinition.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: ElementDefinition, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: ElementDefinition
+  ): ElementDefinition.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: ElementDefinition,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): ElementDefinition;
-  static deserializeBinaryFromReader(message: ElementDefinition, reader: jspb.BinaryReader): ElementDefinition;
+  static deserializeBinaryFromReader(
+    message: ElementDefinition,
+    reader: jspb.BinaryReader
+  ): ElementDefinition;
 }
 
 export namespace ElementDefinition {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    modifierExtension: Array<Extension.AsObject>,
-    path?: String.AsObject,
-    representation: Array<ElementDefinition.RepresentationCode.AsObject>,
-    sliceName?: String.AsObject,
-    sliceIsConstraining?: Boolean.AsObject,
-    label?: String.AsObject,
-    code: Array<Coding.AsObject>,
-    slicing?: ElementDefinition.Slicing.AsObject,
-    pb_short?: String.AsObject,
-    definition?: Markdown.AsObject,
-    comment?: Markdown.AsObject,
-    requirements?: Markdown.AsObject,
-    alias: Array<String.AsObject>,
-    min?: UnsignedInt.AsObject,
-    max?: String.AsObject,
-    base?: ElementDefinition.Base.AsObject,
-    contentReference?: Uri.AsObject,
-    type: Array<ElementDefinition.TypeRef.AsObject>,
-    defaultValue?: ElementDefinition.DefaultValueX.AsObject,
-    meaningWhenMissing?: Markdown.AsObject,
-    orderMeaning?: String.AsObject,
-    fixed?: ElementDefinition.FixedX.AsObject,
-    pattern?: ElementDefinition.PatternX.AsObject,
-    example: Array<ElementDefinition.Example.AsObject>,
-    minValue?: ElementDefinition.MinValueX.AsObject,
-    maxValue?: ElementDefinition.MaxValueX.AsObject,
-    maxLength?: Integer.AsObject,
-    condition: Array<Id.AsObject>,
-    constraint: Array<ElementDefinition.Constraint.AsObject>,
-    mustSupport?: Boolean.AsObject,
-    isModifier?: Boolean.AsObject,
-    isModifierReason?: String.AsObject,
-    isSummary?: Boolean.AsObject,
-    binding?: ElementDefinition.ElementDefinitionBinding.AsObject,
-    mapping: Array<ElementDefinition.Mapping.AsObject>,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    modifierExtension: Array<Extension.AsObject>;
+    path?: String.AsObject;
+    representation: Array<ElementDefinition.RepresentationCode.AsObject>;
+    sliceName?: String.AsObject;
+    sliceIsConstraining?: Boolean.AsObject;
+    label?: String.AsObject;
+    code: Array<Coding.AsObject>;
+    slicing?: ElementDefinition.Slicing.AsObject;
+    short?: String.AsObject;
+    definition?: Markdown.AsObject;
+    comment?: Markdown.AsObject;
+    requirements?: Markdown.AsObject;
+    alias: Array<String.AsObject>;
+    min?: UnsignedInt.AsObject;
+    max?: String.AsObject;
+    base?: ElementDefinition.Base.AsObject;
+    contentReference?: Uri.AsObject;
+    type: Array<ElementDefinition.TypeRef.AsObject>;
+    defaultValue?: ElementDefinition.DefaultValueX.AsObject;
+    meaningWhenMissing?: Markdown.AsObject;
+    orderMeaning?: String.AsObject;
+    fixed?: ElementDefinition.FixedX.AsObject;
+    pattern?: ElementDefinition.PatternX.AsObject;
+    example: Array<ElementDefinition.Example.AsObject>;
+    minValue?: ElementDefinition.MinValueX.AsObject;
+    maxValue?: ElementDefinition.MaxValueX.AsObject;
+    maxLength?: Integer.AsObject;
+    condition: Array<Id.AsObject>;
+    constraint: Array<ElementDefinition.Constraint.AsObject>;
+    mustSupport?: Boolean.AsObject;
+    isModifier?: Boolean.AsObject;
+    isModifierReason?: String.AsObject;
+    isSummary?: Boolean.AsObject;
+    binding?: ElementDefinition.ElementDefinitionBinding.AsObject;
+    mapping: Array<ElementDefinition.Mapping.AsObject>;
+  };
 
   export class RepresentationCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.PropertyRepresentationCode.ValueMap[keyof proto_r4_core_codes_pb.PropertyRepresentationCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.PropertyRepresentationCode.ValueMap[keyof proto_r4_core_codes_pb.PropertyRepresentationCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.PropertyRepresentationCode.ValueMap[keyof proto_r4_core_codes_pb.PropertyRepresentationCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -2660,20 +3237,31 @@ export namespace ElementDefinition {
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): RepresentationCode.AsObject;
-    static toObject(includeInstance: boolean, msg: RepresentationCode): RepresentationCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: RepresentationCode, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: RepresentationCode
+    ): RepresentationCode.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: RepresentationCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): RepresentationCode;
-    static deserializeBinaryFromReader(message: RepresentationCode, reader: jspb.BinaryReader): RepresentationCode;
+    static deserializeBinaryFromReader(
+      message: RepresentationCode,
+      reader: jspb.BinaryReader
+    ): RepresentationCode;
   }
 
   export namespace RepresentationCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.PropertyRepresentationCode.ValueMap[keyof proto_r4_core_codes_pb.PropertyRepresentationCode.ValueMap],
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.PropertyRepresentationCode.ValueMap[keyof proto_r4_core_codes_pb.PropertyRepresentationCode.ValueMap];
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+    };
   }
 
   export class Slicing extends jspb.Message {
@@ -2689,8 +3277,13 @@ export namespace ElementDefinition {
 
     clearDiscriminator(): void;
     getDiscriminator(): Array<ElementDefinition.Slicing.Discriminator>;
-    setDiscriminator(value: Array<ElementDefinition.Slicing.Discriminator>): void;
-    addDiscriminator(value?: ElementDefinition.Slicing.Discriminator, index?: number): ElementDefinition.Slicing.Discriminator;
+    setDiscriminator(
+      value: Array<ElementDefinition.Slicing.Discriminator>
+    ): void;
+    addDiscriminator(
+      value?: ElementDefinition.Slicing.Discriminator,
+      index?: number
+    ): ElementDefinition.Slicing.Discriminator;
 
     hasDescription(): boolean;
     clearDescription(): void;
@@ -2710,22 +3303,30 @@ export namespace ElementDefinition {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Slicing.AsObject;
     static toObject(includeInstance: boolean, msg: Slicing): Slicing.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: Slicing, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: Slicing,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): Slicing;
-    static deserializeBinaryFromReader(message: Slicing, reader: jspb.BinaryReader): Slicing;
+    static deserializeBinaryFromReader(
+      message: Slicing,
+      reader: jspb.BinaryReader
+    ): Slicing;
   }
 
   export namespace Slicing {
     export type AsObject = {
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-      discriminator: Array<ElementDefinition.Slicing.Discriminator.AsObject>,
-      description?: String.AsObject,
-      ordered?: Boolean.AsObject,
-      rules?: ElementDefinition.Slicing.RulesCode.AsObject,
-    }
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+      discriminator: Array<ElementDefinition.Slicing.Discriminator.AsObject>;
+      description?: String.AsObject;
+      ordered?: Boolean.AsObject;
+      rules?: ElementDefinition.Slicing.RulesCode.AsObject;
+    };
 
     export class Discriminator extends jspb.Message {
       hasId(): boolean;
@@ -2750,25 +3351,40 @@ export namespace ElementDefinition {
 
       serializeBinary(): Uint8Array;
       toObject(includeInstance?: boolean): Discriminator.AsObject;
-      static toObject(includeInstance: boolean, msg: Discriminator): Discriminator.AsObject;
-      static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-      static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-      static serializeBinaryToWriter(message: Discriminator, writer: jspb.BinaryWriter): void;
+      static toObject(
+        includeInstance: boolean,
+        msg: Discriminator
+      ): Discriminator.AsObject;
+      static extensions: {
+        [key: number]: jspb.ExtensionFieldInfo<jspb.Message>;
+      };
+      static extensionsBinary: {
+        [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+      };
+      static serializeBinaryToWriter(
+        message: Discriminator,
+        writer: jspb.BinaryWriter
+      ): void;
       static deserializeBinary(bytes: Uint8Array): Discriminator;
-      static deserializeBinaryFromReader(message: Discriminator, reader: jspb.BinaryReader): Discriminator;
+      static deserializeBinaryFromReader(
+        message: Discriminator,
+        reader: jspb.BinaryReader
+      ): Discriminator;
     }
 
     export namespace Discriminator {
       export type AsObject = {
-        id?: String.AsObject,
-        extension: Array<Extension.AsObject>,
-        type?: ElementDefinition.Slicing.Discriminator.TypeCode.AsObject,
-        path?: String.AsObject,
-      }
+        id?: String.AsObject;
+        extension: Array<Extension.AsObject>;
+        type?: ElementDefinition.Slicing.Discriminator.TypeCode.AsObject;
+        path?: String.AsObject;
+      };
 
       export class TypeCode extends jspb.Message {
         getValue(): proto_r4_core_codes_pb.DiscriminatorTypeCode.ValueMap[keyof proto_r4_core_codes_pb.DiscriminatorTypeCode.ValueMap];
-        setValue(value: proto_r4_core_codes_pb.DiscriminatorTypeCode.ValueMap[keyof proto_r4_core_codes_pb.DiscriminatorTypeCode.ValueMap]): void;
+        setValue(
+          value: proto_r4_core_codes_pb.DiscriminatorTypeCode.ValueMap[keyof proto_r4_core_codes_pb.DiscriminatorTypeCode.ValueMap]
+        ): void;
 
         hasId(): boolean;
         clearId(): void;
@@ -2782,26 +3398,41 @@ export namespace ElementDefinition {
 
         serializeBinary(): Uint8Array;
         toObject(includeInstance?: boolean): TypeCode.AsObject;
-        static toObject(includeInstance: boolean, msg: TypeCode): TypeCode.AsObject;
-        static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-        static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-        static serializeBinaryToWriter(message: TypeCode, writer: jspb.BinaryWriter): void;
+        static toObject(
+          includeInstance: boolean,
+          msg: TypeCode
+        ): TypeCode.AsObject;
+        static extensions: {
+          [key: number]: jspb.ExtensionFieldInfo<jspb.Message>;
+        };
+        static extensionsBinary: {
+          [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+        };
+        static serializeBinaryToWriter(
+          message: TypeCode,
+          writer: jspb.BinaryWriter
+        ): void;
         static deserializeBinary(bytes: Uint8Array): TypeCode;
-        static deserializeBinaryFromReader(message: TypeCode, reader: jspb.BinaryReader): TypeCode;
+        static deserializeBinaryFromReader(
+          message: TypeCode,
+          reader: jspb.BinaryReader
+        ): TypeCode;
       }
 
       export namespace TypeCode {
         export type AsObject = {
-          value: proto_r4_core_codes_pb.DiscriminatorTypeCode.ValueMap[keyof proto_r4_core_codes_pb.DiscriminatorTypeCode.ValueMap],
-          id?: String.AsObject,
-          extension: Array<Extension.AsObject>,
-        }
+          value: proto_r4_core_codes_pb.DiscriminatorTypeCode.ValueMap[keyof proto_r4_core_codes_pb.DiscriminatorTypeCode.ValueMap];
+          id?: String.AsObject;
+          extension: Array<Extension.AsObject>;
+        };
       }
     }
 
     export class RulesCode extends jspb.Message {
       getValue(): proto_r4_core_codes_pb.SlicingRulesCode.ValueMap[keyof proto_r4_core_codes_pb.SlicingRulesCode.ValueMap];
-      setValue(value: proto_r4_core_codes_pb.SlicingRulesCode.ValueMap[keyof proto_r4_core_codes_pb.SlicingRulesCode.ValueMap]): void;
+      setValue(
+        value: proto_r4_core_codes_pb.SlicingRulesCode.ValueMap[keyof proto_r4_core_codes_pb.SlicingRulesCode.ValueMap]
+      ): void;
 
       hasId(): boolean;
       clearId(): void;
@@ -2815,20 +3446,33 @@ export namespace ElementDefinition {
 
       serializeBinary(): Uint8Array;
       toObject(includeInstance?: boolean): RulesCode.AsObject;
-      static toObject(includeInstance: boolean, msg: RulesCode): RulesCode.AsObject;
-      static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-      static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-      static serializeBinaryToWriter(message: RulesCode, writer: jspb.BinaryWriter): void;
+      static toObject(
+        includeInstance: boolean,
+        msg: RulesCode
+      ): RulesCode.AsObject;
+      static extensions: {
+        [key: number]: jspb.ExtensionFieldInfo<jspb.Message>;
+      };
+      static extensionsBinary: {
+        [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+      };
+      static serializeBinaryToWriter(
+        message: RulesCode,
+        writer: jspb.BinaryWriter
+      ): void;
       static deserializeBinary(bytes: Uint8Array): RulesCode;
-      static deserializeBinaryFromReader(message: RulesCode, reader: jspb.BinaryReader): RulesCode;
+      static deserializeBinaryFromReader(
+        message: RulesCode,
+        reader: jspb.BinaryReader
+      ): RulesCode;
     }
 
     export namespace RulesCode {
       export type AsObject = {
-        value: proto_r4_core_codes_pb.SlicingRulesCode.ValueMap[keyof proto_r4_core_codes_pb.SlicingRulesCode.ValueMap],
-        id?: String.AsObject,
-        extension: Array<Extension.AsObject>,
-      }
+        value: proto_r4_core_codes_pb.SlicingRulesCode.ValueMap[keyof proto_r4_core_codes_pb.SlicingRulesCode.ValueMap];
+        id?: String.AsObject;
+        extension: Array<Extension.AsObject>;
+      };
     }
   }
 
@@ -2861,21 +3505,29 @@ export namespace ElementDefinition {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Base.AsObject;
     static toObject(includeInstance: boolean, msg: Base): Base.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: Base, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: Base,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): Base;
-    static deserializeBinaryFromReader(message: Base, reader: jspb.BinaryReader): Base;
+    static deserializeBinaryFromReader(
+      message: Base,
+      reader: jspb.BinaryReader
+    ): Base;
   }
 
   export namespace Base {
     export type AsObject = {
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-      path?: String.AsObject,
-      min?: UnsignedInt.AsObject,
-      max?: String.AsObject,
-    }
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+      path?: String.AsObject;
+      min?: UnsignedInt.AsObject;
+      max?: String.AsObject;
+    };
   }
 
   export class TypeRef extends jspb.Message {
@@ -2906,8 +3558,13 @@ export namespace ElementDefinition {
 
     clearAggregation(): void;
     getAggregation(): Array<ElementDefinition.TypeRef.AggregationCode>;
-    setAggregation(value: Array<ElementDefinition.TypeRef.AggregationCode>): void;
-    addAggregation(value?: ElementDefinition.TypeRef.AggregationCode, index?: number): ElementDefinition.TypeRef.AggregationCode;
+    setAggregation(
+      value: Array<ElementDefinition.TypeRef.AggregationCode>
+    ): void;
+    addAggregation(
+      value?: ElementDefinition.TypeRef.AggregationCode,
+      index?: number
+    ): ElementDefinition.TypeRef.AggregationCode;
 
     hasVersioning(): boolean;
     clearVersioning(): void;
@@ -2917,27 +3574,37 @@ export namespace ElementDefinition {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TypeRef.AsObject;
     static toObject(includeInstance: boolean, msg: TypeRef): TypeRef.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: TypeRef, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: TypeRef,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): TypeRef;
-    static deserializeBinaryFromReader(message: TypeRef, reader: jspb.BinaryReader): TypeRef;
+    static deserializeBinaryFromReader(
+      message: TypeRef,
+      reader: jspb.BinaryReader
+    ): TypeRef;
   }
 
   export namespace TypeRef {
     export type AsObject = {
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-      code?: Uri.AsObject,
-      profile: Array<Canonical.AsObject>,
-      targetProfile: Array<Canonical.AsObject>,
-      aggregation: Array<ElementDefinition.TypeRef.AggregationCode.AsObject>,
-      versioning?: ElementDefinition.TypeRef.VersioningCode.AsObject,
-    }
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+      code?: Uri.AsObject;
+      profile: Array<Canonical.AsObject>;
+      targetProfile: Array<Canonical.AsObject>;
+      aggregation: Array<ElementDefinition.TypeRef.AggregationCode.AsObject>;
+      versioning?: ElementDefinition.TypeRef.VersioningCode.AsObject;
+    };
 
     export class AggregationCode extends jspb.Message {
       getValue(): proto_r4_core_codes_pb.AggregationModeCode.ValueMap[keyof proto_r4_core_codes_pb.AggregationModeCode.ValueMap];
-      setValue(value: proto_r4_core_codes_pb.AggregationModeCode.ValueMap[keyof proto_r4_core_codes_pb.AggregationModeCode.ValueMap]): void;
+      setValue(
+        value: proto_r4_core_codes_pb.AggregationModeCode.ValueMap[keyof proto_r4_core_codes_pb.AggregationModeCode.ValueMap]
+      ): void;
 
       hasId(): boolean;
       clearId(): void;
@@ -2951,25 +3618,40 @@ export namespace ElementDefinition {
 
       serializeBinary(): Uint8Array;
       toObject(includeInstance?: boolean): AggregationCode.AsObject;
-      static toObject(includeInstance: boolean, msg: AggregationCode): AggregationCode.AsObject;
-      static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-      static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-      static serializeBinaryToWriter(message: AggregationCode, writer: jspb.BinaryWriter): void;
+      static toObject(
+        includeInstance: boolean,
+        msg: AggregationCode
+      ): AggregationCode.AsObject;
+      static extensions: {
+        [key: number]: jspb.ExtensionFieldInfo<jspb.Message>;
+      };
+      static extensionsBinary: {
+        [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+      };
+      static serializeBinaryToWriter(
+        message: AggregationCode,
+        writer: jspb.BinaryWriter
+      ): void;
       static deserializeBinary(bytes: Uint8Array): AggregationCode;
-      static deserializeBinaryFromReader(message: AggregationCode, reader: jspb.BinaryReader): AggregationCode;
+      static deserializeBinaryFromReader(
+        message: AggregationCode,
+        reader: jspb.BinaryReader
+      ): AggregationCode;
     }
 
     export namespace AggregationCode {
       export type AsObject = {
-        value: proto_r4_core_codes_pb.AggregationModeCode.ValueMap[keyof proto_r4_core_codes_pb.AggregationModeCode.ValueMap],
-        id?: String.AsObject,
-        extension: Array<Extension.AsObject>,
-      }
+        value: proto_r4_core_codes_pb.AggregationModeCode.ValueMap[keyof proto_r4_core_codes_pb.AggregationModeCode.ValueMap];
+        id?: String.AsObject;
+        extension: Array<Extension.AsObject>;
+      };
     }
 
     export class VersioningCode extends jspb.Message {
       getValue(): proto_r4_core_codes_pb.ReferenceVersionRulesCode.ValueMap[keyof proto_r4_core_codes_pb.ReferenceVersionRulesCode.ValueMap];
-      setValue(value: proto_r4_core_codes_pb.ReferenceVersionRulesCode.ValueMap[keyof proto_r4_core_codes_pb.ReferenceVersionRulesCode.ValueMap]): void;
+      setValue(
+        value: proto_r4_core_codes_pb.ReferenceVersionRulesCode.ValueMap[keyof proto_r4_core_codes_pb.ReferenceVersionRulesCode.ValueMap]
+      ): void;
 
       hasId(): boolean;
       clearId(): void;
@@ -2983,20 +3665,33 @@ export namespace ElementDefinition {
 
       serializeBinary(): Uint8Array;
       toObject(includeInstance?: boolean): VersioningCode.AsObject;
-      static toObject(includeInstance: boolean, msg: VersioningCode): VersioningCode.AsObject;
-      static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-      static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-      static serializeBinaryToWriter(message: VersioningCode, writer: jspb.BinaryWriter): void;
+      static toObject(
+        includeInstance: boolean,
+        msg: VersioningCode
+      ): VersioningCode.AsObject;
+      static extensions: {
+        [key: number]: jspb.ExtensionFieldInfo<jspb.Message>;
+      };
+      static extensionsBinary: {
+        [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+      };
+      static serializeBinaryToWriter(
+        message: VersioningCode,
+        writer: jspb.BinaryWriter
+      ): void;
       static deserializeBinary(bytes: Uint8Array): VersioningCode;
-      static deserializeBinaryFromReader(message: VersioningCode, reader: jspb.BinaryReader): VersioningCode;
+      static deserializeBinaryFromReader(
+        message: VersioningCode,
+        reader: jspb.BinaryReader
+      ): VersioningCode;
     }
 
     export namespace VersioningCode {
       export type AsObject = {
-        value: proto_r4_core_codes_pb.ReferenceVersionRulesCode.ValueMap[keyof proto_r4_core_codes_pb.ReferenceVersionRulesCode.ValueMap],
-        id?: String.AsObject,
-        extension: Array<Extension.AsObject>,
-      }
+        value: proto_r4_core_codes_pb.ReferenceVersionRulesCode.ValueMap[keyof proto_r4_core_codes_pb.ReferenceVersionRulesCode.ValueMap];
+        id?: String.AsObject;
+        extension: Array<Extension.AsObject>;
+      };
     }
   }
 
@@ -3254,67 +3949,78 @@ export namespace ElementDefinition {
     getChoiceCase(): DefaultValueX.ChoiceCase;
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): DefaultValueX.AsObject;
-    static toObject(includeInstance: boolean, msg: DefaultValueX): DefaultValueX.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: DefaultValueX, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: DefaultValueX
+    ): DefaultValueX.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: DefaultValueX,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): DefaultValueX;
-    static deserializeBinaryFromReader(message: DefaultValueX, reader: jspb.BinaryReader): DefaultValueX;
+    static deserializeBinaryFromReader(
+      message: DefaultValueX,
+      reader: jspb.BinaryReader
+    ): DefaultValueX;
   }
 
   export namespace DefaultValueX {
     export type AsObject = {
-      base64Binary?: Base64Binary.AsObject,
-      pb_boolean?: Boolean.AsObject,
-      canonical?: Canonical.AsObject,
-      code?: Code.AsObject,
-      date?: Date.AsObject,
-      dateTime?: DateTime.AsObject,
-      decimal?: Decimal.AsObject,
-      id?: Id.AsObject,
-      instant?: Instant.AsObject,
-      integer?: Integer.AsObject,
-      markdown?: Markdown.AsObject,
-      oid?: Oid.AsObject,
-      positiveInt?: PositiveInt.AsObject,
-      stringValue?: String.AsObject,
-      time?: Time.AsObject,
-      unsignedInt?: UnsignedInt.AsObject,
-      uri?: Uri.AsObject,
-      url?: Url.AsObject,
-      uuid?: Uuid.AsObject,
-      address?: Address.AsObject,
-      age?: Age.AsObject,
-      annotation?: Annotation.AsObject,
-      attachment?: Attachment.AsObject,
-      codeableConcept?: CodeableConcept.AsObject,
-      coding?: Coding.AsObject,
-      contactPoint?: ContactPoint.AsObject,
-      count?: Count.AsObject,
-      distance?: Distance.AsObject,
-      duration?: Duration.AsObject,
-      humanName?: HumanName.AsObject,
-      identifier?: Identifier.AsObject,
-      money?: Money.AsObject,
-      period?: Period.AsObject,
-      quantity?: Quantity.AsObject,
-      range?: Range.AsObject,
-      ratio?: Ratio.AsObject,
-      reference?: Reference.AsObject,
-      sampledData?: SampledData.AsObject,
-      signature?: Signature.AsObject,
-      timing?: Timing.AsObject,
-      contactDetail?: ContactDetail.AsObject,
-      contributor?: Contributor.AsObject,
-      dataRequirement?: DataRequirement.AsObject,
-      expression?: Expression.AsObject,
-      parameterDefinition?: ParameterDefinition.AsObject,
-      relatedArtifact?: RelatedArtifact.AsObject,
-      triggerDefinition?: TriggerDefinition.AsObject,
-      usageContext?: UsageContext.AsObject,
-      dosage?: Dosage.AsObject,
-      meta?: Meta.AsObject,
-    }
+      base64Binary?: Base64Binary.AsObject;
+      pb_boolean?: Boolean.AsObject;
+      canonical?: Canonical.AsObject;
+      code?: Code.AsObject;
+      date?: Date.AsObject;
+      dateTime?: DateTime.AsObject;
+      decimal?: Decimal.AsObject;
+      id?: Id.AsObject;
+      instant?: Instant.AsObject;
+      integer?: Integer.AsObject;
+      markdown?: Markdown.AsObject;
+      oid?: Oid.AsObject;
+      positiveInt?: PositiveInt.AsObject;
+      stringValue?: String.AsObject;
+      time?: Time.AsObject;
+      unsignedInt?: UnsignedInt.AsObject;
+      uri?: Uri.AsObject;
+      url?: Url.AsObject;
+      uuid?: Uuid.AsObject;
+      address?: Address.AsObject;
+      age?: Age.AsObject;
+      annotation?: Annotation.AsObject;
+      attachment?: Attachment.AsObject;
+      codeableConcept?: CodeableConcept.AsObject;
+      coding?: Coding.AsObject;
+      contactPoint?: ContactPoint.AsObject;
+      count?: Count.AsObject;
+      distance?: Distance.AsObject;
+      duration?: Duration.AsObject;
+      humanName?: HumanName.AsObject;
+      identifier?: Identifier.AsObject;
+      money?: Money.AsObject;
+      period?: Period.AsObject;
+      quantity?: Quantity.AsObject;
+      range?: Range.AsObject;
+      ratio?: Ratio.AsObject;
+      reference?: Reference.AsObject;
+      sampledData?: SampledData.AsObject;
+      signature?: Signature.AsObject;
+      timing?: Timing.AsObject;
+      contactDetail?: ContactDetail.AsObject;
+      contributor?: Contributor.AsObject;
+      dataRequirement?: DataRequirement.AsObject;
+      expression?: Expression.AsObject;
+      parameterDefinition?: ParameterDefinition.AsObject;
+      relatedArtifact?: RelatedArtifact.AsObject;
+      triggerDefinition?: TriggerDefinition.AsObject;
+      usageContext?: UsageContext.AsObject;
+      dosage?: Dosage.AsObject;
+      meta?: Meta.AsObject;
+    };
 
     export enum ChoiceCase {
       CHOICE_NOT_SET = 0,
@@ -3626,66 +4332,74 @@ export namespace ElementDefinition {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): FixedX.AsObject;
     static toObject(includeInstance: boolean, msg: FixedX): FixedX.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: FixedX, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: FixedX,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): FixedX;
-    static deserializeBinaryFromReader(message: FixedX, reader: jspb.BinaryReader): FixedX;
+    static deserializeBinaryFromReader(
+      message: FixedX,
+      reader: jspb.BinaryReader
+    ): FixedX;
   }
 
   export namespace FixedX {
     export type AsObject = {
-      base64Binary?: Base64Binary.AsObject,
-      pb_boolean?: Boolean.AsObject,
-      canonical?: Canonical.AsObject,
-      code?: Code.AsObject,
-      date?: Date.AsObject,
-      dateTime?: DateTime.AsObject,
-      decimal?: Decimal.AsObject,
-      id?: Id.AsObject,
-      instant?: Instant.AsObject,
-      integer?: Integer.AsObject,
-      markdown?: Markdown.AsObject,
-      oid?: Oid.AsObject,
-      positiveInt?: PositiveInt.AsObject,
-      stringValue?: String.AsObject,
-      time?: Time.AsObject,
-      unsignedInt?: UnsignedInt.AsObject,
-      uri?: Uri.AsObject,
-      url?: Url.AsObject,
-      uuid?: Uuid.AsObject,
-      address?: Address.AsObject,
-      age?: Age.AsObject,
-      annotation?: Annotation.AsObject,
-      attachment?: Attachment.AsObject,
-      codeableConcept?: CodeableConcept.AsObject,
-      coding?: Coding.AsObject,
-      contactPoint?: ContactPoint.AsObject,
-      count?: Count.AsObject,
-      distance?: Distance.AsObject,
-      duration?: Duration.AsObject,
-      humanName?: HumanName.AsObject,
-      identifier?: Identifier.AsObject,
-      money?: Money.AsObject,
-      period?: Period.AsObject,
-      quantity?: Quantity.AsObject,
-      range?: Range.AsObject,
-      ratio?: Ratio.AsObject,
-      reference?: Reference.AsObject,
-      sampledData?: SampledData.AsObject,
-      signature?: Signature.AsObject,
-      timing?: Timing.AsObject,
-      contactDetail?: ContactDetail.AsObject,
-      contributor?: Contributor.AsObject,
-      dataRequirement?: DataRequirement.AsObject,
-      expression?: Expression.AsObject,
-      parameterDefinition?: ParameterDefinition.AsObject,
-      relatedArtifact?: RelatedArtifact.AsObject,
-      triggerDefinition?: TriggerDefinition.AsObject,
-      usageContext?: UsageContext.AsObject,
-      dosage?: Dosage.AsObject,
-      meta?: Meta.AsObject,
-    }
+      base64Binary?: Base64Binary.AsObject;
+      pb_boolean?: Boolean.AsObject;
+      canonical?: Canonical.AsObject;
+      code?: Code.AsObject;
+      date?: Date.AsObject;
+      dateTime?: DateTime.AsObject;
+      decimal?: Decimal.AsObject;
+      id?: Id.AsObject;
+      instant?: Instant.AsObject;
+      integer?: Integer.AsObject;
+      markdown?: Markdown.AsObject;
+      oid?: Oid.AsObject;
+      positiveInt?: PositiveInt.AsObject;
+      stringValue?: String.AsObject;
+      time?: Time.AsObject;
+      unsignedInt?: UnsignedInt.AsObject;
+      uri?: Uri.AsObject;
+      url?: Url.AsObject;
+      uuid?: Uuid.AsObject;
+      address?: Address.AsObject;
+      age?: Age.AsObject;
+      annotation?: Annotation.AsObject;
+      attachment?: Attachment.AsObject;
+      codeableConcept?: CodeableConcept.AsObject;
+      coding?: Coding.AsObject;
+      contactPoint?: ContactPoint.AsObject;
+      count?: Count.AsObject;
+      distance?: Distance.AsObject;
+      duration?: Duration.AsObject;
+      humanName?: HumanName.AsObject;
+      identifier?: Identifier.AsObject;
+      money?: Money.AsObject;
+      period?: Period.AsObject;
+      quantity?: Quantity.AsObject;
+      range?: Range.AsObject;
+      ratio?: Ratio.AsObject;
+      reference?: Reference.AsObject;
+      sampledData?: SampledData.AsObject;
+      signature?: Signature.AsObject;
+      timing?: Timing.AsObject;
+      contactDetail?: ContactDetail.AsObject;
+      contributor?: Contributor.AsObject;
+      dataRequirement?: DataRequirement.AsObject;
+      expression?: Expression.AsObject;
+      parameterDefinition?: ParameterDefinition.AsObject;
+      relatedArtifact?: RelatedArtifact.AsObject;
+      triggerDefinition?: TriggerDefinition.AsObject;
+      usageContext?: UsageContext.AsObject;
+      dosage?: Dosage.AsObject;
+      meta?: Meta.AsObject;
+    };
 
     export enum ChoiceCase {
       CHOICE_NOT_SET = 0,
@@ -3997,66 +4711,74 @@ export namespace ElementDefinition {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): PatternX.AsObject;
     static toObject(includeInstance: boolean, msg: PatternX): PatternX.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: PatternX, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: PatternX,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): PatternX;
-    static deserializeBinaryFromReader(message: PatternX, reader: jspb.BinaryReader): PatternX;
+    static deserializeBinaryFromReader(
+      message: PatternX,
+      reader: jspb.BinaryReader
+    ): PatternX;
   }
 
   export namespace PatternX {
     export type AsObject = {
-      base64Binary?: Base64Binary.AsObject,
-      pb_boolean?: Boolean.AsObject,
-      canonical?: Canonical.AsObject,
-      code?: Code.AsObject,
-      date?: Date.AsObject,
-      dateTime?: DateTime.AsObject,
-      decimal?: Decimal.AsObject,
-      id?: Id.AsObject,
-      instant?: Instant.AsObject,
-      integer?: Integer.AsObject,
-      markdown?: Markdown.AsObject,
-      oid?: Oid.AsObject,
-      positiveInt?: PositiveInt.AsObject,
-      stringValue?: String.AsObject,
-      time?: Time.AsObject,
-      unsignedInt?: UnsignedInt.AsObject,
-      uri?: Uri.AsObject,
-      url?: Url.AsObject,
-      uuid?: Uuid.AsObject,
-      address?: Address.AsObject,
-      age?: Age.AsObject,
-      annotation?: Annotation.AsObject,
-      attachment?: Attachment.AsObject,
-      codeableConcept?: CodeableConcept.AsObject,
-      coding?: Coding.AsObject,
-      contactPoint?: ContactPoint.AsObject,
-      count?: Count.AsObject,
-      distance?: Distance.AsObject,
-      duration?: Duration.AsObject,
-      humanName?: HumanName.AsObject,
-      identifier?: Identifier.AsObject,
-      money?: Money.AsObject,
-      period?: Period.AsObject,
-      quantity?: Quantity.AsObject,
-      range?: Range.AsObject,
-      ratio?: Ratio.AsObject,
-      reference?: Reference.AsObject,
-      sampledData?: SampledData.AsObject,
-      signature?: Signature.AsObject,
-      timing?: Timing.AsObject,
-      contactDetail?: ContactDetail.AsObject,
-      contributor?: Contributor.AsObject,
-      dataRequirement?: DataRequirement.AsObject,
-      expression?: Expression.AsObject,
-      parameterDefinition?: ParameterDefinition.AsObject,
-      relatedArtifact?: RelatedArtifact.AsObject,
-      triggerDefinition?: TriggerDefinition.AsObject,
-      usageContext?: UsageContext.AsObject,
-      dosage?: Dosage.AsObject,
-      meta?: Meta.AsObject,
-    }
+      base64Binary?: Base64Binary.AsObject;
+      pb_boolean?: Boolean.AsObject;
+      canonical?: Canonical.AsObject;
+      code?: Code.AsObject;
+      date?: Date.AsObject;
+      dateTime?: DateTime.AsObject;
+      decimal?: Decimal.AsObject;
+      id?: Id.AsObject;
+      instant?: Instant.AsObject;
+      integer?: Integer.AsObject;
+      markdown?: Markdown.AsObject;
+      oid?: Oid.AsObject;
+      positiveInt?: PositiveInt.AsObject;
+      stringValue?: String.AsObject;
+      time?: Time.AsObject;
+      unsignedInt?: UnsignedInt.AsObject;
+      uri?: Uri.AsObject;
+      url?: Url.AsObject;
+      uuid?: Uuid.AsObject;
+      address?: Address.AsObject;
+      age?: Age.AsObject;
+      annotation?: Annotation.AsObject;
+      attachment?: Attachment.AsObject;
+      codeableConcept?: CodeableConcept.AsObject;
+      coding?: Coding.AsObject;
+      contactPoint?: ContactPoint.AsObject;
+      count?: Count.AsObject;
+      distance?: Distance.AsObject;
+      duration?: Duration.AsObject;
+      humanName?: HumanName.AsObject;
+      identifier?: Identifier.AsObject;
+      money?: Money.AsObject;
+      period?: Period.AsObject;
+      quantity?: Quantity.AsObject;
+      range?: Range.AsObject;
+      ratio?: Ratio.AsObject;
+      reference?: Reference.AsObject;
+      sampledData?: SampledData.AsObject;
+      signature?: Signature.AsObject;
+      timing?: Timing.AsObject;
+      contactDetail?: ContactDetail.AsObject;
+      contributor?: Contributor.AsObject;
+      dataRequirement?: DataRequirement.AsObject;
+      expression?: Expression.AsObject;
+      parameterDefinition?: ParameterDefinition.AsObject;
+      relatedArtifact?: RelatedArtifact.AsObject;
+      triggerDefinition?: TriggerDefinition.AsObject;
+      usageContext?: UsageContext.AsObject;
+      dosage?: Dosage.AsObject;
+      meta?: Meta.AsObject;
+    };
 
     export enum ChoiceCase {
       CHOICE_NOT_SET = 0,
@@ -4137,20 +4859,28 @@ export namespace ElementDefinition {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Example.AsObject;
     static toObject(includeInstance: boolean, msg: Example): Example.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: Example, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: Example,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): Example;
-    static deserializeBinaryFromReader(message: Example, reader: jspb.BinaryReader): Example;
+    static deserializeBinaryFromReader(
+      message: Example,
+      reader: jspb.BinaryReader
+    ): Example;
   }
 
   export namespace Example {
     export type AsObject = {
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-      label?: String.AsObject,
-      value?: ElementDefinition.Example.ValueX.AsObject,
-    }
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+      label?: String.AsObject;
+      value?: ElementDefinition.Example.ValueX.AsObject;
+    };
 
     export class ValueX extends jspb.Message {
       hasBase64Binary(): boolean;
@@ -4407,66 +5137,76 @@ export namespace ElementDefinition {
       serializeBinary(): Uint8Array;
       toObject(includeInstance?: boolean): ValueX.AsObject;
       static toObject(includeInstance: boolean, msg: ValueX): ValueX.AsObject;
-      static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-      static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-      static serializeBinaryToWriter(message: ValueX, writer: jspb.BinaryWriter): void;
+      static extensions: {
+        [key: number]: jspb.ExtensionFieldInfo<jspb.Message>;
+      };
+      static extensionsBinary: {
+        [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+      };
+      static serializeBinaryToWriter(
+        message: ValueX,
+        writer: jspb.BinaryWriter
+      ): void;
       static deserializeBinary(bytes: Uint8Array): ValueX;
-      static deserializeBinaryFromReader(message: ValueX, reader: jspb.BinaryReader): ValueX;
+      static deserializeBinaryFromReader(
+        message: ValueX,
+        reader: jspb.BinaryReader
+      ): ValueX;
     }
 
     export namespace ValueX {
       export type AsObject = {
-        base64Binary?: Base64Binary.AsObject,
-        pb_boolean?: Boolean.AsObject,
-        canonical?: Canonical.AsObject,
-        code?: Code.AsObject,
-        date?: Date.AsObject,
-        dateTime?: DateTime.AsObject,
-        decimal?: Decimal.AsObject,
-        id?: Id.AsObject,
-        instant?: Instant.AsObject,
-        integer?: Integer.AsObject,
-        markdown?: Markdown.AsObject,
-        oid?: Oid.AsObject,
-        positiveInt?: PositiveInt.AsObject,
-        stringValue?: String.AsObject,
-        time?: Time.AsObject,
-        unsignedInt?: UnsignedInt.AsObject,
-        uri?: Uri.AsObject,
-        url?: Url.AsObject,
-        uuid?: Uuid.AsObject,
-        address?: Address.AsObject,
-        age?: Age.AsObject,
-        annotation?: Annotation.AsObject,
-        attachment?: Attachment.AsObject,
-        codeableConcept?: CodeableConcept.AsObject,
-        coding?: Coding.AsObject,
-        contactPoint?: ContactPoint.AsObject,
-        count?: Count.AsObject,
-        distance?: Distance.AsObject,
-        duration?: Duration.AsObject,
-        humanName?: HumanName.AsObject,
-        identifier?: Identifier.AsObject,
-        money?: Money.AsObject,
-        period?: Period.AsObject,
-        quantity?: Quantity.AsObject,
-        range?: Range.AsObject,
-        ratio?: Ratio.AsObject,
-        reference?: Reference.AsObject,
-        sampledData?: SampledData.AsObject,
-        signature?: Signature.AsObject,
-        timing?: Timing.AsObject,
-        contactDetail?: ContactDetail.AsObject,
-        contributor?: Contributor.AsObject,
-        dataRequirement?: DataRequirement.AsObject,
-        expression?: Expression.AsObject,
-        parameterDefinition?: ParameterDefinition.AsObject,
-        relatedArtifact?: RelatedArtifact.AsObject,
-        triggerDefinition?: TriggerDefinition.AsObject,
-        usageContext?: UsageContext.AsObject,
-        dosage?: Dosage.AsObject,
-        meta?: Meta.AsObject,
-      }
+        base64Binary?: Base64Binary.AsObject;
+        pb_boolean?: Boolean.AsObject;
+        canonical?: Canonical.AsObject;
+        code?: Code.AsObject;
+        date?: Date.AsObject;
+        dateTime?: DateTime.AsObject;
+        decimal?: Decimal.AsObject;
+        id?: Id.AsObject;
+        instant?: Instant.AsObject;
+        integer?: Integer.AsObject;
+        markdown?: Markdown.AsObject;
+        oid?: Oid.AsObject;
+        positiveInt?: PositiveInt.AsObject;
+        stringValue?: String.AsObject;
+        time?: Time.AsObject;
+        unsignedInt?: UnsignedInt.AsObject;
+        uri?: Uri.AsObject;
+        url?: Url.AsObject;
+        uuid?: Uuid.AsObject;
+        address?: Address.AsObject;
+        age?: Age.AsObject;
+        annotation?: Annotation.AsObject;
+        attachment?: Attachment.AsObject;
+        codeableConcept?: CodeableConcept.AsObject;
+        coding?: Coding.AsObject;
+        contactPoint?: ContactPoint.AsObject;
+        count?: Count.AsObject;
+        distance?: Distance.AsObject;
+        duration?: Duration.AsObject;
+        humanName?: HumanName.AsObject;
+        identifier?: Identifier.AsObject;
+        money?: Money.AsObject;
+        period?: Period.AsObject;
+        quantity?: Quantity.AsObject;
+        range?: Range.AsObject;
+        ratio?: Ratio.AsObject;
+        reference?: Reference.AsObject;
+        sampledData?: SampledData.AsObject;
+        signature?: Signature.AsObject;
+        timing?: Timing.AsObject;
+        contactDetail?: ContactDetail.AsObject;
+        contributor?: Contributor.AsObject;
+        dataRequirement?: DataRequirement.AsObject;
+        expression?: Expression.AsObject;
+        parameterDefinition?: ParameterDefinition.AsObject;
+        relatedArtifact?: RelatedArtifact.AsObject;
+        triggerDefinition?: TriggerDefinition.AsObject;
+        usageContext?: UsageContext.AsObject;
+        dosage?: Dosage.AsObject;
+        meta?: Meta.AsObject;
+      };
 
       export enum ChoiceCase {
         CHOICE_NOT_SET = 0,
@@ -4573,26 +5313,37 @@ export namespace ElementDefinition {
     getChoiceCase(): MinValueX.ChoiceCase;
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): MinValueX.AsObject;
-    static toObject(includeInstance: boolean, msg: MinValueX): MinValueX.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: MinValueX, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: MinValueX
+    ): MinValueX.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: MinValueX,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): MinValueX;
-    static deserializeBinaryFromReader(message: MinValueX, reader: jspb.BinaryReader): MinValueX;
+    static deserializeBinaryFromReader(
+      message: MinValueX,
+      reader: jspb.BinaryReader
+    ): MinValueX;
   }
 
   export namespace MinValueX {
     export type AsObject = {
-      date?: Date.AsObject,
-      dateTime?: DateTime.AsObject,
-      instant?: Instant.AsObject,
-      time?: Time.AsObject,
-      decimal?: Decimal.AsObject,
-      integer?: Integer.AsObject,
-      positiveInt?: PositiveInt.AsObject,
-      unsignedInt?: UnsignedInt.AsObject,
-      quantity?: Quantity.AsObject,
-    }
+      date?: Date.AsObject;
+      dateTime?: DateTime.AsObject;
+      instant?: Instant.AsObject;
+      time?: Time.AsObject;
+      decimal?: Decimal.AsObject;
+      integer?: Integer.AsObject;
+      positiveInt?: PositiveInt.AsObject;
+      unsignedInt?: UnsignedInt.AsObject;
+      quantity?: Quantity.AsObject;
+    };
 
     export enum ChoiceCase {
       CHOICE_NOT_SET = 0,
@@ -4657,26 +5408,37 @@ export namespace ElementDefinition {
     getChoiceCase(): MaxValueX.ChoiceCase;
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): MaxValueX.AsObject;
-    static toObject(includeInstance: boolean, msg: MaxValueX): MaxValueX.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: MaxValueX, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: MaxValueX
+    ): MaxValueX.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: MaxValueX,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): MaxValueX;
-    static deserializeBinaryFromReader(message: MaxValueX, reader: jspb.BinaryReader): MaxValueX;
+    static deserializeBinaryFromReader(
+      message: MaxValueX,
+      reader: jspb.BinaryReader
+    ): MaxValueX;
   }
 
   export namespace MaxValueX {
     export type AsObject = {
-      date?: Date.AsObject,
-      dateTime?: DateTime.AsObject,
-      instant?: Instant.AsObject,
-      time?: Time.AsObject,
-      decimal?: Decimal.AsObject,
-      integer?: Integer.AsObject,
-      positiveInt?: PositiveInt.AsObject,
-      unsignedInt?: UnsignedInt.AsObject,
-      quantity?: Quantity.AsObject,
-    }
+      date?: Date.AsObject;
+      dateTime?: DateTime.AsObject;
+      instant?: Instant.AsObject;
+      time?: Time.AsObject;
+      decimal?: Decimal.AsObject;
+      integer?: Integer.AsObject;
+      positiveInt?: PositiveInt.AsObject;
+      unsignedInt?: UnsignedInt.AsObject;
+      quantity?: Quantity.AsObject;
+    };
 
     export enum ChoiceCase {
       CHOICE_NOT_SET = 0,
@@ -4740,30 +5502,43 @@ export namespace ElementDefinition {
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Constraint.AsObject;
-    static toObject(includeInstance: boolean, msg: Constraint): Constraint.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: Constraint, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: Constraint
+    ): Constraint.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: Constraint,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): Constraint;
-    static deserializeBinaryFromReader(message: Constraint, reader: jspb.BinaryReader): Constraint;
+    static deserializeBinaryFromReader(
+      message: Constraint,
+      reader: jspb.BinaryReader
+    ): Constraint;
   }
 
   export namespace Constraint {
     export type AsObject = {
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-      key?: Id.AsObject,
-      requirements?: String.AsObject,
-      severity?: ElementDefinition.Constraint.SeverityCode.AsObject,
-      human?: String.AsObject,
-      expression?: String.AsObject,
-      xpath?: String.AsObject,
-      source?: Canonical.AsObject,
-    }
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+      key?: Id.AsObject;
+      requirements?: String.AsObject;
+      severity?: ElementDefinition.Constraint.SeverityCode.AsObject;
+      human?: String.AsObject;
+      expression?: String.AsObject;
+      xpath?: String.AsObject;
+      source?: Canonical.AsObject;
+    };
 
     export class SeverityCode extends jspb.Message {
       getValue(): proto_r4_core_codes_pb.ConstraintSeverityCode.ValueMap[keyof proto_r4_core_codes_pb.ConstraintSeverityCode.ValueMap];
-      setValue(value: proto_r4_core_codes_pb.ConstraintSeverityCode.ValueMap[keyof proto_r4_core_codes_pb.ConstraintSeverityCode.ValueMap]): void;
+      setValue(
+        value: proto_r4_core_codes_pb.ConstraintSeverityCode.ValueMap[keyof proto_r4_core_codes_pb.ConstraintSeverityCode.ValueMap]
+      ): void;
 
       hasId(): boolean;
       clearId(): void;
@@ -4777,20 +5552,33 @@ export namespace ElementDefinition {
 
       serializeBinary(): Uint8Array;
       toObject(includeInstance?: boolean): SeverityCode.AsObject;
-      static toObject(includeInstance: boolean, msg: SeverityCode): SeverityCode.AsObject;
-      static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-      static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-      static serializeBinaryToWriter(message: SeverityCode, writer: jspb.BinaryWriter): void;
+      static toObject(
+        includeInstance: boolean,
+        msg: SeverityCode
+      ): SeverityCode.AsObject;
+      static extensions: {
+        [key: number]: jspb.ExtensionFieldInfo<jspb.Message>;
+      };
+      static extensionsBinary: {
+        [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+      };
+      static serializeBinaryToWriter(
+        message: SeverityCode,
+        writer: jspb.BinaryWriter
+      ): void;
       static deserializeBinary(bytes: Uint8Array): SeverityCode;
-      static deserializeBinaryFromReader(message: SeverityCode, reader: jspb.BinaryReader): SeverityCode;
+      static deserializeBinaryFromReader(
+        message: SeverityCode,
+        reader: jspb.BinaryReader
+      ): SeverityCode;
     }
 
     export namespace SeverityCode {
       export type AsObject = {
-        value: proto_r4_core_codes_pb.ConstraintSeverityCode.ValueMap[keyof proto_r4_core_codes_pb.ConstraintSeverityCode.ValueMap],
-        id?: String.AsObject,
-        extension: Array<Extension.AsObject>,
-      }
+        value: proto_r4_core_codes_pb.ConstraintSeverityCode.ValueMap[keyof proto_r4_core_codes_pb.ConstraintSeverityCode.ValueMap];
+        id?: String.AsObject;
+        extension: Array<Extension.AsObject>;
+      };
     }
   }
 
@@ -4807,8 +5595,12 @@ export namespace ElementDefinition {
 
     hasStrength(): boolean;
     clearStrength(): void;
-    getStrength(): ElementDefinition.ElementDefinitionBinding.StrengthCode | undefined;
-    setStrength(value?: ElementDefinition.ElementDefinitionBinding.StrengthCode): void;
+    getStrength():
+      | ElementDefinition.ElementDefinitionBinding.StrengthCode
+      | undefined;
+    setStrength(
+      value?: ElementDefinition.ElementDefinitionBinding.StrengthCode
+    ): void;
 
     hasDescription(): boolean;
     clearDescription(): void;
@@ -4822,26 +5614,39 @@ export namespace ElementDefinition {
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): ElementDefinitionBinding.AsObject;
-    static toObject(includeInstance: boolean, msg: ElementDefinitionBinding): ElementDefinitionBinding.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: ElementDefinitionBinding, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: ElementDefinitionBinding
+    ): ElementDefinitionBinding.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: ElementDefinitionBinding,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): ElementDefinitionBinding;
-    static deserializeBinaryFromReader(message: ElementDefinitionBinding, reader: jspb.BinaryReader): ElementDefinitionBinding;
+    static deserializeBinaryFromReader(
+      message: ElementDefinitionBinding,
+      reader: jspb.BinaryReader
+    ): ElementDefinitionBinding;
   }
 
   export namespace ElementDefinitionBinding {
     export type AsObject = {
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-      strength?: ElementDefinition.ElementDefinitionBinding.StrengthCode.AsObject,
-      description?: String.AsObject,
-      valueSet?: Canonical.AsObject,
-    }
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+      strength?: ElementDefinition.ElementDefinitionBinding.StrengthCode.AsObject;
+      description?: String.AsObject;
+      valueSet?: Canonical.AsObject;
+    };
 
     export class StrengthCode extends jspb.Message {
       getValue(): proto_r4_core_codes_pb.BindingStrengthCode.ValueMap[keyof proto_r4_core_codes_pb.BindingStrengthCode.ValueMap];
-      setValue(value: proto_r4_core_codes_pb.BindingStrengthCode.ValueMap[keyof proto_r4_core_codes_pb.BindingStrengthCode.ValueMap]): void;
+      setValue(
+        value: proto_r4_core_codes_pb.BindingStrengthCode.ValueMap[keyof proto_r4_core_codes_pb.BindingStrengthCode.ValueMap]
+      ): void;
 
       hasId(): boolean;
       clearId(): void;
@@ -4855,20 +5660,33 @@ export namespace ElementDefinition {
 
       serializeBinary(): Uint8Array;
       toObject(includeInstance?: boolean): StrengthCode.AsObject;
-      static toObject(includeInstance: boolean, msg: StrengthCode): StrengthCode.AsObject;
-      static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-      static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-      static serializeBinaryToWriter(message: StrengthCode, writer: jspb.BinaryWriter): void;
+      static toObject(
+        includeInstance: boolean,
+        msg: StrengthCode
+      ): StrengthCode.AsObject;
+      static extensions: {
+        [key: number]: jspb.ExtensionFieldInfo<jspb.Message>;
+      };
+      static extensionsBinary: {
+        [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+      };
+      static serializeBinaryToWriter(
+        message: StrengthCode,
+        writer: jspb.BinaryWriter
+      ): void;
       static deserializeBinary(bytes: Uint8Array): StrengthCode;
-      static deserializeBinaryFromReader(message: StrengthCode, reader: jspb.BinaryReader): StrengthCode;
+      static deserializeBinaryFromReader(
+        message: StrengthCode,
+        reader: jspb.BinaryReader
+      ): StrengthCode;
     }
 
     export namespace StrengthCode {
       export type AsObject = {
-        value: proto_r4_core_codes_pb.BindingStrengthCode.ValueMap[keyof proto_r4_core_codes_pb.BindingStrengthCode.ValueMap],
-        id?: String.AsObject,
-        extension: Array<Extension.AsObject>,
-      }
+        value: proto_r4_core_codes_pb.BindingStrengthCode.ValueMap[keyof proto_r4_core_codes_pb.BindingStrengthCode.ValueMap];
+        id?: String.AsObject;
+        extension: Array<Extension.AsObject>;
+      };
     }
   }
 
@@ -4906,22 +5724,30 @@ export namespace ElementDefinition {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Mapping.AsObject;
     static toObject(includeInstance: boolean, msg: Mapping): Mapping.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: Mapping, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: Mapping,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): Mapping;
-    static deserializeBinaryFromReader(message: Mapping, reader: jspb.BinaryReader): Mapping;
+    static deserializeBinaryFromReader(
+      message: Mapping,
+      reader: jspb.BinaryReader
+    ): Mapping;
   }
 
   export namespace Mapping {
     export type AsObject = {
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-      identity?: Id.AsObject,
-      language?: ElementDefinition.Mapping.LanguageCode.AsObject,
-      map?: String.AsObject,
-      comment?: String.AsObject,
-    }
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+      identity?: Id.AsObject;
+      language?: ElementDefinition.Mapping.LanguageCode.AsObject;
+      map?: String.AsObject;
+      comment?: String.AsObject;
+    };
 
     export class LanguageCode extends jspb.Message {
       hasId(): boolean;
@@ -4939,20 +5765,33 @@ export namespace ElementDefinition {
 
       serializeBinary(): Uint8Array;
       toObject(includeInstance?: boolean): LanguageCode.AsObject;
-      static toObject(includeInstance: boolean, msg: LanguageCode): LanguageCode.AsObject;
-      static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-      static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-      static serializeBinaryToWriter(message: LanguageCode, writer: jspb.BinaryWriter): void;
+      static toObject(
+        includeInstance: boolean,
+        msg: LanguageCode
+      ): LanguageCode.AsObject;
+      static extensions: {
+        [key: number]: jspb.ExtensionFieldInfo<jspb.Message>;
+      };
+      static extensionsBinary: {
+        [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+      };
+      static serializeBinaryToWriter(
+        message: LanguageCode,
+        writer: jspb.BinaryWriter
+      ): void;
       static deserializeBinary(bytes: Uint8Array): LanguageCode;
-      static deserializeBinaryFromReader(message: LanguageCode, reader: jspb.BinaryReader): LanguageCode;
+      static deserializeBinaryFromReader(
+        message: LanguageCode,
+        reader: jspb.BinaryReader
+      ): LanguageCode;
     }
 
     export namespace LanguageCode {
       export type AsObject = {
-        id?: String.AsObject,
-        extension: Array<Extension.AsObject>,
-        value: string,
-      }
+        id?: String.AsObject;
+        extension: Array<Extension.AsObject>;
+        value: string;
+      };
     }
   }
 }
@@ -4995,24 +5834,35 @@ export class Expression extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Expression.AsObject;
-  static toObject(includeInstance: boolean, msg: Expression): Expression.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Expression, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: Expression
+  ): Expression.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Expression,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Expression;
-  static deserializeBinaryFromReader(message: Expression, reader: jspb.BinaryReader): Expression;
+  static deserializeBinaryFromReader(
+    message: Expression,
+    reader: jspb.BinaryReader
+  ): Expression;
 }
 
 export namespace Expression {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    description?: String.AsObject,
-    name?: Id.AsObject,
-    language?: Code.AsObject,
-    expression?: String.AsObject,
-    reference?: Uri.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    description?: String.AsObject;
+    name?: Id.AsObject;
+    language?: Code.AsObject;
+    expression?: String.AsObject;
+    reference?: Uri.AsObject;
+  };
 }
 
 export class HumanName extends jspb.Message {
@@ -5064,29 +5914,39 @@ export class HumanName extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): HumanName.AsObject;
   static toObject(includeInstance: boolean, msg: HumanName): HumanName.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: HumanName, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: HumanName,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): HumanName;
-  static deserializeBinaryFromReader(message: HumanName, reader: jspb.BinaryReader): HumanName;
+  static deserializeBinaryFromReader(
+    message: HumanName,
+    reader: jspb.BinaryReader
+  ): HumanName;
 }
 
 export namespace HumanName {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    use?: HumanName.UseCode.AsObject,
-    text?: String.AsObject,
-    family?: String.AsObject,
-    given: Array<String.AsObject>,
-    prefix: Array<String.AsObject>,
-    suffix: Array<String.AsObject>,
-    period?: Period.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    use?: HumanName.UseCode.AsObject;
+    text?: String.AsObject;
+    family?: String.AsObject;
+    given: Array<String.AsObject>;
+    prefix: Array<String.AsObject>;
+    suffix: Array<String.AsObject>;
+    period?: Period.AsObject;
+  };
 
   export class UseCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.NameUseCode.ValueMap[keyof proto_r4_core_codes_pb.NameUseCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.NameUseCode.ValueMap[keyof proto_r4_core_codes_pb.NameUseCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.NameUseCode.ValueMap[keyof proto_r4_core_codes_pb.NameUseCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -5101,19 +5961,27 @@ export namespace HumanName {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): UseCode.AsObject;
     static toObject(includeInstance: boolean, msg: UseCode): UseCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: UseCode, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: UseCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): UseCode;
-    static deserializeBinaryFromReader(message: UseCode, reader: jspb.BinaryReader): UseCode;
+    static deserializeBinaryFromReader(
+      message: UseCode,
+      reader: jspb.BinaryReader
+    ): UseCode;
   }
 
   export namespace UseCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.NameUseCode.ValueMap[keyof proto_r4_core_codes_pb.NameUseCode.ValueMap],
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.NameUseCode.ValueMap[keyof proto_r4_core_codes_pb.NameUseCode.ValueMap];
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+    };
   }
 }
 
@@ -5160,29 +6028,42 @@ export class Identifier extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Identifier.AsObject;
-  static toObject(includeInstance: boolean, msg: Identifier): Identifier.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Identifier, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: Identifier
+  ): Identifier.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Identifier,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Identifier;
-  static deserializeBinaryFromReader(message: Identifier, reader: jspb.BinaryReader): Identifier;
+  static deserializeBinaryFromReader(
+    message: Identifier,
+    reader: jspb.BinaryReader
+  ): Identifier;
 }
 
 export namespace Identifier {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    use?: Identifier.UseCode.AsObject,
-    type?: CodeableConcept.AsObject,
-    system?: Uri.AsObject,
-    value?: String.AsObject,
-    period?: Period.AsObject,
-    assigner?: Reference.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    use?: Identifier.UseCode.AsObject;
+    type?: CodeableConcept.AsObject;
+    system?: Uri.AsObject;
+    value?: String.AsObject;
+    period?: Period.AsObject;
+    assigner?: Reference.AsObject;
+  };
 
   export class UseCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.IdentifierUseCode.ValueMap[keyof proto_r4_core_codes_pb.IdentifierUseCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.IdentifierUseCode.ValueMap[keyof proto_r4_core_codes_pb.IdentifierUseCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.IdentifierUseCode.ValueMap[keyof proto_r4_core_codes_pb.IdentifierUseCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -5197,19 +6078,27 @@ export namespace Identifier {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): UseCode.AsObject;
     static toObject(includeInstance: boolean, msg: UseCode): UseCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: UseCode, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: UseCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): UseCode;
-    static deserializeBinaryFromReader(message: UseCode, reader: jspb.BinaryReader): UseCode;
+    static deserializeBinaryFromReader(
+      message: UseCode,
+      reader: jspb.BinaryReader
+    ): UseCode;
   }
 
   export namespace UseCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.IdentifierUseCode.ValueMap[keyof proto_r4_core_codes_pb.IdentifierUseCode.ValueMap],
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.IdentifierUseCode.ValueMap[keyof proto_r4_core_codes_pb.IdentifierUseCode.ValueMap];
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+    };
   }
 }
 
@@ -5256,25 +6145,36 @@ export class MarketingStatus extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): MarketingStatus.AsObject;
-  static toObject(includeInstance: boolean, msg: MarketingStatus): MarketingStatus.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: MarketingStatus, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: MarketingStatus
+  ): MarketingStatus.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: MarketingStatus,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): MarketingStatus;
-  static deserializeBinaryFromReader(message: MarketingStatus, reader: jspb.BinaryReader): MarketingStatus;
+  static deserializeBinaryFromReader(
+    message: MarketingStatus,
+    reader: jspb.BinaryReader
+  ): MarketingStatus;
 }
 
 export namespace MarketingStatus {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    modifierExtension: Array<Extension.AsObject>,
-    country?: CodeableConcept.AsObject,
-    jurisdiction?: CodeableConcept.AsObject,
-    status?: CodeableConcept.AsObject,
-    dateRange?: Period.AsObject,
-    restoreDate?: DateTime.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    modifierExtension: Array<Extension.AsObject>;
+    country?: CodeableConcept.AsObject;
+    jurisdiction?: CodeableConcept.AsObject;
+    status?: CodeableConcept.AsObject;
+    dateRange?: Period.AsObject;
+    restoreDate?: DateTime.AsObject;
+  };
 }
 
 export class Meta extends jspb.Message {
@@ -5321,24 +6221,32 @@ export class Meta extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Meta.AsObject;
   static toObject(includeInstance: boolean, msg: Meta): Meta.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Meta, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Meta,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Meta;
-  static deserializeBinaryFromReader(message: Meta, reader: jspb.BinaryReader): Meta;
+  static deserializeBinaryFromReader(
+    message: Meta,
+    reader: jspb.BinaryReader
+  ): Meta;
 }
 
 export namespace Meta {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    versionId?: Id.AsObject,
-    lastUpdated?: Instant.AsObject,
-    source?: Uri.AsObject,
-    profile: Array<Canonical.AsObject>,
-    security: Array<Coding.AsObject>,
-    tag: Array<Coding.AsObject>,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    versionId?: Id.AsObject;
+    lastUpdated?: Instant.AsObject;
+    source?: Uri.AsObject;
+    profile: Array<Canonical.AsObject>;
+    security: Array<Coding.AsObject>;
+    tag: Array<Coding.AsObject>;
+  };
 }
 
 export class Money extends jspb.Message {
@@ -5365,20 +6273,28 @@ export class Money extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Money.AsObject;
   static toObject(includeInstance: boolean, msg: Money): Money.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Money, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Money,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Money;
-  static deserializeBinaryFromReader(message: Money, reader: jspb.BinaryReader): Money;
+  static deserializeBinaryFromReader(
+    message: Money,
+    reader: jspb.BinaryReader
+  ): Money;
 }
 
 export namespace Money {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    value?: Decimal.AsObject,
-    currency?: Money.CurrencyCode.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    value?: Decimal.AsObject;
+    currency?: Money.CurrencyCode.AsObject;
+  };
 
   export class CurrencyCode extends jspb.Message {
     hasId(): boolean;
@@ -5396,20 +6312,31 @@ export namespace Money {
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): CurrencyCode.AsObject;
-    static toObject(includeInstance: boolean, msg: CurrencyCode): CurrencyCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: CurrencyCode, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: CurrencyCode
+    ): CurrencyCode.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: CurrencyCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): CurrencyCode;
-    static deserializeBinaryFromReader(message: CurrencyCode, reader: jspb.BinaryReader): CurrencyCode;
+    static deserializeBinaryFromReader(
+      message: CurrencyCode,
+      reader: jspb.BinaryReader
+    ): CurrencyCode;
   }
 
   export namespace CurrencyCode {
     export type AsObject = {
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-      value: string,
-    }
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+      value: string;
+    };
   }
 }
 
@@ -5451,28 +6378,41 @@ export class MoneyQuantity extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): MoneyQuantity.AsObject;
-  static toObject(includeInstance: boolean, msg: MoneyQuantity): MoneyQuantity.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: MoneyQuantity, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: MoneyQuantity
+  ): MoneyQuantity.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: MoneyQuantity,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): MoneyQuantity;
-  static deserializeBinaryFromReader(message: MoneyQuantity, reader: jspb.BinaryReader): MoneyQuantity;
+  static deserializeBinaryFromReader(
+    message: MoneyQuantity,
+    reader: jspb.BinaryReader
+  ): MoneyQuantity;
 }
 
 export namespace MoneyQuantity {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    value?: Decimal.AsObject,
-    comparator?: MoneyQuantity.ComparatorCode.AsObject,
-    unit?: String.AsObject,
-    system?: Uri.AsObject,
-    code?: Code.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    value?: Decimal.AsObject;
+    comparator?: MoneyQuantity.ComparatorCode.AsObject;
+    unit?: String.AsObject;
+    system?: Uri.AsObject;
+    code?: Code.AsObject;
+  };
 
   export class ComparatorCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -5486,20 +6426,31 @@ export namespace MoneyQuantity {
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): ComparatorCode.AsObject;
-    static toObject(includeInstance: boolean, msg: ComparatorCode): ComparatorCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: ComparatorCode, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: ComparatorCode
+    ): ComparatorCode.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: ComparatorCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): ComparatorCode;
-    static deserializeBinaryFromReader(message: ComparatorCode, reader: jspb.BinaryReader): ComparatorCode;
+    static deserializeBinaryFromReader(
+      message: ComparatorCode,
+      reader: jspb.BinaryReader
+    ): ComparatorCode;
   }
 
   export namespace ComparatorCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap],
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap];
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+    };
   }
 }
 
@@ -5527,24 +6478,34 @@ export class Narrative extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Narrative.AsObject;
   static toObject(includeInstance: boolean, msg: Narrative): Narrative.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Narrative, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Narrative,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Narrative;
-  static deserializeBinaryFromReader(message: Narrative, reader: jspb.BinaryReader): Narrative;
+  static deserializeBinaryFromReader(
+    message: Narrative,
+    reader: jspb.BinaryReader
+  ): Narrative;
 }
 
 export namespace Narrative {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    status?: Narrative.StatusCode.AsObject,
-    div?: Xhtml.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    status?: Narrative.StatusCode.AsObject;
+    div?: Xhtml.AsObject;
+  };
 
   export class StatusCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.NarrativeStatusCode.ValueMap[keyof proto_r4_core_codes_pb.NarrativeStatusCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.NarrativeStatusCode.ValueMap[keyof proto_r4_core_codes_pb.NarrativeStatusCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.NarrativeStatusCode.ValueMap[keyof proto_r4_core_codes_pb.NarrativeStatusCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -5558,20 +6519,31 @@ export namespace Narrative {
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): StatusCode.AsObject;
-    static toObject(includeInstance: boolean, msg: StatusCode): StatusCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: StatusCode, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: StatusCode
+    ): StatusCode.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: StatusCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): StatusCode;
-    static deserializeBinaryFromReader(message: StatusCode, reader: jspb.BinaryReader): StatusCode;
+    static deserializeBinaryFromReader(
+      message: StatusCode,
+      reader: jspb.BinaryReader
+    ): StatusCode;
   }
 
   export namespace StatusCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.NarrativeStatusCode.ValueMap[keyof proto_r4_core_codes_pb.NarrativeStatusCode.ValueMap],
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.NarrativeStatusCode.ValueMap[keyof proto_r4_core_codes_pb.NarrativeStatusCode.ValueMap];
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+    };
   }
 }
 
@@ -5623,30 +6595,43 @@ export class ParameterDefinition extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ParameterDefinition.AsObject;
-  static toObject(includeInstance: boolean, msg: ParameterDefinition): ParameterDefinition.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: ParameterDefinition, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: ParameterDefinition
+  ): ParameterDefinition.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: ParameterDefinition,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): ParameterDefinition;
-  static deserializeBinaryFromReader(message: ParameterDefinition, reader: jspb.BinaryReader): ParameterDefinition;
+  static deserializeBinaryFromReader(
+    message: ParameterDefinition,
+    reader: jspb.BinaryReader
+  ): ParameterDefinition;
 }
 
 export namespace ParameterDefinition {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    name?: Code.AsObject,
-    use?: ParameterDefinition.UseCode.AsObject,
-    min?: Integer.AsObject,
-    max?: String.AsObject,
-    documentation?: String.AsObject,
-    type?: ParameterDefinition.TypeCode.AsObject,
-    profile?: Canonical.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    name?: Code.AsObject;
+    use?: ParameterDefinition.UseCode.AsObject;
+    min?: Integer.AsObject;
+    max?: String.AsObject;
+    documentation?: String.AsObject;
+    type?: ParameterDefinition.TypeCode.AsObject;
+    profile?: Canonical.AsObject;
+  };
 
   export class UseCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.OperationParameterUseCode.ValueMap[keyof proto_r4_core_codes_pb.OperationParameterUseCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.OperationParameterUseCode.ValueMap[keyof proto_r4_core_codes_pb.OperationParameterUseCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.OperationParameterUseCode.ValueMap[keyof proto_r4_core_codes_pb.OperationParameterUseCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -5661,24 +6646,34 @@ export namespace ParameterDefinition {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): UseCode.AsObject;
     static toObject(includeInstance: boolean, msg: UseCode): UseCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: UseCode, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: UseCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): UseCode;
-    static deserializeBinaryFromReader(message: UseCode, reader: jspb.BinaryReader): UseCode;
+    static deserializeBinaryFromReader(
+      message: UseCode,
+      reader: jspb.BinaryReader
+    ): UseCode;
   }
 
   export namespace UseCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.OperationParameterUseCode.ValueMap[keyof proto_r4_core_codes_pb.OperationParameterUseCode.ValueMap],
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.OperationParameterUseCode.ValueMap[keyof proto_r4_core_codes_pb.OperationParameterUseCode.ValueMap];
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+    };
   }
 
   export class TypeCode extends jspb.Message {
     getValue(): proto_r4_core_valuesets_pb.FHIRAllTypesValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.FHIRAllTypesValueSet.ValueMap];
-    setValue(value: proto_r4_core_valuesets_pb.FHIRAllTypesValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.FHIRAllTypesValueSet.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_valuesets_pb.FHIRAllTypesValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.FHIRAllTypesValueSet.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -5693,19 +6688,27 @@ export namespace ParameterDefinition {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TypeCode.AsObject;
     static toObject(includeInstance: boolean, msg: TypeCode): TypeCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: TypeCode, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: TypeCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): TypeCode;
-    static deserializeBinaryFromReader(message: TypeCode, reader: jspb.BinaryReader): TypeCode;
+    static deserializeBinaryFromReader(
+      message: TypeCode,
+      reader: jspb.BinaryReader
+    ): TypeCode;
   }
 
   export namespace TypeCode {
     export type AsObject = {
-      value: proto_r4_core_valuesets_pb.FHIRAllTypesValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.FHIRAllTypesValueSet.ValueMap],
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-    }
+      value: proto_r4_core_valuesets_pb.FHIRAllTypesValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.FHIRAllTypesValueSet.ValueMap];
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+    };
   }
 }
 
@@ -5733,20 +6736,28 @@ export class Period extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Period.AsObject;
   static toObject(includeInstance: boolean, msg: Period): Period.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Period, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Period,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Period;
-  static deserializeBinaryFromReader(message: Period, reader: jspb.BinaryReader): Period;
+  static deserializeBinaryFromReader(
+    message: Period,
+    reader: jspb.BinaryReader
+  ): Period;
 }
 
 export namespace Period {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    start?: DateTime.AsObject,
-    end?: DateTime.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    start?: DateTime.AsObject;
+    end?: DateTime.AsObject;
+  };
 }
 
 export class Population extends jspb.Message {
@@ -5787,24 +6798,35 @@ export class Population extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Population.AsObject;
-  static toObject(includeInstance: boolean, msg: Population): Population.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Population, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: Population
+  ): Population.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Population,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Population;
-  static deserializeBinaryFromReader(message: Population, reader: jspb.BinaryReader): Population;
+  static deserializeBinaryFromReader(
+    message: Population,
+    reader: jspb.BinaryReader
+  ): Population;
 }
 
 export namespace Population {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    modifierExtension: Array<Extension.AsObject>,
-    age?: Population.AgeX.AsObject,
-    gender?: CodeableConcept.AsObject,
-    race?: CodeableConcept.AsObject,
-    physiologicalCondition?: CodeableConcept.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    modifierExtension: Array<Extension.AsObject>;
+    age?: Population.AgeX.AsObject;
+    gender?: CodeableConcept.AsObject;
+    race?: CodeableConcept.AsObject;
+    physiologicalCondition?: CodeableConcept.AsObject;
+  };
 
   export class AgeX extends jspb.Message {
     hasRange(): boolean;
@@ -5821,18 +6843,26 @@ export namespace Population {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): AgeX.AsObject;
     static toObject(includeInstance: boolean, msg: AgeX): AgeX.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: AgeX, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: AgeX,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): AgeX;
-    static deserializeBinaryFromReader(message: AgeX, reader: jspb.BinaryReader): AgeX;
+    static deserializeBinaryFromReader(
+      message: AgeX,
+      reader: jspb.BinaryReader
+    ): AgeX;
   }
 
   export namespace AgeX {
     export type AsObject = {
-      range?: Range.AsObject,
-      codeableConcept?: CodeableConcept.AsObject,
-    }
+      range?: Range.AsObject;
+      codeableConcept?: CodeableConcept.AsObject;
+    };
 
     export enum ChoiceCase {
       CHOICE_NOT_SET = 0,
@@ -5915,31 +6945,42 @@ export class ProdCharacteristic extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ProdCharacteristic.AsObject;
-  static toObject(includeInstance: boolean, msg: ProdCharacteristic): ProdCharacteristic.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: ProdCharacteristic, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: ProdCharacteristic
+  ): ProdCharacteristic.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: ProdCharacteristic,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): ProdCharacteristic;
-  static deserializeBinaryFromReader(message: ProdCharacteristic, reader: jspb.BinaryReader): ProdCharacteristic;
+  static deserializeBinaryFromReader(
+    message: ProdCharacteristic,
+    reader: jspb.BinaryReader
+  ): ProdCharacteristic;
 }
 
 export namespace ProdCharacteristic {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    modifierExtension: Array<Extension.AsObject>,
-    height?: Quantity.AsObject,
-    width?: Quantity.AsObject,
-    depth?: Quantity.AsObject,
-    weight?: Quantity.AsObject,
-    nominalVolume?: Quantity.AsObject,
-    externalDiameter?: Quantity.AsObject,
-    shape?: String.AsObject,
-    color: Array<String.AsObject>,
-    imprint: Array<String.AsObject>,
-    image: Array<Attachment.AsObject>,
-    scoring?: CodeableConcept.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    modifierExtension: Array<Extension.AsObject>;
+    height?: Quantity.AsObject;
+    width?: Quantity.AsObject;
+    depth?: Quantity.AsObject;
+    weight?: Quantity.AsObject;
+    nominalVolume?: Quantity.AsObject;
+    externalDiameter?: Quantity.AsObject;
+    shape?: String.AsObject;
+    color: Array<String.AsObject>;
+    imprint: Array<String.AsObject>;
+    image: Array<Attachment.AsObject>;
+    scoring?: CodeableConcept.AsObject;
+  };
 }
 
 export class ProductShelfLife extends jspb.Message {
@@ -5976,28 +7017,42 @@ export class ProductShelfLife extends jspb.Message {
   clearSpecialPrecautionsForStorage(): void;
   getSpecialPrecautionsForStorage(): Array<CodeableConcept>;
   setSpecialPrecautionsForStorage(value: Array<CodeableConcept>): void;
-  addSpecialPrecautionsForStorage(value?: CodeableConcept, index?: number): CodeableConcept;
+  addSpecialPrecautionsForStorage(
+    value?: CodeableConcept,
+    index?: number
+  ): CodeableConcept;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ProductShelfLife.AsObject;
-  static toObject(includeInstance: boolean, msg: ProductShelfLife): ProductShelfLife.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: ProductShelfLife, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: ProductShelfLife
+  ): ProductShelfLife.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: ProductShelfLife,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): ProductShelfLife;
-  static deserializeBinaryFromReader(message: ProductShelfLife, reader: jspb.BinaryReader): ProductShelfLife;
+  static deserializeBinaryFromReader(
+    message: ProductShelfLife,
+    reader: jspb.BinaryReader
+  ): ProductShelfLife;
 }
 
 export namespace ProductShelfLife {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    modifierExtension: Array<Extension.AsObject>,
-    identifier?: Identifier.AsObject,
-    type?: CodeableConcept.AsObject,
-    period?: Quantity.AsObject,
-    specialPrecautionsForStorage: Array<CodeableConcept.AsObject>,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    modifierExtension: Array<Extension.AsObject>;
+    identifier?: Identifier.AsObject;
+    type?: CodeableConcept.AsObject;
+    period?: Quantity.AsObject;
+    specialPrecautionsForStorage: Array<CodeableConcept.AsObject>;
+  };
 }
 
 export class Quantity extends jspb.Message {
@@ -6039,27 +7094,37 @@ export class Quantity extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Quantity.AsObject;
   static toObject(includeInstance: boolean, msg: Quantity): Quantity.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Quantity, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Quantity,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Quantity;
-  static deserializeBinaryFromReader(message: Quantity, reader: jspb.BinaryReader): Quantity;
+  static deserializeBinaryFromReader(
+    message: Quantity,
+    reader: jspb.BinaryReader
+  ): Quantity;
 }
 
 export namespace Quantity {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    value?: Decimal.AsObject,
-    comparator?: Quantity.ComparatorCode.AsObject,
-    unit?: String.AsObject,
-    system?: Uri.AsObject,
-    code?: Code.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    value?: Decimal.AsObject;
+    comparator?: Quantity.ComparatorCode.AsObject;
+    unit?: String.AsObject;
+    system?: Uri.AsObject;
+    code?: Code.AsObject;
+  };
 
   export class ComparatorCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -6073,20 +7138,31 @@ export namespace Quantity {
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): ComparatorCode.AsObject;
-    static toObject(includeInstance: boolean, msg: ComparatorCode): ComparatorCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: ComparatorCode, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: ComparatorCode
+    ): ComparatorCode.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: ComparatorCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): ComparatorCode;
-    static deserializeBinaryFromReader(message: ComparatorCode, reader: jspb.BinaryReader): ComparatorCode;
+    static deserializeBinaryFromReader(
+      message: ComparatorCode,
+      reader: jspb.BinaryReader
+    ): ComparatorCode;
   }
 
   export namespace ComparatorCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap],
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap[keyof proto_r4_core_codes_pb.QuantityComparatorCode.ValueMap];
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+    };
   }
 }
 
@@ -6114,20 +7190,28 @@ export class Range extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Range.AsObject;
   static toObject(includeInstance: boolean, msg: Range): Range.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Range, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Range,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Range;
-  static deserializeBinaryFromReader(message: Range, reader: jspb.BinaryReader): Range;
+  static deserializeBinaryFromReader(
+    message: Range,
+    reader: jspb.BinaryReader
+  ): Range;
 }
 
 export namespace Range {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    low?: SimpleQuantity.AsObject,
-    high?: SimpleQuantity.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    low?: SimpleQuantity.AsObject;
+    high?: SimpleQuantity.AsObject;
+  };
 }
 
 export class Ratio extends jspb.Message {
@@ -6154,20 +7238,28 @@ export class Ratio extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Ratio.AsObject;
   static toObject(includeInstance: boolean, msg: Ratio): Ratio.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Ratio, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Ratio,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Ratio;
-  static deserializeBinaryFromReader(message: Ratio, reader: jspb.BinaryReader): Ratio;
+  static deserializeBinaryFromReader(
+    message: Ratio,
+    reader: jspb.BinaryReader
+  ): Ratio;
 }
 
 export namespace Ratio {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    numerator?: Quantity.AsObject,
-    denominator?: Quantity.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    numerator?: Quantity.AsObject;
+    denominator?: Quantity.AsObject;
+  };
 }
 
 export class RelatedArtifact extends jspb.Message {
@@ -6218,30 +7310,43 @@ export class RelatedArtifact extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): RelatedArtifact.AsObject;
-  static toObject(includeInstance: boolean, msg: RelatedArtifact): RelatedArtifact.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: RelatedArtifact, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: RelatedArtifact
+  ): RelatedArtifact.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: RelatedArtifact,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): RelatedArtifact;
-  static deserializeBinaryFromReader(message: RelatedArtifact, reader: jspb.BinaryReader): RelatedArtifact;
+  static deserializeBinaryFromReader(
+    message: RelatedArtifact,
+    reader: jspb.BinaryReader
+  ): RelatedArtifact;
 }
 
 export namespace RelatedArtifact {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    type?: RelatedArtifact.TypeCode.AsObject,
-    label?: String.AsObject,
-    display?: String.AsObject,
-    citation?: Markdown.AsObject,
-    url?: Url.AsObject,
-    document?: Attachment.AsObject,
-    resource?: Canonical.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    type?: RelatedArtifact.TypeCode.AsObject;
+    label?: String.AsObject;
+    display?: String.AsObject;
+    citation?: Markdown.AsObject;
+    url?: Url.AsObject;
+    document?: Attachment.AsObject;
+    resource?: Canonical.AsObject;
+  };
 
   export class TypeCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.RelatedArtifactTypeCode.ValueMap[keyof proto_r4_core_codes_pb.RelatedArtifactTypeCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.RelatedArtifactTypeCode.ValueMap[keyof proto_r4_core_codes_pb.RelatedArtifactTypeCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.RelatedArtifactTypeCode.ValueMap[keyof proto_r4_core_codes_pb.RelatedArtifactTypeCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -6256,19 +7361,27 @@ export namespace RelatedArtifact {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TypeCode.AsObject;
     static toObject(includeInstance: boolean, msg: TypeCode): TypeCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: TypeCode, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: TypeCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): TypeCode;
-    static deserializeBinaryFromReader(message: TypeCode, reader: jspb.BinaryReader): TypeCode;
+    static deserializeBinaryFromReader(
+      message: TypeCode,
+      reader: jspb.BinaryReader
+    ): TypeCode;
   }
 
   export namespace TypeCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.RelatedArtifactTypeCode.ValueMap[keyof proto_r4_core_codes_pb.RelatedArtifactTypeCode.ValueMap],
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.RelatedArtifactTypeCode.ValueMap[keyof proto_r4_core_codes_pb.RelatedArtifactTypeCode.ValueMap];
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+    };
   }
 }
 
@@ -6320,26 +7433,37 @@ export class SampledData extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SampledData.AsObject;
-  static toObject(includeInstance: boolean, msg: SampledData): SampledData.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: SampledData, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: SampledData
+  ): SampledData.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: SampledData,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): SampledData;
-  static deserializeBinaryFromReader(message: SampledData, reader: jspb.BinaryReader): SampledData;
+  static deserializeBinaryFromReader(
+    message: SampledData,
+    reader: jspb.BinaryReader
+  ): SampledData;
 }
 
 export namespace SampledData {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    origin?: SimpleQuantity.AsObject,
-    period?: Decimal.AsObject,
-    factor?: Decimal.AsObject,
-    lowerLimit?: Decimal.AsObject,
-    upperLimit?: Decimal.AsObject,
-    dimensions?: PositiveInt.AsObject,
-    data?: String.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    origin?: SimpleQuantity.AsObject;
+    period?: Decimal.AsObject;
+    factor?: Decimal.AsObject;
+    lowerLimit?: Decimal.AsObject;
+    upperLimit?: Decimal.AsObject;
+    dimensions?: PositiveInt.AsObject;
+    data?: String.AsObject;
+  };
 }
 
 export class Signature extends jspb.Message {
@@ -6391,25 +7515,33 @@ export class Signature extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Signature.AsObject;
   static toObject(includeInstance: boolean, msg: Signature): Signature.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Signature, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Signature,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Signature;
-  static deserializeBinaryFromReader(message: Signature, reader: jspb.BinaryReader): Signature;
+  static deserializeBinaryFromReader(
+    message: Signature,
+    reader: jspb.BinaryReader
+  ): Signature;
 }
 
 export namespace Signature {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    type: Array<Coding.AsObject>,
-    when?: Instant.AsObject,
-    who?: Reference.AsObject,
-    onBehalfOf?: Reference.AsObject,
-    targetFormat?: Signature.TargetFormatCode.AsObject,
-    sigFormat?: Signature.SigFormatCode.AsObject,
-    data?: Base64Binary.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    type: Array<Coding.AsObject>;
+    when?: Instant.AsObject;
+    who?: Reference.AsObject;
+    onBehalfOf?: Reference.AsObject;
+    targetFormat?: Signature.TargetFormatCode.AsObject;
+    sigFormat?: Signature.SigFormatCode.AsObject;
+    data?: Base64Binary.AsObject;
+  };
 
   export class TargetFormatCode extends jspb.Message {
     hasId(): boolean;
@@ -6427,20 +7559,31 @@ export namespace Signature {
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TargetFormatCode.AsObject;
-    static toObject(includeInstance: boolean, msg: TargetFormatCode): TargetFormatCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: TargetFormatCode, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: TargetFormatCode
+    ): TargetFormatCode.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: TargetFormatCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): TargetFormatCode;
-    static deserializeBinaryFromReader(message: TargetFormatCode, reader: jspb.BinaryReader): TargetFormatCode;
+    static deserializeBinaryFromReader(
+      message: TargetFormatCode,
+      reader: jspb.BinaryReader
+    ): TargetFormatCode;
   }
 
   export namespace TargetFormatCode {
     export type AsObject = {
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-      value: string,
-    }
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+      value: string;
+    };
   }
 
   export class SigFormatCode extends jspb.Message {
@@ -6459,20 +7602,31 @@ export namespace Signature {
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): SigFormatCode.AsObject;
-    static toObject(includeInstance: boolean, msg: SigFormatCode): SigFormatCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: SigFormatCode, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: SigFormatCode
+    ): SigFormatCode.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: SigFormatCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): SigFormatCode;
-    static deserializeBinaryFromReader(message: SigFormatCode, reader: jspb.BinaryReader): SigFormatCode;
+    static deserializeBinaryFromReader(
+      message: SigFormatCode,
+      reader: jspb.BinaryReader
+    ): SigFormatCode;
   }
 
   export namespace SigFormatCode {
     export type AsObject = {
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-      value: string,
-    }
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+      value: string;
+    };
   }
 }
 
@@ -6509,23 +7663,34 @@ export class SimpleQuantity extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SimpleQuantity.AsObject;
-  static toObject(includeInstance: boolean, msg: SimpleQuantity): SimpleQuantity.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: SimpleQuantity, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: SimpleQuantity
+  ): SimpleQuantity.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: SimpleQuantity,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): SimpleQuantity;
-  static deserializeBinaryFromReader(message: SimpleQuantity, reader: jspb.BinaryReader): SimpleQuantity;
+  static deserializeBinaryFromReader(
+    message: SimpleQuantity,
+    reader: jspb.BinaryReader
+  ): SimpleQuantity;
 }
 
 export namespace SimpleQuantity {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    value?: Decimal.AsObject,
-    unit?: String.AsObject,
-    system?: Uri.AsObject,
-    code?: Code.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    value?: Decimal.AsObject;
+    unit?: String.AsObject;
+    system?: Uri.AsObject;
+    code?: Code.AsObject;
+  };
 }
 
 export class SubstanceAmount extends jspb.Message {
@@ -6566,24 +7731,35 @@ export class SubstanceAmount extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SubstanceAmount.AsObject;
-  static toObject(includeInstance: boolean, msg: SubstanceAmount): SubstanceAmount.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: SubstanceAmount, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: SubstanceAmount
+  ): SubstanceAmount.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: SubstanceAmount,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): SubstanceAmount;
-  static deserializeBinaryFromReader(message: SubstanceAmount, reader: jspb.BinaryReader): SubstanceAmount;
+  static deserializeBinaryFromReader(
+    message: SubstanceAmount,
+    reader: jspb.BinaryReader
+  ): SubstanceAmount;
 }
 
 export namespace SubstanceAmount {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    modifierExtension: Array<Extension.AsObject>,
-    amount?: SubstanceAmount.AmountX.AsObject,
-    amountType?: CodeableConcept.AsObject,
-    amountText?: String.AsObject,
-    referenceRange?: SubstanceAmount.ReferenceRange.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    modifierExtension: Array<Extension.AsObject>;
+    amount?: SubstanceAmount.AmountX.AsObject;
+    amountType?: CodeableConcept.AsObject;
+    amountText?: String.AsObject;
+    referenceRange?: SubstanceAmount.ReferenceRange.AsObject;
+  };
 
   export class AmountX extends jspb.Message {
     hasQuantity(): boolean;
@@ -6605,19 +7781,27 @@ export namespace SubstanceAmount {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): AmountX.AsObject;
     static toObject(includeInstance: boolean, msg: AmountX): AmountX.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: AmountX, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: AmountX,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): AmountX;
-    static deserializeBinaryFromReader(message: AmountX, reader: jspb.BinaryReader): AmountX;
+    static deserializeBinaryFromReader(
+      message: AmountX,
+      reader: jspb.BinaryReader
+    ): AmountX;
   }
 
   export namespace AmountX {
     export type AsObject = {
-      quantity?: Quantity.AsObject,
-      range?: Range.AsObject,
-      stringValue?: String.AsObject,
-    }
+      quantity?: Quantity.AsObject;
+      range?: Range.AsObject;
+      stringValue?: String.AsObject;
+    };
 
     export enum ChoiceCase {
       CHOICE_NOT_SET = 0,
@@ -6650,21 +7834,32 @@ export namespace SubstanceAmount {
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): ReferenceRange.AsObject;
-    static toObject(includeInstance: boolean, msg: ReferenceRange): ReferenceRange.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: ReferenceRange, writer: jspb.BinaryWriter): void;
+    static toObject(
+      includeInstance: boolean,
+      msg: ReferenceRange
+    ): ReferenceRange.AsObject;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: ReferenceRange,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): ReferenceRange;
-    static deserializeBinaryFromReader(message: ReferenceRange, reader: jspb.BinaryReader): ReferenceRange;
+    static deserializeBinaryFromReader(
+      message: ReferenceRange,
+      reader: jspb.BinaryReader
+    ): ReferenceRange;
   }
 
   export namespace ReferenceRange {
     export type AsObject = {
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-      lowLimit?: Quantity.AsObject,
-      highLimit?: Quantity.AsObject,
-    }
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+      lowLimit?: Quantity.AsObject;
+      highLimit?: Quantity.AsObject;
+    };
   }
 }
 
@@ -6702,22 +7897,30 @@ export class Timing extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Timing.AsObject;
   static toObject(includeInstance: boolean, msg: Timing): Timing.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Timing, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Timing,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Timing;
-  static deserializeBinaryFromReader(message: Timing, reader: jspb.BinaryReader): Timing;
+  static deserializeBinaryFromReader(
+    message: Timing,
+    reader: jspb.BinaryReader
+  ): Timing;
 }
 
 export namespace Timing {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    modifierExtension: Array<Extension.AsObject>,
-    event: Array<DateTime.AsObject>,
-    repeat?: Timing.Repeat.AsObject,
-    code?: CodeableConcept.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    modifierExtension: Array<Extension.AsObject>;
+    event: Array<DateTime.AsObject>;
+    repeat?: Timing.Repeat.AsObject;
+    code?: CodeableConcept.AsObject;
+  };
 
   export class Repeat extends jspb.Message {
     hasId(): boolean;
@@ -6788,7 +7991,10 @@ export namespace Timing {
     clearDayOfWeek(): void;
     getDayOfWeek(): Array<Timing.Repeat.DayOfWeekCode>;
     setDayOfWeek(value: Array<Timing.Repeat.DayOfWeekCode>): void;
-    addDayOfWeek(value?: Timing.Repeat.DayOfWeekCode, index?: number): Timing.Repeat.DayOfWeekCode;
+    addDayOfWeek(
+      value?: Timing.Repeat.DayOfWeekCode,
+      index?: number
+    ): Timing.Repeat.DayOfWeekCode;
 
     clearTimeOfDay(): void;
     getTimeOfDay(): Array<Time>;
@@ -6798,7 +8004,10 @@ export namespace Timing {
     clearWhen(): void;
     getWhen(): Array<Timing.Repeat.WhenCode>;
     setWhen(value: Array<Timing.Repeat.WhenCode>): void;
-    addWhen(value?: Timing.Repeat.WhenCode, index?: number): Timing.Repeat.WhenCode;
+    addWhen(
+      value?: Timing.Repeat.WhenCode,
+      index?: number
+    ): Timing.Repeat.WhenCode;
 
     hasOffset(): boolean;
     clearOffset(): void;
@@ -6808,33 +8017,41 @@ export namespace Timing {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Repeat.AsObject;
     static toObject(includeInstance: boolean, msg: Repeat): Repeat.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: Repeat, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: Repeat,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): Repeat;
-    static deserializeBinaryFromReader(message: Repeat, reader: jspb.BinaryReader): Repeat;
+    static deserializeBinaryFromReader(
+      message: Repeat,
+      reader: jspb.BinaryReader
+    ): Repeat;
   }
 
   export namespace Repeat {
     export type AsObject = {
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-      bounds?: Timing.Repeat.BoundsX.AsObject,
-      count?: PositiveInt.AsObject,
-      countMax?: PositiveInt.AsObject,
-      duration?: Decimal.AsObject,
-      durationMax?: Decimal.AsObject,
-      durationUnit?: Timing.Repeat.DurationUnitCode.AsObject,
-      frequency?: PositiveInt.AsObject,
-      frequencyMax?: PositiveInt.AsObject,
-      period?: Decimal.AsObject,
-      periodMax?: Decimal.AsObject,
-      periodUnit?: Timing.Repeat.PeriodUnitCode.AsObject,
-      dayOfWeek: Array<Timing.Repeat.DayOfWeekCode.AsObject>,
-      timeOfDay: Array<Time.AsObject>,
-      when: Array<Timing.Repeat.WhenCode.AsObject>,
-      offset?: UnsignedInt.AsObject,
-    }
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+      bounds?: Timing.Repeat.BoundsX.AsObject;
+      count?: PositiveInt.AsObject;
+      countMax?: PositiveInt.AsObject;
+      duration?: Decimal.AsObject;
+      durationMax?: Decimal.AsObject;
+      durationUnit?: Timing.Repeat.DurationUnitCode.AsObject;
+      frequency?: PositiveInt.AsObject;
+      frequencyMax?: PositiveInt.AsObject;
+      period?: Decimal.AsObject;
+      periodMax?: Decimal.AsObject;
+      periodUnit?: Timing.Repeat.PeriodUnitCode.AsObject;
+      dayOfWeek: Array<Timing.Repeat.DayOfWeekCode.AsObject>;
+      timeOfDay: Array<Time.AsObject>;
+      when: Array<Timing.Repeat.WhenCode.AsObject>;
+      offset?: UnsignedInt.AsObject;
+    };
 
     export class BoundsX extends jspb.Message {
       hasDuration(): boolean;
@@ -6856,19 +8073,29 @@ export namespace Timing {
       serializeBinary(): Uint8Array;
       toObject(includeInstance?: boolean): BoundsX.AsObject;
       static toObject(includeInstance: boolean, msg: BoundsX): BoundsX.AsObject;
-      static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-      static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-      static serializeBinaryToWriter(message: BoundsX, writer: jspb.BinaryWriter): void;
+      static extensions: {
+        [key: number]: jspb.ExtensionFieldInfo<jspb.Message>;
+      };
+      static extensionsBinary: {
+        [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+      };
+      static serializeBinaryToWriter(
+        message: BoundsX,
+        writer: jspb.BinaryWriter
+      ): void;
       static deserializeBinary(bytes: Uint8Array): BoundsX;
-      static deserializeBinaryFromReader(message: BoundsX, reader: jspb.BinaryReader): BoundsX;
+      static deserializeBinaryFromReader(
+        message: BoundsX,
+        reader: jspb.BinaryReader
+      ): BoundsX;
     }
 
     export namespace BoundsX {
       export type AsObject = {
-        duration?: Duration.AsObject,
-        range?: Range.AsObject,
-        period?: Period.AsObject,
-      }
+        duration?: Duration.AsObject;
+        range?: Range.AsObject;
+        period?: Period.AsObject;
+      };
 
       export enum ChoiceCase {
         CHOICE_NOT_SET = 0,
@@ -6880,7 +8107,9 @@ export namespace Timing {
 
     export class DurationUnitCode extends jspb.Message {
       getValue(): proto_r4_core_valuesets_pb.UnitsOfTimeValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.UnitsOfTimeValueSet.ValueMap];
-      setValue(value: proto_r4_core_valuesets_pb.UnitsOfTimeValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.UnitsOfTimeValueSet.ValueMap]): void;
+      setValue(
+        value: proto_r4_core_valuesets_pb.UnitsOfTimeValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.UnitsOfTimeValueSet.ValueMap]
+      ): void;
 
       hasId(): boolean;
       clearId(): void;
@@ -6894,25 +8123,40 @@ export namespace Timing {
 
       serializeBinary(): Uint8Array;
       toObject(includeInstance?: boolean): DurationUnitCode.AsObject;
-      static toObject(includeInstance: boolean, msg: DurationUnitCode): DurationUnitCode.AsObject;
-      static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-      static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-      static serializeBinaryToWriter(message: DurationUnitCode, writer: jspb.BinaryWriter): void;
+      static toObject(
+        includeInstance: boolean,
+        msg: DurationUnitCode
+      ): DurationUnitCode.AsObject;
+      static extensions: {
+        [key: number]: jspb.ExtensionFieldInfo<jspb.Message>;
+      };
+      static extensionsBinary: {
+        [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+      };
+      static serializeBinaryToWriter(
+        message: DurationUnitCode,
+        writer: jspb.BinaryWriter
+      ): void;
       static deserializeBinary(bytes: Uint8Array): DurationUnitCode;
-      static deserializeBinaryFromReader(message: DurationUnitCode, reader: jspb.BinaryReader): DurationUnitCode;
+      static deserializeBinaryFromReader(
+        message: DurationUnitCode,
+        reader: jspb.BinaryReader
+      ): DurationUnitCode;
     }
 
     export namespace DurationUnitCode {
       export type AsObject = {
-        value: proto_r4_core_valuesets_pb.UnitsOfTimeValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.UnitsOfTimeValueSet.ValueMap],
-        id?: String.AsObject,
-        extension: Array<Extension.AsObject>,
-      }
+        value: proto_r4_core_valuesets_pb.UnitsOfTimeValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.UnitsOfTimeValueSet.ValueMap];
+        id?: String.AsObject;
+        extension: Array<Extension.AsObject>;
+      };
     }
 
     export class PeriodUnitCode extends jspb.Message {
       getValue(): proto_r4_core_valuesets_pb.UnitsOfTimeValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.UnitsOfTimeValueSet.ValueMap];
-      setValue(value: proto_r4_core_valuesets_pb.UnitsOfTimeValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.UnitsOfTimeValueSet.ValueMap]): void;
+      setValue(
+        value: proto_r4_core_valuesets_pb.UnitsOfTimeValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.UnitsOfTimeValueSet.ValueMap]
+      ): void;
 
       hasId(): boolean;
       clearId(): void;
@@ -6926,25 +8170,40 @@ export namespace Timing {
 
       serializeBinary(): Uint8Array;
       toObject(includeInstance?: boolean): PeriodUnitCode.AsObject;
-      static toObject(includeInstance: boolean, msg: PeriodUnitCode): PeriodUnitCode.AsObject;
-      static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-      static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-      static serializeBinaryToWriter(message: PeriodUnitCode, writer: jspb.BinaryWriter): void;
+      static toObject(
+        includeInstance: boolean,
+        msg: PeriodUnitCode
+      ): PeriodUnitCode.AsObject;
+      static extensions: {
+        [key: number]: jspb.ExtensionFieldInfo<jspb.Message>;
+      };
+      static extensionsBinary: {
+        [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+      };
+      static serializeBinaryToWriter(
+        message: PeriodUnitCode,
+        writer: jspb.BinaryWriter
+      ): void;
       static deserializeBinary(bytes: Uint8Array): PeriodUnitCode;
-      static deserializeBinaryFromReader(message: PeriodUnitCode, reader: jspb.BinaryReader): PeriodUnitCode;
+      static deserializeBinaryFromReader(
+        message: PeriodUnitCode,
+        reader: jspb.BinaryReader
+      ): PeriodUnitCode;
     }
 
     export namespace PeriodUnitCode {
       export type AsObject = {
-        value: proto_r4_core_valuesets_pb.UnitsOfTimeValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.UnitsOfTimeValueSet.ValueMap],
-        id?: String.AsObject,
-        extension: Array<Extension.AsObject>,
-      }
+        value: proto_r4_core_valuesets_pb.UnitsOfTimeValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.UnitsOfTimeValueSet.ValueMap];
+        id?: String.AsObject;
+        extension: Array<Extension.AsObject>;
+      };
     }
 
     export class DayOfWeekCode extends jspb.Message {
       getValue(): proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap[keyof proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap];
-      setValue(value: proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap[keyof proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap]): void;
+      setValue(
+        value: proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap[keyof proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap]
+      ): void;
 
       hasId(): boolean;
       clearId(): void;
@@ -6958,25 +8217,40 @@ export namespace Timing {
 
       serializeBinary(): Uint8Array;
       toObject(includeInstance?: boolean): DayOfWeekCode.AsObject;
-      static toObject(includeInstance: boolean, msg: DayOfWeekCode): DayOfWeekCode.AsObject;
-      static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-      static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-      static serializeBinaryToWriter(message: DayOfWeekCode, writer: jspb.BinaryWriter): void;
+      static toObject(
+        includeInstance: boolean,
+        msg: DayOfWeekCode
+      ): DayOfWeekCode.AsObject;
+      static extensions: {
+        [key: number]: jspb.ExtensionFieldInfo<jspb.Message>;
+      };
+      static extensionsBinary: {
+        [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+      };
+      static serializeBinaryToWriter(
+        message: DayOfWeekCode,
+        writer: jspb.BinaryWriter
+      ): void;
       static deserializeBinary(bytes: Uint8Array): DayOfWeekCode;
-      static deserializeBinaryFromReader(message: DayOfWeekCode, reader: jspb.BinaryReader): DayOfWeekCode;
+      static deserializeBinaryFromReader(
+        message: DayOfWeekCode,
+        reader: jspb.BinaryReader
+      ): DayOfWeekCode;
     }
 
     export namespace DayOfWeekCode {
       export type AsObject = {
-        value: proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap[keyof proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap],
-        id?: String.AsObject,
-        extension: Array<Extension.AsObject>,
-      }
+        value: proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap[keyof proto_r4_core_codes_pb.DaysOfWeekCode.ValueMap];
+        id?: String.AsObject;
+        extension: Array<Extension.AsObject>;
+      };
     }
 
     export class WhenCode extends jspb.Message {
       getValue(): proto_r4_core_valuesets_pb.EventTimingValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.EventTimingValueSet.ValueMap];
-      setValue(value: proto_r4_core_valuesets_pb.EventTimingValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.EventTimingValueSet.ValueMap]): void;
+      setValue(
+        value: proto_r4_core_valuesets_pb.EventTimingValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.EventTimingValueSet.ValueMap]
+      ): void;
 
       hasId(): boolean;
       clearId(): void;
@@ -6990,20 +8264,33 @@ export namespace Timing {
 
       serializeBinary(): Uint8Array;
       toObject(includeInstance?: boolean): WhenCode.AsObject;
-      static toObject(includeInstance: boolean, msg: WhenCode): WhenCode.AsObject;
-      static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-      static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-      static serializeBinaryToWriter(message: WhenCode, writer: jspb.BinaryWriter): void;
+      static toObject(
+        includeInstance: boolean,
+        msg: WhenCode
+      ): WhenCode.AsObject;
+      static extensions: {
+        [key: number]: jspb.ExtensionFieldInfo<jspb.Message>;
+      };
+      static extensionsBinary: {
+        [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+      };
+      static serializeBinaryToWriter(
+        message: WhenCode,
+        writer: jspb.BinaryWriter
+      ): void;
       static deserializeBinary(bytes: Uint8Array): WhenCode;
-      static deserializeBinaryFromReader(message: WhenCode, reader: jspb.BinaryReader): WhenCode;
+      static deserializeBinaryFromReader(
+        message: WhenCode,
+        reader: jspb.BinaryReader
+      ): WhenCode;
     }
 
     export namespace WhenCode {
       export type AsObject = {
-        value: proto_r4_core_valuesets_pb.EventTimingValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.EventTimingValueSet.ValueMap],
-        id?: String.AsObject,
-        extension: Array<Extension.AsObject>,
-      }
+        value: proto_r4_core_valuesets_pb.EventTimingValueSet.ValueMap[keyof proto_r4_core_valuesets_pb.EventTimingValueSet.ValueMap];
+        id?: String.AsObject;
+        extension: Array<Extension.AsObject>;
+      };
     }
   }
 }
@@ -7046,28 +8333,41 @@ export class TriggerDefinition extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): TriggerDefinition.AsObject;
-  static toObject(includeInstance: boolean, msg: TriggerDefinition): TriggerDefinition.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: TriggerDefinition, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: TriggerDefinition
+  ): TriggerDefinition.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: TriggerDefinition,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): TriggerDefinition;
-  static deserializeBinaryFromReader(message: TriggerDefinition, reader: jspb.BinaryReader): TriggerDefinition;
+  static deserializeBinaryFromReader(
+    message: TriggerDefinition,
+    reader: jspb.BinaryReader
+  ): TriggerDefinition;
 }
 
 export namespace TriggerDefinition {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    type?: TriggerDefinition.TypeCode.AsObject,
-    name?: String.AsObject,
-    timing?: TriggerDefinition.TimingX.AsObject,
-    data: Array<DataRequirement.AsObject>,
-    condition?: Expression.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    type?: TriggerDefinition.TypeCode.AsObject;
+    name?: String.AsObject;
+    timing?: TriggerDefinition.TimingX.AsObject;
+    data: Array<DataRequirement.AsObject>;
+    condition?: Expression.AsObject;
+  };
 
   export class TypeCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.TriggerTypeCode.ValueMap[keyof proto_r4_core_codes_pb.TriggerTypeCode.ValueMap];
-    setValue(value: proto_r4_core_codes_pb.TriggerTypeCode.ValueMap[keyof proto_r4_core_codes_pb.TriggerTypeCode.ValueMap]): void;
+    setValue(
+      value: proto_r4_core_codes_pb.TriggerTypeCode.ValueMap[keyof proto_r4_core_codes_pb.TriggerTypeCode.ValueMap]
+    ): void;
 
     hasId(): boolean;
     clearId(): void;
@@ -7082,19 +8382,27 @@ export namespace TriggerDefinition {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TypeCode.AsObject;
     static toObject(includeInstance: boolean, msg: TypeCode): TypeCode.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: TypeCode, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: TypeCode,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): TypeCode;
-    static deserializeBinaryFromReader(message: TypeCode, reader: jspb.BinaryReader): TypeCode;
+    static deserializeBinaryFromReader(
+      message: TypeCode,
+      reader: jspb.BinaryReader
+    ): TypeCode;
   }
 
   export namespace TypeCode {
     export type AsObject = {
-      value: proto_r4_core_codes_pb.TriggerTypeCode.ValueMap[keyof proto_r4_core_codes_pb.TriggerTypeCode.ValueMap],
-      id?: String.AsObject,
-      extension: Array<Extension.AsObject>,
-    }
+      value: proto_r4_core_codes_pb.TriggerTypeCode.ValueMap[keyof proto_r4_core_codes_pb.TriggerTypeCode.ValueMap];
+      id?: String.AsObject;
+      extension: Array<Extension.AsObject>;
+    };
   }
 
   export class TimingX extends jspb.Message {
@@ -7122,20 +8430,28 @@ export namespace TriggerDefinition {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TimingX.AsObject;
     static toObject(includeInstance: boolean, msg: TimingX): TimingX.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: TimingX, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: TimingX,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): TimingX;
-    static deserializeBinaryFromReader(message: TimingX, reader: jspb.BinaryReader): TimingX;
+    static deserializeBinaryFromReader(
+      message: TimingX,
+      reader: jspb.BinaryReader
+    ): TimingX;
   }
 
   export namespace TimingX {
     export type AsObject = {
-      timing?: Timing.AsObject,
-      reference?: Reference.AsObject,
-      date?: Date.AsObject,
-      dateTime?: DateTime.AsObject,
-    }
+      timing?: Timing.AsObject;
+      reference?: Reference.AsObject;
+      date?: Date.AsObject;
+      dateTime?: DateTime.AsObject;
+    };
 
     export enum ChoiceCase {
       CHOICE_NOT_SET = 0,
@@ -7170,21 +8486,32 @@ export class UsageContext extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): UsageContext.AsObject;
-  static toObject(includeInstance: boolean, msg: UsageContext): UsageContext.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: UsageContext, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: UsageContext
+  ): UsageContext.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: UsageContext,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): UsageContext;
-  static deserializeBinaryFromReader(message: UsageContext, reader: jspb.BinaryReader): UsageContext;
+  static deserializeBinaryFromReader(
+    message: UsageContext,
+    reader: jspb.BinaryReader
+  ): UsageContext;
 }
 
 export namespace UsageContext {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    code?: Coding.AsObject,
-    value?: UsageContext.ValueX.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    code?: Coding.AsObject;
+    value?: UsageContext.ValueX.AsObject;
+  };
 
   export class ValueX extends jspb.Message {
     hasCodeableConcept(): boolean;
@@ -7211,20 +8538,28 @@ export namespace UsageContext {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): ValueX.AsObject;
     static toObject(includeInstance: boolean, msg: ValueX): ValueX.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: ValueX, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: ValueX,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): ValueX;
-    static deserializeBinaryFromReader(message: ValueX, reader: jspb.BinaryReader): ValueX;
+    static deserializeBinaryFromReader(
+      message: ValueX,
+      reader: jspb.BinaryReader
+    ): ValueX;
   }
 
   export namespace ValueX {
     export type AsObject = {
-      codeableConcept?: CodeableConcept.AsObject,
-      quantity?: Quantity.AsObject,
-      range?: Range.AsObject,
-      reference?: Reference.AsObject,
-    }
+      codeableConcept?: CodeableConcept.AsObject;
+      quantity?: Quantity.AsObject;
+      range?: Range.AsObject;
+      reference?: Reference.AsObject;
+    };
 
     export enum ChoiceCase {
       CHOICE_NOT_SET = 0,
@@ -7250,18 +8585,26 @@ export class Element extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Element.AsObject;
   static toObject(includeInstance: boolean, msg: Element): Element.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Element, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Element,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Element;
-  static deserializeBinaryFromReader(message: Element, reader: jspb.BinaryReader): Element;
+  static deserializeBinaryFromReader(
+    message: Element,
+    reader: jspb.BinaryReader
+  ): Element;
 }
 
 export namespace Element {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 }
 
 export class Extension extends jspb.Message {
@@ -7288,20 +8631,28 @@ export class Extension extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Extension.AsObject;
   static toObject(includeInstance: boolean, msg: Extension): Extension.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Extension, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Extension,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Extension;
-  static deserializeBinaryFromReader(message: Extension, reader: jspb.BinaryReader): Extension;
+  static deserializeBinaryFromReader(
+    message: Extension,
+    reader: jspb.BinaryReader
+  ): Extension;
 }
 
 export namespace Extension {
   export type AsObject = {
-    id?: String.AsObject,
-    url?: Uri.AsObject,
-    extension: Array<Extension.AsObject>,
-    value?: Extension.ValueX.AsObject,
-  }
+    id?: String.AsObject;
+    url?: Uri.AsObject;
+    extension: Array<Extension.AsObject>;
+    value?: Extension.ValueX.AsObject;
+  };
 
   export class ValueX extends jspb.Message {
     hasBase64Binary(): boolean;
@@ -7553,65 +8904,73 @@ export namespace Extension {
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): ValueX.AsObject;
     static toObject(includeInstance: boolean, msg: ValueX): ValueX.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: ValueX, writer: jspb.BinaryWriter): void;
+    static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+    static extensionsBinary: {
+      [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+    };
+    static serializeBinaryToWriter(
+      message: ValueX,
+      writer: jspb.BinaryWriter
+    ): void;
     static deserializeBinary(bytes: Uint8Array): ValueX;
-    static deserializeBinaryFromReader(message: ValueX, reader: jspb.BinaryReader): ValueX;
+    static deserializeBinaryFromReader(
+      message: ValueX,
+      reader: jspb.BinaryReader
+    ): ValueX;
   }
 
   export namespace ValueX {
     export type AsObject = {
-      base64Binary?: Base64Binary.AsObject,
-      pb_boolean?: Boolean.AsObject,
-      canonical?: Canonical.AsObject,
-      code?: Code.AsObject,
-      date?: Date.AsObject,
-      dateTime?: DateTime.AsObject,
-      decimal?: Decimal.AsObject,
-      id?: Id.AsObject,
-      instant?: Instant.AsObject,
-      integer?: Integer.AsObject,
-      markdown?: Markdown.AsObject,
-      oid?: Oid.AsObject,
-      positiveInt?: PositiveInt.AsObject,
-      stringValue?: String.AsObject,
-      time?: Time.AsObject,
-      unsignedInt?: UnsignedInt.AsObject,
-      uri?: Uri.AsObject,
-      url?: Url.AsObject,
-      uuid?: Uuid.AsObject,
-      address?: Address.AsObject,
-      age?: Age.AsObject,
-      annotation?: Annotation.AsObject,
-      attachment?: Attachment.AsObject,
-      codeableConcept?: CodeableConcept.AsObject,
-      coding?: Coding.AsObject,
-      contactPoint?: ContactPoint.AsObject,
-      count?: Count.AsObject,
-      distance?: Distance.AsObject,
-      duration?: Duration.AsObject,
-      humanName?: HumanName.AsObject,
-      identifier?: Identifier.AsObject,
-      money?: Money.AsObject,
-      period?: Period.AsObject,
-      quantity?: Quantity.AsObject,
-      range?: Range.AsObject,
-      ratio?: Ratio.AsObject,
-      reference?: Reference.AsObject,
-      sampledData?: SampledData.AsObject,
-      signature?: Signature.AsObject,
-      timing?: Timing.AsObject,
-      contactDetail?: ContactDetail.AsObject,
-      contributor?: Contributor.AsObject,
-      dataRequirement?: DataRequirement.AsObject,
-      expression?: Expression.AsObject,
-      parameterDefinition?: ParameterDefinition.AsObject,
-      relatedArtifact?: RelatedArtifact.AsObject,
-      triggerDefinition?: TriggerDefinition.AsObject,
-      usageContext?: UsageContext.AsObject,
-      dosage?: Dosage.AsObject,
-    }
+      base64Binary?: Base64Binary.AsObject;
+      pb_boolean?: Boolean.AsObject;
+      canonical?: Canonical.AsObject;
+      code?: Code.AsObject;
+      date?: Date.AsObject;
+      dateTime?: DateTime.AsObject;
+      decimal?: Decimal.AsObject;
+      id?: Id.AsObject;
+      instant?: Instant.AsObject;
+      integer?: Integer.AsObject;
+      markdown?: Markdown.AsObject;
+      oid?: Oid.AsObject;
+      positiveInt?: PositiveInt.AsObject;
+      stringValue?: String.AsObject;
+      time?: Time.AsObject;
+      unsignedInt?: UnsignedInt.AsObject;
+      uri?: Uri.AsObject;
+      url?: Url.AsObject;
+      uuid?: Uuid.AsObject;
+      address?: Address.AsObject;
+      age?: Age.AsObject;
+      annotation?: Annotation.AsObject;
+      attachment?: Attachment.AsObject;
+      codeableConcept?: CodeableConcept.AsObject;
+      coding?: Coding.AsObject;
+      contactPoint?: ContactPoint.AsObject;
+      count?: Count.AsObject;
+      distance?: Distance.AsObject;
+      duration?: Duration.AsObject;
+      humanName?: HumanName.AsObject;
+      identifier?: Identifier.AsObject;
+      money?: Money.AsObject;
+      period?: Period.AsObject;
+      quantity?: Quantity.AsObject;
+      range?: Range.AsObject;
+      ratio?: Ratio.AsObject;
+      reference?: Reference.AsObject;
+      sampledData?: SampledData.AsObject;
+      signature?: Signature.AsObject;
+      timing?: Timing.AsObject;
+      contactDetail?: ContactDetail.AsObject;
+      contributor?: Contributor.AsObject;
+      dataRequirement?: DataRequirement.AsObject;
+      expression?: Expression.AsObject;
+      parameterDefinition?: ParameterDefinition.AsObject;
+      relatedArtifact?: RelatedArtifact.AsObject;
+      triggerDefinition?: TriggerDefinition.AsObject;
+      usageContext?: UsageContext.AsObject;
+      dosage?: Dosage.AsObject;
+    };
 
     export enum ChoiceCase {
       CHOICE_NOT_SET = 0,
@@ -7696,22 +9055,33 @@ export class CodingWithFixedCode extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CodingWithFixedCode.AsObject;
-  static toObject(includeInstance: boolean, msg: CodingWithFixedCode): CodingWithFixedCode.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: CodingWithFixedCode, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: CodingWithFixedCode
+  ): CodingWithFixedCode.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: CodingWithFixedCode,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): CodingWithFixedCode;
-  static deserializeBinaryFromReader(message: CodingWithFixedCode, reader: jspb.BinaryReader): CodingWithFixedCode;
+  static deserializeBinaryFromReader(
+    message: CodingWithFixedCode,
+    reader: jspb.BinaryReader
+  ): CodingWithFixedCode;
 }
 
 export namespace CodingWithFixedCode {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    version?: String.AsObject,
-    display?: String.AsObject,
-    userSelected?: Boolean.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    version?: String.AsObject;
+    display?: String.AsObject;
+    userSelected?: Boolean.AsObject;
+  };
 }
 
 export class Reference extends jspb.Message {
@@ -8499,172 +9869,180 @@ export class Reference extends jspb.Message {
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Reference.AsObject;
   static toObject(includeInstance: boolean, msg: Reference): Reference.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: Reference, writer: jspb.BinaryWriter): void;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: Reference,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): Reference;
-  static deserializeBinaryFromReader(message: Reference, reader: jspb.BinaryReader): Reference;
+  static deserializeBinaryFromReader(
+    message: Reference,
+    reader: jspb.BinaryReader
+  ): Reference;
 }
 
 export namespace Reference {
   export type AsObject = {
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-    type?: Uri.AsObject,
-    uri?: String.AsObject,
-    fragment?: String.AsObject,
-    resourceId?: ReferenceId.AsObject,
-    accountId?: ReferenceId.AsObject,
-    activityDefinitionId?: ReferenceId.AsObject,
-    adverseEventId?: ReferenceId.AsObject,
-    allergyIntoleranceId?: ReferenceId.AsObject,
-    appointmentId?: ReferenceId.AsObject,
-    appointmentResponseId?: ReferenceId.AsObject,
-    auditEventId?: ReferenceId.AsObject,
-    basicId?: ReferenceId.AsObject,
-    binaryId?: ReferenceId.AsObject,
-    biologicallyDerivedProductId?: ReferenceId.AsObject,
-    bodyStructureId?: ReferenceId.AsObject,
-    bundleId?: ReferenceId.AsObject,
-    capabilityStatementId?: ReferenceId.AsObject,
-    carePlanId?: ReferenceId.AsObject,
-    careTeamId?: ReferenceId.AsObject,
-    catalogEntryId?: ReferenceId.AsObject,
-    chargeItemId?: ReferenceId.AsObject,
-    chargeItemDefinitionId?: ReferenceId.AsObject,
-    claimId?: ReferenceId.AsObject,
-    claimResponseId?: ReferenceId.AsObject,
-    clinicalImpressionId?: ReferenceId.AsObject,
-    codeSystemId?: ReferenceId.AsObject,
-    communicationId?: ReferenceId.AsObject,
-    communicationRequestId?: ReferenceId.AsObject,
-    compartmentDefinitionId?: ReferenceId.AsObject,
-    compositionId?: ReferenceId.AsObject,
-    conceptMapId?: ReferenceId.AsObject,
-    conditionId?: ReferenceId.AsObject,
-    consentId?: ReferenceId.AsObject,
-    contractId?: ReferenceId.AsObject,
-    coverageId?: ReferenceId.AsObject,
-    coverageEligibilityRequestId?: ReferenceId.AsObject,
-    coverageEligibilityResponseId?: ReferenceId.AsObject,
-    detectedIssueId?: ReferenceId.AsObject,
-    deviceId?: ReferenceId.AsObject,
-    deviceDefinitionId?: ReferenceId.AsObject,
-    deviceMetricId?: ReferenceId.AsObject,
-    deviceRequestId?: ReferenceId.AsObject,
-    deviceUseStatementId?: ReferenceId.AsObject,
-    diagnosticReportId?: ReferenceId.AsObject,
-    documentManifestId?: ReferenceId.AsObject,
-    documentReferenceId?: ReferenceId.AsObject,
-    domainResourceId?: ReferenceId.AsObject,
-    effectEvidenceSynthesisId?: ReferenceId.AsObject,
-    encounterId?: ReferenceId.AsObject,
-    endpointId?: ReferenceId.AsObject,
-    enrollmentRequestId?: ReferenceId.AsObject,
-    enrollmentResponseId?: ReferenceId.AsObject,
-    episodeOfCareId?: ReferenceId.AsObject,
-    eventDefinitionId?: ReferenceId.AsObject,
-    evidenceId?: ReferenceId.AsObject,
-    evidenceVariableId?: ReferenceId.AsObject,
-    exampleScenarioId?: ReferenceId.AsObject,
-    explanationOfBenefitId?: ReferenceId.AsObject,
-    familyMemberHistoryId?: ReferenceId.AsObject,
-    flagId?: ReferenceId.AsObject,
-    goalId?: ReferenceId.AsObject,
-    graphDefinitionId?: ReferenceId.AsObject,
-    groupId?: ReferenceId.AsObject,
-    guidanceResponseId?: ReferenceId.AsObject,
-    healthcareServiceId?: ReferenceId.AsObject,
-    imagingStudyId?: ReferenceId.AsObject,
-    immunizationId?: ReferenceId.AsObject,
-    immunizationEvaluationId?: ReferenceId.AsObject,
-    immunizationRecommendationId?: ReferenceId.AsObject,
-    implementationGuideId?: ReferenceId.AsObject,
-    insurancePlanId?: ReferenceId.AsObject,
-    invoiceId?: ReferenceId.AsObject,
-    libraryId?: ReferenceId.AsObject,
-    linkageId?: ReferenceId.AsObject,
-    listId?: ReferenceId.AsObject,
-    locationId?: ReferenceId.AsObject,
-    measureId?: ReferenceId.AsObject,
-    measureReportId?: ReferenceId.AsObject,
-    mediaId?: ReferenceId.AsObject,
-    medicationId?: ReferenceId.AsObject,
-    medicationAdministrationId?: ReferenceId.AsObject,
-    medicationDispenseId?: ReferenceId.AsObject,
-    medicationKnowledgeId?: ReferenceId.AsObject,
-    medicationRequestId?: ReferenceId.AsObject,
-    medicationStatementId?: ReferenceId.AsObject,
-    medicinalProductId?: ReferenceId.AsObject,
-    medicinalProductAuthorizationId?: ReferenceId.AsObject,
-    medicinalProductContraindicationId?: ReferenceId.AsObject,
-    medicinalProductIndicationId?: ReferenceId.AsObject,
-    medicinalProductIngredientId?: ReferenceId.AsObject,
-    medicinalProductInteractionId?: ReferenceId.AsObject,
-    medicinalProductManufacturedId?: ReferenceId.AsObject,
-    medicinalProductPackagedId?: ReferenceId.AsObject,
-    medicinalProductPharmaceuticalId?: ReferenceId.AsObject,
-    medicinalProductUndesirableEffectId?: ReferenceId.AsObject,
-    messageDefinitionId?: ReferenceId.AsObject,
-    messageHeaderId?: ReferenceId.AsObject,
-    molecularSequenceId?: ReferenceId.AsObject,
-    namingSystemId?: ReferenceId.AsObject,
-    nutritionOrderId?: ReferenceId.AsObject,
-    observationId?: ReferenceId.AsObject,
-    observationDefinitionId?: ReferenceId.AsObject,
-    operationDefinitionId?: ReferenceId.AsObject,
-    operationOutcomeId?: ReferenceId.AsObject,
-    organizationId?: ReferenceId.AsObject,
-    organizationAffiliationId?: ReferenceId.AsObject,
-    parametersId?: ReferenceId.AsObject,
-    patientId?: ReferenceId.AsObject,
-    paymentNoticeId?: ReferenceId.AsObject,
-    paymentReconciliationId?: ReferenceId.AsObject,
-    personId?: ReferenceId.AsObject,
-    planDefinitionId?: ReferenceId.AsObject,
-    practitionerId?: ReferenceId.AsObject,
-    practitionerRoleId?: ReferenceId.AsObject,
-    procedureId?: ReferenceId.AsObject,
-    provenanceId?: ReferenceId.AsObject,
-    questionnaireId?: ReferenceId.AsObject,
-    questionnaireResponseId?: ReferenceId.AsObject,
-    relatedPersonId?: ReferenceId.AsObject,
-    requestGroupId?: ReferenceId.AsObject,
-    researchDefinitionId?: ReferenceId.AsObject,
-    researchElementDefinitionId?: ReferenceId.AsObject,
-    researchStudyId?: ReferenceId.AsObject,
-    researchSubjectId?: ReferenceId.AsObject,
-    riskAssessmentId?: ReferenceId.AsObject,
-    riskEvidenceSynthesisId?: ReferenceId.AsObject,
-    scheduleId?: ReferenceId.AsObject,
-    searchParameterId?: ReferenceId.AsObject,
-    serviceRequestId?: ReferenceId.AsObject,
-    slotId?: ReferenceId.AsObject,
-    specimenId?: ReferenceId.AsObject,
-    specimenDefinitionId?: ReferenceId.AsObject,
-    structureDefinitionId?: ReferenceId.AsObject,
-    structureMapId?: ReferenceId.AsObject,
-    subscriptionId?: ReferenceId.AsObject,
-    substanceId?: ReferenceId.AsObject,
-    substanceNucleicAcidId?: ReferenceId.AsObject,
-    substancePolymerId?: ReferenceId.AsObject,
-    substanceProteinId?: ReferenceId.AsObject,
-    substanceReferenceInformationId?: ReferenceId.AsObject,
-    substanceSourceMaterialId?: ReferenceId.AsObject,
-    substanceSpecificationId?: ReferenceId.AsObject,
-    supplyDeliveryId?: ReferenceId.AsObject,
-    supplyRequestId?: ReferenceId.AsObject,
-    taskId?: ReferenceId.AsObject,
-    terminologyCapabilitiesId?: ReferenceId.AsObject,
-    testReportId?: ReferenceId.AsObject,
-    testScriptId?: ReferenceId.AsObject,
-    valueSetId?: ReferenceId.AsObject,
-    verificationResultId?: ReferenceId.AsObject,
-    visionPrescriptionId?: ReferenceId.AsObject,
-    metadataResourceId?: ReferenceId.AsObject,
-    identifier?: Identifier.AsObject,
-    display?: String.AsObject,
-  }
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+    type?: Uri.AsObject;
+    uri?: String.AsObject;
+    fragment?: String.AsObject;
+    resourceId?: ReferenceId.AsObject;
+    accountId?: ReferenceId.AsObject;
+    activityDefinitionId?: ReferenceId.AsObject;
+    adverseEventId?: ReferenceId.AsObject;
+    allergyIntoleranceId?: ReferenceId.AsObject;
+    appointmentId?: ReferenceId.AsObject;
+    appointmentResponseId?: ReferenceId.AsObject;
+    auditEventId?: ReferenceId.AsObject;
+    basicId?: ReferenceId.AsObject;
+    binaryId?: ReferenceId.AsObject;
+    biologicallyDerivedProductId?: ReferenceId.AsObject;
+    bodyStructureId?: ReferenceId.AsObject;
+    bundleId?: ReferenceId.AsObject;
+    capabilityStatementId?: ReferenceId.AsObject;
+    carePlanId?: ReferenceId.AsObject;
+    careTeamId?: ReferenceId.AsObject;
+    catalogEntryId?: ReferenceId.AsObject;
+    chargeItemId?: ReferenceId.AsObject;
+    chargeItemDefinitionId?: ReferenceId.AsObject;
+    claimId?: ReferenceId.AsObject;
+    claimResponseId?: ReferenceId.AsObject;
+    clinicalImpressionId?: ReferenceId.AsObject;
+    codeSystemId?: ReferenceId.AsObject;
+    communicationId?: ReferenceId.AsObject;
+    communicationRequestId?: ReferenceId.AsObject;
+    compartmentDefinitionId?: ReferenceId.AsObject;
+    compositionId?: ReferenceId.AsObject;
+    conceptMapId?: ReferenceId.AsObject;
+    conditionId?: ReferenceId.AsObject;
+    consentId?: ReferenceId.AsObject;
+    contractId?: ReferenceId.AsObject;
+    coverageId?: ReferenceId.AsObject;
+    coverageEligibilityRequestId?: ReferenceId.AsObject;
+    coverageEligibilityResponseId?: ReferenceId.AsObject;
+    detectedIssueId?: ReferenceId.AsObject;
+    deviceId?: ReferenceId.AsObject;
+    deviceDefinitionId?: ReferenceId.AsObject;
+    deviceMetricId?: ReferenceId.AsObject;
+    deviceRequestId?: ReferenceId.AsObject;
+    deviceUseStatementId?: ReferenceId.AsObject;
+    diagnosticReportId?: ReferenceId.AsObject;
+    documentManifestId?: ReferenceId.AsObject;
+    documentReferenceId?: ReferenceId.AsObject;
+    domainResourceId?: ReferenceId.AsObject;
+    effectEvidenceSynthesisId?: ReferenceId.AsObject;
+    encounterId?: ReferenceId.AsObject;
+    endpointId?: ReferenceId.AsObject;
+    enrollmentRequestId?: ReferenceId.AsObject;
+    enrollmentResponseId?: ReferenceId.AsObject;
+    episodeOfCareId?: ReferenceId.AsObject;
+    eventDefinitionId?: ReferenceId.AsObject;
+    evidenceId?: ReferenceId.AsObject;
+    evidenceVariableId?: ReferenceId.AsObject;
+    exampleScenarioId?: ReferenceId.AsObject;
+    explanationOfBenefitId?: ReferenceId.AsObject;
+    familyMemberHistoryId?: ReferenceId.AsObject;
+    flagId?: ReferenceId.AsObject;
+    goalId?: ReferenceId.AsObject;
+    graphDefinitionId?: ReferenceId.AsObject;
+    groupId?: ReferenceId.AsObject;
+    guidanceResponseId?: ReferenceId.AsObject;
+    healthcareServiceId?: ReferenceId.AsObject;
+    imagingStudyId?: ReferenceId.AsObject;
+    immunizationId?: ReferenceId.AsObject;
+    immunizationEvaluationId?: ReferenceId.AsObject;
+    immunizationRecommendationId?: ReferenceId.AsObject;
+    implementationGuideId?: ReferenceId.AsObject;
+    insurancePlanId?: ReferenceId.AsObject;
+    invoiceId?: ReferenceId.AsObject;
+    libraryId?: ReferenceId.AsObject;
+    linkageId?: ReferenceId.AsObject;
+    listId?: ReferenceId.AsObject;
+    locationId?: ReferenceId.AsObject;
+    measureId?: ReferenceId.AsObject;
+    measureReportId?: ReferenceId.AsObject;
+    mediaId?: ReferenceId.AsObject;
+    medicationId?: ReferenceId.AsObject;
+    medicationAdministrationId?: ReferenceId.AsObject;
+    medicationDispenseId?: ReferenceId.AsObject;
+    medicationKnowledgeId?: ReferenceId.AsObject;
+    medicationRequestId?: ReferenceId.AsObject;
+    medicationStatementId?: ReferenceId.AsObject;
+    medicinalProductId?: ReferenceId.AsObject;
+    medicinalProductAuthorizationId?: ReferenceId.AsObject;
+    medicinalProductContraindicationId?: ReferenceId.AsObject;
+    medicinalProductIndicationId?: ReferenceId.AsObject;
+    medicinalProductIngredientId?: ReferenceId.AsObject;
+    medicinalProductInteractionId?: ReferenceId.AsObject;
+    medicinalProductManufacturedId?: ReferenceId.AsObject;
+    medicinalProductPackagedId?: ReferenceId.AsObject;
+    medicinalProductPharmaceuticalId?: ReferenceId.AsObject;
+    medicinalProductUndesirableEffectId?: ReferenceId.AsObject;
+    messageDefinitionId?: ReferenceId.AsObject;
+    messageHeaderId?: ReferenceId.AsObject;
+    molecularSequenceId?: ReferenceId.AsObject;
+    namingSystemId?: ReferenceId.AsObject;
+    nutritionOrderId?: ReferenceId.AsObject;
+    observationId?: ReferenceId.AsObject;
+    observationDefinitionId?: ReferenceId.AsObject;
+    operationDefinitionId?: ReferenceId.AsObject;
+    operationOutcomeId?: ReferenceId.AsObject;
+    organizationId?: ReferenceId.AsObject;
+    organizationAffiliationId?: ReferenceId.AsObject;
+    parametersId?: ReferenceId.AsObject;
+    patientId?: ReferenceId.AsObject;
+    paymentNoticeId?: ReferenceId.AsObject;
+    paymentReconciliationId?: ReferenceId.AsObject;
+    personId?: ReferenceId.AsObject;
+    planDefinitionId?: ReferenceId.AsObject;
+    practitionerId?: ReferenceId.AsObject;
+    practitionerRoleId?: ReferenceId.AsObject;
+    procedureId?: ReferenceId.AsObject;
+    provenanceId?: ReferenceId.AsObject;
+    questionnaireId?: ReferenceId.AsObject;
+    questionnaireResponseId?: ReferenceId.AsObject;
+    relatedPersonId?: ReferenceId.AsObject;
+    requestGroupId?: ReferenceId.AsObject;
+    researchDefinitionId?: ReferenceId.AsObject;
+    researchElementDefinitionId?: ReferenceId.AsObject;
+    researchStudyId?: ReferenceId.AsObject;
+    researchSubjectId?: ReferenceId.AsObject;
+    riskAssessmentId?: ReferenceId.AsObject;
+    riskEvidenceSynthesisId?: ReferenceId.AsObject;
+    scheduleId?: ReferenceId.AsObject;
+    searchParameterId?: ReferenceId.AsObject;
+    serviceRequestId?: ReferenceId.AsObject;
+    slotId?: ReferenceId.AsObject;
+    specimenId?: ReferenceId.AsObject;
+    specimenDefinitionId?: ReferenceId.AsObject;
+    structureDefinitionId?: ReferenceId.AsObject;
+    structureMapId?: ReferenceId.AsObject;
+    subscriptionId?: ReferenceId.AsObject;
+    substanceId?: ReferenceId.AsObject;
+    substanceNucleicAcidId?: ReferenceId.AsObject;
+    substancePolymerId?: ReferenceId.AsObject;
+    substanceProteinId?: ReferenceId.AsObject;
+    substanceReferenceInformationId?: ReferenceId.AsObject;
+    substanceSourceMaterialId?: ReferenceId.AsObject;
+    substanceSpecificationId?: ReferenceId.AsObject;
+    supplyDeliveryId?: ReferenceId.AsObject;
+    supplyRequestId?: ReferenceId.AsObject;
+    taskId?: ReferenceId.AsObject;
+    terminologyCapabilitiesId?: ReferenceId.AsObject;
+    testReportId?: ReferenceId.AsObject;
+    testScriptId?: ReferenceId.AsObject;
+    valueSetId?: ReferenceId.AsObject;
+    verificationResultId?: ReferenceId.AsObject;
+    visionPrescriptionId?: ReferenceId.AsObject;
+    metadataResourceId?: ReferenceId.AsObject;
+    identifier?: Identifier.AsObject;
+    display?: String.AsObject;
+  };
 
   export enum ReferenceCase {
     REFERENCE_NOT_SET = 0,
@@ -8843,20 +10221,30 @@ export class ReferenceId extends jspb.Message {
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ReferenceId.AsObject;
-  static toObject(includeInstance: boolean, msg: ReferenceId): ReferenceId.AsObject;
-  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-  static serializeBinaryToWriter(message: ReferenceId, writer: jspb.BinaryWriter): void;
+  static toObject(
+    includeInstance: boolean,
+    msg: ReferenceId
+  ): ReferenceId.AsObject;
+  static extensions: { [key: number]: jspb.ExtensionFieldInfo<jspb.Message> };
+  static extensionsBinary: {
+    [key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>;
+  };
+  static serializeBinaryToWriter(
+    message: ReferenceId,
+    writer: jspb.BinaryWriter
+  ): void;
   static deserializeBinary(bytes: Uint8Array): ReferenceId;
-  static deserializeBinaryFromReader(message: ReferenceId, reader: jspb.BinaryReader): ReferenceId;
+  static deserializeBinaryFromReader(
+    message: ReferenceId,
+    reader: jspb.BinaryReader
+  ): ReferenceId;
 }
 
 export namespace ReferenceId {
   export type AsObject = {
-    value: string,
-    history?: Id.AsObject,
-    id?: String.AsObject,
-    extension: Array<Extension.AsObject>,
-  }
+    value: string;
+    history?: Id.AsObject;
+    id?: String.AsObject;
+    extension: Array<Extension.AsObject>;
+  };
 }
-

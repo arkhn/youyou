@@ -8,13 +8,13 @@ import {
   ElementDefinition,
   String,
 } from "../../resources/ts/proto/r4/core/datatypes_pb";
+import { StructureDefinition } from "../../resources/ts/proto/r4/core/resources/structure_definition_pb";
 
 const Editor: React.FC<{}> = () => {
   const { loading, structureDefinition, selectedAttributeId } = useSelector(
     (state: RootState) => state.resource
   );
   const structuredefSettings: String.AsObject = ("structuredefSettings" as unknown) as String.AsObject;
-
   let attribute: ElementDefinition.AsObject | undefined = undefined;
 
   if (selectedAttributeId && selectedAttributeId !== structuredefSettings) {
@@ -23,24 +23,29 @@ const Editor: React.FC<{}> = () => {
     );
   }
 
-  const renderAttributeEditor = () => {
+  const renderAttributeEditor = (
+    structureDef: StructureDefinition.AsObject
+  ) => {
     if (selectedAttributeId === structuredefSettings) {
-      return <StructuredefSettings profile={structureDefinition} />;
+      return <StructuredefSettings structureDefinition={structureDef} />;
     } else {
       return (
-        <AttributeEditor attribute={attribute} profile={structureDefinition} />
+        <AttributeEditor
+          attribute={attribute}
+          structureDefinition={structureDef}
+        />
       );
     }
   };
 
-  if (loading === true) {
+  if (loading) {
     return <div>Loading ...</div>;
   }
 
   if (structureDefinition) {
     return (
       <div>
-        <h1>Profile Editor for {structureDefinition.id}</h1>
+        <h1>Profile Editor for {structureDefinition.type}</h1>
         <a
           href={
             "data:json/plain;charset=utf-8," +
@@ -50,7 +55,7 @@ const Editor: React.FC<{}> = () => {
         >
           <button>Download</button>
         </a>
-        {renderAttributeEditor()}
+        {renderAttributeEditor(structureDefinition)}
         <ResourceProfileMapping profile={structureDefinition} />
       </div>
     );
