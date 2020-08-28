@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../state/store";
+import { useDispatch } from "react-redux";
+import { updateStructureDefExtension } from "../../../state/actions/resourceActions";
 
 import {
   String,
@@ -12,13 +14,17 @@ import Autocomplete from "@material-ui/lab/Autocomplete";
 import TextField from "@material-ui/core/TextField";
 
 type AttributeEditorProps = {
-  structureDef: StructureDefinition.AsObject;
+  structureDefinition: StructureDefinition.AsObject;
 };
 
-const AttributeEditor: React.FC<AttributeEditorProps> = ({ structureDef }) => {
+const AttributeEditor: React.FC<AttributeEditorProps> = ({
+  structureDefinition
+}) => {
   const { datatypes } = useSelector((state: RootState) => {
     return state.codeSystem;
   });
+  const dispatch = useDispatch();
+  let structureDef = { ...structureDefinition };
 
   const getDifferentialElementById = (id: string) => {
     if (structureDef && structureDef.differential) {
@@ -43,19 +49,19 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({ structureDef }) => {
   let extensionElement = getDifferentialElementById("Extension");
 
   const [short, setShort] = useState(
-    ((extensionElement.short as unknown) as string) | ""
+    extensionElement ? ((extensionElement.short as unknown) as string) : ""
   );
   const [definition, setDefinition] = useState(
-    (extensionElement.definition as unknown) as string
+    extensionElement ? ((extensionElement.definition as unknown) as string) : ""
   );
   const [comment, setComment] = useState(
-    (extensionElement.comment as unknown) as string
+    extensionElement ? ((extensionElement.comment as unknown) as string) : ""
   );
   const [minCardinality, setMinCardinality] = useState(
-    (extensionElement.min as unknown) as string
+    extensionElement ? ((extensionElement.min as unknown) as string) : ""
   );
   const [maxCardinality, setMaxCardinality] = useState(
-    (extensionElement.max as unknown) as string
+    extensionElement ? ((extensionElement.max as unknown) as string) : ""
   );
   const [dataType, setDataType] = useState("");
 
@@ -69,7 +75,31 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({ structureDef }) => {
       extensionElement.comment = (comment as unknown) as String.AsObject;
       extensionElement.min = (minCardinality as unknown) as UnsignedInt.AsObject;
       extensionElement.max = (maxCardinality as unknown) as String.AsObject;
+      extensionElement.max = (maxCardinality as unknown) as String.AsObject;
+      console.log(dataType);
     }
+    extensionElement = getSnapshotElementById("Extension");
+
+    if (extensionElement) {
+      extensionElement.short = (short as unknown) as String.AsObject;
+      extensionElement.definition = (definition as unknown) as String.AsObject;
+      extensionElement.comment = (comment as unknown) as String.AsObject;
+      extensionElement.min = (minCardinality as unknown) as UnsignedInt.AsObject;
+      extensionElement.max = (maxCardinality as unknown) as String.AsObject;
+    }
+
+    extensionElement = getSnapshotElementById("Extension.value[x]");
+
+    if (extensionElement) {
+      extensionElement.type[0].code = (dataType as unknown) as String.AsObject;
+    }
+
+    extensionElement = getDifferentialElementById("Extension.value[x]");
+
+    if (extensionElement) {
+      extensionElement.type[0].code = (dataType as unknown) as String.AsObject;
+    }
+    dispatch(updateStructureDefExtension(structureDef));
   };
 
   return (
@@ -78,45 +108,35 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({ structureDef }) => {
         <TextField
           id="short"
           label="Short"
-          value={short}
-          onBlur={(event: any): void => {
-            setShort(event.target.value);
-          }}
+          defaultValue={short}
+          onBlur={(event: any): void => setShort(event.target.value)}
         />
         <br />
         <TextField
           id="definition"
           label="Definition"
-          value={definition}
-          onBlur={(event: any): void => {
-            setDefinition(event.target.value);
-          }}
+          defaultValue={definition}
+          onBlur={(event: any): void => setDefinition(event.target.value)}
         />
         <br />
         <TextField
           id="comment"
           label="Comment"
-          value={comment}
-          onBlur={(event: any): void => {
-            setComment(event.target.value);
-          }}
+          defaultValue={comment}
+          onBlur={(event: any): void => setComment(event.target.value)}
         />
         <br />
         <TextField
           id="minCardinality"
           label="Min"
-          value={minCardinality}
-          onBlur={(event: any): void => {
-            setMinCardinality(event.target.value);
-          }}
+          defaultValue={minCardinality}
+          onBlur={(event: any): void => setMinCardinality(event.target.value)}
         />
         <TextField
           id="maxCardinality"
           label="Max"
-          value={maxCardinality}
-          onBlur={(event: any): void => {
-            setMaxCardinality(event.target.value);
-          }}
+          defaultValue={maxCardinality}
+          onBlur={(event: any): void => setMaxCardinality(event.target.value)}
         />
         <br />
         <ul>
@@ -128,6 +148,9 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({ structureDef }) => {
               }) || []
             }
             style={{ width: 300 }}
+            onChange={(event: any, value): void =>
+              setDataType((value as unknown) as string)
+            }
             renderInput={(params) => (
               <TextField {...params} label="Data type" variant="outlined" />
             )}

@@ -31,7 +31,7 @@ const ExtensionEditor: React.FC<{}> = () => {
       />
 
       {extensionStructureDefinition && (
-        <AttributeEditor structureDef={extensionStructureDefinition} />
+        <AttributeEditor structureDefinition={extensionStructureDefinition} />
       )}
     </React.Fragment>
   );
