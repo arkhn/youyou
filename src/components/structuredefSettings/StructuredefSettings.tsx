@@ -28,6 +28,7 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
   structureDefinition,
 }) => {
   const dispatch = useDispatch();
+
   // LOCAL STATES
   const [id, setId] = useState(
     structureDefinition ? structureDefinition.id : ""
@@ -138,25 +139,52 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
   ) => {
     if (structureDefinition) {
       e.preventDefault();
-      const structureToEdit = structureDefinition;
       // content required
-      structureToEdit.url = url as Uri.AsObject;
-      structureToEdit.name = name as String.AsObject;
-      structureToEdit.kind = kind as StructureDefinition.KindCode.AsObject;
-      structureToEdit.abstract = abstract as Boolean.AsObject;
-      structureToEdit.status = status as StructureDefinition.StatusCode.AsObject;
+      structureDefinition.url = url as Uri.AsObject;
+      structureDefinition.name = name as String.AsObject;
+      structureDefinition.kind = kind as StructureDefinition.KindCode.AsObject;
+      structureDefinition.abstract = abstract as Boolean.AsObject;
+      structureDefinition.status = status as StructureDefinition.StatusCode.AsObject;
       // content not required
-      structureToEdit.date = (date as unknown) as DateTime.AsObject;
-      createId(structureToEdit, id as Id.AsObject);
-      createPublisher(structureToEdit, publisher as String.AsObject);
-      createDescription(structureToEdit, description as String.AsObject);
-      createPurpose(structureToEdit, purpose);
-      createExperimental(structureToEdit, experimental);
-      createTitle(structureToEdit, title);
-      createCopyright(structureToEdit, copyright);
-      dispatch(getStructureDefSuccess(structureToEdit));
+      structureDefinition.date = (date as unknown) as DateTime.AsObject;
+      createId(structureDefinition, id as Id.AsObject);
+      createPublisher(structureDefinition, publisher as String.AsObject);
+      createDescription(structureDefinition, description as String.AsObject);
+      createPurpose(structureDefinition, purpose);
+      createExperimental(structureDefinition, experimental);
+      createTitle(structureDefinition, title);
+      createCopyright(structureDefinition, copyright);
+      dispatch(getStructureDefSuccess(structureDefinition));
     }
   };
+
+  const renderContact = (
+    <>
+      <label htmlFor="contactName">Contact Name</label>
+      <input type="text" name="contactName" />
+      <br />
+      <select name="contactSystem">
+        <option value="phone">Phone</option>
+        <option value="fax">fax</option>
+        <option value="email">email</option>
+        <option value="pager">pager</option>
+        <option value="url">url</option>
+        <option value="sms">sms</option>
+        <option value="other">other</option>
+      </select>
+      <br />
+      <label htmlFor="contactValue">Value</label>
+      <input type="text" name="contactValue" />
+      <br />
+      <select name="contactUse">
+        <option value="home">home</option>
+        <option value="work">work</option>
+        <option value="temp">temporary</option>
+        <option value="old">old</option>
+        <option value="mobile">mobile</option>
+      </select>
+    </>
+  );
 
   return (
     <>
@@ -255,6 +283,8 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
           onChange={(e) => editExperimental(e)}
         />
         <label htmlFor="experimental">experimental</label>
+        <br />
+        {renderContact}
         <br />
         <input
           type="submit"

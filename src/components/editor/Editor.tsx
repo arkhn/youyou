@@ -36,7 +36,7 @@ const Editor: React.FC<{}> = () => {
     }
   };
 
-  if (loading === true) {
+  if (loading) {
     return <div>Loading ...</div>;
   }
 

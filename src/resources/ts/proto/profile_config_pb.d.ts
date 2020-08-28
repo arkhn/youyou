@@ -550,7 +550,7 @@ export namespace ElementData {
     name: string,
     sizeRestriction: SizeRestrictionMap[keyof SizeRestrictionMap],
     description: string,
-    pb_short: string,
+    short: string,
     comment: string,
     urlOverride: string,
   }
