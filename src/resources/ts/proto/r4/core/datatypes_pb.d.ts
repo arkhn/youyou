@@ -3180,44 +3180,44 @@ export class ElementDefinition extends jspb.Message {
 
 export namespace ElementDefinition {
   export type AsObject = {
-    id?: String.AsObject;
-    extension: Array<Extension.AsObject>;
-    modifierExtension: Array<Extension.AsObject>;
-    path?: String.AsObject;
-    representation: Array<ElementDefinition.RepresentationCode.AsObject>;
-    sliceName?: String.AsObject;
-    sliceIsConstraining?: Boolean.AsObject;
-    label?: String.AsObject;
-    code: Array<Coding.AsObject>;
-    slicing?: ElementDefinition.Slicing.AsObject;
-    short?: String.AsObject;
-    definition?: Markdown.AsObject;
-    comment?: Markdown.AsObject;
-    requirements?: Markdown.AsObject;
-    alias: Array<String.AsObject>;
-    min?: UnsignedInt.AsObject;
-    max?: String.AsObject;
-    base?: ElementDefinition.Base.AsObject;
-    contentReference?: Uri.AsObject;
-    type: Array<ElementDefinition.TypeRef.AsObject>;
-    defaultValue?: ElementDefinition.DefaultValueX.AsObject;
-    meaningWhenMissing?: Markdown.AsObject;
-    orderMeaning?: String.AsObject;
-    fixed?: ElementDefinition.FixedX.AsObject;
-    pattern?: ElementDefinition.PatternX.AsObject;
-    example: Array<ElementDefinition.Example.AsObject>;
-    minValue?: ElementDefinition.MinValueX.AsObject;
-    maxValue?: ElementDefinition.MaxValueX.AsObject;
-    maxLength?: Integer.AsObject;
-    condition: Array<Id.AsObject>;
-    constraint: Array<ElementDefinition.Constraint.AsObject>;
-    mustSupport?: Boolean.AsObject;
-    isModifier?: Boolean.AsObject;
-    isModifierReason?: String.AsObject;
-    isSummary?: Boolean.AsObject;
-    binding?: ElementDefinition.ElementDefinitionBinding.AsObject;
-    mapping: Array<ElementDefinition.Mapping.AsObject>;
-  };
+    id?: String.AsObject,
+    extension: Array<Extension.AsObject>,
+    modifierExtension: Array<Extension.AsObject>,
+    path?: String.AsObject,
+    representation: Array<ElementDefinition.RepresentationCode.AsObject>,
+    sliceName?: String.AsObject,
+    sliceIsConstraining?: Boolean.AsObject,
+    label?: String.AsObject,
+    code: Array<Coding.AsObject>,
+    slicing?: ElementDefinition.Slicing.AsObject,
+    short?: String.AsObject,
+    definition?: Markdown.AsObject,
+    comment?: Markdown.AsObject,
+    requirements?: Markdown.AsObject,
+    alias: Array<String.AsObject>,
+    min?: UnsignedInt.AsObject,
+    max?: String.AsObject,
+    base?: ElementDefinition.Base.AsObject,
+    contentReference?: Uri.AsObject,
+    type: Array<ElementDefinition.TypeRef.AsObject>,
+    defaultValue?: ElementDefinition.DefaultValueX.AsObject,
+    meaningWhenMissing?: Markdown.AsObject,
+    orderMeaning?: String.AsObject,
+    fixed?: ElementDefinition.FixedX.AsObject,
+    pattern?: ElementDefinition.PatternX.AsObject,
+    example: Array<ElementDefinition.Example.AsObject>,
+    minValue?: ElementDefinition.MinValueX.AsObject,
+    maxValue?: ElementDefinition.MaxValueX.AsObject,
+    maxLength?: Integer.AsObject,
+    condition: Array<Id.AsObject>,
+    constraint: Array<ElementDefinition.Constraint.AsObject>,
+    mustSupport?: Boolean.AsObject,
+    isModifier?: Boolean.AsObject,
+    isModifierReason?: String.AsObject,
+    isSummary?: Boolean.AsObject,
+    binding?: ElementDefinition.ElementDefinitionBinding.AsObject,
+    mapping: Array<ElementDefinition.Mapping.AsObject>,
+  }
 
   export class RepresentationCode extends jspb.Message {
     getValue(): proto_r4_core_codes_pb.PropertyRepresentationCode.ValueMap[keyof proto_r4_core_codes_pb.PropertyRepresentationCode.ValueMap];

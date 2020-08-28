@@ -7,9 +7,12 @@ import {
   Uri,
   DateTime,
   Id,
-  Boolean,
+  Boolean
 } from "../../resources/ts/proto/r4/core/datatypes_pb";
-import { getStructureDefSuccess } from "../../state/actions/resourceActions";
+import {
+  getStructureDefSuccess,
+  updateStructureDefExtension
+} from "../../state/actions/resourceActions";
 import {
   editExperimental,
   editTitle,
@@ -17,15 +20,17 @@ import {
   editPurpose,
   editPublisher,
   editId,
-  editDescription,
+  editDescription
 } from "./utils";
 
 type StructuredefSettingsProps = {
   structureDefinition: StructureDefinition.AsObject;
+  type?: "resource" | "extension";
 };
 
 const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
   structureDefinition,
+  type = "resource"
 }) => {
   const dispatch = useDispatch();
 
@@ -70,7 +75,11 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
       editExperimental(structureDefinitonToEdit, experimental);
       editTitle(structureDefinitonToEdit, title);
       editCopyright(structureDefinitonToEdit, copyright);
-      dispatch(getStructureDefSuccess(structureDefinitonToEdit));
+      if (type === "resource") {
+        dispatch(getStructureDefSuccess(structureDefinition));
+      } else if (type === "extension") {
+        dispatch(updateStructureDefExtension(structureDefinition));
+      }
     }
   };
 
