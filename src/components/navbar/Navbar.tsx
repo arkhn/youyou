@@ -7,14 +7,12 @@ import { Button } from "@material-ui/core";
 import useStyles from "./style";
 import { ReactComponent as Logo } from "../../assets/img/arkhn-logo.svg";
 
-type HeaderProps = {
+type NavbarProps = {
   buttonType?: "profile" | "extension" | undefined;
 };
 
-const Header: React.FC<HeaderProps> = ({ buttonType = undefined }) => {
+const Navbar: React.FC<NavbarProps> = ({ buttonType = undefined }) => {
   const classes = useStyles();
-
-  const redirect = buttonType === "profile" ? "/editprofile" : "/editextension";
 
   return (
     <AppBar position="static" className={classes.navBar}>
@@ -45,4 +43,4 @@ const Header: React.FC<HeaderProps> = ({ buttonType = undefined }) => {
   );
 };
 
-export default Header;
+export default Navbar;

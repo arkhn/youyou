@@ -14,7 +14,7 @@ import {
 } from "@material-ui/core";
 import useStyles from "./style";
 import { ReactComponent as FhirLogo } from "../../assets/img/fhir-logo.svg";
-import Header from "../header/Header";
+import Navbar from "../navbar/Navbar";
 
 const Homepage: React.FC<{}> = () => {
   const { loading, resources } = useSelector(
@@ -72,7 +72,7 @@ const Homepage: React.FC<{}> = () => {
 
   return (
     <>
-      <Header buttonType="extension" />
+      <Navbar buttonType="extension" />
       <section className={classes.homepage}>
         <Typography className={classes.homepageText}>
           Select a profile you want to edit.

@@ -7,8 +7,12 @@ import {
   getIdsSuccess,
   getIdsFailure,
   getStructureDefSuccess,
-  getStructureDefFailure,
+  getStructureDefFailure
 } from "./actions/resourceActions";
+import {
+  getCodeSystemDataTypeSuccess,
+  getCodeSystemDataTypeFailure
+} from "./actions/codeSystemActions";
 import { FetchedData } from "./../types";
 import { AxiosResponse } from "axios";
 import { String } from "../resources/ts/proto/r4/core/datatypes_pb";
@@ -45,6 +49,20 @@ export const requestResource = (resource: String.AsObject) => {
       dispatch(getStructureDefSuccess(response.data.entry[0].resource));
     } else {
       dispatch(getStructureDefFailure(new Error(response.statusText)));
+    }
+  };
+};
+
+// FETCH DATA TYPES
+export const requestDataTypes = (codeSystemName: string = "data-types") => {
+  return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
+    const response: AxiosResponse<any> = await api.get(
+      `/CodeSystem?id=${codeSystemName}`
+    );
+    if (response.status === 200) {
+      dispatch(getCodeSystemDataTypeSuccess(response.data.entry[0].resource));
+    } else {
+      dispatch(getCodeSystemDataTypeFailure(new Error(response.statusText)));
     }
   };
 };

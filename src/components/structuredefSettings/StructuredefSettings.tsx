@@ -4,16 +4,21 @@ import { useDispatch } from "react-redux";
 import {
   String,
   DateTime,
-  Markdown,
+  Markdown
 } from "../../resources/ts/proto/r4/core/datatypes_pb";
-import { getStructureDefSuccess } from "../../state/actions/resourceActions";
+import {
+  getStructureDefSuccess,
+  updateStructureDefExtension
+} from "../../state/actions/resourceActions";
 
 type StructuredefSettingsProps = {
   profile: StructureDefinition.AsObject | null;
+  type?: "resource" | "extension";
 };
 
 const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
   profile,
+  type = "resource"
 }) => {
   const dispatch = useDispatch();
 
@@ -47,6 +52,11 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
       profileToEdit.description = description as String.AsObject;
       profileToEdit.date = (date as unknown) as DateTime.AsObject;
       dispatch(getStructureDefSuccess(profileToEdit));
+      if (type === "resource") {
+        dispatch(getStructureDefSuccess(profileToEdit));
+      } else if (type === "extension") {
+        dispatch(updateStructureDefExtension(profileToEdit));
+      }
     }
   };
 

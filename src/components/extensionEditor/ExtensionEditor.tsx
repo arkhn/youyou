@@ -1,42 +1,39 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../state/store";
-import { selectResource } from "../../state/actions/resourceActions";
-import { Link } from "react-router-dom";
-import { DataFetched } from "../../state/reducers/resource";
-import { requestResource } from "../../state/thunkMiddleware";
 
-import Header from "../header/Header";
-import {
-  Card,
-  CardActionArea,
-  Typography,
-  Grid,
-  CircularProgress,
-  Button
-} from "@material-ui/core";
-
-// import useStyles from "./style";
+import StructuredefSettings from "../structuredefSettings/StructuredefSettings";
+import AttributeEditor from "./attributeEditor/AttributeEditor";
+import Navbar from "../navbar/Navbar";
 
 const ExtensionEditor: React.FC<{}> = () => {
-  const { loading, resources } = useSelector(
-    (state: RootState) => state.resource
-  );
-  const dispatch = useDispatch();
-  // const classes = useStyles();
-
-  const dispatchResourceSelected = (resource: DataFetched): void => {
-    if (resource.id) {
-      dispatch(selectResource(resource.id));
-      dispatch(requestResource(resource.id));
-    }
-  };
+  const { extensionStructureDefinition } = useSelector((state: RootState) => {
+    return state.resource;
+  });
 
   return (
-    <>
-      <Header buttonType="profile" />
-      <div>Yop</div>
-    </>
+    <React.Fragment>
+      <Navbar buttonType="profile" />
+      <a
+        href={
+          "data:json/plain;charset=utf-8," +
+          encodeURIComponent(
+            JSON.stringify(extensionStructureDefinition, null, 2)
+          )
+        }
+        download={extensionStructureDefinition?.name + ".json"}
+      >
+        <button>Download</button>
+      </a>
+      <StructuredefSettings
+        profile={extensionStructureDefinition}
+        type="extension"
+      />
+
+      {extensionStructureDefinition && (
+        <AttributeEditor structureDef={extensionStructureDefinition} />
+      )}
+    </React.Fragment>
   );
 };
 

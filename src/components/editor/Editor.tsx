@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../state/store";
 import {
   ElementDefinition,
-  String,
+  String
 } from "../../resources/ts/proto/r4/core/datatypes_pb";
 
 const Editor: React.FC<{}> = () => {
@@ -25,7 +25,9 @@ const Editor: React.FC<{}> = () => {
 
   const renderAttributeEditor = () => {
     if (selectedAttributeId === structuredefSettings) {
-      return <StructuredefSettings profile={structureDefinition} />;
+      return (
+        <StructuredefSettings profile={structureDefinition} type="resource" />
+      );
     } else {
       return (
         <AttributeEditor attribute={attribute} profile={structureDefinition} />

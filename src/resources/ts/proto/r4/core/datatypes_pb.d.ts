@@ -2615,7 +2615,7 @@ export namespace ElementDefinition {
     label?: String.AsObject,
     code: Array<Coding.AsObject>,
     slicing?: ElementDefinition.Slicing.AsObject,
-    pb_short?: String.AsObject,
+    short?: String.AsObject,
     definition?: Markdown.AsObject,
     comment?: Markdown.AsObject,
     requirements?: Markdown.AsObject,
