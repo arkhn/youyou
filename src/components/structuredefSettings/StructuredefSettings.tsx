@@ -10,7 +10,7 @@ import {
   Boolean
 } from "../../resources/ts/proto/r4/core/datatypes_pb";
 import {
-  getStructureDefSuccess,
+  updateStructureDefProfile,
   updateStructureDefExtension
 } from "../../state/actions/resourceActions";
 import {
@@ -76,7 +76,7 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
       editTitle(structureDefinitonToEdit, title);
       editCopyright(structureDefinitonToEdit, copyright);
       if (type === "resource") {
-        dispatch(getStructureDefSuccess(structureDefinition));
+        dispatch(updateStructureDefProfile(structureDefinition));
       } else if (type === "extension") {
         dispatch(updateStructureDefExtension(structureDefinition));
       }

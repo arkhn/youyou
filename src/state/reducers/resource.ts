@@ -1,22 +1,22 @@
 import { StructureDefinition } from "../../resources/ts/proto/r4/core/resources/structure_definition_pb";
 import extensionStructureDefinition from "../../assets/extensionTemplate";
 import {
-  ResourceAction,
   SELECT_RESOURCE,
-  GET_IDS_SUCCESS,
-  GetIdsFailureAction,
-  GetFetchStartAction,
-  GetIdsSuccessAction,
-  GET_FETCH_START,
+  ResourceAction,
   GET_IDS_FAILURE,
-  GetStructureDefFailureAction,
-  GetStructureDefSuccessAction,
-  GET_STRUCTUREDEF_SUCCESS,
-  GET_STRUCTUREDEF_FAILURE,
+  GetIdsFailureAction,
+  GET_FETCH_START,
+  GetFetchStartAction,
+  GET_IDS_SUCCESS,
+  GetIdsSuccessAction,
+  UPDATE_STRUCTURE_DEF_PROFILE,
+  UpdateStructureDefProfileAction,
+  UPDATE_STRUCTURE_DEF_FAILURE,
+  UpdateStructureDefFailureAction,
   SELECT_ATTRIBUTE,
   SelectAttributeAction,
-  UpdateStructureDefExtensionAction,
-  UPDATE_STRUCTUREDEFEXTENSION
+  UPDATE_STRUCTURE_DEF_EXTENSION,
+  UpdateStructureDefExtensionAction
 } from "../actions/resourceActions";
 import { String } from "../../resources/ts/proto/r4/core/datatypes_pb";
 
@@ -49,8 +49,8 @@ export type AllResourcesAction =
   | GetFetchStartAction
   | GetIdsSuccessAction
   | ResourceAction
-  | GetStructureDefFailureAction
-  | GetStructureDefSuccessAction
+  | UpdateStructureDefFailureAction
+  | UpdateStructureDefProfileAction
   | SelectAttributeAction
   | UpdateStructureDefExtensionAction;
 
@@ -83,14 +83,14 @@ export const resource = (
         resources: [],
         error: action.payload
       };
-    case GET_STRUCTUREDEF_SUCCESS:
+    case UPDATE_STRUCTURE_DEF_PROFILE:
       return {
         ...state,
         loading: false,
         structureDefinition: action.payload,
         error: null
       };
-    case GET_STRUCTUREDEF_FAILURE:
+    case UPDATE_STRUCTURE_DEF_FAILURE:
       return {
         ...state,
         loading: false,
@@ -102,7 +102,7 @@ export const resource = (
         ...state,
         selectedAttributeId: action.payload
       };
-    case UPDATE_STRUCTUREDEFEXTENSION:
+    case UPDATE_STRUCTURE_DEF_EXTENSION:
       return {
         ...state,
         loading: false,

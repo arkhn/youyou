@@ -6,10 +6,9 @@ export const SELECT_RESOURCE = "SELECT_RESOURCE";
 export const GET_FETCH_START = "GET_FETCH_START";
 export const GET_IDS_SUCCESS = "GET_IDS_SUCCESS";
 export const GET_IDS_FAILURE = "GET_IDS_FAILURE";
-export const GET_STRUCTUREDEF_SUCCESS = "GET_STRUCTUREDEF_SUCCESS";
-export const GET_STRUCTUREDEF_FAILURE = "GET_STRUCTUREDEF_FAILURE";
-
-export const UPDATE_STRUCTUREDEFEXTENSION = "UPDATE_STRUCTUREDEFEXTENSION";
+export const UPDATE_STRUCTURE_DEF_PROFILE = "UPDATE_STRUCTURE_DEF_PROFILE";
+export const UPDATE_STRUCTURE_DEF_EXTENSION = "UPDATE_STRUCTURE_DEF_EXTENSION";
+export const UPDATE_STRUCTURE_DEF_FAILURE = "UPDATE_STRUCTURE_DEF_FAILURE";
 
 export const SELECT_ATTRIBUTE = "SELECT_ATTRIBUTE";
 
@@ -32,13 +31,13 @@ export type GetIdsFailureAction = {
   payload: Error;
 };
 
-export type GetStructureDefSuccessAction = {
-  type: typeof GET_STRUCTUREDEF_SUCCESS;
+export type UpdateStructureDefProfileAction = {
+  type: typeof UPDATE_STRUCTURE_DEF_PROFILE;
   payload: StructureDefinition.AsObject | null;
 };
 
-export type GetStructureDefFailureAction = {
-  type: typeof GET_STRUCTUREDEF_FAILURE;
+export type UpdateStructureDefFailureAction = {
+  type: typeof UPDATE_STRUCTURE_DEF_FAILURE;
   payload: Error;
 };
 
@@ -48,7 +47,7 @@ export type SelectAttributeAction = {
 };
 
 export type UpdateStructureDefExtensionAction = {
-  type: typeof UPDATE_STRUCTUREDEFEXTENSION;
+  type: typeof UPDATE_STRUCTURE_DEF_EXTENSION;
   payload: StructureDefinition.AsObject | null;
 };
 
@@ -79,20 +78,20 @@ export const getIdsFailure = (error: Error): GetIdsFailureAction => {
   };
 };
 
-export const getStructureDefSuccess = (
+export const updateStructureDefProfile = (
   data: StructureDefinition.AsObject
-): GetStructureDefSuccessAction => {
+): UpdateStructureDefProfileAction => {
   return {
-    type: GET_STRUCTUREDEF_SUCCESS,
+    type: UPDATE_STRUCTURE_DEF_PROFILE,
     payload: data
   };
 };
 
-export const getStructureDefFailure = (
+export const updateStructureDefFailure = (
   error: Error
-): GetStructureDefFailureAction => {
+): UpdateStructureDefFailureAction => {
   return {
-    type: GET_STRUCTUREDEF_FAILURE,
+    type: UPDATE_STRUCTURE_DEF_FAILURE,
     payload: error
   };
 };
@@ -110,7 +109,7 @@ export const updateStructureDefExtension = (
   data: StructureDefinition.AsObject
 ): UpdateStructureDefExtensionAction => {
   return {
-    type: UPDATE_STRUCTUREDEFEXTENSION,
+    type: UPDATE_STRUCTURE_DEF_EXTENSION,
     payload: data
   };
 };

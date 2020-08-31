@@ -8,10 +8,10 @@ import useStyles from "./style";
 import { ReactComponent as Logo } from "../../assets/img/arkhn-logo.svg";
 
 type NavbarProps = {
-  buttonType?: "profile" | "extension" | undefined;
+  buttonType?: "profile" | "extension";
 };
 
-const Navbar: React.FC<NavbarProps> = ({ buttonType = undefined }) => {
+const Navbar: React.FC<NavbarProps> = ({ buttonType }) => {
   const classes = useStyles();
 
   return (

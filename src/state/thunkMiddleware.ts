@@ -6,12 +6,13 @@ import {
   getFetchStart,
   getIdsSuccess,
   getIdsFailure,
-  getStructureDefSuccess,
-  getStructureDefFailure
+  updateStructureDefProfile,
+  updateStructureDefFailure
 } from "./actions/resourceActions";
 import {
   getCodeSystemDataTypeSuccess,
-  getCodeSystemDataTypeFailure
+  getCodeSystemDataTypeFailure,
+  getCodeSystemDataTypePending
 } from "./actions/codeSystemActions";
 import { FetchedData } from "./../types";
 import { AxiosResponse } from "axios";
@@ -46,9 +47,9 @@ export const requestResource = (resource: String.AsObject) => {
       `/StructureDefinition?kind=resource&derivation=specialization&id=${resource}`
     );
     if (response.status === 200) {
-      dispatch(getStructureDefSuccess(response.data.entry[0].resource));
+      dispatch(updateStructureDefProfile(response.data.entry[0].resource));
     } else {
-      dispatch(getStructureDefFailure(new Error(response.statusText)));
+      dispatch(updateStructureDefFailure(new Error(response.statusText)));
     }
   };
 };
@@ -56,6 +57,7 @@ export const requestResource = (resource: String.AsObject) => {
 // FETCH DATA TYPES
 export const requestDataTypes = (codeSystemName: string = "data-types") => {
   return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
+    dispatch(getCodeSystemDataTypePending());
     const response: AxiosResponse<any> = await api.get(
       `/CodeSystem?id=${codeSystemName}`
     );

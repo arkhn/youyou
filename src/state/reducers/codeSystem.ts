@@ -1,9 +1,11 @@
 import { CodeSystem } from "../../resources/ts/proto/r4/core/resources/code_system_pb";
 import {
-  GET_CODESYSTEMDATATYPE_SUCCESS,
-  GET_CODESYSTEMDATATYPE_FAILURE,
+  GET_CODE_SYSTEM_DATA_TYPE_SUCCESS,
+  GET_CODE_SYSTEM_DATA_TYPE_FAILURE,
+  GET_CODE_SYSTEM_DATA_TYPE_PENDING,
   GetCodeSystemDataTypeSuccessAction,
-  GetCodeSystemDataTypeFailureAction
+  GetCodeSystemDataTypeFailureAction,
+  GetCodeSystemDataTypePendingAction
 } from "../actions/codeSystemActions";
 
 import { String } from "../../resources/ts/proto/r4/core/datatypes_pb";
@@ -26,25 +28,31 @@ const initialState: CodeSystemState = {
 
 export type AllCodeSystemActions =
   | GetCodeSystemDataTypeSuccessAction
-  | GetCodeSystemDataTypeFailureAction;
+  | GetCodeSystemDataTypeFailureAction
+  | GetCodeSystemDataTypePendingAction;
 
 export const codeSystem = (
   state: CodeSystemState = initialState,
   action: AllCodeSystemActions
 ): CodeSystemState => {
   switch (action.type) {
-    case GET_CODESYSTEMDATATYPE_SUCCESS:
+    case GET_CODE_SYSTEM_DATA_TYPE_SUCCESS:
       return {
         ...state,
         loading: false,
         datatypes: action.payload,
         error: null
       };
-    case GET_CODESYSTEMDATATYPE_FAILURE:
+    case GET_CODE_SYSTEM_DATA_TYPE_FAILURE:
       return {
         ...state,
         loading: false,
         error: action.payload
+      };
+    case GET_CODE_SYSTEM_DATA_TYPE_PENDING:
+      return {
+        ...state,
+        loading: true
       };
     default:
       return state;

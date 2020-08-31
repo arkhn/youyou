@@ -7,10 +7,15 @@ import AttributeEditor from "./attributeEditor/AttributeEditor";
 import Navbar from "../navbar/Navbar";
 
 const ExtensionEditor: React.FC<{}> = () => {
-  const { extensionStructureDefinition } = useSelector((state: RootState) => {
-    return state.resource;
-  });
+  const { loading, extensionStructureDefinition } = useSelector(
+    (state: RootState) => {
+      return state.resource;
+    }
+  );
 
+  if (loading) {
+    return <div>Loading ...</div>;
+  }
   return (
     <React.Fragment>
       <Navbar buttonType="profile" />
