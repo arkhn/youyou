@@ -26,27 +26,16 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
   const dispatch = useDispatch();
   let structureDef = { ...structureDefinition };
 
-  const getDifferentialElementById = (id: string) => {
-    if (structureDef && structureDef.differential) {
-      for (const obj of structureDef?.differential?.element) {
-        if (obj.id === ((id as unknown) as String.AsObject)) {
+  const getElementById = (id: string, type: "differential" | "snapshot") => {
+    if (structureDef)
+      for (const obj of structureDef[type]?.element) {
+        if (obj && obj.id === ((id as unknown) as String.AsObject)) {
           return obj;
         }
       }
-    }
   };
 
-  const getSnapshotElementById = (id: string) => {
-    if (structureDef && structureDef.snapshot) {
-      for (const obj of structureDef?.snapshot?.element) {
-        if (obj.id === ((id as unknown) as String.AsObject)) {
-          return obj;
-        }
-      }
-    }
-  };
-
-  let extensionElement = getDifferentialElementById("Extension");
+  let extensionElement = getElementById("Extension", "differential");
 
   const [short, setShort] = useState(
     extensionElement ? ((extensionElement.short as unknown) as string) : ""
@@ -67,7 +56,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
 
   const handleEditExtension = (e: any) => {
     e.preventDefault();
-    let extensionElement = getDifferentialElementById("Extension");
+    let extensionElement = getElementById("Extension", "differential");
 
     if (extensionElement) {
       extensionElement.short = (short as unknown) as String.AsObject;
@@ -76,10 +65,9 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
       extensionElement.min = (minCardinality as unknown) as UnsignedInt.AsObject;
       extensionElement.max = (maxCardinality as unknown) as String.AsObject;
       extensionElement.max = (maxCardinality as unknown) as String.AsObject;
-      console.log(dataType);
     }
-    extensionElement = getSnapshotElementById("Extension");
 
+    extensionElement = getElementById("Extension", "snapshot");
     if (extensionElement) {
       extensionElement.short = (short as unknown) as String.AsObject;
       extensionElement.definition = (definition as unknown) as String.AsObject;
@@ -88,14 +76,12 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
       extensionElement.max = (maxCardinality as unknown) as String.AsObject;
     }
 
-    extensionElement = getSnapshotElementById("Extension.value[x]");
-
+    extensionElement = getElementById("Extension.value[x]", "snapshot");
     if (extensionElement) {
       extensionElement.type[0].code = (dataType as unknown) as String.AsObject;
     }
 
-    extensionElement = getDifferentialElementById("Extension.value[x]");
-
+    extensionElement = getElementById("Extension.value[x]", "differential");
     if (extensionElement) {
       extensionElement.type[0].code = (dataType as unknown) as String.AsObject;
     }

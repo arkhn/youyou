@@ -25,13 +25,14 @@ const ExtensionEditor: React.FC<{}> = () => {
       >
         <button>Download</button>
       </a>
-      <StructuredefSettings
-        structureDefinition={extensionStructureDefinition}
-        type="extension"
-      />
-
       {extensionStructureDefinition && (
-        <AttributeEditor structureDefinition={extensionStructureDefinition} />
+        <React.Fragment>
+          <StructuredefSettings
+            structureDefinition={extensionStructureDefinition}
+            type="extension"
+          />
+          <AttributeEditor structureDefinition={extensionStructureDefinition} />
+        </React.Fragment>
       )}
     </React.Fragment>
   );

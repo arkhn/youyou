@@ -32,8 +32,6 @@ export const codeSystem = (
   state: CodeSystemState = initialState,
   action: AllCodeSystemActions
 ): CodeSystemState => {
-  // console.trace("yop", state);
-
   switch (action.type) {
     case GET_CODESYSTEMDATATYPE_SUCCESS:
       return {

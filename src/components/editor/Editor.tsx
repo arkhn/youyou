@@ -28,10 +28,12 @@ const Editor: React.FC<{}> = () => {
   ) => {
     if (selectedAttributeId === structuredefSettings) {
       return (
-        <StructuredefSettings
-          structureDefinition={structureDefinition}
-          type="resource"
-        />
+        structureDefinition && (
+          <StructuredefSettings
+            structureDefinition={structureDefinition}
+            type="resource"
+          />
+        )
       );
     } else {
       return (
