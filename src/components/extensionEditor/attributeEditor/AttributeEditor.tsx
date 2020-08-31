@@ -28,11 +28,18 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
 
   const getElementById = (id: string, type: "differential" | "snapshot") => {
     if (structureDef)
-      for (const obj of structureDef[type]?.element) {
-        if (obj && obj.id === ((id as unknown) as String.AsObject)) {
-          return obj;
+      if (type === "differential")
+        for (const obj of structureDef?.differential?.element || []) {
+          if (obj && obj.id === ((id as unknown) as String.AsObject)) {
+            return obj;
+          }
         }
-      }
+      else if (type === "snapshot")
+        for (const obj of structureDef?.snapshot?.element || []) {
+          if (obj && obj.id === ((id as unknown) as String.AsObject)) {
+            return obj;
+          }
+        }
   };
 
   let extensionElement = getElementById("Extension", "differential");
