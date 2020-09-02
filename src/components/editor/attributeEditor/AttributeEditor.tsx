@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import {
   ElementDefinition,
   UnsignedInt,
-  String,
+  String
 } from "../../../resources/ts/proto/r4/core/datatypes_pb";
 import { StructureDefinition } from "../../../resources/ts/proto/r4/core/resources/structure_definition_pb";
 import { useDispatch } from "react-redux";
-import { getStructureDefSuccess } from "../../../state/actions/resourceActions";
+import { updateStructureDefProfile } from "../../../state/actions/resourceActions";
 import { Typography } from "@material-ui/core";
 
 type AttributeEditorProps = {
@@ -16,7 +16,7 @@ type AttributeEditorProps = {
 
 const AttributeEditor: React.FC<AttributeEditorProps> = ({
   attribute,
-  structureDefinition,
+  structureDefinition
 }) => {
   const [minState, setMinState] = useState(Number(attribute?.base?.min));
   const [maxState, setMaxState] = useState(attribute?.base?.max?.toString());
@@ -50,7 +50,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
       const cardinalityEditor = attribute;
       cardinalityEditor.min = (minState as unknown) as UnsignedInt.AsObject;
       cardinalityEditor.max = (maxState as unknown) as String.AsObject;
-      dispatch(getStructureDefSuccess(structureDefinition));
+      dispatch(updateStructureDefProfile(structureDefinition));
     }
   };
 
