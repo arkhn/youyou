@@ -48,7 +48,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
     extensionElement ? extensionElement.comment : ""
   );
   const [minCardinality, setMinCardinality] = useState(
-    extensionElement ? extensionElement.min : null
+    extensionElement ? extensionElement.min : undefined
   );
   const [maxCardinality, setMaxCardinality] = useState(
     extensionElement ? extensionElement.max : ""
