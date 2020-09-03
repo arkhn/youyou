@@ -1,22 +1,17 @@
 import React, { useState } from "react";
-import { StructureDefinition } from "../../resources/ts/proto/r4/core/resources/structure_definition_pb";
 import { useDispatch } from "react-redux";
-import {
-  String,
-  Markdown,
-  Uri,
-  DateTime,
-  Id,
-  Boolean
-} from "../../resources/ts/proto/r4/core/datatypes_pb";
 import {
   updateStructureDefProfile,
   updateStructureDefExtension
 } from "../../state/actions/resourceActions";
 import { editAttribute } from "./utils";
+import {
+  IStructureDefinition,
+  StructureDefinitionStatusKind
+} from "@ahryman40k/ts-fhir-types/lib/R4";
 
 type StructuredefSettingsProps = {
-  structureDefinition: StructureDefinition.AsObject;
+  structureDefinition: IStructureDefinition;
   type?: "resource" | "extension";
 };
 
@@ -44,7 +39,6 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
   );
   const [purpose, setPurpose] = useState(structureDefinition.purpose);
   const [copyright, setCopyright] = useState(structureDefinition.copyright);
-  const [kind, setKind] = useState(structureDefinition.kind);
   const [abstract, setAbstract] = useState(structureDefinition.abstract);
 
   // CHANGE STATE
@@ -53,33 +47,24 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
       e.preventDefault();
       const structureDefinitonToEdit = { ...structureDefinition };
       // content required
-      structureDefinitonToEdit.url = url as Uri.AsObject;
-      structureDefinitonToEdit.name = name as String.AsObject;
-      structureDefinitonToEdit.kind = kind as StructureDefinition.KindCode.AsObject;
-      structureDefinitonToEdit.abstract = abstract as Boolean.AsObject;
-      structureDefinitonToEdit.status = status as StructureDefinition.StatusCode.AsObject;
+      structureDefinitonToEdit.url = url;
+      structureDefinitonToEdit.name = name;
+      structureDefinitonToEdit.abstract = abstract;
+      structureDefinitonToEdit.status = status;
       // content not required
-      structureDefinitonToEdit.date = (date as unknown) as DateTime.AsObject;
-      editAttribute(structureDefinitonToEdit, "id", id as Id.AsObject);
-      editAttribute(
-        structureDefinitonToEdit,
-        "publisher",
-        publisher as String.AsObject
-      );
-      editAttribute(
-        structureDefinitonToEdit,
-        "description",
-        description as String.AsObject
-      );
+      structureDefinitonToEdit.date = date;
+      editAttribute(structureDefinitonToEdit, "id", id);
+      editAttribute(structureDefinitonToEdit, "publisher", publisher);
+      editAttribute(structureDefinitonToEdit, "description", description);
       editAttribute(structureDefinitonToEdit, "purpose", purpose);
       editAttribute(structureDefinitonToEdit, "experimental", experimental);
       editAttribute(structureDefinitonToEdit, "title", title);
       editAttribute(structureDefinitonToEdit, "copyright", copyright);
-      if (type === "resource") {
-        dispatch(updateStructureDefProfile(structureDefinition));
-      } else if (type === "extension") {
-        dispatch(updateStructureDefExtension(structureDefinition));
-      }
+    }
+    if (type === "resource") {
+      dispatch(updateStructureDefProfile(structureDefinition));
+    } else if (type === "extension") {
+      dispatch(updateStructureDefExtension(structureDefinition));
     }
   };
 
@@ -119,20 +104,16 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
         <input
           type="text"
           name="name"
-          value={((name as unknown) as string) || ""}
-          onChange={(e) =>
-            setName((e.target.value as unknown) as String.AsObject)
-          }
+          value={name || ""}
+          onChange={(e) => setName(e.target.value)}
         />
         <br />
         <label htmlFor="description">Description</label>
         <input
           type="text"
           name="description"
-          value={((description as unknown) as string) || ""}
-          onChange={(e) =>
-            setDescription((e.target.value as unknown) as Markdown.AsObject)
-          }
+          value={description || ""}
+          onChange={(e) => setDescription(e.target.value)}
         />
         <br />
         <label htmlFor="url">url</label>
@@ -140,78 +121,52 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
           type="url"
           name="url"
           value={((url as unknown) as string) || ""}
-          onChange={(e) => setUrl((e.target.value as unknown) as Uri.AsObject)}
+          onChange={(e) => setUrl(e.target.value)}
         />
         <br />
         <label htmlFor="id">id</label>
         <input
           type="text"
           name="id"
-          value={((id as unknown) as string) || ""}
-          onChange={(e) => setId((e.target.value as unknown) as Id.AsObject)}
+          value={id || ""}
+          onChange={(e) => setId(e.target.value)}
         />
         <br />
         <label htmlFor="publisher">publisher</label>
         <input
           type="text"
           name="publisher"
-          value={((publisher as unknown) as string) || ""}
-          onChange={(e) =>
-            setPublisher((e.target.value as unknown) as String.AsObject)
-          }
+          value={publisher || ""}
+          onChange={(e) => setPublisher(e.target.value)}
         />
         <br />
         <label htmlFor="copyright">copyright</label>
         <input
           type="text"
           name="copyright"
-          value={((copyright as unknown) as string) || ""}
-          onChange={(e) =>
-            setCopyright((e.target.value as unknown) as Markdown.AsObject)
-          }
+          value={copyright || ""}
+          onChange={(e) => setCopyright(e.target.value)}
         />
         <br />
         <label htmlFor="title">title</label>
         <input
           type="text"
           name="title"
-          onChange={(e) =>
-            setTitle((e.target.value as unknown) as String.AsObject)
-          }
+          onChange={(e) => setTitle(e.target.value)}
         />
         <br />
         <label htmlFor="status">Status</label>
         <select
           name="status"
           onChange={(e) =>
-            setStatus(
-              (e.target
-                .value as unknown) as StructureDefinition.StatusCode.AsObject
-            )
+            setStatus(e.target.value as StructureDefinitionStatusKind)
           }
-          defaultValue={((status as unknown) as string) || ""}
+          defaultValue={status || ""}
         >
           <option value="active">active</option>
           <option value="draft">draft</option>
           <option value="retired">retired</option>
           <option value="unknown">unknown</option>
-        </select>
-        <br />
-        <label htmlFor="kind">Kind</label>
-        <select
-          name="kind"
-          onChange={(e) =>
-            setKind(
-              (e.target
-                .value as unknown) as StructureDefinition.KindCode.AsObject
-            )
-          }
-          defaultValue={((kind as unknown) as string) || ""}
-        >
-          <option value="resource">resource</option>
-          <option value="primitive-type">primitive type</option>
-          <option value="complex-type">complex type</option>
-          <option value="logical">logical</option>
         </select>
         <br />
         <input
@@ -230,17 +185,13 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
         <input
           type="text"
           name="purpose"
-          onChange={(e) =>
-            setPurpose((e.target.value as unknown) as Markdown.AsObject)
-          }
+          onChange={(e) => setPurpose(e.target.value)}
         />
         <br />
         <input
           type="checkbox"
           name="abstract"
-          onChange={(e) =>
-            setAbstract((e.target.checked as unknown) as Boolean.AsObject)
-          }
+          onChange={(e) => setAbstract(e.target.checked)}
         />
         <label htmlFor="abstract">abstract</label>
         <br />
@@ -248,11 +199,7 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
           type="checkbox"
           name="experimental"
           onChange={(e) => {
-            if (e.target.checked) {
-              setExperimental((true as unknown) as Boolean.AsObject);
-            } else {
-              setExperimental((false as unknown) as Boolean.AsObject);
-            }
+            setExperimental(e.target.checked);
           }}
         />
         <label htmlFor="experimental">experimental</label>

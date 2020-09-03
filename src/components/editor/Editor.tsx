@@ -5,27 +5,24 @@ import StructuredefSettings from "../structuredefSettings/StructuredefSettings";
 import { useSelector } from "react-redux";
 import { RootState } from "../../state/store";
 import {
-  ElementDefinition,
-  String
-} from "../../resources/ts/proto/r4/core/datatypes_pb";
-import { StructureDefinition } from "../../resources/ts/proto/r4/core/resources/structure_definition_pb";
+  IElementDefinition,
+  IStructureDefinition
+} from "@ahryman40k/ts-fhir-types/lib/R4";
 
 const Editor: React.FC<{}> = () => {
   const { loading, structureDefinition, selectedAttributeId } = useSelector(
     (state: RootState) => state.resource
   );
-  const structuredefSettings: String.AsObject = ("structuredefSettings" as unknown) as String.AsObject;
-  let attribute: ElementDefinition.AsObject | undefined = undefined;
-  console.log(structureDefinition);
+  const structuredefSettings: string = "structuredefSettings";
+  let attribute: IElementDefinition | undefined = undefined;
+
   if (selectedAttributeId && selectedAttributeId !== structuredefSettings) {
     attribute = structureDefinition?.snapshot?.element.find(
-      (attribute) => attribute.id === selectedAttributeId
+      (attribute: IElementDefinition) => attribute.id === selectedAttributeId
     );
   }
 
-  const renderAttributeEditor = (
-    structureDef: StructureDefinition.AsObject
-  ) => {
+  const renderAttributeEditor = (structureDef: IStructureDefinition) => {
     if (selectedAttributeId === structuredefSettings) {
       return (
         structureDefinition && (
