@@ -46,8 +46,8 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
   const changeProfileState = () => {
     if (attribute && structureDefinition) {
       const cardinalityEditor = attribute;
-      cardinalityEditor.min = minState as number;
-      cardinalityEditor.max = maxState as string;
+      cardinalityEditor.min = minState;
+      cardinalityEditor.max = maxState;
       dispatch(updateStructureDefProfile(structureDefinition));
     }
   };

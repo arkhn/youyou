@@ -24,13 +24,13 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
     if (structureDef)
       if (type === "differential")
         for (const obj of structureDef?.differential?.element || []) {
-          if (obj && obj.id === (id as string)) {
+          if (obj && obj.id === id) {
             return obj;
           }
         }
       else if (type === "snapshot")
         for (const obj of structureDef?.snapshot?.element || []) {
-          if (obj && obj.id === (id as string)) {
+          if (obj && obj.id === id) {
             return obj;
           }
         }
@@ -39,51 +39,51 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
   let extensionElement = getElementById("Extension", "differential");
 
   const [short, setShort] = useState(
-    extensionElement ? (extensionElement.short as string) : ""
+    extensionElement ? extensionElement.short : ""
   );
   const [definition, setDefinition] = useState(
-    extensionElement ? (extensionElement.definition as string) : ""
+    extensionElement ? extensionElement.definition : ""
   );
   const [comment, setComment] = useState(
-    extensionElement ? (extensionElement.comment as string) : ""
+    extensionElement ? extensionElement.comment : ""
   );
   const [minCardinality, setMinCardinality] = useState(
-    extensionElement ? (extensionElement.min as number) : ""
+    extensionElement ? extensionElement.min : null
   );
   const [maxCardinality, setMaxCardinality] = useState(
-    extensionElement ? (extensionElement.max as string) : ""
+    extensionElement ? extensionElement.max : ""
   );
   const [dataType, setDataType] = useState("");
 
   const handleEditExtension = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    let extensionElement = getElementById("Extension", "differential");
 
+    let extensionElement = getElementById("Extension", "differential");
     if (extensionElement) {
-      extensionElement.short = short as string;
-      extensionElement.definition = definition as string;
-      extensionElement.comment = comment as string;
-      extensionElement.min = minCardinality as number;
-      extensionElement.max = maxCardinality as string;
+      extensionElement.short = short;
+      extensionElement.definition = definition;
+      extensionElement.comment = comment;
+      extensionElement.min = minCardinality;
+      extensionElement.max = maxCardinality;
     }
 
     extensionElement = getElementById("Extension", "snapshot");
     if (extensionElement) {
-      extensionElement.short = short as string;
-      extensionElement.definition = definition as string;
-      extensionElement.comment = comment as string;
-      extensionElement.min = minCardinality as number;
-      extensionElement.max = maxCardinality as string;
+      extensionElement.short = short;
+      extensionElement.definition = definition;
+      extensionElement.comment = comment;
+      extensionElement.min = minCardinality;
+      extensionElement.max = maxCardinality;
     }
 
     extensionElement = getElementById("Extension.value[x]", "snapshot");
     if (extensionElement && extensionElement.type) {
-      extensionElement.type[0].code = dataType as string;
+      extensionElement.type[0].code = dataType;
     }
 
     extensionElement = getElementById("Extension.value[x]", "differential");
     if (extensionElement && extensionElement.type) {
-      extensionElement.type[0].code = dataType as string;
+      extensionElement.type[0].code = dataType;
     }
     dispatch(updateStructureDefExtension(structureDef));
   };
@@ -124,7 +124,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
           defaultValue={minCardinality}
           onBlur={(
             event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
-          ): void => setMinCardinality(event.target.value)}
+          ): void => setMinCardinality(parseInt(event.target.value))}
         />
         <TextField
           id="maxCardinality"

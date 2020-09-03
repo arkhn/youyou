@@ -47,12 +47,12 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
       e.preventDefault();
       const structureDefinitonToEdit = { ...structureDefinition };
       // content required
-      structureDefinitonToEdit.url = url as string;
-      structureDefinitonToEdit.name = name as string;
-      structureDefinitonToEdit.abstract = abstract as boolean;
-      structureDefinitonToEdit.status = status as StructureDefinitionStatusKind;
+      structureDefinitonToEdit.url = url;
+      structureDefinitonToEdit.name = name;
+      structureDefinitonToEdit.abstract = abstract;
+      structureDefinitonToEdit.status = status;
       // content not required
-      structureDefinitonToEdit.date = date as string;
+      structureDefinitonToEdit.date = date;
       editAttribute(structureDefinitonToEdit, "id", id);
       editAttribute(structureDefinitonToEdit, "publisher", publisher);
       editAttribute(structureDefinitonToEdit, "description", description);
