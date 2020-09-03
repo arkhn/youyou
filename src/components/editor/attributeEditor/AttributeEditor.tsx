@@ -1,17 +1,15 @@
 import React, { useState } from "react";
-import {
-  ElementDefinition,
-  UnsignedInt,
-  String
-} from "../../../resources/ts/proto/r4/core/datatypes_pb";
-import { StructureDefinition } from "../../../resources/ts/proto/r4/core/resources/structure_definition_pb";
 import { useDispatch } from "react-redux";
 import { updateStructureDefProfile } from "../../../state/actions/resourceActions";
 import { Typography } from "@material-ui/core";
+import {
+  IElementDefinition,
+  IStructureDefinition
+} from "@ahryman40k/ts-fhir-types/lib/R4";
 
 type AttributeEditorProps = {
-  attribute: ElementDefinition.AsObject | undefined;
-  structureDefinition: StructureDefinition.AsObject | null;
+  attribute: IElementDefinition | undefined;
+  structureDefinition: IStructureDefinition | null;
 };
 
 const AttributeEditor: React.FC<AttributeEditorProps> = ({
@@ -48,8 +46,8 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
   const changeProfileState = () => {
     if (attribute && structureDefinition) {
       const cardinalityEditor = attribute;
-      cardinalityEditor.min = (minState as unknown) as UnsignedInt.AsObject;
-      cardinalityEditor.max = (maxState as unknown) as String.AsObject;
+      cardinalityEditor.min = minState as number;
+      cardinalityEditor.max = maxState as string;
       dispatch(updateStructureDefProfile(structureDefinition));
     }
   };

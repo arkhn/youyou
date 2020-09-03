@@ -1,4 +1,3 @@
-import { CodeSystem } from "../../resources/ts/proto/r4/core/resources/code_system_pb";
 import {
   GET_CODE_SYSTEM_DATA_TYPE_SUCCESS,
   GET_CODE_SYSTEM_DATA_TYPE_FAILURE,
@@ -8,14 +7,12 @@ import {
   GetCodeSystemDataTypePendingAction
 } from "../actions/codeSystemActions";
 
-import { String } from "../../resources/ts/proto/r4/core/datatypes_pb";
-
 export type DataFetched = {
-  id: String.AsObject;
+  id: string;
 };
 
 export type CodeSystemState = {
-  datatypes: CodeSystem.AsObject | null;
+  datatypes: any | null;
   loading: boolean;
   error: Error | null;
 };

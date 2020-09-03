@@ -3,18 +3,12 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../../state/store";
 import { useDispatch } from "react-redux";
 import { updateStructureDefExtension } from "../../../state/actions/resourceActions";
-
-import {
-  String,
-  UnsignedInt
-} from "../../../resources/ts/proto/r4/core/datatypes_pb";
-
-import { StructureDefinition } from "../../../resources/ts/proto/r4/core/resources/structure_definition_pb";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import TextField from "@material-ui/core/TextField";
+import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 
 type AttributeEditorProps = {
-  structureDefinition: StructureDefinition.AsObject;
+  structureDefinition: IStructureDefinition;
 };
 
 const AttributeEditor: React.FC<AttributeEditorProps> = ({
@@ -30,13 +24,13 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
     if (structureDef)
       if (type === "differential")
         for (const obj of structureDef?.differential?.element || []) {
-          if (obj && obj.id === ((id as unknown) as String.AsObject)) {
+          if (obj && obj.id === (id as string)) {
             return obj;
           }
         }
       else if (type === "snapshot")
         for (const obj of structureDef?.snapshot?.element || []) {
-          if (obj && obj.id === ((id as unknown) as String.AsObject)) {
+          if (obj && obj.id === (id as string)) {
             return obj;
           }
         }
@@ -45,19 +39,19 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
   let extensionElement = getElementById("Extension", "differential");
 
   const [short, setShort] = useState(
-    extensionElement ? ((extensionElement.short as unknown) as string) : ""
+    extensionElement ? (extensionElement.short as string) : ""
   );
   const [definition, setDefinition] = useState(
-    extensionElement ? ((extensionElement.definition as unknown) as string) : ""
+    extensionElement ? (extensionElement.definition as string) : ""
   );
   const [comment, setComment] = useState(
-    extensionElement ? ((extensionElement.comment as unknown) as string) : ""
+    extensionElement ? (extensionElement.comment as string) : ""
   );
   const [minCardinality, setMinCardinality] = useState(
-    extensionElement ? ((extensionElement.min as unknown) as string) : ""
+    extensionElement ? (extensionElement.min as number) : ""
   );
   const [maxCardinality, setMaxCardinality] = useState(
-    extensionElement ? ((extensionElement.max as unknown) as string) : ""
+    extensionElement ? (extensionElement.max as string) : ""
   );
   const [dataType, setDataType] = useState("");
 
@@ -66,32 +60,31 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
     let extensionElement = getElementById("Extension", "differential");
 
     if (extensionElement) {
-      extensionElement.short = (short as unknown) as String.AsObject;
-      extensionElement.definition = (definition as unknown) as String.AsObject;
-      extensionElement.comment = (comment as unknown) as String.AsObject;
-      extensionElement.min = (minCardinality as unknown) as UnsignedInt.AsObject;
-      extensionElement.max = (maxCardinality as unknown) as String.AsObject;
-      extensionElement.max = (maxCardinality as unknown) as String.AsObject;
+      extensionElement.short = short as string;
+      extensionElement.definition = definition as string;
+      extensionElement.comment = comment as string;
+      extensionElement.min = minCardinality as number;
+      extensionElement.max = maxCardinality as string;
     }
 
     extensionElement = getElementById("Extension", "snapshot");
     if (extensionElement) {
-      extensionElement.short = (short as unknown) as String.AsObject;
-      extensionElement.definition = (definition as unknown) as String.AsObject;
-      extensionElement.comment = (comment as unknown) as String.AsObject;
-      extensionElement.min = (minCardinality as unknown) as UnsignedInt.AsObject;
-      extensionElement.max = (maxCardinality as unknown) as String.AsObject;
+      extensionElement.short = short as string;
+      extensionElement.definition = definition as string;
+      extensionElement.comment = comment as string;
+      extensionElement.min = minCardinality as number;
+      extensionElement.max = maxCardinality as string;
     }
 
-    extensionElement = getElementById("Extension.value[x]", "snapshot");
+    /* extensionElement = getElementById("Extension.value[x]", "snapshot");
     if (extensionElement) {
-      extensionElement.type[0].code = (dataType as unknown) as String.AsObject;
+      extensionElement.type[0].code = dataType as unknown) as String.AsObject;
     }
 
     extensionElement = getElementById("Extension.value[x]", "differential");
     if (extensionElement) {
       extensionElement.type[0].code = (dataType as unknown) as String.AsObject;
-    }
+    } */
     dispatch(updateStructureDefExtension(structureDef));
   };
 
@@ -136,7 +129,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
           <Autocomplete
             id="Data type"
             options={
-              datatypes?.concept.map((c) => {
+              datatypes?.concept.map((c: any) => {
                 return c.code;
               }) || []
             }

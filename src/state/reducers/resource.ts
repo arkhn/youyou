@@ -1,4 +1,3 @@
-import { StructureDefinition } from "../../resources/ts/proto/r4/core/resources/structure_definition_pb";
 import extensionStructureDefinition from "../../assets/extensionTemplate";
 import {
   SELECT_RESOURCE,
@@ -18,18 +17,18 @@ import {
   UPDATE_STRUCTURE_DEF_EXTENSION,
   UpdateStructureDefExtensionAction
 } from "../actions/resourceActions";
-import { String } from "../../resources/ts/proto/r4/core/datatypes_pb";
+import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 
 export type DataFetched = {
-  id: String.AsObject;
+  id: string;
 };
 
 export type ResourceState = {
   resources: DataFetched[];
-  structureDefinition: StructureDefinition.AsObject | null;
-  extensionStructureDefinition: StructureDefinition.AsObject | null;
-  selectedResourceId: String.AsObject | null;
-  selectedAttributeId: String.AsObject | undefined;
+  structureDefinition: IStructureDefinition | null;
+  extensionStructureDefinition: IStructureDefinition | null;
+  selectedResourceId: string | null;
+  selectedAttributeId: string | undefined;
   loading: boolean;
   error: Error | null;
 };
@@ -37,7 +36,7 @@ export type ResourceState = {
 const initialState: ResourceState = {
   resources: [],
   structureDefinition: null,
-  extensionStructureDefinition: (extensionStructureDefinition as unknown) as StructureDefinition.AsObject,
+  extensionStructureDefinition: extensionStructureDefinition as IStructureDefinition,
   selectedResourceId: null,
   selectedAttributeId: undefined,
   loading: false,

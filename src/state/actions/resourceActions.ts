@@ -1,6 +1,5 @@
-import { StructureDefinition } from "../../resources/ts/proto/r4/core/resources/structure_definition_pb";
 import { DataFetched } from "../reducers/resource";
-import { String } from "../../resources/ts/proto/r4/core/datatypes_pb";
+import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 
 export const SELECT_RESOURCE = "SELECT_RESOURCE";
 export const GET_FETCH_START = "GET_FETCH_START";
@@ -9,12 +8,11 @@ export const GET_IDS_FAILURE = "GET_IDS_FAILURE";
 export const UPDATE_STRUCTURE_DEF_PROFILE = "UPDATE_STRUCTURE_DEF_PROFILE";
 export const UPDATE_STRUCTURE_DEF_EXTENSION = "UPDATE_STRUCTURE_DEF_EXTENSION";
 export const UPDATE_STRUCTURE_DEF_FAILURE = "UPDATE_STRUCTURE_DEF_FAILURE";
-
 export const SELECT_ATTRIBUTE = "SELECT_ATTRIBUTE";
 
 export type SelectResourceAction = {
   type: typeof SELECT_RESOURCE;
-  payload: String.AsObject | null;
+  payload: string | null;
 };
 
 export type GetFetchStartAction = {
@@ -33,7 +31,7 @@ export type GetIdsFailureAction = {
 
 export type UpdateStructureDefProfileAction = {
   type: typeof UPDATE_STRUCTURE_DEF_PROFILE;
-  payload: StructureDefinition.AsObject | null;
+  payload: IStructureDefinition | null;
 };
 
 export type UpdateStructureDefFailureAction = {
@@ -43,15 +41,15 @@ export type UpdateStructureDefFailureAction = {
 
 export type SelectAttributeAction = {
   type: typeof SELECT_ATTRIBUTE;
-  payload: String.AsObject | undefined;
+  payload: string | undefined;
 };
 
 export type UpdateStructureDefExtensionAction = {
   type: typeof UPDATE_STRUCTURE_DEF_EXTENSION;
-  payload: StructureDefinition.AsObject | null;
+  payload: IStructureDefinition | null;
 };
 
-export const selectResource = (id: String.AsObject): SelectResourceAction => {
+export const selectResource = (id: string): SelectResourceAction => {
   return {
     type: SELECT_RESOURCE,
     payload: id
@@ -79,7 +77,7 @@ export const getIdsFailure = (error: Error): GetIdsFailureAction => {
 };
 
 export const updateStructureDefProfile = (
-  data: StructureDefinition.AsObject
+  data: IStructureDefinition
 ): UpdateStructureDefProfileAction => {
   return {
     type: UPDATE_STRUCTURE_DEF_PROFILE,
@@ -97,7 +95,7 @@ export const updateStructureDefFailure = (
 };
 
 export const selectAttributeId = (
-  data: String.AsObject | undefined
+  data: string | undefined
 ): SelectAttributeAction => {
   return {
     type: SELECT_ATTRIBUTE,
@@ -106,7 +104,7 @@ export const selectAttributeId = (
 };
 
 export const updateStructureDefExtension = (
-  data: StructureDefinition.AsObject
+  data: IStructureDefinition
 ): UpdateStructureDefExtensionAction => {
   return {
     type: UPDATE_STRUCTURE_DEF_EXTENSION,

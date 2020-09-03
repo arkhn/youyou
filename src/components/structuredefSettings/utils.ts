@@ -1,9 +1,8 @@
-import { StructureDefinition } from "../../resources/ts/proto/r4/core/resources/structure_definition_pb";
+/* import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 
-export const editAttribute = <K extends keyof StructureDefinition.AsObject>(
-  structureToEdit: StructureDefinition.AsObject,
-  attributeKey: K,
-  attributeValue?: StructureDefinition.AsObject[K]
+export const editAttribute = <K extends keyof IStructureDefinition>(
+  structureToEdit: IStructureDefinition,
+  attributeKey: K
 ) => {
   if (undefined !== attributeValue && attributeValue.toString() !== "") {
     structureToEdit[attributeKey] = attributeValue;
@@ -11,4 +10,9 @@ export const editAttribute = <K extends keyof StructureDefinition.AsObject>(
   } else {
     delete structureToEdit[attributeKey];
   }
+};
+ */
+
+export const editAttribute = () => {
+  return null;
 };
