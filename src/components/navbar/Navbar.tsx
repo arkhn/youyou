@@ -1,9 +1,6 @@
 import React from "react";
-import { AppBar, Toolbar, Typography } from "@material-ui/core";
+import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
-
-import { Button } from "@material-ui/core";
-
 import useStyles from "./style";
 import { ReactComponent as Logo } from "../../assets/img/arkhn-logo.svg";
 

@@ -15,7 +15,7 @@ const Editor: React.FC<{}> = () => {
   );
   const structuredefSettings: string = "structuredefSettings";
   let attribute: IElementDefinition | undefined = undefined;
-  console.log(structureDefinition);
+
   if (selectedAttributeId && selectedAttributeId !== structuredefSettings) {
     attribute = structureDefinition?.snapshot?.element.find(
       (attribute: IElementDefinition) => attribute.id === selectedAttributeId

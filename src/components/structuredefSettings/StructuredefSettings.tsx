@@ -4,10 +4,9 @@ import {
   updateStructureDefProfile,
   updateStructureDefExtension
 } from "../../state/actions/resourceActions";
-/* import { editAttribute } from "./utils"; */
+import { editAttribute } from "./utils";
 import {
   IStructureDefinition,
-  StructureDefinitionKindKind,
   StructureDefinitionStatusKind
 } from "@ahryman40k/ts-fhir-types/lib/R4";
 
@@ -40,7 +39,6 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
   );
   const [purpose, setPurpose] = useState(structureDefinition.purpose);
   const [copyright, setCopyright] = useState(structureDefinition.copyright);
-  const [kind, setKind] = useState(structureDefinition.kind);
   const [abstract, setAbstract] = useState(structureDefinition.abstract);
 
   // CHANGE STATE
@@ -51,19 +49,17 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
       // content required
       structureDefinitonToEdit.url = url as string;
       structureDefinitonToEdit.name = name as string;
-      structureDefinitonToEdit.kind = kind as StructureDefinitionKindKind;
       structureDefinitonToEdit.abstract = abstract as boolean;
       structureDefinitonToEdit.status = status as StructureDefinitionStatusKind;
       // content not required
       structureDefinitonToEdit.date = date as string;
-      /* editAttribute(structureDefinitonToEdit, "id", id);
+      editAttribute(structureDefinitonToEdit, "id", id);
       editAttribute(structureDefinitonToEdit, "publisher", publisher);
       editAttribute(structureDefinitonToEdit, "description", description);
       editAttribute(structureDefinitonToEdit, "purpose", purpose);
       editAttribute(structureDefinitonToEdit, "experimental", experimental);
       editAttribute(structureDefinitonToEdit, "title", title);
       editAttribute(structureDefinitonToEdit, "copyright", copyright);
-      */
     }
     if (type === "resource") {
       dispatch(updateStructureDefProfile(structureDefinition));
@@ -171,20 +167,6 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
           <option value="draft">draft</option>
           <option value="retired">retired</option>
           <option value="unknown">unknown</option>
-        </select>
-        <br />
-        <label htmlFor="kind">Kind</label>
-        <select
-          name="kind"
-          onChange={(e) =>
-            setKind(e.target.value as StructureDefinitionKindKind)
-          }
-          defaultValue={kind || ""}
-        >
-          <option value="resource">resource</option>
-          <option value="primitive-type">primitive type</option>
-          <option value="complex-type">complex type</option>
-          <option value="logical">logical</option>
         </select>
         <br />
         <input

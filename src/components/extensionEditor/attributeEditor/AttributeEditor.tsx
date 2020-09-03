@@ -55,7 +55,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
   );
   const [dataType, setDataType] = useState("");
 
-  const handleEditExtension = (e: any) => {
+  const handleEditExtension = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     let extensionElement = getElementById("Extension", "differential");
 
@@ -76,15 +76,15 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
       extensionElement.max = maxCardinality as string;
     }
 
-    /* extensionElement = getElementById("Extension.value[x]", "snapshot");
-    if (extensionElement) {
-      extensionElement.type[0].code = dataType as unknown) as String.AsObject;
+    extensionElement = getElementById("Extension.value[x]", "snapshot");
+    if (extensionElement && extensionElement.type) {
+      extensionElement.type[0].code = dataType as string;
     }
 
     extensionElement = getElementById("Extension.value[x]", "differential");
-    if (extensionElement) {
-      extensionElement.type[0].code = (dataType as unknown) as String.AsObject;
-    } */
+    if (extensionElement && extensionElement.type) {
+      extensionElement.type[0].code = dataType as string;
+    }
     dispatch(updateStructureDefExtension(structureDef));
   };
 
@@ -95,48 +95,56 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
           id="short"
           label="Short"
           defaultValue={short}
-          onBlur={(event: any): void => setShort(event.target.value)}
+          onBlur={(
+            event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
+          ): void => setShort(event.target.value)}
         />
         <br />
         <TextField
           id="definition"
           label="Definition"
           defaultValue={definition}
-          onBlur={(event: any): void => setDefinition(event.target.value)}
+          onBlur={(
+            event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
+          ): void => setDefinition(event.target.value)}
         />
         <br />
         <TextField
           id="comment"
           label="Comment"
           defaultValue={comment}
-          onBlur={(event: any): void => setComment(event.target.value)}
+          onBlur={(
+            event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
+          ): void => setComment(event.target.value)}
         />
         <br />
         <TextField
           id="minCardinality"
           label="Min"
           defaultValue={minCardinality}
-          onBlur={(event: any): void => setMinCardinality(event.target.value)}
+          onBlur={(
+            event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
+          ): void => setMinCardinality(event.target.value)}
         />
         <TextField
           id="maxCardinality"
           label="Max"
           defaultValue={maxCardinality}
-          onBlur={(event: any): void => setMaxCardinality(event.target.value)}
+          onBlur={(
+            event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
+          ): void => setMaxCardinality(event.target.value)}
         />
         <br />
         <ul>
           <Autocomplete
             id="Data type"
             options={
-              datatypes?.concept.map((c: any) => {
+              datatypes?.concept?.map((c) => {
                 return c.code;
               }) || []
             }
             style={{ width: 300 }}
-            onChange={(event: any, value): void =>
-              setDataType((value as unknown) as string)
-            }
+            onChange={(event, value): void => setDataType(value as string)}
             renderInput={(params) => (
               <TextField {...params} label="Data type" variant="outlined" />
             )}

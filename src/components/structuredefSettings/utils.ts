@@ -1,8 +1,9 @@
-/* import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
+import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 
 export const editAttribute = <K extends keyof IStructureDefinition>(
   structureToEdit: IStructureDefinition,
-  attributeKey: K
+  attributeKey: K,
+  attributeValue?: IStructureDefinition[K]
 ) => {
   if (undefined !== attributeValue && attributeValue.toString() !== "") {
     structureToEdit[attributeKey] = attributeValue;
@@ -10,9 +11,4 @@ export const editAttribute = <K extends keyof IStructureDefinition>(
   } else {
     delete structureToEdit[attributeKey];
   }
-};
- */
-
-export const editAttribute = () => {
-  return null;
 };

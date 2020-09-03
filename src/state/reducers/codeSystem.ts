@@ -6,13 +6,14 @@ import {
   GetCodeSystemDataTypeFailureAction,
   GetCodeSystemDataTypePendingAction
 } from "../actions/codeSystemActions";
+import { ICodeSystem } from "@ahryman40k/ts-fhir-types/lib/R4";
 
 export type DataFetched = {
   id: string;
 };
 
 export type CodeSystemState = {
-  datatypes: any | null;
+  datatypes: ICodeSystem | null;
   loading: boolean;
   error: Error | null;
 };
