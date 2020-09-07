@@ -5,7 +5,10 @@ import { useDispatch } from "react-redux";
 import { updateStructureDefExtension } from "../../../state/actions/resourceActions";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import TextField from "@material-ui/core/TextField";
-import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
+import {
+  IStructureDefinition,
+  IElementDefinition
+} from "@ahryman40k/ts-fhir-types/lib/R4";
 
 type AttributeEditorProps = {
   structureDefinition: IStructureDefinition;
@@ -20,7 +23,10 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
   const dispatch = useDispatch();
   let structureDef = { ...structureDefinition };
 
-  const getElementById = (id: string, type: "differential" | "snapshot") => {
+  const getElementById = (
+    id: string,
+    type: "differential" | "snapshot"
+  ): IElementDefinition | undefined => {
     if (structureDef)
       if (type === "differential")
         for (const obj of structureDef?.differential?.element || []) {

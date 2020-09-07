@@ -59,8 +59,8 @@ const Editor: React.FC<{}> = () => {
         >
           <button>Download</button>
         </a>
-        {renderAttributeEditor(structureDefinition)}
         <ResourceProfileMapping profile={structureDefinition} />
+        {renderAttributeEditor(structureDefinition)}
       </div>
     );
   }
