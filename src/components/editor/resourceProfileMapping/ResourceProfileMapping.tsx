@@ -54,7 +54,6 @@ const ResourceProfileMapping: React.FC<ResourceProfileMappingProps> = ({
       }
     });
   }
-  console.log(attributesToRender);
 
   const treeItemContent = (nodes: RenderTree) => (
     <span className={classes.treeItem}>
