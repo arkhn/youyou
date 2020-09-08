@@ -1,7 +1,10 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../state/store";
-import { selectResource } from "../../state/actions/resourceActions";
+import {
+  selectResource,
+  selectAttributeId
+} from "../../state/actions/resourceActions";
 import { Link } from "react-router-dom";
 import { DataFetched } from "../../state/reducers/resource";
 import { requestResource } from "../../state/thunkMiddleware";
@@ -23,10 +26,13 @@ const Homepage: React.FC<{}> = () => {
   const dispatch = useDispatch();
   const classes = useStyles();
 
+  const structuredefSettings: string = "structuredefSettings";
+
   const dispatchResourceSelected = (resource: DataFetched): void => {
     if (resource.id) {
       dispatch(selectResource(resource.id));
       dispatch(requestResource(resource.id));
+      dispatch(selectAttributeId(structuredefSettings));
     }
   };
 
