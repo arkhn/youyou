@@ -114,7 +114,6 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
 
   return (
     <>
-      <Typography variant="h2">AttributeEditor</Typography>
       <Typography variant="h1">Cardinality</Typography>
       <p>{attribute?.id}</p>
       <p>Cardinality min: {attribute?.min}</p>

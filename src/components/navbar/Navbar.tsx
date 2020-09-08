@@ -12,7 +12,7 @@ const Navbar: React.FC<NavbarProps> = ({ buttonType }) => {
   const classes = useStyles();
 
   return (
-    <AppBar position="static" className={classes.navBar}>
+    <AppBar position="fixed" className={classes.navBar}>
       <Toolbar className={classes.toolBar}>
         <Link to={"/"} className={classes.homeLink}>
           <Logo className={classes.logo} />

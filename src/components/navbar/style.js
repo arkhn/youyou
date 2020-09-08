@@ -1,8 +1,11 @@
 import { makeStyles } from "@material-ui/core/styles";
 
+export const navbarHeight = 65;
+
 const useStyles = makeStyles((theme) => ({
   navBar: {
-    background: theme.palette.background.paper
+    background: theme.palette.background.paper,
+    height: navbarHeight
   },
   toolBar: {
     paddingLeft: 40

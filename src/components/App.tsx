@@ -8,6 +8,7 @@ import Editor from "./editor/Editor";
 import ExtensionEditor from "./extensionEditor/ExtensionEditor";
 import { PersistGate } from "redux-persist/integration/react";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import { StylesProvider } from "@material-ui/core";
 
 const App = () => {
   /* @ts-ignore */
@@ -17,15 +18,17 @@ const App = () => {
   return (
     <Provider store={store}>
       <CssBaseline />
-      <PersistGate loading={null} persistor={persistor}>
-        <Router>
-          <Switch>
-            <Route exact path="/" component={Homepage} />
-            <Route path="/editprofile" component={Editor} />
-            <Route path="/editextension" component={ExtensionEditor} />
-          </Switch>
-        </Router>
-      </PersistGate>
+      <StylesProvider injectFirst>
+        <PersistGate loading={null} persistor={persistor}>
+          <Router>
+            <Switch>
+              <Route exact path="/" component={Homepage} />
+              <Route path="/editprofile" component={Editor} />
+              <Route path="/editextension" component={ExtensionEditor} />
+            </Switch>
+          </Router>
+        </PersistGate>
+      </StylesProvider>
     </Provider>
   );
 };

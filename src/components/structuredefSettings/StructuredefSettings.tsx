@@ -98,7 +98,6 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
 
   return (
     <>
-      <h2>Structure definition Settings</h2>
       <form onSubmit={(e) => handleEditSettings(e)}>
         <label htmlFor="name">Name of profile</label>
         <input
