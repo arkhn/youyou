@@ -73,9 +73,8 @@ const ResourceProfileMapping: React.FC<ResourceProfileMappingProps> = ({
       label={treeItemContent(nodes)}
       onClick={() => dispatch(selectAttributeId(nodes.id))}
     >
-      {Array.isArray(nodes.children)
-        ? nodes.children.map((node) => renderTree(node))
-        : null}
+      {Array.isArray(nodes.children) &&
+        nodes.children.map((node) => renderTree(node))}
     </TreeItem>
   );
 
