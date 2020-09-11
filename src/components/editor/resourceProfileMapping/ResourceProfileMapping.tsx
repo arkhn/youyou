@@ -21,10 +21,10 @@ type ResourceProfileMappingProps = {
   profile: IStructureDefinition | null;
 };
 
-interface RenderTree {
+interface RenderNode {
   id: string;
   name: string;
-  children?: RenderTree[];
+  children: RenderNode[];
 }
 
 const ResourceProfileMapping: React.FC<ResourceProfileMappingProps> = ({
@@ -35,29 +35,48 @@ const ResourceProfileMapping: React.FC<ResourceProfileMappingProps> = ({
     profile?.snapshot?.element;
   const classes = useStyles();
 
-  let attributesToRender: RenderTree[] = [];
-  if (attributes) {
-    attributes.forEach((attribute) => {
-      if (attribute.path) {
-        attribute.path.split(".").reduce(
-          (render: any, name: string) => {
-            let node = (render.children = render.children || []).find(
-              (item: RenderTree) => item.name === name
-            );
-            if (!node && attribute.path) {
-              render.children.push({ name, id: attribute.path });
-            }
-            return node;
-          },
-          { children: attributesToRender }
-        );
-      }
-    });
-  }
+  const paths = attributes?.map(
+    (attribute: IElementDefinition) => attribute.path
+  );
 
-  const treeItemContent = (nodes: RenderTree) => (
+  const renderAttributes = (
+    path: string,
+    rootPath: string,
+    node: RenderNode,
+    rootNode: RenderNode
+  ): RenderNode => {
+    if (node.id === rootPath) {
+      return rootNode;
+    } else {
+      const splitPath = path.split(".");
+      const childNode = node.children.find((c) => c.name === splitPath[0]);
+      const newPath = splitPath.slice(1, splitPath.length).join(".");
+      if (childNode) {
+        return renderAttributes(newPath, rootPath, childNode, rootNode);
+      } else {
+        const newNode = {
+          name: splitPath[0],
+          id: rootPath,
+          children: []
+        };
+        node.children.push(newNode);
+        return renderAttributes(newPath, rootPath, newNode, rootNode);
+      }
+    }
+  };
+
+  let attributesForUI = { name: "", id: "", children: [] };
+  if (paths) {
+    paths.forEach(
+      (path) =>
+        path && renderAttributes(path, path, attributesForUI, attributesForUI)
+    );
+  }
+  attributesForUI = attributesForUI.children[0];
+
+  const treeItemContent = (nodes: RenderNode) => (
     <span className={classes.treeItem}>
-      {nodes.children ? (
+      {nodes.children.length > 0 ? (
         <Folder className={classes.iconTreeItem} />
       ) : (
         <LocalOffer className={classes.iconTreeItem} />
@@ -66,7 +85,7 @@ const ResourceProfileMapping: React.FC<ResourceProfileMappingProps> = ({
     </span>
   );
 
-  const renderTree = (nodes: RenderTree) => (
+  const renderNode = (nodes: RenderNode) => (
     <TreeItem
       key={nodes.id}
       nodeId={nodes.id}
@@ -74,11 +93,10 @@ const ResourceProfileMapping: React.FC<ResourceProfileMappingProps> = ({
       onClick={() => dispatch(selectAttributeId(nodes.id))}
     >
       {Array.isArray(nodes.children) &&
-        nodes.children.map((node) => renderTree(node))}
+        nodes.children.map((node) => renderNode(node))}
     </TreeItem>
   );
-
-  if (attributesToRender && profile) {
+  if (profile) {
     return (
       <>
         <Typography variant="h1" className={classes.resourceId}>
@@ -88,7 +106,7 @@ const ResourceProfileMapping: React.FC<ResourceProfileMappingProps> = ({
           className={classes.root}
           defaultCollapseIcon={<ArrowDropDown />}
           defaultExpandIcon={<ArrowRight />}
-          defaultExpanded={[attributesToRender[0].id]}
+          defaultExpanded={[attributesForUI.id]}
         >
           <TreeItem
             nodeId="0"
@@ -107,7 +125,7 @@ const ResourceProfileMapping: React.FC<ResourceProfileMappingProps> = ({
               </span>
             }
           />
-          {renderTree(attributesToRender[0])}
+          {renderNode(attributesForUI)}
         </TreeView>
       </>
     );
