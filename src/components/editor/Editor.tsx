@@ -1,35 +1,35 @@
 import React from "react";
-import AttributeEditor from "./attributeEditor/AttributeEditor";
-import ResourceProfileMapping from "./resourceProfileMapping/ResourceProfileMapping";
-import StructuredefSettings from "../structuredefSettings/StructuredefSettings";
+import AttributeEditor from "src/components/editor/attributeEditor/AttributeEditor";
+import ResourceProfileMapping from "src/components/editor/resourceProfileMapping/ResourceProfileMapping";
+import StructureDefSettings from "src/components/structureDefSettings/StructureDefSettings";
 import { useSelector } from "react-redux";
-import { RootState } from "../../state/store";
+import { RootState } from "src/state/store";
+import clsx from "clsx";
 import {
   IElementDefinition,
   IStructureDefinition
 } from "@ahryman40k/ts-fhir-types/lib/R4";
-import useStyles from "./style";
+import useStyles from "src/components/editor/style";
 import { Paper } from "@material-ui/core";
-import Navbar from "../navbar/Navbar";
+import Navbar from "src/components/navbar/Navbar";
 
 const Editor: React.FC<{}> = () => {
   const { loading, structureDefinition, selectedAttributeId } = useSelector(
     (state: RootState) => state.resource
   );
-  const structuredefSettings: string = "structuredefSettings";
   const classes = useStyles();
   let attribute: IElementDefinition | undefined = undefined;
 
-  if (selectedAttributeId && selectedAttributeId !== structuredefSettings) {
+  if (selectedAttributeId && selectedAttributeId !== "structureDefSettings") {
     attribute = structureDefinition?.snapshot?.element.find(
       (attribute: IElementDefinition) => attribute.id === selectedAttributeId
     );
   }
   const renderAttributeEditor = (structureDef: IStructureDefinition) => {
-    if (selectedAttributeId === structuredefSettings) {
+    if (selectedAttributeId === "structureDefSettings") {
       return (
         structureDefinition && (
-          <StructuredefSettings
+          <StructureDefSettings
             structureDefinition={structureDefinition}
             type="resource"
           />
@@ -64,10 +64,10 @@ const Editor: React.FC<{}> = () => {
           <button>Download</button>
         </a>*/}
         <div className={classes.mapping}>
-          <Paper className={`${classes.paperLeft} ${classes.paper}`}>
+          <Paper className={clsx(classes.paperLeft, classes.paper)}>
             <ResourceProfileMapping profile={structureDefinition} />
           </Paper>
-          <Paper className={`${classes.paperRight} ${classes.paper}`}>
+          <Paper className={clsx(classes.paperRight, classes.paper)}>
             {renderAttributeEditor(structureDefinition)}
           </Paper>
         </div>

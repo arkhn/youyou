@@ -1,4 +1,4 @@
-import { DataFetched } from "../reducers/resource";
+import { DataFetched } from "src/state/reducers/resource";
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 
 export const SELECT_RESOURCE = "SELECT_RESOURCE";

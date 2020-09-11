@@ -1,4 +1,4 @@
-import extensionStructureDefinition from "../../assets/extensionTemplate";
+import extensionStructureDefinition from "src/assets/extensionTemplate";
 import {
   SELECT_RESOURCE,
   ResourceAction,
@@ -16,7 +16,7 @@ import {
   SelectAttributeAction,
   UPDATE_STRUCTURE_DEF_EXTENSION,
   UpdateStructureDefExtensionAction
-} from "../actions/resourceActions";
+} from "src/state/actions/resourceActions";
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 
 export type DataFetched = {

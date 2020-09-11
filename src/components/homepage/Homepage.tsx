@@ -1,13 +1,13 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../../state/store";
+import { RootState } from "src/state/store";
 import {
   selectResource,
   selectAttributeId
-} from "../../state/actions/resourceActions";
+} from "src/state/actions/resourceActions";
 import { Link } from "react-router-dom";
-import { DataFetched } from "../../state/reducers/resource";
-import { requestResource } from "../../state/thunkMiddleware";
+import { DataFetched } from "src/state/reducers/resource";
+import { requestResource } from "src/state/thunkMiddleware";
 import {
   Card,
   CardActionArea,
@@ -26,13 +26,11 @@ const Homepage: React.FC<{}> = () => {
   const dispatch = useDispatch();
   const classes = useStyles();
 
-  const structuredefSettings: string = "structuredefSettings";
-
   const dispatchResourceSelected = (resource: DataFetched): void => {
     if (resource.id) {
       dispatch(selectResource(resource.id));
       dispatch(requestResource(resource.id));
-      dispatch(selectAttributeId(structuredefSettings));
+      dispatch(selectAttributeId("structureDefSettings"));
     }
   };
 
@@ -51,7 +49,7 @@ const Homepage: React.FC<{}> = () => {
         >
           <Link
             className={classes.itemLink}
-            to="/editprofile"
+            to="/edit/profile"
             onClick={(): void => dispatchResourceSelected(resource)}
           >
             <Card className={classes.itemCard}>

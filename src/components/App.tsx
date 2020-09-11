@@ -4,8 +4,8 @@ import { Provider } from "react-redux";
 import Homepage from "./homepage/Homepage";
 import { requestIds, requestDataTypes } from "../state/thunkMiddleware";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Editor from "./editor/Editor";
-import ExtensionEditor from "./extensionEditor/ExtensionEditor";
+import Editor from "src/components/editor/Editor";
+import ExtensionEditor from "src/components/extensionEditor/ExtensionEditor";
 import { PersistGate } from "redux-persist/integration/react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { StylesProvider } from "@material-ui/core";
@@ -23,8 +23,8 @@ const App = () => {
           <Router>
             <Switch>
               <Route exact path="/" component={Homepage} />
-              <Route path="/editprofile" component={Editor} />
-              <Route path="/editextension" component={ExtensionEditor} />
+              <Route path="/edit/profile" component={Editor} />
+              <Route path="/edit/extension" component={ExtensionEditor} />
             </Switch>
           </Router>
         </PersistGate>

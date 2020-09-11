@@ -1,5 +1,5 @@
 import { makeStyles, Theme } from "@material-ui/core/styles";
-import { navbarHeight } from "../navbar/style";
+import { navbarHeight } from "src/components/navbar/style";
 
 const useStyles = makeStyles((theme: Theme) => ({
   mapping: {

@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { selectAttributeId } from "../../../state/actions/resourceActions";
+import { selectAttributeId } from "src/state/actions/resourceActions";
 import {
   IStructureDefinition,
   IElementDefinition
@@ -15,6 +15,7 @@ import {
   Settings
 } from "@material-ui/icons";
 import { Typography } from "@material-ui/core";
+import clsx from "clsx";
 
 type ResourceProfileMappingProps = {
   profile: IStructureDefinition | null;
@@ -32,7 +33,6 @@ const ResourceProfileMapping: React.FC<ResourceProfileMappingProps> = ({
   const dispatch = useDispatch();
   const attributes: Array<IElementDefinition> | undefined =
     profile?.snapshot?.element;
-  const structuredefSettings: string = "structuredefSettings";
   const classes = useStyles();
 
   let attributesToRender: RenderTree[] = [];
@@ -81,7 +81,7 @@ const ResourceProfileMapping: React.FC<ResourceProfileMappingProps> = ({
 
   if (attributesToRender && profile) {
     return (
-      <div>
+      <>
         <Typography variant="h1" className={classes.resourceId}>
           {profile.id}
         </Typography>
@@ -93,13 +93,16 @@ const ResourceProfileMapping: React.FC<ResourceProfileMappingProps> = ({
         >
           <TreeItem
             nodeId="0"
-            onClick={() => dispatch(selectAttributeId(structuredefSettings))}
+            onClick={() => dispatch(selectAttributeId("structureDefSettings"))}
             label={
               <span
-                className={`${classes.treeItem} ${classes.textTreeItemMeta}`}
+                className={clsx(classes.treeItem, classes.textTreeItemMeta)}
               >
                 <Settings
-                  className={`${classes.iconTreeItem} ${classes.iconTreeItemMeta}`}
+                  className={clsx(
+                    classes.iconTreeItem,
+                    classes.iconTreeItemMeta
+                  )}
                 />
                 Metadatas
               </span>
@@ -107,11 +110,11 @@ const ResourceProfileMapping: React.FC<ResourceProfileMappingProps> = ({
           />
           {renderTree(attributesToRender[0])}
         </TreeView>
-      </div>
+      </>
     );
   }
 
-  return <div>Error</div>;
+  return <>Error</>;
 };
 
 export default ResourceProfileMapping;

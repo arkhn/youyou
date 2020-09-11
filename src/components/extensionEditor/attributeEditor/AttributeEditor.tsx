@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { RootState } from "../../../state/store";
+import { RootState } from "src/state/store";
 import { useDispatch } from "react-redux";
-import { updateStructureDefExtension } from "../../../state/actions/resourceActions";
+import { updateStructureDefExtension } from "src/state/actions/resourceActions";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import TextField from "@material-ui/core/TextField";
 import {

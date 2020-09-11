@@ -3,19 +3,19 @@ import { useDispatch } from "react-redux";
 import {
   updateStructureDefProfile,
   updateStructureDefExtension
-} from "../../state/actions/resourceActions";
-import { editAttribute } from "./utils";
+} from "src/state/actions/resourceActions";
+import { editAttribute } from "src/components/structureDefSettings/utils";
 import {
   IStructureDefinition,
   StructureDefinitionStatusKind
 } from "@ahryman40k/ts-fhir-types/lib/R4";
 
-type StructuredefSettingsProps = {
+type StructureDefSettingsProps = {
   structureDefinition: IStructureDefinition;
   type?: "resource" | "extension";
 };
 
-const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
+const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   structureDefinition,
   type = "resource"
 }) => {
@@ -212,4 +212,4 @@ const StructuredefSettings: React.FC<StructuredefSettingsProps> = ({
   );
 };
 
-export default StructuredefSettings;
+export default StructureDefSettings;
