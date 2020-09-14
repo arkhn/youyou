@@ -97,118 +97,115 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   );
 
   return (
-    <>
-      <form onSubmit={(e) => handleEditSettings(e)}>
-        <label htmlFor="name">Name of profile</label>
-        <input
-          type="text"
-          name="name"
-          value={name || ""}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <br />
-        <label htmlFor="description">Description</label>
-        <input
-          type="text"
-          name="description"
-          value={description || ""}
-          onChange={(e) => setDescription(e.target.value)}
-        />
-        <br />
-        <label htmlFor="url">url</label>
-        <input
-          type="url"
-          name="url"
-          value={((url as unknown) as string) || ""}
-          onChange={(e) => setUrl(e.target.value)}
-        />
-        <br />
-        <label htmlFor="id">id</label>
-        <input
-          type="text"
-          name="id"
-          value={id || ""}
-          onChange={(e) => setId(e.target.value)}
-        />
-        <br />
-        <label htmlFor="publisher">publisher</label>
-        <input
-          type="text"
-          name="publisher"
-          value={publisher || ""}
-          onChange={(e) => setPublisher(e.target.value)}
-        />
-        <br />
-        <label htmlFor="copyright">copyright</label>
-        <input
-          type="text"
-          name="copyright"
-          value={copyright || ""}
-          onChange={(e) => setCopyright(e.target.value)}
-        />
-        <br />
-        <label htmlFor="title">title</label>
-        <input
-          type="text"
-          name="title"
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        <br />
-        <label htmlFor="status">Status</label>
-        <select
-          name="status"
-          onChange={(e) =>
-            setStatus(e.target.value as StructureDefinitionStatusKind)
-          }
-          defaultValue={status || ""}
-        >
-          <option value="active">active</option>
-          <option value="draft">draft</option>
-          <option value="retired">retired</option>
-          <option value="unknown">unknown</option>
-        </select>
-        <br />
-        <input
-          type="datetime-local"
-          onChange={(e) => {
-            const date = new Date(e.target.value);
-            setDate(
-              new Date(
-                date.getTime() - date.getTimezoneOffset() * 60000
-              ).toISOString()
-            );
-          }}
-        />
-        <br />
-        <label htmlFor="purpose">purpose</label>
-        <input
-          type="text"
-          name="purpose"
-          onChange={(e) => setPurpose(e.target.value)}
-        />
-        <br />
-        <input
-          type="checkbox"
-          name="abstract"
-          onChange={(e) => setAbstract(e.target.checked)}
-        />
-        <label htmlFor="abstract">abstract</label>
-        <br />
-        <input
-          type="checkbox"
-          name="experimental"
-          onChange={(e) => {
-            setExperimental(e.target.checked);
-          }}
-        />
-        <label htmlFor="experimental">experimental</label>
-        <br />
-        {renderContact}
-        <br />
-        <input type="submit" value="submit" />
-      </form>
-      <hr />
-    </>
+    <form onSubmit={(e) => handleEditSettings(e)}>
+      <label htmlFor="name">Name of profile</label>
+      <input
+        type="text"
+        name="name"
+        value={name || ""}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <br />
+      <label htmlFor="description">Description</label>
+      <input
+        type="text"
+        name="description"
+        value={description || ""}
+        onChange={(e) => setDescription(e.target.value)}
+      />
+      <br />
+      <label htmlFor="url">url</label>
+      <input
+        type="url"
+        name="url"
+        value={((url as unknown) as string) || ""}
+        onChange={(e) => setUrl(e.target.value)}
+      />
+      <br />
+      <label htmlFor="id">id</label>
+      <input
+        type="text"
+        name="id"
+        value={id || ""}
+        onChange={(e) => setId(e.target.value)}
+      />
+      <br />
+      <label htmlFor="publisher">publisher</label>
+      <input
+        type="text"
+        name="publisher"
+        value={publisher || ""}
+        onChange={(e) => setPublisher(e.target.value)}
+      />
+      <br />
+      <label htmlFor="copyright">copyright</label>
+      <input
+        type="text"
+        name="copyright"
+        value={copyright || ""}
+        onChange={(e) => setCopyright(e.target.value)}
+      />
+      <br />
+      <label htmlFor="title">title</label>
+      <input
+        type="text"
+        name="title"
+        onChange={(e) => setTitle(e.target.value)}
+      />
+      <br />
+      <label htmlFor="status">Status</label>
+      <select
+        name="status"
+        onChange={(e) =>
+          setStatus(e.target.value as StructureDefinitionStatusKind)
+        }
+        defaultValue={status || ""}
+      >
+        <option value="active">active</option>
+        <option value="draft">draft</option>
+        <option value="retired">retired</option>
+        <option value="unknown">unknown</option>
+      </select>
+      <br />
+      <input
+        type="datetime-local"
+        onChange={(e) => {
+          const date = new Date(e.target.value);
+          setDate(
+            new Date(
+              date.getTime() - date.getTimezoneOffset() * 60000
+            ).toISOString()
+          );
+        }}
+      />
+      <br />
+      <label htmlFor="purpose">purpose</label>
+      <input
+        type="text"
+        name="purpose"
+        onChange={(e) => setPurpose(e.target.value)}
+      />
+      <br />
+      <input
+        type="checkbox"
+        name="abstract"
+        onChange={(e) => setAbstract(e.target.checked)}
+      />
+      <label htmlFor="abstract">abstract</label>
+      <br />
+      <input
+        type="checkbox"
+        name="experimental"
+        onChange={(e) => {
+          setExperimental(e.target.checked);
+        }}
+      />
+      <label htmlFor="experimental">experimental</label>
+      <br />
+      {renderContact}
+      <br />
+      <input type="submit" value="submit" />
+    </form>
   );
 };
 

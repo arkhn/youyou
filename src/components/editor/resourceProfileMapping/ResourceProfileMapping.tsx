@@ -14,7 +14,6 @@ import {
   LocalOffer,
   Settings
 } from "@material-ui/icons";
-import { Typography } from "@material-ui/core";
 import clsx from "clsx";
 
 type ResourceProfileMappingProps = {
@@ -98,36 +97,25 @@ const ResourceProfileMapping: React.FC<ResourceProfileMappingProps> = ({
   );
   if (profile) {
     return (
-      <>
-        <Typography variant="h1" className={classes.resourceId}>
-          {profile.id}
-        </Typography>
-        <TreeView
-          className={classes.root}
-          defaultCollapseIcon={<ArrowDropDown />}
-          defaultExpandIcon={<ArrowRight />}
-          defaultExpanded={[attributesForUI.id]}
-        >
-          <TreeItem
-            nodeId="0"
-            onClick={() => dispatch(selectAttributeId("structureDefSettings"))}
-            label={
-              <span
-                className={clsx(classes.treeItem, classes.textTreeItemMeta)}
-              >
-                <Settings
-                  className={clsx(
-                    classes.iconTreeItem,
-                    classes.iconTreeItemMeta
-                  )}
-                />
-                Metadatas
-              </span>
-            }
-          />
-          {renderNode(attributesForUI)}
-        </TreeView>
-      </>
+      <TreeView
+        defaultCollapseIcon={<ArrowDropDown />}
+        defaultExpandIcon={<ArrowRight />}
+        defaultExpanded={[attributesForUI.id]}
+      >
+        <TreeItem
+          nodeId="0"
+          onClick={() => dispatch(selectAttributeId("structureDefSettings"))}
+          label={
+            <span className={clsx(classes.treeItem, classes.textTreeItemMeta)}>
+              <Settings
+                className={clsx(classes.iconTreeItem, classes.iconTreeItemMeta)}
+              />
+              Metadatas
+            </span>
+          }
+        />
+        {renderNode(attributesForUI)}
+      </TreeView>
     );
   }
 

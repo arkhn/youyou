@@ -3,12 +3,13 @@ import { createMuiTheme } from "@material-ui/core";
 const theme = createMuiTheme({
   typography: {
     fontFamily: "'Montserrat', sans-serif",
+    fontSize: 12,
     h1: {
       fontSize: 24,
       fontWeight: 600
     },
     h6: {
-      fontSize: 16
+      fontSize: 14
     }
   },
   palette: {

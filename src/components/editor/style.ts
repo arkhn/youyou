@@ -16,14 +16,36 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
   },
   paperRight: {
-    marginLeft: 16,
-    flexGrow: 1
-  },
-  paperLeft: {
+    flexGrow: 1,
     overflow: "auto"
   },
+  paperLeft: {
+    width: 500,
+    display: "flex",
+    flexDirection: "column"
+  },
   paper: {
-    padding: 16
+    padding: 32
+  },
+  capitalize: {
+    textTransform: "capitalize"
+  },
+  containerRight: {
+    display: "flex",
+    flexDirection: "column"
+  },
+  marginBottom: {
+    marginBottom: 16
+  },
+  treeView: {
+    overflow: "auto",
+    margin: "8px 0 16px 0"
+  },
+  downloadLink: {
+    textDecoration: "none"
+  },
+  downloadButton: {
+    width: "100%"
   }
 }));
 

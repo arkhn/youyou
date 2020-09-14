@@ -1,9 +1,6 @@
 import { makeStyles, Theme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme: Theme) => ({
-  root: {
-    width: "300px"
-  },
   treeItem: {
     display: "flex",
     margin: 2
