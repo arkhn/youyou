@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 
 import clsx from "clsx";
@@ -6,7 +6,7 @@ import { IElementDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { Paper, Container, Typography, Breadcrumbs } from "@material-ui/core";
 
 import AttributeEditor from "components/editor/attributeEditor/AttributeEditor";
-import { ButtonDownloadYouyou } from "components/utils/utils";
+import { ButtonDownloadYouyou } from "components/smallComponents";
 import Navbar from "components/navbar/Navbar";
 import ResourceProfileMapping from "components/editor/resourceProfileMapping/ResourceProfileMapping";
 import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";
@@ -23,10 +23,9 @@ const Editor: React.FC<{}> = () => {
   } = useSelector((state: RootState) => state.resource);
   const classes = useStyles();
   const splitedAttributeSelected = selectedAttributeId?.split(".");
-  const [attribute] = useState(
-    structureDefinition?.snapshot?.element.find(
-      (attribute: IElementDefinition) => attribute.id === selectedAttributeId
-    )
+
+  const attribute = structureDefinition?.snapshot?.element.find(
+    (attribute: IElementDefinition) => attribute.id === selectedAttributeId
   );
 
   if (loading) {

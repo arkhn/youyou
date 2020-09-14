@@ -2,15 +2,23 @@ import React from "react";
 
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { Button } from "@material-ui/core";
-
-import useStyles from "components/utils/styles";
+import { makeStyles, Theme } from "@material-ui/core/styles";
 
 type ButtonDownloadYouyouProps = {
   text: string;
   toDownload: IStructureDefinition;
 };
 
-export const ButtonDownloadYouyou: React.FC<ButtonDownloadYouyouProps> = ({
+const useStyles = makeStyles((theme: Theme) => ({
+  buttonDownloadSize: {
+    width: "100%"
+  },
+  buttonDownloadText: {
+    textDecoration: "none"
+  }
+}));
+
+const ButtonDownloadYouyou: React.FC<ButtonDownloadYouyouProps> = ({
   text,
   toDownload
 }) => {
@@ -35,3 +43,5 @@ export const ButtonDownloadYouyou: React.FC<ButtonDownloadYouyouProps> = ({
     </a>
   );
 };
+
+export default ButtonDownloadYouyou;

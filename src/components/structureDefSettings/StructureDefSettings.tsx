@@ -5,6 +5,7 @@ import {
   IStructureDefinition,
   StructureDefinitionStatusKind
 } from "@ahryman40k/ts-fhir-types/lib/R4";
+import { TextField } from "@material-ui/core";
 
 import {
   updateStructureDefProfile,
@@ -44,7 +45,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   const [abstract, setAbstract] = useState(structureDefinition.abstract);
 
   // CHANGE STATE
-  const handleEditSettings = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleEditSettings = (e: React.MouseEvent<HTMLInputElement>) => {
     if (structureDefinition) {
       e.preventDefault();
       const structureDefinitonToEdit = { ...structureDefinition };
@@ -62,11 +63,12 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
       editAttribute(structureDefinitonToEdit, "experimental", experimental);
       editAttribute(structureDefinitonToEdit, "title", title);
       editAttribute(structureDefinitonToEdit, "copyright", copyright);
-    }
-    if (type === "resource") {
-      dispatch(updateStructureDefProfile(structureDefinition));
-    } else if (type === "extension") {
-      dispatch(updateStructureDefExtension(structureDefinition));
+
+      if (type === "resource") {
+        dispatch(updateStructureDefProfile(structureDefinitonToEdit));
+      } else if (type === "extension") {
+        dispatch(updateStructureDefExtension(structureDefinitonToEdit));
+      }
     }
   };
 
@@ -99,22 +101,24 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   );
 
   return (
-    <form onSubmit={(e) => handleEditSettings(e)}>
-      <label htmlFor="name">Name of profile</label>
-      <input
-        type="text"
-        name="name"
-        value={name || ""}
-        onChange={(e) => setName(e.target.value)}
+    <form>
+      <TextField
+        label="Name of profile"
+        defaultValue={name || ""}
+        variant="outlined"
+        onBlur={(e) => setName(e.target.value)}
+        helperText="A Computer-ready name (e.g. a token) that identifies the structure."
       />
       <br />
-      <label htmlFor="description">Description</label>
-      <input
-        type="text"
-        name="description"
-        value={description || ""}
-        onChange={(e) => setDescription(e.target.value)}
+      <br />
+      <TextField
+        label="Description"
+        defaultValue={description || ""}
+        variant="outlined"
+        onBlur={(e) => setDescription(e.target.value)}
+        helperText="A free text natural language description of the structure and its use."
       />
+
       <br />
       <label htmlFor="url">url</label>
       <input
@@ -206,7 +210,11 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
       <br />
       {renderContact}
       <br />
-      <input type="submit" value="submit" />
+      <input
+        type="submit"
+        value="submit"
+        onClick={(e) => handleEditSettings(e)}
+      />
     </form>
   );
 };
