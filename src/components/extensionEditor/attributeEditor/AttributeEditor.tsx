@@ -11,6 +11,8 @@ import TextField from "@material-ui/core/TextField";
 import { RootState } from "state/store";
 import { updateStructureDefExtension } from "state/actions/resourceActions";
 
+import { getStructureDef } from "../../../services/requests";
+
 type AttributeEditorProps = {
   structureDefinition: IStructureDefinition;
 };
@@ -145,13 +147,15 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
         <ul>
           <Autocomplete
             id="Data type"
-            options={
-              datatypes?.concept?.map((c) => {
-                return c.code;
-              }) || []
-            }
+            options={datatypes ? datatypes : []}
             style={{ width: 300 }}
-            onChange={(event, value): void => setDataType(value as string)}
+            onChange={(event, value): void => {
+              setDataType(value as string);
+              const structureDefPromise = getStructureDef(value as string);
+              structureDefPromise.then((data: any) => {
+                console.log(data);
+              });
+            }}
             renderInput={(params) => (
               <TextField {...params} label="Data type" variant="outlined" />
             )}

@@ -18,6 +18,12 @@ import {
 } from "state/actions/codeSystemActions";
 import { RootState } from "state/store";
 
+import {
+  IStructureDefinition,
+  IElementDefinition,
+  IElementDefinition_Type
+} from "@ahryman40k/ts-fhir-types/lib/R4";
+
 // FETCH ALL RESOURCE IDS
 export const requestIds = () => {
   return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
@@ -54,15 +60,42 @@ export const requestResource = (resource: string) => {
   };
 };
 
-// FETCH DATA TYPES
-export const requestDataTypes = (codeSystemName: string = "data-types") => {
+// // FETCH DATA TYPES
+// export const requestDataTypes = () => {
+//   return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
+//     dispatch(getCodeSystemDataTypePending());
+//     const response: AxiosResponse<any> = await api.get(
+//       "/CodeSystem?id=data-types"
+//     );
+//     if (response.status === 200) {
+//       dispatch(getCodeSystemDataTypeSuccess(response.data.entry[0].resource));
+//     } else {
+//       dispatch(getCodeSystemDataTypeFailure(new Error(response.statusText)));
+//     }
+//   };
+// };
+
+// FETCH AVAILABLE DATA TYPES FOR EXTENSIONS
+export const requestExtensionDataTypes = () => {
   return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
     dispatch(getCodeSystemDataTypePending());
     const response: AxiosResponse<any> = await api.get(
-      `/CodeSystem?id=${codeSystemName}`
+      "/StructureDefinition?derivation=specialization&name=extension"
     );
+    const resource: IStructureDefinition = response.data.entry[0].resource;
+    let codes: string[] = [];
+    resource.differential?.element.forEach((element: IElementDefinition) => {
+      //FIXME
+      if (element.id === "Extension.value[x]") {
+        codes =
+          element?.type
+            ?.map((e: IElementDefinition_Type) => e.code!)
+            .filter(Boolean) || [];
+      }
+      codes = codes?.filter(Boolean);
+    });
     if (response.status === 200) {
-      dispatch(getCodeSystemDataTypeSuccess(response.data.entry[0].resource));
+      dispatch(getCodeSystemDataTypeSuccess(codes));
     } else {
       dispatch(getCodeSystemDataTypeFailure(new Error(response.statusText)));
     }

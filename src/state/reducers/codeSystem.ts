@@ -13,7 +13,7 @@ export type DataFetched = {
 };
 
 export type CodeSystemState = {
-  datatypes: ICodeSystem | null;
+  datatypes: string[] | null;
   loading: boolean;
   error: Error | null;
 };
