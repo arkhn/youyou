@@ -95,31 +95,32 @@ const ResourceProfileMapping: React.FC<ResourceProfileMappingProps> = ({
         nodes.children.map((node) => renderNode(node))}
     </TreeItem>
   );
-  if (profile) {
-    return (
-      <TreeView
-        defaultCollapseIcon={<ArrowDropDown />}
-        defaultExpandIcon={<ArrowRight />}
-        defaultExpanded={[attributesForUI.id]}
-      >
-        <TreeItem
-          nodeId="0"
-          onClick={() => dispatch(selectAttributeId("structureDefSettings"))}
-          label={
-            <span className={clsx(classes.treeItem, classes.textTreeItemMeta)}>
-              <Settings
-                className={clsx(classes.iconTreeItem, classes.iconTreeItemMeta)}
-              />
-              Metadatas
-            </span>
-          }
-        />
-        {renderNode(attributesForUI)}
-      </TreeView>
-    );
+
+  if (!profile) {
+    return <>Error</>;
   }
 
-  return <>Error</>;
+  return (
+    <TreeView
+      defaultCollapseIcon={<ArrowDropDown />}
+      defaultExpandIcon={<ArrowRight />}
+      defaultExpanded={[attributesForUI.id]}
+    >
+      <TreeItem
+        nodeId="0"
+        onClick={() => dispatch(selectAttributeId("structureDefSettings"))}
+        label={
+          <span className={clsx(classes.treeItem, classes.textTreeItemMeta)}>
+            <Settings
+              className={clsx(classes.iconTreeItem, classes.iconTreeItemMeta)}
+            />
+            Metadatas
+          </span>
+        }
+      />
+      {renderNode(attributesForUI)}
+    </TreeView>
+  );
 };
 
 export default ResourceProfileMapping;
