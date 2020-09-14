@@ -8,16 +8,11 @@ import {
   IElementDefinition,
   IStructureDefinition
 } from "@ahryman40k/ts-fhir-types/lib/R4";
-import {
-  Paper,
-  Container,
-  Typography,
-  Breadcrumbs,
-  Button
-} from "@material-ui/core";
+import { Paper, Container, Typography, Breadcrumbs } from "@material-ui/core";
 
 // COMPONENTS & STATES
 import AttributeEditor from "components/editor/attributeEditor/AttributeEditor";
+import { ButtonDownloadYouyou } from "components/utils/utils";
 import Navbar from "components/navbar/Navbar";
 import ResourceProfileMapping from "components/editor/resourceProfileMapping/ResourceProfileMapping";
 import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";
@@ -77,22 +72,10 @@ const Editor: React.FC<{}> = () => {
             <Container className={classes.treeView}>
               <ResourceProfileMapping profile={structureDefinition} />
             </Container>
-            <a
-              href={
-                "data:json/plain;charset=utf-8," +
-                encodeURIComponent(JSON.stringify(structureDefinition, null, 2))
-              }
-              className={classes.downloadLink}
-              download={structureDefinition.name + ".json"}
-            >
-              <Button
-                color="secondary"
-                variant="contained"
-                className={classes.downloadButton}
-              >
-                Download Profile
-              </Button>
-            </a>
+            <ButtonDownloadYouyou
+              text="Download profile"
+              toDownload={structureDefinition}
+            />
           </Paper>
           <Container className={classes.containerRight}>
             <Breadcrumbs className={classes.marginBottom}>
