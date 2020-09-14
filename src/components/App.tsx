@@ -1,14 +1,18 @@
+// REACT
 import React from "react";
-import { store, persistor } from "../state/store";
 import { Provider } from "react-redux";
-import Homepage from "./homepage/Homepage";
-import { requestIds, requestDataTypes } from "state/thunkMiddleware";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { PersistGate } from "redux-persist/integration/react";
+
+// EXTERNAL DEPENDENCIES & MATERIAL UI
+import { StylesProvider, CssBaseline } from "@material-ui/core";
+
+// COMPONENTS & STATES
+import Homepage from "components/homepage/Homepage";
 import Editor from "components/editor/Editor";
 import ExtensionEditor from "components/extensionEditor/ExtensionEditor";
-import { PersistGate } from "redux-persist/integration/react";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import { StylesProvider } from "@material-ui/core";
+import { requestIds, requestDataTypes } from "state/thunkMiddleware";
+import { store, persistor } from "state/store";
 
 const App = () => {
   /* @ts-ignore */

@@ -1,15 +1,13 @@
+// REACT
 import React from "react";
-import AttributeEditor from "components/editor/attributeEditor/AttributeEditor";
-import ResourceProfileMapping from "components/editor/resourceProfileMapping/ResourceProfileMapping";
-import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";
 import { useSelector } from "react-redux";
-import { RootState } from "state/store";
+
+// EXTERNAL DEPENDENCIES & MATERIAL UI
 import clsx from "clsx";
 import {
   IElementDefinition,
   IStructureDefinition
 } from "@ahryman40k/ts-fhir-types/lib/R4";
-import useStyles from "components/editor/style";
 import {
   Paper,
   Container,
@@ -17,7 +15,16 @@ import {
   Breadcrumbs,
   Button
 } from "@material-ui/core";
+
+// COMPONENTS & STATES
+import AttributeEditor from "components/editor/attributeEditor/AttributeEditor";
 import Navbar from "components/navbar/Navbar";
+import ResourceProfileMapping from "components/editor/resourceProfileMapping/ResourceProfileMapping";
+import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";
+import { RootState } from "state/store";
+
+// STYLE
+import useStyles from "components/editor/style";
 
 const Editor: React.FC<{}> = () => {
   const {
@@ -92,13 +99,11 @@ const Editor: React.FC<{}> = () => {
               {selectStructureDefMeta ? (
                 <Typography className={classes.capitalize}>Metadata</Typography>
               ) : (
-                splitedAttributeSelected?.map((split: string) => {
-                  return (
-                    <Typography key={split} className={classes.capitalize}>
-                      {split}
-                    </Typography>
-                  );
-                })
+                splitedAttributeSelected?.map((split: string) => (
+                  <Typography key={split} className={classes.capitalize}>
+                    {split}
+                  </Typography>
+                ))
               )}
             </Breadcrumbs>
             <Typography

@@ -1,14 +1,13 @@
+// REACT
 import React from "react";
 import { useDispatch } from "react-redux";
-import {
-  selectAttributeId,
-  selectStructureDefMeta
-} from "state/actions/resourceActions";
+
+// EXTERNAL DEPENDENCIES & MATERIAL UI
+import clsx from "clsx";
 import {
   IStructureDefinition,
   IElementDefinition
 } from "@ahryman40k/ts-fhir-types/lib/R4";
-import useStyles from "./style";
 import { TreeView, TreeItem } from "@material-ui/lab";
 import {
   ArrowRight,
@@ -17,7 +16,15 @@ import {
   LocalOffer,
   Settings
 } from "@material-ui/icons";
-import clsx from "clsx";
+
+// COMPONENTS & STATES
+import {
+  selectAttributeId,
+  selectStructureDefMeta
+} from "state/actions/resourceActions";
+
+// STYLES
+import useStyles from "./style";
 
 type ResourceProfileMappingProps = {
   profile: IStructureDefinition | null;

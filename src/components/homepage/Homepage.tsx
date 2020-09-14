@@ -1,13 +1,9 @@
+// REACT
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "state/store";
-import {
-  selectResource,
-  selectStructureDefMeta
-} from "state/actions/resourceActions";
 import { Link } from "react-router-dom";
-import { DataFetched } from "state/reducers/resource";
-import { requestResource } from "state/thunkMiddleware";
+
+// EXTERNAL DEPENDENCIES & MATERIAL UI
 import {
   Card,
   CardActionArea,
@@ -15,9 +11,20 @@ import {
   Grid,
   CircularProgress
 } from "@material-ui/core";
+
+// COMPONENTS & STATES
+import Navbar from "components/navbar/Navbar";
+import { ReactComponent as FhirLogo } from "assets/img/fhir-logo.svg";
+import {
+  selectResource,
+  selectStructureDefMeta
+} from "state/actions/resourceActions";
+import { DataFetched } from "state/reducers/resource";
+import { RootState } from "state/store";
+import { requestResource } from "state/thunkMiddleware";
+
+// STYLE
 import useStyles from "./style";
-import { ReactComponent as FhirLogo } from "../../assets/img/fhir-logo.svg";
-import Navbar from "../navbar/Navbar";
 
 const Homepage: React.FC<{}> = () => {
   const { loading, resources } = useSelector(

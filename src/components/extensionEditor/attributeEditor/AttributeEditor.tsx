@@ -1,14 +1,18 @@
+// REACT
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "state/store";
-import { useDispatch } from "react-redux";
-import { updateStructureDefExtension } from "state/actions/resourceActions";
-import Autocomplete from "@material-ui/lab/Autocomplete";
-import TextField from "@material-ui/core/TextField";
+import { useSelector, useDispatch } from "react-redux";
+
+// EXTERNAL DEPENDENCIES & MATERIAL UI
 import {
   IStructureDefinition,
   IElementDefinition
 } from "@ahryman40k/ts-fhir-types/lib/R4";
+import Autocomplete from "@material-ui/lab/Autocomplete";
+import TextField from "@material-ui/core/TextField";
+
+// COMPONENTS & STATES
+import { RootState } from "state/store";
+import { updateStructureDefExtension } from "state/actions/resourceActions";
 
 type AttributeEditorProps = {
   structureDefinition: IStructureDefinition;

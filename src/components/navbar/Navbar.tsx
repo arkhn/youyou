@@ -1,9 +1,15 @@
+// REACT
 import React from "react";
-import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import useStyles from "components/navbar/style";
+
+// EXTERNAL DEPENDENCIES & MATERIAL UI
+import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
+
+// COMPONENTS & STATES
 import { ReactComponent as Logo } from "assets/img/arkhn-logo.svg";
-import AttributeEditor from "components/extensionEditor/attributeEditor/AttributeEditor";
+
+// STYLE
+import useStyles from "components/navbar/style";
 
 type NavbarProps = {
   buttonType?: "profile" | "extension";

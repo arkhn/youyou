@@ -1,10 +1,14 @@
+// REACT
 import React from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "state/store";
 
-import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";
+// EXTERNAL DEPENDENCIES & MATERIAL UI
+import { useSelector } from "react-redux";
+
+// COMPONENTS & STATES
 import AttributeEditor from "components/extensionEditor/attributeEditor/AttributeEditor";
 import Navbar from "components/navbar/Navbar";
+import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";
+import { RootState } from "state/store";
 
 const ExtensionEditor: React.FC<{}> = () => {
   const { loading, extensionStructureDefinition } = useSelector(
