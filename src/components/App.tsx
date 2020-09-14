@@ -23,8 +23,8 @@ const App = () => {
           <Router>
             <Switch>
               <Route exact path="/" component={Homepage} />
-              <Route path="/edit/profile" component={Editor} />
-              <Route path="/edit/extension" component={ExtensionEditor} />
+              <Route path="/profile/edit" component={Editor} />
+              <Route path="/extension/edit" component={ExtensionEditor} />
             </Switch>
           </Router>
         </PersistGate>

@@ -49,7 +49,7 @@ const Homepage: React.FC<{}> = () => {
         >
           <Link
             className={classes.itemLink}
-            to="/edit/profile"
+            to="/profile/edit"
             onClick={(): void => dispatchResourceSelected(resource)}
           >
             <Card className={classes.itemCard}>

@@ -28,7 +28,7 @@ const Navbar: React.FC<NavbarProps> = ({ buttonType }) => {
           </Link>
         ) : (
           buttonType && (
-            <Link to={"/edit/extension"}>
+            <Link to={"/extension/edit"}>
               <Button variant="contained" className={classes.buttonExtension}>
                 Extension generator
               </Button>
