@@ -1,8 +1,9 @@
 import React from "react";
 import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import useStyles from "./style";
-import { ReactComponent as Logo } from "../../assets/img/arkhn-logo.svg";
+import useStyles from "components/navbar/style";
+import { ReactComponent as Logo } from "assets/img/arkhn-logo.svg";
+import AttributeEditor from "components/extensionEditor/attributeEditor/AttributeEditor";
 
 type NavbarProps = {
   buttonType?: "profile" | "extension";

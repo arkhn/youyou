@@ -1,4 +1,4 @@
-import { DataFetched } from "src/state/reducers/resource";
+import { DataFetched } from "state/reducers/resource";
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 
 export const SELECT_RESOURCE = "SELECT_RESOURCE";
@@ -9,6 +9,7 @@ export const UPDATE_STRUCTURE_DEF_PROFILE = "UPDATE_STRUCTURE_DEF_PROFILE";
 export const UPDATE_STRUCTURE_DEF_EXTENSION = "UPDATE_STRUCTURE_DEF_EXTENSION";
 export const UPDATE_STRUCTURE_DEF_FAILURE = "UPDATE_STRUCTURE_DEF_FAILURE";
 export const SELECT_ATTRIBUTE = "SELECT_ATTRIBUTE";
+export const SELECT_STRUCTUREDEFMETA = "SELECT_STRUCTUREDEFMETA";
 
 export type SelectResourceAction = {
   type: typeof SELECT_RESOURCE;
@@ -42,6 +43,10 @@ export type UpdateStructureDefFailureAction = {
 export type SelectAttributeAction = {
   type: typeof SELECT_ATTRIBUTE;
   payload: string | undefined;
+};
+
+export type SelectStructureDefMetaAction = {
+  type: typeof SELECT_STRUCTUREDEFMETA;
 };
 
 export type UpdateStructureDefExtensionAction = {
@@ -100,6 +105,12 @@ export const selectAttributeId = (
   return {
     type: SELECT_ATTRIBUTE,
     payload: data
+  };
+};
+
+export const selectStructureDefMeta = (): SelectStructureDefMetaAction => {
+  return {
+    type: SELECT_STRUCTUREDEFMETA
   };
 };
 

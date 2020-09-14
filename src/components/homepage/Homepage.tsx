@@ -1,13 +1,13 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "src/state/store";
+import { RootState } from "state/store";
 import {
   selectResource,
-  selectAttributeId
-} from "src/state/actions/resourceActions";
+  selectStructureDefMeta
+} from "state/actions/resourceActions";
 import { Link } from "react-router-dom";
-import { DataFetched } from "src/state/reducers/resource";
-import { requestResource } from "src/state/thunkMiddleware";
+import { DataFetched } from "state/reducers/resource";
+import { requestResource } from "state/thunkMiddleware";
 import {
   Card,
   CardActionArea,
@@ -30,7 +30,7 @@ const Homepage: React.FC<{}> = () => {
     if (resource.id) {
       dispatch(selectResource(resource.id));
       dispatch(requestResource(resource.id));
-      dispatch(selectAttributeId("structureDefSettings"));
+      dispatch(selectStructureDefMeta());
     }
   };
 

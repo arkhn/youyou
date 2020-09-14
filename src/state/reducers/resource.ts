@@ -1,4 +1,4 @@
-import extensionStructureDefinition from "src/assets/extensionTemplate";
+import extensionStructureDefinition from "assets/extensionTemplate";
 import {
   SELECT_RESOURCE,
   ResourceAction,
@@ -15,8 +15,10 @@ import {
   SELECT_ATTRIBUTE,
   SelectAttributeAction,
   UPDATE_STRUCTURE_DEF_EXTENSION,
-  UpdateStructureDefExtensionAction
-} from "src/state/actions/resourceActions";
+  UpdateStructureDefExtensionAction,
+  SELECT_STRUCTUREDEFMETA,
+  SelectStructureDefMetaAction
+} from "state/actions/resourceActions";
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 
 export type DataFetched = {
@@ -31,6 +33,7 @@ export type ResourceState = {
   selectedAttributeId: string | undefined;
   loading: boolean;
   error: Error | null;
+  selectStructureDefMeta: boolean;
 };
 
 const initialState: ResourceState = {
@@ -40,7 +43,8 @@ const initialState: ResourceState = {
   selectedResourceId: null,
   selectedAttributeId: undefined,
   loading: false,
-  error: null
+  error: null,
+  selectStructureDefMeta: true
 };
 
 export type AllResourcesAction =
@@ -51,7 +55,8 @@ export type AllResourcesAction =
   | UpdateStructureDefFailureAction
   | UpdateStructureDefProfileAction
   | SelectAttributeAction
-  | UpdateStructureDefExtensionAction;
+  | UpdateStructureDefExtensionAction
+  | SelectStructureDefMetaAction;
 
 export const resource = (
   state: ResourceState = initialState,
@@ -99,7 +104,8 @@ export const resource = (
     case SELECT_ATTRIBUTE:
       return {
         ...state,
-        selectedAttributeId: action.payload
+        selectedAttributeId: action.payload,
+        selectStructureDefMeta: false
       };
     case UPDATE_STRUCTURE_DEF_EXTENSION:
       return {
@@ -107,6 +113,12 @@ export const resource = (
         loading: false,
         extensionStructureDefinition: action.payload,
         error: null
+      };
+    case SELECT_STRUCTUREDEFMETA:
+      return {
+        ...state,
+        selectedAttributeId: undefined,
+        selectStructureDefMeta: true
       };
     default:
       return state;

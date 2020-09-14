@@ -1,6 +1,9 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { selectAttributeId } from "src/state/actions/resourceActions";
+import {
+  selectAttributeId,
+  selectStructureDefMeta
+} from "state/actions/resourceActions";
 import {
   IStructureDefinition,
   IElementDefinition
@@ -108,7 +111,7 @@ const ResourceProfileMapping: React.FC<ResourceProfileMappingProps> = ({
     >
       <TreeItem
         nodeId="0"
-        onClick={() => dispatch(selectAttributeId("structureDefSettings"))}
+        onClick={() => dispatch(selectStructureDefMeta())}
         label={
           <span className={clsx(classes.treeItem, classes.textTreeItemMeta)}>
             <Settings

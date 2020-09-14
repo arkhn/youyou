@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { updateStructureDefProfile } from "src/state/actions/resourceActions";
+import { updateStructureDefProfile } from "state/actions/resourceActions";
 import { Typography, Button } from "@material-ui/core";
 import {
   IElementDefinition,

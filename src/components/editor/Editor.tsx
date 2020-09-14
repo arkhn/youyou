@@ -1,15 +1,15 @@
 import React from "react";
-import AttributeEditor from "src/components/editor/attributeEditor/AttributeEditor";
-import ResourceProfileMapping from "src/components/editor/resourceProfileMapping/ResourceProfileMapping";
-import StructureDefSettings from "src/components/structureDefSettings/StructureDefSettings";
+import AttributeEditor from "components/editor/attributeEditor/AttributeEditor";
+import ResourceProfileMapping from "components/editor/resourceProfileMapping/ResourceProfileMapping";
+import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";
 import { useSelector } from "react-redux";
-import { RootState } from "src/state/store";
+import { RootState } from "state/store";
 import clsx from "clsx";
 import {
   IElementDefinition,
   IStructureDefinition
 } from "@ahryman40k/ts-fhir-types/lib/R4";
-import useStyles from "src/components/editor/style";
+import useStyles from "components/editor/style";
 import {
   Paper,
   Container,
@@ -17,23 +17,27 @@ import {
   Breadcrumbs,
   Button
 } from "@material-ui/core";
-import Navbar from "src/components/navbar/Navbar";
+import Navbar from "components/navbar/Navbar";
 
 const Editor: React.FC<{}> = () => {
-  const { loading, structureDefinition, selectedAttributeId } = useSelector(
-    (state: RootState) => state.resource
-  );
+  const {
+    loading,
+    structureDefinition,
+    selectedAttributeId,
+    selectStructureDefMeta
+  } = useSelector((state: RootState) => state.resource);
   const classes = useStyles();
+
   const splitedAttributeSelected = selectedAttributeId?.split(".");
   let attribute: IElementDefinition | undefined = undefined;
 
-  if (selectedAttributeId && selectedAttributeId !== "structureDefSettings") {
+  if (selectedAttributeId) {
     attribute = structureDefinition?.snapshot?.element.find(
       (attribute: IElementDefinition) => attribute.id === selectedAttributeId
     );
   }
   const renderAttributeEditor = (structureDef: IStructureDefinition) => {
-    if (selectedAttributeId === "structureDefSettings") {
+    if (selectStructureDefMeta) {
       return (
         structureDefinition && (
           <StructureDefSettings
@@ -85,21 +89,28 @@ const Editor: React.FC<{}> = () => {
           </Paper>
           <Container className={classes.containerRight}>
             <Breadcrumbs className={classes.marginBottom}>
-              {splitedAttributeSelected?.map((split: string) => {
-                return (
-                  <Typography key={split} className={classes.capitalize}>
-                    {split}
-                  </Typography>
-                );
-              })}
+              {selectStructureDefMeta ? (
+                <Typography className={classes.capitalize}>Metadata</Typography>
+              ) : (
+                splitedAttributeSelected?.map((split: string) => {
+                  return (
+                    <Typography key={split} className={classes.capitalize}>
+                      {split}
+                    </Typography>
+                  );
+                })
+              )}
             </Breadcrumbs>
             <Typography
               variant="h1"
               className={clsx(classes.capitalize, classes.marginBottom)}
             >
-              {splitedAttributeSelected?.map((split: string, index) => {
-                if (index === splitedAttributeSelected.length - 1) return split;
-              })}
+              {selectStructureDefMeta
+                ? "Metadatas"
+                : splitedAttributeSelected?.map((split: string, index) => {
+                    if (index === splitedAttributeSelected.length - 1)
+                      return split;
+                  })}
             </Typography>
             <Paper className={clsx(classes.paperRight, classes.paper)}>
               {renderAttributeEditor(structureDefinition)}

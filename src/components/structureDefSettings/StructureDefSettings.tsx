@@ -3,8 +3,8 @@ import { useDispatch } from "react-redux";
 import {
   updateStructureDefProfile,
   updateStructureDefExtension
-} from "src/state/actions/resourceActions";
-import { editAttribute } from "src/components/structureDefSettings/utils";
+} from "state/actions/resourceActions";
+import { editAttribute } from "components/structureDefSettings/utils";
 import {
   IStructureDefinition,
   StructureDefinitionStatusKind
