@@ -1,8 +1,6 @@
-// REACT
 import React from "react";
 import { useDispatch } from "react-redux";
 
-// EXTERNAL DEPENDENCIES & MATERIAL UI
 import clsx from "clsx";
 import {
   IStructureDefinition,
@@ -17,13 +15,11 @@ import {
   Settings
 } from "@material-ui/icons";
 
-// COMPONENTS & STATES
 import {
   selectAttributeId,
   selectStructureDefMeta
 } from "state/actions/resourceActions";
 
-// STYLES
 import useStyles from "./style";
 
 type ResourceProfileMappingProps = {

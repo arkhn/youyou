@@ -1,14 +1,10 @@
-// REACT
 import React from "react";
 import { Link } from "react-router-dom";
 
-// EXTERNAL DEPENDENCIES & MATERIAL UI
 import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
 
-// COMPONENTS & STATES
 import { ReactComponent as Logo } from "assets/img/arkhn-logo.svg";
 
-// STYLE
 import useStyles from "components/navbar/style";
 
 type NavbarProps = {

@@ -1,10 +1,7 @@
-// REACT
 import React from "react";
 
-// EXTERNAL DEPENDENCIES & MATERIAL UI
 import { useSelector } from "react-redux";
 
-// COMPONENTS & STATES
 import AttributeEditor from "components/extensionEditor/attributeEditor/AttributeEditor";
 import Navbar from "components/navbar/Navbar";
 import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";

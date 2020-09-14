@@ -1,8 +1,6 @@
-// REACT
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-// EXTERNAL DEPENDENCIES & MATERIAL UI
 import {
   IStructureDefinition,
   IElementDefinition
@@ -10,7 +8,6 @@ import {
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import TextField from "@material-ui/core/TextField";
 
-// COMPONENTS & STATES
 import { RootState } from "state/store";
 import { updateStructureDefExtension } from "state/actions/resourceActions";
 

@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+
+import {
+  IStructureDefinition,
+  StructureDefinitionStatusKind
+} from "@ahryman40k/ts-fhir-types/lib/R4";
+
 import {
   updateStructureDefProfile,
   updateStructureDefExtension
 } from "state/actions/resourceActions";
 import { editAttribute } from "components/structureDefSettings/utils";
-import {
-  IStructureDefinition,
-  StructureDefinitionStatusKind
-} from "@ahryman40k/ts-fhir-types/lib/R4";
 
 type StructureDefSettingsProps = {
   structureDefinition: IStructureDefinition;

@@ -1,13 +1,10 @@
-// REACT
 import React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
 
-// EXTERNAL DEPENDENCIES & MATERIAL UI
 import { StylesProvider, CssBaseline } from "@material-ui/core";
 
-// COMPONENTS & STATES
 import Homepage from "components/homepage/Homepage";
 import Editor from "components/editor/Editor";
 import ExtensionEditor from "components/extensionEditor/ExtensionEditor";

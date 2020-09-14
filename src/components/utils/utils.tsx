@@ -1,11 +1,8 @@
-// REACT
 import React from "react";
 
-// EXTERNAL COMPONENTS & MATERIAL UI
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { Button } from "@material-ui/core";
 
-// STYLES
 import useStyles from "components/utils/styles";
 
 type ButtonDownloadYouyouProps = {

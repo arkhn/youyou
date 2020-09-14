@@ -1,15 +1,12 @@
-// REACT
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 
-// EXTERNAL DEPENDENCIES & MATERIAL UI
 import {
   IElementDefinition,
   IStructureDefinition
 } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { Typography, Button } from "@material-ui/core";
 
-// COMPONENTS
 import { updateStructureDefProfile } from "state/actions/resourceActions";
 
 type AttributeEditorProps = {

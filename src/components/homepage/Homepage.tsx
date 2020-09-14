@@ -1,9 +1,7 @@
-// REACT
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
-// EXTERNAL DEPENDENCIES & MATERIAL UI
 import {
   Card,
   CardActionArea,
@@ -12,7 +10,6 @@ import {
   CircularProgress
 } from "@material-ui/core";
 
-// COMPONENTS & STATES
 import Navbar from "components/navbar/Navbar";
 import { ReactComponent as FhirLogo } from "assets/img/fhir-logo.svg";
 import {
@@ -23,7 +20,6 @@ import { DataFetched } from "state/reducers/resource";
 import { RootState } from "state/store";
 import { requestResource } from "state/thunkMiddleware";
 
-// STYLE
 import useStyles from "./style";
 
 const Homepage: React.FC<{}> = () => {
