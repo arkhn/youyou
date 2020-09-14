@@ -85,7 +85,7 @@ const Editor: React.FC<{}> = () => {
                 type="resource"
               />
             )}
-            {attribute && (
+            {selectedAttributeId && (
               <AttributeEditor
                 attribute={attribute}
                 structureDefinition={structureDefinition}
