@@ -1,10 +1,11 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "../../state/store";
 
-import StructuredefSettings from "../structuredefSettings/StructuredefSettings";
-import AttributeEditor from "./attributeEditor/AttributeEditor";
-import Navbar from "../navbar/Navbar";
+import { useSelector } from "react-redux";
+
+import AttributeEditor from "components/extensionEditor/attributeEditor/AttributeEditor";
+import Navbar from "components/navbar/Navbar";
+import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";
+import { RootState } from "state/store";
 
 const ExtensionEditor: React.FC<{}> = () => {
   const { loading, extensionStructureDefinition } = useSelector(
@@ -32,7 +33,7 @@ const ExtensionEditor: React.FC<{}> = () => {
       </a>
       {extensionStructureDefinition && (
         <React.Fragment>
-          <StructuredefSettings
+          <StructureDefSettings
             structureDefinition={extensionStructureDefinition}
             type="extension"
           />

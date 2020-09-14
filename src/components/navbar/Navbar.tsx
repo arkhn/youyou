@@ -1,8 +1,11 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import useStyles from "./style";
-import { ReactComponent as Logo } from "../../assets/img/arkhn-logo.svg";
+
+import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
+
+import { ReactComponent as Logo } from "assets/img/arkhn-logo.svg";
+
+import useStyles from "components/navbar/style";
 
 type NavbarProps = {
   buttonType?: "profile" | "extension";
@@ -12,7 +15,7 @@ const Navbar: React.FC<NavbarProps> = ({ buttonType }) => {
   const classes = useStyles();
 
   return (
-    <AppBar position="static" className={classes.navBar}>
+    <AppBar position="fixed" className={classes.navBar}>
       <Toolbar className={classes.toolBar}>
         <Link to={"/"} className={classes.homeLink}>
           <Logo className={classes.logo} />
@@ -28,7 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({ buttonType }) => {
           </Link>
         ) : (
           buttonType && (
-            <Link to={"/editextension"}>
+            <Link to={"/extension/edit"}>
               <Button variant="contained" className={classes.buttonExtension}>
                 Extension generator
               </Button>

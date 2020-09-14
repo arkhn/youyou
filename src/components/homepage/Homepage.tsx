@@ -1,10 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../../state/store";
-import { selectResource } from "../../state/actions/resourceActions";
 import { Link } from "react-router-dom";
-import { DataFetched } from "../../state/reducers/resource";
-import { requestResource } from "../../state/thunkMiddleware";
+
 import {
   Card,
   CardActionArea,
@@ -12,9 +9,18 @@ import {
   Grid,
   CircularProgress
 } from "@material-ui/core";
+
+import Navbar from "components/navbar/Navbar";
+import { ReactComponent as FhirLogo } from "assets/img/fhir-logo.svg";
+import {
+  selectResource,
+  selectStructureDefMeta
+} from "state/actions/resourceActions";
+import { DataFetched } from "state/reducers/resource";
+import { RootState } from "state/store";
+import { requestResource } from "state/thunkMiddleware";
+
 import useStyles from "./style";
-import { ReactComponent as FhirLogo } from "../../assets/img/fhir-logo.svg";
-import Navbar from "../navbar/Navbar";
 
 const Homepage: React.FC<{}> = () => {
   const { loading, resources } = useSelector(
@@ -27,6 +33,7 @@ const Homepage: React.FC<{}> = () => {
     if (resource.id) {
       dispatch(selectResource(resource.id));
       dispatch(requestResource(resource.id));
+      dispatch(selectStructureDefMeta());
     }
   };
 
@@ -45,7 +52,7 @@ const Homepage: React.FC<{}> = () => {
         >
           <Link
             className={classes.itemLink}
-            to="/editprofile"
+            to="/profile/edit"
             onClick={(): void => dispatchResourceSelected(resource)}
           >
             <Card className={classes.itemCard}>

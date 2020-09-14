@@ -1,71 +1,100 @@
 import React from "react";
-import AttributeEditor from "./attributeEditor/AttributeEditor";
-import ResourceProfileMapping from "./resourceProfileMapping/ResourceProfileMapping";
-import StructuredefSettings from "../structuredefSettings/StructuredefSettings";
 import { useSelector } from "react-redux";
-import { RootState } from "../../state/store";
-import {
-  IElementDefinition,
-  IStructureDefinition
-} from "@ahryman40k/ts-fhir-types/lib/R4";
+
+import clsx from "clsx";
+import { IElementDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
+import { Paper, Container, Typography, Breadcrumbs } from "@material-ui/core";
+
+import AttributeEditor from "components/editor/attributeEditor/AttributeEditor";
+import { ButtonDownloadYouyou } from "components/smallComponents";
+import Navbar from "components/navbar/Navbar";
+import ResourceProfileMapping from "components/editor/resourceProfileMapping/ResourceProfileMapping";
+import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";
+import { RootState } from "state/store";
+
+import useStyles from "components/editor/style";
 
 const Editor: React.FC<{}> = () => {
-  const { loading, structureDefinition, selectedAttributeId } = useSelector(
-    (state: RootState) => state.resource
+  const {
+    loading,
+    structureDefinition,
+    selectedAttributeId,
+    selectStructureDefMeta
+  } = useSelector((state: RootState) => state.resource);
+  const classes = useStyles();
+  const splitedAttributeSelected = selectedAttributeId?.split(".");
+
+  const attribute = structureDefinition?.snapshot?.element.find(
+    (attribute: IElementDefinition) => attribute.id === selectedAttributeId
   );
-  const structuredefSettings: string = "structuredefSettings";
-  let attribute: IElementDefinition | undefined = undefined;
-
-  if (selectedAttributeId && selectedAttributeId !== structuredefSettings) {
-    attribute = structureDefinition?.snapshot?.element.find(
-      (attribute: IElementDefinition) => attribute.id === selectedAttributeId
-    );
-  }
-
-  const renderAttributeEditor = (structureDef: IStructureDefinition) => {
-    if (selectedAttributeId === structuredefSettings) {
-      return (
-        structureDefinition && (
-          <StructuredefSettings
-            structureDefinition={structureDefinition}
-            type="resource"
-          />
-        )
-      );
-    } else {
-      return (
-        <AttributeEditor
-          attribute={attribute}
-          structureDefinition={structureDef}
-        />
-      );
-    }
-  };
 
   if (loading) {
     return <div>Loading ...</div>;
   }
 
-  if (structureDefinition) {
-    return (
-      <div>
-        <h1>Profile Editor for {structureDefinition.type}</h1>
-        <a
-          href={
-            "data:json/plain;charset=utf-8," +
-            encodeURIComponent(JSON.stringify(structureDefinition, null, 2))
-          }
-          download={structureDefinition.name + ".json"}
-        >
-          <button>Download</button>
-        </a>
-        {renderAttributeEditor(structureDefinition)}
-        <ResourceProfileMapping profile={structureDefinition} />
-      </div>
-    );
+  if (!structureDefinition) {
+    return <>Error</>;
   }
 
-  return <div>Error</div>;
+  const renderBreadcrumbs = () => {
+    if (selectStructureDefMeta)
+      return <Typography className={classes.capitalize}>Metadata</Typography>;
+    return splitedAttributeSelected?.map((split: string) => (
+      <Typography key={split} className={classes.capitalize}>
+        {split}
+      </Typography>
+    ));
+  };
+
+  const renderTitle = () => {
+    if (selectStructureDefMeta) return "Metadatas";
+    return splitedAttributeSelected?.map((split: string, index) => {
+      if (index === splitedAttributeSelected.length - 1) return split;
+    });
+  };
+
+  return (
+    <div>
+      <Navbar />
+      <div className={classes.mapping}>
+        <Paper className={clsx(classes.paperLeft, classes.paper)}>
+          <Typography variant="h1">{structureDefinition.id}</Typography>
+          <Container className={classes.treeView}>
+            <ResourceProfileMapping profile={structureDefinition} />
+          </Container>
+          <ButtonDownloadYouyou
+            text="Download profile"
+            toDownload={structureDefinition}
+          />
+        </Paper>
+        <Container className={classes.containerRight}>
+          <Breadcrumbs className={classes.marginBottom}>
+            {renderBreadcrumbs()}
+          </Breadcrumbs>
+          <Typography
+            variant="h1"
+            className={clsx(classes.capitalize, classes.marginBottom)}
+          >
+            {renderTitle()}
+          </Typography>
+          <Paper className={clsx(classes.paperRight, classes.paper)}>
+            {selectStructureDefMeta && (
+              <StructureDefSettings
+                structureDefinition={structureDefinition}
+                type="resource"
+              />
+            )}
+            {selectedAttributeId && (
+              <AttributeEditor
+                attribute={attribute}
+                structureDefinition={structureDefinition}
+              />
+            )}
+          </Paper>
+        </Container>
+      </div>
+    </div>
+  );
 };
 
 export default Editor;

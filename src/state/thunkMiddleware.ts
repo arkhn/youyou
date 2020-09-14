@@ -1,21 +1,22 @@
-import api from "../services/api";
 import { ThunkDispatch } from "redux-thunk";
-import { RootState } from "./store";
 import { Action } from "redux";
+import { FetchedData } from "types";
+import { AxiosResponse } from "axios";
+
+import api from "services/api";
 import {
   getFetchStart,
   getIdsSuccess,
   getIdsFailure,
   updateStructureDefProfile,
   updateStructureDefFailure
-} from "./actions/resourceActions";
+} from "state/actions/resourceActions";
 import {
   getCodeSystemDataTypeSuccess,
   getCodeSystemDataTypeFailure,
   getCodeSystemDataTypePending
-} from "./actions/codeSystemActions";
-import { FetchedData } from "./../types";
-import { AxiosResponse } from "axios";
+} from "state/actions/codeSystemActions";
+import { RootState } from "state/store";
 
 // FETCH ALL RESOURCE IDS
 export const requestIds = () => {

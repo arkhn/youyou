@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { updateStructureDefProfile } from "../../../state/actions/resourceActions";
-import { Typography } from "@material-ui/core";
+
 import {
   IElementDefinition,
   IStructureDefinition
 } from "@ahryman40k/ts-fhir-types/lib/R4";
+import { Typography, Button } from "@material-ui/core";
+
+import { updateStructureDefProfile } from "state/actions/resourceActions";
 
 type AttributeEditorProps = {
   attribute: IElementDefinition | undefined;
@@ -103,18 +105,19 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
         />
         <label>1...*</label>
         <br />
-        <input
-          type="button"
-          value="submit"
+        <Button
+          color="secondary"
+          variant="contained"
           onClick={() => changeProfileState()}
-        />
+        >
+          Submit
+        </Button>
       </form>
     );
   };
 
   return (
     <>
-      <Typography variant="h2">AttributeEditor</Typography>
       <Typography variant="h1">Cardinality</Typography>
       <p>{attribute?.id}</p>
       <p>Cardinality min: {attribute?.min}</p>

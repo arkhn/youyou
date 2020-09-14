@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
-import { resource } from "./reducers/resource";
-import { codeSystem } from "./reducers/codeSystem";
+import { resource } from "state/reducers/resource";
+import { codeSystem } from "state/reducers/codeSystem";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // defaults to localStorage for web
 import thunk from "redux-thunk";
