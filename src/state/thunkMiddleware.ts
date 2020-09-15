@@ -60,21 +60,6 @@ export const requestResource = (resource: string) => {
   };
 };
 
-// // FETCH DATA TYPES
-// export const requestDataTypes = () => {
-//   return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
-//     dispatch(getCodeSystemDataTypePending());
-//     const response: AxiosResponse<any> = await api.get(
-//       "/CodeSystem?id=data-types"
-//     );
-//     if (response.status === 200) {
-//       dispatch(getCodeSystemDataTypeSuccess(response.data.entry[0].resource));
-//     } else {
-//       dispatch(getCodeSystemDataTypeFailure(new Error(response.statusText)));
-//     }
-//   };
-// };
-
 // FETCH AVAILABLE DATA TYPES FOR EXTENSIONS
 export const requestExtensionDataTypes = () => {
   return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
