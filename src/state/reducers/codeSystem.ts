@@ -6,7 +6,6 @@ import {
   GetCodeSystemDataTypeFailureAction,
   GetCodeSystemDataTypePendingAction
 } from "state/actions/codeSystemActions";
-import { ICodeSystem } from "@ahryman40k/ts-fhir-types/lib/R4";
 
 export type DataFetched = {
   id: string;
