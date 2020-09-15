@@ -1,17 +1,15 @@
 import React from "react";
-
-import { useSelector } from "react-redux";
-
-import { RootState } from "state/store";
 import { Paper, Container, Typography } from "@material-ui/core";
 
+import { useSelector } from "react-redux";
+import { RootState } from "state/store";
+import clsx from "clsx";
+
+import ButtonDownloadYouyou from "../smallComponents/ButtonDownloadYouyou";
 import AttributeEditor from "components/extensionEditor/attributeEditor/AttributeEditor";
 import Navbar from "components/navbar/Navbar";
 import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";
 import StructureDefinitionTree from "../structureDefinitionTree/StructureDefinitionTree";
-
-import clsx from "clsx";
-import ButtonDownloadYouyou from "../smallComponents/ButtonDownloadYouyou";
 
 import useStyles from "components/editor/style";
 
@@ -64,10 +62,12 @@ const ExtensionEditor: React.FC<{}> = () => {
               </Typography>
               <Paper className={clsx(classes.paperRight, classes.paper)}>
                 <div className={clsx(classes.paperRight, classes.paper)}>
+                  <Typography variant="h1">Metadata</Typography>
                   <StructureDefSettings
                     structureDefinition={extensionStructureDefinition}
                     type="extension"
                   />
+                  <Typography variant="h1">Value</Typography>
                   <AttributeEditor
                     structureDefinition={extensionStructureDefinition}
                   />

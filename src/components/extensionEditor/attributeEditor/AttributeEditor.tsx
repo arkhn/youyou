@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "state/store";
+
+import Autocomplete from "@material-ui/lab/Autocomplete";
+import TextField from "@material-ui/core/TextField";
 
 import {
   IStructureDefinition,
   IElementDefinition
 } from "@ahryman40k/ts-fhir-types/lib/R4";
-import Autocomplete from "@material-ui/lab/Autocomplete";
-import TextField from "@material-ui/core/TextField";
 
-import { RootState } from "state/store";
 import { updateStructureDefExtension } from "state/actions/resourceActions";
 
 type AttributeEditorProps = {
