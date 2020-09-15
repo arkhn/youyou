@@ -77,7 +77,7 @@ export const requestExtensionDataTypes = () => {
             ?.map((e: IElementDefinition_Type) => e.code!)
             .filter(Boolean) || [];
       }
-      codes = codes?.filter(Boolean);
+      codes = codes?.filter(Boolean) || [];
     });
     if (response.status === 200) {
       dispatch(getCodeSystemDataTypeSuccess(codes));

@@ -12,13 +12,13 @@ export type DataFetched = {
 };
 
 export type CodeSystemState = {
-  datatypes: string[] | null;
+  datatypes: string[];
   loading: boolean;
   error: Error | null;
 };
 
 const initialState: CodeSystemState = {
-  datatypes: null,
+  datatypes: [],
   loading: false,
   error: null
 };

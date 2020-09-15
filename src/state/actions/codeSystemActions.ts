@@ -7,7 +7,7 @@ export const GET_CODE_SYSTEM_DATA_TYPE_PENDING =
 
 export type GetCodeSystemDataTypeSuccessAction = {
   type: typeof GET_CODE_SYSTEM_DATA_TYPE_SUCCESS;
-  payload: string[] | null;
+  payload: string[];
 };
 
 export type GetCodeSystemDataTypeFailureAction = {
