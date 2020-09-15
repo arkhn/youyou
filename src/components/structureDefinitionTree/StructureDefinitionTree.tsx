@@ -23,8 +23,8 @@ import {
 // STYLES
 import useStyles from "./style";
 
-type ResourceProfileMappingProps = {
-  profile: IStructureDefinition | null;
+type StructureDefinitionTreeProps = {
+  structureDefintion: IStructureDefinition | null;
 };
 
 interface RenderNode {
@@ -33,12 +33,12 @@ interface RenderNode {
   children: RenderNode[];
 }
 
-const ResourceProfileMapping: React.FC<ResourceProfileMappingProps> = ({
-  profile
+const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
+  structureDefintion
 }) => {
   const dispatch = useDispatch();
   const attributes: Array<IElementDefinition> | undefined =
-    profile?.snapshot?.element;
+    structureDefintion?.snapshot?.element;
   const classes = useStyles();
 
   const paths = attributes?.map(
@@ -103,7 +103,7 @@ const ResourceProfileMapping: React.FC<ResourceProfileMappingProps> = ({
     </TreeItem>
   );
 
-  if (!profile) {
+  if (!structureDefintion) {
     return <>Error</>;
   }
 
@@ -130,4 +130,4 @@ const ResourceProfileMapping: React.FC<ResourceProfileMappingProps> = ({
   );
 };
 
-export default ResourceProfileMapping;
+export default StructureDefinitionTree;
