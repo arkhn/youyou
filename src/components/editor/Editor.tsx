@@ -58,7 +58,7 @@ const Editor: React.FC<{}> = () => {
       <Navbar />
       <div className={classes.mapping}>
         <Paper className={clsx(classes.paperLeft, classes.paper)}>
-          <Typography variant="h1">{structureDefinition.id}</Typography>
+          <Typography variant="h1">{structureDefinition.name}</Typography>
           <Container className={classes.treeView}>
             <ResourceProfileMapping profile={structureDefinition} />
           </Container>

@@ -5,13 +5,24 @@ import {
   IStructureDefinition,
   StructureDefinitionStatusKind
 } from "@ahryman40k/ts-fhir-types/lib/R4";
-import { TextField } from "@material-ui/core";
+import {
+  Checkbox,
+  FormControlLabel,
+  IconButton,
+  Snackbar
+} from "@material-ui/core";
 
+import {
+  InputWithHelpYouyou,
+  InputDateYouyou
+} from "components/smallComponents";
 import {
   updateStructureDefProfile,
   updateStructureDefExtension
 } from "state/actions/resourceActions";
 import { editAttribute } from "components/structureDefSettings/utils";
+import { Close } from "@material-ui/icons";
+import { Alert } from "@material-ui/lab";
 
 type StructureDefSettingsProps = {
   structureDefinition: IStructureDefinition;
@@ -43,11 +54,20 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   const [purpose, setPurpose] = useState(structureDefinition.purpose);
   const [copyright, setCopyright] = useState(structureDefinition.copyright);
   const [abstract, setAbstract] = useState(structureDefinition.abstract);
+  const [snackbarIsOpen, setSnackbarIsOpen] = useState(false);
+
+  const checkErrorForm = () => {
+    if (!url || !name) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+  const errorForm = checkErrorForm();
 
   // CHANGE STATE
   const handleEditSettings = (e: React.MouseEvent<HTMLInputElement>) => {
     if (structureDefinition) {
-      e.preventDefault();
       const structureDefinitonToEdit = { ...structureDefinition };
       // content required
       structureDefinitonToEdit.url = url;
@@ -72,95 +92,52 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
     }
   };
 
-  const renderContact = (
-    <>
-      <label htmlFor="contactName">Contact Name</label>
-      <input type="text" name="contactName" />
-      <br />
-      <select name="contactSystem">
-        <option value="phone">Phone</option>
-        <option value="fax">fax</option>
-        <option value="email">email</option>
-        <option value="pager">pager</option>
-        <option value="url">url</option>
-        <option value="sms">sms</option>
-        <option value="other">other</option>
-      </select>
-      <br />
-      <label htmlFor="contactValue">Value</label>
-      <input type="text" name="contactValue" />
-      <br />
-      <select name="contactUse">
-        <option value="home">home</option>
-        <option value="work">work</option>
-        <option value="temp">temporary</option>
-        <option value="old">old</option>
-        <option value="mobile">mobile</option>
-      </select>
-    </>
+  const renderSnackbar = (
+    <Snackbar open={snackbarIsOpen}>
+      <Alert severity="error" variant="filled">
+        Please fill all the required fields.
+        <IconButton
+          size="small"
+          aria-label="close"
+          color="inherit"
+          onClick={() => setSnackbarIsOpen(false)}
+        >
+          <Close fontSize="small" />
+        </IconButton>
+      </Alert>
+    </Snackbar>
   );
 
   return (
     <form>
-      <TextField
-        label="Name of profile"
-        defaultValue={name || ""}
-        variant="outlined"
-        onBlur={(e) => setName(e.target.value)}
-        helperText="A Computer-ready name (e.g. a token) that identifies the structure."
-      />
-      <br />
-      <br />
-      <TextField
-        label="Description"
-        defaultValue={description || ""}
-        variant="outlined"
-        onBlur={(e) => setDescription(e.target.value)}
-        helperText="A free text natural language description of the structure and its use."
-      />
-
-      <br />
-      <label htmlFor="url">url</label>
-      <input
-        type="url"
-        name="url"
-        value={((url as unknown) as string) || ""}
-        onChange={(e) => setUrl(e.target.value)}
-      />
-      <br />
-      <label htmlFor="id">id</label>
-      <input
-        type="text"
-        name="id"
+      <InputWithHelpYouyou
+        label="Id"
         value={id || ""}
-        onChange={(e) => setId(e.target.value)}
+        tool="The version can be globally unique, or scoped by the Logical Id of the resource."
+        setter={setId}
       />
-      <br />
-      <label htmlFor="publisher">publisher</label>
-      <input
-        type="text"
-        name="publisher"
-        value={publisher || ""}
-        onChange={(e) => setPublisher(e.target.value)}
+      <InputWithHelpYouyou
+        label="Url"
+        value={url || ""}
+        tool="The identifier that is used to identify this structure when it is referenced in a specification, model, design or an instance. This URL is where the structure can be accessed."
+        setter={setUrl}
+        error={url ? false : true}
       />
-      <br />
-      <label htmlFor="copyright">copyright</label>
-      <input
-        type="text"
-        name="copyright"
-        value={copyright || ""}
-        onChange={(e) => setCopyright(e.target.value)}
+      <InputWithHelpYouyou
+        label="Name of profile"
+        value={name || ""}
+        tool="A Computer-ready name (e.g. a token) that identifies the structure - suitable for code generation. Note that this name (and other names relevant for code generation, including element & slice names, codes etc) may collide with reserved words in the relevant target language, and code generators will need to handle this"
+        setter={setName}
+        error={name ? false : true}
       />
-      <br />
-      <label htmlFor="title">title</label>
-      <input
-        type="text"
-        name="title"
-        onChange={(e) => setTitle(e.target.value)}
+      <InputWithHelpYouyou
+        label="Title"
+        value={title || ""}
+        tool="A free text natural language name identifying the structure"
+        setter={setTitle}
       />
-      <br />
       <label htmlFor="status">Status</label>
-      <select
+      <select // REQUIRED
         name="status"
         onChange={(e) =>
           setStatus(e.target.value as StructureDefinitionStatusKind)
@@ -172,49 +149,66 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
         <option value="retired">retired</option>
         <option value="unknown">unknown</option>
       </select>
-      <br />
-      <input
-        type="datetime-local"
-        onChange={(e) => {
-          const date = new Date(e.target.value);
-          setDate(
-            new Date(
-              date.getTime() - date.getTimezoneOffset() * 60000
-            ).toISOString()
-          );
-        }}
+      <FormControlLabel
+        value="experimental"
+        control={
+          <Checkbox onChange={(e) => setExperimental(e.target.checked)} />
+        }
+        label="experimental"
+      />
+      <InputDateYouyou
+        label="Date"
+        value={new Date(Date.now()).toISOString().slice(0, -5)}
+        tool="The date this version of the structure was published"
+        setter={setDate}
+      />
+      <InputWithHelpYouyou
+        label="Publisher"
+        value={publisher || ""}
+        tool='Details of the individual or organization who accepts responsibility for publishing the structure. This helps establish the "authority/credibility" of the structure.'
+        setter={setPublisher}
+      />
+      <InputWithHelpYouyou
+        label={"Description"}
+        value={description || ""}
+        tool={
+          "A free text natural language description of the structure and its use."
+        }
+        setter={setDescription}
+      />
+      <InputWithHelpYouyou
+        label="Purpose"
+        value={purpose || ""}
+        tool="Why this structure was created - what the intent of it is"
+        setter={setPurpose}
+      />
+      <InputWithHelpYouyou
+        label="Copyright"
+        value={copyright || ""}
+        tool="Use and/or publishing restrictions"
+        setter={setCopyright}
       />
       <br />
-      <label htmlFor="purpose">purpose</label>
-      <input
-        type="text"
-        name="purpose"
-        onChange={(e) => setPurpose(e.target.value)}
+      <FormControlLabel
+        value="abstract"
+        control={<Checkbox onChange={(e) => setAbstract(e.target.checked)} />}
+        label="abstract"
       />
-      <br />
-      <input
-        type="checkbox"
-        name="abstract"
-        onChange={(e) => setAbstract(e.target.checked)}
-      />
-      <label htmlFor="abstract">abstract</label>
-      <br />
-      <input
-        type="checkbox"
-        name="experimental"
-        onChange={(e) => {
-          setExperimental(e.target.checked);
-        }}
-      />
-      <label htmlFor="experimental">experimental</label>
-      <br />
-      {renderContact}
       <br />
       <input
         type="submit"
         value="submit"
-        onClick={(e) => handleEditSettings(e)}
+        onClick={(e) => {
+          e.preventDefault();
+          if (!errorForm) {
+            handleEditSettings(e);
+            setSnackbarIsOpen(false);
+          } else {
+            setSnackbarIsOpen(true);
+          }
+        }}
       />
+      {renderSnackbar}
     </form>
   );
 };
