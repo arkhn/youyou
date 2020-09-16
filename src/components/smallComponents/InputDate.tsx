@@ -1,8 +1,8 @@
 import React, { SetStateAction } from "react";
 
-import { IconButton, TextField, Theme, Tooltip } from "@material-ui/core";
-import { HelpOutline } from "@material-ui/icons";
+import { TextField, Theme } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
+import { TooltipYouyou } from ".";
 
 type inputDateProps = {
   label: string;
@@ -49,13 +49,7 @@ const InputDate: React.FC<inputDateProps> = ({
       }}
       variant="outlined"
       InputProps={{
-        endAdornment: (
-          <IconButton>
-            <Tooltip title={tool}>
-              <HelpOutline />
-            </Tooltip>
-          </IconButton>
-        )
+        endAdornment: <TooltipYouyou tool={tool} />
       }}
     />
   );

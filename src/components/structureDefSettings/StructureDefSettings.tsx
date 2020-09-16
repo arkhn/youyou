@@ -5,24 +5,18 @@ import {
   IStructureDefinition,
   StructureDefinitionStatusKind
 } from "@ahryman40k/ts-fhir-types/lib/R4";
-import {
-  Checkbox,
-  FormControlLabel,
-  IconButton,
-  Snackbar
-} from "@material-ui/core";
+import { Button, Checkbox, FormControlLabel } from "@material-ui/core";
 
 import {
   InputWithHelpYouyou,
-  InputDateYouyou
+  InputDateYouyou,
+  SnackBarYouyou
 } from "components/smallComponents";
 import {
   updateStructureDefProfile,
   updateStructureDefExtension
 } from "state/actions/resourceActions";
 import { editAttribute } from "components/structureDefSettings/utils";
-import { Close } from "@material-ui/icons";
-import { Alert } from "@material-ui/lab";
 
 type StructureDefSettingsProps = {
   structureDefinition: IStructureDefinition;
@@ -54,7 +48,8 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   const [purpose, setPurpose] = useState(structureDefinition.purpose);
   const [copyright, setCopyright] = useState(structureDefinition.copyright);
   const [abstract, setAbstract] = useState(structureDefinition.abstract);
-  const [snackbarIsOpen, setSnackbarIsOpen] = useState(false);
+  const [snackbarErrorMessage, setSnackbarErrorMessage] = useState("");
+  const [snackbarSuccessMessage, setSnackbarSuccessMessage] = useState("");
 
   const checkErrorForm = () => {
     if (!url || !name) {
@@ -63,10 +58,24 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
       return false;
     }
   };
-  const errorForm = checkErrorForm();
+
+  const checkForm = () => {
+    if (!checkErrorForm()) {
+      handleEditSettings();
+      setSnackbarSuccessMessage("success !");
+      setTimeout(() => {
+        setSnackbarSuccessMessage("");
+      }, 3000);
+    } else {
+      setSnackbarErrorMessage("error !");
+      setTimeout(() => {
+        setSnackbarErrorMessage("");
+      }, 3000);
+    }
+  };
 
   // CHANGE STATE
-  const handleEditSettings = (e: React.MouseEvent<HTMLInputElement>) => {
+  const handleEditSettings = () => {
     if (structureDefinition) {
       const structureDefinitonToEdit = { ...structureDefinition };
       // content required
@@ -91,22 +100,6 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
       }
     }
   };
-
-  const renderSnackbar = (
-    <Snackbar open={snackbarIsOpen}>
-      <Alert severity="error" variant="filled">
-        Please fill all the required fields.
-        <IconButton
-          size="small"
-          aria-label="close"
-          color="inherit"
-          onClick={() => setSnackbarIsOpen(false)}
-        >
-          <Close fontSize="small" />
-        </IconButton>
-      </Alert>
-    </Snackbar>
-  );
 
   return (
     <form>
@@ -195,20 +188,18 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
         label="abstract"
       />
       <br />
-      <input
-        type="submit"
-        value="submit"
+      <Button
+        variant="contained"
+        color="secondary"
         onClick={(e) => {
           e.preventDefault();
-          if (!errorForm) {
-            handleEditSettings(e);
-            setSnackbarIsOpen(false);
-          } else {
-            setSnackbarIsOpen(true);
-          }
+          checkForm();
         }}
-      />
-      {renderSnackbar}
+      >
+        Submit
+      </Button>
+      <SnackBarYouyou message={snackbarErrorMessage} severity="error" />
+      <SnackBarYouyou message={snackbarSuccessMessage} severity="success" />
     </form>
   );
 };

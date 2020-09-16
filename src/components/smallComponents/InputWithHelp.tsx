@@ -1,8 +1,8 @@
 import React, { SetStateAction } from "react";
 
-import { IconButton, TextField, Theme, Tooltip } from "@material-ui/core";
-import { HelpOutline } from "@material-ui/icons";
+import { TextField, Theme } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
+import { TooltipYouyou } from ".";
 
 type inputWithHelpProps = {
   label: string;
@@ -46,13 +46,7 @@ const InputWithHelp: React.FC<inputWithHelpProps> = ({
         setter(e.target.value);
       }}
       InputProps={{
-        endAdornment: (
-          <IconButton>
-            <Tooltip title={tool}>
-              <HelpOutline />
-            </Tooltip>
-          </IconButton>
-        )
+        endAdornment: <TooltipYouyou tool={tool} />
       }}
     />
   );
