@@ -5,6 +5,7 @@ import { withStyles } from "@material-ui/styles";
 import { TooltipYouyou } from ".";
 
 type inputWithHelpProps = {
+  classname?: string;
   label: string;
   value: string;
   tool: string;
@@ -15,6 +16,7 @@ type inputWithHelpProps = {
 const CssTextField = withStyles((theme: Theme) => ({
   root: {
     marginBottom: 16,
+    width: "50%",
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
         borderColor: theme.palette.secondary.main
@@ -34,10 +36,12 @@ const InputWithHelp: React.FC<inputWithHelpProps> = ({
   value,
   tool,
   setter,
-  error = false
+  error = false,
+  classname
 }) => {
   return (
     <CssTextField
+      className={classname}
       label={label}
       error={error}
       defaultValue={value}

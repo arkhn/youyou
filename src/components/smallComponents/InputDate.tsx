@@ -13,6 +13,7 @@ type inputDateProps = {
 
 const CssTextField = withStyles((theme: Theme) => ({
   root: {
+    width: "50%",
     marginBottom: 16,
     "& .MuiOutlinedInput-root": {
       "& fieldset": {

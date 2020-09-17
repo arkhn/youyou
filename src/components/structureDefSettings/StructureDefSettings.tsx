@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 
-import {
-  IStructureDefinition,
-  StructureDefinitionStatusKind
-} from "@ahryman40k/ts-fhir-types/lib/R4";
+import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { Button, Checkbox, FormControlLabel } from "@material-ui/core";
 
 import {
   InputWithHelpYouyou,
   InputDateYouyou,
-  SnackBarYouyou
+  SnackBarYouyou,
+  SelectYouyou
 } from "components/smallComponents";
 import {
   updateStructureDefProfile,
   updateStructureDefExtension
 } from "state/actions/resourceActions";
 import { editAttribute } from "components/structureDefSettings/utils";
+
+import useStyles from "components/structureDefSettings/style";
 
 type StructureDefSettingsProps = {
   structureDefinition: IStructureDefinition;
@@ -28,7 +28,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   type = "resource"
 }) => {
   const dispatch = useDispatch();
-
+  const classes = useStyles();
   // LOCAL STATES
   const [id, setId] = useState(structureDefinition.id);
   const [url, setUrl] = useState(structureDefinition.url);
@@ -102,7 +102,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   };
 
   return (
-    <form>
+    <form className={classes.form}>
       <InputWithHelpYouyou
         label="Id"
         value={id || ""}
@@ -129,19 +129,12 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
         tool="A free text natural language name identifying the structure"
         setter={setTitle}
       />
-      <label htmlFor="status">Status</label>
-      <select // REQUIRED
-        name="status"
-        onChange={(e) =>
-          setStatus(e.target.value as StructureDefinitionStatusKind)
-        }
-        defaultValue={status || ""}
-      >
-        <option value="active">active</option>
-        <option value="draft">draft</option>
-        <option value="retired">retired</option>
-        <option value="unknown">unknown</option>
-      </select>
+      <SelectYouyou
+        label="Status"
+        value={status}
+        setter={setStatus}
+        choices={["active", "draft", "retired", "unknown"]}
+      />
       <FormControlLabel
         value="experimental"
         control={
@@ -162,6 +155,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
         setter={setPublisher}
       />
       <InputWithHelpYouyou
+        classname={classes.bigInput}
         label={"Description"}
         value={description || ""}
         tool={
@@ -189,6 +183,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
       />
       <br />
       <Button
+        className={classes.submitButton}
         variant="contained"
         color="secondary"
         onClick={(e) => {
