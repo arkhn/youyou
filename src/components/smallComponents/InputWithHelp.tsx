@@ -2,7 +2,8 @@ import React, { SetStateAction } from "react";
 
 import { TextField, Theme } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
-import { TooltipYouyou } from ".";
+
+import { TooltipYouyou } from "components/smallComponents";
 
 type inputWithHelpProps = {
   classname?: string;

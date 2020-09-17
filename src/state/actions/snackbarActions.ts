@@ -1,3 +1,5 @@
+import { Color } from "@material-ui/lab";
+
 export const SET_SNACKBAR_OPEN = "SET_SNACKBAR_OPEN";
 export const SET_SNACKBAR_CLOSE = "SET_SNACKBAR_CLOSE";
 
@@ -5,7 +7,7 @@ export type SetSnackbarOpenAction = {
   type: typeof SET_SNACKBAR_OPEN;
   payload: {
     message: string;
-    severity: string;
+    severity: Color;
   };
 };
 export type SetSnackbarCloseAction = {
@@ -14,7 +16,7 @@ export type SetSnackbarCloseAction = {
 
 export const setSnackbarOpen = (
   message: string,
-  severity: string
+  severity: Color
 ): SetSnackbarOpenAction => {
   return {
     type: SET_SNACKBAR_OPEN,

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+
 import { useDispatch } from "react-redux";
+import { setSnackbarOpen } from "state/actions/snackbarActions";
 
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 import {
@@ -22,7 +24,6 @@ import {
 import { editAttribute } from "components/structureDefSettings/utils";
 
 import useStyles from "components/structureDefSettings/style";
-import { setSnackbarOpen } from "state/actions/snackbarActions";
 
 type StructureDefSettingsProps = {
   structureDefinition: IStructureDefinition;

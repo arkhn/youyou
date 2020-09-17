@@ -1,3 +1,4 @@
+import { Color } from "@material-ui/lab";
 import {
   SetSnackbarOpenAction,
   SET_SNACKBAR_OPEN,
@@ -7,14 +8,12 @@ import {
 
 export type SnackbarState = {
   open: boolean;
-  message: string | undefined;
-  severity: string | undefined;
+  message?: string;
+  severity?: Color;
 };
 
 const initialSnackbarState = {
-  open: false,
-  message: undefined,
-  severity: undefined
+  open: false
 };
 
 export type AllSnackbarActions = SetSnackbarOpenAction | SetSnackbarCloseAction;

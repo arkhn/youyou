@@ -1,10 +1,11 @@
 import React from "react";
 
+import { useDispatch } from "react-redux";
+import { setSnackbarOpen } from "state/actions/snackbarActions";
+
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { Button } from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core/styles";
-import { useDispatch } from "react-redux";
-import { setSnackbarOpen } from "state/actions/snackbarActions";
 
 type ButtonDownloadYouyouProps = {
   text: string;

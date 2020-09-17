@@ -9,7 +9,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   form: {
     overflowY: "auto",
     paddingTop: 8,
-    marginBottom: 8
+    marginBottom: 8,
+    height: "1fr"
   },
   submitButton: {
     width: 100
@@ -18,6 +19,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: "100%"
   },
   endForm: {
+    height: "100%",
     display: "flex",
     flexDirection: "row",
     alignItems: "flex-end",
