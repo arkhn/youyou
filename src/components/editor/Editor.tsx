@@ -8,7 +8,7 @@ import { Paper, Container, Typography, Breadcrumbs } from "@material-ui/core";
 import AttributeEditor from "components/editor/attributeEditor/AttributeEditor";
 import { ButtonDownloadYouyou } from "components/smallComponents";
 import Navbar from "components/navbar/Navbar";
-import ResourceProfileMapping from "components/editor/resourceProfileMapping/ResourceProfileMapping";
+import StructureDefinitionTree from "components/structureDefinitionTree/StructureDefinitionTree";
 import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";
 import { RootState } from "state/store";
 
@@ -60,7 +60,7 @@ const Editor: React.FC<{}> = () => {
         <Paper className={clsx(classes.paperLeft, classes.paper)}>
           <Typography variant="h1">{structureDefinition.id}</Typography>
           <Container className={classes.treeView}>
-            <ResourceProfileMapping profile={structureDefinition} />
+            <StructureDefinitionTree structureDefintion={structureDefinition} />
           </Container>
           <ButtonDownloadYouyou
             text="Download profile"

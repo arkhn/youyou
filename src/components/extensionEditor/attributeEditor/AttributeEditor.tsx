@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "state/store";
+
+import Autocomplete from "@material-ui/lab/Autocomplete";
+import TextField from "@material-ui/core/TextField";
 
 import {
   IStructureDefinition,
   IElementDefinition
 } from "@ahryman40k/ts-fhir-types/lib/R4";
-import Autocomplete from "@material-ui/lab/Autocomplete";
-import TextField from "@material-ui/core/TextField";
 
-import { RootState } from "state/store";
 import { updateStructureDefExtension } from "state/actions/resourceActions";
 
 type AttributeEditorProps = {
@@ -145,13 +146,12 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
         <ul>
           <Autocomplete
             id="Data type"
-            options={
-              datatypes?.concept?.map((c) => {
-                return c.code;
-              }) || []
-            }
+            options={datatypes ?? []}
             style={{ width: 300 }}
-            onChange={(event, value): void => setDataType(value as string)}
+            onChange={(event, value): void => {
+              setDataType(value as string);
+              // TODO : complete structureDefinitionTree with getStructureDef(value as string)
+            }}
             renderInput={(params) => (
               <TextField {...params} label="Data type" variant="outlined" />
             )}

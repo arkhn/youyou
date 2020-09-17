@@ -8,14 +8,14 @@ import { StylesProvider, CssBaseline } from "@material-ui/core";
 import Homepage from "components/homepage/Homepage";
 import Editor from "components/editor/Editor";
 import ExtensionEditor from "components/extensionEditor/ExtensionEditor";
-import { requestIds, requestDataTypes } from "state/thunkMiddleware";
+import { requestIds, requestExtensionDataTypes } from "state/thunkMiddleware";
 import { store, persistor } from "state/store";
 
 const App = () => {
   /* @ts-ignore */
   store.dispatch(requestIds());
   /* @ts-ignore */
-  store.dispatch(requestDataTypes());
+  store.dispatch(requestExtensionDataTypes());
   return (
     <Provider store={store}>
       <CssBaseline />

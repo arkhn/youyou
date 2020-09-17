@@ -6,20 +6,19 @@ import {
   GetCodeSystemDataTypeFailureAction,
   GetCodeSystemDataTypePendingAction
 } from "state/actions/codeSystemActions";
-import { ICodeSystem } from "@ahryman40k/ts-fhir-types/lib/R4";
 
 export type DataFetched = {
   id: string;
 };
 
 export type CodeSystemState = {
-  datatypes: ICodeSystem | null;
+  datatypes: string[];
   loading: boolean;
   error: Error | null;
 };
 
 const initialState: CodeSystemState = {
-  datatypes: null,
+  datatypes: [],
   loading: false,
   error: null
 };
