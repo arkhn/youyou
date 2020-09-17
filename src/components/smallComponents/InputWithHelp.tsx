@@ -17,7 +17,9 @@ type inputWithHelpProps = {
 const CssTextField = withStyles((theme: Theme) => ({
   root: {
     marginBottom: 16,
-    width: "50%",
+    marginRight: 8,
+    maxWidth: 350,
+    width: 300,
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
         borderColor: theme.palette.secondary.main

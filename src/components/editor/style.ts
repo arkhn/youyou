@@ -39,7 +39,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   treeView: {
     overflow: "auto",
-    margin: "8px 0 16px 0"
+    margin: "8px 0 16px 0",
+    height: "100%"
   },
   downloadLink: {
     textDecoration: "none"
