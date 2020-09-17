@@ -146,7 +146,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
         <ul>
           <Autocomplete
             id="Data type"
-            options={datatypes ? datatypes : []}
+            options={datatypes ?? []}
             style={{ width: 300 }}
             onChange={(event, value): void => {
               setDataType(value as string);
