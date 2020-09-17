@@ -2,12 +2,17 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
-import { Button, Checkbox, FormControlLabel } from "@material-ui/core";
+import {
+  Button,
+  Checkbox,
+  Container,
+  FormControlLabel,
+  Typography
+} from "@material-ui/core";
 
 import {
   InputWithHelpYouyou,
   InputDateYouyou,
-  SnackBarYouyou,
   SelectYouyou
 } from "components/smallComponents";
 import {
@@ -17,6 +22,7 @@ import {
 import { editAttribute } from "components/structureDefSettings/utils";
 
 import useStyles from "components/structureDefSettings/style";
+import { setSnackbarOpen } from "state/actions/snackbarActions";
 
 type StructureDefSettingsProps = {
   structureDefinition: IStructureDefinition;
@@ -48,8 +54,6 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   const [purpose, setPurpose] = useState(structureDefinition.purpose);
   const [copyright, setCopyright] = useState(structureDefinition.copyright);
   const [abstract, setAbstract] = useState(structureDefinition.abstract);
-  const [snackbarErrorMessage, setSnackbarErrorMessage] = useState("");
-  const [snackbarSuccessMessage, setSnackbarSuccessMessage] = useState("");
 
   const checkErrorForm = () => {
     if (!url || !name) {
@@ -62,15 +66,9 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   const checkForm = () => {
     if (!checkErrorForm()) {
       handleEditSettings();
-      setSnackbarSuccessMessage("success !");
-      setTimeout(() => {
-        setSnackbarSuccessMessage("");
-      }, 3000);
+      dispatch(setSnackbarOpen("Done !", "success"));
     } else {
-      setSnackbarErrorMessage("error !");
-      setTimeout(() => {
-        setSnackbarErrorMessage("");
-      }, 3000);
+      dispatch(setSnackbarOpen("Please fill all the required fields", "error"));
     }
   };
 
@@ -102,100 +100,103 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   };
 
   return (
-    <form className={classes.form}>
-      <InputWithHelpYouyou
-        label="Id"
-        value={id || ""}
-        tool="The version can be globally unique, or scoped by the Logical Id of the resource."
-        setter={setId}
-      />
-      <InputWithHelpYouyou
-        label="Url"
-        value={url || ""}
-        tool="The identifier that is used to identify this structure when it is referenced in a specification, model, design or an instance. This URL is where the structure can be accessed."
-        setter={setUrl}
-        error={url ? false : true}
-      />
-      <InputWithHelpYouyou
-        label="Name of profile"
-        value={name || ""}
-        tool="A Computer-ready name (e.g. a token) that identifies the structure - suitable for code generation. Note that this name (and other names relevant for code generation, including element & slice names, codes etc) may collide with reserved words in the relevant target language, and code generators will need to handle this"
-        setter={setName}
-        error={name ? false : true}
-      />
-      <InputWithHelpYouyou
-        label="Title"
-        value={title || ""}
-        tool="A free text natural language name identifying the structure"
-        setter={setTitle}
-      />
-      <SelectYouyou
-        label="Status"
-        value={status}
-        setter={setStatus}
-        choices={["active", "draft", "retired", "unknown"]}
-      />
-      <FormControlLabel
-        value="experimental"
-        control={
-          <Checkbox onChange={(e) => setExperimental(e.target.checked)} />
-        }
-        label="experimental"
-      />
-      <InputDateYouyou
-        label="Date"
-        value={new Date(Date.now()).toISOString().slice(0, -5)}
-        tool="The date this version of the structure was published"
-        setter={setDate}
-      />
-      <InputWithHelpYouyou
-        label="Publisher"
-        value={publisher || ""}
-        tool='Details of the individual or organization who accepts responsibility for publishing the structure. This helps establish the "authority/credibility" of the structure.'
-        setter={setPublisher}
-      />
-      <InputWithHelpYouyou
-        classname={classes.bigInput}
-        label={"Description"}
-        value={description || ""}
-        tool={
-          "A free text natural language description of the structure and its use."
-        }
-        setter={setDescription}
-      />
-      <InputWithHelpYouyou
-        label="Purpose"
-        value={purpose || ""}
-        tool="Why this structure was created - what the intent of it is"
-        setter={setPurpose}
-      />
-      <InputWithHelpYouyou
-        label="Copyright"
-        value={copyright || ""}
-        tool="Use and/or publishing restrictions"
-        setter={setCopyright}
-      />
-      <br />
-      <FormControlLabel
-        value="abstract"
-        control={<Checkbox onChange={(e) => setAbstract(e.target.checked)} />}
-        label="abstract"
-      />
-      <br />
-      <Button
-        className={classes.submitButton}
-        variant="contained"
-        color="secondary"
-        onClick={(e) => {
-          e.preventDefault();
-          checkForm();
-        }}
-      >
-        Submit
-      </Button>
-      <SnackBarYouyou message={snackbarErrorMessage} severity="error" />
-      <SnackBarYouyou message={snackbarSuccessMessage} severity="success" />
-    </form>
+    <Container className={classes.formContainer}>
+      <form className={classes.form}>
+        <InputWithHelpYouyou
+          label="Id"
+          value={id || ""}
+          tool="The version can be globally unique, or scoped by the Logical Id of the resource."
+          setter={setId}
+        />
+        <InputWithHelpYouyou
+          label="Url *"
+          value={url || ""}
+          tool="The identifier that is used to identify this structure when it is referenced in a specification, model, design or an instance. This URL is where the structure can be accessed."
+          setter={setUrl}
+          error={url ? false : true}
+        />
+        <InputWithHelpYouyou
+          label="Name of profile *"
+          value={name || ""}
+          tool="A Computer-ready name (e.g. a token) that identifies the structure - suitable for code generation. Note that this name (and other names relevant for code generation, including element & slice names, codes etc) may collide with reserved words in the relevant target language, and code generators will need to handle this"
+          setter={setName}
+          error={name ? false : true}
+        />
+        <InputWithHelpYouyou
+          label="Title"
+          value={title || ""}
+          tool="A free text natural language name identifying the structure"
+          setter={setTitle}
+        />
+        <SelectYouyou
+          label="Status"
+          value={status}
+          setter={setStatus}
+          choices={["active", "draft", "retired", "unknown"]}
+        />
+        <FormControlLabel
+          value="experimental"
+          control={
+            <Checkbox onChange={(e) => setExperimental(e.target.checked)} />
+          }
+          label="experimental"
+        />
+        <InputDateYouyou
+          label="Date"
+          value={new Date(Date.now()).toISOString().slice(0, -5)}
+          tool="The date this version of the structure was published"
+          setter={setDate}
+        />
+        <InputWithHelpYouyou
+          label="Publisher"
+          value={publisher || ""}
+          tool='Details of the individual or organization who accepts responsibility for publishing the structure. This helps establish the "authority/credibility" of the structure.'
+          setter={setPublisher}
+        />
+        <InputWithHelpYouyou
+          classname={classes.bigInput}
+          label={"Description"}
+          value={description || ""}
+          tool={
+            "A free text natural language description of the structure and its use."
+          }
+          setter={setDescription}
+        />
+        <InputWithHelpYouyou
+          label="Purpose"
+          value={purpose || ""}
+          tool="Why this structure was created - what the intent of it is"
+          setter={setPurpose}
+        />
+        <InputWithHelpYouyou
+          label="Copyright"
+          value={copyright || ""}
+          tool="Use and/or publishing restrictions"
+          setter={setCopyright}
+        />
+        <br />
+        <FormControlLabel
+          value="abstract"
+          control={<Checkbox onChange={(e) => setAbstract(e.target.checked)} />}
+          label="abstract"
+        />
+        <br />
+      </form>
+      <div className={classes.endForm}>
+        <Button
+          className={classes.submitButton}
+          variant="contained"
+          color="secondary"
+          onClick={(e) => {
+            e.preventDefault();
+            checkForm();
+          }}
+        >
+          Submit
+        </Button>
+        <Typography color="textSecondary">* Required Fields</Typography>
+      </div>
+    </Container>
   );
 };
 

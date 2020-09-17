@@ -1,42 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Snackbar } from "@material-ui/core";
+import { RootState } from "state/store";
+import { setSnackbarClose } from "state/actions/snackbarActions";
+import { Alert, Color } from "@material-ui/lab";
 
-import { IconButton, Snackbar } from "@material-ui/core";
-import { Close } from "@material-ui/icons";
-import { Alert } from "@material-ui/lab";
+const SnackbarWithButton: React.FC<{}> = () => {
+  const dispatch = useDispatch();
+  const { open, message, severity } = useSelector(
+    (state: RootState) => state.snackbarReducer
+  );
 
-type snackbarWithButtonProps = {
-  message: string;
-  severity: "error" | "warning" | "success" | "info" | undefined;
-};
-
-const SnackbarWithButton: React.FC<snackbarWithButtonProps> = ({
-  message,
-  severity
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    if (message === "") {
-      setIsOpen(false);
-    } else {
-      setIsOpen(true);
+  const handleClose = (event?: React.SyntheticEvent, reason?: string) => {
+    if (reason === "clickaway") {
+      return;
     }
-  }, [message]);
+    dispatch(setSnackbarClose());
+  };
 
   return (
-    <Snackbar open={isOpen}>
-      <Alert severity={severity} variant="filled">
+    <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+      <Alert
+        severity={severity as Color}
+        variant="filled"
+        onClose={handleClose}
+      >
         {message}
-        <IconButton
-          size="small"
-          aria-label="close"
-          color="inherit"
-          onClick={() => {
-            setIsOpen(false);
-          }}
-        >
-          <Close fontSize="small" />
-        </IconButton>
       </Alert>
     </Snackbar>
   );

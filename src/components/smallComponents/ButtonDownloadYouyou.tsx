@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { Button } from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core/styles";
-import { SnackBarYouyou } from ".";
+import { useDispatch } from "react-redux";
+import { setSnackbarOpen } from "state/actions/snackbarActions";
 
 type ButtonDownloadYouyouProps = {
   text: string;
@@ -24,7 +25,7 @@ const ButtonDownload: React.FC<ButtonDownloadYouyouProps> = ({
   toDownload
 }) => {
   const classes = useStyles();
-  const [snackbarSuccessMessage, setsnackbarSuccessMessage] = useState("");
+  const dispatch = useDispatch();
 
   return (
     <a
@@ -39,16 +40,14 @@ const ButtonDownload: React.FC<ButtonDownloadYouyouProps> = ({
         color="secondary"
         variant="contained"
         className={classes.buttonDownloadSize}
-        onClick={() => {
-          setsnackbarSuccessMessage("Your new profile is download !");
-          setTimeout(() => {
-            setsnackbarSuccessMessage("");
-          }, 3000);
-        }}
+        onClick={() =>
+          dispatch(
+            setSnackbarOpen("Profile Downloaded ! Congratulation !", "success")
+          )
+        }
       >
         {text}
       </Button>
-      <SnackBarYouyou message={snackbarSuccessMessage} severity="success" />
     </a>
   );
 };
