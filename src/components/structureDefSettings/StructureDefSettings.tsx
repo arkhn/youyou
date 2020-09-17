@@ -132,6 +132,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
         <SelectYouyou
           label="Status"
           value={status}
+          tool={"The lifecycle status of an artifact."}
           setter={setStatus}
           choices={["active", "draft", "retired", "unknown"]}
         />

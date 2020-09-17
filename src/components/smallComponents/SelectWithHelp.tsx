@@ -9,6 +9,7 @@ import {
   Theme,
   withStyles
 } from "@material-ui/core";
+import { TooltipYouyou } from ".";
 
 type inputWithHelpProps = {
   label: string;
@@ -16,6 +17,7 @@ type inputWithHelpProps = {
   choices: string[];
   error?: boolean | undefined;
   setter: React.Dispatch<SetStateAction<StatusKind | undefined>>;
+  tool: string;
 };
 
 const CssFormControl = withStyles((theme: Theme) => ({
@@ -41,13 +43,15 @@ const SelectWithHelp: React.FC<inputWithHelpProps> = ({
   value,
   setter,
   error = false,
-  choices
+  choices,
+  tool
 }) => {
   const [defaultValue, setDefaultValue] = useState(value);
   return (
     <CssFormControl variant="outlined">
       <InputLabel htmlFor={label}>{label}</InputLabel>
       <Select
+        endAdornment={<TooltipYouyou tool={tool} />}
         error={error}
         value={value}
         label={label}
