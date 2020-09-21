@@ -48,8 +48,7 @@ const Homepage: React.FC<{}> = () => {
   }
 
   const choosingCardsItems: ChoosingCardsItemsType[] = [
-    // NON RELEVANT AS LONG AS WE CAN'T EDIT IMPLEMENTATION GUIDES FOR NOW
-    /* {
+    {
       name: "Implementation Guide",
       description:
         "An implementation guide (IG) is a set of rules about how FHIR resources are used (or should be used) to solve a particular problem, with associated documentation to support and clarify the usage. Classically, FHIR implementation guides are published on the web after they are generated using the FHIR Implementation Guide Publisher.",
@@ -63,7 +62,7 @@ const Homepage: React.FC<{}> = () => {
           path: "/implementation-guides/choose-existing"
         }
       ]
-    }, */
+    },
     {
       name: "Profile (Patient)",
       description:
@@ -119,7 +118,6 @@ const Homepage: React.FC<{}> = () => {
             <Typography variant="h1" className={classes.itemCardTitle}>
               {choosingItem.name}
             </Typography>
-            <div className={classes.itemCardLeftButton}>{renderButtons}</div>
             <FhirLogo className={classes.fhirLogo} />
           </Paper>
           <Paper className={clsx(classes.itemCard, classes.itemCardRight)}>

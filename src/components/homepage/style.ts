@@ -9,9 +9,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     alignItems: "center"
   },
   button: {
-    "@media (min-width:800px)": {
-      marginRight: theme.spacing(2)
-    }
+    marginRight: theme.spacing(2)
   },
   buttonLink: {
     textDecoration: "none"
@@ -32,13 +30,16 @@ const useStyles = makeStyles((theme: Theme) => ({
     position: "relative"
   },
   itemCard: {
-    padding: theme.spacing(4)
+    padding: theme.spacing(3),
+    "@media (min-width:1300px)": {
+      padding: theme.spacing(8)
+    }
   },
   itemCardTitle: {
     zIndex: 1
   },
   itemCardLeft: {
-    minWidth: 250,
+    minWidth: 300,
     display: "flex",
     flexDirection: "column",
     textAlign: "center",
@@ -46,33 +47,27 @@ const useStyles = makeStyles((theme: Theme) => ({
     alignItems: "space",
     marginRight: theme.spacing(4),
     position: "relative",
-    "@media (min-width:1200px)": {
+    "@media (min-width:1300px)": {
       minWidth: 400
     }
   },
   itemCardLeftButton: {
     position: "relative",
     width: "100%",
-    zIndex: 1,
-    "@media (min-width:800px)": {
-      display: "none"
-    }
+    zIndex: 1
   },
   itemCardRight: {
-    display: "none",
-    "@media (min-width:800px)": {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-around"
-    }
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-around"
   },
   fhirLogo: {
     position: "absolute",
     bottom: 0,
     right: 0,
+    zIndex: 0,
     height: "100%",
-    width: "65%",
-    zIndex: 0
+    width: "auto"
   }
 }));
 
