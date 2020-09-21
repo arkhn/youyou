@@ -34,7 +34,7 @@ export type ResourceState = {
   selectedAttributeId: string | undefined;
   loading: boolean;
   error: Error | null;
-  selectStructureDefMeta: boolean;
+  structureDefMeta: boolean;
 };
 
 const initialState: ResourceState = {
@@ -46,7 +46,7 @@ const initialState: ResourceState = {
   selectedAttributeId: undefined,
   loading: false,
   error: null,
-  selectStructureDefMeta: true
+  structureDefMeta: true
 };
 
 export type AllResourcesAction =
@@ -109,7 +109,7 @@ export const resource = (
       return {
         ...state,
         selectedAttributeId: action.payload,
-        selectStructureDefMeta: false
+        structureDefMeta: false
       };
     case UPDATE_STRUCTURE_DEF_EXTENSION:
       return {
@@ -122,7 +122,7 @@ export const resource = (
       return {
         ...state,
         selectedAttributeId: undefined,
-        selectStructureDefMeta: true
+        structureDefMeta: true
       };
     default:
       return state;

@@ -16,15 +16,8 @@ import { requestResource } from "state/thunkMiddleware";
 
 import useStyles from "./style";
 import clsx from "clsx";
-
-type ChoosingCardsItemsType = {
-  name: string;
-  description: string;
-  buttons: {
-    content: string;
-    path: string;
-  }[];
-};
+import { setSnackbarClose } from "state/actions/snackbarActions";
+import { choosingCardsItems, ChoosingCardsItemsType } from "./utils";
 
 const Homepage: React.FC<{}> = () => {
   const { loading } = useSelector((state: RootState) => state.resource);
@@ -35,6 +28,7 @@ const Homepage: React.FC<{}> = () => {
     if (resource.id) {
       dispatch(selectResource(resource.id));
       dispatch(requestResource(resource.id));
+      dispatch(setSnackbarClose());
       dispatch(selectStructureDefMeta());
     }
   };
@@ -47,70 +41,24 @@ const Homepage: React.FC<{}> = () => {
     );
   }
 
-  const choosingCardsItems: ChoosingCardsItemsType[] = [
-    {
-      name: "Implementation Guide",
-      description:
-        "An implementation guide (IG) is a set of rules about how FHIR resources are used (or should be used) to solve a particular problem, with associated documentation to support and clarify the usage. Classically, FHIR implementation guides are published on the web after they are generated using the FHIR Implementation Guide Publisher.",
-      buttons: [
-        {
-          content: "new",
-          path: "/implementation-guides/choose-new"
-        },
-        {
-          content: "choose existing",
-          path: "/implementation-guides/choose-existing"
-        }
-      ]
-    },
-    {
-      name: "Profile (Patient)",
-      description:
-        "An implementation guide (IG) is a set of rules about how FHIR resources are used (or should be used) to solve a particular problem, with associated documentation to support and clarify the usage. Classically, FHIR implementation guides are published on the web after they are generated using the FHIR Implementation Guide Publisher.",
-      buttons: [
-        {
-          content: "new",
-          path: "/profile/edit"
-        }
-      ]
-    },
-    {
-      name: "Extension",
-      description:
-        "An implementation guide (IG) is a set of rules about how FHIR resources are used (or should be used) to solve a particular problem, with associated documentation to support and clarify the usage. Classically, FHIR implementation guides are published on the web after they are generated using the FHIR Implementation Guide Publisher.",
-      buttons: [
-        {
-          content: "new",
-          path: "/extension/edit"
-        }
-      ]
-    }
-  ];
-
   const renderChoosingCards = choosingCardsItems.map(
     (choosingItem: ChoosingCardsItemsType) => {
-      const renderButtons = choosingItem.buttons.map((button) => {
-        return (
-          <Link
-            to={button.path}
-            key={button.path}
-            className={classes.buttonLink}
+      const renderButtons = choosingItem.buttons.map((button) => (
+        <Link to={button.path} key={button.path} className={classes.buttonLink}>
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => {
+              if (button.path === "/profile/edit") {
+                dispatchResourceSelected({ id: "Patient" });
+              }
+            }}
+            className={classes.button}
           >
-            <Button
-              variant="contained"
-              color="secondary"
-              onClick={() => {
-                if (choosingItem.name === "Profile") {
-                  dispatchResourceSelected({ id: "Patient" });
-                }
-              }}
-              className={classes.button}
-            >
-              {button.content}
-            </Button>
-          </Link>
-        );
-      });
+            {button.content}
+          </Button>
+        </Link>
+      ));
 
       return (
         <div key={choosingItem.name} className={classes.item}>

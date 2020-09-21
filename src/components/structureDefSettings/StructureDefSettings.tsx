@@ -21,7 +21,10 @@ import {
   updateStructureDefProfile,
   updateStructureDefExtension
 } from "state/actions/resourceActions";
-import { editAttribute } from "components/structureDefSettings/utils";
+import {
+  editAttribute,
+  tooltipValues
+} from "components/structureDefSettings/utils";
 
 import useStyles from "components/structureDefSettings/style";
 
@@ -106,33 +109,33 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
         <InputWithHelpYouyou
           label="Id"
           value={id || ""}
-          tool="The version can be globally unique, or scoped by the Logical Id of the resource."
+          tool={tooltipValues.id}
           setter={setId}
         />
         <InputWithHelpYouyou
           label="Url *"
           value={url || ""}
-          tool="The identifier that is used to identify this structure when it is referenced in a specification, model, design or an instance. This URL is where the structure can be accessed."
+          tool={tooltipValues.url}
           setter={setUrl}
           error={url ? false : true}
         />
         <InputWithHelpYouyou
           label="Name of profile *"
           value={name || ""}
-          tool="A Computer-ready name (e.g. a token) that identifies the structure - suitable for code generation. Note that this name (and other names relevant for code generation, including element & slice names, codes etc) may collide with reserved words in the relevant target language, and code generators will need to handle this"
+          tool={tooltipValues.name}
           setter={setName}
           error={name ? false : true}
         />
         <InputWithHelpYouyou
           label="Title"
           value={title || ""}
-          tool="A free text natural language name identifying the structure"
+          tool={tooltipValues.title}
           setter={setTitle}
         />
         <SelectYouyou
           label="Status"
           value={status}
-          tool={"The lifecycle status of an artifact."}
+          tool={tooltipValues.status}
           setter={setStatus}
           choices={["active", "draft", "retired", "unknown"]}
         />
@@ -146,34 +149,32 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
         <InputDateYouyou
           label="Date"
           value={new Date(Date.now()).toISOString().slice(0, -5)}
-          tool="The date this version of the structure was published"
+          tool={tooltipValues.date}
           setter={setDate}
         />
         <InputWithHelpYouyou
           label="Publisher"
           value={publisher || ""}
-          tool='Details of the individual or organization who accepts responsibility for publishing the structure. This helps establish the "authority/credibility" of the structure.'
+          tool={tooltipValues.publisher}
           setter={setPublisher}
         />
         <InputWithHelpYouyou
           classname={classes.bigInput}
           label={"Description"}
           value={description || ""}
-          tool={
-            "A free text natural language description of the structure and its use."
-          }
+          tool={tooltipValues.description}
           setter={setDescription}
         />
         <InputWithHelpYouyou
           label="Purpose"
           value={purpose || ""}
-          tool="Why this structure was created - what the intent of it is"
+          tool={tooltipValues.purpose}
           setter={setPurpose}
         />
         <InputWithHelpYouyou
           label="Copyright"
           value={copyright || ""}
-          tool="Use and/or publishing restrictions"
+          tool={tooltipValues.copyright}
           setter={setCopyright}
         />
         <br />

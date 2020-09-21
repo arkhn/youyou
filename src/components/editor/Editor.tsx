@@ -22,7 +22,7 @@ const Editor: React.FC<{}> = () => {
     loading,
     structureDefinition,
     selectedAttributeId,
-    selectStructureDefMeta
+    structureDefMeta
   } = useSelector((state: RootState) => state.resource);
   const classes = useStyles();
   const splitedAttributeSelected = selectedAttributeId?.split(".");
@@ -40,7 +40,7 @@ const Editor: React.FC<{}> = () => {
   }
 
   const renderBreadcrumbs = () => {
-    if (selectStructureDefMeta)
+    if (structureDefMeta)
       return <Typography className={classes.capitalize}>Metadata</Typography>;
     return splitedAttributeSelected?.map((split: string) => (
       <Typography key={split} className={classes.capitalize}>
@@ -50,7 +50,7 @@ const Editor: React.FC<{}> = () => {
   };
 
   const renderTitle = () => {
-    if (selectStructureDefMeta) return "Metadatas";
+    if (structureDefMeta) return "Metadatas";
     return splitedAttributeSelected?.map((split: string, index) => {
       if (index === splitedAttributeSelected.length - 1) return split;
     });
@@ -82,7 +82,7 @@ const Editor: React.FC<{}> = () => {
             {renderTitle()}
           </Typography>
           <Paper className={clsx(classes.paperRight, classes.paper)}>
-            {selectStructureDefMeta && (
+            {structureDefMeta && (
               <StructureDefSettings
                 structureDefinition={structureDefinition}
                 type="resource"
