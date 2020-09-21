@@ -1,9 +1,6 @@
-import React, { SetStateAction } from "react";
+import React from "react";
 
-import { TextField, Theme } from "@material-ui/core";
-import { withStyles } from "@material-ui/styles";
-
-import { TooltipYouyou } from "components/smallComponents";
+import { CssTextFieldYouyou, TooltipYouyou } from "components/smallComponents";
 
 type inputWithHelpProps = {
   classname?: string;
@@ -11,47 +8,27 @@ type inputWithHelpProps = {
   value: string;
   tool: string;
   error?: boolean | undefined;
-  setter: React.Dispatch<SetStateAction<string | undefined>>;
+  onBlur: (
+    event: React.FocusEvent<HTMLTextAreaElement | HTMLInputElement>
+  ) => void;
 };
-
-const CssTextField = withStyles((theme: Theme) => ({
-  root: {
-    marginBottom: 16,
-    marginRight: 8,
-    maxWidth: 350,
-    width: 300,
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: theme.palette.secondary.main
-      },
-      "&:hover fieldset": {
-        borderColor: theme.palette.secondary.dark
-      },
-      "&.Mui-focused fieldset": {
-        borderColor: theme.palette.secondary.dark
-      }
-    }
-  }
-}))(TextField);
 
 const InputWithHelp: React.FC<inputWithHelpProps> = ({
   label,
   value,
   tool,
-  setter,
+  onBlur,
   error = false,
   classname
 }) => {
   return (
-    <CssTextField
+    <CssTextFieldYouyou
       className={classname}
       label={label}
       error={error}
       defaultValue={value}
       variant="outlined"
-      onBlur={(e) => {
-        setter(e.target.value);
-      }}
+      onBlur={onBlur}
       InputProps={{
         endAdornment: <TooltipYouyou tool={tool} />
       }}

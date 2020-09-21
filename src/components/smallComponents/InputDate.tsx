@@ -1,9 +1,5 @@
 import React, { SetStateAction } from "react";
-
-import { TextField, Theme } from "@material-ui/core";
-import { withStyles } from "@material-ui/styles";
-
-import { TooltipYouyou } from "components/smallComponents";
+import { CssTextFieldYouyou, TooltipYouyou } from "components/smallComponents";
 
 type inputDateProps = {
   label: string;
@@ -12,24 +8,6 @@ type inputDateProps = {
   setter: React.Dispatch<SetStateAction<string>>;
 };
 
-const CssTextField = withStyles((theme: Theme) => ({
-  root: {
-    width: "50%",
-    marginBottom: 16,
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: theme.palette.secondary.main
-      },
-      "&:hover fieldset": {
-        borderColor: theme.palette.secondary.dark
-      },
-      "&.Mui-focused fieldset": {
-        borderColor: theme.palette.secondary.dark
-      }
-    }
-  }
-}))(TextField);
-
 const InputDate: React.FC<inputDateProps> = ({
   label,
   value,
@@ -37,7 +15,7 @@ const InputDate: React.FC<inputDateProps> = ({
   setter
 }) => {
   return (
-    <CssTextField
+    <CssTextFieldYouyou
       label={label}
       defaultValue={value}
       type="datetime-local"

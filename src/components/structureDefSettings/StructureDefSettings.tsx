@@ -110,27 +110,27 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
           label="Id"
           value={id || ""}
           tool={tooltipValues.id}
-          setter={setId}
+          onBlur={(event) => setId(event.target.value)}
         />
         <InputWithHelpYouyou
           label="Url *"
           value={url || ""}
           tool={tooltipValues.url}
-          setter={setUrl}
+          onBlur={(event) => setUrl(event.target.value)}
           error={url ? false : true}
         />
         <InputWithHelpYouyou
           label="Name of profile *"
           value={name || ""}
           tool={tooltipValues.name}
-          setter={setName}
+          onBlur={(event) => setName(event.target.value)}
           error={name ? false : true}
         />
         <InputWithHelpYouyou
           label="Title"
           value={title || ""}
           tool={tooltipValues.title}
-          setter={setTitle}
+          onBlur={(event) => setTitle(event.target.value)}
         />
         <SelectYouyou
           label="Status"
@@ -156,26 +156,26 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
           label="Publisher"
           value={publisher || ""}
           tool={tooltipValues.publisher}
-          setter={setPublisher}
+          onBlur={(event) => setPublisher(event.target.value)}
         />
         <InputWithHelpYouyou
           classname={classes.bigInput}
           label={"Description"}
           value={description || ""}
           tool={tooltipValues.description}
-          setter={setDescription}
+          onBlur={(event) => setDescription(event.target.value)}
         />
         <InputWithHelpYouyou
           label="Purpose"
           value={purpose || ""}
           tool={tooltipValues.purpose}
-          setter={setPurpose}
+          onBlur={(event) => setPurpose(event.target.value)}
         />
         <InputWithHelpYouyou
           label="Copyright"
           value={copyright || ""}
           tool={tooltipValues.copyright}
-          setter={setCopyright}
+          onBlur={(event) => setCopyright(event.target.value)}
         />
         <br />
         <FormControlLabel

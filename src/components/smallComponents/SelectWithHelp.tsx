@@ -23,7 +23,9 @@ type inputWithHelpProps = {
 const CssFormControl = withStyles((theme: Theme) => ({
   root: {
     marginBottom: 16,
-    width: "50%",
+    marginRight: 8,
+    width: 300,
+    maxWidth: 300,
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
         borderColor: theme.palette.secondary.main
