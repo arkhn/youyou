@@ -73,9 +73,9 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   const checkForm = () => {
     if (!checkErrorForm()) {
       handleEditSettings();
-      dispatch(setSnackbarOpen("Done !", "success"));
+      dispatch(setSnackbarOpen("success", "Done !"));
     } else {
-      dispatch(setSnackbarOpen("Please fill all the required fields", "error"));
+      dispatch(setSnackbarOpen("error", "Please fill all the required fields"));
     }
   };
 

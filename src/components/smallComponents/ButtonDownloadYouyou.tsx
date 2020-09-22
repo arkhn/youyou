@@ -43,7 +43,7 @@ const ButtonDownload: React.FC<ButtonDownloadYouyouProps> = ({
         className={classes.buttonDownloadSize}
         onClick={() =>
           dispatch(
-            setSnackbarOpen("Profile Downloaded ! Congratulation !", "success")
+            setSnackbarOpen("success", "Profile Downloaded ! Congratulation !")
           )
         }
       >

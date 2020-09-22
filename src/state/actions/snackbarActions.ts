@@ -7,16 +7,13 @@ export type SetSnackbarOpenAction = {
   type: typeof SET_SNACKBAR_OPEN;
   payload: {
     message: string;
-    severity: Color;
+    severity: Color | undefined;
   };
-};
-export type SetSnackbarCloseAction = {
-  type: typeof SET_SNACKBAR_CLOSE;
 };
 
 export const setSnackbarOpen = (
-  message: string,
-  severity: Color
+  severity: Color | undefined,
+  message: string
 ): SetSnackbarOpenAction => {
   return {
     type: SET_SNACKBAR_OPEN,
@@ -24,11 +21,5 @@ export const setSnackbarOpen = (
       message,
       severity
     }
-  };
-};
-
-export const setSnackbarClose = (): SetSnackbarCloseAction => {
-  return {
-    type: SET_SNACKBAR_CLOSE
   };
 };

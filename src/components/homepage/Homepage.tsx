@@ -16,7 +16,7 @@ import { requestResource } from "state/thunkMiddleware";
 
 import useStyles from "./style";
 import clsx from "clsx";
-import { setSnackbarClose } from "state/actions/snackbarActions";
+import { setSnackbarOpen } from "state/actions/snackbarActions";
 import { choosingCardsItems, ChoosingCardsItemsType } from "./utils";
 
 const Homepage: React.FC<{}> = () => {
@@ -28,7 +28,7 @@ const Homepage: React.FC<{}> = () => {
     if (resource.id) {
       dispatch(selectResource(resource.id));
       dispatch(requestResource(resource.id));
-      dispatch(setSnackbarClose());
+      dispatch(setSnackbarOpen(undefined, ""));
       dispatch(selectStructureDefMeta());
     }
   };
