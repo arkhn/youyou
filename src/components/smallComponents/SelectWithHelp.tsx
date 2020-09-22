@@ -1,4 +1,4 @@
-import React, { SetStateAction, useState } from "react";
+import React from "react";
 
 import { StructureDefinitionStatusKind as StatusKind } from "@ahryman40k/ts-fhir-types/lib/R4";
 import {
@@ -16,8 +16,14 @@ type inputWithHelpProps = {
   value: StatusKind | undefined;
   choices: string[];
   error?: boolean | undefined;
-  setter: React.Dispatch<SetStateAction<StatusKind | undefined>>;
   tool: string;
+  onChange: (
+    event: React.ChangeEvent<{
+      name?: string | undefined;
+      value: unknown;
+    }>,
+    child: React.ReactNode
+  ) => void;
 };
 
 const CssFormControl = withStyles((theme: Theme) => ({
@@ -43,12 +49,11 @@ const CssFormControl = withStyles((theme: Theme) => ({
 const SelectWithHelp: React.FC<inputWithHelpProps> = ({
   label,
   value,
-  setter,
   error = false,
   choices,
-  tool
+  tool,
+  onChange
 }) => {
-  const [defaultValue, setDefaultValue] = useState(value);
   return (
     <CssFormControl variant="outlined">
       <InputLabel htmlFor={label}>{label}</InputLabel>
@@ -57,15 +62,11 @@ const SelectWithHelp: React.FC<inputWithHelpProps> = ({
         error={error}
         value={value}
         label={label}
-        onFocus={() => setter(defaultValue)}
+        onChange={onChange}
       >
         {choices.map((choice) => {
           return (
-            <MenuItem
-              value={choice}
-              key={choice}
-              onClick={() => setDefaultValue(choice as StatusKind)}
-            >
+            <MenuItem value={choice} key={choice}>
               {choice}
             </MenuItem>
           );

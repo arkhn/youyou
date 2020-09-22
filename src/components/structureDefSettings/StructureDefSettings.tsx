@@ -3,7 +3,10 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setSnackbarOpen } from "state/actions/snackbarActions";
 
-import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
+import {
+  IStructureDefinition,
+  StructureDefinitionStatusKind
+} from "@ahryman40k/ts-fhir-types/lib/R4";
 import {
   Button,
   Checkbox,
@@ -136,7 +139,9 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
           label="Status"
           value={status}
           tool={tooltipValues.status}
-          setter={setStatus}
+          onChange={(e) =>
+            setStatus(e.target.value as StructureDefinitionStatusKind)
+          }
           choices={["active", "draft", "retired", "unknown"]}
         />
         <FormControlLabel
@@ -150,7 +155,14 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
           label="Date"
           value={new Date(Date.now()).toISOString().slice(0, -5)}
           tool={tooltipValues.date}
-          setter={setDate}
+          onChange={(event) => {
+            const date = new Date(event.target.value);
+            setDate(
+              new Date(
+                date.getTime() - date.getTimezoneOffset() * 60000
+              ).toISOString()
+            );
+          }}
         />
         <InputWithHelpYouyou
           label="Publisher"

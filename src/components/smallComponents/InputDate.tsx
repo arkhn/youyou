@@ -1,32 +1,27 @@
-import React, { SetStateAction } from "react";
+import React from "react";
 import { CssTextFieldYouyou, TooltipYouyou } from "components/smallComponents";
 
 type inputDateProps = {
   label: string;
   value: string;
   tool: string;
-  setter: React.Dispatch<SetStateAction<string>>;
+  onChange: (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
 };
 
 const InputDate: React.FC<inputDateProps> = ({
   label,
   value,
   tool,
-  setter
+  onChange
 }) => {
   return (
     <CssTextFieldYouyou
       label={label}
       defaultValue={value}
       type="datetime-local"
-      onChange={(e) => {
-        const date = new Date(e.target.value);
-        setter(
-          new Date(
-            date.getTime() - date.getTimezoneOffset() * 60000
-          ).toISOString()
-        );
-      }}
+      onChange={onChange}
       variant="outlined"
       InputProps={{
         endAdornment: <TooltipYouyou tool={tool} />
