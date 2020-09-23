@@ -23,7 +23,7 @@ import {
 import useStyles from "./style";
 
 type StructureDefinitionTreeProps = {
-  structureDefintion: IStructureDefinition | null;
+  structureDefinition: IStructureDefinition | null;
 };
 
 interface RenderNode {
@@ -33,11 +33,11 @@ interface RenderNode {
 }
 
 const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
-  structureDefintion
+  structureDefinition
 }) => {
   const dispatch = useDispatch();
   const attributes: Array<IElementDefinition> | undefined =
-    structureDefintion?.snapshot?.element;
+    structureDefinition?.snapshot?.element;
   const classes = useStyles();
 
   const paths = attributes?.map(
@@ -102,7 +102,7 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
     </TreeItem>
   );
 
-  if (!structureDefintion) {
+  if (!structureDefinition) {
     return <>Error</>;
   }
 

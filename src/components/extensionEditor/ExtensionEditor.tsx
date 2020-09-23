@@ -26,7 +26,7 @@ const ExtensionEditor: React.FC<{}> = () => {
   }
   return (
     <React.Fragment>
-      <Navbar buttonType="profile" />
+      <Navbar />
       <a
         href={
           "data:json/plain;charset=utf-8," +
@@ -45,7 +45,7 @@ const ExtensionEditor: React.FC<{}> = () => {
             <Paper className={clsx(classes.paperLeft, classes.paper)}>
               <Container>
                 <StructureDefinitionTree
-                  structureDefintion={extensionStructureDefinition}
+                  structureDefinition={extensionStructureDefinition}
                 />
               </Container>
               <ButtonDownloadYouyou

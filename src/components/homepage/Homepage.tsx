@@ -23,6 +23,8 @@ const Homepage: React.FC<{}> = () => {
   const { loading } = useSelector((state: RootState) => state.resource);
   const dispatch = useDispatch();
   const classes = useStyles();
+  const state = useSelector((state: RootState) => state)
+  console.log(state)
 
   const dispatchResourceSelected = (resource: DataFetched): void => {
     if (resource.id) {
@@ -79,7 +81,7 @@ const Homepage: React.FC<{}> = () => {
 
   return (
     <>
-      <Navbar buttonType="extension" />
+      <Navbar />
       <div className={classes.items}>{renderChoosingCards}</div>
     </>
   );

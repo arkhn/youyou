@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useDispatch } from "react-redux";
 import { updateStructureDefProfile } from "state/actions/resourceActions";
@@ -8,121 +8,115 @@ import {
   IStructureDefinition
 } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { Typography, Button } from "@material-ui/core";
+import { ToggleButton } from "@material-ui/lab";
+
+import { CssToggleButtonGroupYouyou } from "components/smallComponents";
 
 type AttributeEditorProps = {
-  attribute: IElementDefinition | undefined;
-  structureDefinition: IStructureDefinition | null;
+  attribute: IElementDefinition;
+  structureDefinition: IStructureDefinition;
 };
+
+const allCardinalities: { min: number; max: string }[] = [
+  {
+    min: 0,
+    max: "0"
+  },
+  {
+    min: 0,
+    max: "1"
+  },
+  {
+    min: 0,
+    max: "*"
+  },
+  {
+    min: 1,
+    max: "1"
+  },
+  {
+    min: 1,
+    max: "*"
+  }
+];
 
 const AttributeEditor: React.FC<AttributeEditorProps> = ({
   attribute,
   structureDefinition
 }) => {
-  const [minState, setMinState] = useState(Number(attribute?.base?.min));
-  const [maxState, setMaxState] = useState(attribute?.base?.max?.toString());
+  const baseMin = Number(attribute?.base?.min);
+  const baseMax = attribute?.base?.max?.toString();
+  const [minState, setMinState] = useState(baseMin);
+  const [maxState, setMaxState] = useState(baseMax);
+  const [cardinality, setCardinality] = useState(
+    attribute.min + "|" + attribute.max
+  );
+
   const dispatch = useDispatch();
 
-  const isDisabledInput = (
-    cardiMin: number | undefined,
-    cardiMax: string | undefined,
-    min: number,
-    max: string
+  useEffect(() => {
+    setCardinality(attribute.min + "|" + attribute.max);
+  }, [attribute]);
+
+  const handleCardinality = (
+    event: React.MouseEvent<HTMLElement, MouseEvent>,
+    newCardinality: string
   ) => {
+    if (newCardinality) {
+      setCardinality(newCardinality);
+      const cardinalityValues = newCardinality.split("|");
+      setMinState(Number(cardinalityValues[0]));
+      setMaxState(cardinalityValues[1]);
+    }
+  };
+
+  const isDisabledInput = (min: number, max: string) => {
     if (
-      cardiMin !== undefined &&
-      cardiMax !== undefined &&
-      min >= cardiMin &&
-      (cardiMax === "*" || (cardiMax === "1" && (max === "1" || max === "0")))
+      baseMin !== undefined &&
+      baseMax !== undefined &&
+      min >= baseMin &&
+      (baseMax === "*" || (baseMax === "1" && (max === "1" || max === "0")))
     ) {
       return false;
     }
     return true;
   };
 
-  const changeCardinality = (cardinality: string): void => {
-    const cardinalityValues = cardinality.split("|");
-    setMinState(Number(cardinalityValues[0]));
-    setMaxState(cardinalityValues[1]);
-  };
-
   const changeProfileState = () => {
     if (attribute && structureDefinition) {
-      const cardinalityEditor = attribute;
-      cardinalityEditor.min = minState;
-      cardinalityEditor.max = maxState;
+      attribute.min = minState;
+      attribute.max = maxState;
       dispatch(updateStructureDefProfile(structureDefinition));
     }
-  };
-
-  const handleCardinality = () => {
-    const cardiMax: string | undefined = attribute?.base?.max?.toString();
-    const cardiMin: number | undefined = Number(attribute?.base?.min);
-
-    return (
-      <form>
-        <input
-          type="radio"
-          name="cardinality"
-          onChange={(e) => changeCardinality(e.target.value)}
-          value="0|0"
-          disabled={isDisabledInput(cardiMin, cardiMax, 0, "0")}
-        />
-        <label>0...0</label>
-        <br />
-        <input
-          type="radio"
-          name="cardinality"
-          onChange={(e) => changeCardinality(e.target.value)}
-          value="0|1"
-          disabled={isDisabledInput(cardiMin, cardiMax, 0, "1")}
-        />
-        <label>0...1</label>
-        <br />
-        <input
-          type="radio"
-          name="cardinality"
-          onChange={(e) => changeCardinality(e.target.value)}
-          value="0|*"
-          disabled={isDisabledInput(cardiMin, cardiMax, 0, "*")}
-        />
-        <label>0...*</label>
-        <br />
-        <input
-          type="radio"
-          name="cardinality"
-          onChange={(e) => changeCardinality(e.target.value)}
-          value="1|1"
-          disabled={isDisabledInput(cardiMin, cardiMax, 1, "1")}
-        />
-        <label>1...1</label>
-        <br />
-        <input
-          type="radio"
-          name="cardinality"
-          onChange={(e) => changeCardinality(e.target.value)}
-          value="1|*"
-          disabled={isDisabledInput(cardiMin, cardiMax, 1, "*")}
-        />
-        <label>1...*</label>
-        <br />
-        <Button
-          color="secondary"
-          variant="contained"
-          onClick={() => changeProfileState()}
-        >
-          Submit
-        </Button>
-      </form>
-    );
   };
 
   return (
     <>
       <Typography variant="h1">Cardinality</Typography>
-      <p>{attribute?.id}</p>
-      <p>Cardinality min: {attribute?.min}</p>
-      <p>Cardinality max: {attribute?.max}</p>
-      {handleCardinality()}
+      <p>Cardinality min: {baseMin}</p>
+      <p>Cardinality max: {baseMax}</p>
+      <CssToggleButtonGroupYouyou
+        value={cardinality}
+        exclusive
+        onChange={handleCardinality}
+      >
+        {allCardinalities.map((cardi, index) => (
+          <ToggleButton
+            key={`cardi${index}`}
+            value={`${cardi.min}|${cardi.max}`}
+            disabled={isDisabledInput(cardi.min, cardi.max)}
+          >
+            {cardi.min}...{cardi.max}
+          </ToggleButton>
+        ))}
+      </CssToggleButtonGroupYouyou>
+      <Button
+        color="secondary"
+        variant="contained"
+        onClick={() => changeProfileState()}
+      >
+        Submit
+      </Button>
     </>
   );
 };

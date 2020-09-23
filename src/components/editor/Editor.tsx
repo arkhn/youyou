@@ -22,7 +22,7 @@ const Editor: React.FC<{}> = () => {
     loading,
     structureDefinition,
     selectedAttributeId,
-    structureDefMeta
+    structureDefMeta,
   } = useSelector((state: RootState) => state.resource);
   const classes = useStyles();
   const splitedAttributeSelected = selectedAttributeId?.split(".");
@@ -64,7 +64,7 @@ const Editor: React.FC<{}> = () => {
         <Paper className={clsx(classes.paperLeft, classes.paper)}>
           <Typography variant="h1">{structureDefinition.name}</Typography>
           <Container className={classes.treeView}>
-            <StructureDefinitionTree structureDefintion={structureDefinition} />
+            <StructureDefinitionTree structureDefinition={structureDefinition} />
           </Container>
           <ButtonDownloadYouyou
             text="Download profile"
@@ -88,7 +88,7 @@ const Editor: React.FC<{}> = () => {
                 type="resource"
               />
             )}
-            {selectedAttributeId && (
+            {selectedAttributeId && attribute && (
               <AttributeEditor
                 attribute={attribute}
                 structureDefinition={structureDefinition}
