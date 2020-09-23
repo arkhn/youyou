@@ -1,17 +1,35 @@
 import React, { useState } from "react";
+
 import { useDispatch } from "react-redux";
+import { setSnackbarOpen } from "state/actions/snackbarActions";
 
 import {
   IStructureDefinition,
   StructureDefinitionStatusKind
 } from "@ahryman40k/ts-fhir-types/lib/R4";
-import { TextField } from "@material-ui/core";
+import {
+  Button,
+  Checkbox,
+  Container,
+  FormControlLabel,
+  Typography
+} from "@material-ui/core";
 
+import {
+  InputWithHelpYouyou,
+  InputDateYouyou,
+  SelectYouyou
+} from "components/smallComponents";
 import {
   updateStructureDefProfile,
   updateStructureDefExtension
 } from "state/actions/resourceActions";
-import { editAttribute } from "components/structureDefSettings/utils";
+import {
+  editAttribute,
+  tooltipValues
+} from "components/structureDefSettings/utils";
+
+import useStyles from "components/structureDefSettings/style";
 
 type StructureDefSettingsProps = {
   structureDefinition: IStructureDefinition;
@@ -23,7 +41,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   type = "resource"
 }) => {
   const dispatch = useDispatch();
-
+  const classes = useStyles();
   // LOCAL STATES
   const [id, setId] = useState(structureDefinition.id);
   const [url, setUrl] = useState(structureDefinition.url);
@@ -44,10 +62,26 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   const [copyright, setCopyright] = useState(structureDefinition.copyright);
   const [abstract, setAbstract] = useState(structureDefinition.abstract);
 
+  const checkErrorForm = () => {
+    if (!url || !name) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const checkForm = () => {
+    if (!checkErrorForm()) {
+      handleEditSettings();
+      dispatch(setSnackbarOpen("success", "Done !"));
+    } else {
+      dispatch(setSnackbarOpen("error", "Please fill all the required fields"));
+    }
+  };
+
   // CHANGE STATE
-  const handleEditSettings = (e: React.MouseEvent<HTMLInputElement>) => {
+  const handleEditSettings = () => {
     if (structureDefinition) {
-      e.preventDefault();
       const structureDefinitonToEdit = { ...structureDefinition };
       // content required
       structureDefinitonToEdit.url = url;
@@ -72,150 +106,112 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
     }
   };
 
-  const renderContact = (
-    <>
-      <label htmlFor="contactName">Contact Name</label>
-      <input type="text" name="contactName" />
-      <br />
-      <select name="contactSystem">
-        <option value="phone">Phone</option>
-        <option value="fax">fax</option>
-        <option value="email">email</option>
-        <option value="pager">pager</option>
-        <option value="url">url</option>
-        <option value="sms">sms</option>
-        <option value="other">other</option>
-      </select>
-      <br />
-      <label htmlFor="contactValue">Value</label>
-      <input type="text" name="contactValue" />
-      <br />
-      <select name="contactUse">
-        <option value="home">home</option>
-        <option value="work">work</option>
-        <option value="temp">temporary</option>
-        <option value="old">old</option>
-        <option value="mobile">mobile</option>
-      </select>
-    </>
-  );
-
   return (
-    <form>
-      <TextField
-        label="Name of profile"
-        defaultValue={name || ""}
-        variant="outlined"
-        onBlur={(e) => setName(e.target.value)}
-        helperText="A Computer-ready name (e.g. a token) that identifies the structure."
-      />
-      <br />
-      <br />
-      <TextField
-        label="Description"
-        defaultValue={description || ""}
-        variant="outlined"
-        onBlur={(e) => setDescription(e.target.value)}
-        helperText="A free text natural language description of the structure and its use."
-      />
-
-      <br />
-      <label htmlFor="url">url</label>
-      <input
-        type="url"
-        name="url"
-        value={((url as unknown) as string) || ""}
-        onChange={(e) => setUrl(e.target.value)}
-      />
-      <br />
-      <label htmlFor="id">id</label>
-      <input
-        type="text"
-        name="id"
-        value={id || ""}
-        onChange={(e) => setId(e.target.value)}
-      />
-      <br />
-      <label htmlFor="publisher">publisher</label>
-      <input
-        type="text"
-        name="publisher"
-        value={publisher || ""}
-        onChange={(e) => setPublisher(e.target.value)}
-      />
-      <br />
-      <label htmlFor="copyright">copyright</label>
-      <input
-        type="text"
-        name="copyright"
-        value={copyright || ""}
-        onChange={(e) => setCopyright(e.target.value)}
-      />
-      <br />
-      <label htmlFor="title">title</label>
-      <input
-        type="text"
-        name="title"
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <br />
-      <label htmlFor="status">Status</label>
-      <select
-        name="status"
-        onChange={(e) =>
-          setStatus(e.target.value as StructureDefinitionStatusKind)
-        }
-        defaultValue={status || ""}
-      >
-        <option value="active">active</option>
-        <option value="draft">draft</option>
-        <option value="retired">retired</option>
-        <option value="unknown">unknown</option>
-      </select>
-      <br />
-      <input
-        type="datetime-local"
-        onChange={(e) => {
-          const date = new Date(e.target.value);
-          setDate(
-            new Date(
-              date.getTime() - date.getTimezoneOffset() * 60000
-            ).toISOString()
-          );
-        }}
-      />
-      <br />
-      <label htmlFor="purpose">purpose</label>
-      <input
-        type="text"
-        name="purpose"
-        onChange={(e) => setPurpose(e.target.value)}
-      />
-      <br />
-      <input
-        type="checkbox"
-        name="abstract"
-        onChange={(e) => setAbstract(e.target.checked)}
-      />
-      <label htmlFor="abstract">abstract</label>
-      <br />
-      <input
-        type="checkbox"
-        name="experimental"
-        onChange={(e) => {
-          setExperimental(e.target.checked);
-        }}
-      />
-      <label htmlFor="experimental">experimental</label>
-      <br />
-      {renderContact}
-      <br />
-      <input
-        type="submit"
-        value="submit"
-        onClick={(e) => handleEditSettings(e)}
-      />
-    </form>
+    <Container className={classes.formContainer}>
+      <form className={classes.form}>
+        <InputWithHelpYouyou
+          label="Id"
+          value={id || ""}
+          tool={tooltipValues.id}
+          onBlur={(event) => setId(event.target.value)}
+        />
+        <InputWithHelpYouyou
+          label="Url *"
+          value={url || ""}
+          tool={tooltipValues.url}
+          onBlur={(event) => setUrl(event.target.value)}
+          error={url ? false : true}
+        />
+        <InputWithHelpYouyou
+          label="Name of profile *"
+          value={name || ""}
+          tool={tooltipValues.name}
+          onBlur={(event) => setName(event.target.value)}
+          error={name ? false : true}
+        />
+        <InputWithHelpYouyou
+          label="Title"
+          value={title || ""}
+          tool={tooltipValues.title}
+          onBlur={(event) => setTitle(event.target.value)}
+        />
+        <SelectYouyou
+          label="Status"
+          value={status}
+          tool={tooltipValues.status}
+          onChange={(e) =>
+            setStatus(e.target.value as StructureDefinitionStatusKind)
+          }
+          choices={["active", "draft", "retired", "unknown"]}
+        />
+        <FormControlLabel
+          value="experimental"
+          control={
+            <Checkbox onChange={(e) => setExperimental(e.target.checked)} />
+          }
+          label="experimental"
+        />
+        <InputDateYouyou
+          label="Date"
+          value={new Date(Date.now()).toISOString().slice(0, -5)}
+          tool={tooltipValues.date}
+          onChange={(event) => {
+            const date = new Date(event.target.value);
+            setDate(
+              new Date(
+                date.getTime() - date.getTimezoneOffset() * 60000
+              ).toISOString()
+            );
+          }}
+        />
+        <InputWithHelpYouyou
+          label="Publisher"
+          value={publisher || ""}
+          tool={tooltipValues.publisher}
+          onBlur={(event) => setPublisher(event.target.value)}
+        />
+        <InputWithHelpYouyou
+          classname={classes.bigInput}
+          label={"Description"}
+          value={description || ""}
+          tool={tooltipValues.description}
+          onBlur={(event) => setDescription(event.target.value)}
+        />
+        <InputWithHelpYouyou
+          label="Purpose"
+          value={purpose || ""}
+          tool={tooltipValues.purpose}
+          onBlur={(event) => setPurpose(event.target.value)}
+        />
+        <InputWithHelpYouyou
+          label="Copyright"
+          value={copyright || ""}
+          tool={tooltipValues.copyright}
+          onBlur={(event) => setCopyright(event.target.value)}
+        />
+        <br />
+        <FormControlLabel
+          value="abstract"
+          control={<Checkbox onChange={(e) => setAbstract(e.target.checked)} />}
+          label="abstract"
+        />
+        <br />
+      </form>
+      <div className={classes.endForm}>
+        <Button
+          className={classes.submitButton}
+          variant="contained"
+          color="secondary"
+          onClick={(e) => {
+            e.preventDefault();
+            checkForm();
+          }}
+        >
+          Submit
+        </Button>
+        <Typography color="textSecondary">* Required Fields</Typography>
+      </div>
+    </Container>
   );
 };
 

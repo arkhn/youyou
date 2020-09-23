@@ -20,7 +20,6 @@ import {
   selectStructureDefMeta
 } from "state/actions/resourceActions";
 
-// STYLES
 import useStyles from "./style";
 
 type StructureDefinitionTreeProps = {

@@ -1,4 +1,5 @@
 import { makeStyles, Theme } from "@material-ui/core/styles";
+import { navbarHeight } from "components/navbar/style";
 
 const useStyles = makeStyles((theme: Theme) => ({
   loader: {
@@ -7,43 +8,66 @@ const useStyles = makeStyles((theme: Theme) => ({
     justifyContent: "center",
     alignItems: "center"
   },
-  homepage: {
-    margin: 32
+  button: {
+    marginRight: theme.spacing(2)
   },
-  homepageText: {
-    marginLeft: 8,
-    marginBottom: 24,
-    color: theme.palette.primary.main
-  },
-  grid: {
-    width: "100%",
-    margin: 0
-  },
-  gridItem: {
-    height: 116
-  },
-  itemCardAction: {
-    height: "100%",
-    padding: 10
-  },
-  itemLink: {
+  buttonLink: {
     textDecoration: "none"
   },
-  itemCard: {
-    height: "100%",
-    boxShadow: "1px 1px 5px rgba(0, 0, 0, 0.25)",
-    borderRadius: 8
+  items: {
+    padding: theme.spacing(5),
+    paddingTop: navbarHeight + theme.spacing(2),
+    height: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between"
   },
-  itemText: {
-    zIndex: 2,
-    position: "relative",
+  item: {
+    display: "flex",
+    flexDirection: "row",
+    flexGrow: 1,
+    paddingTop: theme.spacing(2),
+    position: "relative"
+  },
+  itemCard: {
+    padding: theme.spacing(3),
+    "@media (min-width:1300px)": {
+      padding: theme.spacing(8)
+    }
+  },
+  itemCardTitle: {
+    zIndex: 1
+  },
+  itemCardLeft: {
+    minWidth: 300,
+    display: "flex",
+    flexDirection: "column",
     textAlign: "center",
-    color: theme.palette.primary.dark
+    justifyContent: "center",
+    alignItems: "space",
+    marginRight: theme.spacing(4),
+    position: "relative",
+    "@media (min-width:1300px)": {
+      minWidth: 400
+    }
+  },
+  itemCardLeftButton: {
+    position: "relative",
+    width: "100%",
+    zIndex: 1
+  },
+  itemCardRight: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-around"
   },
   fhirLogo: {
     position: "absolute",
+    bottom: 0,
     right: 0,
-    bottom: 0
+    zIndex: 0,
+    height: "100%",
+    width: "auto"
   }
 }));
 

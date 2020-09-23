@@ -6,7 +6,10 @@ import { IElementDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { Paper, Container, Typography, Breadcrumbs } from "@material-ui/core";
 
 import AttributeEditor from "components/editor/attributeEditor/AttributeEditor";
-import { ButtonDownloadYouyou } from "components/smallComponents";
+import {
+  ButtonDownloadYouyou,
+  SnackBarYouyou
+} from "components/smallComponents";
 import Navbar from "components/navbar/Navbar";
 import StructureDefinitionTree from "components/structureDefinitionTree/StructureDefinitionTree";
 import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";
@@ -19,7 +22,7 @@ const Editor: React.FC<{}> = () => {
     loading,
     structureDefinition,
     selectedAttributeId,
-    selectStructureDefMeta
+    structureDefMeta
   } = useSelector((state: RootState) => state.resource);
   const classes = useStyles();
   const splitedAttributeSelected = selectedAttributeId?.split(".");
@@ -29,7 +32,7 @@ const Editor: React.FC<{}> = () => {
   );
 
   if (loading) {
-    return <div>Loading ...</div>;
+    return <div>Loading</div>;
   }
 
   if (!structureDefinition) {
@@ -37,7 +40,7 @@ const Editor: React.FC<{}> = () => {
   }
 
   const renderBreadcrumbs = () => {
-    if (selectStructureDefMeta)
+    if (structureDefMeta)
       return <Typography className={classes.capitalize}>Metadata</Typography>;
     return splitedAttributeSelected?.map((split: string) => (
       <Typography key={split} className={classes.capitalize}>
@@ -47,7 +50,7 @@ const Editor: React.FC<{}> = () => {
   };
 
   const renderTitle = () => {
-    if (selectStructureDefMeta) return "Metadatas";
+    if (structureDefMeta) return "Metadatas";
     return splitedAttributeSelected?.map((split: string, index) => {
       if (index === splitedAttributeSelected.length - 1) return split;
     });
@@ -56,9 +59,10 @@ const Editor: React.FC<{}> = () => {
   return (
     <div>
       <Navbar />
+      <SnackBarYouyou />
       <div className={classes.mapping}>
         <Paper className={clsx(classes.paperLeft, classes.paper)}>
-          <Typography variant="h1">{structureDefinition.id}</Typography>
+          <Typography variant="h1">{structureDefinition.name}</Typography>
           <Container className={classes.treeView}>
             <StructureDefinitionTree structureDefintion={structureDefinition} />
           </Container>
@@ -78,7 +82,7 @@ const Editor: React.FC<{}> = () => {
             {renderTitle()}
           </Typography>
           <Paper className={clsx(classes.paperRight, classes.paper)}>
-            {selectStructureDefMeta && (
+            {structureDefMeta && (
               <StructureDefSettings
                 structureDefinition={structureDefinition}
                 type="resource"

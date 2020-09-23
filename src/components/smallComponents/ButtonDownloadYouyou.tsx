@@ -1,5 +1,8 @@
 import React from "react";
 
+import { useDispatch } from "react-redux";
+import { setSnackbarOpen } from "state/actions/snackbarActions";
+
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { Button } from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core/styles";
@@ -18,11 +21,12 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }));
 
-const ButtonDownloadYouyou: React.FC<ButtonDownloadYouyouProps> = ({
+const ButtonDownload: React.FC<ButtonDownloadYouyouProps> = ({
   text,
   toDownload
 }) => {
   const classes = useStyles();
+  const dispatch = useDispatch();
 
   return (
     <a
@@ -37,6 +41,11 @@ const ButtonDownloadYouyou: React.FC<ButtonDownloadYouyouProps> = ({
         color="secondary"
         variant="contained"
         className={classes.buttonDownloadSize}
+        onClick={() =>
+          dispatch(
+            setSnackbarOpen("success", "Profile Downloaded ! Congratulation !")
+          )
+        }
       >
         {text}
       </Button>
@@ -44,4 +53,4 @@ const ButtonDownloadYouyou: React.FC<ButtonDownloadYouyouProps> = ({
   );
 };
 
-export default ButtonDownloadYouyou;
+export default ButtonDownload;

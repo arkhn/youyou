@@ -28,23 +28,25 @@ export type DataFetched = {
 export type ResourceState = {
   resources: DataFetched[];
   structureDefinition: IStructureDefinition | null;
+  profile: IStructureDefinition | null;
   extensionStructureDefinition: IStructureDefinition | null;
   selectedResourceId: string | null;
   selectedAttributeId: string | undefined;
   loading: boolean;
   error: Error | null;
-  selectStructureDefMeta: boolean;
+  structureDefMeta: boolean;
 };
 
 const initialState: ResourceState = {
   resources: [],
   structureDefinition: null,
+  profile: null,
   extensionStructureDefinition: extensionStructureDefinition as IStructureDefinition,
   selectedResourceId: null,
   selectedAttributeId: undefined,
   loading: false,
   error: null,
-  selectStructureDefMeta: true
+  structureDefMeta: true
 };
 
 export type AllResourcesAction =
@@ -92,6 +94,7 @@ export const resource = (
         ...state,
         loading: false,
         structureDefinition: action.payload,
+        profile: action.payload,
         error: null
       };
     case UPDATE_STRUCTURE_DEF_FAILURE:
@@ -99,13 +102,14 @@ export const resource = (
         ...state,
         loading: false,
         structureDefinition: null,
+        profile: null,
         error: action.payload
       };
     case SELECT_ATTRIBUTE:
       return {
         ...state,
         selectedAttributeId: action.payload,
-        selectStructureDefMeta: false
+        structureDefMeta: false
       };
     case UPDATE_STRUCTURE_DEF_EXTENSION:
       return {
@@ -118,7 +122,7 @@ export const resource = (
       return {
         ...state,
         selectedAttributeId: undefined,
-        selectStructureDefMeta: true
+        structureDefMeta: true
       };
     default:
       return state;
