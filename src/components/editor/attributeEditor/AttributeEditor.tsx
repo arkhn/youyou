@@ -84,16 +84,22 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
   ) => {
     if (event.target.value.match(number) || event.target.value === "") {
       setDefaultValueMin(event.target.value);
-      if (
-        Number(event.target.value) >= baseMin &&
-        (Number(event.target.value) <= Number(maxState) || maxState === "*")
-      ) {
-        if (event.target.value !== "") {
-          setMinState(Number(event.target.value));
-          setCardinality(minState + "|" + maxState);
-        }
+    }
+  };
+
+  const handleBlurInputMin = (
+    event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    if (
+      Number(event.target.value) >= baseMin &&
+      (Number(event.target.value) <= Number(maxState) || maxState === "*")
+    ) {
+      if (event.target.value !== "") {
+        setMinState(Number(event.target.value));
+        setCardinality(minState + "|" + maxState);
       }
     }
+    setDefaultValueMin(minState.toString());
   };
 
   const handleInputMax = (
@@ -130,13 +136,14 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
         Cardinality base.max: {baseMax}, current state: {maxState}, non base:
         {attribute.max}
       </p>
+
       <div>
         <CssTextFieldYouyou
           label="min"
           variant="outlined"
           className={classes.cardinalityInput}
           onChange={handleInputMin}
-          onBlur={() => setDefaultValueMin(minState.toString())}
+          onBlur={handleBlurInputMin}
           value={defaultValueMin}
         />
         <CssTextFieldYouyou
@@ -147,22 +154,22 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
           onBlur={() => setDefaultValueMax(maxState)}
           value={defaultValueMax}
         />
+        <CssToggleButtonGroupYouyou
+          value={cardinality}
+          exclusive
+          onChange={handleCardinality}
+        >
+          {allCardinalities.map((cardi, index) => (
+            <ToggleButton
+              key={`cardi${index}`}
+              value={`${cardi.min}|${cardi.max}`}
+              disabled={isDisabledInput(cardi.min, cardi.max, baseMin, baseMax)}
+            >
+              {cardi.min}...{cardi.max}
+            </ToggleButton>
+          ))}
+        </CssToggleButtonGroupYouyou>
       </div>
-      <CssToggleButtonGroupYouyou
-        value={cardinality}
-        exclusive
-        onChange={handleCardinality}
-      >
-        {allCardinalities.map((cardi, index) => (
-          <ToggleButton
-            key={`cardi${index}`}
-            value={`${cardi.min}|${cardi.max}`}
-            disabled={isDisabledInput(cardi.min, cardi.max, baseMin, baseMax)}
-          >
-            {cardi.min}...{cardi.max}
-          </ToggleButton>
-        ))}
-      </CssToggleButtonGroupYouyou>
       <br />
       <Button type="submit" color="secondary" variant="contained">
         Submit
