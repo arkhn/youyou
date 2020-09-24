@@ -123,11 +123,11 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
     <form onSubmit={changeProfileState}>
       <Typography variant="h1">Cardinality</Typography>
       <p>
-        Cardinality min: {baseMin}, current: {minState}, attribute:{" "}
+        Cardinality base.min: {baseMin}, current state: {minState}, non base:
         {attribute.min}
       </p>
       <p>
-        Cardinality max: {baseMax}, current: {maxState}, attribute:{" "}
+        Cardinality base.max: {baseMax}, current state: {maxState}, non base:
         {attribute.max}
       </p>
       <div>
@@ -163,6 +163,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
           </ToggleButton>
         ))}
       </CssToggleButtonGroupYouyou>
+      <br />
       <Button type="submit" color="secondary" variant="contained">
         Submit
       </Button>
