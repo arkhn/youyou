@@ -15,35 +15,12 @@ import {
   CssToggleButtonGroupYouyou
 } from "components/smallComponents";
 import useStyles from "components/editor/attributeEditor/style";
-import { isDisabledInput } from "./utils";
+import { allCardinalities, isDisabledInput } from "./utils";
 
 type AttributeEditorProps = {
   attribute: IElementDefinition;
   structureDefinition: IStructureDefinition;
 };
-
-const allCardinalities: { min: number; max: string }[] = [
-  {
-    min: 0,
-    max: "0"
-  },
-  {
-    min: 0,
-    max: "1"
-  },
-  {
-    min: 0,
-    max: "*"
-  },
-  {
-    min: 1,
-    max: "1"
-  },
-  {
-    min: 1,
-    max: "*"
-  }
-];
 
 const AttributeEditor: React.FC<AttributeEditorProps> = ({
   attribute,
