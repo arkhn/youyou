@@ -1,7 +1,7 @@
 import React from "react";
 import { CssTextFieldYouyou, TooltipYouyou } from "components/smallComponents";
 
-type inputDateProps = {
+type InputDateYouyouProps = {
   label: string;
   value: string;
   tool: string;
@@ -10,7 +10,7 @@ type inputDateProps = {
   ) => void;
 };
 
-const InputDate: React.FC<inputDateProps> = ({
+const InputDateYouyou: React.FC<InputDateYouyouProps> = ({
   label,
   value,
   tool,
@@ -30,4 +30,4 @@ const InputDate: React.FC<inputDateProps> = ({
   );
 };
 
-export default InputDate;
+export default InputDateYouyou;

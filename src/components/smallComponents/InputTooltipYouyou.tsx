@@ -2,7 +2,7 @@ import React from "react";
 
 import { CssTextFieldYouyou, TooltipYouyou } from "components/smallComponents";
 
-type inputWithHelpProps = {
+type InputTooltipYouyouProps = {
   classname?: string;
   label: string;
   value: string;
@@ -13,7 +13,7 @@ type inputWithHelpProps = {
   ) => void;
 };
 
-const InputWithHelp: React.FC<inputWithHelpProps> = ({
+const InputTooltipYouyou: React.FC<InputTooltipYouyouProps> = ({
   label,
   value,
   tool,
@@ -36,4 +36,4 @@ const InputWithHelp: React.FC<inputWithHelpProps> = ({
   );
 };
 
-export default InputWithHelp;
+export default InputTooltipYouyou;

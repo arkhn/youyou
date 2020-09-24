@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 import { TooltipYouyou } from ".";
 
-type inputWithHelpProps = {
+type SelectWithHelpYouyouProps = {
   label: string;
   value: StatusKind | undefined;
   choices: string[];
@@ -46,7 +46,7 @@ const CssFormControl = withStyles((theme: Theme) => ({
   }
 }))(FormControl);
 
-const SelectWithHelp: React.FC<inputWithHelpProps> = ({
+const SelectWithHelpYouyou: React.FC<SelectWithHelpYouyouProps> = ({
   label,
   value,
   error = false,
@@ -76,4 +76,4 @@ const SelectWithHelp: React.FC<inputWithHelpProps> = ({
   );
 };
 
-export default SelectWithHelp;
+export default SelectWithHelpYouyou;

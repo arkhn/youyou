@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }));
 
-const ButtonDownload: React.FC<ButtonDownloadYouyouProps> = ({
+const ButtonDownloadYouyou: React.FC<ButtonDownloadYouyouProps> = ({
   text,
   toDownload
 }) => {
@@ -53,4 +53,4 @@ const ButtonDownload: React.FC<ButtonDownloadYouyouProps> = ({
   );
 };
 
-export default ButtonDownload;
+export default ButtonDownloadYouyou;

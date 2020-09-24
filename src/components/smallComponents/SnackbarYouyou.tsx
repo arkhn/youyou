@@ -7,7 +7,7 @@ import { Snackbar } from "@material-ui/core";
 import { Alert, Color } from "@material-ui/lab";
 import { setSnackbarOpen } from "state/actions/snackbarActions";
 
-const SnackbarWithButton: React.FC<{}> = () => {
+const SnackbarWithButtonYouyou: React.FC<{}> = () => {
   const { message, severity } = useSelector(
     (state: RootState) => state.snackbarReducer
   );
@@ -47,4 +47,4 @@ const SnackbarWithButton: React.FC<{}> = () => {
   );
 };
 
-export default SnackbarWithButton;
+export default SnackbarWithButtonYouyou;
