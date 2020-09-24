@@ -15,6 +15,7 @@ import {
   CssToggleButtonGroupYouyou
 } from "components/smallComponents";
 import useStyles from "components/editor/attributeEditor/style";
+import { isDisabledInput } from "./utils";
 
 type AttributeEditorProps = {
   attribute: IElementDefinition;
@@ -48,8 +49,10 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
   attribute,
   structureDefinition
 }) => {
+  const number = /^[0-9]+$/;
   const baseMin = Number(attribute?.base?.min);
   const baseMax = attribute?.base?.max?.toString();
+
   const [minState, setMinState] = useState(Number(attribute.min));
   const [maxState, setMaxState] = useState(attribute.max?.toString());
   const [cardinality, setCardinality] = useState(
@@ -60,8 +63,8 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
   );
   const [defaultValueMax, setDefaultValueMax] = useState(attribute?.max);
 
-  const number = /^[0-9]+$/;
   const dispatch = useDispatch();
+
   const classes = useStyles();
 
   useEffect(() => {
@@ -90,18 +93,6 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
     }
   };
 
-  const isDisabledInput = (min: number, max: string) => {
-    if (
-      baseMin !== undefined &&
-      baseMax !== undefined &&
-      min >= baseMin &&
-      (baseMax === "*" || (baseMax === "1" && (max === "1" || max === "0")))
-    ) {
-      return false;
-    }
-    return true;
-  };
-
   const changeProfileState = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (attribute && structureDefinition) {
@@ -111,59 +102,45 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
     }
   };
 
-  const inputMax = (
-    <CssTextFieldYouyou
-      label="max"
-      variant="outlined"
-      className={classes.cardinalityInput}
-      onChange={(event) => {
-        if (
-          event.target.value.match(number) ||
-          event.target.value === "*" ||
-          event.target.value === ""
-        ) {
-          setDefaultValueMax(event.target.value);
-          if (
-            (Number(event.target.value) >= minState &&
-              Number(event.target.value) <= Number(baseMax)) ||
-            (baseMax === "*" && Number(event.target.value) >= minState) ||
-            (baseMax === "*" && event.target.value === "*")
-          ) {
-            if (event.target.value !== "") {
-              setMaxState(event.target.value);
-              setCardinality(minState + "|" + maxState);
-            }
-          }
+  const handleInputMin = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    if (event.target.value.match(number) || event.target.value === "") {
+      setDefaultValueMin(event.target.value);
+      if (
+        Number(event.target.value) >= baseMin &&
+        (Number(event.target.value) <= Number(maxState) || maxState === "*")
+      ) {
+        if (event.target.value !== "") {
+          setMinState(Number(event.target.value));
+          setCardinality(minState + "|" + maxState);
         }
-      }}
-      onBlur={() => setDefaultValueMax(maxState)}
-      value={defaultValueMax}
-    />
-  );
+      }
+    }
+  };
 
-  const inputMin = (
-    <CssTextFieldYouyou
-      label="min"
-      variant="outlined"
-      className={classes.cardinalityInput}
-      onChange={(event) => {
-        if (event.target.value.match(number) || event.target.value === "") {
-          setDefaultValueMin(event.target.value);
-          if (
-            Number(event.target.value) >= baseMin &&
-            (Number(event.target.value) <= Number(maxState) || maxState === "*")
-          ) {
-            if (event.target.value !== "") {
-              setMinState(Number(event.target.value));
-              setCardinality(minState + "|" + maxState);
-            }
-          }
+  const handleInputMax = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    if (
+      event.target.value.match(number) ||
+      event.target.value === "*" ||
+      event.target.value === ""
+    ) {
+      setDefaultValueMax(event.target.value);
+      if (
+        (Number(event.target.value) >= minState &&
+          Number(event.target.value) <= Number(baseMax)) ||
+        (baseMax === "*" && Number(event.target.value) >= minState) ||
+        (baseMax === "*" && event.target.value === "*")
+      ) {
+        if (event.target.value !== "") {
+          setMaxState(event.target.value);
+          setCardinality(minState + "|" + maxState);
         }
-      }}
-      onBlur={() => setDefaultValueMin(minState.toString())}
-      value={defaultValueMin}
-    />
-  );
+      }
+    }
+  };
 
   return (
     <form onSubmit={changeProfileState}>
@@ -177,8 +154,22 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
         {attribute.max}
       </p>
       <div>
-        {inputMin}
-        {inputMax}
+        <CssTextFieldYouyou
+          label="min"
+          variant="outlined"
+          className={classes.cardinalityInput}
+          onChange={handleInputMin}
+          onBlur={() => setDefaultValueMin(minState.toString())}
+          value={defaultValueMin}
+        />
+        <CssTextFieldYouyou
+          label="max"
+          variant="outlined"
+          className={classes.cardinalityInput}
+          onChange={handleInputMax}
+          onBlur={() => setDefaultValueMax(maxState)}
+          value={defaultValueMax}
+        />
       </div>
       <CssToggleButtonGroupYouyou
         value={cardinality}
@@ -189,7 +180,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
           <ToggleButton
             key={`cardi${index}`}
             value={`${cardi.min}|${cardi.max}`}
-            disabled={isDisabledInput(cardi.min, cardi.max)}
+            disabled={isDisabledInput(cardi.min, cardi.max, baseMin, baseMax)}
           >
             {cardi.min}...{cardi.max}
           </ToggleButton>
