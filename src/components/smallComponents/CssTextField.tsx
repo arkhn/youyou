@@ -1,7 +1,7 @@
 import { TextField, Theme } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
 
-const CssTextFieldYouyou = withStyles((theme: Theme) => ({
+const CssTextField = withStyles((theme: Theme) => ({
   root: {
     marginBottom: 16,
     marginRight: 8,
@@ -21,4 +21,4 @@ const CssTextFieldYouyou = withStyles((theme: Theme) => ({
   }
 }))(TextField);
 
-export default CssTextFieldYouyou;
+export default CssTextField;

@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "state/store";
 import clsx from "clsx";
 
-import ButtonDownloadYouyou from "../smallComponents/ButtonDownloadYouyou";
+import { ButtonDownload } from "components/smallComponents";
 import AttributeEditor from "components/extensionEditor/attributeEditor/AttributeEditor";
 import Navbar from "components/navbar/Navbar";
 import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";
@@ -48,7 +48,7 @@ const ExtensionEditor: React.FC<{}> = () => {
                   structureDefinition={extensionStructureDefinition}
                 />
               </Container>
-              <ButtonDownloadYouyou
+              <ButtonDownload
                 text="Download extension"
                 toDownload={extensionStructureDefinition}
               />

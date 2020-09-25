@@ -4,7 +4,7 @@ import { IconButton, Theme, Tooltip } from "@material-ui/core";
 import { HelpOutline } from "@material-ui/icons";
 import { withStyles } from "@material-ui/styles";
 
-type TooltipYouyouProps = {
+type TooltipHelpProps = {
   tool: string;
 };
 
@@ -14,7 +14,7 @@ const CssTooltip = withStyles((theme: Theme) => ({
   }
 }))(Tooltip);
 
-const TooltipYouyou: React.FC<TooltipYouyouProps> = ({ tool }) => {
+const TooltipHelp: React.FC<TooltipHelpProps> = ({ tool }) => {
   return (
     <IconButton>
       <CssTooltip title={tool}>
@@ -24,4 +24,4 @@ const TooltipYouyou: React.FC<TooltipYouyouProps> = ({ tool }) => {
   );
 };
 
-export default TooltipYouyou;
+export default TooltipHelp;

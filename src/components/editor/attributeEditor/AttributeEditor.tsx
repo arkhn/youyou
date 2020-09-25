@@ -10,10 +10,7 @@ import {
 import { Typography, Button } from "@material-ui/core";
 import { ToggleButton } from "@material-ui/lab";
 
-import {
-  CssTextFieldYouyou,
-  CssToggleButtonGroupYouyou
-} from "components/smallComponents";
+import { CssTextField, CssToggleButtonGroup } from "components/smallComponents";
 import useStyles from "components/editor/attributeEditor/style";
 import { allCardinalities, isDisabledInput } from "./utils";
 
@@ -33,7 +30,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
   const [minState, setMinState] = useState(Number(attribute.min));
   const [maxState, setMaxState] = useState(attribute.max?.toString());
   const [cardinality, setCardinality] = useState(
-    attribute.min + "|" + attribute.max
+    `${attribute.min}|${attribute.max}`
   );
   const [defaultValueMin, setDefaultValueMin] = useState(
     attribute?.min?.toString()
@@ -49,7 +46,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
     setMinState(Number(attribute.min));
     setDefaultValueMin(attribute.min?.toString());
     setDefaultValueMax(attribute.max);
-    setCardinality(attribute.min + "|" + attribute.max);
+    setCardinality(`${attribute.min}|${attribute.max}`);
   }, [attribute]);
 
   useEffect(() => {
@@ -138,7 +135,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
       </p>
 
       <div>
-        <CssTextFieldYouyou
+        <CssTextField
           label="min"
           variant="outlined"
           className={classes.cardinalityInput}
@@ -146,7 +143,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
           onBlur={handleBlurInputMin}
           value={defaultValueMin}
         />
-        <CssTextFieldYouyou
+        <CssTextField
           label="max"
           variant="outlined"
           className={classes.cardinalityInput}
@@ -154,21 +151,21 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
           onBlur={() => setDefaultValueMax(maxState)}
           value={defaultValueMax}
         />
-        <CssToggleButtonGroupYouyou
+        <CssToggleButtonGroup
           value={cardinality}
           exclusive
           onChange={handleCardinality}
         >
           {allCardinalities.map((cardi, index) => (
             <ToggleButton
-              key={`cardi${index}`}
+              key={index}
               value={`${cardi.min}|${cardi.max}`}
               disabled={isDisabledInput(cardi.min, cardi.max, baseMin, baseMax)}
             >
               {cardi.min}...{cardi.max}
             </ToggleButton>
           ))}
-        </CssToggleButtonGroupYouyou>
+        </CssToggleButtonGroup>
       </div>
       <br />
       <Button type="submit" color="secondary" variant="contained">

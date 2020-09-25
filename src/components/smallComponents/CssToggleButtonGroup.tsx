@@ -2,7 +2,7 @@ import { Theme } from "@material-ui/core";
 import { ToggleButtonGroup } from "@material-ui/lab";
 import { withStyles } from "@material-ui/styles";
 
-const CssToggleButtonGroupYouyou = withStyles((theme: Theme) => ({
+const CssToggleButtonGroup = withStyles((theme: Theme) => ({
   root: {
     "& .Mui-selected": {
       backgroundColor: theme.palette.secondary.main
@@ -46,4 +46,4 @@ const CssToggleButtonGroupYouyou = withStyles((theme: Theme) => ({
   }
 }))(ToggleButtonGroup);
 
-export default CssToggleButtonGroupYouyou;
+export default CssToggleButtonGroup;

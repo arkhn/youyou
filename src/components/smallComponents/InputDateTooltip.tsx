@@ -1,7 +1,7 @@
 import React from "react";
-import { CssTextFieldYouyou, TooltipYouyou } from "components/smallComponents";
+import { CssTextField, TooltipHelp } from "components/smallComponents";
 
-type InputDateYouyouProps = {
+type InputDateProps = {
   label: string;
   value: string;
   tool: string;
@@ -10,24 +10,24 @@ type InputDateYouyouProps = {
   ) => void;
 };
 
-const InputDateYouyou: React.FC<InputDateYouyouProps> = ({
+const InputDate: React.FC<InputDateProps> = ({
   label,
   value,
   tool,
   onChange
 }) => {
   return (
-    <CssTextFieldYouyou
+    <CssTextField
       label={label}
       defaultValue={value}
       type="datetime-local"
       onChange={onChange}
       variant="outlined"
       InputProps={{
-        endAdornment: <TooltipYouyou tool={tool} />
+        endAdornment: <TooltipHelp tool={tool} />
       }}
     />
   );
 };
 
-export default InputDateYouyou;
+export default InputDate;

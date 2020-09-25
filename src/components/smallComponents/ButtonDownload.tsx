@@ -7,7 +7,7 @@ import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { Button } from "@material-ui/core";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 
-type ButtonDownloadYouyouProps = {
+type ButtonDownloadProps = {
   text: string;
   toDownload: IStructureDefinition;
 };
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }));
 
-const ButtonDownloadYouyou: React.FC<ButtonDownloadYouyouProps> = ({
+const ButtonDownload: React.FC<ButtonDownloadProps> = ({
   text,
   toDownload
 }) => {
@@ -53,4 +53,4 @@ const ButtonDownloadYouyou: React.FC<ButtonDownloadYouyouProps> = ({
   );
 };
 
-export default ButtonDownloadYouyou;
+export default ButtonDownload;

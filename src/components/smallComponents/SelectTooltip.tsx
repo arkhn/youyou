@@ -9,9 +9,9 @@ import {
   Theme,
   withStyles
 } from "@material-ui/core";
-import { TooltipYouyou } from ".";
+import { TooltipHelp } from ".";
 
-type SelectWithHelpYouyouProps = {
+type SelectWithHelpProps = {
   label: string;
   value: StatusKind | undefined;
   choices: string[];
@@ -46,7 +46,7 @@ const CssFormControl = withStyles((theme: Theme) => ({
   }
 }))(FormControl);
 
-const SelectWithHelpYouyou: React.FC<SelectWithHelpYouyouProps> = ({
+const SelectWithHelp: React.FC<SelectWithHelpProps> = ({
   label,
   value,
   error = false,
@@ -58,7 +58,7 @@ const SelectWithHelpYouyou: React.FC<SelectWithHelpYouyouProps> = ({
     <CssFormControl variant="outlined">
       <InputLabel htmlFor={label}>{label}</InputLabel>
       <Select
-        endAdornment={<TooltipYouyou tool={tool} />}
+        endAdornment={<TooltipHelp tool={tool} />}
         error={error}
         value={value}
         label={label}
@@ -76,4 +76,4 @@ const SelectWithHelpYouyou: React.FC<SelectWithHelpYouyouProps> = ({
   );
 };
 
-export default SelectWithHelpYouyou;
+export default SelectWithHelp;
