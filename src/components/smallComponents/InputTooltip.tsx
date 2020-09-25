@@ -1,8 +1,8 @@
 import React from "react";
 
-import { CssTextFieldYouyou, TooltipYouyou } from "components/smallComponents";
+import { CssTextField, TooltipHelp } from "components/smallComponents";
 
-type inputWithHelpProps = {
+type InputTooltipProps = {
   classname?: string;
   label: string;
   value: string;
@@ -13,7 +13,7 @@ type inputWithHelpProps = {
   ) => void;
 };
 
-const InputWithHelp: React.FC<inputWithHelpProps> = ({
+const InputTooltip: React.FC<InputTooltipProps> = ({
   label,
   value,
   tool,
@@ -22,7 +22,7 @@ const InputWithHelp: React.FC<inputWithHelpProps> = ({
   classname
 }) => {
   return (
-    <CssTextFieldYouyou
+    <CssTextField
       className={classname}
       label={label}
       error={error}
@@ -30,10 +30,10 @@ const InputWithHelp: React.FC<inputWithHelpProps> = ({
       variant="outlined"
       onBlur={onBlur}
       InputProps={{
-        endAdornment: <TooltipYouyou tool={tool} />
+        endAdornment: <TooltipHelp tool={tool} />
       }}
     />
   );
 };
 
-export default InputWithHelp;
+export default InputTooltip;

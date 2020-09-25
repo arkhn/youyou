@@ -1,17 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
+import { AppBar, Toolbar, Typography } from "@material-ui/core";
 
 import { ReactComponent as Logo } from "assets/img/arkhn-logo.svg";
 
 import useStyles from "components/navbar/style";
 
-type NavbarProps = {
-  buttonType?: "profile" | "extension";
-};
-
-const Navbar: React.FC<NavbarProps> = ({ buttonType }) => {
+const Navbar: React.FC<{}> = () => {
   const classes = useStyles();
 
   return (
@@ -23,21 +19,6 @@ const Navbar: React.FC<NavbarProps> = ({ buttonType }) => {
             YOUYOU
           </Typography>
         </Link>
-        {buttonType === "profile" ? (
-          <Link to={"/"}>
-            <Button variant="contained" className={classes.buttonExtension}>
-              Profile generator
-            </Button>
-          </Link>
-        ) : (
-          buttonType && (
-            <Link to={"/extension/edit"}>
-              <Button variant="contained" className={classes.buttonExtension}>
-                Extension generator
-              </Button>
-            </Link>
-          )
-        )}
       </Toolbar>
     </AppBar>
   );

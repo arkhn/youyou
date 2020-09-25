@@ -6,10 +6,7 @@ import { IElementDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { Paper, Container, Typography, Breadcrumbs } from "@material-ui/core";
 
 import AttributeEditor from "components/editor/attributeEditor/AttributeEditor";
-import {
-  ButtonDownloadYouyou,
-  SnackBarYouyou
-} from "components/smallComponents";
+import { ButtonDownload, SnackBarWithClose } from "components/smallComponents";
 import Navbar from "components/navbar/Navbar";
 import StructureDefinitionTree from "components/structureDefinitionTree/StructureDefinitionTree";
 import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";
@@ -59,14 +56,16 @@ const Editor: React.FC<{}> = () => {
   return (
     <div>
       <Navbar />
-      <SnackBarYouyou />
+      <SnackBarWithClose />
       <div className={classes.mapping}>
         <Paper className={clsx(classes.paperLeft, classes.paper)}>
           <Typography variant="h1">{structureDefinition.name}</Typography>
           <Container className={classes.treeView}>
-            <StructureDefinitionTree structureDefintion={structureDefinition} />
+            <StructureDefinitionTree
+              structureDefinition={structureDefinition}
+            />
           </Container>
-          <ButtonDownloadYouyou
+          <ButtonDownload
             text="Download profile"
             toDownload={structureDefinition}
           />
@@ -88,7 +87,7 @@ const Editor: React.FC<{}> = () => {
                 type="resource"
               />
             )}
-            {selectedAttributeId && (
+            {selectedAttributeId && attribute && (
               <AttributeEditor
                 attribute={attribute}
                 structureDefinition={structureDefinition}

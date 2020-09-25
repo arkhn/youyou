@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "state/store";
 import clsx from "clsx";
 
-import ButtonDownloadYouyou from "../smallComponents/ButtonDownloadYouyou";
+import { ButtonDownload } from "components/smallComponents";
 import AttributeEditor from "components/extensionEditor/attributeEditor/AttributeEditor";
 import Navbar from "components/navbar/Navbar";
 import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";
@@ -26,7 +26,7 @@ const ExtensionEditor: React.FC<{}> = () => {
   }
   return (
     <React.Fragment>
-      <Navbar buttonType="profile" />
+      <Navbar />
       <a
         href={
           "data:json/plain;charset=utf-8," +
@@ -45,10 +45,10 @@ const ExtensionEditor: React.FC<{}> = () => {
             <Paper className={clsx(classes.paperLeft, classes.paper)}>
               <Container>
                 <StructureDefinitionTree
-                  structureDefintion={extensionStructureDefinition}
+                  structureDefinition={extensionStructureDefinition}
                 />
               </Container>
-              <ButtonDownloadYouyou
+              <ButtonDownload
                 text="Download extension"
                 toDownload={extensionStructureDefinition}
               />

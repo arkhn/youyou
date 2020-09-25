@@ -79,7 +79,7 @@ const Homepage: React.FC<{}> = () => {
 
   return (
     <>
-      <Navbar buttonType="extension" />
+      <Navbar />
       <div className={classes.items}>{renderChoosingCards}</div>
     </>
   );

@@ -16,9 +16,9 @@ import {
 } from "@material-ui/core";
 
 import {
-  InputWithHelpYouyou,
-  InputDateYouyou,
-  SelectYouyou
+  InputTooltip,
+  InputDateTooltip,
+  SelectTooltip
 } from "components/smallComponents";
 import {
   updateStructureDefProfile,
@@ -109,33 +109,33 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   return (
     <Container className={classes.formContainer}>
       <form className={classes.form}>
-        <InputWithHelpYouyou
+        <InputTooltip
           label="Id"
           value={id || ""}
           tool={tooltipValues.id}
           onBlur={(event) => setId(event.target.value)}
         />
-        <InputWithHelpYouyou
+        <InputTooltip
           label="Url *"
           value={url || ""}
           tool={tooltipValues.url}
           onBlur={(event) => setUrl(event.target.value)}
           error={url ? false : true}
         />
-        <InputWithHelpYouyou
+        <InputTooltip
           label="Name of profile *"
           value={name || ""}
           tool={tooltipValues.name}
           onBlur={(event) => setName(event.target.value)}
           error={name ? false : true}
         />
-        <InputWithHelpYouyou
+        <InputTooltip
           label="Title"
           value={title || ""}
           tool={tooltipValues.title}
           onBlur={(event) => setTitle(event.target.value)}
         />
-        <SelectYouyou
+        <SelectTooltip
           label="Status"
           value={status}
           tool={tooltipValues.status}
@@ -151,7 +151,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
           }
           label="experimental"
         />
-        <InputDateYouyou
+        <InputDateTooltip
           label="Date"
           value={new Date(Date.now()).toISOString().slice(0, -5)}
           tool={tooltipValues.date}
@@ -164,26 +164,26 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
             );
           }}
         />
-        <InputWithHelpYouyou
+        <InputTooltip
           label="Publisher"
           value={publisher || ""}
           tool={tooltipValues.publisher}
           onBlur={(event) => setPublisher(event.target.value)}
         />
-        <InputWithHelpYouyou
+        <InputTooltip
           classname={classes.bigInput}
           label={"Description"}
           value={description || ""}
           tool={tooltipValues.description}
           onBlur={(event) => setDescription(event.target.value)}
         />
-        <InputWithHelpYouyou
+        <InputTooltip
           label="Purpose"
           value={purpose || ""}
           tool={tooltipValues.purpose}
           onBlur={(event) => setPurpose(event.target.value)}
         />
-        <InputWithHelpYouyou
+        <InputTooltip
           label="Copyright"
           value={copyright || ""}
           tool={tooltipValues.copyright}
