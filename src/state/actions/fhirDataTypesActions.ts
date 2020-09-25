@@ -1,0 +1,43 @@
+export const GET_FHIR_TYPES_FETCH_START = "GET_TYPES_FETCH_START";
+export const GET_FHIR_TYPES_FETCH_SUCCESS = "GET_FHIR_TYPES_FETCH_SUCCESS";
+export const GET_FHIR_TYPES_FETCH_FAILURE = "GET_FHIR_TYPES_FETCH_FAILURE";
+
+export type GetFhirTypesFetchStartAction = {
+  type: typeof GET_FHIR_TYPES_FETCH_START;
+};
+
+export type GetFhirTypesFetchSuccessAction = {
+  type: typeof GET_FHIR_TYPES_FETCH_SUCCESS;
+  payload: { name: string }[];
+};
+
+export type GetFhirTypesFetchFailureAction = {
+  type: typeof GET_FHIR_TYPES_FETCH_FAILURE;
+  payload: Error;
+};
+
+export const getFhirTypesFetchStart = (): GetFhirTypesFetchStartAction => {
+  return {
+    type: GET_FHIR_TYPES_FETCH_START
+  };
+};
+
+export const getFhirTypesFetchSuccess = (
+  primitiveIds: {
+    name: string;
+  }[]
+): GetFhirTypesFetchSuccessAction => {
+  return {
+    type: GET_FHIR_TYPES_FETCH_SUCCESS,
+    payload: primitiveIds
+  };
+};
+
+export const getFhirTypesFetchFailure = (
+  error: Error
+): GetFhirTypesFetchFailureAction => {
+  return {
+    type: GET_FHIR_TYPES_FETCH_FAILURE,
+    payload: error
+  };
+};

@@ -69,7 +69,6 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
       }
     }
   };
-
   let attributesForUI = { name: "", id: "", children: [] };
   if (paths) {
     paths.forEach(
