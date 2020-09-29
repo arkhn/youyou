@@ -112,7 +112,10 @@ const renderAttributes = (
     const newPath = splitPath.slice(1, splitPath.length).join(".");
     const newComplexType = {
       path: newPath,
-      type: complexType.type
+      type: complexType.type,
+      short: complexType.short,
+      min: complexType.min,
+      max: complexType.max
     };
     if (childNode) {
       return renderAttributes(newComplexType, rootPath, childNode, rootNode);
@@ -123,13 +126,19 @@ const renderAttributes = (
             id: rootPath.path,
             type: rootPath.type,
             children: [],
-            valueSet: rootPath.valueSet
+            short: rootPath.short,
+            valueSet: rootPath.valueSet,
+            min: rootPath.min,
+            max: rootPath.max
           }
         : {
             name: splitPath[0],
             id: rootPath.path,
             type: rootPath.type,
-            children: []
+            short: rootPath.short,
+            children: [],
+            min: rootPath.min,
+            max: rootPath.max
           };
       node.children.push(newNode);
       return renderAttributes(newComplexType, rootPath, newNode, rootNode);
@@ -154,7 +163,14 @@ export const requestFhirDataTypes = () => {
       complexTypesRequest.status === 200 &&
       valueSetRequest.status === 200
     ) {
-      let complexTypeTree = { id: "", name: "", type: "", children: [] };
+      let complexTypeTree = {
+        id: "",
+        name: "",
+        type: "",
+        children: [],
+        min: null,
+        max: ""
+      };
       const complexTypes: IComplexTypes[] = [];
       complexTypesRequest.data.entry.forEach((result: fhirDataState) => {
         result.resource.snapshot.element.forEach(
@@ -164,7 +180,10 @@ export const requestFhirDataTypes = () => {
                 element.short &&
                 complexTypes.push({
                   path: element.path,
-                  type: element.path
+                  type: element.path,
+                  short: element.short,
+                  min: element.min as number,
+                  max: element.max as string
                 });
             } else {
               element.type.forEach((type: IElementDefinition_Type) => {
@@ -187,8 +206,11 @@ export const requestFhirDataTypes = () => {
                             type.code &&
                             element.short &&
                             complexTypes.push({
+                              short: element.short,
                               path: element.path,
                               type: type.code,
+                              min: element.min as number,
+                              max: element.max as string,
                               valueSet: findValueSet.resource.concept
                             });
                         }
@@ -197,15 +219,21 @@ export const requestFhirDataTypes = () => {
                           type.code &&
                           element.short &&
                           complexTypes.push({
+                            short: element.short,
                             path: element.path,
-                            type: type.code
+                            type: type.code,
+                            min: element.min as number,
+                            max: element.max as string
                           });
                       }
                     });
                   } else {
                     complexTypes.push({
                       path: element.path,
-                      type: type.code
+                      type: type.code,
+                      short: element.short,
+                      min: element.min as number,
+                      max: element.max as string
                     });
                   }
                 }

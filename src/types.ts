@@ -31,6 +31,8 @@ export interface RenderNode {
   name: string;
   id: string;
   type: string;
+  min: number | null;
+  max: string;
   children: RenderNode[];
   valueSet?: ICodeSystem_Concept;
 }
@@ -38,5 +40,8 @@ export interface RenderNode {
 export interface IComplexTypes {
   path: string;
   type: string;
+  short: string;
+  min: number | null;
+  max: string;
   valueSet?: ICodeSystem_Concept;
 }

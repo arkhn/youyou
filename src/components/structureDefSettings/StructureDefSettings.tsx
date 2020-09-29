@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setSnackbarOpen } from "state/actions/snackbarActions";
 
 import {
@@ -30,16 +30,21 @@ import {
 } from "components/structureDefSettings/utils";
 
 import useStyles from "components/structureDefSettings/style";
+import { RootState } from "state/store";
+import { RenderNode } from "types";
 
 type StructureDefSettingsProps = {
   structureDefinition: IStructureDefinition;
-  type?: "resource" | "extension";
+  structureDefinitionType?: "resource" | "extension";
 };
 
 const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   structureDefinition,
-  type = "resource"
+  structureDefinitionType = "resource"
 }) => {
+  const { complexTypes, primitiveTypes } = useSelector(
+    (state: RootState) => state.fhirDataTypes
+  );
   const dispatch = useDispatch();
   const classes = useStyles();
   // LOCAL STATES
@@ -98,13 +103,74 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
       editAttribute(structureDefinitonToEdit, "title", title);
       editAttribute(structureDefinitonToEdit, "copyright", copyright);
 
-      if (type === "resource") {
+      if (structureDefinitionType === "resource") {
         dispatch(updateStructureDefProfile(structureDefinitonToEdit));
-      } else if (type === "extension") {
+      } else if (structureDefinitionType === "extension") {
         dispatch(updateStructureDefExtension(structureDefinitonToEdit));
       }
     }
   };
+
+  const isPrimitive = (toFind: string) => {
+    const findPrimitive = primitiveTypes.find((type) => {
+      if (
+        type.name === toFind ||
+        toFind === "http://hl7.org/fhirpath/System.String" ||
+        toFind === "Extension"
+      ) {
+        return true;
+      }
+      return false;
+    });
+    return findPrimitive;
+  };
+
+  const contact: any[] = [];
+  const createComplexeType = (rootTypes: RenderNode[], rootArray: any[]) => {
+    const newObject: any = {};
+    rootTypes.forEach((type: RenderNode) => {
+      if (isPrimitive(type.type)) {
+        newObject[type.name] = undefined;
+      } else {
+        const newArray: any[] = [];
+        if (type.children.length > 0) {
+          const newType: RenderNode[] = [];
+          type.children.forEach((element) => {
+            newType.push(element);
+          });
+          createComplexeType(newType, newArray);
+          newObject[type.name] = newArray;
+        } else {
+          const newType: RenderNode[] = [];
+          if (complexTypes) {
+            const toFind = complexTypes.find(
+              (newComplexType) => newComplexType.name === type.type
+            );
+            toFind?.children?.forEach((element) => {
+              newType.push(element);
+            });
+            createComplexeType(newType as RenderNode[], newArray);
+            newObject[type.name] = newArray;
+          }
+        }
+      }
+    });
+    rootArray.push(newObject);
+  };
+
+  const contactDetail: RenderNode[] = [];
+  if (complexTypes) {
+    const toFind = complexTypes.find((type) => type.name === "ContactDetail");
+
+    console.log(toFind);
+    toFind?.children?.forEach((element) => {
+      contactDetail.push(element);
+    });
+  }
+
+  console.log(complexTypes);
+  createComplexeType(contactDetail, contact);
+  console.log(contact[0]);
 
   return (
     <Container className={classes.formContainer}>
