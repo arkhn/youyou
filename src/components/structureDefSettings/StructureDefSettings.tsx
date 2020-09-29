@@ -142,7 +142,12 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
           onChange={(e) =>
             setStatus(e.target.value as StructureDefinitionStatusKind)
           }
-          choices={["active", "draft", "retired", "unknown"]}
+          choices={[
+            { value: "active", label: "Active" },
+            { value: "draft", label: "Draft" },
+            { value: "retired", label: "Retired" },
+            { value: "unknown", label: "Unknown" }
+          ]}
         />
         <FormControlLabel
           value="experimental"

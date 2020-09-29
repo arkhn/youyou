@@ -14,7 +14,7 @@ import { TooltipHelp } from ".";
 type SelectWithHelpProps = {
   label: string;
   value: StatusKind | undefined;
-  choices: string[];
+  choices: { label: string; value: string }[];
   error?: boolean | undefined;
   tool: string;
   onChange: (
@@ -66,8 +66,8 @@ const SelectWithHelp: React.FC<SelectWithHelpProps> = ({
       >
         {choices.map((choice) => {
           return (
-            <MenuItem value={choice} key={choice}>
-              {choice}
+            <MenuItem value={choice.value} key={choice.value}>
+              {choice.label}
             </MenuItem>
           );
         })}

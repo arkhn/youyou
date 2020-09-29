@@ -1,6 +1,12 @@
 import { ThunkDispatch } from "redux-thunk";
 import { Action } from "redux";
-import { FetchedData } from "types";
+import {
+  FetchedData,
+  FetchedDataCodeSystem,
+  fhirDataState,
+  IComplexTypes,
+  RenderNode
+} from "types";
 import { AxiosResponse } from "axios";
 
 import api from "services/api";
@@ -21,8 +27,7 @@ import { RootState } from "state/store";
 import {
   IStructureDefinition,
   IElementDefinition,
-  IElementDefinition_Type,
-  IStructureDefinition_Snapshot
+  IElementDefinition_Type
 } from "@ahryman40k/ts-fhir-types/lib/R4";
 import {
   getFhirTypesFetchFailure,
@@ -93,28 +98,6 @@ export const requestExtensionDataTypes = () => {
   };
 };
 
-type fhirDataState = {
-  resource: {
-    name: string;
-    snapshot: IStructureDefinition_Snapshot;
-  };
-  search: {
-    mode: string;
-  };
-};
-
-interface RenderNode {
-  name: string;
-  id?: string;
-  type: string;
-  children: RenderNode[];
-}
-
-interface IComplexTypes {
-  path: string;
-  type: string;
-}
-
 const renderAttributes = (
   complexType: IComplexTypes,
   rootPath: IComplexTypes,
@@ -127,16 +110,27 @@ const renderAttributes = (
     const splitPath = complexType.path.split(".");
     const childNode = node.children.find((c) => c.name === splitPath[0]);
     const newPath = splitPath.slice(1, splitPath.length).join(".");
-    const newComplexType = { path: newPath, type: complexType.type };
+    const newComplexType = {
+      path: newPath,
+      type: complexType.type
+    };
     if (childNode) {
       return renderAttributes(newComplexType, rootPath, childNode, rootNode);
     } else {
-      const newNode = {
-        name: splitPath[0],
-        id: rootPath.path,
-        type: rootPath.type,
-        children: []
-      };
+      const newNode = rootPath.valueSet
+        ? {
+            name: splitPath[0],
+            id: rootPath.path,
+            type: rootPath.type,
+            children: [],
+            valueSet: rootPath.valueSet
+          }
+        : {
+            name: splitPath[0],
+            id: rootPath.path,
+            type: rootPath.type,
+            children: []
+          };
       node.children.push(newNode);
       return renderAttributes(newComplexType, rootPath, newNode, rootNode);
     }
@@ -152,23 +146,69 @@ export const requestFhirDataTypes = () => {
     const complexTypesRequest: AxiosResponse<any> = await api.get(
       "/StructureDefinition?derivation=specialization&kind=complex-type&_elements=name&_elements=snapshot"
     );
+    const valueSetRequest: AxiosResponse<any> = await api.get(
+      "https://demo.arkhn.com/api/CodeSystem?_elements=name,concept&_count=508"
+    );
     if (
       primitiveTypesRequest.status === 200 &&
-      complexTypesRequest.status === 200
+      complexTypesRequest.status === 200 &&
+      valueSetRequest.status === 200
     ) {
-      let typesForTree = { id: "", name: "", type: "", children: [] };
+      let complexTypeTree = { id: "", name: "", type: "", children: [] };
       const complexTypes: IComplexTypes[] = [];
       complexTypesRequest.data.entry.forEach((result: fhirDataState) => {
         result.resource.snapshot.element.forEach(
           (element: IElementDefinition) => {
             if (!element.type) {
               element.path &&
-                complexTypes.push({ path: element.path, type: element.path });
+                element.short &&
+                complexTypes.push({
+                  path: element.path,
+                  type: element.path
+                });
             } else {
               element.type.forEach((type: IElementDefinition_Type) => {
-                element.path &&
-                  type.code &&
-                  complexTypes.push({ path: element.path, type: type.code });
+                if (element.path && type.code && element.short) {
+                  if (type.code === "code") {
+                    element.binding?.extension?.forEach((extension) => {
+                      if (extension.valueString) {
+                        const findValueSet = valueSetRequest.data.entry.find(
+                          (
+                            value: FetchedDataCodeSystem
+                          ): FetchedDataCodeSystem | undefined => {
+                            if (value.resource.name === extension.valueString) {
+                              return value;
+                            }
+                            return undefined;
+                          }
+                        );
+                        if (findValueSet) {
+                          element.path &&
+                            type.code &&
+                            element.short &&
+                            complexTypes.push({
+                              path: element.path,
+                              type: type.code,
+                              valueSet: findValueSet.resource.concept
+                            });
+                        }
+                      } else {
+                        element.path &&
+                          type.code &&
+                          element.short &&
+                          complexTypes.push({
+                            path: element.path,
+                            type: type.code
+                          });
+                      }
+                    });
+                  } else {
+                    complexTypes.push({
+                      path: element.path,
+                      type: type.code
+                    });
+                  }
+                }
               });
             }
           }
@@ -177,17 +217,17 @@ export const requestFhirDataTypes = () => {
       if (complexTypes) {
         complexTypes.forEach(
           (type) =>
-            type && renderAttributes(type, type, typesForTree, typesForTree)
+            type &&
+            renderAttributes(type, type, complexTypeTree, complexTypeTree)
         );
       }
-      const toRender = typesForTree.children;
-      console.log(toRender);
 
       dispatch(
         getFhirTypesFetchSuccess(
           primitiveTypesRequest.data.entry.map((result: FetchedData) => {
             return result.resource;
-          })
+          }),
+          complexTypeTree.children
         )
       );
     } else {
