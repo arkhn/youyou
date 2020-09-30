@@ -186,22 +186,46 @@ export const requestFhirDataTypes = () => {
                   max: element.max as string
                 });
             } else {
-              element.type.forEach((type: IElementDefinition_Type) => {
-                if (element.path && type.code && element.short) {
-                  if (type.code === "code") {
-                    element.binding?.extension?.forEach((extension) => {
-                      if (extension.valueString) {
-                        const findValueSet = valueSetRequest.data.entry.find(
-                          (
-                            value: FetchedDataCodeSystem
-                          ): FetchedDataCodeSystem | undefined => {
-                            if (value.resource.name === extension.valueString) {
-                              return value;
+              if (element.type.length > 1) {
+                complexTypes.push({
+                  path: element.path as string,
+                  type: element.type,
+                  short: element.short as string,
+                  min: element.min as number,
+                  max: element.max as string
+                });
+              } else {
+                element.type.forEach((type: IElementDefinition_Type) => {
+                  if (element.path && type.code && element.short) {
+                    if (type.code === "code") {
+                      element.binding?.extension?.forEach((extension) => {
+                        if (extension.valueString) {
+                          const findValueSet = valueSetRequest.data.entry.find(
+                            (
+                              value: FetchedDataCodeSystem
+                            ): FetchedDataCodeSystem | undefined => {
+                              if (
+                                value.resource.name === extension.valueString
+                              ) {
+                                return value;
+                              }
+                              return undefined;
                             }
-                            return undefined;
+                          );
+                          if (findValueSet) {
+                            element.path &&
+                              type.code &&
+                              element.short &&
+                              complexTypes.push({
+                                short: element.short,
+                                path: element.path,
+                                type: type.code,
+                                min: element.min as number,
+                                max: element.max as string,
+                                valueSet: findValueSet.resource.concept
+                              });
                           }
-                        );
-                        if (findValueSet) {
+                        } else {
                           element.path &&
                             type.code &&
                             element.short &&
@@ -210,34 +234,22 @@ export const requestFhirDataTypes = () => {
                               path: element.path,
                               type: type.code,
                               min: element.min as number,
-                              max: element.max as string,
-                              valueSet: findValueSet.resource.concept
+                              max: element.max as string
                             });
                         }
-                      } else {
-                        element.path &&
-                          type.code &&
-                          element.short &&
-                          complexTypes.push({
-                            short: element.short,
-                            path: element.path,
-                            type: type.code,
-                            min: element.min as number,
-                            max: element.max as string
-                          });
-                      }
-                    });
-                  } else {
-                    complexTypes.push({
-                      path: element.path,
-                      type: type.code,
-                      short: element.short,
-                      min: element.min as number,
-                      max: element.max as string
-                    });
+                      });
+                    } else {
+                      complexTypes.push({
+                        path: element.path,
+                        type: type.code,
+                        short: element.short,
+                        min: element.min as number,
+                        max: element.max as string
+                      });
+                    }
                   }
-                }
-              });
+                });
+              }
             }
           }
         );

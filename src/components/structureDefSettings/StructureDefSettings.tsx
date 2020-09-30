@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setSnackbarOpen } from "state/actions/snackbarActions";
 
 import {
+  IElementDefinition_Type,
   IStructureDefinition,
   StructureDefinitionStatusKind
 } from "@ahryman40k/ts-fhir-types/lib/R4";
@@ -111,7 +112,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
     }
   };
 
-  const isPrimitive = (toFind: string) => {
+  const isPrimitive = (toFind: string | IElementDefinition_Type[]) => {
     const findPrimitive = primitiveTypes.find((type) => {
       if (
         type.name === toFind ||
@@ -125,12 +126,18 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
     return findPrimitive;
   };
 
-  const contact: any[] = [];
+  const complexTypeToFill: any[] = [];
   const createComplexeType = (rootTypes: RenderNode[], rootArray: any[]) => {
     const newObject: any = {};
     rootTypes.forEach((type: RenderNode) => {
       if (isPrimitive(type.type)) {
         newObject[type.name] = undefined;
+      } else if (Array.isArray(type.type)) {
+        const newTypeArray: any[] = [];
+        type.type.forEach((code) => {
+          newTypeArray.push(code.code);
+        });
+        newObject[type.name] = newTypeArray;
       } else {
         const newArray: any[] = [];
         if (type.children.length > 0) {
@@ -139,7 +146,11 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
             newType.push(element);
           });
           createComplexeType(newType, newArray);
-          newObject[type.name] = newArray;
+          if (type.max === "1") {
+            newObject[type.name] = newArray[0];
+          } else {
+            newObject[type.name] = newArray;
+          }
         } else {
           const newType: RenderNode[] = [];
           if (complexTypes) {
@@ -150,7 +161,11 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
               newType.push(element);
             });
             createComplexeType(newType as RenderNode[], newArray);
-            newObject[type.name] = newArray;
+            if (type.max === "1") {
+              newObject[type.name] = newArray[0];
+            } else {
+              newObject[type.name] = newArray;
+            }
           }
         }
       }
@@ -161,16 +176,14 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   const contactDetail: RenderNode[] = [];
   if (complexTypes) {
     const toFind = complexTypes.find((type) => type.name === "ContactDetail");
-
-    console.log(toFind);
     toFind?.children?.forEach((element) => {
       contactDetail.push(element);
     });
   }
-
-  console.log(complexTypes);
-  createComplexeType(contactDetail, contact);
-  console.log(contact[0]);
+  createComplexeType(contactDetail, complexTypeToFill);
+  console.log(structureDefinition);
+  structureDefinition.contact = complexTypeToFill[0];
+  console.log(structureDefinition);
 
   return (
     <Container className={classes.formContainer}>
