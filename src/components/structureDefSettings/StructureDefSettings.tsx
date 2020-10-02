@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { setSnackbarOpen } from "state/actions/snackbarActions";
 
 import {
-  IElementDefinition_Type,
   IStructureDefinition,
   StructureDefinitionStatusKind
 } from "@ahryman40k/ts-fhir-types/lib/R4";
@@ -32,7 +31,7 @@ import {
 
 import useStyles from "components/structureDefSettings/style";
 import { RootState } from "state/store";
-import { RenderNode } from "types";
+import ContactEditor from "./contactDetailEditor/ContactDetailEditor";
 
 type StructureDefSettingsProps = {
   structureDefinition: IStructureDefinition;
@@ -43,9 +42,6 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   structureDefinition,
   structureDefinitionType = "resource"
 }) => {
-  const { complexTypes, primitiveTypes } = useSelector(
-    (state: RootState) => state.fhirDataTypes
-  );
   const dispatch = useDispatch();
   const classes = useStyles();
   // LOCAL STATES
@@ -112,82 +108,10 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
     }
   };
 
-  const isPrimitive = (toFind: string | IElementDefinition_Type[]) => {
-    const findPrimitive = primitiveTypes.find((type) => {
-      if (
-        type.name === toFind ||
-        toFind === "http://hl7.org/fhirpath/System.String" ||
-        toFind === "Extension"
-      ) {
-        return true;
-      }
-      return false;
-    });
-    return findPrimitive;
-  };
-
-  const complexTypeToFill: any[] = [];
-  const createComplexeType = (rootTypes: RenderNode[], rootArray: any[]) => {
-    const newObject: any = {};
-    rootTypes.forEach((type: RenderNode) => {
-      if (isPrimitive(type.type)) {
-        newObject[type.name] = undefined;
-      } else if (Array.isArray(type.type)) {
-        const newTypeArray: any[] = [];
-        type.type.forEach((code) => {
-          newTypeArray.push(code.code);
-        });
-        newObject[type.name] = newTypeArray;
-      } else {
-        const newArray: any[] = [];
-        if (type.children.length > 0) {
-          const newType: RenderNode[] = [];
-          type.children.forEach((element) => {
-            newType.push(element);
-          });
-          createComplexeType(newType, newArray);
-          if (type.max === "1") {
-            newObject[type.name] = newArray[0];
-          } else {
-            newObject[type.name] = newArray;
-          }
-        } else {
-          const newType: RenderNode[] = [];
-          if (complexTypes) {
-            const toFind = complexTypes.find(
-              (newComplexType) => newComplexType.name === type.type
-            );
-            toFind?.children?.forEach((element) => {
-              newType.push(element);
-            });
-            createComplexeType(newType as RenderNode[], newArray);
-            if (type.max === "1") {
-              newObject[type.name] = newArray[0];
-            } else {
-              newObject[type.name] = newArray;
-            }
-          }
-        }
-      }
-    });
-    rootArray.push(newObject);
-  };
-
-  const contactDetail: RenderNode[] = [];
-  if (complexTypes) {
-    const toFind = complexTypes.find((type) => type.name === "ContactDetail");
-    toFind?.children?.forEach((element) => {
-      contactDetail.push(element);
-    });
-  }
-  createComplexeType(contactDetail, complexTypeToFill);
-  console.log(structureDefinition);
-  structureDefinition.contact = complexTypeToFill[0];
-  console.log(structureDefinition);
-
   return (
     <Container className={classes.formContainer}>
       <form className={classes.form}>
+        <ContactEditor />
         <InputTooltip
           label="Id"
           value={id || ""}

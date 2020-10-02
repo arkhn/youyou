@@ -169,9 +169,12 @@ export const requestFhirDataTypes = () => {
         type: "",
         children: [],
         min: null,
-        max: ""
+        max: "",
+        short: ""
       };
+
       const complexTypes: IComplexTypes[] = [];
+
       complexTypesRequest.data.entry.forEach((result: fhirDataState) => {
         result.resource.snapshot.element.forEach(
           (element: IElementDefinition) => {
@@ -254,6 +257,7 @@ export const requestFhirDataTypes = () => {
           }
         );
       });
+
       if (complexTypes) {
         complexTypes.forEach(
           (type) =>
@@ -261,13 +265,20 @@ export const requestFhirDataTypes = () => {
             renderAttributes(type, type, complexTypeTree, complexTypeTree)
         );
       }
+      const complexTypesAttributes: any[] = [];
+      complexTypesRequest.data.entry.forEach((e: any) => {
+        e.resource.snapshot.element.forEach((element: any) => {
+          complexTypesAttributes.push(element);
+        });
+      });
 
       dispatch(
         getFhirTypesFetchSuccess(
           primitiveTypesRequest.data.entry.map((result: FetchedData) => {
             return result.resource;
           }),
-          complexTypeTree.children
+          complexTypeTree.children,
+          complexTypesAttributes
         )
       );
     } else {

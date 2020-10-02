@@ -3,7 +3,6 @@ import { withStyles } from "@material-ui/styles";
 
 const CssTextField = withStyles((theme: Theme) => ({
   root: {
-    marginBottom: 16,
     marginRight: 8,
     width: 300,
     maxWidth: 300,

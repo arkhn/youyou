@@ -1,4 +1,9 @@
-import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
+import {
+  IElementDefinition_Type,
+  IStructureDefinition
+} from "@ahryman40k/ts-fhir-types/lib/R4";
+import { PrimitiveTypesType } from "state/actions/fhirDataTypesActions";
+import { RenderNode } from "types";
 
 export const editAttribute = <K extends keyof IStructureDefinition>(
   structureToEdit: IStructureDefinition,
@@ -28,4 +33,77 @@ export const tooltipValues = {
     "A free text natural language description of the structure and its use.",
   purpose: "Why this structure was created - what the intent of it is",
   copyright: "Use and/or publishing restrictions"
+};
+
+export const createComplexeType = (
+  rootTypes: RenderNode[],
+  rootArray: any[],
+  primitiveTypes: PrimitiveTypesType[],
+  complexTypes: RenderNode[]
+) => {
+  const isPrimitive = (
+    toFind: string | IElementDefinition_Type[],
+    primitiveTypes: PrimitiveTypesType[]
+  ) => {
+    const findPrimitive = primitiveTypes.find((type) => {
+      if (
+        type.name === toFind ||
+        toFind === "http://hl7.org/fhirpath/System.String" ||
+        toFind === "Extension"
+      ) {
+        return true;
+      }
+      return false;
+    });
+    return findPrimitive;
+  };
+
+  const newObject: any = {};
+  rootTypes.forEach((type: RenderNode) => {
+    if (isPrimitive(type.type, primitiveTypes)) {
+      newObject[type.name] = undefined;
+    } else if (Array.isArray(type.type)) {
+      const newTypeArray: any[] = [];
+      type.type.forEach((code) => {
+        newTypeArray.push(code.code);
+      });
+      newObject[type.name] = newTypeArray;
+    } else {
+      const newArray: any[] = [];
+      if (type.children.length > 0) {
+        const newType: RenderNode[] = [];
+        type.children.forEach((element) => {
+          newType.push(element);
+        });
+        createComplexeType(newType, newArray, primitiveTypes, complexTypes);
+        if (type.max === "1") {
+          newObject[type.name] = newArray[0];
+        } else {
+          newObject[type.name] = newArray;
+        }
+      } else {
+        const newType: RenderNode[] = [];
+        if (complexTypes) {
+          const toFind = complexTypes.find(
+            (newComplexType) => newComplexType.name === type.type
+          );
+          toFind?.children?.forEach((element) => {
+            newType.push(element);
+          });
+          createComplexeType(
+            newType as RenderNode[],
+            newArray,
+            primitiveTypes,
+            complexTypes
+          );
+          if (type.max === "1") {
+            newObject[type.name] = newArray[0];
+          } else {
+            newObject[type.name] = newArray;
+          }
+        }
+      }
+    }
+  });
+  rootArray.push(newObject);
 };

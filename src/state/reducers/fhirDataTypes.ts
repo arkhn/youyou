@@ -1,3 +1,4 @@
+import { IElementDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 import {
   GetFhirTypesFetchFailureAction,
   GetFhirTypesFetchStartAction,
@@ -14,13 +15,15 @@ export type FhirDataTypesState = {
   complexTypes: RenderNode[];
   loadingTypes: boolean;
   errorTypes: Error | null;
+  complexTypesAttributes: IElementDefinition[];
 };
 
 const initialState: FhirDataTypesState = {
   primitiveTypes: [],
   complexTypes: [],
   loadingTypes: false,
-  errorTypes: null
+  errorTypes: null,
+  complexTypesAttributes: []
 };
 
 type allFhirDataTypesAction =
@@ -43,6 +46,7 @@ export const fhirDataTypes = (
         ...state,
         primitiveTypes: action.payload.primitiveTypes,
         complexTypes: action.payload.complexTypes,
+        complexTypesAttributes: action.payload.complexTypesAttributes,
         loadingTypes: false,
         errorTypes: null
       };

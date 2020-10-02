@@ -35,7 +35,19 @@ export interface RenderNode {
   children: RenderNode[];
   min: number | null;
   max: string;
-  valueSet?: ICodeSystem_Concept;
+  short: string;
+  valueSet?: ICodeSystem_Concept[];
+}
+
+export interface RenderComplexType {
+  name: string;
+  id: string;
+  type: string | IElementDefinition_Type[];
+  children: RenderComplexType[][];
+  min: number | null;
+  max: string;
+  short: string;
+  valueSet?: ICodeSystem_Concept[];
 }
 
 export interface IComplexTypes {
@@ -44,5 +56,5 @@ export interface IComplexTypes {
   short: string;
   min: number | null;
   max: string;
-  valueSet?: ICodeSystem_Concept;
+  valueSet?: ICodeSystem_Concept[];
 }

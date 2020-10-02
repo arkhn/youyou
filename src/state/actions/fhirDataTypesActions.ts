@@ -1,3 +1,4 @@
+import { IElementDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { RenderNode } from "types";
 
 export const GET_FHIR_TYPES_FETCH_START = "GET_TYPES_FETCH_START";
@@ -17,6 +18,7 @@ export type GetFhirTypesFetchSuccessAction = {
   payload: {
     primitiveTypes: PrimitiveTypesType[];
     complexTypes: RenderNode[];
+    complexTypesAttributes: IElementDefinition[];
   };
 };
 
@@ -33,11 +35,12 @@ export const getFhirTypesFetchStart = (): GetFhirTypesFetchStartAction => {
 
 export const getFhirTypesFetchSuccess = (
   primitiveTypes: PrimitiveTypesType[],
-  complexTypes: RenderNode[]
+  complexTypes: RenderNode[],
+  complexTypesAttributes: IElementDefinition[]
 ): GetFhirTypesFetchSuccessAction => {
   return {
     type: GET_FHIR_TYPES_FETCH_SUCCESS,
-    payload: { primitiveTypes, complexTypes }
+    payload: { primitiveTypes, complexTypes, complexTypesAttributes }
   };
 };
 

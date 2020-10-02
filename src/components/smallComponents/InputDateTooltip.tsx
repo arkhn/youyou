@@ -5,7 +5,7 @@ type InputDateProps = {
   label: string;
   value: string;
   tool: string;
-  onChange: (
+  onChange?: (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => void;
 };
