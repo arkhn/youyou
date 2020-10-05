@@ -19,9 +19,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginTop: 8,
     marginBottom: 8,
     marginRight: 8,
-    width: 300,
     display: "flex",
-    justifyContent: "center",
     alignItems: "center"
   },
   select: {

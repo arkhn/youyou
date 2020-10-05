@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setSnackbarOpen } from "state/actions/snackbarActions";
 
 import {
@@ -15,6 +15,8 @@ import {
   Typography
 } from "@material-ui/core";
 
+import useStyles from "components/structureDefSettings/style";
+import ContactEditor from "./contactDetailEditor/ContactDetailEditor";
 import {
   InputTooltip,
   InputDateTooltip,
@@ -28,10 +30,6 @@ import {
   editAttribute,
   tooltipValues
 } from "components/structureDefSettings/utils";
-
-import useStyles from "components/structureDefSettings/style";
-import { RootState } from "state/store";
-import ContactEditor from "./contactDetailEditor/ContactDetailEditor";
 
 type StructureDefSettingsProps = {
   structureDefinition: IStructureDefinition;

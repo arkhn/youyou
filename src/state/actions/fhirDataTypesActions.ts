@@ -19,6 +19,7 @@ export type GetFhirTypesFetchSuccessAction = {
     primitiveTypes: PrimitiveTypesType[];
     complexTypes: RenderNode[];
     complexTypesAttributes: IElementDefinition[];
+    structureDefinitionTree: RenderNode[];
   };
 };
 
@@ -36,11 +37,17 @@ export const getFhirTypesFetchStart = (): GetFhirTypesFetchStartAction => {
 export const getFhirTypesFetchSuccess = (
   primitiveTypes: PrimitiveTypesType[],
   complexTypes: RenderNode[],
-  complexTypesAttributes: IElementDefinition[]
+  complexTypesAttributes: IElementDefinition[],
+  structureDefinitionTree: RenderNode[]
 ): GetFhirTypesFetchSuccessAction => {
   return {
     type: GET_FHIR_TYPES_FETCH_SUCCESS,
-    payload: { primitiveTypes, complexTypes, complexTypesAttributes }
+    payload: {
+      primitiveTypes,
+      complexTypes,
+      complexTypesAttributes,
+      structureDefinitionTree
+    }
   };
 };
 

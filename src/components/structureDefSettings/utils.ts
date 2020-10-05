@@ -35,29 +35,30 @@ export const tooltipValues = {
   copyright: "Use and/or publishing restrictions"
 };
 
+export const isPrimitive = (
+  toFind: string | IElementDefinition_Type[],
+  primitiveTypes: PrimitiveTypesType[]
+) => {
+  const findPrimitive = primitiveTypes.find((type) => {
+    if (
+      type.name === toFind ||
+      toFind === "http://hl7.org/fhirpath/System.String" ||
+      toFind === "Extension" ||
+      toFind === "Reference"
+    ) {
+      return true;
+    }
+    return false;
+  });
+  return findPrimitive;
+};
+
 export const createComplexeType = (
   rootTypes: RenderNode[],
   rootArray: any[],
   primitiveTypes: PrimitiveTypesType[],
   complexTypes: RenderNode[]
 ) => {
-  const isPrimitive = (
-    toFind: string | IElementDefinition_Type[],
-    primitiveTypes: PrimitiveTypesType[]
-  ) => {
-    const findPrimitive = primitiveTypes.find((type) => {
-      if (
-        type.name === toFind ||
-        toFind === "http://hl7.org/fhirpath/System.String" ||
-        toFind === "Extension"
-      ) {
-        return true;
-      }
-      return false;
-    });
-    return findPrimitive;
-  };
-
   const newObject: any = {};
   rootTypes.forEach((type: RenderNode) => {
     if (isPrimitive(type.type, primitiveTypes)) {
@@ -68,7 +69,7 @@ export const createComplexeType = (
         newTypeArray.push(code.code);
       });
       newObject[type.name] = newTypeArray;
-    } else {
+    } else if (type.name !== "snapshot" && type.name !== "differential") {
       const newArray: any[] = [];
       if (type.children.length > 0) {
         const newType: RenderNode[] = [];

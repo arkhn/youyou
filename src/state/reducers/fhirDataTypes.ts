@@ -16,6 +16,7 @@ export type FhirDataTypesState = {
   loadingTypes: boolean;
   errorTypes: Error | null;
   complexTypesAttributes: IElementDefinition[];
+  structureDefinitionTree: RenderNode[];
 };
 
 const initialState: FhirDataTypesState = {
@@ -23,7 +24,8 @@ const initialState: FhirDataTypesState = {
   complexTypes: [],
   loadingTypes: false,
   errorTypes: null,
-  complexTypesAttributes: []
+  complexTypesAttributes: [],
+  structureDefinitionTree: []
 };
 
 type allFhirDataTypesAction =
@@ -47,6 +49,7 @@ export const fhirDataTypes = (
         primitiveTypes: action.payload.primitiveTypes,
         complexTypes: action.payload.complexTypes,
         complexTypesAttributes: action.payload.complexTypesAttributes,
+        structureDefinitionTree: action.payload.structureDefinitionTree,
         loadingTypes: false,
         errorTypes: null
       };

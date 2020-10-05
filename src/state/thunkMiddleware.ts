@@ -146,6 +146,92 @@ const renderAttributes = (
   }
 };
 
+const createTree = (
+  complexTypesRequest: AxiosResponse<any>,
+  valueSetRequest: AxiosResponse<any>
+) => {
+  const complexTypes: IComplexTypes[] = [];
+  complexTypesRequest.data.entry.forEach((result: fhirDataState) => {
+    result.resource.snapshot.element.forEach((element: IElementDefinition) => {
+      if (!element.type) {
+        element.path &&
+          element.short &&
+          complexTypes.push({
+            path: element.path,
+            type: element.path,
+            short: element.short,
+            min: element.min as number,
+            max: element.max as string
+          });
+      } else {
+        if (element.type.length > 1) {
+          complexTypes.push({
+            path: element.path as string,
+            type: element.type,
+            short: element.short as string,
+            min: element.min as number,
+            max: element.max as string
+          });
+        } else {
+          element.type.forEach((type: IElementDefinition_Type) => {
+            if (element.path && type.code && element.short) {
+              if (type.code === "code") {
+                element.binding?.extension?.forEach((extension) => {
+                  if (extension.valueString) {
+                    const findValueSet = valueSetRequest.data.entry.find(
+                      (
+                        value: FetchedDataCodeSystem
+                      ): FetchedDataCodeSystem | undefined => {
+                        if (value.resource.name === extension.valueString) {
+                          return value;
+                        }
+                        return undefined;
+                      }
+                    );
+                    if (findValueSet) {
+                      element.path &&
+                        type.code &&
+                        element.short &&
+                        complexTypes.push({
+                          short: element.short,
+                          path: element.path,
+                          type: type.code,
+                          min: element.min as number,
+                          max: element.max as string,
+                          valueSet: findValueSet.resource.concept
+                        });
+                    }
+                  } else {
+                    element.path &&
+                      type.code &&
+                      element.short &&
+                      complexTypes.push({
+                        short: element.short,
+                        path: element.path,
+                        type: type.code,
+                        min: element.min as number,
+                        max: element.max as string
+                      });
+                  }
+                });
+              } else {
+                complexTypes.push({
+                  path: element.path,
+                  type: type.code,
+                  short: element.short,
+                  min: element.min as number,
+                  max: element.max as string
+                });
+              }
+            }
+          });
+        }
+      }
+    });
+  });
+  return complexTypes;
+};
+
 export const requestFhirDataTypes = () => {
   return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
     dispatch(getFhirTypesFetchStart());
@@ -158,12 +244,25 @@ export const requestFhirDataTypes = () => {
     const valueSetRequest: AxiosResponse<any> = await api.get(
       "https://demo.arkhn.com/api/CodeSystem?_elements=name,concept&_count=508"
     );
+    const resourceStructureDefinition: AxiosResponse<any> = await api.get(
+      `/StructureDefinition?kind=resource&derivation=specialization&id=StructureDefinition`
+    );
     if (
       primitiveTypesRequest.status === 200 &&
       complexTypesRequest.status === 200 &&
-      valueSetRequest.status === 200
+      valueSetRequest.status === 200 &&
+      resourceStructureDefinition.status === 200
     ) {
-      let complexTypeTree = {
+      let complexTypeTree: RenderNode = {
+        id: "",
+        name: "",
+        type: "",
+        children: [],
+        min: null,
+        max: "",
+        short: ""
+      };
+      let structureDefinitionTree: RenderNode = {
         id: "",
         name: "",
         type: "",
@@ -173,96 +272,27 @@ export const requestFhirDataTypes = () => {
         short: ""
       };
 
-      const complexTypes: IComplexTypes[] = [];
+      const complexTypes = createTree(complexTypesRequest, valueSetRequest);
+      const structureDefinition = createTree(
+        resourceStructureDefinition,
+        valueSetRequest
+      );
 
-      complexTypesRequest.data.entry.forEach((result: fhirDataState) => {
-        result.resource.snapshot.element.forEach(
-          (element: IElementDefinition) => {
-            if (!element.type) {
-              element.path &&
-                element.short &&
-                complexTypes.push({
-                  path: element.path,
-                  type: element.path,
-                  short: element.short,
-                  min: element.min as number,
-                  max: element.max as string
-                });
-            } else {
-              if (element.type.length > 1) {
-                complexTypes.push({
-                  path: element.path as string,
-                  type: element.type,
-                  short: element.short as string,
-                  min: element.min as number,
-                  max: element.max as string
-                });
-              } else {
-                element.type.forEach((type: IElementDefinition_Type) => {
-                  if (element.path && type.code && element.short) {
-                    if (type.code === "code") {
-                      element.binding?.extension?.forEach((extension) => {
-                        if (extension.valueString) {
-                          const findValueSet = valueSetRequest.data.entry.find(
-                            (
-                              value: FetchedDataCodeSystem
-                            ): FetchedDataCodeSystem | undefined => {
-                              if (
-                                value.resource.name === extension.valueString
-                              ) {
-                                return value;
-                              }
-                              return undefined;
-                            }
-                          );
-                          if (findValueSet) {
-                            element.path &&
-                              type.code &&
-                              element.short &&
-                              complexTypes.push({
-                                short: element.short,
-                                path: element.path,
-                                type: type.code,
-                                min: element.min as number,
-                                max: element.max as string,
-                                valueSet: findValueSet.resource.concept
-                              });
-                          }
-                        } else {
-                          element.path &&
-                            type.code &&
-                            element.short &&
-                            complexTypes.push({
-                              short: element.short,
-                              path: element.path,
-                              type: type.code,
-                              min: element.min as number,
-                              max: element.max as string
-                            });
-                        }
-                      });
-                    } else {
-                      complexTypes.push({
-                        path: element.path,
-                        type: type.code,
-                        short: element.short,
-                        min: element.min as number,
-                        max: element.max as string
-                      });
-                    }
-                  }
-                });
-              }
-            }
-          }
-        );
-      });
-
-      if (complexTypes) {
+      if (complexTypes && structureDefinition) {
         complexTypes.forEach(
           (type) =>
             type &&
             renderAttributes(type, type, complexTypeTree, complexTypeTree)
+        );
+        structureDefinition.forEach(
+          (type) =>
+            type &&
+            renderAttributes(
+              type,
+              type,
+              structureDefinitionTree,
+              structureDefinitionTree
+            )
         );
       }
       const complexTypesAttributes: any[] = [];
@@ -278,7 +308,8 @@ export const requestFhirDataTypes = () => {
             return result.resource;
           }),
           complexTypeTree.children,
-          complexTypesAttributes
+          complexTypesAttributes,
+          structureDefinitionTree.children[0].children
         )
       );
     } else {
