@@ -41,13 +41,14 @@ const useStyles = makeStyles((theme: Theme) => ({
   accordionSummary: {
     display: "flex",
     justifyContent: "space-between",
-    alignItems: "center"
+    alignItems: "center",
+    flexGrow: 1
   },
   accordionAndButton: {
     display: "flex"
   },
   accordionButton: {
-    height: 50,
+    height: 30,
     width: 50
   }
 }));
@@ -89,6 +90,14 @@ const RenderComplexType: React.FC<DetailProps> = ({
                   <MuiAccordionSummary expandIcon={<ExpandMore />}>
                     <div className={classes.accordionSummary}>
                       <Typography>{item.name}</Typography>
+                      <Button
+                        className={classes.accordionButton}
+                        variant="outlined"
+                        color="primary"
+                        onClick={(event) => event.stopPropagation()}
+                      >
+                        <Add />
+                      </Button>
                     </div>
                   </MuiAccordionSummary>
                   <AccordionDetails>
@@ -100,13 +109,6 @@ const RenderComplexType: React.FC<DetailProps> = ({
                     />
                   </AccordionDetails>
                 </Accordion>
-                <Button
-                  className={classes.accordionButton}
-                  variant="outlined"
-                  color="primary"
-                >
-                  <Add />
-                </Button>
               </div>
             );
           }

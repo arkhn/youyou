@@ -11,6 +11,7 @@ import {
   Button,
   Checkbox,
   Container,
+  Divider,
   FormControlLabel,
   Typography
 } from "@material-ui/core";
@@ -121,6 +122,9 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
     complexTypes
   );
 
+  console.log(newStructureDef[0]);
+  console.log(structureDefinitionTree);
+
   return (
     <Container className={classes.formContainer}>
       <form className={classes.form}>
@@ -132,6 +136,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
             primitiveTypes={primitiveTypes}
           />
         </div>
+        <Divider />
         <InputTooltip
           label="Id"
           value={id || ""}
