@@ -3,7 +3,7 @@ import React from "react";
 
 import { makeStyles, Theme } from "@material-ui/core/styles";
 
-import { RenderNode } from "types";
+import { RenderAttributesTree } from "types";
 import { isPrimitive } from "components/structureDefSettings/utils";
 import { PrimitiveTypesType } from "state/actions/fhirDataTypesActions";
 import {
@@ -17,8 +17,8 @@ import { ExpandMore } from "@material-ui/icons";
 import { withStyles } from "@material-ui/styles";
 
 type DetailProps = {
-  contactPoint: RenderNode[];
-  complexTypes: RenderNode[];
+  contactPoint: RenderAttributesTree[];
+  complexTypes: RenderAttributesTree[];
   contactToEdit: any;
   primitiveTypes: PrimitiveTypesType[];
   complexeTypePattern?: any;
@@ -53,7 +53,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
   const createTree = (
     element: any[],
     primitive: PrimitiveTypesType[],
-    complexe: RenderNode[]
+    complexe: RenderAttributesTree[]
   ) => {
     element.forEach((item) => {
       if (!isPrimitive(item.type, primitive)) {

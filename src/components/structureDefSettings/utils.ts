@@ -3,7 +3,7 @@ import {
   IStructureDefinition
 } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { PrimitiveTypesType } from "state/actions/fhirDataTypesActions";
-import { RenderNode } from "types";
+import { RenderAttributesTree } from "types";
 
 export const editAttribute = <K extends keyof IStructureDefinition>(
   structureToEdit: IStructureDefinition,
@@ -54,13 +54,13 @@ export const isPrimitive = (
 };
 
 export const createComplexeType = (
-  rootTypes: RenderNode[],
+  rootTypes: RenderAttributesTree[],
   rootArray: any[],
   primitiveTypes: PrimitiveTypesType[],
-  complexTypes: RenderNode[]
+  complexTypes: RenderAttributesTree[]
 ) => {
   const newObject: any = {};
-  rootTypes.forEach((type: RenderNode) => {
+  rootTypes.forEach((type: RenderAttributesTree) => {
     if (isPrimitive(type.type, primitiveTypes)) {
       newObject[type.name] = undefined;
     } else if (Array.isArray(type.type)) {
@@ -72,7 +72,7 @@ export const createComplexeType = (
     } else if (type.name !== "snapshot" && type.name !== "differential") {
       const newArray: any[] = [];
       if (type.children.length > 0) {
-        const newType: RenderNode[] = [];
+        const newType: RenderAttributesTree[] = [];
         type.children.forEach((element) => {
           newType.push(element);
         });
@@ -83,7 +83,7 @@ export const createComplexeType = (
           newObject[type.name] = newArray;
         }
       } else {
-        const newType: RenderNode[] = [];
+        const newType: RenderAttributesTree[] = [];
         if (complexTypes) {
           const toFind = complexTypes.find(
             (newComplexType) => newComplexType.name === type.type
@@ -92,7 +92,7 @@ export const createComplexeType = (
             newType.push(element);
           });
           createComplexeType(
-            newType as RenderNode[],
+            newType as RenderAttributesTree[],
             newArray,
             primitiveTypes,
             complexTypes

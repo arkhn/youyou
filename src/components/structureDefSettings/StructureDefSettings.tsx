@@ -31,7 +31,7 @@ import {
   tooltipValues
 } from "components/structureDefSettings/utils";
 import RenderComplexType from "components/structureDefSettings/complexTypesEditor/RenderComplexType";
-import { RenderNode } from "types";
+import { RenderAttributesTree } from "types";
 import { RootState } from "state/store";
 
 type StructureDefSettingsProps = {
@@ -112,7 +112,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
     }
   };
 
-  const newStructureDef: RenderNode[] = [];
+  const newStructureDef: RenderAttributesTree[] = [];
 
   createComplexeType(
     structureDefinitionTree,

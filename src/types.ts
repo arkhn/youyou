@@ -28,11 +28,11 @@ export type fhirDataState = {
   };
 };
 
-export interface RenderNode {
+export interface RenderAttributesTree {
   name: string;
   id: string;
   type: string | IElementDefinition_Type[];
-  children: RenderNode[];
+  children: RenderAttributesTree[];
   min: number | null;
   max: string;
   short: string;
@@ -50,7 +50,7 @@ export interface RenderComplexType {
   valueSet?: ICodeSystem_Concept[];
 }
 
-export interface IComplexTypes {
+export interface SimplifiedAttributes {
   path: string;
   type: string | IElementDefinition_Type[];
   short: string;
