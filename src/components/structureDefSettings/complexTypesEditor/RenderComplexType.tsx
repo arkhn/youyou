@@ -13,15 +13,14 @@ import {
   Button,
   Typography
 } from "@material-ui/core";
-import { ExpandMore } from "@material-ui/icons";
+import { Add, ExpandMore } from "@material-ui/icons";
 import { withStyles } from "@material-ui/styles";
 
 type DetailProps = {
-  contactPoint: RenderAttributesTree[];
+  attributes: RenderAttributesTree[];
   complexTypes: RenderAttributesTree[];
-  contactToEdit: any;
+  attributeToEdit: any;
   primitiveTypes: PrimitiveTypesType[];
-  complexeTypePattern?: any;
 };
 
 const MuiAccordionSummary = withStyles({
@@ -32,119 +31,105 @@ const MuiAccordionSummary = withStyles({
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    width: "95%",
-    margin: 4
+    marginTop: 4,
+    width: "100%"
   },
   accordion: {
-    border: "1px solid " + theme.palette.secondary.main
+    border: "1px solid " + theme.palette.secondary.main,
+    flexGrow: 1
+  },
+  accordionSummary: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center"
+  },
+  accordionAndButton: {
+    display: "flex"
+  },
+  accordionButton: {
+    height: 50,
+    width: 50
   }
 }));
 
 const RenderComplexType: React.FC<DetailProps> = ({
-  contactPoint,
+  attributes,
   complexTypes,
-  contactToEdit,
-  primitiveTypes,
-  complexeTypePattern
+  attributeToEdit,
+  primitiveTypes
 }) => {
   const classes = useStyles();
   let toFind: any = [];
 
-  const createTree = (
-    element: any[],
+  const createComplexTreeForUi = (
+    elements: any[],
     primitive: PrimitiveTypesType[],
     complexe: RenderAttributesTree[]
   ) => {
-    element.forEach((item) => {
-      if (!isPrimitive(item.type, primitive)) {
-        toFind = complexe.find((type) => type.name === item.type);
-        if (toFind) item.children = toFind.children;
-        createTree(item.children, primitive, complexe);
+    elements.forEach((element) => {
+      if (!isPrimitive(element.type, primitive)) {
+        toFind = complexe.find((type) => type.name === element.type);
+        if (toFind) element.children = toFind.children;
+        createComplexTreeForUi(element.children, primitive, complexe);
       }
     });
   };
 
-  const addElement = (element: any, index: number) => {
-    if (complexeTypePattern) console.log(complexeTypePattern[element.name]);
-  };
+  createComplexTreeForUi(attributes, primitiveTypes, complexTypes);
 
-  createTree(contactPoint, primitiveTypes, complexTypes);
-
-  const renderContactPoint = contactPoint.map((item, index) => {
+  const renderAttribute = attributes.map((item, index) => {
     let ToReturn: any = null;
     if (item.children.length > 0 && item.name !== "extension") {
-      if (Array.isArray(contactToEdit[item.name])) {
-        ToReturn = contactToEdit[item.name].map(
+      if (Array.isArray(attributeToEdit[item.name])) {
+        ToReturn = attributeToEdit[item.name].map(
           (element: any, name: number) => {
             return (
-              <div key={name}>
+              <div key={name} className={classes.accordionAndButton}>
                 <Accordion className={classes.accordion}>
                   <MuiAccordionSummary expandIcon={<ExpandMore />}>
-                    <Typography>{item.name}</Typography>
-                    <Button
-                      variant="outlined"
-                      onClick={() => addElement(item, index)}
-                      color="primary"
-                    >
-                      add
-                    </Button>
+                    <div className={classes.accordionSummary}>
+                      <Typography>{item.name}</Typography>
+                    </div>
                   </MuiAccordionSummary>
                   <AccordionDetails>
-                    {complexeTypePattern ? (
-                      <RenderComplexType
-                        contactToEdit={element}
-                        complexTypes={complexTypes}
-                        contactPoint={item.children}
-                        primitiveTypes={primitiveTypes}
-                        complexeTypePattern={
-                          complexeTypePattern[item.name].children
-                            ? complexeTypePattern[item.name].children
-                            : null
-                        }
-                      />
-                    ) : (
-                      <RenderComplexType
-                        contactToEdit={element}
-                        complexTypes={complexTypes}
-                        contactPoint={item.children}
-                        primitiveTypes={primitiveTypes}
-                      />
-                    )}
+                    <RenderComplexType
+                      attributeToEdit={element}
+                      complexTypes={complexTypes}
+                      attributes={item.children}
+                      primitiveTypes={primitiveTypes}
+                    />
                   </AccordionDetails>
                 </Accordion>
+                <Button
+                  className={classes.accordionButton}
+                  variant="outlined"
+                  color="primary"
+                >
+                  <Add />
+                </Button>
               </div>
             );
           }
         );
-      } else if (typeof contactToEdit[item.name] === "object") {
+      } else if (typeof attributeToEdit[item.name] === "object") {
         ToReturn = (
-          <Accordion className={classes.accordion}>
-            <MuiAccordionSummary expandIcon={<ExpandMore />}>
-              <Typography>{item.name}</Typography>
-            </MuiAccordionSummary>
-            <AccordionDetails>
-              {complexeTypePattern ? (
+          <div key={item.name} className={classes.accordionAndButton}>
+            <Accordion className={classes.accordion}>
+              <MuiAccordionSummary expandIcon={<ExpandMore />}>
+                <Typography>
+                  {item.min && item.min > 0 ? `${item.name}*` : item.name}
+                </Typography>
+              </MuiAccordionSummary>
+              <AccordionDetails>
                 <RenderComplexType
-                  contactToEdit={contactToEdit[item.name]}
+                  attributeToEdit={attributeToEdit[item.name]}
                   complexTypes={complexTypes}
-                  contactPoint={item.children}
-                  primitiveTypes={primitiveTypes}
-                  complexeTypePattern={
-                    complexeTypePattern[item.name].children
-                      ? complexeTypePattern[item.name].children
-                      : null
-                  }
-                />
-              ) : (
-                <RenderComplexType
-                  contactToEdit={contactToEdit[item.name]}
-                  complexTypes={complexTypes}
-                  contactPoint={item.children}
+                  attributes={item.children}
                   primitiveTypes={primitiveTypes}
                 />
-              )}
-            </AccordionDetails>
-          </Accordion>
+              </AccordionDetails>
+            </Accordion>
+          </div>
         );
       }
     } else if (item.name !== "extension" && item.children.length === 0) {
@@ -153,11 +138,19 @@ const RenderComplexType: React.FC<DetailProps> = ({
         item.type === "http://hl7.org/fhirpath/System.String"
       ) {
         ToReturn = (
-          <InputTooltip label={item.name} value={""} tool={item.short} />
+          <InputTooltip
+            label={item.min && item.min > 0 ? `${item.name}*` : item.name}
+            value={""}
+            tool={item.definition}
+          />
         );
       } else if (item.type === "positiveInt") {
         ToReturn = (
-          <InputTooltip label={item.name} value={""} tool={item.short} />
+          <InputTooltip
+            label={item.min && item.min > 0 ? `${item.name}*` : item.name}
+            value={""}
+            tool={item.definition}
+          />
         );
       } else if (item.type === "code" && item.valueSet) {
         const mapValues: {
@@ -173,20 +166,24 @@ const RenderComplexType: React.FC<DetailProps> = ({
         ToReturn = (
           <SelectTooltip
             key={index}
-            label={item.name}
-            tool={item.short}
+            label={item.min && item.min > 0 ? `${item.name}*` : item.name}
+            tool={item.definition}
             choices={mapValues}
             value={mapValues[0].value}
           />
         );
       }
     }
-    return <div key={index}>{ToReturn}</div>;
+    return (
+      <div className={classes.root} key={index}>
+        {ToReturn}
+      </div>
+    );
   });
 
   return (
-    <div className={classes.root}>
-      <div className={classes.root}>{renderContactPoint}</div>
+    <div>
+      <div>{renderAttribute}</div>
     </div>
   );
 };

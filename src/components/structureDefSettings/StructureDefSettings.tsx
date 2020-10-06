@@ -26,7 +26,7 @@ import {
   updateStructureDefExtension
 } from "state/actions/resourceActions";
 import {
-  createComplexeType,
+  createJSONTree,
   editAttribute,
   tooltipValues
 } from "components/structureDefSettings/utils";
@@ -114,7 +114,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
 
   const newStructureDef: RenderAttributesTree[] = [];
 
-  createComplexeType(
+  createJSONTree(
     structureDefinitionTree,
     newStructureDef,
     primitiveTypes,
@@ -126,11 +126,10 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
       <form className={classes.form}>
         <div>
           <RenderComplexType
-            contactPoint={structureDefinitionTree}
+            attributes={structureDefinitionTree}
             complexTypes={complexTypes}
-            contactToEdit={newStructureDef[0]}
+            attributeToEdit={newStructureDef[0]}
             primitiveTypes={primitiveTypes}
-            complexeTypePattern={newStructureDef[0]}
           />
         </div>
         <InputTooltip

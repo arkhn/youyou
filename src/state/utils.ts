@@ -25,7 +25,7 @@ export const renderTreeAttributes = (
     const newAttribute = {
       path: newPath,
       type: attribute.type,
-      short: attribute.short,
+      definition: attribute.definition,
       min: attribute.min,
       max: attribute.max
     };
@@ -38,7 +38,7 @@ export const renderTreeAttributes = (
             id: rootPath.path,
             type: rootPath.type,
             children: [],
-            short: rootPath.short,
+            definition: rootPath.definition,
             valueSet: rootPath.valueSet,
             min: rootPath.min,
             max: rootPath.max
@@ -47,7 +47,7 @@ export const renderTreeAttributes = (
             name: splitPath[0],
             id: rootPath.path,
             type: rootPath.type,
-            short: rootPath.short,
+            definition: rootPath.definition,
             children: [],
             min: rootPath.min,
             max: rootPath.max
@@ -67,11 +67,11 @@ export const transformAttributes = (
     result.resource.snapshot.element.forEach((element: IElementDefinition) => {
       if (!element.type) {
         element.path &&
-          element.short &&
+          element.definition &&
           attributes.push({
             path: element.path,
             type: element.path,
-            short: element.short,
+            definition: element.definition,
             min: element.min as number,
             max: element.max as string
           });
@@ -80,13 +80,13 @@ export const transformAttributes = (
           attributes.push({
             path: element.path as string,
             type: element.type,
-            short: element.short as string,
+            definition: element.definition as string,
             min: element.min as number,
             max: element.max as string
           });
         } else {
           element.type.forEach((type: IElementDefinition_Type) => {
-            if (element.path && type.code && element.short) {
+            if (element.path && type.code && element.definition) {
               if (type.code === "code") {
                 element.binding?.extension?.forEach((extension) => {
                   if (extension.valueString) {
@@ -103,9 +103,9 @@ export const transformAttributes = (
                     if (findValueSet) {
                       element.path &&
                         type.code &&
-                        element.short &&
+                        element.definition &&
                         attributes.push({
-                          short: element.short,
+                          definition: element.definition,
                           path: element.path,
                           type: type.code,
                           min: element.min as number,
@@ -116,9 +116,9 @@ export const transformAttributes = (
                   } else {
                     element.path &&
                       type.code &&
-                      element.short &&
+                      element.definition &&
                       attributes.push({
-                        short: element.short,
+                        definition: element.definition,
                         path: element.path,
                         type: type.code,
                         min: element.min as number,
@@ -130,7 +130,7 @@ export const transformAttributes = (
                 attributes.push({
                   path: element.path,
                   type: type.code,
-                  short: element.short,
+                  definition: element.definition,
                   min: element.min as number,
                   max: element.max as string
                 });

@@ -16,9 +16,6 @@ type InputTooltipProps = {
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    marginTop: 8,
-    marginBottom: 8,
-    marginRight: 8,
     display: "flex",
     alignItems: "center"
   },

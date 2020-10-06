@@ -35,7 +35,7 @@ export interface RenderAttributesTree {
   children: RenderAttributesTree[];
   min: number | null;
   max: string;
-  short: string;
+  definition: string;
   valueSet?: ICodeSystem_Concept[];
 }
 
@@ -46,14 +46,14 @@ export interface RenderComplexType {
   children: RenderComplexType[][];
   min: number | null;
   max: string;
-  short: string;
+  definition: string;
   valueSet?: ICodeSystem_Concept[];
 }
 
 export interface SimplifiedAttributes {
   path: string;
   type: string | IElementDefinition_Type[];
-  short: string;
+  definition: string;
   min: number | null;
   max: string;
   valueSet?: ICodeSystem_Concept[];

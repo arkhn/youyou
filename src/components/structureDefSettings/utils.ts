@@ -53,7 +53,7 @@ export const isPrimitive = (
   return findPrimitive;
 };
 
-export const createComplexeType = (
+export const createJSONTree = (
   rootTypes: RenderAttributesTree[],
   rootArray: any[],
   primitiveTypes: PrimitiveTypesType[],
@@ -76,7 +76,7 @@ export const createComplexeType = (
         type.children.forEach((element) => {
           newType.push(element);
         });
-        createComplexeType(newType, newArray, primitiveTypes, complexTypes);
+        createJSONTree(newType, newArray, primitiveTypes, complexTypes);
         if (type.max === "1") {
           newObject[type.name] = newArray[0];
         } else {
@@ -91,7 +91,7 @@ export const createComplexeType = (
           toFind?.children?.forEach((element) => {
             newType.push(element);
           });
-          createComplexeType(
+          createJSONTree(
             newType as RenderAttributesTree[],
             newArray,
             primitiveTypes,

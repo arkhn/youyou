@@ -121,7 +121,7 @@ export const requestFhirDataTypes = () => {
         children: [],
         min: null,
         max: "",
-        short: ""
+        definition: ""
       };
       let structureDefTree: RenderAttributesTree = {
         id: "",
@@ -130,7 +130,7 @@ export const requestFhirDataTypes = () => {
         children: [],
         min: null,
         max: "",
-        short: ""
+        definition: ""
       };
 
       // transform fetched attributes to simplified attributes with new paths
