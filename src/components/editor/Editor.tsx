@@ -74,12 +74,12 @@ const Editor: React.FC<{}> = () => {
           <Breadcrumbs className={classes.marginBottom}>
             {renderBreadcrumbs()}
           </Breadcrumbs>
-          {/* <Typography
+          <Typography
             variant="h1"
             className={clsx(classes.capitalize, classes.marginBottom)}
           >
             {renderTitle()}
-          </Typography> */}
+          </Typography>
           <Paper className={clsx(classes.paperRight, classes.paper)}>
             {structureDefMeta && (
               <StructureDefSettings

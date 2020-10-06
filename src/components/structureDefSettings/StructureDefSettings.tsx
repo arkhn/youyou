@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setSnackbarOpen } from "state/actions/snackbarActions";
 
 import {
@@ -16,7 +16,6 @@ import {
 } from "@material-ui/core";
 
 import useStyles from "components/structureDefSettings/style";
-import ContactEditor from "./contactDetailEditor/ContactDetailEditor";
 import {
   InputTooltip,
   InputDateTooltip,
@@ -27,9 +26,13 @@ import {
   updateStructureDefExtension
 } from "state/actions/resourceActions";
 import {
+  createComplexeType,
   editAttribute,
   tooltipValues
 } from "components/structureDefSettings/utils";
+import RenderComplexType from "components/structureDefSettings/complexTypesEditor/RenderComplexType";
+import { RenderNode } from "types";
+import { RootState } from "state/store";
 
 type StructureDefSettingsProps = {
   structureDefinition: IStructureDefinition;
@@ -40,6 +43,9 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   structureDefinition,
   structureDefinitionType = "resource"
 }) => {
+  const { complexTypes, primitiveTypes, structureDefinitionTree } = useSelector(
+    (state: RootState) => state.fhirDataTypes
+  );
   const dispatch = useDispatch();
   const classes = useStyles();
   // LOCAL STATES
@@ -106,10 +112,27 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
     }
   };
 
+  const newStructureDef: RenderNode[] = [];
+
+  createComplexeType(
+    structureDefinitionTree,
+    newStructureDef,
+    primitiveTypes,
+    complexTypes
+  );
+
   return (
     <Container className={classes.formContainer}>
       <form className={classes.form}>
-        <ContactEditor />
+        <div>
+          <RenderComplexType
+            contactPoint={structureDefinitionTree}
+            complexTypes={complexTypes}
+            contactToEdit={newStructureDef[0]}
+            primitiveTypes={primitiveTypes}
+            complexeTypePattern={newStructureDef[0]}
+          />
+        </div>
         <InputTooltip
           label="Id"
           value={id || ""}
