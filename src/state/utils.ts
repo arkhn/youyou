@@ -32,26 +32,16 @@ export const renderTreeAttributes = (
     if (childNode) {
       return renderTreeAttributes(newAttribute, rootPath, childNode, rootNode);
     } else {
-      const newNode = rootPath.valueSet
-        ? {
-            name: splitPath[0],
-            id: rootPath.path,
-            type: rootPath.type,
-            children: [],
-            definition: rootPath.definition,
-            valueSet: rootPath.valueSet,
-            min: rootPath.min,
-            max: rootPath.max
-          }
-        : {
-            name: splitPath[0],
-            id: rootPath.path,
-            type: rootPath.type,
-            definition: rootPath.definition,
-            children: [],
-            min: rootPath.min,
-            max: rootPath.max
-          };
+      const newNode = {
+        name: splitPath[0],
+        id: rootPath.path,
+        type: rootPath.type,
+        children: [],
+        definition: rootPath.definition,
+        valueSet: rootPath.valueSet,
+        min: rootPath.min,
+        max: rootPath.max
+      };
       node.children.push(newNode);
       return renderTreeAttributes(newAttribute, rootPath, newNode, rootNode);
     }
@@ -91,14 +81,8 @@ export const transformAttributes = (
                 element.binding?.extension?.forEach((extension) => {
                   if (extension.valueString) {
                     const findValueSet = valueSetRequest.data.entry.find(
-                      (
-                        value: FetchedDataCodeSystem
-                      ): FetchedDataCodeSystem | undefined => {
-                        if (value.resource.name === extension.valueString) {
-                          return value;
-                        }
-                        return undefined;
-                      }
+                      (value: FetchedDataCodeSystem) =>
+                        value.resource.name === extension.valueString
                     );
                     if (findValueSet) {
                       element.path &&

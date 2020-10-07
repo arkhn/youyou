@@ -25,14 +25,14 @@ const initialState: FhirDataTypesState = {
   structureDefinitionTree: []
 };
 
-type allFhirDataTypesAction =
+type AllFhirDataTypesAction =
   | GetFhirTypesFetchSuccessAction
   | GetFhirTypesFetchStartAction
   | GetFhirTypesFetchFailureAction;
 
 export const fhirDataTypes = (
   state: FhirDataTypesState = initialState,
-  action: allFhirDataTypesAction
+  action: AllFhirDataTypesAction
 ): FhirDataTypesState => {
   switch (action.type) {
     case GET_FHIR_TYPES_FETCH_START:

@@ -36,21 +36,17 @@ export const tooltipValues = {
 };
 
 export const isPrimitive = (
-  toFind: string | IElementDefinition_Type[],
+  type: string | IElementDefinition_Type[],
   primitiveTypes: PrimitiveTypesType[]
 ) => {
-  const findPrimitive = primitiveTypes.find((type) => {
-    if (
-      type.name === toFind ||
-      toFind === "http://hl7.org/fhirpath/System.String" ||
-      toFind === "Extension" ||
-      toFind === "Reference"
-    ) {
-      return true;
-    }
-    return false;
+  return primitiveTypes.some((primitive: PrimitiveTypesType) => {
+    return (
+      type === primitive.name ||
+      type === "http://hl7.org/fhirpath/System.String" ||
+      type === "Extension" ||
+      type === "Reference"
+    );
   });
-  return findPrimitive;
 };
 
 export const createJSONTree = (
@@ -64,18 +60,11 @@ export const createJSONTree = (
     if (isPrimitive(type.type, primitiveTypes)) {
       newObject[type.name] = undefined;
     } else if (Array.isArray(type.type)) {
-      const newTypeArray: any[] = [];
-      type.type.forEach((code) => {
-        newTypeArray.push(code.code);
-      });
-      newObject[type.name] = newTypeArray;
+      newObject[type.name] = type.type.map((code) => code.code);
     } else if (type.name !== "snapshot" && type.name !== "differential") {
       const newArray: any[] = [];
       if (type.children.length > 0) {
-        const newType: RenderAttributesTree[] = [];
-        type.children.forEach((element) => {
-          newType.push(element);
-        });
+        const newType = type.children;
         createJSONTree(newType, newArray, primitiveTypes, complexTypes);
         if (type.max === "1") {
           newObject[type.name] = newArray[0];

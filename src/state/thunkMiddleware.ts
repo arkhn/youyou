@@ -96,18 +96,23 @@ export const requestExtensionDataTypes = () => {
 export const requestFhirDataTypes = () => {
   return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
     dispatch(getFhirTypesFetchStart());
-    const primitiveTypesRequest: AxiosResponse<any> = await api.get(
-      "/StructureDefinition?derivation=specialization&kind=primitive-type&_elements=name"
-    );
-    const complexTypesRequest: AxiosResponse<any> = await api.get(
-      "/StructureDefinition?derivation=specialization&kind=complex-type&_elements=name&_elements=snapshot"
-    );
-    const valueSetRequest: AxiosResponse<any> = await api.get(
-      "/CodeSystem?_elements=name,concept&_count=508"
-    );
-    const resourceStructureDefinition: AxiosResponse<any> = await api.get(
-      `/StructureDefinition?kind=resource&derivation=specialization&id=StructureDefinition`
-    );
+    const [
+      primitiveTypesRequest,
+      complexTypesRequest,
+      valueSetRequest,
+      resourceStructureDefinition
+    ] = await Promise.all([
+      api.get(
+        "/StructureDefinition?derivation=specialization&kind=primitive-type&_elements=name"
+      ),
+      api.get(
+        "/StructureDefinition?derivation=specialization&kind=complex-type&_elements=name&_elements=snapshot"
+      ),
+      api.get("/CodeSystem?_elements=name,concept&_count=508"),
+      api.get(
+        "/StructureDefinition?kind=resource&derivation=specialization&id=StructureDefinition"
+      )
+    ]);
     if (
       primitiveTypesRequest.status === 200 &&
       complexTypesRequest.status === 200 &&

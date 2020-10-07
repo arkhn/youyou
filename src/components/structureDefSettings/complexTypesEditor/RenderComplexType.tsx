@@ -83,9 +83,9 @@ const RenderComplexType: React.FC<DetailProps> = ({
     if (item.children.length > 0 && item.name !== "extension") {
       if (Array.isArray(structureDefJSON[item.name])) {
         ToReturn = structureDefJSON[item.name].map(
-          (element: any, name: number) => {
+          (element: any, i: number) => {
             return (
-              <div key={name} className={classes.accordionAndButton}>
+              <div key={i} className={classes.accordionAndButton}>
                 <Accordion className={classes.accordion}>
                   <MuiAccordionSummary expandIcon={<ExpandMore />}>
                     <div className={classes.accordionSummary}>
@@ -135,45 +135,56 @@ const RenderComplexType: React.FC<DetailProps> = ({
         );
       }
     } else if (item.name !== "extension" && item.children.length === 0) {
-      if (
-        item.type === "string" ||
-        item.type === "http://hl7.org/fhirpath/System.String"
-      ) {
-        ToReturn = (
-          <InputTooltip
-            label={item.min && item.min > 0 ? `${item.name}*` : item.name}
-            value={""}
-            tool={item.definition}
-          />
-        );
-      } else if (item.type === "positiveInt") {
-        ToReturn = (
-          <InputTooltip
-            label={item.min && item.min > 0 ? `${item.name}*` : item.name}
-            value={""}
-            tool={item.definition}
-          />
-        );
-      } else if (item.type === "code" && item.valueSet) {
-        const mapValues: {
-          value: string | undefined;
-          label: string | undefined;
-        }[] = [{ value: "--select a value--", label: "--select a value--" }];
-        item.valueSet?.forEach((values) =>
-          mapValues.push({
-            value: values.code,
-            label: values.display
-          })
-        );
-        ToReturn = (
-          <SelectTooltip
-            key={index}
-            label={item.min && item.min > 0 ? `${item.name}*` : item.name}
-            tool={item.definition}
-            choices={mapValues}
-            value={mapValues[0].value}
-          />
-        );
+      switch (item.type) {
+        case "string":
+        case "http://hl7.org/fhirpath/System.String": {
+          ToReturn = (
+            <InputTooltip
+              label={item.min && item.min > 0 ? `${item.name}*` : item.name}
+              value={""}
+              tool={item.definition}
+            />
+          );
+          break;
+        }
+        case "positiveInt": {
+          ToReturn = (
+            <InputTooltip
+              label={item.min && item.min > 0 ? `${item.name}*` : item.name}
+              value={""}
+              tool={item.definition}
+            />
+          );
+          break;
+        }
+        case "code": {
+          if (item.valueSet) {
+            const mapValues: {
+              value: string | undefined;
+              label: string | undefined;
+            }[] = [
+              { value: "--select a value--", label: "--select a value--" }
+            ];
+            item.valueSet?.forEach((values) =>
+              mapValues.push({
+                value: values.code,
+                label: values.display
+              })
+            );
+            ToReturn = (
+              <SelectTooltip
+                key={index}
+                label={item.min && item.min > 0 ? `${item.name}*` : item.name}
+                tool={item.definition}
+                choices={mapValues}
+                value={mapValues[0].value}
+              />
+            );
+          }
+          break;
+        }
+        default:
+          break;
       }
     }
     return (
