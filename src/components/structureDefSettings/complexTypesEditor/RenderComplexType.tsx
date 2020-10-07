@@ -60,18 +60,18 @@ const RenderComplexType: React.FC<DetailProps> = ({
   primitiveTypes
 }) => {
   const classes = useStyles();
-  let toFind: any = [];
 
   const createComplexTreeForUi = (
-    elements: any[],
+    elements: RenderAttributesTree[],
     primitive: PrimitiveTypesType[],
-    complexe: RenderAttributesTree[]
+    complex: RenderAttributesTree[]
   ) => {
     elements.forEach((element) => {
       if (!isPrimitive(element.type, primitive)) {
-        toFind = complexe.find((type) => type.name === element.type);
-        if (toFind) element.children = toFind.children;
-        createComplexTreeForUi(element.children, primitive, complexe);
+        const complexType = complex.find((type) => type.name === element.type);
+        if (element.children.length === 0 && complexType)
+          element.children = complexType.children;
+        createComplexTreeForUi(element.children, primitive, complex);
       }
     });
   };
