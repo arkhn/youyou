@@ -38,16 +38,13 @@ export const tooltipValues = {
 export const isPrimitive = (
   type: string | IElementDefinition_Type[],
   primitiveTypes: PrimitiveTypesType[]
-) => {
-  return primitiveTypes.some((primitive: PrimitiveTypesType) => {
-    return (
-      type === primitive.name ||
-      type === "http://hl7.org/fhirpath/System.String" ||
-      type === "Extension" ||
-      type === "Reference"
-    );
-  });
-};
+) =>
+  primitiveTypes.some(
+    (primitive: PrimitiveTypesType) => type === primitive.name
+  ) ||
+  type === "http://hl7.org/fhirpath/System.String" ||
+  type === "Extension" ||
+  type === "Reference";
 
 export const createJSONTree = (
   rootTypes: RenderAttributesTree[],
