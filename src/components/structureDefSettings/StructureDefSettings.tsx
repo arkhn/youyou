@@ -113,16 +113,16 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
     }
   };
 
-  const newStructureDef: RenderAttributesTree[] = [];
+  const structureDefJSON: RenderAttributesTree[] = [];
 
   createJSONTree(
     structureDefinitionTree,
-    newStructureDef,
+    structureDefJSON,
     primitiveTypes,
     complexTypes
   );
 
-  console.log(newStructureDef[0]);
+  console.log(structureDefJSON[0]);
   console.log(structureDefinitionTree);
 
   return (
@@ -132,7 +132,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
           <RenderComplexType
             attributes={structureDefinitionTree}
             complexTypes={complexTypes}
-            attributeToEdit={newStructureDef[0]}
+            structureDefJSON={structureDefJSON[0]}
             primitiveTypes={primitiveTypes}
           />
         </div>

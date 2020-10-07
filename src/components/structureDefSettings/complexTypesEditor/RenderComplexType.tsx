@@ -19,7 +19,7 @@ import { withStyles } from "@material-ui/styles";
 type DetailProps = {
   attributes: RenderAttributesTree[];
   complexTypes: RenderAttributesTree[];
-  attributeToEdit: any;
+  structureDefJSON: any;
   primitiveTypes: PrimitiveTypesType[];
 };
 
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 const RenderComplexType: React.FC<DetailProps> = ({
   attributes,
   complexTypes,
-  attributeToEdit,
+  structureDefJSON,
   primitiveTypes
 }) => {
   const classes = useStyles();
@@ -81,8 +81,8 @@ const RenderComplexType: React.FC<DetailProps> = ({
   const renderAttribute = attributes.map((item, index) => {
     let ToReturn: any = null;
     if (item.children.length > 0 && item.name !== "extension") {
-      if (Array.isArray(attributeToEdit[item.name])) {
-        ToReturn = attributeToEdit[item.name].map(
+      if (Array.isArray(structureDefJSON[item.name])) {
+        ToReturn = structureDefJSON[item.name].map(
           (element: any, name: number) => {
             return (
               <div key={name} className={classes.accordionAndButton}>
@@ -102,7 +102,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                   </MuiAccordionSummary>
                   <AccordionDetails>
                     <RenderComplexType
-                      attributeToEdit={element}
+                      structureDefJSON={element}
                       complexTypes={complexTypes}
                       attributes={item.children}
                       primitiveTypes={primitiveTypes}
@@ -113,7 +113,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
             );
           }
         );
-      } else if (typeof attributeToEdit[item.name] === "object") {
+      } else if (typeof structureDefJSON[item.name] === "object") {
         ToReturn = (
           <div key={item.name} className={classes.accordionAndButton}>
             <Accordion className={classes.accordion}>
@@ -124,7 +124,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
               </MuiAccordionSummary>
               <AccordionDetails>
                 <RenderComplexType
-                  attributeToEdit={attributeToEdit[item.name]}
+                  structureDefJSON={structureDefJSON[item.name]}
                   complexTypes={complexTypes}
                   attributes={item.children}
                   primitiveTypes={primitiveTypes}
