@@ -122,9 +122,6 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
     complexTypes
   );
 
-  console.log(structureDefJSON[0]);
-  console.log(structureDefinitionTree);
-
   return (
     <Container className={classes.formContainer}>
       <form className={classes.form}>
