@@ -46,9 +46,9 @@ export const isPrimitive = (
   type === "Extension" ||
   type === "Reference";
 
-export const createJSONTree = (
+/* export const createJSONTree = (
   rootTypes: RenderAttributesTree[],
-  rootArray: any[],
+  rootArray: IStructureDefinition[],
   primitiveTypes: PrimitiveTypesType[],
   complexTypes: RenderAttributesTree[]
 ) => {
@@ -93,4 +93,4 @@ export const createJSONTree = (
     }
   });
   rootArray.push(newObject);
-};
+}; */

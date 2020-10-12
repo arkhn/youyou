@@ -1,3 +1,5 @@
+import { IElementDefinition_Type } from "@ahryman40k/ts-fhir-types/lib/R4";
+import { isPrimitive } from "components/structureDefSettings/utils";
 import {
   GetFhirTypesFetchFailureAction,
   GetFhirTypesFetchStartAction,
@@ -41,6 +43,32 @@ export const fhirDataTypes = (
         loadingTypes: true
       };
     case GET_FHIR_TYPES_FETCH_SUCCESS:
+      const createComplexTypes = (
+        complex: RenderAttributesTree[],
+        types: RenderAttributesTree[],
+        primitive: PrimitiveTypesType[]
+      ) => {
+        for (const type of types) {
+          if (!isPrimitive(type.type, primitive)) {
+            console.log(type);
+            const toFind = complex.find((item) => item.name === type.type);
+            if (toFind) type.children = toFind.children;
+            createComplexTypes(complex, type.children, primitive);
+          }
+        }
+      };
+
+      createComplexTypes(
+        action.payload.complexTypes,
+        action.payload.complexTypes,
+        action.payload.primitiveTypes
+      );
+
+      console.log(
+        action.payload.complexTypes,
+        action.payload.structureDefinitionTree
+      );
+
       return {
         ...state,
         primitiveTypes: action.payload.primitiveTypes,

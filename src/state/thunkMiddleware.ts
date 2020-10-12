@@ -147,7 +147,7 @@ export const requestFhirDataTypes = () => {
         resourceStructureDefinition,
         valueSetRequest
       );
-
+      console.log(resourceStructureDefinition);
       // create tree of transformed Attributes (newComplexType and newStructureDefinition)
       if (newComplexTypes && newStructureDefinition) {
         newComplexTypes.forEach(
@@ -161,6 +161,7 @@ export const requestFhirDataTypes = () => {
             renderTreeAttributes(type, type, structureDefTree, structureDefTree)
         );
       }
+      console.log(structureDefTree);
 
       dispatch(
         getFhirTypesFetchSuccess(

@@ -61,7 +61,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
 }) => {
   const classes = useStyles();
 
-  const createComplexTreeForUi = (
+  /*   const createComplexTreeForUi = (
     elements: RenderAttributesTree[],
     primitive: PrimitiveTypesType[],
     complex: RenderAttributesTree[]
@@ -76,7 +76,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
     });
   };
 
-  createComplexTreeForUi(attributes, primitiveTypes, complexTypes);
+  createComplexTreeForUi(attributes, primitiveTypes, complexTypes); */
 
   const renderAttribute = attributes.map((item, index) => {
     let ToReturn: any = null;
@@ -94,7 +94,9 @@ const RenderComplexType: React.FC<DetailProps> = ({
                         className={classes.accordionButton}
                         variant="outlined"
                         color="primary"
-                        onClick={(event) => event.stopPropagation()}
+                        onClick={(event) => {
+                          event.stopPropagation();
+                        }}
                       >
                         <Add />
                       </Button>

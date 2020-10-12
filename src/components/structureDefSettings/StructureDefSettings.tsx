@@ -8,6 +8,7 @@ import {
   StructureDefinitionStatusKind
 } from "@ahryman40k/ts-fhir-types/lib/R4";
 import {
+  Accordion,
   Button,
   Checkbox,
   Container,
@@ -27,13 +28,13 @@ import {
   updateStructureDefExtension
 } from "state/actions/resourceActions";
 import {
-  createJSONTree,
   editAttribute,
   tooltipValues
 } from "components/structureDefSettings/utils";
 import RenderComplexType from "components/structureDefSettings/complexTypesEditor/RenderComplexType";
 import { RenderAttributesTree } from "types";
 import { RootState } from "state/store";
+import { renderTreeAttributes } from "state/utils";
 
 type StructureDefSettingsProps = {
   structureDefinition: IStructureDefinition;
@@ -47,6 +48,8 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   const { complexTypes, primitiveTypes, structureDefinitionTree } = useSelector(
     (state: RootState) => state.fhirDataTypes
   );
+  const state = useSelector((s) => s);
+  console.log(state);
   const dispatch = useDispatch();
   const classes = useStyles();
   // LOCAL STATES
@@ -112,15 +115,23 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
       }
     }
   };
+  const createJSONTree = (items: RenderAttributesTree[]) => {
+    const sDef: any = {};
+    for (const item of items) {
+      if (item.children.length === 0) {
+        sDef[item.name] = undefined;
+      } else {
+        if (item.name !== "snapshot" && item.name !== "differential") {
+          if (item.max === "1") sDef[item.name] = createJSONTree(item.children);
+          else sDef[item.name] = [createJSONTree(item.children)];
+        }
+      }
+    }
+    return sDef;
+  };
 
-  const structureDefJSON: RenderAttributesTree[] = [];
-
-  createJSONTree(
-    structureDefinitionTree,
-    structureDefJSON,
-    primitiveTypes,
-    complexTypes
-  );
+  const structureDefJSON = createJSONTree(structureDefinitionTree);
+  console.log(structureDefJSON);
 
   return (
     <Container className={classes.formContainer}>
@@ -129,7 +140,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
           <RenderComplexType
             attributes={structureDefinitionTree}
             complexTypes={complexTypes}
-            structureDefJSON={structureDefJSON[0]}
+            structureDefJSON={structureDefJSON}
             primitiveTypes={primitiveTypes}
           />
         </div>
