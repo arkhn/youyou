@@ -3,7 +3,6 @@ import {
   IStructureDefinition
 } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { PrimitiveTypesType } from "state/actions/fhirDataTypesActions";
-import { RenderAttributesTree } from "types";
 
 export const editAttribute = <K extends keyof IStructureDefinition>(
   structureToEdit: IStructureDefinition,
@@ -45,52 +44,3 @@ export const isPrimitive = (
   type === "http://hl7.org/fhirpath/System.String" ||
   type === "Extension" ||
   type === "Reference";
-
-/* export const createJSONTree = (
-  rootTypes: RenderAttributesTree[],
-  rootArray: IStructureDefinition[],
-  primitiveTypes: PrimitiveTypesType[],
-  complexTypes: RenderAttributesTree[]
-) => {
-  const newObject: any = {};
-  rootTypes.forEach((type: RenderAttributesTree) => {
-    if (isPrimitive(type.type, primitiveTypes)) {
-      newObject[type.name] = undefined;
-    } else if (Array.isArray(type.type)) {
-      newObject[type.name] = type.type.map((code) => code.code);
-    } else if (type.name !== "snapshot" && type.name !== "differential") {
-      const newArray: any[] = [];
-      if (type.children.length > 0) {
-        const newType = type.children;
-        createJSONTree(newType, newArray, primitiveTypes, complexTypes);
-        if (type.max === "1") {
-          newObject[type.name] = newArray[0];
-        } else {
-          newObject[type.name] = newArray;
-        }
-      } else {
-        const newType: RenderAttributesTree[] = [];
-        if (complexTypes) {
-          const toFind = complexTypes.find(
-            (newComplexType) => newComplexType.name === type.type
-          );
-          toFind?.children?.forEach((element) => {
-            newType.push(element);
-          });
-          createJSONTree(
-            newType as RenderAttributesTree[],
-            newArray,
-            primitiveTypes,
-            complexTypes
-          );
-          if (type.max === "1") {
-            newObject[type.name] = newArray[0];
-          } else {
-            newObject[type.name] = newArray;
-          }
-        }
-      }
-    }
-  });
-  rootArray.push(newObject);
-}; */

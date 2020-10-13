@@ -8,7 +8,6 @@ import {
   StructureDefinitionStatusKind
 } from "@ahryman40k/ts-fhir-types/lib/R4";
 import {
-  Accordion,
   Button,
   Checkbox,
   Container,
@@ -17,24 +16,24 @@ import {
   Typography
 } from "@material-ui/core";
 
-import useStyles from "components/structureDefSettings/style";
+import { RenderAttributesTree } from "types";
+import {
+  updateStructureDefProfile,
+  updateStructureDefExtension
+} from "state/actions/resourceActions";
+import { RootState } from "state/store";
 import {
   InputTooltip,
   InputDateTooltip,
   SelectTooltip
 } from "components/smallComponents";
 import {
-  updateStructureDefProfile,
-  updateStructureDefExtension
-} from "state/actions/resourceActions";
-import {
   editAttribute,
   tooltipValues
 } from "components/structureDefSettings/utils";
 import RenderComplexType from "components/structureDefSettings/complexTypesEditor/RenderComplexType";
-import { RenderAttributesTree } from "types";
-import { RootState } from "state/store";
-import { renderTreeAttributes } from "state/utils";
+
+import useStyles from "components/structureDefSettings/style";
 
 type StructureDefSettingsProps = {
   structureDefinition: IStructureDefinition;
@@ -48,8 +47,6 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   const { complexTypes, primitiveTypes, structureDefinitionTree } = useSelector(
     (state: RootState) => state.fhirDataTypes
   );
-  const state = useSelector((s) => s);
-  console.log(state);
   const dispatch = useDispatch();
   const classes = useStyles();
   // LOCAL STATES
@@ -131,7 +128,6 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   };
 
   const structureDefJSON = createJSONTree(structureDefinitionTree);
-  console.log(structureDefJSON);
 
   return (
     <Container className={classes.formContainer}>

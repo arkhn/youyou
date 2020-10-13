@@ -1,20 +1,19 @@
 import { InputTooltip, SelectTooltip } from "components/smallComponents";
 import React from "react";
 
-import { makeStyles, Theme } from "@material-ui/core/styles";
-
 import { RenderAttributesTree } from "types";
-import { isPrimitive } from "components/structureDefSettings/utils";
 import { PrimitiveTypesType } from "state/actions/fhirDataTypesActions";
 import {
   Accordion,
   AccordionDetails,
-  AccordionSummary,
   Button,
   Typography
 } from "@material-ui/core";
 import { Add, ExpandMore } from "@material-ui/icons";
-import { withStyles } from "@material-ui/styles";
+import {
+  useStyles,
+  MuiAccordionSummary
+} from "components/structureDefSettings/complexTypesEditor/styles";
 
 type DetailProps = {
   attributes: RenderAttributesTree[];
@@ -23,36 +22,6 @@ type DetailProps = {
   primitiveTypes: PrimitiveTypesType[];
 };
 
-const MuiAccordionSummary = withStyles({
-  root: {
-    backgroundColor: "#90DFBF"
-  }
-})(AccordionSummary);
-
-const useStyles = makeStyles((theme: Theme) => ({
-  root: {
-    marginTop: 4,
-    width: "100%"
-  },
-  accordion: {
-    border: "1px solid " + theme.palette.secondary.main,
-    flexGrow: 1
-  },
-  accordionSummary: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    flexGrow: 1
-  },
-  accordionAndButton: {
-    display: "flex"
-  },
-  accordionButton: {
-    height: 30,
-    width: 50
-  }
-}));
-
 const RenderComplexType: React.FC<DetailProps> = ({
   attributes,
   complexTypes,
@@ -60,23 +29,6 @@ const RenderComplexType: React.FC<DetailProps> = ({
   primitiveTypes
 }) => {
   const classes = useStyles();
-
-  /*   const createComplexTreeForUi = (
-    elements: RenderAttributesTree[],
-    primitive: PrimitiveTypesType[],
-    complex: RenderAttributesTree[]
-  ) => {
-    elements.forEach((element) => {
-      if (!isPrimitive(element.type, primitive)) {
-        const complexType = complex.find((type) => type.name === element.type);
-        if (element.children.length === 0 && complexType)
-          element.children = complexType.children;
-        createComplexTreeForUi(element.children, primitive, complex);
-      }
-    });
-  };
-
-  createComplexTreeForUi(attributes, primitiveTypes, complexTypes); */
 
   const renderAttribute = attributes.map((item, index) => {
     let ToReturn: any = null;
@@ -139,6 +91,8 @@ const RenderComplexType: React.FC<DetailProps> = ({
     } else if (item.name !== "extension" && item.children.length === 0) {
       switch (item.type) {
         case "string":
+        case "uri":
+        case "id":
         case "http://hl7.org/fhirpath/System.String": {
           ToReturn = (
             <InputTooltip
@@ -149,6 +103,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
           );
           break;
         }
+        case "integer":
         case "positiveInt": {
           ToReturn = (
             <InputTooltip

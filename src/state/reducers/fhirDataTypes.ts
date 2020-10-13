@@ -1,5 +1,4 @@
 import { IElementDefinition_Type } from "@ahryman40k/ts-fhir-types/lib/R4";
-import { isPrimitive } from "components/structureDefSettings/utils";
 import {
   GetFhirTypesFetchFailureAction,
   GetFhirTypesFetchStartAction,
@@ -43,6 +42,17 @@ export const fhirDataTypes = (
         loadingTypes: true
       };
     case GET_FHIR_TYPES_FETCH_SUCCESS:
+      const isPrimitive = (
+        type: string | IElementDefinition_Type[],
+        primitiveTypes: PrimitiveTypesType[]
+      ) =>
+        primitiveTypes.some(
+          (primitive: PrimitiveTypesType) => type === primitive.name
+        ) ||
+        type === "http://hl7.org/fhirpath/System.String" ||
+        type === "Extension" ||
+        type === "Reference";
+
       const createComplexTypes = (
         complex: RenderAttributesTree[],
         types: RenderAttributesTree[],
@@ -50,30 +60,31 @@ export const fhirDataTypes = (
       ) => {
         for (const type of types) {
           if (!isPrimitive(type.type, primitive)) {
-            console.log(type);
             const toFind = complex.find((item) => item.name === type.type);
             if (toFind) type.children = toFind.children;
             createComplexTypes(complex, type.children, primitive);
           }
         }
+        return types;
       };
 
-      createComplexTypes(
+      const complexTypes = createComplexTypes(
         action.payload.complexTypes,
         action.payload.complexTypes,
         action.payload.primitiveTypes
       );
 
-      console.log(
+      const structureDefinitionTree = createComplexTypes(
         action.payload.complexTypes,
-        action.payload.structureDefinitionTree
+        action.payload.structureDefinitionTree,
+        action.payload.primitiveTypes
       );
 
       return {
         ...state,
         primitiveTypes: action.payload.primitiveTypes,
-        complexTypes: action.payload.complexTypes,
-        structureDefinitionTree: action.payload.structureDefinitionTree,
+        complexTypes: complexTypes,
+        structureDefinitionTree: structureDefinitionTree,
         loadingTypes: false,
         errorTypes: null
       };
