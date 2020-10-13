@@ -1,4 +1,3 @@
-import { IElementDefinition_Type } from "@ahryman40k/ts-fhir-types/lib/R4";
 import {
   GetFhirTypesFetchFailureAction,
   GetFhirTypesFetchStartAction,
@@ -8,6 +7,8 @@ import {
   GET_FHIR_TYPES_FETCH_SUCCESS,
   PrimitiveTypesType
 } from "state/actions/fhirDataTypesActions";
+
+import { createComplexTypes } from "state/utils";
 import { RenderAttributesTree } from "types";
 
 export type FhirDataTypesState = {
@@ -42,44 +43,17 @@ export const fhirDataTypes = (
         loadingTypes: true
       };
     case GET_FHIR_TYPES_FETCH_SUCCESS:
-      const isPrimitive = (
-        type: string | IElementDefinition_Type[],
-        primitiveTypes: PrimitiveTypesType[]
-      ) =>
-        primitiveTypes.some(
-          (primitive: PrimitiveTypesType) => type === primitive.name
-        ) ||
-        type === "http://hl7.org/fhirpath/System.String" ||
-        type === "Extension" ||
-        type === "Reference";
-
-      const createComplexTypes = (
-        complex: RenderAttributesTree[],
-        types: RenderAttributesTree[],
-        primitive: PrimitiveTypesType[]
-      ) => {
-        for (const type of types) {
-          if (!isPrimitive(type.type, primitive)) {
-            const toFind = complex.find((item) => item.name === type.type);
-            if (toFind) type.children = toFind.children;
-            createComplexTypes(complex, type.children, primitive);
-          }
-        }
-        return types;
-      };
-
       const complexTypes = createComplexTypes(
         action.payload.complexTypes,
         action.payload.complexTypes,
         action.payload.primitiveTypes
       );
-
       const structureDefinitionTree = createComplexTypes(
         action.payload.complexTypes,
         action.payload.structureDefinitionTree,
         action.payload.primitiveTypes
       );
-
+      console.log(structureDefinitionTree);
       return {
         ...state,
         primitiveTypes: action.payload.primitiveTypes,

@@ -9,6 +9,44 @@ import {
   SimplifiedAttributes,
   RenderAttributesTree
 } from "types";
+import { PrimitiveTypesType } from "./actions/fhirDataTypesActions";
+
+export const isPrimitive = (
+  type: string | IElementDefinition_Type[],
+  primitiveTypes: PrimitiveTypesType[]
+) =>
+  primitiveTypes.some(
+    (primitive: PrimitiveTypesType) => type === primitive.name
+  ) ||
+  type === "http://hl7.org/fhirpath/System.String" ||
+  type === "Extension" ||
+  type === "Reference";
+
+export const createComplexTypes = (
+  complexTypes: RenderAttributesTree[],
+  currentItemChildren: RenderAttributesTree[],
+  primitiveTypes: PrimitiveTypesType[]
+) => {
+  const enhancedComplexType: RenderAttributesTree[] = [];
+  for (const child of currentItemChildren) {
+    if (!isPrimitive(child.type, primitiveTypes)) {
+      const toFind = complexTypes.find((type) => type.name === child.type);
+      if (toFind) {
+        const childrenComplexType = createComplexTypes(
+          complexTypes,
+          toFind.children,
+          primitiveTypes
+        );
+        enhancedComplexType.push({ ...child, children: childrenComplexType });
+      } else {
+        enhancedComplexType.push(child);
+      }
+    } else {
+      enhancedComplexType.push(child);
+    }
+  }
+  return enhancedComplexType;
+};
 
 export const renderTreeAttributes = (
   attribute: SimplifiedAttributes,

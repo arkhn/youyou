@@ -20,15 +20,34 @@ type DetailProps = {
   complexTypes: RenderAttributesTree[];
   structureDefJSON: any;
   primitiveTypes: PrimitiveTypesType[];
+  setStructureDefJson?: (path: string, value: any) => void;
+  name: string;
+  index?: number;
 };
 
 const RenderComplexType: React.FC<DetailProps> = ({
   attributes,
   complexTypes,
   structureDefJSON,
-  primitiveTypes
+  primitiveTypes,
+  setStructureDefJson,
+  name,
+  index
 }) => {
   const classes = useStyles();
+
+  const onChangeChild = (path: string, value: any) => {
+    if (name === "") {
+      setStructureDefJson && setStructureDefJson(path, value);
+    } else {
+      if (undefined !== index) {
+        setStructureDefJson &&
+          setStructureDefJson(`${name}.?${index}.${path}`, value);
+      } else {
+        setStructureDefJson && setStructureDefJson(`${name}.${path}`, value);
+      }
+    }
+  };
 
   const renderAttribute = attributes.map((item, index) => {
     let ToReturn: any = null;
@@ -60,6 +79,9 @@ const RenderComplexType: React.FC<DetailProps> = ({
                       complexTypes={complexTypes}
                       attributes={item.children}
                       primitiveTypes={primitiveTypes}
+                      setStructureDefJson={onChangeChild}
+                      name={item.name}
+                      index={i}
                     />
                   </AccordionDetails>
                 </Accordion>
@@ -82,6 +104,8 @@ const RenderComplexType: React.FC<DetailProps> = ({
                   complexTypes={complexTypes}
                   attributes={item.children}
                   primitiveTypes={primitiveTypes}
+                  setStructureDefJson={onChangeChild}
+                  name={item.name}
                 />
               </AccordionDetails>
             </Accordion>
@@ -99,6 +123,10 @@ const RenderComplexType: React.FC<DetailProps> = ({
               label={item.min && item.min > 0 ? `${item.name}*` : item.name}
               value={""}
               tool={item.definition}
+              onBlur={(event) => {
+                const { value } = event.target;
+                onChangeChild(item.name, value);
+              }}
             />
           );
           break;
