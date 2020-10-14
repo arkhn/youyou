@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { Button, Container, Divider, Typography } from "@material-ui/core";
 
-import { RenderAttributesTree } from "types";
 import {
   updateStructureDefProfile,
   updateStructureDefExtension
@@ -14,6 +13,7 @@ import { RootState } from "state/store";
 import RenderComplexType from "components/structureDefSettings/complexTypesEditor/RenderComplexType";
 
 import useStyles from "components/structureDefSettings/style";
+import { createJSONTree } from "./utils";
 
 type StructureDefSettingsProps = {
   structureDefinition: IStructureDefinition;
@@ -45,20 +45,6 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
     }
   };
 
-  const createJSONTree = (items: RenderAttributesTree[]) => {
-    const sDef: any = {};
-    for (const item of items) {
-      if (item.children.length === 0) {
-        sDef[item.name] = undefined;
-      } else {
-        if (item.name !== "snapshot" && item.name !== "differential") {
-          if (item.max === "1") sDef[item.name] = createJSONTree(item.children);
-          else sDef[item.name] = [createJSONTree(item.children)];
-        }
-      }
-    }
-    return sDef;
-  };
   const structureDefJSON = Object.assign(
     createJSONTree(structureDefinitionTree),
     structureDefinition
