@@ -45,10 +45,23 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
     }
   };
 
-  const structureDefJSON = Object.assign(
+  const recursiveObjectAssign = (newTree: any, initialTree: any) => {
+    for (const key of Object.keys(initialTree)) {
+      if (initialTree[key] instanceof Object && newTree)
+        Object.assign(
+          initialTree[key],
+          recursiveObjectAssign(newTree[key], initialTree[key])
+        );
+    }
+    Object.assign(newTree || {}, initialTree);
+    return newTree;
+  };
+
+  const structureDefJSON = recursiveObjectAssign(
     createJSONTree(structureDefinitionTree),
     structureDefinition
   );
+
   const [structureDefMeta, setStructureDefMeta] = useState(structureDefJSON);
 
   const onChangeStructureDefMeta = (path: string, value: any) => {

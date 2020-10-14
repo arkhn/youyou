@@ -48,7 +48,6 @@ const RenderComplexType: React.FC<DetailProps> = ({
       }
     }
   };
-
   const renderAttribute = attributes.map((item, index) => {
     let ToReturn: any = null;
     if (item.children.length > 0 && item.name !== "extension") {
@@ -121,7 +120,9 @@ const RenderComplexType: React.FC<DetailProps> = ({
           ToReturn = (
             <InputTooltip
               label={item.min && item.min > 0 ? `${item.name}*` : item.name}
-              value={""}
+              value={
+                structureDefJSON[item.name] ? structureDefJSON[item.name] : ""
+              }
               tool={item.definition}
               onBlur={(event) => {
                 const { value } = event.target;
@@ -136,7 +137,9 @@ const RenderComplexType: React.FC<DetailProps> = ({
           ToReturn = (
             <InputTooltip
               label={item.min && item.min > 0 ? `${item.name}*` : item.name}
-              value={""}
+              value={
+                structureDefJSON[item.name] ? structureDefJSON[item.name] : ""
+              }
               tool={item.definition}
             />
           );
@@ -162,7 +165,11 @@ const RenderComplexType: React.FC<DetailProps> = ({
                 label={item.min && item.min > 0 ? `${item.name}*` : item.name}
                 tool={item.definition}
                 choices={mapValues}
-                value={mapValues[0].value}
+                value={
+                  structureDefJSON[item.name]
+                    ? structureDefJSON[item.name]
+                    : mapValues[0].value
+                }
               />
             );
           }

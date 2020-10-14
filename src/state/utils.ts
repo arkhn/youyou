@@ -29,7 +29,10 @@ export const createComplexTypes = (
 ) => {
   const enhancedComplexType: RenderAttributesTree[] = [];
   for (const child of currentItemChildren) {
-    if (!isPrimitive(child.type, primitiveTypes)) {
+    if (
+      !isPrimitive(child.type, primitiveTypes) &&
+      child.type !== "BackboneElement"
+    ) {
       const toFind = complexTypes.find((type) => type.name === child.type);
       if (toFind) {
         const childrenComplexType = createComplexTypes(
