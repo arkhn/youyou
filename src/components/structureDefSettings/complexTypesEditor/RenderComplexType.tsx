@@ -9,7 +9,7 @@ import {
   Button,
   Typography
 } from "@material-ui/core";
-import { Add, ExpandMore } from "@material-ui/icons";
+import { Add, DeleteOutline, ExpandMore } from "@material-ui/icons";
 import {
   useStyles,
   MuiAccordionSummary
@@ -50,43 +50,63 @@ const RenderComplexType: React.FC<DetailProps> = ({
   };
   const renderAttribute = attributes.map((item, index) => {
     let ToReturn: any = null;
-    if (item.children.length > 0 && item.name !== "extension") {
+    if (
+      item.children.length > 0 &&
+      item.name !== "extension" &&
+      item.name !== "snapshot" &&
+      item.name !== "differential"
+    ) {
       if (Array.isArray(structureDefJSON[item.name])) {
-        ToReturn = structureDefJSON[item.name].map(
-          (element: any, i: number) => {
-            return (
-              <div key={i} className={classes.accordionAndButton}>
-                <Accordion className={classes.accordion}>
-                  <MuiAccordionSummary expandIcon={<ExpandMore />}>
-                    <div className={classes.accordionSummary}>
-                      <Typography>{item.name}</Typography>
-                      <Button
-                        className={classes.accordionButton}
-                        variant="outlined"
-                        color="primary"
-                        onClick={(event) => {
-                          event.stopPropagation();
-                        }}
-                      >
-                        <Add />
-                      </Button>
-                    </div>
-                  </MuiAccordionSummary>
-                  <AccordionDetails>
-                    <RenderComplexType
-                      structureDefJSON={element}
-                      complexTypes={complexTypes}
-                      attributes={item.children}
-                      primitiveTypes={primitiveTypes}
-                      setStructureDefJson={onChangeChild}
-                      name={item.name}
-                      index={i}
-                    />
-                  </AccordionDetails>
-                </Accordion>
-              </div>
-            );
-          }
+        ToReturn = (
+          <>
+            <Typography>{item.name}</Typography>
+            <Button
+              className={classes.accordionButton}
+              variant="outlined"
+              color="primary"
+              onClick={(event) => {
+                event.stopPropagation();
+              }}
+            >
+              <Add />
+            </Button>
+            {structureDefJSON[item.name].map((element: any, i: number) => {
+              return (
+                <div key={i} className={classes.accordionAndButton}>
+                  <Accordion className={classes.accordion}>
+                    <MuiAccordionSummary expandIcon={<ExpandMore />}>
+                      <div className={classes.accordionSummary}>
+                        <Typography>
+                          {item.name} {i + 1}
+                        </Typography>
+                        <Button
+                          className={classes.accordionButton}
+                          variant="outlined"
+                          color="primary"
+                          onClick={(event) => {
+                            event.stopPropagation();
+                          }}
+                        >
+                          <DeleteOutline />
+                        </Button>
+                      </div>
+                    </MuiAccordionSummary>
+                    <AccordionDetails>
+                      <RenderComplexType
+                        structureDefJSON={element}
+                        complexTypes={complexTypes}
+                        attributes={item.children}
+                        primitiveTypes={primitiveTypes}
+                        setStructureDefJson={onChangeChild}
+                        name={item.name}
+                        index={i}
+                      />
+                    </AccordionDetails>
+                  </Accordion>
+                </div>
+              );
+            })}
+          </>
         );
       } else if (typeof structureDefJSON[item.name] === "object") {
         ToReturn = (

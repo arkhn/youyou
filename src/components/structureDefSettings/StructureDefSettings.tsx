@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
-import { Button, Container, Divider, Typography } from "@material-ui/core";
+import { Button, Container, Typography } from "@material-ui/core";
 
 import {
   updateStructureDefProfile,
@@ -95,7 +95,6 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
             name={""}
           />
         </div>
-        <Divider />
       </form>
       <div className={classes.endForm}>
         <Button
