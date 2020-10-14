@@ -88,7 +88,6 @@ export const resource = (
         error: action.payload
       };
     case UPDATE_STRUCTURE_DEF_PROFILE:
-      console.log(action.payload);
       return {
         ...state,
         loading: false,

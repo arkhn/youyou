@@ -53,7 +53,6 @@ export const fhirDataTypes = (
         action.payload.structureDefinitionTree,
         action.payload.primitiveTypes
       );
-      console.log(structureDefinitionTree);
       return {
         ...state,
         primitiveTypes: action.payload.primitiveTypes,
