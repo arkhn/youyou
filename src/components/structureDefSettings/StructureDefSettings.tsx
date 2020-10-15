@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { Button, Container, Typography } from "@material-ui/core";
+import { merge } from "lodash";
 
 import {
   updateStructureDefProfile,
@@ -45,20 +46,8 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
     }
   };
 
-  const recursiveObjectAssign = (newTree: any, initialTree: any) => {
-    for (const key of Object.keys(initialTree)) {
-      if (initialTree[key] instanceof Object && newTree)
-        Object.assign(
-          initialTree[key],
-          recursiveObjectAssign(newTree[key], initialTree[key])
-        );
-    }
-    Object.assign(newTree || {}, initialTree);
-    return newTree;
-  };
-
-  const structureDefJSON = recursiveObjectAssign(
-    createJSONTree(structureDefinitionTree),
+  const structureDefJSON = merge(
+    createJSONTree(structureDefinitionTree, structureDefinition),
     structureDefinition
   );
 
@@ -77,7 +66,12 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
           structureDefMetaAttr = structureDefMetaAttr[key];
         }
       }
-      structureDefMetaAttr[attributeKeys[attributeKeys.length - 1]] = value;
+      if (value !== "--select_a_value--")
+        structureDefMetaAttr[attributeKeys[attributeKeys.length - 1]] = value;
+      else
+        structureDefMetaAttr[
+          attributeKeys[attributeKeys.length - 1]
+        ] = undefined;
       setStructureDefMeta(str);
     }
   };
@@ -91,7 +85,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
             complexTypes={complexTypes}
             structureDefJSON={structureDefJSON}
             primitiveTypes={primitiveTypes}
-            setStructureDefJson={onChangeStructureDefMeta}
+            handleTextFields={onChangeStructureDefMeta}
             name={""}
           />
         </div>

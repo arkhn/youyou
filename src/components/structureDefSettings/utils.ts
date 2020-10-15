@@ -18,15 +18,23 @@ export const editAttribute = <K extends keyof IStructureDefinition>(
   }
 };
 
-export const createJSONTree = (items: RenderAttributesTree[]) => {
+export const createJSONTree = (items: RenderAttributesTree[], base: any) => {
   const sDef: any = {};
   for (const item of items) {
     if (item.children.length === 0) {
       sDef[item.name] = undefined;
     } else {
       if (item.name !== "snapshot" && item.name !== "differential") {
-        if (item.max === "1") sDef[item.name] = createJSONTree(item.children);
-        else sDef[item.name] = [createJSONTree(item.children)];
+        if (item.max === "1")
+          sDef[item.name] = createJSONTree(item.children, base);
+        else {
+          sDef[item.name] = [];
+          if (base[item.name]) {
+            for (let i = 0; i < base[item.name].length; i++) {
+              sDef[item.name].push(createJSONTree(item.children, base));
+            }
+          } else sDef[item.name] = [createJSONTree(item.children, base)];
+        }
       }
     }
   }

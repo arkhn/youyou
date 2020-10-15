@@ -14,13 +14,14 @@ import {
   useStyles,
   MuiAccordionSummary
 } from "components/structureDefSettings/complexTypesEditor/styles";
+import CheckboxTooltip from "components/smallComponents/CheckboxTooltip";
 
 type DetailProps = {
   attributes: RenderAttributesTree[];
   complexTypes: RenderAttributesTree[];
   structureDefJSON: any;
   primitiveTypes: PrimitiveTypesType[];
-  setStructureDefJson?: (path: string, value: any) => void;
+  handleTextFields?: (path: string, value: any) => void;
   name: string;
   index?: number;
 };
@@ -30,24 +31,24 @@ const RenderComplexType: React.FC<DetailProps> = ({
   complexTypes,
   structureDefJSON,
   primitiveTypes,
-  setStructureDefJson,
+  handleTextFields,
   name,
   index
 }) => {
   const classes = useStyles();
-
   const onChangeChild = (path: string, value: any) => {
     if (name === "") {
-      setStructureDefJson && setStructureDefJson(path, value);
+      handleTextFields && handleTextFields(path, value);
     } else {
       if (undefined !== index) {
-        setStructureDefJson &&
-          setStructureDefJson(`${name}.?${index}.${path}`, value);
+        handleTextFields &&
+          handleTextFields(`${name}.?${index}.${path}`, value);
       } else {
-        setStructureDefJson && setStructureDefJson(`${name}.${path}`, value);
+        handleTextFields && handleTextFields(`${name}.${path}`, value);
       }
     }
   };
+
   const renderAttribute = attributes.map((item, index) => {
     let ToReturn: any = null;
     if (
@@ -58,18 +59,20 @@ const RenderComplexType: React.FC<DetailProps> = ({
     ) {
       if (Array.isArray(structureDefJSON[item.name])) {
         ToReturn = (
-          <>
-            <Typography>{item.name}</Typography>
-            <Button
-              className={classes.accordionButton}
-              variant="outlined"
-              color="primary"
-              onClick={(event) => {
-                event.stopPropagation();
-              }}
-            >
-              <Add />
-            </Button>
+          <div className={classes.completeDiv}>
+            <div className={classes.header}>
+              <Typography>{item.name}</Typography>
+              <Button
+                className={classes.accordionButton}
+                variant="outlined"
+                color="primary"
+                onClick={(event) => {
+                  event.stopPropagation();
+                }}
+              >
+                <Add />
+              </Button>
+            </div>
             {structureDefJSON[item.name].map((element: any, i: number) => {
               return (
                 <div key={i} className={classes.accordionAndButton}>
@@ -97,7 +100,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                         complexTypes={complexTypes}
                         attributes={item.children}
                         primitiveTypes={primitiveTypes}
-                        setStructureDefJson={onChangeChild}
+                        handleTextFields={onChangeChild}
                         name={item.name}
                         index={i}
                       />
@@ -106,7 +109,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                 </div>
               );
             })}
-          </>
+          </div>
         );
       } else if (typeof structureDefJSON[item.name] === "object") {
         ToReturn = (
@@ -123,7 +126,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                   complexTypes={complexTypes}
                   attributes={item.children}
                   primitiveTypes={primitiveTypes}
-                  setStructureDefJson={onChangeChild}
+                  handleTextFields={onChangeChild}
                   name={item.name}
                 />
               </AccordionDetails>
@@ -170,9 +173,12 @@ const RenderComplexType: React.FC<DetailProps> = ({
             const mapValues: {
               value: string | undefined;
               label: string | undefined;
-            }[] = [
-              { value: "--select a value--", label: "--select a value--" }
-            ];
+            }[] = [];
+            if (item?.min === 0)
+              mapValues.push({
+                value: "--select_a_value--",
+                label: "--select a value--"
+              });
             item.valueSet?.forEach((values) =>
               mapValues.push({
                 value: values.code,
@@ -190,9 +196,29 @@ const RenderComplexType: React.FC<DetailProps> = ({
                     ? structureDefJSON[item.name]
                     : mapValues[0].value
                 }
+                onChange={(event) => {
+                  const { value } = event.target;
+                  if (value !== "undefined") onChangeChild(item.name, value);
+                }}
               />
             );
           }
+          break;
+        }
+        case "boolean": {
+          ToReturn = (
+            <CheckboxTooltip
+              label={item.min && item.min > 0 ? `${item.name}*` : item.name}
+              tool={item.definition}
+              value={
+                structureDefJSON[item.name] ? structureDefJSON[item.name] : ""
+              }
+              onChange={(event) => {
+                const { checked } = event.target;
+                onChangeChild(item.name, checked);
+              }}
+            />
+          );
           break;
         }
         default:

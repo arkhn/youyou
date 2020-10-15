@@ -155,6 +155,7 @@ export const requestFhirDataTypes = () => {
             type &&
             renderTreeAttributes(type, type, complexTypeTree, complexTypeTree)
         );
+
         newStructureDefinition.forEach(
           (type) =>
             type &&
