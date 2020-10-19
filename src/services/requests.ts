@@ -1,6 +1,9 @@
 import { AxiosResponse } from "axios";
 
-import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
+import {
+  ICodeSystem,
+  IStructureDefinition
+} from "@ahryman40k/ts-fhir-types/lib/R4";
 
 import api from "./api";
 
@@ -17,13 +20,11 @@ export const getStructureDef = async (
 // FETCH CODE SYSTEM
 export const requestCodeSystem = async (
   codeSystemId: string
-): Promise<IStructureDefinition | Error> => {
+): Promise<ICodeSystem | undefined> => {
   const response: AxiosResponse<any> = await api.get(
-    `/CodeSystem?id=${codeSystemId}`
+    `/CodeSystem?name=${codeSystemId}&_elements=concept`
   );
   if (response.status === 200) {
     return response.data.entry[0].resource;
-  } else {
-    return new Error(response.statusText);
   }
 };

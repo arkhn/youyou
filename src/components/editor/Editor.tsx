@@ -84,7 +84,7 @@ const Editor: React.FC<{}> = () => {
             {structureDefMeta && (
               <StructureDefSettings
                 structureDefinition={structureDefinition}
-                type="resource"
+                structureDefinitionType="resource"
               />
             )}
             {selectedAttributeId && attribute && (

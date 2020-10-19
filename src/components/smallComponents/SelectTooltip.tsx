@@ -4,6 +4,7 @@ import { StructureDefinitionStatusKind as StatusKind } from "@ahryman40k/ts-fhir
 import {
   FormControl,
   InputLabel,
+  makeStyles,
   MenuItem,
   Select,
   Theme,
@@ -13,11 +14,11 @@ import { TooltipHelp } from ".";
 
 type SelectWithHelpProps = {
   label: string;
-  value: StatusKind | undefined;
-  choices: string[];
+  value?: StatusKind | string | undefined;
+  choices: { label?: string; value?: string }[];
   error?: boolean | undefined;
   tool: string;
-  onChange: (
+  onChange?: (
     event: React.ChangeEvent<{
       name?: string | undefined;
       value: unknown;
@@ -28,10 +29,6 @@ type SelectWithHelpProps = {
 
 const CssFormControl = withStyles((theme: Theme) => ({
   root: {
-    marginBottom: 16,
-    marginRight: 8,
-    width: 300,
-    maxWidth: 300,
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
         borderColor: theme.palette.secondary.main
@@ -46,6 +43,18 @@ const CssFormControl = withStyles((theme: Theme) => ({
   }
 }))(FormControl);
 
+const useStyles = makeStyles((theme: Theme) => ({
+  root: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  select: {
+    flexGrow: 1,
+    marginRight: 8
+  }
+}));
+
 const SelectWithHelp: React.FC<SelectWithHelpProps> = ({
   label,
   value,
@@ -54,24 +63,28 @@ const SelectWithHelp: React.FC<SelectWithHelpProps> = ({
   tool,
   onChange
 }) => {
+  const classes = useStyles();
   return (
     <CssFormControl variant="outlined">
       <InputLabel htmlFor={label}>{label}</InputLabel>
-      <Select
-        endAdornment={<TooltipHelp tool={tool} />}
-        error={error}
-        value={value}
-        label={label}
-        onChange={onChange}
-      >
-        {choices.map((choice) => {
-          return (
-            <MenuItem value={choice} key={choice}>
-              {choice}
-            </MenuItem>
-          );
-        })}
-      </Select>
+      <div className={classes.root}>
+        <Select
+          className={classes.select}
+          error={error}
+          value={value}
+          label={label}
+          onChange={onChange}
+        >
+          {choices.map((choice) => {
+            return (
+              <MenuItem value={choice.value} key={choice.value}>
+                {choice.label}
+              </MenuItem>
+            );
+          })}
+        </Select>
+        <TooltipHelp tool={tool} />
+      </div>
     </CssFormControl>
   );
 };

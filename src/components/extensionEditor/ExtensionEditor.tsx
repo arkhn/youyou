@@ -65,7 +65,7 @@ const ExtensionEditor: React.FC<{}> = () => {
                   <Typography variant="h1">Metadata</Typography>
                   <StructureDefSettings
                     structureDefinition={extensionStructureDefinition}
-                    type="extension"
+                    structureDefinitionType="extension"
                   />
                   <Typography variant="h1">Value</Typography>
                   <AttributeEditor

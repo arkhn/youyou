@@ -6,6 +6,7 @@ import { withStyles } from "@material-ui/styles";
 
 type TooltipHelpProps = {
   tool: string;
+  className?: string;
 };
 
 const CssTooltip = withStyles((theme: Theme) => ({
@@ -14,10 +15,10 @@ const CssTooltip = withStyles((theme: Theme) => ({
   }
 }))(Tooltip);
 
-const TooltipHelp: React.FC<TooltipHelpProps> = ({ tool }) => {
+const TooltipHelp: React.FC<TooltipHelpProps> = ({ tool, className }) => {
   return (
     <IconButton>
-      <CssTooltip title={tool}>
+      <CssTooltip className={className} title={tool}>
         <HelpOutline />
       </CssTooltip>
     </IconButton>
