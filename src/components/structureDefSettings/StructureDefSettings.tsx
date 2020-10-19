@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { Button, Container, Typography } from "@material-ui/core";
-import { merge } from "lodash";
+import { cloneDeep, merge } from "lodash";
 
 import {
   updateStructureDefProfile,
@@ -28,7 +28,6 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   const { complexTypes, primitiveTypes, structureDefinitionTree } = useSelector(
     (state: RootState) => state.fhirDataTypes
   );
-
   const dispatch = useDispatch();
   const classes = useStyles();
 
@@ -46,10 +45,11 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
     }
   };
 
-  const structureDefJSON = merge(
-    createJSONTree(structureDefinitionTree, structureDefinition),
+  const emptyTree = createJSONTree(
+    structureDefinitionTree,
     structureDefinition
   );
+  const structureDefJSON = merge(cloneDeep(emptyTree), structureDefinition);
 
   const [structureDefMeta, setStructureDefMeta] = useState(structureDefJSON);
 
@@ -67,7 +67,13 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
         }
       }
       if (value !== "--select_a_value--")
-        structureDefMetaAttr[attributeKeys[attributeKeys.length - 1]] = value;
+        if (typeof value === "object") {
+          structureDefMetaAttr[attributeKeys[attributeKeys.length - 1]].push(
+            value
+          );
+        } else {
+          structureDefMetaAttr[attributeKeys[attributeKeys.length - 1]] = value;
+        }
       else
         structureDefMetaAttr[
           attributeKeys[attributeKeys.length - 1]
@@ -83,10 +89,11 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
           <RenderComplexType
             attributes={structureDefinitionTree}
             complexTypes={complexTypes}
-            structureDefJSON={structureDefJSON}
+            structureDefJSON={structureDefMeta}
             primitiveTypes={primitiveTypes}
             handleTextFields={onChangeStructureDefMeta}
             name={""}
+            emptyTree={emptyTree}
           />
         </div>
       </form>

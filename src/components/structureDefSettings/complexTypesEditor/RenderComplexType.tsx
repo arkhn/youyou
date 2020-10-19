@@ -24,6 +24,7 @@ type DetailProps = {
   handleTextFields?: (path: string, value: any) => void;
   name: string;
   index?: number;
+  emptyTree?: any;
 };
 
 const RenderComplexType: React.FC<DetailProps> = ({
@@ -33,7 +34,8 @@ const RenderComplexType: React.FC<DetailProps> = ({
   primitiveTypes,
   handleTextFields,
   name,
-  index
+  index,
+  emptyTree
 }) => {
   const classes = useStyles();
   const onChangeChild = (path: string, value: any) => {
@@ -57,7 +59,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
       item.name !== "snapshot" &&
       item.name !== "differential"
     ) {
-      if (Array.isArray(structureDefJSON[item.name])) {
+      if (Array.isArray(structureDefJSON[item.name]) && emptyTree) {
         ToReturn = (
           <div className={classes.completeDiv}>
             <div className={classes.header}>
@@ -67,7 +69,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                 variant="outlined"
                 color="primary"
                 onClick={(event) => {
-                  event.stopPropagation();
+                  onChangeChild(item.name, emptyTree[item.name][0]);
                 }}
               >
                 <Add />
@@ -103,6 +105,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                         handleTextFields={onChangeChild}
                         name={item.name}
                         index={i}
+                        emptyTree={emptyTree[item.name][0]}
                       />
                     </AccordionDetails>
                   </Accordion>
@@ -128,6 +131,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                   primitiveTypes={primitiveTypes}
                   handleTextFields={onChangeChild}
                   name={item.name}
+                  emptyTree={emptyTree[item.name]}
                 />
               </AccordionDetails>
             </Accordion>

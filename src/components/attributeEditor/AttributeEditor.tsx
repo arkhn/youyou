@@ -11,7 +11,7 @@ import { Typography, Button } from "@material-ui/core";
 import { ToggleButton } from "@material-ui/lab";
 
 import { CssTextField, CssToggleButtonGroup } from "components/smallComponents";
-import useStyles from "components/editor/attributeEditor/style";
+import useStyles from "components/attributeEditor/style";
 import { allCardinalities, isDisabledInput } from "./utils";
 
 type AttributeEditorProps = {

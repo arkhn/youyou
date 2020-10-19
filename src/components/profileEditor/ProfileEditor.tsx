@@ -5,16 +5,16 @@ import clsx from "clsx";
 import { IElementDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { Paper, Container, Typography, Breadcrumbs } from "@material-ui/core";
 
-import AttributeEditor from "components/editor/attributeEditor/AttributeEditor";
+import AttributeEditor from "components/attributeEditor/AttributeEditor";
 import { ButtonDownload, SnackBarWithClose } from "components/smallComponents";
 import Navbar from "components/navbar/Navbar";
 import StructureDefinitionTree from "components/structureDefinitionTree/StructureDefinitionTree";
 import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";
 import { RootState } from "state/store";
 
-import useStyles from "components/editor/style";
+import useStyles from "components/profileEditor/style";
 
-const Editor: React.FC<{}> = () => {
+const ProfileEditor: React.FC<{}> = () => {
   const {
     loading,
     structureDefinition,
@@ -39,18 +39,11 @@ const Editor: React.FC<{}> = () => {
   const renderBreadcrumbs = () => {
     if (structureDefMeta)
       return <Typography className={classes.capitalize}>Metadata</Typography>;
-    return splitedAttributeSelected?.map((split: string) => (
+    return splitedAttributeSelected?.map((split: string, index: number) => (
       <Typography key={split} className={classes.capitalize}>
         {split}
       </Typography>
     ));
-  };
-
-  const renderTitle = () => {
-    if (structureDefMeta) return "Metadatas";
-    return splitedAttributeSelected?.map((split: string, index) => {
-      if (index === splitedAttributeSelected.length - 1) return split;
-    });
   };
 
   return (
@@ -77,9 +70,7 @@ const Editor: React.FC<{}> = () => {
           <Typography
             variant="h1"
             className={clsx(classes.capitalize, classes.marginBottom)}
-          >
-            {renderTitle()}
-          </Typography>
+          ></Typography>
           <Paper className={clsx(classes.paperRight, classes.paper)}>
             {structureDefMeta && (
               <StructureDefSettings
@@ -100,4 +91,4 @@ const Editor: React.FC<{}> = () => {
   );
 };
 
-export default Editor;
+export default ProfileEditor;

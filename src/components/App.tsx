@@ -6,7 +6,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import { StylesProvider, CssBaseline } from "@material-ui/core";
 
 import Homepage from "components/homepage/Homepage";
-import Editor from "components/editor/Editor";
+import ProfileEditor from "components/profileEditor/ProfileEditor";
 import ExtensionEditor from "components/extensionEditor/ExtensionEditor";
 import {
   requestIds,
@@ -30,7 +30,7 @@ const App = () => {
           <Router>
             <Switch>
               <Route exact path="/" component={Homepage} />
-              <Route path="/profile/edit" component={Editor} />
+              <Route path="/profile/edit" component={ProfileEditor} />
               <Route path="/extension/edit" component={ExtensionEditor} />
             </Switch>
           </Router>
