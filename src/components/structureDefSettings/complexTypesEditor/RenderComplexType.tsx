@@ -2,7 +2,6 @@ import { InputTooltip, SelectTooltip } from "components/smallComponents";
 import React from "react";
 
 import { RenderAttributesTree } from "types";
-import { PrimitiveTypesType } from "state/actions/fhirDataTypesActions";
 import {
   Accordion,
   AccordionDetails,
@@ -20,7 +19,7 @@ type DetailProps = {
   attributes: RenderAttributesTree[];
   complexTypes: RenderAttributesTree[];
   structureDefJSON: any;
-  primitiveTypes: PrimitiveTypesType[];
+  primitiveTypes: string[];
   handleTextFields?: (path: string, value: any) => void;
   name: string;
   index?: number;

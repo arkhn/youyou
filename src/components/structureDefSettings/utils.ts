@@ -2,7 +2,6 @@ import {
   IElementDefinition_Type,
   IStructureDefinition
 } from "@ahryman40k/ts-fhir-types/lib/R4";
-import { PrimitiveTypesType } from "state/actions/fhirDataTypesActions";
 import { RenderAttributesTree } from "types";
 
 export const editAttribute = <K extends keyof IStructureDefinition>(
@@ -18,6 +17,13 @@ export const editAttribute = <K extends keyof IStructureDefinition>(
   }
 };
 
+/**
+ * Create a JSON tree from a structure definition
+ * @param items
+ * A tree of type RenderAttributesTree that will help to create a JSON tree as in FHIR resources
+ * @param base
+ * Original structure definition of the resource we choosed to profile
+ */
 export const createJSONTree = (items: RenderAttributesTree[], base: any) => {
   const sDef: any = {};
   for (const item of items) {
@@ -43,11 +49,9 @@ export const createJSONTree = (items: RenderAttributesTree[], base: any) => {
 
 export const isPrimitive = (
   type: string | IElementDefinition_Type[],
-  primitiveTypes: PrimitiveTypesType[]
+  primitiveTypes: string[]
 ) =>
-  primitiveTypes.some(
-    (primitive: PrimitiveTypesType) => type === primitive.name
-  ) ||
+  primitiveTypes.some((primitive: string) => type === primitive) ||
   type === "http://hl7.org/fhirpath/System.String" ||
   type === "Extension" ||
   type === "Reference";

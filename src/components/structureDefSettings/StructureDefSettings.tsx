@@ -82,8 +82,6 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
     }
   };
 
-  console.log(structureDefinition);
-
   return (
     <Container className={classes.formContainer}>
       <form className={classes.form}>

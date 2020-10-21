@@ -4,15 +4,14 @@ import {
   GetFhirTypesFetchSuccessAction,
   GET_FHIR_TYPES_FETCH_FAILURE,
   GET_FHIR_TYPES_FETCH_START,
-  GET_FHIR_TYPES_FETCH_SUCCESS,
-  PrimitiveTypesType
+  GET_FHIR_TYPES_FETCH_SUCCESS
 } from "state/actions/fhirDataTypesActions";
 
 import { createComplexTypes } from "state/utils";
 import { RenderAttributesTree } from "types";
 
 export type FhirDataTypesState = {
-  primitiveTypes: PrimitiveTypesType[];
+  primitiveTypes: string[];
   complexTypes: RenderAttributesTree[];
   loadingTypes: boolean;
   errorTypes: Error | null;

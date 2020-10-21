@@ -93,14 +93,15 @@ export const requestExtensionDataTypes = () => {
   };
 };
 
+// FETCH ALL PRIMITIVE AND COMPLEX TYPES AND DISPATCH TWO TREES OF IMPLEMENTED TREE TYPES
 export const requestFhirDataTypes = () => {
   return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
     dispatch(getFhirTypesFetchStart());
     const [
-      primitiveTypesRequest,
-      complexTypesRequest,
-      valueSetRequest,
-      resourceStructureDefinition
+      primitiveTypes,
+      complexTypes,
+      valueSet,
+      resourceSDef
     ] = await Promise.all([
       api.get(
         "/StructureDefinition?derivation=specialization&kind=primitive-type&_elements=name"
@@ -114,12 +115,12 @@ export const requestFhirDataTypes = () => {
       )
     ]);
     if (
-      primitiveTypesRequest.status === 200 &&
-      complexTypesRequest.status === 200 &&
-      valueSetRequest.status === 200 &&
-      resourceStructureDefinition.status === 200
+      primitiveTypes.status === 200 &&
+      complexTypes.status === 200 &&
+      valueSet.status === 200 &&
+      resourceSDef.status === 200
     ) {
-      let complexTypeTree: RenderAttributesTree = {
+      const complexTypeTree: RenderAttributesTree = {
         id: "",
         name: "",
         type: "",
@@ -128,7 +129,7 @@ export const requestFhirDataTypes = () => {
         max: "",
         definition: ""
       };
-      let structureDefTree: RenderAttributesTree = {
+      const structureDefTree: RenderAttributesTree = {
         id: "",
         name: "",
         type: "",
@@ -138,25 +139,17 @@ export const requestFhirDataTypes = () => {
         definition: ""
       };
 
-      // transform fetched attributes to simplified attributes with new paths
-      const newComplexTypes = transformAttributes(
-        complexTypesRequest,
-        valueSetRequest
-      );
-      const newStructureDefinition = transformAttributes(
-        resourceStructureDefinition,
-        valueSetRequest
-      );
+      const newComplexTypes = transformAttributes(complexTypes, valueSet);
+      const newSDef = transformAttributes(resourceSDef, valueSet);
 
-      // create tree of transformed Attributes (newComplexType and newStructureDefinition)
-      if (newComplexTypes && newStructureDefinition) {
+      if (newComplexTypes && newSDef) {
         newComplexTypes.forEach(
           (type) =>
             type &&
             renderTreeAttributes(type, type, complexTypeTree, complexTypeTree)
         );
 
-        newStructureDefinition.forEach(
+        newSDef.forEach(
           (type) =>
             type &&
             renderTreeAttributes(type, type, structureDefTree, structureDefTree)
@@ -165,17 +158,17 @@ export const requestFhirDataTypes = () => {
 
       dispatch(
         getFhirTypesFetchSuccess(
-          primitiveTypesRequest.data.entry.map((result: FetchedData) => {
-            return result.resource;
-          }),
+          primitiveTypes.data.entry.map(
+            (result: { resource: { name: string }; search: any }) => {
+              return result.resource.name;
+            }
+          ),
           complexTypeTree.children,
           structureDefTree.children[0].children
         )
       );
     } else {
-      dispatch(
-        getFhirTypesFetchFailure(new Error(primitiveTypesRequest.statusText))
-      );
+      dispatch(getFhirTypesFetchFailure(new Error(primitiveTypes.statusText)));
     }
   };
 };
