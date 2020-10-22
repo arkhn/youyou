@@ -20,21 +20,7 @@ import {
   SelectStructureDefMetaAction
 } from "state/actions/resourceActions";
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
-
-export type DataFetched = {
-  id: string;
-};
-
-export type ResourceState = {
-  resources: DataFetched[];
-  structureDefinition: IStructureDefinition | null;
-  extensionStructureDefinition: IStructureDefinition | null;
-  selectedResourceId: string | null;
-  selectedAttributeId: string | undefined;
-  loading: boolean;
-  error: Error | null;
-  structureDefMeta: boolean;
-};
+import { ResourceState } from "types";
 
 const initialState: ResourceState = {
   resources: [],

@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 import { Typography, CircularProgress, Paper, Button } from "@material-ui/core";
+import clsx from "clsx";
 
 import Navbar from "components/navbar/Navbar";
 import { ReactComponent as FhirLogo } from "assets/img/fhir-logo.svg";
@@ -10,21 +11,19 @@ import {
   selectResource,
   selectStructureDefMeta
 } from "state/actions/resourceActions";
-import { DataFetched } from "state/reducers/resource";
 import { RootState } from "state/store";
 import { requestResource } from "state/thunkMiddleware";
+import { choosingCardsItems, ChoosingCardsItemsType } from "./utils";
+import { setSnackbarOpen } from "state/actions/snackbarActions";
 
 import useStyles from "./style";
-import clsx from "clsx";
-import { setSnackbarOpen } from "state/actions/snackbarActions";
-import { choosingCardsItems, ChoosingCardsItemsType } from "./utils";
 
 const Homepage: React.FC<{}> = () => {
   const { loading } = useSelector((state: RootState) => state.resource);
   const dispatch = useDispatch();
   const classes = useStyles();
 
-  const dispatchResourceSelected = (resource: DataFetched): void => {
+  const dispatchResourceSelected = (resource: { id: string }): void => {
     if (resource.id) {
       dispatch(selectResource(resource.id));
       dispatch(requestResource(resource.id));

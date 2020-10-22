@@ -2,12 +2,24 @@ import {
   ICodeSystem,
   ICodeSystem_Concept,
   IElementDefinition_Type,
+  IStructureDefinition,
   IStructureDefinition_Snapshot
 } from "@ahryman40k/ts-fhir-types/lib/R4";
 
 export type FetchedData = {
   resource: string;
   search: any;
+};
+
+export type ResourceState = {
+  resources: { id: string }[];
+  structureDefinition: IStructureDefinition | null;
+  extensionStructureDefinition: IStructureDefinition | null;
+  selectedResourceId: string | null;
+  selectedAttributeId: string | undefined;
+  loading: boolean;
+  error: Error | null;
+  structureDefMeta: boolean;
 };
 
 export type FetchedDataCodeSystem = {
