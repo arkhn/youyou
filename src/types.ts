@@ -2,7 +2,11 @@ import {
   ICodeSystem,
   ICodeSystem_Concept,
   IElementDefinition_Type,
-  IStructureDefinition_Snapshot
+  IStructureDefinition_Snapshot,
+  IResourceList,
+  IOperationOutcome,
+  IBundle_Entry,
+  IBundle
 } from "@ahryman40k/ts-fhir-types/lib/R4";
 
 export type FetchedData = {
@@ -58,3 +62,16 @@ export interface SimplifiedAttributes {
   max: string;
   valueSet?: ICodeSystem_Concept[];
 }
+
+export type FHIR_API_Response<T extends IResourceList> =
+  | TypedBundle<T>
+  | T
+  | IOperationOutcome
+
+  export interface TypedEntry<T extends IResourceList> extends IBundle_Entry {
+    resource?: T
+  }
+  
+  export interface TypedBundle<T extends IResourceList> extends IBundle {
+    entry?: TypedEntry<T>[]
+  }

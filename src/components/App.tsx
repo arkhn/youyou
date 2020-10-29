@@ -8,6 +8,7 @@ import { StylesProvider, CssBaseline } from "@material-ui/core";
 import Homepage from "components/homepage/Homepage";
 import Editor from "components/editor/Editor";
 import ExtensionEditor from "components/extensionEditor/ExtensionEditor";
+import GetStructureDefExample from "components/getStructureDefExample/GetStructureDefExample";
 import {
   requestIds,
   requestExtensionDataTypes,
@@ -32,6 +33,7 @@ const App = () => {
               <Route exact path="/" component={Homepage} />
               <Route path="/profile/edit" component={Editor} />
               <Route path="/extension/edit" component={ExtensionEditor} />
+              <Route path="/SimplifierExample" component={GetStructureDefExample} />
             </Switch>
           </Router>
         </PersistGate>
