@@ -48,27 +48,35 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   const [emptyTree, setEmptyTree] = useState(
     createJSONTree(structureDefinitionTree, structureDefinition)
   );
-  const structureDefJSON = merge(cloneDeep(emptyTree), structureDefinition);
+  const [structureDefJSON, setStructureDefJSON] = useState(
+    merge(cloneDeep(emptyTree), structureDefinition)
+  );
   const [structureDefMeta, setStructureDefMeta] = useState(structureDefJSON);
 
   const onDeleteComplexType = (path: string, i: number) => {
     const attributeKeys = path.split(".");
     const str = { ...structureDefMeta };
+    const empty = { ...emptyTree };
     let structureDefMetaAttr: any = str;
+    let emptyTreeAttr: any = empty;
     for (const key of attributeKeys.slice(0, attributeKeys.length - 1)) {
       if (key[0] === "?") {
         const index = parseInt(key.substr(1));
         structureDefMetaAttr = structureDefMetaAttr[index];
+        emptyTreeAttr = emptyTreeAttr[index];
       } else {
         structureDefMetaAttr = structureDefMetaAttr[key];
+        emptyTreeAttr = emptyTreeAttr[key];
       }
     }
-    console.log(path, i);
-    /*     structureDefMetaAttr[attributeKeys[attributeKeys.length - 1]].splice(i, 1);
-    emptyTree[attributeKeys[attributeKeys.length - 1]].splice(i, 1);
-    setStructureDefMeta(merge(cloneDeep(emptyTree), str));
-    setStructureDefJSON(merge(cloneDeep(emptyTree), str)); */
+    console.log(attributeKeys, i);
+    emptyTreeAttr[attributeKeys[attributeKeys.length - 1]].splice(i, 1);
+    structureDefMetaAttr[attributeKeys[attributeKeys.length - 1]].splice(i, 1);
+    setEmptyTree(empty);
+    setStructureDefMeta(str);
   };
+
+  console.log(structureDefMeta);
 
   const onAddComplexType = (path: string) => {
     const attributeKeys = path.split(".");

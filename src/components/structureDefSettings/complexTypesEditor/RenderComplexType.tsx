@@ -104,7 +104,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
             </div>
             {structureDefJSON[item.name].map((element: any, i: number) => {
               return (
-                <div key={i} className={classes.accordionAndButton}>
+                <div key={`${i}lolo`} className={classes.accordionAndButton}>
                   <Accordion className={classes.accordion}>
                     <MuiAccordionSummary expandIcon={<ExpandMore />}>
                       <div className={classes.accordionSummary}>
