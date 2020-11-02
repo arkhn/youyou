@@ -49,7 +49,9 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
     structureDefinitionTree,
     structureDefinition
   );
-  const structureDefJSON = merge(cloneDeep(emptyTree), structureDefinition);
+  const [structureDefJSON, setStructureDefJSON] = useState(
+    merge(cloneDeep(emptyTree), structureDefinition)
+  );
 
   const [structureDefMeta, setStructureDefMeta] = useState(structureDefJSON);
 
@@ -71,6 +73,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
           structureDefMetaAttr[attributeKeys[attributeKeys.length - 1]].push(
             value
           );
+          setStructureDefJSON(merge(cloneDeep(emptyTree), structureDefMeta));
         } else {
           structureDefMetaAttr[attributeKeys[attributeKeys.length - 1]] = value;
         }

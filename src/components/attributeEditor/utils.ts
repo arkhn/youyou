@@ -1,3 +1,10 @@
+/**
+ * Defines if an input is disabled depending on the cardinality of the item and of the input
+ * @param min min cardinality of the input
+ * @param max max cardinality of the input
+ * @param baseMin base min cardinality of the item
+ * @param baseMax base max cardinality of the item
+ */
 export const isDisabledInput = (
   min: number,
   max: string,

@@ -51,7 +51,10 @@ export const requestIds = () => {
   };
 };
 
-// FETCH RESOURCE SELECTED
+/**
+ * Fetch selected resource
+ * @param resource resource id for the structure we want to fetch
+ */
 export const requestResource = (resource: string) => {
   return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
     dispatch(getFetchStart());
