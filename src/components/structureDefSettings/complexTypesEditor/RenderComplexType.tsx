@@ -21,6 +21,8 @@ type DetailProps = {
   structureDefJSON: any;
   primitiveTypes: string[];
   handleTextFields?: (path: string, value: any) => void;
+  handleDelete?: (path: string, i: number) => void;
+  handleAdd?: (path: string) => void;
   name: string;
   index?: number;
   emptyTree?: any;
@@ -32,6 +34,8 @@ const RenderComplexType: React.FC<DetailProps> = ({
   structureDefJSON,
   primitiveTypes,
   handleTextFields,
+  handleDelete,
+  handleAdd,
   name,
   index,
   emptyTree
@@ -46,6 +50,30 @@ const RenderComplexType: React.FC<DetailProps> = ({
           handleTextFields(`${name}.?${index}.${path}`, value);
       } else {
         handleTextFields && handleTextFields(`${name}.${path}`, value);
+      }
+    }
+  };
+
+  const onDeleteChild = (path: string, i: number) => {
+    if (name === "") {
+      handleDelete && handleDelete(path, i);
+    } else {
+      if (undefined !== index) {
+        handleDelete && handleDelete(`${name}.?${index}.${path}`, i);
+      } else {
+        handleDelete && handleDelete(`${name}.${path}`, i);
+      }
+    }
+  };
+
+  const onAddChild = (path: string) => {
+    if (name === "") {
+      handleAdd && handleAdd(path);
+    } else {
+      if (undefined !== index) {
+        handleAdd && handleAdd(`${name}.?${index}.${path}`);
+      } else {
+        handleAdd && handleAdd(`${name}.${path}`);
       }
     }
   };
@@ -68,7 +96,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                 variant="outlined"
                 color="primary"
                 onClick={(event) => {
-                  onChangeChild(item.name, emptyTree[item.name][0]);
+                  onAddChild(item.name);
                 }}
               >
                 <Add />
@@ -89,6 +117,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                           color="primary"
                           onClick={(event) => {
                             event.stopPropagation();
+                            onDeleteChild(item.name, i);
                           }}
                         >
                           <DeleteOutline />
@@ -102,6 +131,8 @@ const RenderComplexType: React.FC<DetailProps> = ({
                         attributes={item.children}
                         primitiveTypes={primitiveTypes}
                         handleTextFields={onChangeChild}
+                        handleDelete={onDeleteChild}
+                        handleAdd={onAddChild}
                         name={item.name}
                         index={i}
                         emptyTree={emptyTree[item.name][0]}
@@ -129,6 +160,8 @@ const RenderComplexType: React.FC<DetailProps> = ({
                   attributes={item.children}
                   primitiveTypes={primitiveTypes}
                   handleTextFields={onChangeChild}
+                  handleDelete={onDeleteChild}
+                  handleAdd={onAddChild}
                   name={item.name}
                   emptyTree={emptyTree[item.name]}
                 />

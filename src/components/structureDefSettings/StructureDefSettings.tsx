@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 
@@ -45,15 +45,59 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
     }
   };
 
-  const emptyTree = createJSONTree(
-    structureDefinitionTree,
-    structureDefinition
+  const [emptyTree, setEmptyTree] = useState(
+    createJSONTree(structureDefinitionTree, structureDefinition)
   );
-  const [structureDefJSON, setStructureDefJSON] = useState(
-    merge(cloneDeep(emptyTree), structureDefinition)
-  );
-
+  const structureDefJSON = merge(cloneDeep(emptyTree), structureDefinition);
   const [structureDefMeta, setStructureDefMeta] = useState(structureDefJSON);
+
+  const onDeleteComplexType = (path: string, i: number) => {
+    const attributeKeys = path.split(".");
+    const str = { ...structureDefMeta };
+    let structureDefMetaAttr: any = str;
+    for (const key of attributeKeys.slice(0, attributeKeys.length - 1)) {
+      if (key[0] === "?") {
+        const index = parseInt(key.substr(1));
+        structureDefMetaAttr = structureDefMetaAttr[index];
+      } else {
+        structureDefMetaAttr = structureDefMetaAttr[key];
+      }
+    }
+    console.log(path, i);
+    /*     structureDefMetaAttr[attributeKeys[attributeKeys.length - 1]].splice(i, 1);
+    emptyTree[attributeKeys[attributeKeys.length - 1]].splice(i, 1);
+    setStructureDefMeta(merge(cloneDeep(emptyTree), str));
+    setStructureDefJSON(merge(cloneDeep(emptyTree), str)); */
+  };
+
+  const onAddComplexType = (path: string) => {
+    const attributeKeys = path.split(".");
+    const str = { ...structureDefMeta };
+    const empty = { ...emptyTree };
+    let structureDefMetaAttr: any = str;
+    let emptyTreeAttr: any = empty;
+    if (attributeKeys.length === 1) {
+      empty[attributeKeys[0]].push(emptyTree[attributeKeys[0]][0]);
+      str[attributeKeys[0]].push(emptyTree[attributeKeys[0]][0]);
+      setEmptyTree(empty);
+      setStructureDefMeta(str);
+    } else {
+      for (const key of attributeKeys.slice(0, attributeKeys.length)) {
+        if (key[0] === "?") {
+          const index = parseInt(key.substr(1));
+          structureDefMetaAttr = structureDefMetaAttr[index];
+          emptyTreeAttr = emptyTreeAttr[index];
+        } else {
+          structureDefMetaAttr = structureDefMetaAttr[key];
+          emptyTreeAttr = emptyTreeAttr[key];
+        }
+      }
+      emptyTreeAttr.push(emptyTreeAttr[0]);
+      structureDefMetaAttr.push(emptyTreeAttr[0]);
+      setEmptyTree(empty);
+      setStructureDefMeta(str);
+    }
+  };
 
   const onChangeStructureDefMeta = (path: string, value: any) => {
     if (value !== "") {
@@ -69,18 +113,12 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
         }
       }
       if (value !== "--select_a_value--")
-        if (typeof value === "object") {
-          structureDefMetaAttr[attributeKeys[attributeKeys.length - 1]].push(
-            value
-          );
-          setStructureDefJSON(merge(cloneDeep(emptyTree), structureDefMeta));
-        } else {
-          structureDefMetaAttr[attributeKeys[attributeKeys.length - 1]] = value;
-        }
+        structureDefMetaAttr[attributeKeys[attributeKeys.length - 1]] = value;
       else
         structureDefMetaAttr[
           attributeKeys[attributeKeys.length - 1]
         ] = undefined;
+      structureDefMetaAttr[attributeKeys[attributeKeys.length - 1]] = value;
       setStructureDefMeta(str);
     }
   };
@@ -92,9 +130,11 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
           <RenderComplexType
             attributes={structureDefinitionTree}
             complexTypes={complexTypes}
-            structureDefJSON={structureDefMeta}
+            structureDefJSON={structureDefJSON}
             primitiveTypes={primitiveTypes}
             handleTextFields={onChangeStructureDefMeta}
+            handleDelete={onDeleteComplexType}
+            handleAdd={onAddComplexType}
             name={""}
             emptyTree={emptyTree}
           />
