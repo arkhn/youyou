@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import { CssTextField, TooltipHelp } from "components/smallComponents";
 import { makeStyles, Theme } from "@material-ui/core";
@@ -33,6 +33,14 @@ const InputTooltip: React.FC<InputTooltipProps> = ({
   classname
 }) => {
   const classes = useStyles();
+  const inputRef = useRef<HTMLInputElement | undefined>();
+
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.value = value;
+    }
+  }, [value]);
+
   return (
     <div className={classes.root}>
       <CssTextField
@@ -42,6 +50,7 @@ const InputTooltip: React.FC<InputTooltipProps> = ({
         defaultValue={value}
         variant="outlined"
         onBlur={onBlur}
+        inputRef={inputRef}
       />
       <TooltipHelp tool={tool} />
     </div>

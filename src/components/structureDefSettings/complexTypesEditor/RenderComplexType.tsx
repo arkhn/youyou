@@ -25,7 +25,6 @@ type DetailProps = {
   handleAdd?: (path: string) => void;
   name: string;
   index?: number;
-  emptyTree?: any;
 };
 
 const RenderComplexType: React.FC<DetailProps> = ({
@@ -37,8 +36,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
   handleDelete,
   handleAdd,
   name,
-  index,
-  emptyTree
+  index
 }) => {
   const classes = useStyles();
   const onChangeChild = (path: string, value: any) => {
@@ -86,7 +84,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
       item.name !== "snapshot" &&
       item.name !== "differential"
     ) {
-      if (Array.isArray(structureDefJSON[item.name]) && emptyTree) {
+      if (Array.isArray(structureDefJSON[item.name])) {
         ToReturn = (
           <div className={classes.completeDiv}>
             <div className={classes.header}>
@@ -104,7 +102,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
             </div>
             {structureDefJSON[item.name].map((element: any, i: number) => {
               return (
-                <div key={`${i}lolo`} className={classes.accordionAndButton}>
+                <div key={i} className={classes.accordionAndButton}>
                   <Accordion className={classes.accordion}>
                     <MuiAccordionSummary expandIcon={<ExpandMore />}>
                       <div className={classes.accordionSummary}>
@@ -135,7 +133,6 @@ const RenderComplexType: React.FC<DetailProps> = ({
                         handleAdd={onAddChild}
                         name={item.name}
                         index={i}
-                        emptyTree={emptyTree[item.name][0]}
                       />
                     </AccordionDetails>
                   </Accordion>
@@ -163,7 +160,6 @@ const RenderComplexType: React.FC<DetailProps> = ({
                   handleDelete={onDeleteChild}
                   handleAdd={onAddChild}
                   name={item.name}
-                  emptyTree={emptyTree[item.name]}
                 />
               </AccordionDetails>
             </Accordion>
@@ -246,9 +242,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
             <CheckboxTooltip
               label={item.min && item.min > 0 ? `${item.name}*` : item.name}
               tool={item.definition}
-              value={
-                structureDefJSON[item.name] ? structureDefJSON[item.name] : ""
-              }
+              value={structureDefJSON[item.name] ?? false}
               onChange={(event) => {
                 const { checked } = event.target;
                 onChangeChild(item.name, checked);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { StructureDefinitionStatusKind as StatusKind } from "@ahryman40k/ts-fhir-types/lib/R4";
 import {
@@ -63,8 +63,6 @@ const SelectWithHelp: React.FC<SelectWithHelpProps> = ({
   tool,
   onChange
 }) => {
-  const [newValue, setNewValue] = useState(value);
-
   const classes = useStyles();
   return (
     <CssFormControl variant="outlined">
@@ -73,12 +71,9 @@ const SelectWithHelp: React.FC<SelectWithHelpProps> = ({
         <Select
           className={classes.select}
           error={error}
-          value={newValue}
+          value={value}
           label={label}
-          onChange={(e, child) => {
-            setNewValue(e.target.value as string);
-            onChange && onChange(e, child);
-          }}
+          onChange={onChange}
         >
           {choices.map((choice) => {
             return (
