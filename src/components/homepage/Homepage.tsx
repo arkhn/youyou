@@ -5,16 +5,17 @@ import { Link } from "react-router-dom";
 import { Typography, CircularProgress, Paper, Button } from "@material-ui/core";
 import clsx from "clsx";
 
-import Navbar from "components/navbar/Navbar";
-import { ReactComponent as FhirLogo } from "assets/img/fhir-logo.svg";
+import { setSnackbarOpen } from "state/actions/snackbarActions";
 import {
   selectResource,
   selectStructureDefMeta
 } from "state/actions/resourceActions";
 import { RootState } from "state/store";
 import { requestResource } from "state/thunkMiddleware";
+
+import Navbar from "components/navbar/Navbar";
+import { ReactComponent as FhirLogo } from "assets/img/fhir-logo.svg";
 import { choosingCardsItems, ChoosingCardsItemsType } from "./utils";
-import { setSnackbarOpen } from "state/actions/snackbarActions";
 
 import useStyles from "./style";
 

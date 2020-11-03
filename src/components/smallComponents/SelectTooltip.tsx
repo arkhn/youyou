@@ -10,7 +10,8 @@ import {
   Theme,
   withStyles
 } from "@material-ui/core";
-import { TooltipHelp } from ".";
+
+import { TooltipHelp } from "components/smallComponents";
 
 type SelectWithHelpProps = {
   label: string;

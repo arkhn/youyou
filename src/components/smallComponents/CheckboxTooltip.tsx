@@ -1,6 +1,8 @@
 import React from "react";
-import { TooltipHelp } from "components/smallComponents";
+
 import { FormControlLabel, Checkbox } from "@material-ui/core";
+
+import { TooltipHelp } from "components/smallComponents";
 
 type CheckbokTooltipProps = {
   label: string;

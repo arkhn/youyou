@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 import { useDispatch } from "react-redux";
-import { updateStructureDefProfile } from "state/actions/resourceActions";
 
 import {
   IElementDefinition,
@@ -10,6 +9,7 @@ import {
 import { Typography, Button } from "@material-ui/core";
 import { ToggleButton } from "@material-ui/lab";
 
+import { updateStructureDefProfile } from "state/actions/resourceActions";
 import { CssTextField, CssToggleButtonGroup } from "components/smallComponents";
 import useStyles from "components/attributeEditor/style";
 import { allCardinalities, isDisabledInput } from "./utils";

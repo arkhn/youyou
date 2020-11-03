@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "state/store";
 
 import { Snackbar } from "@material-ui/core";
 import { Alert, Color } from "@material-ui/lab";
+
+import { RootState } from "state/store";
 import { setSnackbarOpen } from "state/actions/snackbarActions";
 
 const SnackbarWithClose: React.FC<{}> = () => {

@@ -1,8 +1,6 @@
 import { InputTooltip, SelectTooltip } from "components/smallComponents";
 import React from "react";
 
-import { RenderAttributesTree } from "types";
-import { createJSONTree } from "components/structureDefSettings/utils";
 import {
   Accordion,
   AccordionDetails,
@@ -10,12 +8,14 @@ import {
   Typography
 } from "@material-ui/core";
 import { Add, DeleteOutline, ExpandMore } from "@material-ui/icons";
-import CheckboxTooltip from "components/smallComponents/CheckboxTooltip";
 
+import { RenderAttributesTree } from "types";
+import CheckboxTooltip from "components/smallComponents/CheckboxTooltip";
 import {
   useStyles,
   MuiAccordionSummary
 } from "components/structureDefSettings/complexTypesEditor/styles";
+import { createJSONTree } from "components/structureDefSettings/utils";
 
 type DetailProps = {
   attributes: RenderAttributesTree[];
@@ -95,8 +95,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                 className={classes.accordionButton}
                 variant="outlined"
                 color="primary"
-                onClick={(event) => {
-                  console.log(item.type);
+                onClick={() => {
                   onAddChild(
                     item.name,
                     createJSONTree(item.children, structureDefJSON[item.name])
@@ -141,7 +140,6 @@ const RenderComplexType: React.FC<DetailProps> = ({
                         index={i}
                       />
                     </AccordionDetails>
-                    )
                   </Accordion>
                 </div>
               );

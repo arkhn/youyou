@@ -5,13 +5,13 @@ import clsx from "clsx";
 import { IElementDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { Paper, Container, Typography, Breadcrumbs } from "@material-ui/core";
 
+import { RootState } from "state/store";
+
 import AttributeEditor from "components/attributeEditor/AttributeEditor";
 import { ButtonDownload, SnackBarWithClose } from "components/smallComponents";
 import Navbar from "components/navbar/Navbar";
 import StructureDefinitionTree from "components/structureDefinitionTree/StructureDefinitionTree";
 import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";
-import { RootState } from "state/store";
-
 import useStyles from "components/profileEditor/style";
 
 const ProfileEditor: React.FC<{}> = () => {

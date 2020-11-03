@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import { useDispatch, useSelector } from "react-redux";
 
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
@@ -12,9 +11,9 @@ import {
 } from "state/actions/resourceActions";
 import { RootState } from "state/store";
 import RenderComplexType from "components/structureDefSettings/complexTypesEditor/RenderComplexType";
+import { createJSONTree } from "components/structureDefSettings/utils";
 
 import useStyles from "components/structureDefSettings/style";
-import { createJSONTree } from "./utils";
 
 type StructureDefSettingsProps = {
   structureDefinition: IStructureDefinition;
