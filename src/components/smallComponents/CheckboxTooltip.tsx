@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { TooltipHelp } from "components/smallComponents";
 import { FormControlLabel, Checkbox } from "@material-ui/core";
 

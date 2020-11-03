@@ -2,6 +2,7 @@ import { InputTooltip, SelectTooltip } from "components/smallComponents";
 import React from "react";
 
 import { RenderAttributesTree } from "types";
+import { createJSONTree } from "components/structureDefSettings/utils";
 import {
   Accordion,
   AccordionDetails,
@@ -9,11 +10,12 @@ import {
   Typography
 } from "@material-ui/core";
 import { Add, DeleteOutline, ExpandMore } from "@material-ui/icons";
+import CheckboxTooltip from "components/smallComponents/CheckboxTooltip";
+
 import {
   useStyles,
   MuiAccordionSummary
 } from "components/structureDefSettings/complexTypesEditor/styles";
-import CheckboxTooltip from "components/smallComponents/CheckboxTooltip";
 
 type DetailProps = {
   attributes: RenderAttributesTree[];
@@ -22,7 +24,7 @@ type DetailProps = {
   primitiveTypes: string[];
   handleTextFields?: (path: string, value: any) => void;
   handleDelete?: (path: string, i: number) => void;
-  handleAdd?: (path: string) => void;
+  handleAdd?: (path: string, value: any) => void;
   name: string;
   index?: number;
 };
@@ -64,14 +66,14 @@ const RenderComplexType: React.FC<DetailProps> = ({
     }
   };
 
-  const onAddChild = (path: string) => {
+  const onAddChild = (path: string, value: any) => {
     if (name === "") {
-      handleAdd && handleAdd(path);
+      handleAdd && handleAdd(path, value);
     } else {
       if (undefined !== index) {
-        handleAdd && handleAdd(`${name}.?${index}.${path}`);
+        handleAdd && handleAdd(`${name}.?${index}.${path}`, value);
       } else {
-        handleAdd && handleAdd(`${name}.${path}`);
+        handleAdd && handleAdd(`${name}.${path}`, value);
       }
     }
   };
@@ -94,7 +96,11 @@ const RenderComplexType: React.FC<DetailProps> = ({
                 variant="outlined"
                 color="primary"
                 onClick={(event) => {
-                  onAddChild(item.name);
+                  console.log(item.type);
+                  onAddChild(
+                    item.name,
+                    createJSONTree(item.children, structureDefJSON[item.name])
+                  );
                 }}
               >
                 <Add />
@@ -135,6 +141,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                         index={i}
                       />
                     </AccordionDetails>
+                    )
                   </Accordion>
                 </div>
               );
@@ -162,6 +169,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                   name={item.name}
                 />
               </AccordionDetails>
+              )
             </Accordion>
           </div>
         );

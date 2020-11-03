@@ -39,7 +39,7 @@ export const createJSONTree = (items: RenderAttributesTree[], base: any) => {
             for (let i = 0; i < base[item.name].length; i++) {
               sDef[item.name].push(createJSONTree(item.children, base));
             }
-          } else sDef[item.name] = [createJSONTree(item.children, base)];
+          }
         }
       }
     }

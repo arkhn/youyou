@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 
@@ -45,8 +45,9 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
     }
   };
 
-  const [emptyTree, setEmptyTree] = useState(
-    createJSONTree(structureDefinitionTree, structureDefinition)
+  const emptyTree = createJSONTree(
+    structureDefinitionTree,
+    cloneDeep(structureDefinition)
   );
   const [structureDefJSON, setStructureDefJSON] = useState(
     merge(cloneDeep(emptyTree), structureDefinition)
@@ -55,45 +56,32 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   const onDeleteComplexType = (path: string, i: number) => {
     const attributeKeys = path.split(".");
     const str = cloneDeep(structureDefJSON);
-    //const empty = cloneDeep(emptyTree);
     let structureDefJSONAttr: any = str;
-    //let emptyTreeAttr: any = empty;
     for (const key of attributeKeys.slice(0, attributeKeys.length - 1)) {
       if (key[0] === "?") {
         const index = parseInt(key.substr(1));
         structureDefJSONAttr = structureDefJSONAttr[index];
-        //emptyTreeAttr = emptyTreeAttr[0];
       } else {
         structureDefJSONAttr = structureDefJSONAttr[key];
-        //emptyTreeAttr = emptyTreeAttr[key];
       }
     }
-    console.log(attributeKeys, i);
-    //emptyTreeAttr[attributeKeys[attributeKeys.length - 1]].splice(i, 1);
     structureDefJSONAttr[attributeKeys[attributeKeys.length - 1]].splice(i, 1);
-    //setEmptyTree(createJSONTree(structureDefinitionTree, str));
     setStructureDefJSON(str);
   };
 
-  const onAddComplexType = (path: string) => {
+  const onAddComplexType = (path: string, value: any) => {
     const attributeKeys = path.split(".");
     const str = cloneDeep(structureDefJSON);
-    const empty = cloneDeep(emptyTree);
     let structureDefJSONAttr: any = str;
-    let emptyTreeAttr: any = empty;
     for (const key of attributeKeys) {
       if (key[0] === "?") {
         const index = parseInt(key.substr(1));
         structureDefJSONAttr = structureDefJSONAttr[index];
-        emptyTreeAttr = emptyTreeAttr[0];
       } else {
         structureDefJSONAttr = structureDefJSONAttr[key];
-        emptyTreeAttr = emptyTreeAttr[key];
       }
     }
-    //emptyTreeAttr.push(emptyTreeAttr[0]);
-    structureDefJSONAttr.push(emptyTreeAttr[0]);
-    //setEmptyTree(empty);
+    structureDefJSONAttr.push(value);
     setStructureDefJSON(str);
   };
 
