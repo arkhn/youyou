@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from "react";
 
-import { makeStyles, Theme } from "@material-ui/core";
-
 import { CssTextField, TooltipHelp } from "components/smallComponents";
+import { makeStyles, Theme } from "@material-ui/core";
 
 type InputTooltipProps = {
   classname?: string;
