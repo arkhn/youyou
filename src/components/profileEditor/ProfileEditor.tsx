@@ -67,10 +67,6 @@ const ProfileEditor: React.FC<{}> = () => {
           <Breadcrumbs className={classes.marginBottom}>
             {renderBreadcrumbs()}
           </Breadcrumbs>
-          <Typography
-            variant="h1"
-            className={clsx(classes.capitalize, classes.marginBottom)}
-          ></Typography>
           <Paper className={clsx(classes.paperRight, classes.paper)}>
             {structureDefMeta && (
               <StructureDefSettings

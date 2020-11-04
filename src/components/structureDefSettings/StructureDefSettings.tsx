@@ -103,10 +103,11 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
         structureDefJSONAttr[
           attributeKeys[attributeKeys.length - 1]
         ] = undefined;
-      structureDefJSONAttr[attributeKeys[attributeKeys.length - 1]] = value;
       setStructureDefJSON(str);
     }
   };
+
+  console.log(structureDefJSON);
 
   return (
     <Container className={classes.formContainer}>
@@ -117,7 +118,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
             complexTypes={complexTypes}
             structureDefJSON={structureDefJSON}
             primitiveTypes={primitiveTypes}
-            handleTextFields={onChangeStructureDefJSON}
+            onChangeValue={onChangeStructureDefJSON}
             handleDelete={onDeleteComplexType}
             handleAdd={onAddComplexType}
             name={""}

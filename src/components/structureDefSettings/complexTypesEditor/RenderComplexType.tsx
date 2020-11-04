@@ -22,7 +22,7 @@ type DetailProps = {
   complexTypes: RenderAttributesTree[];
   structureDefJSON: any;
   primitiveTypes: string[];
-  handleTextFields?: (path: string, value: any) => void;
+  onChangeValue?: (path: string, value: any) => void;
   handleDelete?: (path: string, i: number) => void;
   handleAdd?: (path: string, value: any) => void;
   name: string;
@@ -34,7 +34,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
   complexTypes,
   structureDefJSON,
   primitiveTypes,
-  handleTextFields,
+  onChangeValue,
   handleDelete,
   handleAdd,
   name,
@@ -43,13 +43,12 @@ const RenderComplexType: React.FC<DetailProps> = ({
   const classes = useStyles();
   const onChangeChild = (path: string, value: any) => {
     if (name === "") {
-      handleTextFields && handleTextFields(path, value);
+      onChangeValue && onChangeValue(path, value);
     } else {
       if (undefined !== index) {
-        handleTextFields &&
-          handleTextFields(`${name}.?${index}.${path}`, value);
+        onChangeValue && onChangeValue(`${name}.?${index}.${path}`, value);
       } else {
-        handleTextFields && handleTextFields(`${name}.${path}`, value);
+        onChangeValue && onChangeValue(`${name}.${path}`, value);
       }
     }
   };
@@ -79,7 +78,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
   };
 
   const renderAttribute = attributes.map((item, index) => {
-    let ToReturn: any = null;
+    let ToReturn: JSX.Element | null = null;
     if (
       item.children.length > 0 &&
       item.name !== "extension" &&
@@ -133,7 +132,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                         complexTypes={complexTypes}
                         attributes={item.children}
                         primitiveTypes={primitiveTypes}
-                        handleTextFields={onChangeChild}
+                        onChangeValue={onChangeChild}
                         handleDelete={onDeleteChild}
                         handleAdd={onAddChild}
                         name={item.name}
@@ -161,7 +160,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                   complexTypes={complexTypes}
                   attributes={item.children}
                   primitiveTypes={primitiveTypes}
-                  handleTextFields={onChangeChild}
+                  onChangeValue={onChangeChild}
                   handleDelete={onDeleteChild}
                   handleAdd={onAddChild}
                   name={item.name}
@@ -212,12 +211,12 @@ const RenderComplexType: React.FC<DetailProps> = ({
               value: string | undefined;
               label: string | undefined;
             }[] = [];
-            if (item?.min === 0)
+            if (item.min === 0)
               mapValues.push({
                 value: "--select_a_value--",
                 label: "--select a value--"
               });
-            item.valueSet?.forEach((values) =>
+            item.valueSet.forEach((values) =>
               mapValues.push({
                 value: values.code,
                 label: values.display
@@ -229,14 +228,10 @@ const RenderComplexType: React.FC<DetailProps> = ({
                 label={item.min && item.min > 0 ? `${item.name}*` : item.name}
                 tool={item.definition}
                 choices={mapValues}
-                value={
-                  structureDefJSON[item.name]
-                    ? structureDefJSON[item.name]
-                    : mapValues[0].value
-                }
+                value={structureDefJSON[item.name] ?? mapValues[0].value}
                 onChange={(event) => {
                   const { value } = event.target;
-                  if (value !== "undefined") onChangeChild(item.name, value);
+                  onChangeChild(item.name, value);
                 }}
               />
             );
