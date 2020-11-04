@@ -41,38 +41,17 @@ const RenderComplexType: React.FC<DetailProps> = ({
   index
 }) => {
   const classes = useStyles();
-  const onChangeChild = (path: string, value: any) => {
-    if (name === "") {
-      onChangeValue && onChangeValue(path, value);
-    } else {
-      if (undefined !== index) {
-        onChangeValue && onChangeValue(`${name}.${index}.${path}`, value);
-      } else {
-        onChangeValue && onChangeValue(`${name}.${path}`, value);
-      }
-    }
-  };
 
-  const onDeleteChild = (path: string, i: number) => {
+  const onChange = (
+    callback: typeof onChangeValue | typeof handleDelete | typeof handleAdd
+  ) => (path: string, value: any) => {
     if (name === "") {
-      handleDelete && handleDelete(path, i);
+      callback && callback(path, value);
     } else {
       if (undefined !== index) {
-        handleDelete && handleDelete(`${name}.${index}.${path}`, i);
+        callback && callback(`${name}.${index}.${path}`, value);
       } else {
-        handleDelete && handleDelete(`${name}.${path}`, i);
-      }
-    }
-  };
-
-  const onAddChild = (path: string, value: any) => {
-    if (name === "") {
-      handleAdd && handleAdd(path, value);
-    } else {
-      if (undefined !== index) {
-        handleAdd && handleAdd(`${name}.${index}.${path}`, value);
-      } else {
-        handleAdd && handleAdd(`${name}.${path}`, value);
+        callback && callback(`${name}.${path}`, value);
       }
     }
   };
@@ -95,7 +74,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                 variant="outlined"
                 color="primary"
                 onClick={() => {
-                  onAddChild(
+                  onChange(handleAdd)(
                     item.name,
                     createJSONTree(item.children, structureDefJSON[item.name])
                   );
@@ -119,7 +98,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                           color="primary"
                           onClick={(event) => {
                             event.stopPropagation();
-                            onDeleteChild(item.name, i);
+                            onChange(handleDelete)(item.name, i);
                           }}
                         >
                           <DeleteOutline />
@@ -132,9 +111,9 @@ const RenderComplexType: React.FC<DetailProps> = ({
                         complexTypes={complexTypes}
                         attributes={item.children}
                         primitiveTypes={primitiveTypes}
-                        onChangeValue={onChangeChild}
-                        handleDelete={onDeleteChild}
-                        handleAdd={onAddChild}
+                        onChangeValue={onChange(onChangeValue)}
+                        handleDelete={onChange(handleDelete)}
+                        handleAdd={onChange(handleAdd)}
                         name={item.name}
                         index={i}
                       />
@@ -160,9 +139,9 @@ const RenderComplexType: React.FC<DetailProps> = ({
                   complexTypes={complexTypes}
                   attributes={item.children}
                   primitiveTypes={primitiveTypes}
-                  onChangeValue={onChangeChild}
-                  handleDelete={onDeleteChild}
-                  handleAdd={onAddChild}
+                  onChangeValue={onChange(onChangeValue)}
+                  handleDelete={onChange(handleDelete)}
+                  handleAdd={onChange(handleAdd)}
                   name={item.name}
                 />
               </AccordionDetails>
@@ -185,7 +164,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
               tool={item.definition}
               onBlur={(event) => {
                 const { value } = event.target;
-                onChangeChild(item.name, value);
+                onChange(onChangeValue)(item.name, value);
               }}
             />
           );
@@ -212,7 +191,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
             }[] = [];
             if (item.min === 0)
               mapValues.push({
-                value: "--select_a_value--",
+                value: "",
                 label: "--select a value--"
               });
             item.valueSet.forEach((values) =>
@@ -230,7 +209,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                 value={structureDefJSON[item.name] ?? mapValues[0].value}
                 onChange={(event) => {
                   const { value } = event.target;
-                  onChangeChild(item.name, value);
+                  onChange(onChangeValue)(item.name, value);
                 }}
               />
             );
@@ -245,7 +224,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
               value={structureDefJSON[item.name] ?? false}
               onChange={(event) => {
                 const { checked } = event.target;
-                onChangeChild(item.name, checked);
+                onChange(onChangeValue)(item.name, checked);
               }}
             />
           );

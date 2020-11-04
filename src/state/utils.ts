@@ -3,6 +3,7 @@ import {
   IElementDefinition_Type
 } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { AxiosResponse } from "axios";
+import _ from "lodash";
 import {
   FetchedDataCodeSystem,
   fhirDataState,
@@ -124,18 +125,15 @@ export const isPrimitive = (
  * A parent of attribute determined by its path.
  * @param node
  * A node to assign to a parent node in a renderTree tree, determined by its path.
- * @param rootNode
- * Root node of the renderTree tree.
  * @returns a render tree filled with backbones elements.
  */
 export const renderTreeAttributes = (
   attribute: SimplifiedAttributes,
   parentAttribute: SimplifiedAttributes,
-  node: RenderAttributesTree,
-  rootNode: RenderAttributesTree
+  node: RenderAttributesTree
 ): RenderAttributesTree => {
   if (node.id === parentAttribute.path) {
-    return rootNode;
+    return _.cloneDeep(node);
   } else {
     const splitPath = attribute.path.split(".");
     const childNode = node.children.find((c) => c.name === splitPath[0]);
@@ -148,12 +146,7 @@ export const renderTreeAttributes = (
       max: attribute.max
     };
     if (childNode) {
-      return renderTreeAttributes(
-        newAttribute,
-        parentAttribute,
-        childNode,
-        rootNode
-      );
+      return renderTreeAttributes(newAttribute, parentAttribute, childNode);
     } else {
       const newNode = {
         name: splitPath[0],
@@ -166,12 +159,7 @@ export const renderTreeAttributes = (
         max: parentAttribute.max
       };
       node.children.push(newNode);
-      return renderTreeAttributes(
-        newAttribute,
-        parentAttribute,
-        newNode,
-        rootNode
-      );
+      return renderTreeAttributes(newAttribute, parentAttribute, newNode);
     }
   }
 };

@@ -147,15 +147,11 @@ export const requestFhirDataTypes = () => {
 
       if (newComplexTypes && newSDef) {
         newComplexTypes.forEach(
-          (type) =>
-            type &&
-            renderTreeAttributes(type, type, complexTypeTree, complexTypeTree)
+          (type) => type && renderTreeAttributes(type, type, complexTypeTree)
         );
 
         newSDef.forEach(
-          (type) =>
-            type &&
-            renderTreeAttributes(type, type, structureDefTree, structureDefTree)
+          (type) => type && renderTreeAttributes(type, type, structureDefTree)
         );
       }
 
