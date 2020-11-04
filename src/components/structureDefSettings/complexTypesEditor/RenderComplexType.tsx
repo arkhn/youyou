@@ -45,19 +45,15 @@ const RenderComplexType: React.FC<DetailProps> = ({
   const onChange = (
     callback: typeof onChangeValue | typeof handleDelete | typeof handleAdd
   ) => (path: string, value: any) => {
-    if (name === "") {
-      callback && callback(path, value);
-    } else {
-      if (undefined !== index) {
-        callback && callback(`${name}.${index}.${path}`, value);
-      } else {
-        callback && callback(`${name}.${path}`, value);
-      }
+    if (index !== undefined && callback) {
+      callback(`${name && name + "."}${index}.${path}`, value);
+    } else if (callback) {
+      callback(`${name && name + "."}${path}`, value);
     }
   };
 
   const renderAttribute = attributes.map((item, index) => {
-    let ToReturn: JSX.Element | null = null;
+    let attributeElement: JSX.Element | null = null;
     if (
       item.children.length > 0 &&
       item.name !== "extension" &&
@@ -65,7 +61,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
       item.name !== "differential"
     ) {
       if (Array.isArray(structureDefJSON[item.name])) {
-        ToReturn = (
+        attributeElement = (
           <div className={classes.completeDiv}>
             <div className={classes.header}>
               <Typography>{item.name}</Typography>
@@ -73,12 +69,12 @@ const RenderComplexType: React.FC<DetailProps> = ({
                 className={classes.accordionButton}
                 variant="outlined"
                 color="primary"
-                onClick={() => {
+                onClick={() =>
                   onChange(handleAdd)(
                     item.name,
                     createJSONTree(item.children, structureDefJSON[item.name])
-                  );
-                }}
+                  )
+                }
               >
                 <Add />
               </Button>
@@ -125,7 +121,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
           </div>
         );
       } else if (typeof structureDefJSON[item.name] === "object") {
-        ToReturn = (
+        attributeElement = (
           <div key={item.name} className={classes.accordionAndButton}>
             <Accordion className={classes.accordion}>
               <MuiAccordionSummary expandIcon={<ExpandMore />}>
@@ -155,24 +151,23 @@ const RenderComplexType: React.FC<DetailProps> = ({
         case "uri":
         case "id":
         case "http://hl7.org/fhirpath/System.String": {
-          ToReturn = (
+          attributeElement = (
             <InputTooltip
               label={item.min && item.min > 0 ? `${item.name}*` : item.name}
               value={
                 structureDefJSON[item.name] ? structureDefJSON[item.name] : ""
               }
               tool={item.definition}
-              onBlur={(event) => {
-                const { value } = event.target;
-                onChange(onChangeValue)(item.name, value);
-              }}
+              onBlur={(event) =>
+                onChange(onChangeValue)(item.name, event.target.value)
+              }
             />
           );
           break;
         }
         case "integer":
         case "positiveInt": {
-          ToReturn = (
+          attributeElement = (
             <InputTooltip
               label={item.min && item.min > 0 ? `${item.name}*` : item.name}
               value={
@@ -200,32 +195,30 @@ const RenderComplexType: React.FC<DetailProps> = ({
                 label: values.display
               })
             );
-            ToReturn = (
+            attributeElement = (
               <SelectTooltip
                 key={index}
                 label={item.min && item.min > 0 ? `${item.name}*` : item.name}
                 tool={item.definition}
                 choices={mapValues}
                 value={structureDefJSON[item.name] ?? mapValues[0].value}
-                onChange={(event) => {
-                  const { value } = event.target;
-                  onChange(onChangeValue)(item.name, value);
-                }}
+                onChange={(event) =>
+                  onChange(onChangeValue)(item.name, event.target.value)
+                }
               />
             );
           }
           break;
         }
         case "boolean": {
-          ToReturn = (
+          attributeElement = (
             <CheckboxTooltip
               label={item.min && item.min > 0 ? `${item.name}*` : item.name}
               tool={item.definition}
               value={structureDefJSON[item.name] ?? false}
-              onChange={(event) => {
-                const { checked } = event.target;
-                onChange(onChangeValue)(item.name, checked);
-              }}
+              onChange={(event) =>
+                onChange(onChangeValue)(item.name, event.target.checked)
+              }
             />
           );
           break;
@@ -236,7 +229,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
     }
     return (
       <div className={classes.root} key={index}>
-        {ToReturn}
+        {attributeElement}
       </div>
     );
   });

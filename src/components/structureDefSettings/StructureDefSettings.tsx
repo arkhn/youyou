@@ -57,25 +57,27 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   );
 
   const onDeleteComplexType = (path: string, i: number) => {
-    const str: IStructureDefinition = _.cloneDeep(structureDefJSON);
+    const str: IStructureDefinition = { ...structureDefJSON };
     let structureDefJSONAttr: any = _.get(str, path);
     structureDefJSONAttr.splice(i, 1);
     setStructureDefJSON(str);
   };
 
   const onAddComplexType = (path: string, value: any) => {
-    const str: IStructureDefinition = _.cloneDeep(structureDefJSON);
+    const str: IStructureDefinition = { ...structureDefJSON };
     const structureDefJSONAttr = _.get(str, path);
     structureDefJSONAttr.push(value);
     setStructureDefJSON(str);
   };
 
   const onChangeStructureDefJSON = (path: string, value: any) => {
+    const str: IStructureDefinition = { ...structureDefJSON };
     if (value !== "") {
-      const str: IStructureDefinition = _.cloneDeep(structureDefJSON);
+      _.set(str, path, value);
+    } else {
       _.set(str, path, undefined);
-      setStructureDefJSON(str);
     }
+    setStructureDefJSON(str);
   };
 
   return (

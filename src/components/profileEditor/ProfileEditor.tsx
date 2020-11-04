@@ -39,7 +39,7 @@ const ProfileEditor: React.FC<{}> = () => {
   const renderBreadcrumbs = () => {
     if (structureDefMeta)
       return <Typography className={classes.capitalize}>Metadata</Typography>;
-    return splitedAttributeSelected?.map((split: string, index: number) => (
+    return splitedAttributeSelected?.map((split: string) => (
       <Typography key={split} className={classes.capitalize}>
         {split}
       </Typography>

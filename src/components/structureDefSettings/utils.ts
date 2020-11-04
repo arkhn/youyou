@@ -9,7 +9,7 @@ export const editAttribute = <K extends keyof IStructureDefinition>(
   attributeKey: K,
   attributeValue?: IStructureDefinition[K]
 ) => {
-  if (undefined !== attributeValue && attributeValue.toString() !== "") {
+  if (attributeValue !== undefined && attributeValue.toString() !== "") {
     structureToEdit[attributeKey] = attributeValue;
     return structureToEdit;
   } else {

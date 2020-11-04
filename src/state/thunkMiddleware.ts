@@ -30,7 +30,7 @@ import {
 } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { AxiosResponse } from "axios";
 
-// FETCH ALL RESOURCE IDS
+// Fetch all resource ids
 export const requestIds = () => {
   return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
     dispatch(getFetchStart());
@@ -69,7 +69,7 @@ export const requestResource = (resource: string) => {
   };
 };
 
-// FETCH AVAILABLE DATA TYPES FOR EXTENSIONS
+// Fetch available data types for extensions
 export const requestExtensionDataTypes = () => {
   return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
     dispatch(getCodeSystemDataTypePending());
@@ -79,7 +79,7 @@ export const requestExtensionDataTypes = () => {
     const resource: IStructureDefinition = response.data.entry[0].resource;
     let codes: string[] = [];
     resource.differential?.element.forEach((element: IElementDefinition) => {
-      //FIXME
+      //fixme
       if (element.id === "Extension.value[x]") {
         codes =
           element?.type
@@ -96,7 +96,7 @@ export const requestExtensionDataTypes = () => {
   };
 };
 
-// FETCH ALL PRIMITIVE AND COMPLEX TYPES AND DISPATCH TWO TREES OF IMPLEMENTED TREE TYPES
+// Fetch all primitive and complex types and dispatch two trees of implemented tree types
 export const requestFhirDataTypes = () => {
   return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
     dispatch(getFhirTypesFetchStart());
@@ -158,9 +158,8 @@ export const requestFhirDataTypes = () => {
       dispatch(
         getFhirTypesFetchSuccess(
           primitiveTypes.data.entry.map(
-            (result: { resource: { name: string }; search: any }) => {
-              return result.resource.name;
-            }
+            (result: { resource: { name: string }; search: any }) =>
+              result.resource.name
           ),
           complexTypeTree.children,
           structureDefTree.children[0].children
