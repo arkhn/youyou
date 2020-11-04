@@ -7,7 +7,7 @@ import {
 
 import api from "./api";
 
-// FETCH STRUCTURE DEF
+// Fetch structure definition
 export const getStructureDef = async (
   resourceName: string
 ): Promise<IStructureDefinition> => {
@@ -17,7 +17,7 @@ export const getStructureDef = async (
   return response.data.entry[0].resource;
 };
 
-// FETCH CODE SYSTEM
+// Fetch code system
 export const requestCodeSystem = async (
   codeSystemId: string
 ): Promise<ICodeSystem | undefined> => {
