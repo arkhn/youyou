@@ -3,7 +3,7 @@ import {
   IElementDefinition_Type
 } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { AxiosResponse } from "axios";
-import _ from "lodash";
+import cloneDeep from "lodash.clonedeep";
 import {
   FetchedDataCodeSystem,
   fhirDataState,
@@ -133,7 +133,7 @@ export const renderTreeAttributes = (
   node: RenderAttributesTree
 ): RenderAttributesTree => {
   if (node.id === parentAttribute.path) {
-    return _.cloneDeep(node);
+    return cloneDeep(node);
   } else {
     const splitPath = attribute.path.split(".");
     const childNode = node.children.find((c) => c.name === splitPath[0]);

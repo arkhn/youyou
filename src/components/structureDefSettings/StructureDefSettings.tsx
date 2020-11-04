@@ -3,7 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { Button, Container, Typography } from "@material-ui/core";
-import _ from "lodash";
+import merge from "lodash.merge";
+import cloneDeep from "lodash.clonedeep";
+import set from "lodash.set";
+import get from "lodash.get";
 
 import {
   updateStructureDefProfile,
@@ -50,22 +53,22 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
 
   const emptyTree = createJSONTree(
     structureDefinitionTree,
-    _.cloneDeep(structureDefinition)
+    cloneDeep(structureDefinition)
   );
   const [structureDefJSON, setStructureDefJSON] = useState(
-    _.merge(_.cloneDeep(emptyTree), structureDefinition)
+    merge(cloneDeep(emptyTree), structureDefinition)
   );
 
   const onDeleteComplexType = (path: string, i: number) => {
     const str: IStructureDefinition = { ...structureDefJSON };
-    let structureDefJSONAttr: any = _.get(str, path);
+    let structureDefJSONAttr: any = get(str, path);
     structureDefJSONAttr.splice(i, 1);
     setStructureDefJSON(str);
   };
 
   const onAddComplexType = (path: string, value: any) => {
     const str: IStructureDefinition = { ...structureDefJSON };
-    const structureDefJSONAttr = _.get(str, path);
+    const structureDefJSONAttr = get(str, path);
     structureDefJSONAttr.push(value);
     setStructureDefJSON(str);
   };
@@ -73,9 +76,9 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   const onChangeStructureDefJSON = (path: string, value: any) => {
     const str: IStructureDefinition = { ...structureDefJSON };
     if (value !== "") {
-      _.set(str, path, value);
+      set(str, path, value);
     } else {
-      _.set(str, path, undefined);
+      set(str, path, undefined);
     }
     setStructureDefJSON(str);
   };
