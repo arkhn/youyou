@@ -32,6 +32,7 @@
     "material-table": "^1.57.2",
     "moment": "^2.25.3",
     "node-sass": "^4.14.1",
+    "object-bystring": "^5.0.1",
     "popper.js": "^1.16.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",

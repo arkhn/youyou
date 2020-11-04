@@ -8634,6 +8634,11 @@ object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
 
+object-bystring@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/object-bystring/-/object-bystring-5.0.1.tgz#0ac990bd6ad8903c61d27d428862b0d7e8304672"
+  integrity sha512-uznqIBhkcBWgw9fOTe4z0S8mnrr5xR0lRWMrBrCobPp2WJ2XnWHDu4mD0GE/oGl1+Qczc2gmfqLyI20aEVjb8A==
+
 object-copy@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/object-copy/-/object-copy-0.1.0.tgz#7e7d858b781bd7c991a41ba975ed3812754e998c"

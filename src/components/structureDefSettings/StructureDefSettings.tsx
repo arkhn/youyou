@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { Button, Container, Typography } from "@material-ui/core";
-import { cloneDeep, merge } from "lodash";
+import _ from "lodash";
 
 import {
   updateStructureDefProfile,
@@ -46,68 +46,54 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
 
   const emptyTree = createJSONTree(
     structureDefinitionTree,
-    cloneDeep(structureDefinition)
+    _.cloneDeep(structureDefinition)
   );
   const [structureDefJSON, setStructureDefJSON] = useState(
-    merge(cloneDeep(emptyTree), structureDefinition)
+    _.merge(_.cloneDeep(emptyTree), structureDefinition)
   );
 
-  const onDeleteComplexType = (path: string, i: number) => {
-    const attributeKeys = path.split(".");
-    const str = cloneDeep(structureDefJSON);
-    let structureDefJSONAttr: any = str;
-    for (const key of attributeKeys.slice(0, attributeKeys.length - 1)) {
-      if (key[0] === "?") {
-        const index = parseInt(key.substr(1));
-        structureDefJSONAttr = structureDefJSONAttr[index];
+  /* @ts-ignore */
+  Object.byString = function (o, s) {
+    s = s.replace(/\[(\w+)\]/g, ".$1"); // convert indexes to properties
+    s = s.replace(/^\./, ""); // strip a leading dot
+    var a = s.split(".");
+    for (var i = 0, n = a.length; i < n; ++i) {
+      var k = a[i];
+      if (k in o) {
+        o = o[k];
       } else {
-        structureDefJSONAttr = structureDefJSONAttr[key];
+        return;
       }
     }
-    structureDefJSONAttr[attributeKeys[attributeKeys.length - 1]].splice(i, 1);
+    return o;
+  };
+
+  const onDeleteComplexType = (path: string, i: number) => {
+    const str = _.cloneDeep(structureDefJSON);
+    let structureDefJSONAttr: any = _.get(str, path);
+    structureDefJSONAttr.splice(i, 1);
     setStructureDefJSON(str);
   };
 
   const onAddComplexType = (path: string, value: any) => {
-    const attributeKeys = path.split(".");
-    const str = cloneDeep(structureDefJSON);
-    let structureDefJSONAttr: any = str;
-    for (const key of attributeKeys) {
-      if (key[0] === "?") {
-        const index = parseInt(key.substr(1));
-        structureDefJSONAttr = structureDefJSONAttr[index];
-      } else {
-        structureDefJSONAttr = structureDefJSONAttr[key];
-      }
-    }
+    const str = _.cloneDeep(structureDefJSON);
+    const structureDefJSONAttr = _.get(str, path);
     structureDefJSONAttr.push(value);
     setStructureDefJSON(str);
   };
+  console.log(structureDefJSON);
 
   const onChangeStructureDefJSON = (path: string, value: any) => {
     if (value !== "") {
-      const attributeKeys = path.split(".");
-      const str = { ...structureDefJSON };
-      let structureDefJSONAttr: any = str;
-      for (const key of attributeKeys.slice(0, attributeKeys.length - 1)) {
-        if (key[0] === "?") {
-          const index = parseInt(key.substr(1));
-          structureDefJSONAttr = structureDefJSONAttr[index];
-        } else {
-          structureDefJSONAttr = structureDefJSONAttr[key];
-        }
+      const str = _.cloneDeep(structureDefJSON);
+      if (value !== "--select_a_value--") {
+        _.set(str, path, value);
+      } else {
+        _.set(str, path, undefined);
       }
-      if (value !== "--select_a_value--")
-        structureDefJSONAttr[attributeKeys[attributeKeys.length - 1]] = value;
-      else
-        structureDefJSONAttr[
-          attributeKeys[attributeKeys.length - 1]
-        ] = undefined;
       setStructureDefJSON(str);
     }
   };
-
-  console.log(structureDefJSON);
 
   return (
     <Container className={classes.formContainer}>

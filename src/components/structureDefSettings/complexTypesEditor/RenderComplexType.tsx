@@ -46,7 +46,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
       onChangeValue && onChangeValue(path, value);
     } else {
       if (undefined !== index) {
-        onChangeValue && onChangeValue(`${name}.?${index}.${path}`, value);
+        onChangeValue && onChangeValue(`${name}.${index}.${path}`, value);
       } else {
         onChangeValue && onChangeValue(`${name}.${path}`, value);
       }
@@ -58,7 +58,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
       handleDelete && handleDelete(path, i);
     } else {
       if (undefined !== index) {
-        handleDelete && handleDelete(`${name}.?${index}.${path}`, i);
+        handleDelete && handleDelete(`${name}.${index}.${path}`, i);
       } else {
         handleDelete && handleDelete(`${name}.${path}`, i);
       }
@@ -70,7 +70,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
       handleAdd && handleAdd(path, value);
     } else {
       if (undefined !== index) {
-        handleAdd && handleAdd(`${name}.?${index}.${path}`, value);
+        handleAdd && handleAdd(`${name}.${index}.${path}`, value);
       } else {
         handleAdd && handleAdd(`${name}.${path}`, value);
       }
@@ -166,7 +166,6 @@ const RenderComplexType: React.FC<DetailProps> = ({
                   name={item.name}
                 />
               </AccordionDetails>
-              )
             </Accordion>
           </div>
         );
