@@ -9,5 +9,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install modules and run eslint
-        run: yarn install
-        run: eslint './src/**/*.{ts,tsx,js,jsx}'
+      - run: yarn install
+      - run: eslint './src/**/*.{ts,tsx,js,jsx}'
