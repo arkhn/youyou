@@ -11,6 +11,5 @@ ReactDOM.render(
   <ThemeProvider theme={theme}>
     <App />
   </ThemeProvider>,
-  // eslint-disable-next-line no-undef
   document.getElementById('root')
 );
