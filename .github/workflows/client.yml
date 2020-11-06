@@ -8,11 +8,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-
       - name: Install modules
-        run: yarn
+        run: yarn insall
       - name: Run eslint
-        run: eslint . --ext .js,.jsx,.ts,.tsx
+        run: eslint './src/**/*.{ts,tsx,js,jsx}'
