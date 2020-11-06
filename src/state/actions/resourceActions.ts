@@ -1,4 +1,3 @@
-import { DataFetched } from "state/reducers/resource";
 import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
 
 export const SELECT_RESOURCE = "SELECT_RESOURCE";
@@ -22,7 +21,7 @@ export type GetFetchStartAction = {
 
 export type GetIdsSuccessAction = {
   type: typeof GET_IDS_SUCCESS;
-  payload: DataFetched[];
+  payload: { id: string }[];
 };
 
 export type GetIdsFailureAction = {
@@ -67,7 +66,7 @@ export const getFetchStart = (): GetFetchStartAction => {
   };
 };
 
-export const getIdsSuccess = (data: DataFetched[]): GetIdsSuccessAction => {
+export const getIdsSuccess = (data: { id: string }[]): GetIdsSuccessAction => {
   return {
     type: GET_IDS_SUCCESS,
     payload: data

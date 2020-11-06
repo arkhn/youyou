@@ -30,7 +30,7 @@ import {
 } from "@ahryman40k/ts-fhir-types/lib/R4";
 import { AxiosResponse } from "axios";
 
-// FETCH ALL RESOURCE IDS
+// Fetch all resource ids
 export const requestIds = () => {
   return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
     dispatch(getFetchStart());
@@ -51,7 +51,10 @@ export const requestIds = () => {
   };
 };
 
-// FETCH RESOURCE SELECTED
+/**
+ * Fetch selected resource
+ * @param resource resource id for the structure we want to fetch
+ */
 export const requestResource = (resource: string) => {
   return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
     dispatch(getFetchStart());
@@ -66,7 +69,7 @@ export const requestResource = (resource: string) => {
   };
 };
 
-// FETCH AVAILABLE DATA TYPES FOR EXTENSIONS
+// Fetch available data types for extensions
 export const requestExtensionDataTypes = () => {
   return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
     dispatch(getCodeSystemDataTypePending());
@@ -76,7 +79,7 @@ export const requestExtensionDataTypes = () => {
     const resource: IStructureDefinition = response.data.entry[0].resource;
     let codes: string[] = [];
     resource.differential?.element.forEach((element: IElementDefinition) => {
-      //FIXME
+      //fixme
       if (element.id === "Extension.value[x]") {
         codes =
           element?.type
@@ -93,14 +96,15 @@ export const requestExtensionDataTypes = () => {
   };
 };
 
+// Fetch all primitive and complex types and dispatch two trees of implemented tree types
 export const requestFhirDataTypes = () => {
   return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
     dispatch(getFhirTypesFetchStart());
     const [
-      primitiveTypesRequest,
-      complexTypesRequest,
-      valueSetRequest,
-      resourceStructureDefinition
+      primitiveTypes,
+      complexTypes,
+      valueSet,
+      resourceSDef
     ] = await Promise.all([
       api.get(
         "/StructureDefinition?derivation=specialization&kind=primitive-type&_elements=name"
@@ -114,12 +118,12 @@ export const requestFhirDataTypes = () => {
       )
     ]);
     if (
-      primitiveTypesRequest.status === 200 &&
-      complexTypesRequest.status === 200 &&
-      valueSetRequest.status === 200 &&
-      resourceStructureDefinition.status === 200
+      primitiveTypes.status === 200 &&
+      complexTypes.status === 200 &&
+      valueSet.status === 200 &&
+      resourceSDef.status === 200
     ) {
-      let complexTypeTree: RenderAttributesTree = {
+      const complexTypeTree: RenderAttributesTree = {
         id: "",
         name: "",
         type: "",
@@ -128,7 +132,7 @@ export const requestFhirDataTypes = () => {
         max: "",
         definition: ""
       };
-      let structureDefTree: RenderAttributesTree = {
+      const structureDefTree: RenderAttributesTree = {
         id: "",
         name: "",
         type: "",
@@ -138,43 +142,31 @@ export const requestFhirDataTypes = () => {
         definition: ""
       };
 
-      // transform fetched attributes to simplified attributes with new paths
-      const newComplexTypes = transformAttributes(
-        complexTypesRequest,
-        valueSetRequest
-      );
-      const newStructureDefinition = transformAttributes(
-        resourceStructureDefinition,
-        valueSetRequest
-      );
+      const newComplexTypes = transformAttributes(complexTypes, valueSet);
+      const newSDef = transformAttributes(resourceSDef, valueSet);
 
-      // create tree of transformed Attributes (newComplexType and newStructureDefinition)
-      if (newComplexTypes && newStructureDefinition) {
+      if (newComplexTypes && newSDef) {
         newComplexTypes.forEach(
-          (type) =>
-            type &&
-            renderTreeAttributes(type, type, complexTypeTree, complexTypeTree)
+          (type) => type && renderTreeAttributes(type, type, complexTypeTree)
         );
-        newStructureDefinition.forEach(
-          (type) =>
-            type &&
-            renderTreeAttributes(type, type, structureDefTree, structureDefTree)
+
+        newSDef.forEach(
+          (type) => type && renderTreeAttributes(type, type, structureDefTree)
         );
       }
 
       dispatch(
         getFhirTypesFetchSuccess(
-          primitiveTypesRequest.data.entry.map((result: FetchedData) => {
-            return result.resource;
-          }),
+          primitiveTypes.data.entry.map(
+            (result: { resource: { name: string }; search: any }) =>
+              result.resource.name
+          ),
           complexTypeTree.children,
           structureDefTree.children[0].children
         )
       );
     } else {
-      dispatch(
-        getFhirTypesFetchFailure(new Error(primitiveTypesRequest.statusText))
-      );
+      dispatch(getFhirTypesFetchFailure(new Error(primitiveTypes.statusText)));
     }
   };
 };

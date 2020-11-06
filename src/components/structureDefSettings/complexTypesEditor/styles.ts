@@ -28,5 +28,19 @@ export const useStyles = makeStyles((theme: Theme) => ({
   accordionButton: {
     height: 30,
     width: 50
+  },
+  completeDiv: {
+    border: "1px solid " + theme.palette.secondary.light,
+    borderRadius: 8
+  },
+  header: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    margin: "8px 0",
+    textTransform: "uppercase"
+  },
+  checkbox: {
+    marginLeft: 0
   }
 }));
