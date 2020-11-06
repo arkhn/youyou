@@ -1,6 +1,6 @@
 import {
   IElementDefinition,
-  IElementDefinition_Type
+  IElementDefinition_Type as IElementDefinitionType
 } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { AxiosResponse } from 'axios';
 import cloneDeep from 'lodash.clonedeep';
@@ -48,7 +48,7 @@ export const transformAttributes = (
             max: element.max as string
           });
         } else {
-          element.type.forEach((type: IElementDefinition_Type) => {
+          element.type.forEach((type: IElementDefinitionType) => {
             if (element.path && type.code && element.definition) {
               if (type.code === 'code') {
                 element.binding?.extension?.forEach((extension) => {
@@ -108,7 +108,7 @@ export const transformAttributes = (
  * @returns if type is a primitive FHIR type, return true, else, return false.
  */
 export const isPrimitive = (
-  type: string | IElementDefinition_Type[],
+  type: string | IElementDefinitionType[],
   primitiveTypes: string[]
 ): boolean =>
   primitiveTypes.some((primitive: string) => type === primitive) ||
