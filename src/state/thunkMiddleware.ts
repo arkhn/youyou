@@ -114,7 +114,6 @@ export const requestFhirDataTypes = () => {
       complexTypes,
       valueSet,
       resourceSDef
-      // eslint-disable-next-line no-undef
     ] = await Promise.all([
       api.get(
         '/StructureDefinition?derivation=specialization&kind=primitive-type&_elements=name'
