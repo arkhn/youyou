@@ -21,5 +21,3 @@ export const regexId = new RegExp(/^[A-Za-z0-9\-\.]{1,64}$/);
 export const regexUnsignedInt = new RegExp(/^[0]|([1-9][0-9]*)$/);
 export const regexMarkdown = new RegExp(/^\s*(\S|\s)*$/);
 export const regexPositiveInt = new RegExp(/^+?[1-9][0-9]*$/);
-
-//const test = regexString.test(string);

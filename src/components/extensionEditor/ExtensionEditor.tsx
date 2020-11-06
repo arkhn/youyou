@@ -11,7 +11,7 @@ import Navbar from "components/navbar/Navbar";
 import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";
 import StructureDefinitionTree from "../structureDefinitionTree/StructureDefinitionTree";
 
-import useStyles from "components/editor/style";
+import useStyles from "components/profileEditor/style";
 
 const ExtensionEditor: React.FC<{}> = () => {
   const classes = useStyles();
