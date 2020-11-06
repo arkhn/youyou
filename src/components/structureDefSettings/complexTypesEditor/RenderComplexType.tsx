@@ -1,21 +1,21 @@
-import { InputTooltip, SelectTooltip } from "components/smallComponents";
-import React from "react";
+import { InputTooltip, SelectTooltip } from 'components/smallComponents';
+import React from 'react';
 
 import {
   Accordion,
   AccordionDetails,
   Button,
   Typography
-} from "@material-ui/core";
-import { Add, DeleteOutline, ExpandMore } from "@material-ui/icons";
+} from '@material-ui/core';
+import { Add, DeleteOutline, ExpandMore } from '@material-ui/icons';
 
-import { RenderAttributesTree } from "types";
-import CheckboxTooltip from "components/smallComponents/CheckboxTooltip";
+import { RenderAttributesTree } from 'types';
+import CheckboxTooltip from 'components/smallComponents/CheckboxTooltip';
 import {
   useStyles,
   MuiAccordionSummary
-} from "components/structureDefSettings/complexTypesEditor/styles";
-import { createJSONTree } from "components/structureDefSettings/utils";
+} from 'components/structureDefSettings/complexTypesEditor/styles';
+import { createJSONTree } from 'components/structureDefSettings/utils';
 
 type DetailProps = {
   attributes: RenderAttributesTree[];
@@ -44,11 +44,11 @@ const RenderComplexType: React.FC<DetailProps> = ({
 
   const onChange = (
     callback: typeof onChangeValue | typeof handleDelete | typeof handleAdd
-  ) => (path: string, value: any) => {
+  ) => (path: string, value: any): void => {
     if (index !== undefined && callback) {
-      callback(`${name && name + "."}${index}.${path}`, value);
+      callback(`${name && name + '.'}${index}.${path}`, value);
     } else if (callback) {
-      callback(`${name && name + "."}${path}`, value);
+      callback(`${name && name + '.'}${path}`, value);
     }
   };
 
@@ -56,9 +56,9 @@ const RenderComplexType: React.FC<DetailProps> = ({
     let attributeElement: JSX.Element | null = null;
     if (
       item.children.length > 0 &&
-      item.name !== "extension" &&
-      item.name !== "snapshot" &&
-      item.name !== "differential"
+      item.name !== 'extension' &&
+      item.name !== 'snapshot' &&
+      item.name !== 'differential'
     ) {
       if (Array.isArray(structureDefJSON[item.name])) {
         attributeElement = (
@@ -69,7 +69,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                 className={classes.accordionButton}
                 variant="outlined"
                 color="primary"
-                onClick={() =>
+                onClick={(): void =>
                   onChange(handleAdd)(
                     item.name,
                     createJSONTree(item.children, structureDefJSON[item.name])
@@ -92,7 +92,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                           className={classes.accordionButton}
                           variant="outlined"
                           color="primary"
-                          onClick={(event) => {
+                          onClick={(event): void => {
                             event.stopPropagation();
                             onChange(handleDelete)(item.name, i);
                           }}
@@ -120,7 +120,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
             })}
           </div>
         );
-      } else if (typeof structureDefJSON[item.name] === "object") {
+      } else if (typeof structureDefJSON[item.name] === 'object') {
         attributeElement = (
           <div key={item.name} className={classes.accordionAndButton}>
             <Accordion className={classes.accordion}>
@@ -145,40 +145,40 @@ const RenderComplexType: React.FC<DetailProps> = ({
           </div>
         );
       }
-    } else if (item.name !== "extension" && item.children.length === 0) {
+    } else if (item.name !== 'extension' && item.children.length === 0) {
       switch (item.type) {
-        case "string":
-        case "uri":
-        case "id":
-        case "http://hl7.org/fhirpath/System.String": {
+        case 'string':
+        case 'uri':
+        case 'id':
+        case 'http://hl7.org/fhirpath/System.String': {
           attributeElement = (
             <InputTooltip
               label={item.min && item.min > 0 ? `${item.name}*` : item.name}
               value={
-                structureDefJSON[item.name] ? structureDefJSON[item.name] : ""
+                structureDefJSON[item.name] ? structureDefJSON[item.name] : ''
               }
               tool={item.definition}
-              onBlur={(event) =>
+              onBlur={(event): void =>
                 onChange(onChangeValue)(item.name, event.target.value)
               }
             />
           );
           break;
         }
-        case "integer":
-        case "positiveInt": {
+        case 'integer':
+        case 'positiveInt': {
           attributeElement = (
             <InputTooltip
               label={item.min && item.min > 0 ? `${item.name}*` : item.name}
               value={
-                structureDefJSON[item.name] ? structureDefJSON[item.name] : ""
+                structureDefJSON[item.name] ? structureDefJSON[item.name] : ''
               }
               tool={item.definition}
             />
           );
           break;
         }
-        case "code": {
+        case 'code': {
           if (item.valueSet) {
             const mapValues: {
               value: string | undefined;
@@ -186,8 +186,8 @@ const RenderComplexType: React.FC<DetailProps> = ({
             }[] = [];
             if (item.min === 0)
               mapValues.push({
-                value: "",
-                label: "--select a value--"
+                value: '',
+                label: '--select a value--'
               });
             item.valueSet.forEach((values) =>
               mapValues.push({
@@ -202,7 +202,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                 tool={item.definition}
                 choices={mapValues}
                 value={structureDefJSON[item.name] ?? mapValues[0].value}
-                onChange={(event) =>
+                onChange={(event): void =>
                   onChange(onChangeValue)(item.name, event.target.value)
                 }
               />
@@ -210,13 +210,13 @@ const RenderComplexType: React.FC<DetailProps> = ({
           }
           break;
         }
-        case "boolean": {
+        case 'boolean': {
           attributeElement = (
             <CheckboxTooltip
               label={item.min && item.min > 0 ? `${item.name}*` : item.name}
               tool={item.definition}
               value={structureDefJSON[item.name] ?? false}
-              onChange={(event) =>
+              onChange={(event): void =>
                 onChange(onChangeValue)(item.name, event.target.checked)
               }
             />

@@ -1,26 +1,26 @@
-import React from "react";
-import { useDispatch } from "react-redux";
+import React from 'react';
+import { useDispatch } from 'react-redux';
 
-import clsx from "clsx";
+import clsx from 'clsx';
 import {
   IStructureDefinition,
   IElementDefinition
-} from "@ahryman40k/ts-fhir-types/lib/R4";
-import { TreeView, TreeItem } from "@material-ui/lab";
+} from '@ahryman40k/ts-fhir-types/lib/R4';
+import { TreeView, TreeItem } from '@material-ui/lab';
 import {
   ArrowRight,
   ArrowDropDown,
   Folder,
   LocalOffer,
   Settings
-} from "@material-ui/icons";
+} from '@material-ui/icons';
 
 import {
   selectAttributeId,
   selectStructureDefMeta
-} from "state/actions/resourceActions";
+} from 'state/actions/resourceActions';
 
-import useStyles from "./style";
+import useStyles from './style';
 
 type StructureDefinitionTreeProps = {
   structureDefinition: IStructureDefinition | null;
@@ -53,9 +53,9 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
     if (node.id === rootPath) {
       return rootNode;
     } else {
-      const splitPath = path.split(".");
+      const splitPath = path.split('.');
       const childNode = node.children.find((c) => c.name === splitPath[0]);
-      const newPath = splitPath.slice(1, splitPath.length).join(".");
+      const newPath = splitPath.slice(1, splitPath.length).join('.');
       if (childNode) {
         return renderAttributes(newPath, rootPath, childNode, rootNode);
       } else {
@@ -69,7 +69,7 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
       }
     }
   };
-  let attributesForUI = { name: "", id: "", children: [] };
+  let attributesForUI = { name: '', id: '', children: [] };
   if (paths) {
     paths.forEach(
       (path) =>
@@ -78,7 +78,7 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
   }
   attributesForUI = attributesForUI.children[0];
 
-  const treeItemContent = (nodes: RenderNode) => (
+  const treeItemContent = (nodes: RenderNode): JSX.Element => (
     <span className={classes.treeItem}>
       {nodes.children.length > 0 ? (
         <Folder className={classes.iconTreeItem} />
@@ -89,12 +89,14 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
     </span>
   );
 
-  const renderNode = (nodes: RenderNode) => (
+  const renderNode = (nodes: RenderNode): JSX.Element => (
     <TreeItem
       key={nodes.id}
       nodeId={nodes.id}
       label={treeItemContent(nodes)}
-      onClick={() => dispatch(selectAttributeId(nodes.id))}
+      onClick={(): void => {
+        dispatch(selectAttributeId(nodes.id));
+      }}
     >
       {Array.isArray(nodes.children) &&
         nodes.children.map((node) => renderNode(node))}
@@ -113,7 +115,9 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
     >
       <TreeItem
         nodeId="0"
-        onClick={() => dispatch(selectStructureDefMeta())}
+        onClick={(): void => {
+          dispatch(selectStructureDefMeta());
+        }}
         label={
           <span className={clsx(classes.treeItem, classes.textTreeItemMeta)}>
             <Settings

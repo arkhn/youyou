@@ -1,17 +1,17 @@
-import React from "react";
-import { Paper, Container, Typography } from "@material-ui/core";
+import React from 'react';
+import { Paper, Container, Typography } from '@material-ui/core';
 
-import { useSelector } from "react-redux";
-import { RootState } from "state/store";
-import clsx from "clsx";
+import { useSelector } from 'react-redux';
+import { RootState } from 'state/store';
+import clsx from 'clsx';
 
-import { ButtonDownload } from "components/smallComponents";
-import AttributeEditor from "components/extensionEditor/attributeEditor/AttributeEditor";
-import Navbar from "components/navbar/Navbar";
-import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";
-import StructureDefinitionTree from "../structureDefinitionTree/StructureDefinitionTree";
+import { ButtonDownload } from 'components/smallComponents';
+import AttributeEditor from 'components/extensionEditor/attributeEditor/AttributeEditor';
+import Navbar from 'components/navbar/Navbar';
+import StructureDefSettings from 'components/structureDefSettings/StructureDefSettings';
+import StructureDefinitionTree from '../structureDefinitionTree/StructureDefinitionTree';
 
-import useStyles from "components/profileEditor/style";
+import useStyles from 'components/profileEditor/style';
 
 const ExtensionEditor: React.FC<{}> = () => {
   const classes = useStyles();
@@ -29,12 +29,12 @@ const ExtensionEditor: React.FC<{}> = () => {
       <Navbar />
       <a
         href={
-          "data:json/plain;charset=utf-8," +
+          'data:json/plain;charset=utf-8,' +
           encodeURIComponent(
             JSON.stringify(extensionStructureDefinition, null, 2)
           )
         }
-        download={extensionStructureDefinition?.name + ".json"}
+        download={extensionStructureDefinition?.name + '.json'}
       >
         <button>Download</button>
       </a>

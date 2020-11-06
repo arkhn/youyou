@@ -1,15 +1,15 @@
-import { makeStyles, Theme } from "@material-ui/core/styles";
+import { makeStyles, Theme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme: Theme) => ({
   treeItem: {
-    display: "flex",
+    display: 'flex',
     margin: 2
   },
   iconTreeItemMeta: {
     color: theme.palette.secondary.dark
   },
   textTreeItemMeta: {
-    fontStyle: "italic"
+    fontStyle: 'italic'
   },
   iconTreeItem: {
     width: 15,

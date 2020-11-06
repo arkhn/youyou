@@ -1,15 +1,15 @@
 import {
   IElementDefinition,
   IElementDefinition_Type
-} from "@ahryman40k/ts-fhir-types/lib/R4";
-import { AxiosResponse } from "axios";
-import cloneDeep from "lodash.clonedeep";
+} from '@ahryman40k/ts-fhir-types/lib/R4';
+import { AxiosResponse } from 'axios';
+import cloneDeep from 'lodash.clonedeep';
 import {
   FetchedDataCodeSystem,
   fhirDataState,
   SimplifiedAttributes,
   RenderAttributesTree
-} from "types";
+} from 'types';
 
 /**
  * Transform fetched attributes to simplified attributes with new paths
@@ -24,7 +24,7 @@ import {
 export const transformAttributes = (
   responseToRequest: AxiosResponse<any>,
   valueSetRequest: AxiosResponse<any>
-) => {
+): SimplifiedAttributes[] => {
   const attributes: SimplifiedAttributes[] = [];
   responseToRequest.data.entry.forEach((result: fhirDataState) => {
     result.resource.snapshot.element.forEach((element: IElementDefinition) => {
@@ -50,7 +50,7 @@ export const transformAttributes = (
         } else {
           element.type.forEach((type: IElementDefinition_Type) => {
             if (element.path && type.code && element.definition) {
-              if (type.code === "code") {
+              if (type.code === 'code') {
                 element.binding?.extension?.forEach((extension) => {
                   if (extension.valueString) {
                     const findValueSet = valueSetRequest.data.entry.find(
@@ -112,9 +112,9 @@ export const isPrimitive = (
   primitiveTypes: string[]
 ): boolean =>
   primitiveTypes.some((primitive: string) => type === primitive) ||
-  type === "http://hl7.org/fhirpath/System.String" ||
-  type === "Extension" ||
-  type === "Reference";
+  type === 'http://hl7.org/fhirpath/System.String' ||
+  type === 'Extension' ||
+  type === 'Reference';
 
 /**
  * Create renderTree of FHIR structure definition, with children determined only
@@ -135,9 +135,9 @@ export const renderTreeAttributes = (
   if (node.id === parentAttribute.path) {
     return cloneDeep(node);
   } else {
-    const splitPath = attribute.path.split(".");
+    const splitPath = attribute.path.split('.');
     const childNode = node.children.find((c) => c.name === splitPath[0]);
-    const newPath = splitPath.slice(1, splitPath.length).join(".");
+    const newPath = splitPath.slice(1, splitPath.length).join('.');
     const newAttribute = {
       path: newPath,
       type: attribute.type,
@@ -179,12 +179,12 @@ export const createComplexTypes = (
   complexTypes: RenderAttributesTree[],
   currentItemsChildren: RenderAttributesTree[],
   primitiveTypes: string[]
-) => {
+): RenderAttributesTree[] => {
   const enhancedComplexType: RenderAttributesTree[] = [];
   for (const child of currentItemsChildren) {
     if (
       !isPrimitive(child.type, primitiveTypes) &&
-      child.type !== "BackboneElement"
+      child.type !== 'BackboneElement'
     ) {
       const toFind = complexTypes.find((type) => type.name === child.type);
       if (toFind) {

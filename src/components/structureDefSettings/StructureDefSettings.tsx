@@ -1,55 +1,39 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
-import { Button, Container, Typography } from "@material-ui/core";
-import merge from "lodash.merge";
-import cloneDeep from "lodash.clonedeep";
-import set from "lodash.set";
-import get from "lodash.get";
+import { IStructureDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
+import { Button, Container, Typography } from '@material-ui/core';
+import merge from 'lodash.merge';
+import cloneDeep from 'lodash.clonedeep';
+import set from 'lodash.set';
+import get from 'lodash.get';
 
 import {
   updateStructureDefProfile,
   updateStructureDefExtension
-} from "state/actions/resourceActions";
-import { setSnackbarOpen } from "state/actions/snackbarActions";
-import { RootState } from "state/store";
-import RenderComplexType from "components/structureDefSettings/complexTypesEditor/RenderComplexType";
-import { createJSONTree } from "components/structureDefSettings/utils";
-import { SnackBarWithClose } from "components/smallComponents";
+} from 'state/actions/resourceActions';
+import { setSnackbarOpen } from 'state/actions/snackbarActions';
+import { RootState } from 'state/store';
+import RenderComplexType from 'components/structureDefSettings/complexTypesEditor/RenderComplexType';
+import { createJSONTree } from 'components/structureDefSettings/utils';
+import { SnackBarWithClose } from 'components/smallComponents';
 
-import useStyles from "components/structureDefSettings/style";
+import useStyles from 'components/structureDefSettings/style';
 
 type StructureDefSettingsProps = {
   structureDefinition: IStructureDefinition;
-  structureDefinitionType?: "resource" | "extension";
+  structureDefinitionType?: 'resource' | 'extension';
 };
 
 const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   structureDefinition,
-  structureDefinitionType = "resource"
+  structureDefinitionType = 'resource'
 }) => {
   const { complexTypes, primitiveTypes, structureDefinitionTree } = useSelector(
     (state: RootState) => state.fhirDataTypes
   );
   const dispatch = useDispatch();
   const classes = useStyles();
-
-  const submit = () => {
-    if (structureDefinition) {
-      const structureDefinitonToEdit = {
-        ...structureDefJSON,
-        snapshot: { ...structureDefinition.snapshot }
-      };
-      if (structureDefinitionType === "resource") {
-        dispatch(setSnackbarOpen("success", "Saved !"));
-        dispatch(updateStructureDefProfile(structureDefinitonToEdit));
-      } else if (structureDefinitionType === "extension") {
-        dispatch(setSnackbarOpen("success", "Saved !"));
-        dispatch(updateStructureDefExtension(structureDefinitonToEdit));
-      }
-    }
-  };
 
   const emptyTree = createJSONTree(
     structureDefinitionTree,
@@ -59,23 +43,39 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
     merge(cloneDeep(emptyTree), structureDefinition)
   );
 
-  const onDeleteComplexType = (path: string, i: number) => {
+  const submit = (): void => {
+    if (structureDefinition) {
+      const structureDefinitonToEdit = {
+        ...structureDefJSON,
+        snapshot: { ...structureDefinition.snapshot }
+      };
+      if (structureDefinitionType === 'resource') {
+        dispatch(setSnackbarOpen('success', 'Saved !'));
+        dispatch(updateStructureDefProfile(structureDefinitonToEdit));
+      } else if (structureDefinitionType === 'extension') {
+        dispatch(setSnackbarOpen('success', 'Saved !'));
+        dispatch(updateStructureDefExtension(structureDefinitonToEdit));
+      }
+    }
+  };
+
+  const onDeleteComplexType = (path: string, i: number): void => {
     const str: IStructureDefinition = { ...structureDefJSON };
-    let structureDefJSONAttr: any = get(str, path);
+    const structureDefJSONAttr: any = get(str, path);
     structureDefJSONAttr.splice(i, 1);
     setStructureDefJSON(str);
   };
 
-  const onAddComplexType = (path: string, value: any) => {
+  const onAddComplexType = (path: string, value: any): void => {
     const str: IStructureDefinition = { ...structureDefJSON };
     const structureDefJSONAttr = get(str, path);
     structureDefJSONAttr.push(value);
     setStructureDefJSON(str);
   };
 
-  const onChangeStructureDefJSON = (path: string, value: any) => {
+  const onChangeStructureDefJSON = (path: string, value: any): void => {
     const str: IStructureDefinition = { ...structureDefJSON };
-    if (value !== "") {
+    if (value !== '') {
       set(str, path, value);
     } else {
       set(str, path, undefined);
@@ -96,7 +96,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
             onChangeValue={onChangeStructureDefJSON}
             handleDelete={onDeleteComplexType}
             handleAdd={onAddComplexType}
-            name={""}
+            name={''}
           />
         </div>
       </form>
@@ -105,7 +105,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
           className={classes.submitButton}
           variant="contained"
           color="secondary"
-          onClick={(e) => {
+          onClick={(e): void => {
             e.preventDefault();
             submit();
           }}

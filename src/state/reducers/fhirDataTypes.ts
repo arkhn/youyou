@@ -5,10 +5,10 @@ import {
   GET_FHIR_TYPES_FETCH_FAILURE,
   GET_FHIR_TYPES_FETCH_START,
   GET_FHIR_TYPES_FETCH_SUCCESS
-} from "state/actions/fhirDataTypesActions";
+} from 'state/actions/fhirDataTypesActions';
 
-import { createComplexTypes } from "state/utils";
-import { RenderAttributesTree } from "types";
+import { createComplexTypes } from 'state/utils';
+import { RenderAttributesTree } from 'types';
 
 export type FhirDataTypesState = {
   primitiveTypes: string[];
@@ -41,7 +41,7 @@ export const fhirDataTypes = (
         ...state,
         loadingTypes: true
       };
-    case GET_FHIR_TYPES_FETCH_SUCCESS:
+    case GET_FHIR_TYPES_FETCH_SUCCESS: {
       const complexTypes = createComplexTypes(
         action.payload.complexTypes,
         action.payload.complexTypes,
@@ -60,6 +60,7 @@ export const fhirDataTypes = (
         loadingTypes: false,
         errorTypes: null
       };
+    }
     case GET_FHIR_TYPES_FETCH_FAILURE:
       return {
         ...state,

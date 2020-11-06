@@ -1,10 +1,9 @@
 import {
-  ICodeSystem,
   ICodeSystem_Concept,
   IElementDefinition_Type,
   IStructureDefinition,
   IStructureDefinition_Snapshot
-} from "@ahryman40k/ts-fhir-types/lib/R4";
+} from '@ahryman40k/ts-fhir-types/lib/R4';
 
 export type FetchedData = {
   resource: string;

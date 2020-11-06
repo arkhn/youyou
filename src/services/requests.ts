@@ -1,11 +1,11 @@
-import { AxiosResponse } from "axios";
+import { AxiosResponse } from 'axios';
 
 import {
   ICodeSystem,
   IStructureDefinition
-} from "@ahryman40k/ts-fhir-types/lib/R4";
+} from '@ahryman40k/ts-fhir-types/lib/R4';
 
-import api from "./api";
+import api from './api';
 
 // Fetch structure definition
 export const getStructureDef = async (

@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { StructureDefinitionStatusKind as StatusKind } from "@ahryman40k/ts-fhir-types/lib/R4";
+import { StructureDefinitionStatusKind as StatusKind } from '@ahryman40k/ts-fhir-types/lib/R4';
 import {
   FormControl,
   InputLabel,
@@ -9,9 +9,9 @@ import {
   Select,
   Theme,
   withStyles
-} from "@material-ui/core";
+} from '@material-ui/core';
 
-import { TooltipHelp } from "components/smallComponents";
+import { TooltipHelp } from 'components/smallComponents';
 
 type SelectWithHelpProps = {
   label: string;
@@ -30,25 +30,25 @@ type SelectWithHelpProps = {
 
 const CssFormControl = withStyles((theme: Theme) => ({
   root: {
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
         borderColor: theme.palette.secondary.main
       },
-      "&:hover fieldset": {
+      '&:hover fieldset': {
         borderColor: theme.palette.secondary.dark
       },
-      "&.Mui-focused fieldset": {
+      '&.Mui-focused fieldset': {
         borderColor: theme.palette.secondary.dark
       }
     }
   }
 }))(FormControl);
 
-const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center"
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   select: {
     flexGrow: 1,
