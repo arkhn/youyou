@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 
-import { IconButton, Theme, Tooltip } from "@material-ui/core";
-import { HelpOutline } from "@material-ui/icons";
-import { withStyles } from "@material-ui/styles";
+import { IconButton, Tooltip } from '@material-ui/core';
+import { HelpOutline } from '@material-ui/icons';
+import { withStyles } from '@material-ui/styles';
 
 type TooltipHelpProps = {
   tool: string;
   className?: string;
 };
 
-const CssTooltip = withStyles((theme: Theme) => ({
+const CssTooltip = withStyles(() => ({
   tooltip: {
     fontSize: 12
   }

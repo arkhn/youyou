@@ -1,8 +1,8 @@
-import { RenderAttributesTree } from "types";
+import { RenderAttributesTree } from 'types';
 
-export const GET_FHIR_TYPES_FETCH_START = "GET_TYPES_FETCH_START";
-export const GET_FHIR_TYPES_FETCH_SUCCESS = "GET_FHIR_TYPES_FETCH_SUCCESS";
-export const GET_FHIR_TYPES_FETCH_FAILURE = "GET_FHIR_TYPES_FETCH_FAILURE";
+export const GET_FHIR_TYPES_FETCH_START = 'GET_TYPES_FETCH_START';
+export const GET_FHIR_TYPES_FETCH_SUCCESS = 'GET_FHIR_TYPES_FETCH_SUCCESS';
+export const GET_FHIR_TYPES_FETCH_FAILURE = 'GET_FHIR_TYPES_FETCH_FAILURE';
 
 export type GetFhirTypesFetchStartAction = {
   type: typeof GET_FHIR_TYPES_FETCH_START;

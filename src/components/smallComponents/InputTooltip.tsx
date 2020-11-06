@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from 'react';
 
-import { CssTextField, TooltipHelp } from "components/smallComponents";
-import { makeStyles, Theme } from "@material-ui/core";
+import { CssTextField, TooltipHelp } from 'components/smallComponents';
+import { makeStyles } from '@material-ui/core';
 
 type InputTooltipProps = {
   classname?: string;
@@ -14,10 +14,10 @@ type InputTooltipProps = {
   ) => void;
 };
 
-const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
-    display: "flex",
-    alignItems: "center"
+    display: 'flex',
+    alignItems: 'center'
   },
   select: {
     flexGrow: 1

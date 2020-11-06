@@ -1,31 +1,31 @@
-import { Theme } from "@material-ui/core";
-import { ToggleButtonGroup } from "@material-ui/lab";
-import { withStyles } from "@material-ui/styles";
+import { Theme } from '@material-ui/core';
+import { ToggleButtonGroup } from '@material-ui/lab';
+import { withStyles } from '@material-ui/styles';
 
 const CssToggleButtonGroup = withStyles((theme: Theme) => ({
   root: {
-    "& .Mui-selected": {
+    '& .Mui-selected': {
       backgroundColor: theme.palette.secondary.main
     },
-    "& .Mui-disabled": {
+    '& .Mui-disabled': {
       backgroundColor: theme.palette.primary.light,
-      border: "none"
+      border: 'none'
     },
-    "& .MuiToggleButton-root": {
+    '& .MuiToggleButton-root': {
       width: 50,
       borderRadius: theme.shape.borderRadius,
       margin: theme.spacing(0.5),
       transition: theme.transitions.create(
-        ["background-color", "border-color"],
+        ['background-color', 'border-color'],
         {
           duration: theme.transitions.duration.shortest,
           easing: theme.transitions.easing.easeIn
         }
       ),
-      "&:hover": {
+      '&:hover': {
         backgroundColor: theme.palette.secondary.dark,
         transition: theme.transitions.create(
-          ["background-color", "border-color"],
+          ['background-color', 'border-color'],
           {
             duration: theme.transitions.duration.shortest,
             easing: theme.transitions.easing.easeIn
@@ -34,12 +34,12 @@ const CssToggleButtonGroup = withStyles((theme: Theme) => ({
         borderColor: theme.palette.secondary.dark
       }
     },
-    "& .MuiToggleButton-root:not(.Mui-disabled)": {
+    '& .MuiToggleButton-root:not(.Mui-disabled)': {
       borderColor: theme.palette.secondary.main,
-      "&:first-child": {
+      '&:first-child': {
         marginLeft: 0
       },
-      "&:last-child": {
+      '&:last-child': {
         marginRight: 0
       }
     }

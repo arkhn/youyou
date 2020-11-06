@@ -1,38 +1,40 @@
-import { ThunkDispatch } from "redux-thunk";
-import { Action } from "redux";
-import { FetchedData, RenderAttributesTree } from "types";
+import { ThunkDispatch } from 'redux-thunk';
+import { Action } from 'redux';
+import { FetchedData, RenderAttributesTree } from 'types';
 
-import api from "services/api";
+import api from 'services/api';
 import {
   getFetchStart,
   getIdsSuccess,
   getIdsFailure,
   updateStructureDefProfile,
   updateStructureDefFailure
-} from "state/actions/resourceActions";
+} from 'state/actions/resourceActions';
 import {
   getCodeSystemDataTypeSuccess,
   getCodeSystemDataTypeFailure,
   getCodeSystemDataTypePending
-} from "state/actions/codeSystemActions";
-import { RootState } from "state/store";
+} from 'state/actions/codeSystemActions';
+import { RootState } from 'state/store';
 import {
   getFhirTypesFetchFailure,
   getFhirTypesFetchStart,
   getFhirTypesFetchSuccess
-} from "./actions/fhirDataTypesActions";
-import { transformAttributes, renderTreeAttributes } from "./utils";
+} from './actions/fhirDataTypesActions';
+import { transformAttributes, renderTreeAttributes } from './utils';
 
 import {
   IStructureDefinition,
   IElementDefinition,
-  IElementDefinition_Type
-} from "@ahryman40k/ts-fhir-types/lib/R4";
-import { AxiosResponse } from "axios";
+  IElementDefinition_Type as IElementDefinitionType
+} from '@ahryman40k/ts-fhir-types/lib/R4';
+import { AxiosResponse } from 'axios';
 
 // Fetch all resource ids
 export const requestIds = () => {
-  return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
+  return async (
+    dispatch: ThunkDispatch<RootState, void, Action>
+  ): Promise<void> => {
     dispatch(getFetchStart());
     const response: AxiosResponse<any> = await api.get(
       `/StructureDefinition?kind=resource&derivation=specialization&_elements=id&_count=150`
@@ -56,7 +58,9 @@ export const requestIds = () => {
  * @param resource resource id for the structure we want to fetch
  */
 export const requestResource = (resource: string) => {
-  return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
+  return async (
+    dispatch: ThunkDispatch<RootState, void, Action>
+  ): Promise<void> => {
     dispatch(getFetchStart());
     const response: AxiosResponse<any> = await api.get(
       `/StructureDefinition?kind=resource&derivation=specialization&id=${resource}`
@@ -71,19 +75,22 @@ export const requestResource = (resource: string) => {
 
 // Fetch available data types for extensions
 export const requestExtensionDataTypes = () => {
-  return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
+  return async (
+    dispatch: ThunkDispatch<RootState, void, Action>
+  ): Promise<void> => {
     dispatch(getCodeSystemDataTypePending());
     const response: AxiosResponse<any> = await api.get(
-      "/StructureDefinition?derivation=specialization&name=extension"
+      '/StructureDefinition?derivation=specialization&name=extension'
     );
     const resource: IStructureDefinition = response.data.entry[0].resource;
     let codes: string[] = [];
     resource.differential?.element.forEach((element: IElementDefinition) => {
       //fixme
-      if (element.id === "Extension.value[x]") {
+      if (element.id === 'Extension.value[x]') {
         codes =
           element?.type
-            ?.map((e: IElementDefinition_Type) => e.code!)
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            ?.map((e: IElementDefinitionType) => e.code!)
             .filter(Boolean) || [];
       }
       codes = codes?.filter(Boolean) || [];
@@ -98,7 +105,9 @@ export const requestExtensionDataTypes = () => {
 
 // Fetch all primitive and complex types and dispatch two trees of implemented tree types
 export const requestFhirDataTypes = () => {
-  return async (dispatch: ThunkDispatch<RootState, void, Action>) => {
+  return async (
+    dispatch: ThunkDispatch<RootState, void, Action>
+  ): Promise<void> => {
     dispatch(getFhirTypesFetchStart());
     const [
       primitiveTypes,
@@ -107,14 +116,14 @@ export const requestFhirDataTypes = () => {
       resourceSDef
     ] = await Promise.all([
       api.get(
-        "/StructureDefinition?derivation=specialization&kind=primitive-type&_elements=name"
+        '/StructureDefinition?derivation=specialization&kind=primitive-type&_elements=name'
       ),
       api.get(
-        "/StructureDefinition?derivation=specialization&kind=complex-type&_elements=name&_elements=snapshot"
+        '/StructureDefinition?derivation=specialization&kind=complex-type&_elements=name&_elements=snapshot'
       ),
-      api.get("/CodeSystem?_elements=name,concept&_count=508"),
+      api.get('/CodeSystem?_elements=name,concept&_count=508'),
       api.get(
-        "/StructureDefinition?kind=resource&derivation=specialization&id=StructureDefinition"
+        '/StructureDefinition?kind=resource&derivation=specialization&id=StructureDefinition'
       )
     ]);
     if (
@@ -124,22 +133,22 @@ export const requestFhirDataTypes = () => {
       resourceSDef.status === 200
     ) {
       const complexTypeTree: RenderAttributesTree = {
-        id: "",
-        name: "",
-        type: "",
+        id: '',
+        name: '',
+        type: '',
         children: [],
         min: null,
-        max: "",
-        definition: ""
+        max: '',
+        definition: ''
       };
       const structureDefTree: RenderAttributesTree = {
-        id: "",
-        name: "",
-        type: "",
+        id: '',
+        name: '',
+        type: '',
         children: [],
         min: null,
-        max: "",
-        definition: ""
+        max: '',
+        definition: ''
       };
 
       const newComplexTypes = transformAttributes(complexTypes, valueSet);

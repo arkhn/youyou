@@ -1,4 +1,4 @@
-import extensionStructureDefinition from "assets/extensionTemplate";
+import extensionStructureDefinition from 'assets/extensionTemplate';
 import {
   SELECT_RESOURCE,
   ResourceAction,
@@ -18,9 +18,9 @@ import {
   UpdateStructureDefExtensionAction,
   SELECT_STRUCTUREDEFMETA,
   SelectStructureDefMetaAction
-} from "state/actions/resourceActions";
-import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
-import { ResourceState } from "types";
+} from 'state/actions/resourceActions';
+import { IStructureDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
+import { ResourceState } from 'types';
 
 const initialState: ResourceState = {
   resources: [],

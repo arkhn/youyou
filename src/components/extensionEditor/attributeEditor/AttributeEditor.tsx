@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "state/store";
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from 'state/store';
 
-import Autocomplete from "@material-ui/lab/Autocomplete";
-import TextField from "@material-ui/core/TextField";
+import Autocomplete, {
+  AutocompleteRenderInputParams
+} from '@material-ui/lab/Autocomplete';
+import TextField from '@material-ui/core/TextField';
 
 import {
   IStructureDefinition,
   IElementDefinition
-} from "@ahryman40k/ts-fhir-types/lib/R4";
+} from '@ahryman40k/ts-fhir-types/lib/R4';
 
-import { updateStructureDefExtension } from "state/actions/resourceActions";
+import { updateStructureDefExtension } from 'state/actions/resourceActions';
 
 type AttributeEditorProps = {
   structureDefinition: IStructureDefinition;
@@ -24,20 +26,20 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
     return state.codeSystem;
   });
   const dispatch = useDispatch();
-  let structureDef = { ...structureDefinition };
+  const structureDef = { ...structureDefinition };
 
   const getElementById = (
     id: string,
-    type: "differential" | "snapshot"
+    type: 'differential' | 'snapshot'
   ): IElementDefinition | undefined => {
     if (structureDef)
-      if (type === "differential")
+      if (type === 'differential')
         for (const obj of structureDef?.differential?.element || []) {
           if (obj && obj.id === id) {
             return obj;
           }
         }
-      else if (type === "snapshot")
+      else if (type === 'snapshot')
         for (const obj of structureDef?.snapshot?.element || []) {
           if (obj && obj.id === id) {
             return obj;
@@ -45,29 +47,29 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
         }
   };
 
-  let extensionElement = getElementById("Extension", "differential");
+  const extensionElement = getElementById('Extension', 'differential');
 
   const [short, setShort] = useState(
-    extensionElement ? extensionElement.short : ""
+    extensionElement ? extensionElement.short : ''
   );
   const [definition, setDefinition] = useState(
-    extensionElement ? extensionElement.definition : ""
+    extensionElement ? extensionElement.definition : ''
   );
   const [comment, setComment] = useState(
-    extensionElement ? extensionElement.comment : ""
+    extensionElement ? extensionElement.comment : ''
   );
   const [minCardinality, setMinCardinality] = useState(
     extensionElement ? extensionElement.min : undefined
   );
   const [maxCardinality, setMaxCardinality] = useState(
-    extensionElement ? extensionElement.max : ""
+    extensionElement ? extensionElement.max : ''
   );
-  const [dataType, setDataType] = useState("");
+  const [dataType, setDataType] = useState('');
 
-  const handleEditExtension = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleEditExtension = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
-    let extensionElement = getElementById("Extension", "differential");
+    let extensionElement = getElementById('Extension', 'differential');
     if (extensionElement) {
       extensionElement.short = short;
       extensionElement.definition = definition;
@@ -76,7 +78,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
       extensionElement.max = maxCardinality;
     }
 
-    extensionElement = getElementById("Extension", "snapshot");
+    extensionElement = getElementById('Extension', 'snapshot');
     if (extensionElement) {
       extensionElement.short = short;
       extensionElement.definition = definition;
@@ -85,12 +87,12 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
       extensionElement.max = maxCardinality;
     }
 
-    extensionElement = getElementById("Extension.value[x]", "snapshot");
+    extensionElement = getElementById('Extension.value[x]', 'snapshot');
     if (extensionElement && extensionElement.type) {
       extensionElement.type[0].code = dataType;
     }
 
-    extensionElement = getElementById("Extension.value[x]", "differential");
+    extensionElement = getElementById('Extension.value[x]', 'differential');
     if (extensionElement && extensionElement.type) {
       extensionElement.type[0].code = dataType;
     }
@@ -153,7 +155,9 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
               setDataType(value as string);
               // TODO : complete structureDefinitionTree with getStructureDef(value as string)
             }}
-            renderInput={(params) => (
+            renderInput={(
+              params: AutocompleteRenderInputParams
+            ): React.ReactNode => (
               <TextField {...params} label="Data type" variant="outlined" />
             )}
           />

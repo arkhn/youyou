@@ -5,7 +5,7 @@ import {
   GetCodeSystemDataTypeSuccessAction,
   GetCodeSystemDataTypeFailureAction,
   GetCodeSystemDataTypePendingAction
-} from "state/actions/codeSystemActions";
+} from 'state/actions/codeSystemActions';
 
 export type DataFetched = {
   id: string;

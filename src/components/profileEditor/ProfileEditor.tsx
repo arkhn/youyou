@@ -1,18 +1,18 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React from 'react';
+import { useSelector } from 'react-redux';
 
-import clsx from "clsx";
-import { IElementDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
-import { Paper, Container, Typography, Breadcrumbs } from "@material-ui/core";
+import clsx from 'clsx';
+import { IElementDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
+import { Paper, Container, Typography, Breadcrumbs } from '@material-ui/core';
 
-import { RootState } from "state/store";
+import { RootState } from 'state/store';
 
-import AttributeEditor from "components/attributeEditor/AttributeEditor";
-import { ButtonDownload, SnackBarWithClose } from "components/smallComponents";
-import Navbar from "components/navbar/Navbar";
-import StructureDefinitionTree from "components/structureDefinitionTree/StructureDefinitionTree";
-import StructureDefSettings from "components/structureDefSettings/StructureDefSettings";
-import useStyles from "components/profileEditor/style";
+import AttributeEditor from 'components/attributeEditor/AttributeEditor';
+import { ButtonDownload, SnackBarWithClose } from 'components/smallComponents';
+import Navbar from 'components/navbar/Navbar';
+import StructureDefinitionTree from 'components/structureDefinitionTree/StructureDefinitionTree';
+import StructureDefSettings from 'components/structureDefSettings/StructureDefSettings';
+import useStyles from 'components/profileEditor/style';
 
 const ProfileEditor: React.FC<{}> = () => {
   const {
@@ -22,7 +22,7 @@ const ProfileEditor: React.FC<{}> = () => {
     structureDefMeta
   } = useSelector((state: RootState) => state.resource);
   const classes = useStyles();
-  const splitedAttributeSelected = selectedAttributeId?.split(".");
+  const splitedAttributeSelected = selectedAttributeId?.split('.');
 
   const attribute = structureDefinition?.snapshot?.element.find(
     (attribute: IElementDefinition) => attribute.id === selectedAttributeId
@@ -36,7 +36,7 @@ const ProfileEditor: React.FC<{}> = () => {
     return <>Error</>;
   }
 
-  const renderBreadcrumbs = () => {
+  const renderBreadcrumbs = (): JSX.Element | JSX.Element[] | undefined => {
     if (structureDefMeta)
       return <Typography className={classes.capitalize}>Metadata</Typography>;
     return splitedAttributeSelected?.map((split: string) => (
