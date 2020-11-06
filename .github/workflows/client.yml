@@ -7,9 +7,12 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
 
       - name: Install modules
-        run: yarn install
+        run: yarn --cwd  . install
       - name: Run eslint
-        run: eslint './src/**/*.{ts,tsx,js,jsx}'
+        run: eslint --cwd './src/**/*.{ts,tsx,js,jsx}'
