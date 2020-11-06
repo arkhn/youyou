@@ -1,8 +1,8 @@
-import { Color } from "@material-ui/lab";
+import { Color } from '@material-ui/lab';
 import {
   SetSnackbarOpenAction,
   SET_SNACKBAR_OPEN
-} from "state/actions/snackbarActions";
+} from 'state/actions/snackbarActions';
 
 export type SnackbarState = {
   message: string;
@@ -10,7 +10,7 @@ export type SnackbarState = {
 };
 
 const initialSnackbarState = {
-  message: "",
+  message: '',
   severity: undefined
 };
 

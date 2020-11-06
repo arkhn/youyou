@@ -1,23 +1,23 @@
-import React from "react";
-import { useDispatch } from "react-redux";
+import React from 'react';
+import { useDispatch } from 'react-redux';
 
-import { IStructureDefinition } from "@ahryman40k/ts-fhir-types/lib/R4";
-import { Button } from "@material-ui/core";
-import { makeStyles, Theme } from "@material-ui/core/styles";
+import { IStructureDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
+import { Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
-import { setSnackbarOpen } from "state/actions/snackbarActions";
+import { setSnackbarOpen } from 'state/actions/snackbarActions';
 
 type ButtonDownloadProps = {
   text: string;
   toDownload: IStructureDefinition;
 };
 
-const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles(() => ({
   buttonDownloadSize: {
-    width: "100%"
+    width: '100%'
   },
   buttonDownloadText: {
-    textDecoration: "none"
+    textDecoration: 'none'
   }
 }));
 
@@ -31,21 +31,21 @@ const ButtonDownload: React.FC<ButtonDownloadProps> = ({
   return (
     <a
       href={
-        "data:json/plain;charset=utf-8," +
+        'data:json/plain;charset=utf-8,' +
         encodeURIComponent(JSON.stringify(toDownload, null, 2))
       }
-      download={toDownload.name + ".json"}
+      download={toDownload.name + '.json'}
       className={classes.buttonDownloadText}
     >
       <Button
         color="secondary"
         variant="contained"
         className={classes.buttonDownloadSize}
-        onClick={() =>
+        onClick={(): void => {
           dispatch(
-            setSnackbarOpen("success", "Profile Downloaded ! Congratulation !")
-          )
-        }
+            setSnackbarOpen('success', 'Profile Downloaded ! Congratulation !')
+          );
+        }}
       >
         {text}
       </Button>

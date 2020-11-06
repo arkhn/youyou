@@ -1,21 +1,21 @@
-import React from "react";
-import { Provider } from "react-redux";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { PersistGate } from "redux-persist/integration/react";
+import React from 'react';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { PersistGate } from 'redux-persist/integration/react';
 
-import { StylesProvider, CssBaseline } from "@material-ui/core";
+import { StylesProvider, CssBaseline } from '@material-ui/core';
 
-import Homepage from "components/homepage/Homepage";
-import ProfileEditor from "components/profileEditor/ProfileEditor";
-import ExtensionEditor from "components/extensionEditor/ExtensionEditor";
+import Homepage from 'components/homepage/Homepage';
+import ProfileEditor from 'components/profileEditor/ProfileEditor';
+import ExtensionEditor from 'components/extensionEditor/ExtensionEditor';
 import {
   requestIds,
   requestExtensionDataTypes,
   requestFhirDataTypes
-} from "state/thunkMiddleware";
-import { store, persistor } from "state/store";
+} from 'state/thunkMiddleware';
+import { store, persistor } from 'state/store';
 
-const App = () => {
+const App = (): JSX.Element => {
   /* @ts-ignore */
   store.dispatch(requestIds());
   /* @ts-ignore */

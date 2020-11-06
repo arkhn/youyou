@@ -1,10 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { AppBar, Toolbar, Typography } from "@material-ui/core";
+import { AppBar, Toolbar, Typography } from '@material-ui/core';
 
-import useStyles from "components/navbar/style";
-import { ReactComponent as Logo } from "assets/img/arkhn-logo.svg";
+import useStyles from 'components/navbar/style';
+import { ReactComponent as Logo } from 'assets/img/arkhn-logo.svg';
 
 const Navbar: React.FC<{}> = () => {
   const classes = useStyles();
@@ -12,7 +12,7 @@ const Navbar: React.FC<{}> = () => {
   return (
     <AppBar position="fixed" className={classes.navBar}>
       <Toolbar className={classes.toolBar}>
-        <Link to={"/"} className={classes.homeLink}>
+        <Link to={'/'} className={classes.homeLink}>
           <Logo className={classes.logo} />
           <Typography variant="h1" color="primary">
             YOUYOU

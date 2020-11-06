@@ -1,10 +1,9 @@
 import {
-  ICodeSystem,
-  ICodeSystem_Concept,
-  IElementDefinition_Type,
+  ICodeSystem_Concept as ICodeSystemConcept,
+  IElementDefinition_Type as IElementDefinitionType,
   IStructureDefinition,
-  IStructureDefinition_Snapshot
-} from "@ahryman40k/ts-fhir-types/lib/R4";
+  IStructureDefinition_Snapshot as IStructureDefinitionSnapshot
+} from '@ahryman40k/ts-fhir-types/lib/R4';
 
 export type FetchedData = {
   resource: string;
@@ -24,7 +23,7 @@ export type ResourceState = {
 
 export type FetchedDataCodeSystem = {
   resource: {
-    concept: ICodeSystem_Concept;
+    concept: ICodeSystemConcept;
     name: string;
   };
   search: any;
@@ -33,7 +32,7 @@ export type FetchedDataCodeSystem = {
 export type fhirDataState = {
   resource: {
     name: string;
-    snapshot: IStructureDefinition_Snapshot;
+    snapshot: IStructureDefinitionSnapshot;
   };
   search: {
     mode: string;
@@ -43,30 +42,30 @@ export type fhirDataState = {
 export interface RenderAttributesTree {
   name: string;
   id: string;
-  type: string | IElementDefinition_Type[];
+  type: string | IElementDefinitionType[];
   children: RenderAttributesTree[];
   min: number | null;
   max: string;
   definition: string;
-  valueSet?: ICodeSystem_Concept[];
+  valueSet?: ICodeSystemConcept[];
 }
 
 export interface RenderComplexType {
   name: string;
   id: string;
-  type: string | IElementDefinition_Type[];
+  type: string | IElementDefinitionType[];
   children: RenderComplexType[][];
   min: number | null;
   max: string;
   definition: string;
-  valueSet?: ICodeSystem_Concept[];
+  valueSet?: ICodeSystemConcept[];
 }
 
 export interface SimplifiedAttributes {
   path: string;
-  type: string | IElementDefinition_Type[];
+  type: string | IElementDefinitionType[];
   definition: string;
   min: number | null;
   max: string;
-  valueSet?: ICodeSystem_Concept[];
+  valueSet?: ICodeSystemConcept[];
 }

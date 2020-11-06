@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { Snackbar } from "@material-ui/core";
-import { Alert, Color } from "@material-ui/lab";
+import { Snackbar } from '@material-ui/core';
+import { Alert, Color } from '@material-ui/lab';
 
-import { RootState } from "state/store";
-import { setSnackbarOpen } from "state/actions/snackbarActions";
+import { RootState } from 'state/store';
+import { setSnackbarOpen } from 'state/actions/snackbarActions';
 
 const SnackbarWithClose: React.FC<{}> = () => {
   const { message, severity } = useSelector(
@@ -15,15 +15,15 @@ const SnackbarWithClose: React.FC<{}> = () => {
 
   const [open, setOpen] = useState(false);
 
-  const handleClose = (event?: React.SyntheticEvent, reason?: string) => {
-    if (reason === "clickaway") {
+  const handleClose = (event?: React.SyntheticEvent, reason?: string): void => {
+    if (reason === 'clickaway') {
       return;
     }
     setOpen(false);
   };
 
   useEffect(() => {
-    if (message !== "" && severity) setOpen(true);
+    if (message !== '' && severity) setOpen(true);
     else setOpen(false);
   }, [severity, message]);
 
@@ -32,7 +32,7 @@ const SnackbarWithClose: React.FC<{}> = () => {
       open={open}
       autoHideDuration={3000}
       onClose={handleClose}
-      onExited={() => {
+      onExited={(): void => {
         dispatch(setSnackbarOpen(undefined, message));
       }}
     >

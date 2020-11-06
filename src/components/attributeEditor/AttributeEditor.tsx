@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import { useDispatch } from "react-redux";
+import { useDispatch } from 'react-redux';
 
 import {
   IElementDefinition,
   IStructureDefinition
-} from "@ahryman40k/ts-fhir-types/lib/R4";
-import { Typography, Button } from "@material-ui/core";
-import { ToggleButton } from "@material-ui/lab";
+} from '@ahryman40k/ts-fhir-types/lib/R4';
+import { Typography, Button } from '@material-ui/core';
+import { ToggleButton } from '@material-ui/lab';
 
-import { updateStructureDefProfile } from "state/actions/resourceActions";
-import { CssTextField, CssToggleButtonGroup } from "components/smallComponents";
-import useStyles from "components/attributeEditor/style";
-import { allCardinalities, isDisabledInput } from "./utils";
+import { updateStructureDefProfile } from 'state/actions/resourceActions';
+import { CssTextField, CssToggleButtonGroup } from 'components/smallComponents';
+import useStyles from 'components/attributeEditor/style';
+import { allCardinalities, isDisabledInput } from './utils';
 
 type AttributeEditorProps = {
   attribute: IElementDefinition;
@@ -50,7 +50,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
   }, [attribute]);
 
   useEffect(() => {
-    setCardinality(minState + "|" + maxState);
+    setCardinality(minState + '|' + maxState);
     setDefaultValueMin(minState.toString());
     setDefaultValueMax(maxState);
   }, [minState, maxState]);
@@ -58,16 +58,18 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
   const handleCardinality = (
     event: React.MouseEvent<HTMLElement, MouseEvent>,
     newCardinality: string
-  ) => {
+  ): void => {
     if (newCardinality) {
       setCardinality(newCardinality);
-      const cardinalityValues = newCardinality.split("|");
+      const cardinalityValues = newCardinality.split('|');
       setMinState(Number(cardinalityValues[0]));
       setMaxState(cardinalityValues[1]);
     }
   };
 
-  const changeProfileState = (event: React.FormEvent<HTMLFormElement>) => {
+  const changeProfileState = (
+    event: React.FormEvent<HTMLFormElement>
+  ): void => {
     event.preventDefault();
     if (attribute && structureDefinition) {
       attribute.min = minState;
@@ -78,22 +80,22 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
 
   const handleInputMin = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    if (event.target.value.match(number) || event.target.value === "") {
+  ): void => {
+    if (event.target.value.match(number) || event.target.value === '') {
       setDefaultValueMin(event.target.value);
     }
   };
 
   const handleBlurInputMin = (
     event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  ): void => {
     if (
       Number(event.target.value) >= baseMin &&
-      (Number(event.target.value) <= Number(maxState) || maxState === "*")
+      (Number(event.target.value) <= Number(maxState) || maxState === '*')
     ) {
-      if (event.target.value !== "") {
+      if (event.target.value !== '') {
         setMinState(Number(event.target.value));
-        setCardinality(minState + "|" + maxState);
+        setCardinality(minState + '|' + maxState);
       }
     }
     setDefaultValueMin(minState.toString());
@@ -101,22 +103,22 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
 
   const handleInputMax = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  ): void => {
     if (
       event.target.value.match(number) ||
-      event.target.value === "*" ||
-      event.target.value === ""
+      event.target.value === '*' ||
+      event.target.value === ''
     ) {
       setDefaultValueMax(event.target.value);
       if (
         (Number(event.target.value) >= minState &&
           Number(event.target.value) <= Number(baseMax)) ||
-        (baseMax === "*" && Number(event.target.value) >= minState) ||
-        (baseMax === "*" && event.target.value === "*")
+        (baseMax === '*' && Number(event.target.value) >= minState) ||
+        (baseMax === '*' && event.target.value === '*')
       ) {
-        if (event.target.value !== "") {
+        if (event.target.value !== '') {
           setMaxState(event.target.value);
-          setCardinality(minState + "|" + maxState);
+          setCardinality(minState + '|' + maxState);
         }
       }
     }
@@ -148,7 +150,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
           variant="outlined"
           className={classes.cardinalityInput}
           onChange={handleInputMax}
-          onBlur={() => setDefaultValueMax(maxState)}
+          onBlur={(): void => setDefaultValueMax(maxState)}
           value={defaultValueMax}
         />
         <CssToggleButtonGroup

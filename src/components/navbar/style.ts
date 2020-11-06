@@ -1,8 +1,8 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, Theme } from '@material-ui/core/styles';
 
 export const navbarHeight = 65;
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   navBar: {
     background: theme.palette.background.paper,
     height: navbarHeight
@@ -16,14 +16,14 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 16
   },
   buttonExtension: {
-    position: "absolute",
+    position: 'absolute',
     right: 10,
     top: 10
   },
   homeLink: {
-    color: "inherit",
-    textDecoration: "none",
-    display: "flex"
+    color: 'inherit',
+    textDecoration: 'none',
+    display: 'flex'
   }
 }));
 
