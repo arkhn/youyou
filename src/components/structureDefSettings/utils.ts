@@ -1,5 +1,5 @@
 import {
-  IElementDefinition_Type,
+  IElementDefinition_Type as IElementDefinitionType,
   IStructureDefinition
 } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { RenderAttributesTree } from 'types';
@@ -48,7 +48,7 @@ export const createJSONTree = (
 };
 
 export const isPrimitive = (
-  type: string | IElementDefinition_Type[],
+  type: string | IElementDefinitionType[],
   primitiveTypes: string[]
 ): boolean =>
   primitiveTypes.some((primitive: string) => type === primitive) ||

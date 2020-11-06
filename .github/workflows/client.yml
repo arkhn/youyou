@@ -15,4 +15,4 @@ jobs:
       - name: Install modules
         run: yarn install
       - name: Run eslint
-        run: yarn eslint './src/**/*.{ts,tsx,js,jsx}'
+        run: yarn lint
