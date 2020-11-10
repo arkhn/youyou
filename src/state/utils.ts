@@ -48,9 +48,9 @@ export const transformAttributes = (
             max: element.max as string
           });
         } else {
-          element.type.forEach((type: IElementDefinitionType) => {
-            if (element.path && type.code && element.definition) {
-              if (type.code === 'code') {
+          element.type.forEach((types: IElementDefinitionType) => {
+            if (element.path && types.code && element.definition) {
+              if (types.code === 'code') {
                 element.binding?.extension?.forEach((extension) => {
                   if (extension.valueString) {
                     const findValueSet = valueSetRequest.data.entry.find(
@@ -59,12 +59,12 @@ export const transformAttributes = (
                     );
                     if (findValueSet) {
                       element.path &&
-                        type.code &&
+                        types.code &&
                         element.definition &&
                         attributes.push({
                           definition: element.definition,
                           path: element.path,
-                          type: type.code,
+                          type: types.code,
                           min: element.min as number,
                           max: element.max as string,
                           valueSet: findValueSet.resource.concept
@@ -72,12 +72,12 @@ export const transformAttributes = (
                     }
                   } else {
                     element.path &&
-                      type.code &&
+                      types.code &&
                       element.definition &&
                       attributes.push({
                         definition: element.definition,
                         path: element.path,
-                        type: type.code,
+                        type: types.code,
                         min: element.min as number,
                         max: element.max as string
                       });
@@ -86,7 +86,7 @@ export const transformAttributes = (
               } else {
                 attributes.push({
                   path: element.path,
-                  type: type.code,
+                  type: types.code,
                   definition: element.definition,
                   min: element.min as number,
                   max: element.max as string

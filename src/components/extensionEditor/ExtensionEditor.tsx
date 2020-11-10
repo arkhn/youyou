@@ -45,7 +45,7 @@ const ExtensionEditor: React.FC<{}> = () => {
             <Paper className={clsx(classes.paperLeft, classes.paper)}>
               <Container>
                 <StructureDefinitionTree
-                  structureDefinition={extensionStructureDefinition}
+                  elements={extensionStructureDefinition.snapshot?.element}
                 />
               </Container>
               <ButtonDownload

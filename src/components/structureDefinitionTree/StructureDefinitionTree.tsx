@@ -1,11 +1,8 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import clsx from 'clsx';
-import {
-  IStructureDefinition,
-  IElementDefinition
-} from '@ahryman40k/ts-fhir-types/lib/R4';
+import { IElementDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { TreeView, TreeItem } from '@material-ui/lab';
 import {
   ArrowRight,
@@ -19,11 +16,14 @@ import {
   selectAttributeId,
   selectStructureDefMeta
 } from 'state/actions/resourceActions';
+import { RootState } from 'state/store';
+import { createComplexSnapshot } from 'components/structureDefinitionTree/utils';
 
 import useStyles from './style';
+import { RenderAttributesTree } from 'types';
 
 type StructureDefinitionTreeProps = {
-  structureDefinition: IStructureDefinition | null;
+  elements: IElementDefinition[] | undefined;
 };
 
 interface RenderNode {
@@ -33,50 +33,17 @@ interface RenderNode {
 }
 
 const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
-  structureDefinition
+  elements
 }) => {
   const dispatch = useDispatch();
-  const attributes: Array<IElementDefinition> | undefined =
-    structureDefinition?.snapshot?.element;
   const classes = useStyles();
-
-  const paths = attributes?.map(
-    (attribute: IElementDefinition) => attribute.path
+  const { complexTypes, primitiveTypes } = useSelector(
+    (state: RootState) => state.fhirDataTypes
   );
 
-  const renderAttributes = (
-    path: string,
-    rootPath: string,
-    node: RenderNode,
-    rootNode: RenderNode
-  ): RenderNode => {
-    if (node.id === rootPath) {
-      return rootNode;
-    } else {
-      const splitPath = path.split('.');
-      const childNode = node.children.find((c) => c.name === splitPath[0]);
-      const newPath = splitPath.slice(1, splitPath.length).join('.');
-      if (childNode) {
-        return renderAttributes(newPath, rootPath, childNode, rootNode);
-      } else {
-        const newNode = {
-          name: splitPath[0],
-          id: rootPath,
-          children: []
-        };
-        node.children.push(newNode);
-        return renderAttributes(newPath, rootPath, newNode, rootNode);
-      }
-    }
-  };
-  let attributesForUI = { name: '', id: '', children: [] };
-  if (paths) {
-    paths.forEach(
-      (path) =>
-        path && renderAttributes(path, path, attributesForUI, attributesForUI)
-    );
-  }
-  attributesForUI = attributesForUI.children[0];
+  const attributesForUI = elements
+    ? createComplexSnapshot(elements, primitiveTypes, complexTypes)
+    : undefined;
 
   const treeItemContent = (nodes: RenderNode): JSX.Element => (
     <span className={classes.treeItem}>
@@ -89,12 +56,13 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
     </span>
   );
 
-  const renderNode = (nodes: RenderNode): JSX.Element => (
+  const renderNode = (nodes: RenderAttributesTree): JSX.Element => (
     <TreeItem
       key={nodes.id}
       nodeId={nodes.id}
       label={treeItemContent(nodes)}
-      onClick={(): void => {
+      onLabelClick={(e: React.MouseEvent<Element, MouseEvent>): void => {
+        e.preventDefault();
         dispatch(selectAttributeId(nodes.id));
       }}
     >
@@ -103,15 +71,11 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
     </TreeItem>
   );
 
-  if (!structureDefinition) {
-    return <>Error</>;
-  }
-
   return (
     <TreeView
       defaultCollapseIcon={<ArrowDropDown />}
       defaultExpandIcon={<ArrowRight />}
-      defaultExpanded={[attributesForUI.id]}
+      defaultExpanded={attributesForUI ? [attributesForUI.id] : undefined}
     >
       <TreeItem
         nodeId="0"
@@ -127,7 +91,7 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
           </span>
         }
       />
-      {renderNode(attributesForUI)}
+      {attributesForUI && renderNode(attributesForUI)}
     </TreeView>
   );
 };

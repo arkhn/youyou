@@ -55,7 +55,7 @@ const ProfileEditor: React.FC<{}> = () => {
           <Typography variant="h1">{structureDefinition.name}</Typography>
           <Container className={classes.treeView}>
             <StructureDefinitionTree
-              structureDefinition={structureDefinition}
+              elements={structureDefinition.snapshot?.element}
             />
           </Container>
           <ButtonDownload
