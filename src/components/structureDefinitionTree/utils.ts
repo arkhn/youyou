@@ -2,6 +2,7 @@ import {
   IElementDefinition,
   IElementDefinition_Type as IElementDefinitionType
 } from '@ahryman40k/ts-fhir-types/lib/R4';
+import cloneDeep from 'lodash.clonedeep';
 import { createComplexTypes, renderTreeAttributes } from 'state/utils';
 import { RenderAttributesTree, SimplifiedAttributes } from 'types';
 
@@ -79,5 +80,18 @@ export const createComplexSnapshot = (
       attributeTree.children[0].children.push(child)
     );
   }
-  return attributeTree.children[0];
+  const changePath = (
+    atts: RenderAttributesTree[],
+    path: string
+  ): RenderAttributesTree[] => {
+    for (const att of atts) {
+      const newPath = `${path !== '' ? path + '.' : ''}${att.name}`;
+      att.id = newPath;
+      if (att.children.length > 0) {
+        att.children = changePath(cloneDeep(att.children), att.id);
+      }
+    }
+    return atts;
+  };
+  return changePath(cloneDeep(attributeTree.children), attributeTree.name)[0];
 };
