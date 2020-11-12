@@ -40,6 +40,7 @@ export const createComplexSnapshot = (
       attributeTree.children[0].children.push(child)
     );
   }
+
   const changePath = (
     atts: RenderAttributesTree[],
     path: string
@@ -48,10 +49,29 @@ export const createComplexSnapshot = (
       const newPath = `${path !== '' ? path + '.' : ''}${att.name}`;
       att.newPath = newPath;
       if (att.children.length > 0) {
-        att.children = changePath(cloneDeep(att.children), att.id);
+        att.children = changePath(cloneDeep(att.children), att.newPath);
       }
     }
     return atts;
   };
-  return changePath(cloneDeep(attributeTree.children), attributeTree.name)[0];
+
+  return changePath(attributeTree.children, attributeTree.name)[0];
+};
+
+export const createElementDefinitionTree = (
+  items: RenderAttributesTree[]
+): any => {
+  const elemDef: any = {};
+  items.forEach((item: RenderAttributesTree) => {
+    if (item.children.length === 0) {
+      elemDef[item.name] = undefined;
+    } else {
+      if (item.max === '1') {
+        elemDef[item.name] = createElementDefinitionTree(item.children);
+      } else {
+        elemDef[item.name] = [];
+      }
+    }
+  });
+  return elemDef;
 };

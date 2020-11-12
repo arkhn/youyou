@@ -27,6 +27,7 @@ const ProfileEditor: React.FC<{}> = () => {
   const attribute = structureDefinition?.snapshot?.element.find(
     (attribute: IElementDefinition) => attribute.id === selectedAttributeId
   );
+  const element = structureDefinition?.snapshot?.element;
 
   if (loading) {
     return <div>Loading</div>;
@@ -54,9 +55,7 @@ const ProfileEditor: React.FC<{}> = () => {
         <Paper className={clsx(classes.paperLeft, classes.paper)}>
           <Typography variant="h1">{structureDefinition.name}</Typography>
           <Container className={classes.treeView}>
-            <StructureDefinitionTree
-              elements={structureDefinition.snapshot?.element}
-            />
+            <StructureDefinitionTree elements={element} />
           </Container>
           <ButtonDownload
             text="Download profile"

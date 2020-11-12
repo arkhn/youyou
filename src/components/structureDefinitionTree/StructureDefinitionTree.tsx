@@ -63,7 +63,7 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
       label={treeItemContent(nodes)}
       onLabelClick={(e: React.MouseEvent<Element, MouseEvent>): void => {
         e.preventDefault();
-        dispatch(selectAttributeId(nodes.id));
+        dispatch(selectAttributeId(nodes.newPath));
       }}
     >
       {Array.isArray(nodes.children) &&
