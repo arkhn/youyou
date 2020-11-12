@@ -50,7 +50,7 @@ const Homepage: React.FC<{}> = () => {
             color="secondary"
             onClick={(): void => {
               if (button.path === '/profile/edit') {
-                dispatchResourceSelected({ id: 'Patient' });
+                dispatchResourceSelected({ id: 'Observation' });
               }
             }}
             className={classes.button}

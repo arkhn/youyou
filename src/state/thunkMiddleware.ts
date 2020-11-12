@@ -153,7 +153,6 @@ export const requestFhirDataTypes = () => {
 
       const newComplexTypes = transformAttributes(complexTypes, valueSet);
       const newSDef = transformAttributes(resourceSDef, valueSet);
-
       if (newComplexTypes && newSDef) {
         newComplexTypes.forEach(
           (type) => type && renderTreeAttributes(type, type, complexTypeTree)

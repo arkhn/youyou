@@ -86,7 +86,7 @@ export const createComplexSnapshot = (
   ): RenderAttributesTree[] => {
     for (const att of atts) {
       const newPath = `${path !== '' ? path + '.' : ''}${att.name}`;
-      att.id = newPath;
+      att.newPath = newPath;
       if (att.children.length > 0) {
         att.children = changePath(cloneDeep(att.children), att.id);
       }

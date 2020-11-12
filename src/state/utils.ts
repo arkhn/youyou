@@ -51,6 +51,7 @@ export const transformAttributes = (
           element.type.forEach((types: IElementDefinitionType) => {
             if (element.path && types.code && element.definition) {
               if (types.code === 'code') {
+                const valueSet: any[] = [];
                 element.binding?.extension?.forEach((extension) => {
                   if (extension.valueString) {
                     const findValueSet = valueSetRequest.data.entry.find(
@@ -58,31 +59,21 @@ export const transformAttributes = (
                         value.resource.name === extension.valueString
                     );
                     if (findValueSet) {
-                      element.path &&
-                        types.code &&
-                        element.definition &&
-                        attributes.push({
-                          definition: element.definition,
-                          path: element.path,
-                          type: types.code,
-                          min: element.min as number,
-                          max: element.max as string,
-                          valueSet: findValueSet.resource.concept
-                        });
-                    }
-                  } else {
-                    element.path &&
-                      types.code &&
-                      element.definition &&
-                      attributes.push({
-                        definition: element.definition,
-                        path: element.path,
-                        type: types.code,
-                        min: element.min as number,
-                        max: element.max as string
+                      findValueSet.resource.concept.forEach((vs: any) => {
+                        valueSet.push(vs);
                       });
+                    }
                   }
                 });
+                const newAttribute = {
+                  definition: element.definition,
+                  path: element.path,
+                  type: types.code,
+                  min: element.min as number,
+                  max: element.max as string,
+                  valueSet: valueSet.length > 0 ? valueSet : undefined
+                };
+                attributes.push(newAttribute);
               } else {
                 attributes.push({
                   path: element.path,
@@ -154,11 +145,12 @@ export const renderTreeAttributes = (
         type: parentAttribute.type,
         children: [],
         definition: parentAttribute.definition,
-        valueSet: parentAttribute.valueSet,
         min: parentAttribute.min,
         max: parentAttribute.max
       };
-      node.children.push(newNode);
+      parentAttribute.valueSet
+        ? node.children.push({ ...newNode, valueSet: parentAttribute.valueSet })
+        : node.children.push(newNode);
       return renderTreeAttributes(newAttribute, parentAttribute, newNode);
     }
   }
@@ -198,7 +190,15 @@ export const createComplexTypes = (
         enhancedComplexType.push(child);
       }
     } else {
-      enhancedComplexType.push(child);
+      const childrenComplexType = createComplexTypes(
+        complexTypes,
+        child.children,
+        primitiveTypes
+      );
+      enhancedComplexType.push({
+        ...child,
+        children: childrenComplexType
+      });
     }
   }
   return enhancedComplexType;

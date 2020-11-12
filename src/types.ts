@@ -48,6 +48,7 @@ export interface RenderAttributesTree {
   max: string;
   definition: string;
   valueSet?: ICodeSystemConcept[];
+  newPath?: string;
 }
 
 export interface RenderComplexType {
