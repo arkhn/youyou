@@ -1,6 +1,6 @@
 import { ThunkDispatch } from 'redux-thunk';
 import { Action } from 'redux';
-import { FetchedData, RenderAttributesTree } from 'types';
+import { FetchedData, RenderAttributesTree, SimplifiedAttributes } from 'types';
 
 import api from 'services/api';
 import {
@@ -21,7 +21,7 @@ import {
   getFhirTypesFetchStart,
   getFhirTypesFetchSuccess
 } from './actions/fhirDataTypesActions';
-import { transformAttributes, renderTreeAttributes } from './utils';
+import { renderTreeAttributes, createSimplifiedAttributes } from './utils';
 
 import {
   IStructureDefinition,
@@ -150,9 +150,15 @@ export const requestFhirDataTypes = () => {
         max: '',
         definition: ''
       };
+      const newComplexTypes: SimplifiedAttributes[] = createSimplifiedAttributes(
+        complexTypes,
+        valueSet
+      );
+      const newSDef: SimplifiedAttributes[] = createSimplifiedAttributes(
+        resourceSDef,
+        valueSet
+      );
 
-      const newComplexTypes = transformAttributes(complexTypes, valueSet);
-      const newSDef = transformAttributes(resourceSDef, valueSet);
       if (newComplexTypes && newSDef) {
         newComplexTypes.forEach(
           (type) => type && renderTreeAttributes(type, type, complexTypeTree)
@@ -162,7 +168,6 @@ export const requestFhirDataTypes = () => {
           (type) => type && renderTreeAttributes(type, type, structureDefTree)
         );
       }
-
       dispatch(
         getFhirTypesFetchSuccess(
           primitiveTypes.data.entry.map(
