@@ -39,7 +39,7 @@ const ProfileEditor: React.FC<{}> = () => {
 
   const elements = newStructureDef?.snapshot?.element;
   const attribute = elements?.find(
-    (attribute: IElementDefinition) => attribute.id === selectedAttributeId
+    (att: IElementDefinition) => att.id === selectedAttributeId
   );
 
   if (loading) {
@@ -67,7 +67,7 @@ const ProfileEditor: React.FC<{}> = () => {
     e.preventDefault();
     dispatch(selectAttributeId(node.newPath));
     const findAttribute = structureDefinition?.snapshot?.element.find(
-      (attribute: IElementDefinition) => attribute.id === node.newPath
+      (att: IElementDefinition) => att.id === node.newPath
     );
     if (!findAttribute) {
       const elementDefinitionType = complexTypes.find(
