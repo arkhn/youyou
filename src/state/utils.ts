@@ -70,7 +70,10 @@ export const transformAttributes = (
                 type: types.code,
                 min: element.min as number,
                 max: element.max as string,
-                valueSet: valueSet.length > 0 ? valueSet : undefined
+                binding: {
+                  valueSet: valueSet.length > 0 ? valueSet : undefined,
+                  strength: element.binding?.strength
+                }
               };
               attributes.push(newAttribute);
             } else {
@@ -170,8 +173,8 @@ export const renderTreeAttributes = (
         min: parentAttribute.min,
         max: parentAttribute.max
       };
-      parentAttribute.valueSet
-        ? node.children.push({ ...newNode, valueSet: parentAttribute.valueSet })
+      parentAttribute.binding
+        ? node.children.push({ ...newNode, binding: parentAttribute.binding })
         : node.children.push(newNode);
       return renderTreeAttributes(newAttribute, parentAttribute, newNode);
     }

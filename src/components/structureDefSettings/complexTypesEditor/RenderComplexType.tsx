@@ -179,7 +179,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
           break;
         }
         case 'code': {
-          if (item.valueSet) {
+          if (item.binding?.valueSet) {
             const mapValues: {
               value: string | undefined;
               label: string | undefined;
@@ -189,7 +189,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                 value: '',
                 label: '--select a value--'
               });
-            item.valueSet.forEach((values) =>
+            item.binding.valueSet.forEach((values) =>
               mapValues.push({
                 value: values.code,
                 label: values.display

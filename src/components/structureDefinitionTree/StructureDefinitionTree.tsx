@@ -12,10 +12,7 @@ import {
   Settings
 } from '@material-ui/icons';
 
-import {
-  selectAttributeId,
-  selectStructureDefMeta
-} from 'state/actions/resourceActions';
+import { selectStructureDefMeta } from 'state/actions/resourceActions';
 import { RootState } from 'state/store';
 import { createComplexSnapshot } from 'components/structureDefinitionTree/utils';
 
@@ -24,6 +21,10 @@ import { RenderAttributesTree } from 'types';
 
 type StructureDefinitionTreeProps = {
   elements: IElementDefinition[] | undefined;
+  onLabelClick?: (
+    event: React.MouseEvent<Element, MouseEvent>,
+    nodes: RenderAttributesTree
+  ) => void;
 };
 
 interface RenderNode {
@@ -33,7 +34,8 @@ interface RenderNode {
 }
 
 const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
-  elements
+  elements,
+  onLabelClick
 }) => {
   const dispatch = useDispatch();
   const classes = useStyles();
@@ -61,10 +63,7 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
       key={nodes.id}
       nodeId={nodes.id}
       label={treeItemContent(nodes)}
-      onLabelClick={(e: React.MouseEvent<Element, MouseEvent>): void => {
-        e.preventDefault();
-        dispatch(selectAttributeId(nodes.newPath));
-      }}
+      onLabelClick={(e): void => onLabelClick && onLabelClick(e, nodes)}
     >
       {Array.isArray(nodes.children) &&
         nodes.children.map((node) => renderNode(node))}

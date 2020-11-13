@@ -1,8 +1,11 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import clsx from 'clsx';
-import { IElementDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
+import {
+  IElementDefinition,
+  IElementDefinition_Binding as IElementDefinitionBinding
+} from '@ahryman40k/ts-fhir-types/lib/R4';
 import { Paper, Container, Typography, Breadcrumbs } from '@material-ui/core';
 
 import { RootState } from 'state/store';
@@ -13,21 +16,31 @@ import Navbar from 'components/navbar/Navbar';
 import StructureDefinitionTree from 'components/structureDefinitionTree/StructureDefinitionTree';
 import StructureDefSettings from 'components/structureDefSettings/StructureDefSettings';
 import useStyles from 'components/profileEditor/style';
+import { RenderAttributesTree } from 'types';
+import { selectAttributeId } from 'state/actions/resourceActions';
+import { createElementDefinitionTree } from 'components/structureDefinitionTree/utils';
+import cloneDeep from 'lodash.clonedeep';
 
 const ProfileEditor: React.FC<{}> = () => {
   const {
     loading,
     structureDefinition,
-    selectedAttributeId,
-    structureDefMeta
+    structureDefMeta,
+    selectedAttributeId
   } = useSelector((state: RootState) => state.resource);
+  const { complexTypes } = useSelector(
+    (state: RootState) => state.fhirDataTypes
+  );
+  const [newStructureDef, setNewStructureDef] = useState(structureDefinition);
+  const dispatch = useDispatch();
   const classes = useStyles();
+
   const splitedAttributeSelected = selectedAttributeId?.split('.');
 
-  const attribute = structureDefinition?.snapshot?.element.find(
+  const elements = newStructureDef?.snapshot?.element;
+  const attribute = elements?.find(
     (attribute: IElementDefinition) => attribute.id === selectedAttributeId
   );
-  const element = structureDefinition?.snapshot?.element;
 
   if (loading) {
     return <div>Loading</div>;
@@ -47,6 +60,46 @@ const ProfileEditor: React.FC<{}> = () => {
     ));
   };
 
+  const handleClick = (
+    e: React.MouseEvent<Element, MouseEvent>,
+    node: RenderAttributesTree
+  ): void => {
+    e.preventDefault();
+    dispatch(selectAttributeId(node.newPath));
+    const findAttribute = structureDefinition?.snapshot?.element.find(
+      (attribute: IElementDefinition) => attribute.id === node.newPath
+    );
+    if (!findAttribute) {
+      const elementDefinitionType = complexTypes.find(
+        (type: RenderAttributesTree) => type.id === 'ElementDefinition'
+      );
+      if (elementDefinitionType) {
+        const newAttribute = createElementDefinitionTree(
+          elementDefinitionType.children
+        );
+        const newElement: IElementDefinition = {
+          ...newAttribute,
+          base: {
+            min: node.min as number,
+            max: node.max as string,
+            path: node.id
+          },
+          min: node.min as number,
+          max: node.max as string,
+          id: node.newPath,
+          path: node.newPath,
+          definition: node.definition,
+          binding: node.binding
+            ? (node.binding as IElementDefinitionBinding)
+            : undefined
+        };
+        const structureDefToEdit = cloneDeep(structureDefinition);
+        structureDefToEdit?.snapshot?.element.push(newElement);
+        setNewStructureDef(structureDefToEdit);
+      }
+    }
+  };
+
   return (
     <div>
       <Navbar />
@@ -55,7 +108,12 @@ const ProfileEditor: React.FC<{}> = () => {
         <Paper className={clsx(classes.paperLeft, classes.paper)}>
           <Typography variant="h1">{structureDefinition.name}</Typography>
           <Container className={classes.treeView}>
-            <StructureDefinitionTree elements={element} />
+            <StructureDefinitionTree
+              elements={elements}
+              onLabelClick={(e, nodes): void => {
+                handleClick(e, nodes);
+              }}
+            />
           </Container>
           <ButtonDownload
             text="Download profile"
@@ -67,16 +125,16 @@ const ProfileEditor: React.FC<{}> = () => {
             {renderBreadcrumbs()}
           </Breadcrumbs>
           <Paper className={clsx(classes.paperRight, classes.paper)}>
-            {structureDefMeta && (
+            {structureDefMeta && newStructureDef && (
               <StructureDefSettings
-                structureDefinition={structureDefinition}
+                structureDefinition={newStructureDef}
                 structureDefinitionType="resource"
               />
             )}
-            {selectedAttributeId && attribute && (
+            {selectedAttributeId && attribute && newStructureDef && (
               <AttributeEditor
                 attribute={attribute}
-                structureDefinition={structureDefinition}
+                structureDefinition={newStructureDef}
               />
             )}
           </Paper>
