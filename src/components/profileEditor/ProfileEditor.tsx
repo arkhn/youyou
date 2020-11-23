@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import clsx from 'clsx';
@@ -7,6 +7,7 @@ import {
   IElementDefinition_Binding as IElementDefinitionBinding
 } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { Paper, Container, Typography, Breadcrumbs } from '@material-ui/core';
+import cloneDeep from 'lodash.clonedeep';
 
 import { RootState } from 'state/store';
 
@@ -18,37 +19,50 @@ import StructureDefSettings from 'components/structureDefSettings/StructureDefSe
 import useStyles from 'components/profileEditor/style';
 import { RenderAttributesTree } from 'types';
 import { selectAttributeId } from 'state/actions/resourceActions';
-import { createElementDefinitionTree } from 'components/structureDefinitionTree/utils';
-import cloneDeep from 'lodash.clonedeep';
+import {
+  createComplexSnapshot,
+  createElementDefinitionTree
+} from 'components/profileEditor/utils';
 
 const ProfileEditor: React.FC<{}> = () => {
+  const dispatch = useDispatch();
+  const classes = useStyles();
+
   const {
     loading,
     structureDefinition,
     structureDefMeta,
-    selectedAttributeId
-  } = useSelector((state: RootState) => state.resource);
-  const { complexTypes } = useSelector(
-    (state: RootState) => state.fhirDataTypes
-  );
-  const [newStructureDef, setNewStructureDef] = useState(structureDefinition);
-  const dispatch = useDispatch();
-  const classes = useStyles();
+    selectedAttributeId,
+    primitiveTypes,
+    complexTypes
+  } = useSelector((state: RootState) => {
+    const {
+      loading,
+      structureDefinition,
+      structureDefMeta,
+      selectedAttributeId
+    } = state.resource;
+    const { primitiveTypes, complexTypes } = state.fhirDataTypes;
+    return {
+      loading,
+      structureDefinition,
+      structureDefMeta,
+      selectedAttributeId,
+      primitiveTypes,
+      complexTypes
+    };
+  });
 
+  const [newStructureDef, setNewStructureDef] = useState(structureDefinition);
   const splitedAttributeSelected = selectedAttributeId?.split('.');
 
-  const elements = newStructureDef?.snapshot?.element;
-  const attribute = elements?.find(
+  const attribute = newStructureDef?.snapshot?.element?.find(
     (att: IElementDefinition) => att.id === selectedAttributeId
   );
 
-  if (loading) {
-    return <div>Loading</div>;
-  }
-
-  if (!structureDefinition) {
-    return <>Error</>;
-  }
+  useEffect(() => {
+    setNewStructureDef(structureDefinition);
+  }, [structureDefinition]);
 
   const renderBreadcrumbs = (): JSX.Element | JSX.Element[] | undefined => {
     if (structureDefMeta)
@@ -59,6 +73,14 @@ const ProfileEditor: React.FC<{}> = () => {
       </Typography>
     ));
   };
+
+  const attributesForUI =
+    structureDefinition?.snapshot?.element &&
+    createComplexSnapshot(
+      structureDefinition.snapshot.element,
+      primitiveTypes,
+      complexTypes
+    );
 
   const handleClick = (
     e: React.MouseEvent<Element, MouseEvent>,
@@ -100,6 +122,14 @@ const ProfileEditor: React.FC<{}> = () => {
     }
   };
 
+  if (loading) {
+    return <div>Loading</div>;
+  }
+
+  if (!structureDefinition) {
+    return <>Error</>;
+  }
+
   return (
     <div>
       <Navbar />
@@ -109,10 +139,8 @@ const ProfileEditor: React.FC<{}> = () => {
           <Typography variant="h1">{structureDefinition.name}</Typography>
           <Container className={classes.treeView}>
             <StructureDefinitionTree
-              elements={elements}
-              onLabelClick={(e, nodes): void => {
-                handleClick(e, nodes);
-              }}
+              onLabelClick={handleClick}
+              uiAttributes={attributesForUI}
             />
           </Container>
           <ButtonDownload

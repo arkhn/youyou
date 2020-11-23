@@ -1,5 +1,6 @@
 import { IElementDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
 import cloneDeep from 'lodash.clonedeep';
+
 import {
   createComplexTypes,
   renderTreeAttributes,
@@ -27,7 +28,7 @@ export const createComplexSnapshot = (
     attribute.forEach(
       (type) => type && renderTreeAttributes(type, type, attributeTree)
     );
-    const childrens = createComplexTypes(
+    const children = createComplexTypes(
       complexTypes,
       attributeTree.children[0].children,
       primitiveTypes
@@ -36,23 +37,22 @@ export const createComplexSnapshot = (
       0,
       attributeTree.children[0].children.length
     );
-    childrens.forEach((child: RenderAttributesTree) =>
-      attributeTree.children[0].children.push(child)
-    );
+    attributeTree.children[0].children = children;
   }
 
   const changePath = (
     atts: RenderAttributesTree[],
     path: string
   ): RenderAttributesTree[] => {
-    for (const att of atts) {
+    const attribs = cloneDeep(atts);
+    for (const att of attribs) {
       const newPath = `${path !== '' ? path + '.' : ''}${att.name}`;
       att.newPath = newPath;
       if (att.children.length > 0) {
         att.children = changePath(cloneDeep(att.children), att.newPath);
       }
     }
-    return atts;
+    return attribs;
   };
 
   return changePath(attributeTree.children, attributeTree.name)[0];
@@ -65,12 +65,10 @@ export const createElementDefinitionTree = (
   items.forEach((item: RenderAttributesTree) => {
     if (item.children.length === 0) {
       elemDef[item.name] = undefined;
+    } else if (item.max === '1') {
+      elemDef[item.name] = createElementDefinitionTree(item.children);
     } else {
-      if (item.max === '1') {
-        elemDef[item.name] = createElementDefinitionTree(item.children);
-      } else {
-        elemDef[item.name] = [];
-      }
+      elemDef[item.name] = [];
     }
   });
   return elemDef;

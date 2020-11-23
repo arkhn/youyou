@@ -1,14 +1,11 @@
 import {
+  ICodeSystem,
   IElementDefinition,
-  IElementDefinition_Type as IElementDefinitionType
+  IElementDefinition_Type as IElementDefinitionType,
+  IStructureDefinition
 } from '@ahryman40k/ts-fhir-types/lib/R4';
-import { AxiosResponse } from 'axios';
 import cloneDeep from 'lodash.clonedeep';
-import {
-  FetchedDataCodeSystem,
-  SimplifiedAttributes,
-  RenderAttributesTree
-} from 'types';
+import { SimplifiedAttributes, RenderAttributesTree } from 'types';
 
 /**
  * Transform fetched attributes to simplified attributes with new paths
@@ -23,7 +20,7 @@ import {
 
 export const transformAttributes = (
   elements: IElementDefinition[],
-  valueSetRequest?: AxiosResponse<any>
+  valueSetRequest?: ICodeSystem[]
 ): SimplifiedAttributes[] => {
   const attributes: SimplifiedAttributes[] = [];
   elements.forEach((element: IElementDefinition) => {
@@ -37,57 +34,56 @@ export const transformAttributes = (
           min: element.min as number,
           max: element.max as string
         });
+    } else if (element.type.length > 1) {
+      attributes.push({
+        path: element.path as string,
+        type: element.type,
+        definition: element.definition as string,
+        min: element.min as number,
+        max: element.max as string
+      });
     } else {
-      if (element.type.length > 1) {
-        attributes.push({
-          path: element.path as string,
-          type: element.type,
-          definition: element.definition as string,
-          min: element.min as number,
-          max: element.max as string
-        });
-      } else {
-        element.type.forEach((types: IElementDefinitionType) => {
-          if (element.path && types.code && element.definition) {
-            if (types.code === 'code') {
-              const valueSet: any[] = [];
+      element.type.forEach((types: IElementDefinitionType) => {
+        if (element.path && types.code && element.definition) {
+          if (types.code === 'code') {
+            const valueSet: any[] = [];
+            if (element.binding) {
               element.binding?.extension?.forEach((extension) => {
                 if (extension.valueString) {
-                  const findValueSet = valueSetRequest?.data.entry.find(
-                    (value: FetchedDataCodeSystem) =>
-                      value.resource.name === extension.valueString
+                  const findValueSet = valueSetRequest?.find(
+                    (value: ICodeSystem) => value.name === extension.valueString
                   );
                   if (findValueSet) {
-                    findValueSet.resource.concept.forEach((vs: any) => {
+                    findValueSet.concept?.forEach((vs: any) => {
                       valueSet.push(vs);
                     });
                   }
                 }
               });
-              const newAttribute = {
-                definition: element.definition,
-                path: element.path,
-                type: types.code,
-                min: element.min as number,
-                max: element.max as string,
-                binding: {
-                  valueSet: valueSet.length > 0 ? valueSet : undefined,
-                  strength: element.binding?.strength
-                }
-              };
-              attributes.push(newAttribute);
-            } else {
-              attributes.push({
-                path: element.path,
-                type: types.code,
-                definition: element.definition,
-                min: element.min as number,
-                max: element.max as string
-              });
             }
+            const newAttribute = {
+              definition: element.definition,
+              path: element.path,
+              type: types.code,
+              min: element.min as number,
+              max: element.max as string,
+              binding: {
+                valueSet: valueSet.length > 0 ? valueSet : undefined,
+                strength: element.binding?.strength
+              }
+            };
+            attributes.push(newAttribute);
+          } else {
+            attributes.push({
+              path: element.path,
+              type: types.code,
+              definition: element.definition,
+              min: element.min as number,
+              max: element.max as string
+            });
           }
-        });
-      }
+        }
+      });
     }
   });
   return attributes;
@@ -99,13 +95,13 @@ export const transformAttributes = (
  * @param valueSet value set response
  */
 export const createSimplifiedAttributes = (
-  data: AxiosResponse<any>,
-  valueSet: AxiosResponse<any>
+  data: IStructureDefinition[],
+  valueSet: ICodeSystem[]
 ): SimplifiedAttributes[] => {
   const newData: SimplifiedAttributes[] = [];
-  data.data.entry.forEach((type: any) => {
+  data.forEach((type: any) => {
     const transformedAttributes = transformAttributes(
-      type.resource.snapshot.element,
+      type.snapshot.element,
       valueSet
     );
     transformedAttributes.forEach(

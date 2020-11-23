@@ -7,7 +7,7 @@ import {
   IStructureDefinition_Snapshot as IStructureDefinitionSnapshot
 } from '@ahryman40k/ts-fhir-types/lib/R4';
 
-export type FetchedData = {
+export type FetchedIds = {
   resource: string;
   search: any;
 };
@@ -24,7 +24,7 @@ export type ResourceState = {
   newElementDefinition?: IElementDefinition;
 };
 
-export type FetchedDataCodeSystem = {
+export type FetchedData = {
   resource: {
     concept: ICodeSystemConcept;
     name: string;

@@ -1,7 +1,12 @@
 import { ThunkDispatch } from 'redux-thunk';
 import { Action } from 'redux';
-import { FetchedData, RenderAttributesTree, SimplifiedAttributes } from 'types';
 
+import {
+  FetchedIds,
+  FetchedData,
+  RenderAttributesTree,
+  SimplifiedAttributes
+} from 'types';
 import api from 'services/api';
 import {
   getFetchStart,
@@ -42,7 +47,7 @@ export const requestIds = () => {
     if (response.status === 200) {
       dispatch(
         getIdsSuccess(
-          response.data.entry.map((result: FetchedData) => {
+          response.data.entry.map((result: FetchedIds) => {
             return result.resource;
           })
         )
@@ -119,7 +124,7 @@ export const requestFhirDataTypes = () => {
         '/StructureDefinition?derivation=specialization&kind=primitive-type&_elements=name'
       ),
       api.get(
-        '/StructureDefinition?derivation=specialization&kind=complex-type&_elements=name&_elements=snapshot'
+        '/StructureDefinition?derivation=specialization&kind=complex-type'
       ),
       api.get('/CodeSystem?_elements=name,concept&_count=508'),
       api.get(
@@ -150,13 +155,23 @@ export const requestFhirDataTypes = () => {
         max: '',
         definition: ''
       };
+      const newValueSet = valueSet.data.entry.map(
+        (item: FetchedData) => item.resource
+      );
+      const newComplexTypesFetched: IStructureDefinition[] = complexTypes.data.entry.map(
+        (item: FetchedData) => item.resource
+      );
+      const newStructureDefFetched: IStructureDefinition[] = resourceSDef.data.entry.map(
+        (item: FetchedData) => item.resource
+      );
+
       const newComplexTypes: SimplifiedAttributes[] = createSimplifiedAttributes(
-        complexTypes,
-        valueSet
+        newComplexTypesFetched,
+        newValueSet
       );
       const newSDef: SimplifiedAttributes[] = createSimplifiedAttributes(
-        resourceSDef,
-        valueSet
+        newStructureDefFetched,
+        newValueSet
       );
 
       if (newComplexTypes && newSDef) {
