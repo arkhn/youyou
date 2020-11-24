@@ -75,9 +75,9 @@ const ProfileEditor: React.FC<{}> = () => {
   };
 
   const attributesForUI =
-    structureDefinition?.snapshot?.element &&
+    newStructureDef?.snapshot?.element &&
     createComplexSnapshot(
-      structureDefinition.snapshot.element,
+      newStructureDef.snapshot.element,
       primitiveTypes,
       complexTypes
     );
