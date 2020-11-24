@@ -1,7 +1,12 @@
 import { ThunkDispatch } from 'redux-thunk';
 import { Action } from 'redux';
-import { FetchedData, RenderAttributesTree } from 'types';
 
+import {
+  FetchedIds,
+  FetchedData,
+  RenderAttributesTree,
+  SimplifiedAttributes
+} from 'types';
 import api from 'services/api';
 import {
   getFetchStart,
@@ -21,7 +26,7 @@ import {
   getFhirTypesFetchStart,
   getFhirTypesFetchSuccess
 } from './actions/fhirDataTypesActions';
-import { transformAttributes, renderTreeAttributes } from './utils';
+import { renderTreeAttributes, createSimplifiedAttributes } from './utils';
 
 import {
   IStructureDefinition,
@@ -42,7 +47,7 @@ export const requestIds = () => {
     if (response.status === 200) {
       dispatch(
         getIdsSuccess(
-          response.data.entry.map((result: FetchedData) => {
+          response.data.entry.map((result: FetchedIds) => {
             return result.resource;
           })
         )
@@ -119,7 +124,7 @@ export const requestFhirDataTypes = () => {
         '/StructureDefinition?derivation=specialization&kind=primitive-type&_elements=name'
       ),
       api.get(
-        '/StructureDefinition?derivation=specialization&kind=complex-type&_elements=name&_elements=snapshot'
+        '/StructureDefinition?derivation=specialization&kind=complex-type'
       ),
       api.get('/CodeSystem?_elements=name,concept&_count=508'),
       api.get(
@@ -150,9 +155,24 @@ export const requestFhirDataTypes = () => {
         max: '',
         definition: ''
       };
+      const newValueSet = valueSet.data.entry.map(
+        (item: FetchedData) => item.resource
+      );
+      const newComplexTypesFetched: IStructureDefinition[] = complexTypes.data.entry.map(
+        (item: FetchedData) => item.resource
+      );
+      const newStructureDefFetched: IStructureDefinition[] = resourceSDef.data.entry.map(
+        (item: FetchedData) => item.resource
+      );
 
-      const newComplexTypes = transformAttributes(complexTypes, valueSet);
-      const newSDef = transformAttributes(resourceSDef, valueSet);
+      const newComplexTypes: SimplifiedAttributes[] = createSimplifiedAttributes(
+        newComplexTypesFetched,
+        newValueSet
+      );
+      const newSDef: SimplifiedAttributes[] = createSimplifiedAttributes(
+        newStructureDefFetched,
+        newValueSet
+      );
 
       if (newComplexTypes && newSDef) {
         newComplexTypes.forEach(
@@ -163,7 +183,6 @@ export const requestFhirDataTypes = () => {
           (type) => type && renderTreeAttributes(type, type, structureDefTree)
         );
       }
-
       dispatch(
         getFhirTypesFetchSuccess(
           primitiveTypes.data.entry.map(

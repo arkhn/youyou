@@ -17,7 +17,9 @@ import {
   UPDATE_STRUCTURE_DEF_EXTENSION,
   UpdateStructureDefExtensionAction,
   SELECT_STRUCTUREDEFMETA,
-  SelectStructureDefMetaAction
+  SelectStructureDefMetaAction,
+  CREATE_NEW_ELEMENTDEFINITION,
+  CreateNewElementDefinitionAction
 } from 'state/actions/resourceActions';
 import { IStructureDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { ResourceState } from 'types';
@@ -30,7 +32,8 @@ const initialState: ResourceState = {
   selectedAttributeId: undefined,
   loading: false,
   error: null,
-  structureDefMeta: true
+  structureDefMeta: true,
+  newElementDefinition: undefined
 };
 
 export type AllResourcesAction =
@@ -42,7 +45,8 @@ export type AllResourcesAction =
   | UpdateStructureDefProfileAction
   | SelectAttributeAction
   | UpdateStructureDefExtensionAction
-  | SelectStructureDefMetaAction;
+  | SelectStructureDefMetaAction
+  | CreateNewElementDefinitionAction;
 
 export const resource = (
   state: ResourceState = initialState,
@@ -105,6 +109,11 @@ export const resource = (
         ...state,
         selectedAttributeId: undefined,
         structureDefMeta: true
+      };
+    case CREATE_NEW_ELEMENTDEFINITION:
+      return {
+        ...state,
+        newElementDefinition: action.payload
       };
     default:
       return state;

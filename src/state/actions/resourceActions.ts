@@ -1,4 +1,7 @@
-import { IStructureDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
+import {
+  IElementDefinition,
+  IStructureDefinition
+} from '@ahryman40k/ts-fhir-types/lib/R4';
 
 export const SELECT_RESOURCE = 'SELECT_RESOURCE';
 export const GET_FETCH_START = 'GET_FETCH_START';
@@ -9,6 +12,7 @@ export const UPDATE_STRUCTURE_DEF_EXTENSION = 'UPDATE_STRUCTURE_DEF_EXTENSION';
 export const UPDATE_STRUCTURE_DEF_FAILURE = 'UPDATE_STRUCTURE_DEF_FAILURE';
 export const SELECT_ATTRIBUTE = 'SELECT_ATTRIBUTE';
 export const SELECT_STRUCTUREDEFMETA = 'SELECT_STRUCTUREDEFMETA';
+export const CREATE_NEW_ELEMENTDEFINITION = 'CREATE_NEW_ELEMENTDEFINITION';
 
 export type SelectResourceAction = {
   type: typeof SELECT_RESOURCE;
@@ -51,6 +55,11 @@ export type SelectStructureDefMetaAction = {
 export type UpdateStructureDefExtensionAction = {
   type: typeof UPDATE_STRUCTURE_DEF_EXTENSION;
   payload: IStructureDefinition | null;
+};
+
+export type CreateNewElementDefinitionAction = {
+  type: typeof CREATE_NEW_ELEMENTDEFINITION;
+  payload?: IElementDefinition;
 };
 
 export const selectResource = (id: string): SelectResourceAction => {
@@ -118,6 +127,15 @@ export const updateStructureDefExtension = (
 ): UpdateStructureDefExtensionAction => {
   return {
     type: UPDATE_STRUCTURE_DEF_EXTENSION,
+    payload: data
+  };
+};
+
+export const createNewElementDefinition = (
+  data: IElementDefinition
+): CreateNewElementDefinitionAction => {
+  return {
+    type: CREATE_NEW_ELEMENTDEFINITION,
     payload: data
   };
 };

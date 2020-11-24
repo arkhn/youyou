@@ -1,11 +1,13 @@
 import {
+  ElementDefinition_BindingStrengthKind as ElementDefinitionBindingStrengthKind,
   ICodeSystem_Concept as ICodeSystemConcept,
+  IElementDefinition,
   IElementDefinition_Type as IElementDefinitionType,
   IStructureDefinition,
   IStructureDefinition_Snapshot as IStructureDefinitionSnapshot
 } from '@ahryman40k/ts-fhir-types/lib/R4';
 
-export type FetchedData = {
+export type FetchedIds = {
   resource: string;
   search: any;
 };
@@ -15,13 +17,14 @@ export type ResourceState = {
   structureDefinition: IStructureDefinition | null;
   extensionStructureDefinition: IStructureDefinition | null;
   selectedResourceId: string | null;
-  selectedAttributeId: string | undefined;
+  selectedAttributeId?: string;
   loading: boolean;
   error: Error | null;
   structureDefMeta: boolean;
+  newElementDefinition?: IElementDefinition;
 };
 
-export type FetchedDataCodeSystem = {
+export type FetchedData = {
   resource: {
     concept: ICodeSystemConcept;
     name: string;
@@ -47,7 +50,11 @@ export interface RenderAttributesTree {
   min: number | null;
   max: string;
   definition: string;
-  valueSet?: ICodeSystemConcept[];
+  binding?: {
+    strength?: ElementDefinitionBindingStrengthKind;
+    valueSet?: ICodeSystemConcept[];
+  };
+  newPath?: string;
 }
 
 export interface RenderComplexType {
@@ -67,5 +74,8 @@ export interface SimplifiedAttributes {
   definition: string;
   min: number | null;
   max: string;
-  valueSet?: ICodeSystemConcept[];
+  binding?: {
+    strength?: ElementDefinitionBindingStrengthKind;
+    valueSet?: ICodeSystemConcept[];
+  };
 }
