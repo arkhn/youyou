@@ -20,6 +20,7 @@ import useStyles from 'components/profileEditor/style';
 import { RenderAttributesTree } from 'types';
 import {
   selectAttributeId,
+  selectStructureDefMeta,
   updateStructureDefProfile
 } from 'state/actions/resourceActions';
 import {
@@ -79,12 +80,18 @@ const ProfileEditor: React.FC<{}> = () => {
   const attributesForUI =
     newStructureDef?.snapshot?.element &&
     createComplexSnapshot(
-      newStructureDef.snapshot.element,
+      newStructureDef.snapshot.element.sort((a, b) => {
+        if (a.id && b.id && a.id < b.id) {
+          return -1;
+        }
+        if (a.id && b.id && a.id > b.id) {
+          return 1;
+        }
+        return 0;
+      }),
       primitiveTypes,
       complexTypes
     );
-
-  console.log(newStructureDef);
 
   const onPizzaClick = (
     e: React.MouseEvent<Element, MouseEvent>,
@@ -130,16 +137,52 @@ const ProfileEditor: React.FC<{}> = () => {
     newElements.forEach((element) => {
       structureDefToEdit?.snapshot?.element.push(element);
     });
-    if (structureDefToEdit)
+    if (structureDefToEdit && structureDefToEdit.snapshot) {
+      structureDefToEdit.snapshot.element.sort((a, b) => {
+        if (a.id && b.id && a.id < b.id) {
+          return -1;
+        }
+        if (a.id && b.id && a.id > b.id) {
+          return 1;
+        }
+        return 0;
+      });
       dispatch(updateStructureDefProfile(structureDefToEdit));
+    }
   };
 
   const onTrashClick = (
     e: React.MouseEvent<Element, MouseEvent>,
     node: RenderAttributesTree
   ): void => {
-    e.stopPropagation();
-    console.log(node.newPath?.split(':')[node.newPath.split(':').length - 1]);
+    const nouveau = cloneDeep(structureDefinition);
+    const indexToDelete: number[] = [];
+    if (nouveau && nouveau.snapshot) {
+      nouveau.snapshot.element.forEach((element) => {
+        if (element.id && element.id?.split(':').length > 1) {
+          let splitName = '';
+          element.id?.split('.').forEach((split) => {
+            splitName = splitName + split;
+            if (splitName === node.newPath?.split('.').join('')) {
+              nouveau &&
+                nouveau.snapshot &&
+                indexToDelete.push(nouveau.snapshot.element.indexOf(element));
+            }
+          });
+        }
+      });
+      nouveau.snapshot.element.sort(function compare(a, b) {
+        if (a.id && b.id && a.id < b.id) {
+          return -1;
+        }
+        if (a.id && b.id && a.id > b.id) {
+          return 1;
+        }
+        return 0;
+      });
+      nouveau.snapshot.element.splice(indexToDelete[0], indexToDelete.length);
+      dispatch(updateStructureDefProfile(nouveau));
+    }
   };
 
   const handleClick = (
