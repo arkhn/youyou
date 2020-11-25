@@ -20,7 +20,6 @@ import useStyles from 'components/profileEditor/style';
 import { RenderAttributesTree } from 'types';
 import {
   selectAttributeId,
-  selectStructureDefMeta,
   updateStructureDefProfile
 } from 'state/actions/resourceActions';
 import {
