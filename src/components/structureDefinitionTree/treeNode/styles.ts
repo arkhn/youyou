@@ -1,0 +1,24 @@
+import { makeStyles, Theme } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme: Theme) => ({
+  index: {
+    display: 'flex',
+    alignItems: 'center',
+    height: 25
+  },
+  treeItem: {
+    display: 'flex',
+    margin: 2,
+    width: '100%'
+  },
+  iconTreeItem: {
+    width: 15,
+    marginRight: 10
+  },
+  pizzaIcon: {
+    position: 'absolute',
+    right: 0
+  }
+}));
+
+export default useStyles;

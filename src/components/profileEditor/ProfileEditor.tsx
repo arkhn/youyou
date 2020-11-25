@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import clsx from 'clsx';
 import {
+  ElementDefinition_SlicingRulesKind as ElementDefinitionSlicingRulesKind,
   IElementDefinition,
   IElementDefinition_Binding as IElementDefinitionBinding
 } from '@ahryman40k/ts-fhir-types/lib/R4';
@@ -18,7 +19,10 @@ import StructureDefinitionTree from 'components/structureDefinitionTree/Structur
 import StructureDefSettings from 'components/structureDefSettings/StructureDefSettings';
 import useStyles from 'components/profileEditor/style';
 import { RenderAttributesTree } from 'types';
-import { selectAttributeId } from 'state/actions/resourceActions';
+import {
+  selectAttributeId,
+  updateStructureDefProfile
+} from 'state/actions/resourceActions';
 import {
   createComplexSnapshot,
   createElementDefinitionTree
@@ -82,6 +86,57 @@ const ProfileEditor: React.FC<{}> = () => {
       complexTypes
     );
 
+  const createAttribute = (
+    node: RenderAttributesTree,
+    isSlice: boolean
+  ): IElementDefinition | void => {
+    const elementDefinitionType = complexTypes.find(
+      (type: RenderAttributesTree) => type.id === 'ElementDefinition'
+    );
+    if (elementDefinitionType) {
+      const newAttribute = createElementDefinitionTree(
+        elementDefinitionType.children
+      );
+      let newElement: IElementDefinition = {
+        ...newAttribute,
+        base: {
+          min: node.min as number,
+          max: node.max as string,
+          path: node.id
+        },
+        min: node.min as number,
+        max: node.max as string,
+        id: !isSlice ? node.newPath : `${node.newPath}:slice1`,
+        path: !isSlice ? node.newPath : `${node.newPath}:slice1`,
+        definition: node.definition,
+        type: node.type,
+        binding: node.binding
+          ? (node.binding as IElementDefinitionBinding)
+          : undefined
+      };
+      if (isSlice)
+        newElement = {
+          ...newElement,
+          slicing: { rules: 'closed' as ElementDefinitionSlicingRulesKind }
+        };
+      return newElement;
+    }
+  };
+
+  const onPizzaClick = (
+    e: React.MouseEvent<Element, MouseEvent>,
+    node: RenderAttributesTree
+  ): void => {
+    e.stopPropagation();
+    const newElement = createAttribute(node, true);
+    if (newElement) {
+      const structureDefToEdit = cloneDeep(structureDefinition);
+      structureDefToEdit?.snapshot?.element.push(newElement);
+      structureDefToEdit &&
+        dispatch(updateStructureDefProfile(structureDefToEdit));
+    }
+  };
+
   const handleClick = (
     e: React.MouseEvent<Element, MouseEvent>,
     node: RenderAttributesTree
@@ -92,29 +147,8 @@ const ProfileEditor: React.FC<{}> = () => {
       (att: IElementDefinition) => att.id === node.newPath
     );
     if (!findAttribute) {
-      const elementDefinitionType = complexTypes.find(
-        (type: RenderAttributesTree) => type.id === 'ElementDefinition'
-      );
-      if (elementDefinitionType) {
-        const newAttribute = createElementDefinitionTree(
-          elementDefinitionType.children
-        );
-        const newElement: IElementDefinition = {
-          ...newAttribute,
-          base: {
-            min: node.min as number,
-            max: node.max as string,
-            path: node.id
-          },
-          min: node.min as number,
-          max: node.max as string,
-          id: node.newPath,
-          path: node.newPath,
-          definition: node.definition,
-          binding: node.binding
-            ? (node.binding as IElementDefinitionBinding)
-            : undefined
-        };
+      const newElement = createAttribute(node, false);
+      if (newElement) {
         const structureDefToEdit = cloneDeep(structureDefinition);
         structureDefToEdit?.snapshot?.element.push(newElement);
         setNewStructureDef(structureDefToEdit);
@@ -141,6 +175,8 @@ const ProfileEditor: React.FC<{}> = () => {
             <StructureDefinitionTree
               onLabelClick={handleClick}
               uiAttributes={attributesForUI}
+              structureDefinitionId={structureDefinition.id}
+              onPizzaClick={onPizzaClick}
             />
           </Container>
           <ButtonDownload
