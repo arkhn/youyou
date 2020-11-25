@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   pizzaIcon: {
     position: 'absolute',
+    display: 'flex',
     right: 0
   }
 }));

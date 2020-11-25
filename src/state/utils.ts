@@ -25,18 +25,18 @@ export const transformAttributes = (
   const attributes: SimplifiedAttributes[] = [];
   elements.forEach((element: IElementDefinition) => {
     if (!element.type) {
-      element.path &&
+      element.id &&
         element.definition &&
         attributes.push({
-          path: element.path,
-          type: element.path,
+          path: element.id,
+          type: element.id,
           definition: element.definition,
           min: element.min as number,
           max: element.max as string
         });
     } else if (element.type.length > 1) {
       attributes.push({
-        path: element.path as string,
+        path: element.id as string,
         type: element.type,
         definition: element.definition as string,
         min: element.min as number,
@@ -44,7 +44,7 @@ export const transformAttributes = (
       });
     } else {
       element.type.forEach((types: IElementDefinitionType) => {
-        if (element.path && types.code && element.definition) {
+        if (element.id && types.code && element.definition) {
           if (types.code === 'code') {
             const valueSet: any[] = [];
             if (element.binding) {
@@ -63,7 +63,7 @@ export const transformAttributes = (
             }
             const newAttribute = {
               definition: element.definition,
-              path: element.path,
+              path: element.id,
               type: types.code,
               min: element.min as number,
               max: element.max as string,
@@ -75,7 +75,7 @@ export const transformAttributes = (
             attributes.push(newAttribute);
           } else {
             attributes.push({
-              path: element.path,
+              path: element.id,
               type: types.code,
               definition: element.definition,
               min: element.min as number,

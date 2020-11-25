@@ -22,6 +22,10 @@ type StructureDefinitionTreeProps = {
     event: React.MouseEvent<Element, MouseEvent>,
     nodes: RenderAttributesTree
   ) => void;
+  onTrashClick?: (
+    event: React.MouseEvent<Element, MouseEvent>,
+    nodes: RenderAttributesTree
+  ) => void;
 };
 
 export interface RenderNode {
@@ -34,7 +38,8 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
   onLabelClick,
   uiAttributes,
   onPizzaClick,
-  structureDefinitionId
+  structureDefinitionId,
+  onTrashClick
 }) => {
   const dispatch = useDispatch();
   const classes = useStyles();
@@ -43,7 +48,13 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
     <TreeItem
       key={nodes.newPath ?? ''}
       nodeId={nodes.newPath ?? ''}
-      label={<TreeNode onPizzaClick={onPizzaClick} nodes={nodes} />}
+      label={
+        <TreeNode
+          onPizzaClick={onPizzaClick}
+          onTrashClick={onTrashClick}
+          nodes={nodes}
+        />
+      }
       onLabelClick={(e): void => {
         onLabelClick && onLabelClick(e, nodes);
       }}

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Folder, LocalOffer, LocalPizza } from '@material-ui/icons';
+import { Delete, Folder, LocalOffer, LocalPizza } from '@material-ui/icons';
 import { RenderAttributesTree } from 'types';
 
 import useStyles from 'components/structureDefinitionTree/treeNode/styles';
-import { IconButton } from '@material-ui/core';
+import { IconButton, Tooltip } from '@material-ui/core';
 
 type TreeNodeProps = {
   nodes: RenderAttributesTree;
@@ -11,17 +11,33 @@ type TreeNodeProps = {
     event: React.MouseEvent<Element, MouseEvent>,
     nodes: RenderAttributesTree
   ) => void;
+  onTrashClick?: (
+    event: React.MouseEvent<Element, MouseEvent>,
+    nodes: RenderAttributesTree
+  ) => void;
 };
 
-const TreeNode: React.FC<TreeNodeProps> = ({ nodes, onPizzaClick }) => {
+const TreeNode: React.FC<TreeNodeProps> = ({
+  nodes,
+  onPizzaClick,
+  onTrashClick
+}) => {
   const classes = useStyles();
-  const [display, setDisplay] = useState('none');
+  const isSlice =
+    nodes.id.split('.')[nodes.id.split('.').length - 1].split(':').length > 1
+      ? true
+      : false;
+  const [display, setDisplay] = useState(isSlice ? 'block' : 'none');
 
   return (
     <span
       className={classes.index}
-      onMouseEnter={(): void => setDisplay('block')}
-      onMouseLeave={(): void => setDisplay('none')}
+      onMouseEnter={(): void => {
+        !isSlice && setDisplay('block');
+      }}
+      onMouseLeave={(): void => {
+        !isSlice && setDisplay('none');
+      }}
     >
       <span className={classes.treeItem}>
         {nodes.children.length > 0 ? (
@@ -31,12 +47,26 @@ const TreeNode: React.FC<TreeNodeProps> = ({ nodes, onPizzaClick }) => {
         )}
         {nodes.name}
       </span>
-      <IconButton
-        className={classes.pizzaIcon}
-        onClick={(e): void => onPizzaClick && onPizzaClick(e, nodes)}
-      >
-        <LocalPizza style={{ display: display }} />
-      </IconButton>
+      <div className={classes.pizzaIcon}>
+        <IconButton
+          size="small"
+          onClick={(e): void => onPizzaClick && onPizzaClick(e, nodes)}
+          style={{ display: display }}
+        >
+          <Tooltip title="Add a slice">
+            <LocalPizza />
+          </Tooltip>
+        </IconButton>
+        <IconButton
+          size="small"
+          style={{ display: isSlice ? 'block' : 'none' }}
+          onClick={(e): void => onTrashClick && onTrashClick(e, nodes)}
+        >
+          <Tooltip title="Delete slice">
+            <Delete />
+          </Tooltip>
+        </IconButton>
+      </div>
     </span>
   );
 };

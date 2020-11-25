@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import clsx from 'clsx';
 import {
-  ElementDefinition_SlicingRulesKind as ElementDefinitionSlicingRulesKind,
   IElementDefinition,
   IElementDefinition_Binding as IElementDefinitionBinding
 } from '@ahryman40k/ts-fhir-types/lib/R4';
@@ -59,7 +58,6 @@ const ProfileEditor: React.FC<{}> = () => {
 
   const [newStructureDef, setNewStructureDef] = useState(structureDefinition);
   const splitedAttributeSelected = selectedAttributeId?.split('.');
-
   const attribute = newStructureDef?.snapshot?.element?.find(
     (att: IElementDefinition) => att.id === selectedAttributeId
   );
@@ -86,55 +84,62 @@ const ProfileEditor: React.FC<{}> = () => {
       complexTypes
     );
 
-  const createAttribute = (
-    node: RenderAttributesTree,
-    isSlice: boolean
-  ): IElementDefinition | void => {
-    const elementDefinitionType = complexTypes.find(
-      (type: RenderAttributesTree) => type.id === 'ElementDefinition'
-    );
-    if (elementDefinitionType) {
-      const newAttribute = createElementDefinitionTree(
-        elementDefinitionType.children
-      );
-      let newElement: IElementDefinition = {
-        ...newAttribute,
-        base: {
-          min: node.min as number,
-          max: node.max as string,
-          path: node.id
-        },
-        min: node.min as number,
-        max: node.max as string,
-        id: !isSlice ? node.newPath : `${node.newPath}:slice1`,
-        path: !isSlice ? node.newPath : `${node.newPath}:slice1`,
-        definition: node.definition,
-        type: node.type,
-        binding: node.binding
-          ? (node.binding as IElementDefinitionBinding)
-          : undefined
-      };
-      if (isSlice)
-        newElement = {
-          ...newElement,
-          slicing: { rules: 'closed' as ElementDefinitionSlicingRulesKind }
-        };
-      return newElement;
-    }
-  };
+  console.log(newStructureDef);
 
   const onPizzaClick = (
     e: React.MouseEvent<Element, MouseEvent>,
     node: RenderAttributesTree
   ): void => {
     e.stopPropagation();
-    const newElement = createAttribute(node, true);
-    if (newElement) {
-      const structureDefToEdit = cloneDeep(structureDefinition);
-      structureDefToEdit?.snapshot?.element.push(newElement);
-      structureDefToEdit &&
-        dispatch(updateStructureDefProfile(structureDefToEdit));
+    const newElements: IElementDefinition[] = [];
+    if (node.newPath && structureDefinition && structureDefinition.snapshot) {
+      const splitedPath = node.newPath.split('.');
+      structureDefinition.snapshot.element.forEach((element) => {
+        const startingPath = element.id
+          ?.split('.')
+          .slice(0, splitedPath.length)
+          .join('.');
+        const endingPath = element.id
+          ?.split('.')
+          .slice(splitedPath.length)
+          .join('.');
+        if (startingPath === node.newPath) {
+          element.base &&
+            newElements.push({
+              id:
+                startingPath + ':slice1' + (endingPath ? '.' + endingPath : ''),
+              path: element.id,
+              sliceName: endingPath ? 'slice1' : undefined,
+              base: {
+                min: element?.base.min as number,
+                max: element?.base.max as string,
+                path: element?.base.path
+              },
+              min: element?.base.min as number,
+              max: element?.base.max as string,
+              definition: element.definition,
+              type: element.type,
+              binding: element.binding
+                ? (node.binding as IElementDefinitionBinding)
+                : undefined
+            });
+        }
+      });
     }
+    const structureDefToEdit = cloneDeep(structureDefinition);
+    newElements.forEach((element) => {
+      structureDefToEdit?.snapshot?.element.push(element);
+    });
+    if (structureDefToEdit)
+      dispatch(updateStructureDefProfile(structureDefToEdit));
+  };
+
+  const onTrashClick = (
+    e: React.MouseEvent<Element, MouseEvent>,
+    node: RenderAttributesTree
+  ): void => {
+    e.stopPropagation();
+    console.log(node.newPath?.split(':')[node.newPath.split(':').length - 1]);
   };
 
   const handleClick = (
@@ -147,8 +152,29 @@ const ProfileEditor: React.FC<{}> = () => {
       (att: IElementDefinition) => att.id === node.newPath
     );
     if (!findAttribute) {
-      const newElement = createAttribute(node, false);
-      if (newElement) {
+      const elementDefinitionType = complexTypes.find(
+        (type: RenderAttributesTree) => type.id === 'ElementDefinition'
+      );
+      if (elementDefinitionType) {
+        const newAttribute = createElementDefinitionTree(
+          elementDefinitionType.children
+        );
+        const newElement: IElementDefinition = {
+          ...newAttribute,
+          base: {
+            min: node.min as number,
+            max: node.max as string,
+            path: node.id
+          },
+          min: node.min as number,
+          max: node.max as string,
+          id: node.newPath,
+          path: node.newPath,
+          definition: node.definition,
+          binding: node.binding
+            ? (node.binding as IElementDefinitionBinding)
+            : undefined
+        };
         const structureDefToEdit = cloneDeep(structureDefinition);
         structureDefToEdit?.snapshot?.element.push(newElement);
         setNewStructureDef(structureDefToEdit);
@@ -177,6 +203,7 @@ const ProfileEditor: React.FC<{}> = () => {
               uiAttributes={attributesForUI}
               structureDefinitionId={structureDefinition.id}
               onPizzaClick={onPizzaClick}
+              onTrashClick={onTrashClick}
             />
           </Container>
           <ButtonDownload
