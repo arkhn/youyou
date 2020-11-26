@@ -206,7 +206,26 @@ export const createComplexTypes = (
           toFind.children,
           primitiveTypes
         );
-        enhancedComplexType.push({ ...child, children: childrenComplexType });
+        child.children.forEach((kid) => {
+          if (!childrenComplexType.find((ct) => ct.name === kid.name))
+            childrenComplexType.push(kid);
+        });
+        enhancedComplexType.push({
+          ...child,
+          children: createComplexTypes(
+            complexTypes,
+            childrenComplexType.sort((a, b) => {
+              if (a.name && b.name && a.name < b.name) {
+                return -1;
+              }
+              if (a.name && b.name && a.name > b.name) {
+                return 1;
+              }
+              return 0;
+            }),
+            primitiveTypes
+          )
+        });
       } else {
         enhancedComplexType.push(child);
       }

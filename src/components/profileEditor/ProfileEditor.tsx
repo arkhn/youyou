@@ -92,7 +92,12 @@ const ProfileEditor: React.FC<{}> = () => {
       complexTypes
     );
 
-  const onPizzaClick = (
+  /**
+   * Add a slice to structure definition snapshot
+   * @param e event onClick
+   * @param node element selected when clicked
+   */
+  const addSlice = (
     e: React.MouseEvent<Element, MouseEvent>,
     node: RenderAttributesTree
   ): void => {
@@ -133,6 +138,21 @@ const ProfileEditor: React.FC<{}> = () => {
       });
     }
     const structureDefToEdit = cloneDeep(structureDefinition);
+    if (newElements.length === 0) {
+      newElements.push({
+        id: node.newPath + ':slice1',
+        path: node.newPath,
+        sliceName: 'slice1',
+        base: {
+          min: node.min as number,
+          max: node.max as string
+        },
+        min: node.min as number,
+        max: node.max as string,
+        definition: node.definition,
+        type: typeof node.type === 'string' ? [{ code: node.type }] : node.type
+      });
+    }
     newElements.forEach((element) => {
       structureDefToEdit?.snapshot?.element.push(element);
     });
@@ -150,37 +170,44 @@ const ProfileEditor: React.FC<{}> = () => {
     }
   };
 
-  const onTrashClick = (
+  const deleteSlice = (
     e: React.MouseEvent<Element, MouseEvent>,
     node: RenderAttributesTree
   ): void => {
-    const nouveau = cloneDeep(structureDefinition);
+    const newElement = cloneDeep(newStructureDef);
     const indexToDelete: number[] = [];
-    if (nouveau && nouveau.snapshot) {
-      nouveau.snapshot.element.forEach((element) => {
+    if (newElement && newElement.snapshot) {
+      newElement.snapshot.element.forEach((element) => {
         if (element.id && element.id?.split(':').length > 1) {
           let splitName = '';
           element.id?.split('.').forEach((split) => {
             splitName = splitName + split;
             if (splitName === node.newPath?.split('.').join('')) {
-              nouveau &&
-                nouveau.snapshot &&
-                indexToDelete.push(nouveau.snapshot.element.indexOf(element));
+              newElement &&
+                newElement.snapshot &&
+                indexToDelete.push(
+                  newElement.snapshot.element.indexOf(element)
+                );
             }
           });
         }
       });
-      nouveau.snapshot.element.sort(function compare(a, b) {
-        if (a.id && b.id && a.id < b.id) {
-          return -1;
-        }
-        if (a.id && b.id && a.id > b.id) {
-          return 1;
+      newElement.snapshot.element.sort((a, b) => {
+        if (a.id && b.id) {
+          if (a.id < b.id) {
+            return -1;
+          }
+          if (a.id > b.id) {
+            return 1;
+          }
         }
         return 0;
       });
-      nouveau.snapshot.element.splice(indexToDelete[0], indexToDelete.length);
-      dispatch(updateStructureDefProfile(nouveau));
+      newElement.snapshot.element.splice(
+        indexToDelete[0],
+        indexToDelete.length
+      );
+      dispatch(updateStructureDefProfile(newElement));
     }
   };
 
@@ -244,8 +271,8 @@ const ProfileEditor: React.FC<{}> = () => {
               onLabelClick={handleClick}
               uiAttributes={attributesForUI}
               structureDefinitionId={structureDefinition.id}
-              onPizzaClick={onPizzaClick}
-              onTrashClick={onTrashClick}
+              onPizzaClick={addSlice}
+              onTrashClick={deleteSlice}
             />
           </Container>
           <ButtonDownload
