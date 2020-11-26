@@ -28,6 +28,7 @@ export const createComplexSnapshot = (
     attribute.forEach(
       (type) => type && renderTreeAttributes(type, type, attributeTree)
     );
+
     const children = createComplexTypes(
       complexTypes,
       attributeTree.children[0].children,

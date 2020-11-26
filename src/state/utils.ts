@@ -160,8 +160,12 @@ export const renderTreeAttributes = (
     if (childNode) {
       return renderTreeAttributes(newAttribute, parentAttribute, childNode);
     } else {
+      let splitSlice = '';
+      splitPath.forEach((path) => {
+        if (path.split(':').length > 1) splitSlice = path;
+      });
       const newNode = {
-        name: splitPath[0],
+        name: splitSlice !== '' ? splitPath.join('.') : splitPath[0],
         id: parentAttribute.path,
         type: parentAttribute.type,
         children: [],
@@ -207,8 +211,26 @@ export const createComplexTypes = (
           primitiveTypes
         );
         child.children.forEach((kid) => {
-          if (!childrenComplexType.find((ct) => ct.name === kid.name))
-            childrenComplexType.push(kid);
+          if (!childrenComplexType.find((ct) => ct.name === kid.name)) {
+            if (
+              !childrenComplexType.find(
+                (ct) => ct.name === kid.name.split('.')[0]
+              )
+            ) {
+              childrenComplexType.push(kid);
+            } else {
+              const newName = kid.name
+                .split('.')
+                .slice(1, kid.name.split('.').length)
+                .join('.');
+              const typeToFind = kid.name.split('.')[0];
+              const toChange = childrenComplexType.find(
+                (ct) => ct.name === typeToFind
+              );
+              kid.name = newName;
+              toChange?.children.push(kid);
+            }
+          }
         });
         enhancedComplexType.push({
           ...child,
