@@ -1,33 +1,30 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { Color } from '@material-ui/lab';
-import {
-  SetSnackbarOpenAction,
-  SET_SNACKBAR_OPEN
-} from 'state/actions/snackbarActions';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export type SnackbarState = {
   message: string;
   severity: Color | undefined;
 };
 
-const initialSnackbarState = {
+const initialState = {
   message: '',
   severity: undefined
 };
 
-export type AllSnackbarActions = SetSnackbarOpenAction;
-
-export const snackbarReducer = (
-  state: SnackbarState = initialSnackbarState,
-  action: AllSnackbarActions
-): SnackbarState => {
-  switch (action.type) {
-    case SET_SNACKBAR_OPEN:
-      return {
-        ...state,
-        message: action.payload.message,
-        severity: action.payload.severity
-      };
-    default:
-      return state;
+const snackbarSlice = createSlice({
+  name: 'snackbarReducer',
+  initialState,
+  reducers: {
+    setSnackbarOpen: (
+      state: SnackbarState,
+      action: PayloadAction<SnackbarState>
+    ) => {
+      state.message = action.payload.message;
+      state.severity = action.payload.severity;
+    }
   }
-};
+});
+
+export default snackbarSlice.reducer;
+export const { setSnackbarOpen } = snackbarSlice.actions;

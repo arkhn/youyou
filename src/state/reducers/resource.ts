@@ -71,12 +71,12 @@ const resourceSlice = createSlice({
       state.requestId = meta.requestId;
       state.loading = true;
     });
-    builder.addCase(requestIdsThunk.fulfilled, (state, { payload, meta }) => {
+    builder.addCase(requestIdsThunk.fulfilled, (state, { payload }) => {
       state.loading = false;
       state.resources = payload;
       state.error = undefined;
     });
-    builder.addCase(requestIdsThunk.rejected, (state, { payload, meta }) => {
+    builder.addCase(requestIdsThunk.rejected, (state, { payload }) => {
       state.loading = false;
       state.resources = [];
       state.error = payload ?? undefined;
@@ -87,7 +87,7 @@ const resourceSlice = createSlice({
     });
     builder.addCase(
       requestStructureDefThunk.fulfilled,
-      (state, { payload, meta }) => {
+      (state, { payload }) => {
         payload.snapshot?.element.sort(sortElements);
         state.loading = false;
         state.structureDefinition = payload;
@@ -95,14 +95,11 @@ const resourceSlice = createSlice({
         state.structureDefMeta = true;
       }
     );
-    builder.addCase(
-      requestStructureDefThunk.rejected,
-      (state, { payload, meta }) => {
-        state.loading = false;
-        state.structureDefinition = undefined;
-        state.error = payload ?? undefined;
-      }
-    );
+    builder.addCase(requestStructureDefThunk.rejected, (state, { payload }) => {
+      state.loading = false;
+      state.structureDefinition = undefined;
+      state.error = payload ?? undefined;
+    });
   }
 });
 

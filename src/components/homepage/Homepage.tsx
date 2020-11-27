@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { Typography, CircularProgress, Paper, Button } from '@material-ui/core';
 import clsx from 'clsx';
 
-import { setSnackbarOpen } from 'state/actions/snackbarActions';
 import { selectResource } from 'state/reducers/resource';
 import { RootState, useAppDispatch } from 'state/store';
 import { requestStructureDefThunk } from 'state/thunkMiddleware';
@@ -15,6 +14,7 @@ import { ReactComponent as FhirLogo } from 'assets/img/fhir-logo.svg';
 import { choosingCardsItems, ChoosingCardsItemsType } from './utils';
 
 import useStyles from './style';
+import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 
 const Homepage: React.FC<{}> = () => {
   const { loading } = useSelector((state: RootState) => state.resource);
@@ -25,7 +25,7 @@ const Homepage: React.FC<{}> = () => {
     if (resource.id) {
       dispatch(selectResource(resource.id));
       dispatch(requestStructureDefThunk(resource.id));
-      dispatch(setSnackbarOpen(undefined, ''));
+      dispatch(setSnackbarOpen({ severity: undefined, message: '' }));
     }
   };
 

@@ -12,11 +12,11 @@ import {
   updateStructureDefProfile,
   updateStructureDefExtension
 } from 'state/reducers/resource';
-import { setSnackbarOpen } from 'state/actions/snackbarActions';
 import { RootState, useAppDispatch } from 'state/store';
 import RenderComplexType from 'components/structureDefSettings/complexTypesEditor/RenderComplexType';
 import { createJSONTree } from 'components/structureDefSettings/utils';
 import { SnackBarWithClose } from 'components/smallComponents';
+import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 
 import useStyles from 'components/structureDefSettings/style';
 
@@ -50,10 +50,10 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
         snapshot: { ...structureDefinition.snapshot }
       };
       if (structureDefinitionType === 'resource') {
-        dispatch(setSnackbarOpen('success', 'Saved !'));
+        dispatch(setSnackbarOpen({ severity: 'success', message: 'Saved !' }));
         dispatch(updateStructureDefProfile(structureDefinitonToEdit));
       } else if (structureDefinitionType === 'extension') {
-        dispatch(setSnackbarOpen('success', 'Saved !'));
+        dispatch(setSnackbarOpen({ severity: 'success', message: 'Saved !' }));
         dispatch(updateStructureDefExtension(structureDefinitonToEdit));
       }
     }

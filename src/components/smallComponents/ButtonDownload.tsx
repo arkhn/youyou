@@ -4,8 +4,8 @@ import { IStructureDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { setSnackbarOpen } from 'state/actions/snackbarActions';
 import { useAppDispatch } from 'state/store';
+import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 
 type ButtonDownloadProps = {
   text: string;
@@ -43,7 +43,10 @@ const ButtonDownload: React.FC<ButtonDownloadProps> = ({
         className={classes.buttonDownloadSize}
         onClick={(): void => {
           dispatch(
-            setSnackbarOpen('success', 'Profile Downloaded ! Congratulation !')
+            setSnackbarOpen({
+              severity: 'success',
+              message: 'Profile Downloaded ! Congratulation !'
+            })
           );
         }}
       >

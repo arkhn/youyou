@@ -31,37 +31,31 @@ export const requestIdsThunk = createAsyncThunk<
   { id: string }[],
   void,
   { state: RootState; rejectValue: Error }
->(
-  'resource/requestIdsThunk',
-  async (param, { dispatch, getState, rejectWithValue }) => {
-    const response: AxiosResponse<any> = await api.get(
-      `/StructureDefinition?kind=resource&derivation=specialization&_elements=id&_count=150`
-    );
-    if (response.status === 200) {
-      return response.data.entry.map((result: FetchedIds) => result.resource);
-    } else {
-      return rejectWithValue(new Error(response.statusText));
-    }
+>('resource/requestIdsThunk', async (param, { rejectWithValue }) => {
+  const response: AxiosResponse<any> = await api.get(
+    `/StructureDefinition?kind=resource&derivation=specialization&_elements=id&_count=150`
+  );
+  if (response.status === 200) {
+    return response.data.entry.map((result: FetchedIds) => result.resource);
+  } else {
+    return rejectWithValue(new Error(response.statusText));
   }
-);
+});
 
 export const requestStructureDefThunk = createAsyncThunk<
   IStructureDefinition,
   string,
   { state: RootState; rejectValue: Error }
->(
-  'resource/requestResourceThunk',
-  async (param, { dispatch, getState, rejectWithValue }) => {
-    const response: AxiosResponse<any> = await api.get(
-      `/StructureDefinition?kind=resource&derivation=specialization&id=${param}`
-    );
-    if (response.status === 200) {
-      return response.data.entry[0].resource;
-    } else {
-      return rejectWithValue(new Error(response.statusText));
-    }
+>('resource/requestResourceThunk', async (param, { rejectWithValue }) => {
+  const response: AxiosResponse<any> = await api.get(
+    `/StructureDefinition?kind=resource&derivation=specialization&id=${param}`
+  );
+  if (response.status === 200) {
+    return response.data.entry[0].resource;
+  } else {
+    return rejectWithValue(new Error(response.statusText));
   }
-);
+});
 
 export const requestFhirDataTypesThunk = createAsyncThunk<
   {
@@ -71,92 +65,87 @@ export const requestFhirDataTypesThunk = createAsyncThunk<
   },
   void,
   { state: RootState; rejectValue: Error }
->(
-  'resource/requestFhirDataTypesThunk',
-  async (param, { dispatch, getState, rejectWithValue }) => {
-    const [
-      primitiveTypes,
-      complexTypes,
-      valueSet,
-      resourceSDef
-    ] = await Promise.all([
-      api.get(
-        '/StructureDefinition?derivation=specialization&kind=primitive-type&_elements=name'
-      ),
-      api.get(
-        '/StructureDefinition?derivation=specialization&kind=complex-type'
-      ),
-      api.get('/CodeSystem?_elements=name,concept&_count=508'),
-      api.get(
-        '/StructureDefinition?kind=resource&derivation=specialization&id=StructureDefinition'
-      )
-    ]);
-    if (
-      primitiveTypes.status === 200 &&
-      complexTypes.status === 200 &&
-      valueSet.status === 200 &&
-      resourceSDef.status === 200
-    ) {
-      const complexTypeTree: RenderAttributesTree = {
-        id: '',
-        name: '',
-        type: '',
-        children: [],
-        min: null,
-        max: '',
-        definition: ''
-      };
-      const structureDefTree: RenderAttributesTree = {
-        id: '',
-        name: '',
-        type: '',
-        children: [],
-        min: null,
-        max: '',
-        definition: ''
-      };
-      const newValueSet = valueSet.data.entry.map(
-        (item: FetchedData) => item.resource
-      );
-      const newComplexTypesFetched: IStructureDefinition[] = complexTypes.data.entry.map(
-        (item: FetchedData) => item.resource
-      );
-      const newStructureDefFetched: IStructureDefinition[] = resourceSDef.data.entry.map(
-        (item: FetchedData) => item.resource
+>('resource/requestFhirDataTypesThunk', async (param, { rejectWithValue }) => {
+  const [
+    primitiveTypes,
+    complexTypes,
+    valueSet,
+    resourceSDef
+  ] = await Promise.all([
+    api.get(
+      '/StructureDefinition?derivation=specialization&kind=primitive-type&_elements=name'
+    ),
+    api.get('/StructureDefinition?derivation=specialization&kind=complex-type'),
+    api.get('/CodeSystem?_elements=name,concept&_count=508'),
+    api.get(
+      '/StructureDefinition?kind=resource&derivation=specialization&id=StructureDefinition'
+    )
+  ]);
+  if (
+    primitiveTypes.status === 200 &&
+    complexTypes.status === 200 &&
+    valueSet.status === 200 &&
+    resourceSDef.status === 200
+  ) {
+    const complexTypeTree: RenderAttributesTree = {
+      id: '',
+      name: '',
+      type: '',
+      children: [],
+      min: null,
+      max: '',
+      definition: ''
+    };
+    const structureDefTree: RenderAttributesTree = {
+      id: '',
+      name: '',
+      type: '',
+      children: [],
+      min: null,
+      max: '',
+      definition: ''
+    };
+    const newValueSet = valueSet.data.entry.map(
+      (item: FetchedData) => item.resource
+    );
+    const newComplexTypesFetched: IStructureDefinition[] = complexTypes.data.entry.map(
+      (item: FetchedData) => item.resource
+    );
+    const newStructureDefFetched: IStructureDefinition[] = resourceSDef.data.entry.map(
+      (item: FetchedData) => item.resource
+    );
+
+    const newComplexTypes: SimplifiedAttributes[] = createSimplifiedAttributes(
+      newComplexTypesFetched,
+      newValueSet
+    );
+    const newSDef: SimplifiedAttributes[] = createSimplifiedAttributes(
+      newStructureDefFetched,
+      newValueSet
+    );
+
+    if (newComplexTypes && newSDef) {
+      newComplexTypes.forEach(
+        (type) => type && renderTreeAttributes(type, type, complexTypeTree)
       );
 
-      const newComplexTypes: SimplifiedAttributes[] = createSimplifiedAttributes(
-        newComplexTypesFetched,
-        newValueSet
+      newSDef.forEach(
+        (type) => type && renderTreeAttributes(type, type, structureDefTree)
       );
-      const newSDef: SimplifiedAttributes[] = createSimplifiedAttributes(
-        newStructureDefFetched,
-        newValueSet
-      );
-
-      if (newComplexTypes && newSDef) {
-        newComplexTypes.forEach(
-          (type) => type && renderTreeAttributes(type, type, complexTypeTree)
-        );
-
-        newSDef.forEach(
-          (type) => type && renderTreeAttributes(type, type, structureDefTree)
-        );
-      }
-      const allPayloads = {
-        primitiveDataTypes: primitiveTypes.data.entry.map(
-          (result: { resource: { name: string }; search: any }) =>
-            result.resource.name
-        ),
-        complexDataTypes: complexTypeTree.children,
-        structureDef: structureDefTree.children[0].children
-      };
-      return allPayloads;
-    } else {
-      return rejectWithValue(new Error(primitiveTypes.statusText));
     }
+    const allPayloads = {
+      primitiveDataTypes: primitiveTypes.data.entry.map(
+        (result: { resource: { name: string }; search: any }) =>
+          result.resource.name
+      ),
+      complexDataTypes: complexTypeTree.children,
+      structureDef: structureDefTree.children[0].children
+    };
+    return allPayloads;
+  } else {
+    return rejectWithValue(new Error(primitiveTypes.statusText));
   }
-);
+});
 
 /**
  * Fetch selected resource

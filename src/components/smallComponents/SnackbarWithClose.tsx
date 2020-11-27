@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import { Snackbar } from '@material-ui/core';
-import { Alert, Color } from '@material-ui/lab';
+import { Alert } from '@material-ui/lab';
 
 import { RootState, useAppDispatch } from 'state/store';
-import { setSnackbarOpen } from 'state/actions/snackbarActions';
+import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 
 const SnackbarWithClose: React.FC<{}> = () => {
   const { message, severity } = useSelector(
-    (state: RootState) => state.snackbarReducer
+    (state: RootState) => state.snackbar
   );
   const dispatch = useAppDispatch();
 
@@ -33,14 +33,10 @@ const SnackbarWithClose: React.FC<{}> = () => {
       autoHideDuration={3000}
       onClose={handleClose}
       onExited={(): void => {
-        dispatch(setSnackbarOpen(undefined, message));
+        dispatch(setSnackbarOpen({ severity: undefined, message: message }));
       }}
     >
-      <Alert
-        severity={severity as Color}
-        variant="filled"
-        onClose={handleClose}
-      >
+      <Alert severity={severity} variant="filled" onClose={handleClose}>
         {message}
       </Alert>
     </Snackbar>
