@@ -2,7 +2,7 @@ import {
   IElementDefinition,
   IStructureDefinition
 } from '@ahryman40k/ts-fhir-types/lib/R4';
-
+/*
 export const SELECT_RESOURCE = 'SELECT_RESOURCE';
 export const GET_FETCH_START = 'GET_FETCH_START';
 export const GET_IDS_SUCCESS = 'GET_IDS_SUCCESS';
@@ -141,3 +141,4 @@ export const createNewElementDefinition = (
 };
 
 export type ResourceAction = SelectResourceAction;
+ */

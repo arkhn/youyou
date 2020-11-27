@@ -9,9 +9,9 @@ import { setSnackbarOpen } from 'state/actions/snackbarActions';
 import {
   selectResource,
   selectStructureDefMeta
-} from 'state/actions/resourceActions';
+} from 'state/reducers/resource';
 import { RootState } from 'state/store';
-import { requestResource } from 'state/thunkMiddleware';
+import { requestStructureDefThunk } from 'state/reducers/resource';
 
 import Navbar from 'components/navbar/Navbar';
 import { ReactComponent as FhirLogo } from 'assets/img/fhir-logo.svg';
@@ -27,7 +27,7 @@ const Homepage: React.FC<{}> = () => {
   const dispatchResourceSelected = (resource: { id: string }): void => {
     if (resource.id) {
       dispatch(selectResource(resource.id));
-      dispatch(requestResource(resource.id));
+      dispatch(requestStructureDefThunk(resource.id));
       dispatch(setSnackbarOpen(undefined, ''));
       dispatch(selectStructureDefMeta());
     }

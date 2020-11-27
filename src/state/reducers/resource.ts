@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import extensionStructureDefinition from 'assets/extensionTemplate';
-import {
+/* import {
   SELECT_RESOURCE,
   ResourceAction,
   GET_IDS_FAILURE,
@@ -20,9 +21,16 @@ import {
   SelectStructureDefMetaAction,
   CREATE_NEW_ELEMENTDEFINITION,
   CreateNewElementDefinitionAction
-} from 'state/actions/resourceActions';
-import { IStructureDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
-import { ResourceState } from 'types';
+} from 'state/actions/resourceActions'; */
+import {
+  IElementDefinition,
+  IStructureDefinition
+} from '@ahryman40k/ts-fhir-types/lib/R4';
+import { FetchedIds, ResourceState } from 'types';
+import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
+import { RootState } from 'state/store';
+import api from 'services/api';
+import { AxiosResponse } from 'axios';
 
 const initialState: ResourceState = {
   resources: [],
@@ -36,7 +44,7 @@ const initialState: ResourceState = {
   newElementDefinition: undefined
 };
 
-export type AllResourcesAction =
+/* export type AllResourcesAction =
   | GetIdsFailureAction
   | GetFetchStartAction
   | GetIdsSuccessAction
@@ -46,9 +54,136 @@ export type AllResourcesAction =
   | SelectAttributeAction
   | UpdateStructureDefExtensionAction
   | SelectStructureDefMetaAction
-  | CreateNewElementDefinitionAction;
+  | CreateNewElementDefinitionAction; */
 
-export const resource = (
+const requestIdsThunk = createAsyncThunk<
+  { id: string }[],
+  void,
+  { state: RootState; rejectValue: Error }
+>(
+  'resource/requestIdsThunk',
+  async (param, { dispatch, getState, rejectWithValue }) => {
+    const response: AxiosResponse<any> = await api.get(
+      `/StructureDefinition?kind=resource&derivation=specialization&_elements=id&_count=150`
+    );
+    if (response.status === 200) {
+      return response.data.entry.map((result: FetchedIds) => result.resource);
+    } else {
+      return rejectWithValue(new Error(response.statusText));
+    }
+  }
+);
+
+const requestStructureDefThunk = createAsyncThunk<
+  IStructureDefinition,
+  string,
+  { state: RootState; rejectValue: Error }
+>(
+  'resource/requestResourceThunk',
+  async (param, { dispatch, getState, rejectWithValue }) => {
+    const response: AxiosResponse<any> = await api.get(
+      `/StructureDefinition?kind=resource&derivation=specialization&id=${param}`
+    );
+    if (response.status === 200) {
+      return response.data.entry[0].resource;
+    } else {
+      return rejectWithValue(new Error(response.statusText));
+    }
+  }
+);
+
+const resourceSlice = createSlice({
+  name: 'resourceReducer',
+  initialState,
+  reducers: {
+    selectResource: (
+      state: ResourceState,
+      action: PayloadAction<string | null>
+    ) => {
+      state.selectedResourceId = action.payload;
+    },
+    selectAttributeId: (
+      state: ResourceState,
+      action: PayloadAction<string | undefined>
+    ) => {
+      state.selectedAttributeId = action.payload;
+      state.structureDefMeta = false;
+    },
+    selectStructureDefMeta: (state: ResourceState) => {
+      state.selectedAttributeId = undefined;
+      state.structureDefMeta = true;
+    },
+    createNewElementDefinition: (
+      state: ResourceState,
+      action: PayloadAction<IElementDefinition | undefined>
+    ) => {
+      state.newElementDefinition = action.payload;
+    },
+    updateStructureDefExtension: (
+      state: ResourceState,
+      action: PayloadAction<IStructureDefinition | null>
+    ) => {
+      state.extensionStructureDefinition = action.payload;
+    },
+    updateStructureDefProfile: (
+      state: ResourceState,
+      action: PayloadAction<IStructureDefinition | null>
+    ) => {
+      state.structureDefinition = action.payload;
+    }
+  },
+  extraReducers: (builder) => {
+    builder.addCase(requestIdsThunk.pending, (state, { meta }) => {
+      state.requestId = meta.requestId;
+      state.loading = true;
+    });
+    builder.addCase(requestIdsThunk.fulfilled, (state, { payload, meta }) => {
+      state.loading = meta.requestId !== state.requestId;
+      console.log(payload);
+      state.resources = payload;
+      state.error = null;
+    });
+    builder.addCase(requestIdsThunk.rejected, (state, { payload, meta }) => {
+      state.loading = meta.requestId !== state.requestId;
+      state.resources = [];
+      state.error = payload ?? null;
+    });
+    builder.addCase(requestStructureDefThunk.pending, (state, { meta }) => {
+      state.requestId = meta.requestId;
+      state.loading = true;
+    });
+    builder.addCase(
+      requestStructureDefThunk.fulfilled,
+      (state, { payload, meta }) => {
+        state.loading = meta.requestId !== state.requestId;
+        console.log(payload);
+        state.structureDefinition = payload;
+        state.error = null;
+      }
+    );
+    builder.addCase(
+      requestStructureDefThunk.rejected,
+      (state, { payload, meta }) => {
+        state.loading = meta.requestId !== state.requestId;
+        state.structureDefinition = null;
+        state.error = payload ?? null;
+      }
+    );
+  }
+});
+
+export default resourceSlice.reducer;
+export const {
+  selectResource,
+  selectAttributeId,
+  selectStructureDefMeta,
+  createNewElementDefinition,
+  updateStructureDefExtension,
+  updateStructureDefProfile
+} = resourceSlice.actions;
+export { requestIdsThunk, requestStructureDefThunk };
+
+/* export const resource = (
   state: ResourceState = initialState,
   action: AllResourcesAction
 ): ResourceState => {
@@ -119,3 +254,4 @@ export const resource = (
       return state;
   }
 };
+ */

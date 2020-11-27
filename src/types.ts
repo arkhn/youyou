@@ -13,6 +13,7 @@ export type FetchedIds = {
 };
 
 export type ResourceState = {
+  requestId?: string;
   resources: { id: string }[];
   structureDefinition: IStructureDefinition | null;
   extensionStructureDefinition: IStructureDefinition | null;

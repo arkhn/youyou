@@ -9,15 +9,15 @@ import Homepage from 'components/homepage/Homepage';
 import ProfileEditor from 'components/profileEditor/ProfileEditor';
 import ExtensionEditor from 'components/extensionEditor/ExtensionEditor';
 import {
-  requestIds,
   requestExtensionDataTypes,
   requestFhirDataTypes
 } from 'state/thunkMiddleware';
+import { requestIdsThunk } from 'state/reducers/resource';
 import { store, persistor } from 'state/store';
 
 const App = (): JSX.Element => {
   /* @ts-ignore */
-  store.dispatch(requestIds());
+  store.dispatch(requestIdsThunk());
   /* @ts-ignore */
   store.dispatch(requestExtensionDataTypes());
   /* @ts-ignore */

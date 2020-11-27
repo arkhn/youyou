@@ -2,19 +2,19 @@ import { ThunkDispatch } from 'redux-thunk';
 import { Action } from 'redux';
 
 import {
-  FetchedIds,
+  //FetchedIds,
   FetchedData,
   RenderAttributesTree,
   SimplifiedAttributes
 } from 'types';
 import api from 'services/api';
-import {
+/* import {
   getFetchStart,
   getIdsSuccess,
   getIdsFailure,
   updateStructureDefProfile,
   updateStructureDefFailure
-} from 'state/actions/resourceActions';
+} from 'state/actions/resourceActions'; */
 import {
   getCodeSystemDataTypeSuccess,
   getCodeSystemDataTypeFailure,
@@ -33,9 +33,24 @@ import {
   IElementDefinition,
   IElementDefinition_Type as IElementDefinitionType
 } from '@ahryman40k/ts-fhir-types/lib/R4';
-import { AxiosResponse } from 'axios';
+import { AxiosResponse } from 'axios'; /*
+export const requestResource = (resource: string) => {
+  return async (
+    dispatch: ThunkDispatch<RootState, void, Action>
+  ): Promise<void> => {
+    dispatch(getFetchStart());
+    const response: AxiosResponse<any> = await api.get(
+      `/StructureDefinition?kind=resource&derivation=specialization&id=${resource}`
+    );
+    if (response.status === 200) {
+      dispatch(updateStructureDefProfile(response.data.entry[0].resource));
+    } else {
+      dispatch(updateStructureDefFailure(new Error(response.statusText)));
+    }
+  };
+}; */
 
-// Fetch all resource ids
+/* // Fetch all resource ids
 export const requestIds = () => {
   return async (
     dispatch: ThunkDispatch<RootState, void, Action>
@@ -62,22 +77,6 @@ export const requestIds = () => {
  * Fetch selected resource
  * @param resource resource id for the structure we want to fetch
  */
-export const requestResource = (resource: string) => {
-  return async (
-    dispatch: ThunkDispatch<RootState, void, Action>
-  ): Promise<void> => {
-    dispatch(getFetchStart());
-    const response: AxiosResponse<any> = await api.get(
-      `/StructureDefinition?kind=resource&derivation=specialization&id=${resource}`
-    );
-    if (response.status === 200) {
-      dispatch(updateStructureDefProfile(response.data.entry[0].resource));
-    } else {
-      dispatch(updateStructureDefFailure(new Error(response.statusText)));
-    }
-  };
-};
-
 // Fetch available data types for extensions
 export const requestExtensionDataTypes = () => {
   return async (

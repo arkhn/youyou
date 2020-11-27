@@ -21,7 +21,7 @@ import { RenderAttributesTree } from 'types';
 import {
   selectAttributeId,
   updateStructureDefProfile
-} from 'state/actions/resourceActions';
+} from 'state/reducers/resource';
 import {
   createComplexSnapshot,
   createElementDefinitionTree
@@ -75,9 +75,9 @@ const ProfileEditor: React.FC<{}> = () => {
       </Typography>
     ));
   };
-
   const attributesForUI =
-    newStructureDef?.snapshot?.element &&
+    newStructureDef &&
+    newStructureDef.snapshot &&
     createComplexSnapshot(
       newStructureDef.snapshot.element.sort((a, b) => {
         if (a.id && b.id && a.id < b.id) {

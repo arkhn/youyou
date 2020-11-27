@@ -5,14 +5,14 @@ import clsx from 'clsx';
 import { TreeView, TreeItem } from '@material-ui/lab';
 import { ArrowRight, ArrowDropDown, Settings } from '@material-ui/icons';
 
-import { selectStructureDefMeta } from 'state/actions/resourceActions';
+import { selectStructureDefMeta } from 'state/reducers/resource';
 import { RenderAttributesTree } from 'types';
 import TreeNode from './treeNode/TreeNode';
 
 import useStyles from './style';
 
 type StructureDefinitionTreeProps = {
-  uiAttributes?: RenderAttributesTree;
+  uiAttributes?: RenderAttributesTree | undefined | null;
   structureDefinitionId?: string;
   onLabelClick?: (
     event: React.MouseEvent<Element, MouseEvent>,

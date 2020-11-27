@@ -13,7 +13,7 @@ import {
   IElementDefinition
 } from '@ahryman40k/ts-fhir-types/lib/R4';
 
-import { updateStructureDefExtension } from 'state/actions/resourceActions';
+import { updateStructureDefExtension } from 'state/reducers/resource';
 
 type AttributeEditorProps = {
   structureDefinition: IStructureDefinition;

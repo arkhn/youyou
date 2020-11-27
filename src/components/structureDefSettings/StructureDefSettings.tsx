@@ -11,7 +11,7 @@ import get from 'lodash.get';
 import {
   updateStructureDefProfile,
   updateStructureDefExtension
-} from 'state/actions/resourceActions';
+} from 'state/reducers/resource';
 import { setSnackbarOpen } from 'state/actions/snackbarActions';
 import { RootState } from 'state/store';
 import RenderComplexType from 'components/structureDefSettings/complexTypesEditor/RenderComplexType';

@@ -9,7 +9,7 @@ import {
 import { Typography, Button } from '@material-ui/core';
 import { ToggleButton } from '@material-ui/lab';
 
-import { updateStructureDefProfile } from 'state/actions/resourceActions';
+import { updateStructureDefProfile } from 'state/reducers/resource';
 import { CssTextField, CssToggleButtonGroup } from 'components/smallComponents';
 import useStyles from 'components/attributeEditor/style';
 import { allCardinalities, isDisabledInput } from './utils';
