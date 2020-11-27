@@ -138,13 +138,12 @@ const resourceSlice = createSlice({
       state.loading = true;
     });
     builder.addCase(requestIdsThunk.fulfilled, (state, { payload, meta }) => {
-      state.loading = meta.requestId !== state.requestId;
-      console.log(payload);
+      state.loading = false;
       state.resources = payload;
       state.error = null;
     });
     builder.addCase(requestIdsThunk.rejected, (state, { payload, meta }) => {
-      state.loading = meta.requestId !== state.requestId;
+      state.loading = false;
       state.resources = [];
       state.error = payload ?? null;
     });
@@ -155,8 +154,7 @@ const resourceSlice = createSlice({
     builder.addCase(
       requestStructureDefThunk.fulfilled,
       (state, { payload, meta }) => {
-        state.loading = meta.requestId !== state.requestId;
-        console.log(payload);
+        state.loading = false;
         state.structureDefinition = payload;
         state.error = null;
       }
@@ -164,7 +162,7 @@ const resourceSlice = createSlice({
     builder.addCase(
       requestStructureDefThunk.rejected,
       (state, { payload, meta }) => {
-        state.loading = meta.requestId !== state.requestId;
+        state.loading = false;
         state.structureDefinition = null;
         state.error = payload ?? null;
       }
