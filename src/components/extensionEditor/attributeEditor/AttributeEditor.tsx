@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from 'state/store';
+import { useSelector } from 'react-redux';
+import { RootState, useAppDispatch } from 'state/store';
 
 import Autocomplete, {
   AutocompleteRenderInputParams
@@ -25,7 +25,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
   const { datatypes } = useSelector((state: RootState) => {
     return state.codeSystem;
   });
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const structureDef = { ...structureDefinition };
 
   const getElementById = (

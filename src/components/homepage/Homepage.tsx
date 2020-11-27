@@ -1,17 +1,14 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { Typography, CircularProgress, Paper, Button } from '@material-ui/core';
 import clsx from 'clsx';
 
 import { setSnackbarOpen } from 'state/actions/snackbarActions';
-import {
-  selectResource,
-  selectStructureDefMeta
-} from 'state/reducers/resource';
-import { RootState } from 'state/store';
-import { requestStructureDefThunk } from 'state/reducers/resource';
+import { selectResource } from 'state/reducers/resource';
+import { RootState, useAppDispatch } from 'state/store';
+import { requestStructureDefThunk } from 'state/thunkMiddleware';
 
 import Navbar from 'components/navbar/Navbar';
 import { ReactComponent as FhirLogo } from 'assets/img/fhir-logo.svg';
@@ -21,7 +18,7 @@ import useStyles from './style';
 
 const Homepage: React.FC<{}> = () => {
   const { loading } = useSelector((state: RootState) => state.resource);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const classes = useStyles();
 
   const dispatchResourceSelected = (resource: { id: string }): void => {
@@ -29,7 +26,6 @@ const Homepage: React.FC<{}> = () => {
       dispatch(selectResource(resource.id));
       dispatch(requestStructureDefThunk(resource.id));
       dispatch(setSnackbarOpen(undefined, ''));
-      dispatch(selectStructureDefMeta());
     }
   };
 

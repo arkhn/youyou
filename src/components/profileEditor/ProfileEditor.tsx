@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import clsx from 'clsx';
 import {
@@ -9,7 +9,7 @@ import {
 import { Paper, Container, Typography, Breadcrumbs } from '@material-ui/core';
 import cloneDeep from 'lodash.clonedeep';
 
-import { RootState } from 'state/store';
+import { RootState, useAppDispatch } from 'state/store';
 
 import AttributeEditor from 'components/attributeEditor/AttributeEditor';
 import { ButtonDownload, SnackBarWithClose } from 'components/smallComponents';
@@ -28,7 +28,7 @@ import {
 } from 'components/profileEditor/utils';
 
 const ProfileEditor: React.FC<{}> = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const classes = useStyles();
 
   const {
@@ -79,15 +79,7 @@ const ProfileEditor: React.FC<{}> = () => {
     newStructureDef &&
     newStructureDef.snapshot &&
     createComplexSnapshot(
-      newStructureDef.snapshot.element.sort((a, b) => {
-        if (a.id && b.id && a.id < b.id) {
-          return -1;
-        }
-        if (a.id && b.id && a.id > b.id) {
-          return 1;
-        }
-        return 0;
-      }),
+      newStructureDef.snapshot.element,
       primitiveTypes,
       complexTypes
     );
@@ -157,15 +149,6 @@ const ProfileEditor: React.FC<{}> = () => {
       structureDefToEdit?.snapshot?.element.push(element);
     });
     if (structureDefToEdit && structureDefToEdit.snapshot) {
-      structureDefToEdit.snapshot.element.sort((a, b) => {
-        if (a.id && b.id && a.id < b.id) {
-          return -1;
-        }
-        if (a.id && b.id && a.id > b.id) {
-          return 1;
-        }
-        return 0;
-      });
       dispatch(updateStructureDefProfile(structureDefToEdit));
     }
   };
@@ -191,17 +174,6 @@ const ProfileEditor: React.FC<{}> = () => {
             }
           });
         }
-      });
-      newElement.snapshot.element.sort((a, b) => {
-        if (a.id && b.id) {
-          if (a.id < b.id) {
-            return -1;
-          }
-          if (a.id > b.id) {
-            return 1;
-          }
-        }
-        return 0;
       });
       newElement.snapshot.element.splice(
         indexToDelete[0],

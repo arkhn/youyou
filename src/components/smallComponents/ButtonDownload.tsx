@@ -1,11 +1,11 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 
 import { IStructureDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import { setSnackbarOpen } from 'state/actions/snackbarActions';
+import { useAppDispatch } from 'state/store';
 
 type ButtonDownloadProps = {
   text: string;
@@ -26,7 +26,7 @@ const ButtonDownload: React.FC<ButtonDownloadProps> = ({
   toDownload
 }) => {
   const classes = useStyles();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   return (
     <a

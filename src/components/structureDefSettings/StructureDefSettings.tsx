@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { IStructureDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { Button, Container, Typography } from '@material-ui/core';
@@ -13,7 +13,7 @@ import {
   updateStructureDefExtension
 } from 'state/reducers/resource';
 import { setSnackbarOpen } from 'state/actions/snackbarActions';
-import { RootState } from 'state/store';
+import { RootState, useAppDispatch } from 'state/store';
 import RenderComplexType from 'components/structureDefSettings/complexTypesEditor/RenderComplexType';
 import { createJSONTree } from 'components/structureDefSettings/utils';
 import { SnackBarWithClose } from 'components/smallComponents';
@@ -32,7 +32,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   const { complexTypes, primitiveTypes, structureDefinitionTree } = useSelector(
     (state: RootState) => state.fhirDataTypes
   );
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const classes = useStyles();
 
   const emptyTree = createJSONTree(

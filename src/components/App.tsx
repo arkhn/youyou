@@ -12,7 +12,7 @@ import {
   requestExtensionDataTypes,
   requestFhirDataTypes
 } from 'state/thunkMiddleware';
-import { requestIdsThunk } from 'state/reducers/resource';
+import { requestIdsThunk } from 'state/thunkMiddleware';
 import { store, persistor } from 'state/store';
 
 const App = (): JSX.Element => {

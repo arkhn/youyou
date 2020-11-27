@@ -1,5 +1,4 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 
 import clsx from 'clsx';
 import { TreeView, TreeItem } from '@material-ui/lab';
@@ -8,6 +7,7 @@ import { ArrowRight, ArrowDropDown, Settings } from '@material-ui/icons';
 import { selectStructureDefMeta } from 'state/reducers/resource';
 import { RenderAttributesTree } from 'types';
 import TreeNode from './treeNode/TreeNode';
+import { useAppDispatch } from 'state/store';
 
 import useStyles from './style';
 
@@ -41,7 +41,7 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
   structureDefinitionId,
   onTrashClick
 }) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const classes = useStyles();
 
   const renderNode = (nodes: RenderAttributesTree): JSX.Element => (

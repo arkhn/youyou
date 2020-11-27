@@ -15,12 +15,12 @@ export type FetchedIds = {
 export type ResourceState = {
   requestId?: string;
   resources: { id: string }[];
-  structureDefinition: IStructureDefinition | null;
-  extensionStructureDefinition: IStructureDefinition | null;
-  selectedResourceId: string | null;
+  structureDefinition: IStructureDefinition | undefined;
+  extensionStructureDefinition: IStructureDefinition | undefined;
+  selectedResourceId: string | undefined;
   selectedAttributeId?: string;
   loading: boolean;
-  error: Error | null;
+  error: Error | undefined;
   structureDefMeta: boolean;
   newElementDefinition?: IElementDefinition;
 };

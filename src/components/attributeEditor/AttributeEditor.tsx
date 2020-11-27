@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-import { useDispatch } from 'react-redux';
-
 import {
   IElementDefinition,
   IStructureDefinition
@@ -13,6 +11,7 @@ import { updateStructureDefProfile } from 'state/reducers/resource';
 import { CssTextField, CssToggleButtonGroup } from 'components/smallComponents';
 import useStyles from 'components/attributeEditor/style';
 import { allCardinalities, isDisabledInput } from './utils';
+import { useAppDispatch } from 'state/store';
 
 type AttributeEditorProps = {
   attribute: IElementDefinition;
@@ -37,7 +36,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
   );
   const [defaultValueMax, setDefaultValueMax] = useState(attribute?.max);
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const classes = useStyles();
 

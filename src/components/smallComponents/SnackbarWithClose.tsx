@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { Snackbar } from '@material-ui/core';
 import { Alert, Color } from '@material-ui/lab';
 
-import { RootState } from 'state/store';
+import { RootState, useAppDispatch } from 'state/store';
 import { setSnackbarOpen } from 'state/actions/snackbarActions';
 
 const SnackbarWithClose: React.FC<{}> = () => {
   const { message, severity } = useSelector(
     (state: RootState) => state.snackbarReducer
   );
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const [open, setOpen] = useState(false);
 

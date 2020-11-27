@@ -1,96 +1,28 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import extensionStructureDefinition from 'assets/extensionTemplate';
-/* import {
-  SELECT_RESOURCE,
-  ResourceAction,
-  GET_IDS_FAILURE,
-  GetIdsFailureAction,
-  GET_FETCH_START,
-  GetFetchStartAction,
-  GET_IDS_SUCCESS,
-  GetIdsSuccessAction,
-  UPDATE_STRUCTURE_DEF_PROFILE,
-  UpdateStructureDefProfileAction,
-  UPDATE_STRUCTURE_DEF_FAILURE,
-  UpdateStructureDefFailureAction,
-  SELECT_ATTRIBUTE,
-  SelectAttributeAction,
-  UPDATE_STRUCTURE_DEF_EXTENSION,
-  UpdateStructureDefExtensionAction,
-  SELECT_STRUCTUREDEFMETA,
-  SelectStructureDefMetaAction,
-  CREATE_NEW_ELEMENTDEFINITION,
-  CreateNewElementDefinitionAction
-} from 'state/actions/resourceActions'; */
 import {
   IElementDefinition,
   IStructureDefinition
 } from '@ahryman40k/ts-fhir-types/lib/R4';
-import { FetchedIds, ResourceState } from 'types';
-import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
-import { RootState } from 'state/store';
-import api from 'services/api';
-import { AxiosResponse } from 'axios';
+import { ResourceState } from 'types';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import {
+  requestIdsThunk,
+  requestStructureDefThunk
+} from 'state/thunkMiddleware';
+import { sortElements } from './utils';
 
 const initialState: ResourceState = {
   resources: [],
-  structureDefinition: null,
+  structureDefinition: undefined,
   extensionStructureDefinition: extensionStructureDefinition as IStructureDefinition,
-  selectedResourceId: null,
+  selectedResourceId: undefined,
   selectedAttributeId: undefined,
   loading: false,
-  error: null,
+  error: undefined,
   structureDefMeta: true,
   newElementDefinition: undefined
 };
-
-/* export type AllResourcesAction =
-  | GetIdsFailureAction
-  | GetFetchStartAction
-  | GetIdsSuccessAction
-  | ResourceAction
-  | UpdateStructureDefFailureAction
-  | UpdateStructureDefProfileAction
-  | SelectAttributeAction
-  | UpdateStructureDefExtensionAction
-  | SelectStructureDefMetaAction
-  | CreateNewElementDefinitionAction; */
-
-const requestIdsThunk = createAsyncThunk<
-  { id: string }[],
-  void,
-  { state: RootState; rejectValue: Error }
->(
-  'resource/requestIdsThunk',
-  async (param, { dispatch, getState, rejectWithValue }) => {
-    const response: AxiosResponse<any> = await api.get(
-      `/StructureDefinition?kind=resource&derivation=specialization&_elements=id&_count=150`
-    );
-    if (response.status === 200) {
-      return response.data.entry.map((result: FetchedIds) => result.resource);
-    } else {
-      return rejectWithValue(new Error(response.statusText));
-    }
-  }
-);
-
-const requestStructureDefThunk = createAsyncThunk<
-  IStructureDefinition,
-  string,
-  { state: RootState; rejectValue: Error }
->(
-  'resource/requestResourceThunk',
-  async (param, { dispatch, getState, rejectWithValue }) => {
-    const response: AxiosResponse<any> = await api.get(
-      `/StructureDefinition?kind=resource&derivation=specialization&id=${param}`
-    );
-    if (response.status === 200) {
-      return response.data.entry[0].resource;
-    } else {
-      return rejectWithValue(new Error(response.statusText));
-    }
-  }
-);
 
 const resourceSlice = createSlice({
   name: 'resourceReducer',
@@ -98,7 +30,7 @@ const resourceSlice = createSlice({
   reducers: {
     selectResource: (
       state: ResourceState,
-      action: PayloadAction<string | null>
+      action: PayloadAction<string | undefined>
     ) => {
       state.selectedResourceId = action.payload;
     },
@@ -121,14 +53,16 @@ const resourceSlice = createSlice({
     },
     updateStructureDefExtension: (
       state: ResourceState,
-      action: PayloadAction<IStructureDefinition | null>
+      action: PayloadAction<IStructureDefinition | undefined>
     ) => {
+      action.payload?.snapshot?.element.sort(sortElements);
       state.extensionStructureDefinition = action.payload;
     },
     updateStructureDefProfile: (
       state: ResourceState,
-      action: PayloadAction<IStructureDefinition | null>
+      action: PayloadAction<IStructureDefinition | undefined>
     ) => {
+      action.payload?.snapshot?.element.sort(sortElements);
       state.structureDefinition = action.payload;
     }
   },
@@ -140,12 +74,12 @@ const resourceSlice = createSlice({
     builder.addCase(requestIdsThunk.fulfilled, (state, { payload, meta }) => {
       state.loading = false;
       state.resources = payload;
-      state.error = null;
+      state.error = undefined;
     });
     builder.addCase(requestIdsThunk.rejected, (state, { payload, meta }) => {
       state.loading = false;
       state.resources = [];
-      state.error = payload ?? null;
+      state.error = payload ?? undefined;
     });
     builder.addCase(requestStructureDefThunk.pending, (state, { meta }) => {
       state.requestId = meta.requestId;
@@ -154,17 +88,19 @@ const resourceSlice = createSlice({
     builder.addCase(
       requestStructureDefThunk.fulfilled,
       (state, { payload, meta }) => {
+        payload.snapshot?.element.sort(sortElements);
         state.loading = false;
         state.structureDefinition = payload;
-        state.error = null;
+        state.error = undefined;
+        state.structureDefMeta = true;
       }
     );
     builder.addCase(
       requestStructureDefThunk.rejected,
       (state, { payload, meta }) => {
         state.loading = false;
-        state.structureDefinition = null;
-        state.error = payload ?? null;
+        state.structureDefinition = undefined;
+        state.error = payload ?? undefined;
       }
     );
   }
@@ -179,77 +115,3 @@ export const {
   updateStructureDefExtension,
   updateStructureDefProfile
 } = resourceSlice.actions;
-export { requestIdsThunk, requestStructureDefThunk };
-
-/* export const resource = (
-  state: ResourceState = initialState,
-  action: AllResourcesAction
-): ResourceState => {
-  switch (action.type) {
-    case SELECT_RESOURCE:
-      return {
-        ...state,
-        selectedResourceId: action.payload
-      };
-    case GET_FETCH_START:
-      return {
-        ...state,
-        loading: true
-      };
-    case GET_IDS_SUCCESS:
-      return {
-        ...state,
-        loading: false,
-        resources: action.payload,
-        error: null
-      };
-    case GET_IDS_FAILURE:
-      return {
-        ...state,
-        loading: false,
-        resources: [],
-        error: action.payload
-      };
-    case UPDATE_STRUCTURE_DEF_PROFILE:
-      return {
-        ...state,
-        loading: false,
-        structureDefinition: action.payload,
-        error: null
-      };
-    case UPDATE_STRUCTURE_DEF_FAILURE:
-      return {
-        ...state,
-        loading: false,
-        structureDefinition: null,
-        error: action.payload
-      };
-    case SELECT_ATTRIBUTE:
-      return {
-        ...state,
-        selectedAttributeId: action.payload,
-        structureDefMeta: false
-      };
-    case UPDATE_STRUCTURE_DEF_EXTENSION:
-      return {
-        ...state,
-        loading: false,
-        extensionStructureDefinition: action.payload,
-        error: null
-      };
-    case SELECT_STRUCTUREDEFMETA:
-      return {
-        ...state,
-        selectedAttributeId: undefined,
-        structureDefMeta: true
-      };
-    case CREATE_NEW_ELEMENTDEFINITION:
-      return {
-        ...state,
-        newElementDefinition: action.payload
-      };
-    default:
-      return state;
-  }
-};
- */
