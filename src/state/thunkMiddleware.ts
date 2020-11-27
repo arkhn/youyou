@@ -1,41 +1,31 @@
 import { ThunkDispatch } from 'redux-thunk';
 import { Action } from 'redux';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
-import {
-  //FetchedIds,
-  FetchedData,
-  FetchedIds,
-  RenderAttributesTree,
-  SimplifiedAttributes
-} from 'types';
-import api from 'services/api';
-/* import {
-  getFetchStart,
-  getIdsSuccess,
-  getIdsFailure,
-  updateStructureDefProfile,
-  updateStructureDefFailure
-} from 'state/actions/resourceActions'; */
-import {
-  getCodeSystemDataTypeSuccess,
-  getCodeSystemDataTypeFailure,
-  getCodeSystemDataTypePending
-} from 'state/actions/codeSystemActions';
-import { RootState } from 'state/store';
-import {
-  getFhirTypesFetchFailure,
-  getFhirTypesFetchStart,
-  getFhirTypesFetchSuccess
-} from './actions/fhirDataTypesActions';
-import { renderTreeAttributes, createSimplifiedAttributes } from './utils';
+import { AxiosResponse } from 'axios';
 
 import {
   IStructureDefinition,
   IElementDefinition,
   IElementDefinition_Type as IElementDefinitionType
 } from '@ahryman40k/ts-fhir-types/lib/R4';
-import { AxiosResponse } from 'axios';
-import { createAsyncThunk } from '@reduxjs/toolkit';
+import {
+  FetchedData,
+  FetchedIds,
+  RenderAttributesTree,
+  SimplifiedAttributes
+} from 'types';
+
+import api from 'services/api';
+
+import { RootState } from 'state/store';
+import {
+  getCodeSystemDataTypeSuccess,
+  getCodeSystemDataTypeFailure,
+  getCodeSystemDataTypePending
+} from 'state/actions/codeSystemActions';
+
+import { renderTreeAttributes, createSimplifiedAttributes } from './utils';
 
 export const requestIdsThunk = createAsyncThunk<
   { id: string }[],
@@ -72,46 +62,18 @@ export const requestStructureDefThunk = createAsyncThunk<
     }
   }
 );
-/**
- * Fetch selected resource
- * @param resource resource id for the structure we want to fetch
- */
-// Fetch available data types for extensions
-export const requestExtensionDataTypes = () => {
-  return async (
-    dispatch: ThunkDispatch<RootState, void, Action>
-  ): Promise<void> => {
-    dispatch(getCodeSystemDataTypePending());
-    const response: AxiosResponse<any> = await api.get(
-      '/StructureDefinition?derivation=specialization&name=extension'
-    );
-    const resource: IStructureDefinition = response.data.entry[0].resource;
-    let codes: string[] = [];
-    resource.differential?.element.forEach((element: IElementDefinition) => {
-      //fixme
-      if (element.id === 'Extension.value[x]') {
-        codes =
-          element?.type
-            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            ?.map((e: IElementDefinitionType) => e.code!)
-            .filter(Boolean) || [];
-      }
-      codes = codes?.filter(Boolean) || [];
-    });
-    if (response.status === 200) {
-      dispatch(getCodeSystemDataTypeSuccess(codes));
-    } else {
-      dispatch(getCodeSystemDataTypeFailure(new Error(response.statusText)));
-    }
-  };
-};
 
-// Fetch all primitive and complex types and dispatch two trees of implemented tree types
-export const requestFhirDataTypes = () => {
-  return async (
-    dispatch: ThunkDispatch<RootState, void, Action>
-  ): Promise<void> => {
-    dispatch(getFhirTypesFetchStart());
+export const requestFhirDataTypesThunk = createAsyncThunk<
+  {
+    primitiveDataTypes: string[];
+    complexDataTypes: RenderAttributesTree[];
+    structureDef: RenderAttributesTree[];
+  },
+  void,
+  { state: RootState; rejectValue: Error }
+>(
+  'resource/requestFhirDataTypesThunk',
+  async (param, { dispatch, getState, rejectWithValue }) => {
     const [
       primitiveTypes,
       complexTypes,
@@ -181,18 +143,51 @@ export const requestFhirDataTypes = () => {
           (type) => type && renderTreeAttributes(type, type, structureDefTree)
         );
       }
-      dispatch(
-        getFhirTypesFetchSuccess(
-          primitiveTypes.data.entry.map(
-            (result: { resource: { name: string }; search: any }) =>
-              result.resource.name
-          ),
-          complexTypeTree.children,
-          structureDefTree.children[0].children
-        )
-      );
+      const allPayloads = {
+        primitiveDataTypes: primitiveTypes.data.entry.map(
+          (result: { resource: { name: string }; search: any }) =>
+            result.resource.name
+        ),
+        complexDataTypes: complexTypeTree.children,
+        structureDef: structureDefTree.children[0].children
+      };
+      return allPayloads;
     } else {
-      dispatch(getFhirTypesFetchFailure(new Error(primitiveTypes.statusText)));
+      return rejectWithValue(new Error(primitiveTypes.statusText));
+    }
+  }
+);
+
+/**
+ * Fetch selected resource
+ * @param resource resource id for the structure we want to fetch
+ */
+// Fetch available data types for extensions
+export const requestExtensionDataTypes = () => {
+  return async (
+    dispatch: ThunkDispatch<RootState, void, Action>
+  ): Promise<void> => {
+    dispatch(getCodeSystemDataTypePending());
+    const response: AxiosResponse<any> = await api.get(
+      '/StructureDefinition?derivation=specialization&name=extension'
+    );
+    const resource: IStructureDefinition = response.data.entry[0].resource;
+    let codes: string[] = [];
+    resource.differential?.element.forEach((element: IElementDefinition) => {
+      //fixme
+      if (element.id === 'Extension.value[x]') {
+        codes =
+          element?.type
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            ?.map((e: IElementDefinitionType) => e.code!)
+            .filter(Boolean) || [];
+      }
+      codes = codes?.filter(Boolean) || [];
+    });
+    if (response.status === 200) {
+      dispatch(getCodeSystemDataTypeSuccess(codes));
+    } else {
+      dispatch(getCodeSystemDataTypeFailure(new Error(response.statusText)));
     }
   };
 };
