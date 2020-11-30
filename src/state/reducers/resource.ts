@@ -4,13 +4,13 @@ import {
   IElementDefinition,
   IStructureDefinition
 } from '@ahryman40k/ts-fhir-types/lib/R4';
-import { ResourceState } from 'types';
+import { RenderAttributesTree, ResourceState } from 'types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import {
   requestIdsThunk,
   requestStructureDefThunk
 } from 'state/thunkMiddleware';
-import { sortElements } from './utils';
+import { structureDefAddSlice, structureDefDeleteSlice } from './utils';
 
 const initialState: ResourceState = {
   resources: [],
@@ -55,15 +55,47 @@ const resourceSlice = createSlice({
       state: ResourceState,
       action: PayloadAction<IStructureDefinition | undefined>
     ) => {
-      action.payload?.snapshot?.element.sort(sortElements);
       state.extensionStructureDefinition = action.payload;
     },
     updateStructureDefProfile: (
       state: ResourceState,
       action: PayloadAction<IStructureDefinition | undefined>
     ) => {
-      action.payload?.snapshot?.element.sort(sortElements);
       state.structureDefinition = action.payload;
+    },
+    addSlice: (
+      state: ResourceState,
+      action: PayloadAction<{
+        nodeToSlice: RenderAttributesTree;
+        structureDefinition: IStructureDefinition;
+        sliceName: string;
+        index: number;
+      }>
+    ) => {
+      const {
+        nodeToSlice,
+        structureDefinition,
+        sliceName,
+        index
+      } = action.payload;
+      state.structureDefinition = structureDefAddSlice(
+        nodeToSlice,
+        structureDefinition,
+        sliceName,
+        index
+      );
+    },
+    deleteSlice: (
+      state: ResourceState,
+      action: PayloadAction<{
+        node: RenderAttributesTree;
+        newElements: IStructureDefinition;
+      }>
+    ) => {
+      const { node, newElements } = action.payload;
+      state.structureDefinition = structureDefDeleteSlice(node, newElements);
+      state.selectedAttributeId = undefined;
+      state.structureDefMeta = true;
     }
   },
   extraReducers: (builder) => {
@@ -88,7 +120,6 @@ const resourceSlice = createSlice({
     builder.addCase(
       requestStructureDefThunk.fulfilled,
       (state, { payload }) => {
-        payload.snapshot?.element.sort(sortElements);
         state.loading = false;
         state.structureDefinition = payload;
         state.error = undefined;
@@ -110,5 +141,7 @@ export const {
   selectStructureDefMeta,
   createNewElementDefinition,
   updateStructureDefExtension,
-  updateStructureDefProfile
+  updateStructureDefProfile,
+  addSlice,
+  deleteSlice
 } = resourceSlice.actions;

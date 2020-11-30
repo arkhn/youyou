@@ -17,7 +17,7 @@ import useStyles from './style';
 import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 
 const Homepage: React.FC<{}> = () => {
-  const { loading } = useSelector((state: RootState) => state.resource);
+  const { loading } = useSelector((state: RootState) => state.resourceSlice);
   const dispatch = useAppDispatch();
   const classes = useStyles();
 

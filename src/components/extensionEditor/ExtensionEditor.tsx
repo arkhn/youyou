@@ -17,7 +17,7 @@ const ExtensionEditor: React.FC<{}> = () => {
   const classes = useStyles();
   const { loading, extensionStructureDefinition } = useSelector(
     (state: RootState) => {
-      return state.resource;
+      return state.resourceSlice;
     }
   );
 

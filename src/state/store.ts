@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import resource from 'state/reducers/resource';
+import resourceSlice from 'state/reducers/resource';
 import codeSystem from 'state/reducers/codeSystem';
 import snackbar from 'state/reducers/snackbarReducer';
 import fhirDataTypes from 'state/reducers/fhirDataTypes';
@@ -14,7 +14,7 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
-  resource,
+  resourceSlice,
   codeSystem,
   snackbar,
   fhirDataTypes

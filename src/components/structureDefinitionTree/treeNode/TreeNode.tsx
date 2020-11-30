@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Delete, Folder, LocalOffer, LocalPizza } from '@material-ui/icons';
+import { Clear, Folder, LocalOffer, LocalPizza } from '@material-ui/icons';
 import { RenderAttributesTree } from 'types';
 
 import useStyles from 'components/structureDefinitionTree/treeNode/styles';
@@ -54,7 +54,7 @@ const TreeNode: React.FC<TreeNodeProps> = ({
           style={{ display: display }}
         >
           <Tooltip title="Add a slice">
-            <LocalPizza />
+            <LocalPizza color={isSlice ? 'secondary' : 'primary'} />
           </Tooltip>
         </IconButton>
         <IconButton
@@ -63,7 +63,7 @@ const TreeNode: React.FC<TreeNodeProps> = ({
           onClick={(e): void => onTrashClick && onTrashClick(e, nodes)}
         >
           <Tooltip title="Delete slice">
-            <Delete />
+            <Clear color="error" />
           </Tooltip>
         </IconButton>
       </div>

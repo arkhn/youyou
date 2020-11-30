@@ -1,4 +1,7 @@
-import { IElementDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
+import {
+  IElementDefinition,
+  IStructureDefinition
+} from '@ahryman40k/ts-fhir-types/lib/R4';
 import cloneDeep from 'lodash.clonedeep';
 
 import {
@@ -73,4 +76,40 @@ export const createElementDefinitionTree = (
     }
   });
   return elemDef;
+};
+
+export const findIndex = (
+  structureDefinition: IStructureDefinition,
+  node: RenderAttributesTree
+): number => {
+  const index: number[] = [];
+  structureDefinition.snapshot?.element.forEach((element) => {
+    let elementPathForIndex = '';
+    element?.id?.split('.').forEach((el) => {
+      elementPathForIndex =
+        (elementPathForIndex !== ''
+          ? elementPathForIndex + '.'
+          : elementPathForIndex) + el;
+      if (
+        elementPathForIndex === node.newPath &&
+        structureDefinition.snapshot
+      ) {
+        index.push(structureDefinition.snapshot.element.indexOf(element));
+      }
+    });
+  });
+  if (index.length === 0) {
+    const newPath = node?.newPath?.split('.');
+    structureDefinition.snapshot?.element.forEach((element) => {
+      if (
+        element?.id ===
+        newPath?.slice(0, element?.id?.split('.').length).join('.')
+      ) {
+        structureDefinition &&
+          structureDefinition.snapshot &&
+          index.push(structureDefinition.snapshot.element.indexOf(element));
+      }
+    });
+  }
+  return index[index.length - 1] + 1;
 };

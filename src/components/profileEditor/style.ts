@@ -46,6 +46,28 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   downloadButton: {
     width: '100%'
+  },
+  modalContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    '&:focused': {
+      outline: 'none'
+    }
+  },
+  modalPaper: {
+    width: 400,
+    height: 230,
+    padding: 20,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    position: 'relative'
+  },
+  modalPaperClose: {
+    position: 'absolute',
+    top: 10,
+    right: 10
   }
 }));
 

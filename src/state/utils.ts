@@ -236,15 +236,7 @@ export const createComplexTypes = (
           ...child,
           children: createComplexTypes(
             complexTypes,
-            childrenComplexType.sort((a, b) => {
-              if (a.name && b.name && a.name < b.name) {
-                return -1;
-              }
-              if (a.name && b.name && a.name > b.name) {
-                return 1;
-              }
-              return 0;
-            }),
+            childrenComplexType,
             primitiveTypes
           )
         });
