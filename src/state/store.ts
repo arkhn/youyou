@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import resource from 'state/reducers/resource';
-import { codeSystem } from 'state/reducers/codeSystem';
+import codeSystem from 'state/reducers/codeSystem';
 import snackbar from 'state/reducers/snackbarReducer';
 import fhirDataTypes from 'state/reducers/fhirDataTypes';
 import { persistReducer, persistStore } from 'redux-persist';

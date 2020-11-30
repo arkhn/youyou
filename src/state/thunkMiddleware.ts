@@ -1,5 +1,3 @@
-import { ThunkDispatch } from 'redux-thunk';
-import { Action } from 'redux';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 import { AxiosResponse } from 'axios';
@@ -19,11 +17,6 @@ import {
 import api from 'services/api';
 
 import { RootState } from 'state/store';
-import {
-  getCodeSystemDataTypeSuccess,
-  getCodeSystemDataTypeFailure,
-  getCodeSystemDataTypePending
-} from 'state/actions/codeSystemActions';
 
 import { renderTreeAttributes, createSimplifiedAttributes } from './utils';
 
@@ -147,23 +140,19 @@ export const requestFhirDataTypesThunk = createAsyncThunk<
   }
 });
 
-/**
- * Fetch selected resource
- * @param resource resource id for the structure we want to fetch
- */
-// Fetch available data types for extensions
-export const requestExtensionDataTypes = () => {
-  return async (
-    dispatch: ThunkDispatch<RootState, void, Action>
-  ): Promise<void> => {
-    dispatch(getCodeSystemDataTypePending());
+export const requestCodeSystemDataTypeThunk = createAsyncThunk<
+  string[],
+  void,
+  { state: RootState; rejectValue: Error }
+>(
+  'codeSystem/requestCodeSystemDataTypeThunk',
+  async (param, { rejectWithValue }) => {
     const response: AxiosResponse<any> = await api.get(
       '/StructureDefinition?derivation=specialization&name=extension'
     );
     const resource: IStructureDefinition = response.data.entry[0].resource;
     let codes: string[] = [];
     resource.differential?.element.forEach((element: IElementDefinition) => {
-      //fixme
       if (element.id === 'Extension.value[x]') {
         codes =
           element?.type
@@ -174,9 +163,9 @@ export const requestExtensionDataTypes = () => {
       codes = codes?.filter(Boolean) || [];
     });
     if (response.status === 200) {
-      dispatch(getCodeSystemDataTypeSuccess(codes));
+      return codes;
     } else {
-      dispatch(getCodeSystemDataTypeFailure(new Error(response.statusText)));
+      return rejectWithValue(new Error(response.statusText));
     }
-  };
-};
+  }
+);

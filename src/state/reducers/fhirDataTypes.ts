@@ -33,7 +33,7 @@ const fhirDataTypesSlice = createSlice({
     });
     builder.addCase(
       requestFhirDataTypesThunk.fulfilled,
-      (state, { payload, meta }) => {
+      (state, { payload }) => {
         const complexTypes = createComplexTypes(
           cloneDeep(payload.complexDataTypes),
           cloneDeep(payload.complexDataTypes),
@@ -53,7 +53,7 @@ const fhirDataTypesSlice = createSlice({
     );
     builder.addCase(
       requestFhirDataTypesThunk.rejected,
-      (state, { payload, meta }) => {
+      (state, { payload }) => {
         state.loadingTypes = false;
         state.structureDefinitionTree = [];
         state.primitiveTypes = [];

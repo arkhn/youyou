@@ -8,7 +8,7 @@ import { StylesProvider, CssBaseline } from '@material-ui/core';
 import Homepage from 'components/homepage/Homepage';
 import ProfileEditor from 'components/profileEditor/ProfileEditor';
 import ExtensionEditor from 'components/extensionEditor/ExtensionEditor';
-import { requestExtensionDataTypes } from 'state/thunkMiddleware';
+import { requestCodeSystemDataTypeThunk } from 'state/thunkMiddleware';
 import {
   requestIdsThunk,
   requestFhirDataTypesThunk
@@ -19,7 +19,7 @@ const App = (): JSX.Element => {
   /* @ts-ignore */
   store.dispatch(requestIdsThunk());
   /* @ts-ignore */
-  store.dispatch(requestExtensionDataTypes());
+  store.dispatch(requestCodeSystemDataTypeThunk());
   /* @ts-ignore */
   store.dispatch(requestFhirDataTypesThunk());
   return (
