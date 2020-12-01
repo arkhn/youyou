@@ -48,7 +48,7 @@ export interface RenderAttributesTree {
   id: string;
   type: string | IElementDefinitionType[];
   children: RenderAttributesTree[];
-  min: number | null;
+  min: number | undefined;
   max: string;
   definition: string;
   binding?: {
@@ -73,7 +73,7 @@ export interface SimplifiedAttributes {
   path: string;
   type: string | IElementDefinitionType[];
   definition: string;
-  min: number | null;
+  min: number | undefined;
   max: string;
   binding?: {
     strength?: ElementDefinitionBindingStrengthKind;

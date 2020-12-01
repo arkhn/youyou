@@ -35,14 +35,14 @@ const fhirDataTypesSlice = createSlice({
       requestFhirDataTypesThunk.fulfilled,
       (state, { payload }) => {
         const complexTypes = createComplexTypes(
-          cloneDeep(payload.complexDataTypes),
-          cloneDeep(payload.complexDataTypes),
-          cloneDeep(payload.primitiveDataTypes)
+          payload.complexDataTypes,
+          payload.complexDataTypes,
+          payload.primitiveDataTypes
         );
         const structureDefinitionTree = createComplexTypes(
-          cloneDeep(payload.complexDataTypes),
-          cloneDeep(payload.structureDef),
-          cloneDeep(payload.primitiveDataTypes)
+          payload.complexDataTypes,
+          payload.structureDef,
+          payload.primitiveDataTypes
         );
         state.primitiveTypes = payload.primitiveDataTypes;
         state.complexTypes = complexTypes;

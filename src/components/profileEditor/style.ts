@@ -57,7 +57,6 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   modalPaper: {
     width: 400,
-    height: 230,
     padding: 20,
     display: 'flex',
     flexDirection: 'column',

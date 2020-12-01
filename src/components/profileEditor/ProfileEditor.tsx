@@ -42,6 +42,7 @@ import {
 } from 'components/profileEditor/utils';
 import { Clear } from '@material-ui/icons';
 import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
+import { Alert, AlertTitle } from '@material-ui/lab';
 
 const ProfileEditor: React.FC<{}> = () => {
   const dispatch = useAppDispatch();
@@ -73,8 +74,16 @@ const ProfileEditor: React.FC<{}> = () => {
   });
 
   const [newStructureDef, setNewStructureDef] = useState(structureDefinition);
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<{
+    open: boolean;
+    add?: boolean;
+    message?: { title: string; text: string };
+  }>({ open: false });
   const [sliceName, setSliceName] = useState('');
+  const [sliceNameError, setSliceNameError] = useState({
+    error: false,
+    message: ''
+  });
   const [nodeToSlice, setNodeToSlice] = useState<
     RenderAttributesTree | undefined
   >(undefined);
@@ -105,18 +114,27 @@ const ProfileEditor: React.FC<{}> = () => {
       complexTypes
     );
 
-  console.log(newStructureDef?.snapshot?.element);
-
   const handleClickSliceAdd = (
     e: React.MouseEvent<Element, MouseEvent>,
     node: RenderAttributesTree
   ): void => {
     e.stopPropagation();
-    setOpen(true);
+    setOpen({
+      open: true,
+      message: { title: 'Add a slice', text: `to ${node.newPath}` },
+      add: true
+    });
     setNodeToSlice(node);
   };
 
-  const handleSubmitSliceAdd = (): void => {
+  /**
+   * If the slice name is not empty and unique, add it to the structure definition in the store
+   * @param event (on click event)
+   */
+  const handleSubmitSliceAdd = (
+    event: React.FormEvent<HTMLFormElement>
+  ): void => {
+    event.preventDefault();
     const existingPath =
       newStructureDef &&
       nodeToSlice &&
@@ -140,22 +158,20 @@ const ProfileEditor: React.FC<{}> = () => {
             severity: 'success'
           })
         );
-        setOpen(false);
+        setSliceNameError({ error: false, message: '' });
+        setOpen({ open: false });
         setNodeToSlice(undefined);
       } else if (sliceName !== '' && existingPath) {
-        dispatch(
-          setSnackbarOpen({
-            message: 'there is already a slice named like this !',
-            severity: 'error'
-          })
-        );
+        setSliceNameError({
+          message:
+            'This slice is already existing with the same name. If you want to create another slice, please choose a new name.',
+          error: true
+        });
       } else if (sliceName === '') {
-        dispatch(
-          setSnackbarOpen({
-            message: 'Please choose a name for this slice',
-            severity: 'error'
-          })
-        );
+        setSliceNameError({
+          message: 'Please choose a name for this slice',
+          error: true
+        });
       }
     }
   };
@@ -165,8 +181,34 @@ const ProfileEditor: React.FC<{}> = () => {
     node: RenderAttributesTree
   ): void => {
     e.stopPropagation();
+    setNodeToSlice(node);
+    setOpen({
+      open: true,
+      message: {
+        title: 'Delete a slice',
+        text: `Are you sure you want to delete ${node.newPath}`
+      },
+      add: false
+    });
+  };
+
+  const handleSubmitSliceDelete = (
+    event: React.FormEvent<HTMLFormElement>
+  ): void => {
+    event.preventDefault();
     const newElements = cloneDeep(newStructureDef);
-    newElements && dispatch(deleteSlice({ node, newElements }));
+    if (newElements && nodeToSlice) {
+      dispatch(
+        setSnackbarOpen({
+          message: 'Slice successfully deleted !',
+          severity: 'success'
+        })
+      );
+      dispatch(
+        deleteSlice({ node: nodeToSlice, structureDefinition: newElements })
+      );
+      setOpen({ open: false });
+    }
   };
 
   const handleClick = (
@@ -189,12 +231,12 @@ const ProfileEditor: React.FC<{}> = () => {
         const newElement: IElementDefinition = {
           ...newAttribute,
           base: {
-            min: node.min as number,
-            max: node.max as string,
+            min: node.min,
+            max: node.max,
             path: node.id
           },
-          min: node.min as number,
-          max: node.max as string,
+          min: node.min,
+          max: node.max,
           id: node.newPath,
           path: node.newPath,
           definition: node.definition,
@@ -221,35 +263,53 @@ const ProfileEditor: React.FC<{}> = () => {
     <div>
       <Navbar />
       <SnackBarWithClose />
-      <Dialog open={open} className={classes.modalContainer}>
+      <Dialog open={open.open} className={classes.modalContainer}>
         <Paper className={classes.modalPaper}>
           <IconButton
             className={classes.modalPaperClose}
             onClick={(): void => {
-              setOpen(false);
+              setOpen({ open: false });
               setSliceName('');
             }}
           >
             <Clear color="error" />
           </IconButton>
-          <Typography variant="h1">Add a slice</Typography>
-          <Typography>to {nodeToSlice?.newPath}</Typography>
-          <CssTextField
-            variant="outlined"
-            label="slice name"
-            onBlur={(
-              event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
-            ): void => {
-              setSliceName(`${event.target.value}`);
-            }}
-          />
-          <Button
-            color="secondary"
-            variant="contained"
-            onClick={handleSubmitSliceAdd}
+          <Typography variant="h1">
+            {open.message && open.message.title}
+          </Typography>
+          <Typography>{open.message && open.message.text}</Typography>
+          {sliceNameError.error && (
+            <Alert severity="error">
+              <AlertTitle>Error</AlertTitle>
+              {sliceNameError.message}
+            </Alert>
+          )}
+          <form
+            onSubmit={
+              open.add === false
+                ? handleSubmitSliceDelete
+                : handleSubmitSliceAdd
+            }
           >
-            Submit
-          </Button>
+            {open.add === true && (
+              <CssTextField
+                variant="outlined"
+                label="slice name"
+                autoFocus
+                error={sliceNameError.error}
+                onChange={(
+                  event: React.FocusEvent<
+                    HTMLInputElement | HTMLTextAreaElement
+                  >
+                ): void => {
+                  setSliceName(`${event.target.value}`);
+                }}
+              />
+            )}
+            <Button color="secondary" variant="contained" type="submit">
+              Submit
+            </Button>
+          </form>
         </Paper>
       </Dialog>
       <div className={classes.mapping}>

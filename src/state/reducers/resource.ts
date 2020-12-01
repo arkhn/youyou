@@ -89,13 +89,14 @@ const resourceSlice = createSlice({
       state: ResourceState,
       action: PayloadAction<{
         node: RenderAttributesTree;
-        newElements: IStructureDefinition;
+        structureDefinition: IStructureDefinition;
       }>
     ) => {
-      const { node, newElements } = action.payload;
-      state.structureDefinition = structureDefDeleteSlice(node, newElements);
-      state.selectedAttributeId = undefined;
-      state.structureDefMeta = true;
+      const { node, structureDefinition } = action.payload;
+      state.structureDefinition = structureDefDeleteSlice(
+        node,
+        structureDefinition
+      );
     }
   },
   extraReducers: (builder) => {

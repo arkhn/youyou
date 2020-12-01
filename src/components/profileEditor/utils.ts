@@ -22,7 +22,7 @@ export const createComplexSnapshot = (
     name: '',
     type: '',
     children: [],
-    min: null,
+    min: undefined,
     max: '',
     definition: ''
   };

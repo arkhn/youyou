@@ -152,7 +152,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
             options={datatypes ?? []}
             style={{ width: 300 }}
             onChange={(event, value): void => {
-              setDataType(value as string);
+              value && setDataType(value);
               // TODO : complete structureDefinitionTree with getStructureDef(value as string)
             }}
             renderInput={(

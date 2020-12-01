@@ -1,5 +1,6 @@
 import {
   ICodeSystem,
+  ICodeSystem_Concept as ICodeSystemConcept,
   IElementDefinition,
   IElementDefinition_Type as IElementDefinitionType,
   IStructureDefinition
@@ -9,108 +10,99 @@ import { SimplifiedAttributes, RenderAttributesTree } from 'types';
 
 /**
  * Transform fetched attributes to simplified attributes with new paths
- * @param elements
- * response needed to be transformed
- * @param valueSetRequest
- * value sets for FHIR code type
- * @returns
- * an array of all the fetched attributes, transformed in SimplifiedAttributes
- * types
+ * @param elements element definition needed to be transformed
+ * @param valueSetRequest value sets for FHIR code type
+ * @returns an array of all the fetched attributes, transformed in SimplifiedAttributes types
  */
-
 export const transformAttributes = (
   elements: IElementDefinition[],
   valueSetRequest?: ICodeSystem[]
 ): SimplifiedAttributes[] => {
   const attributes: SimplifiedAttributes[] = [];
   elements.forEach((element: IElementDefinition) => {
-    if (!element.type) {
-      element.id &&
-        element.definition &&
+    if (element.id && element.definition && element.max && element.type) {
+      if (element.type.length !== 1) {
         attributes.push({
           path: element.id,
-          type: element.id,
+          type: element.type.length > 1 ? element.type : element.id,
           definition: element.definition,
-          min: element.min as number,
-          max: element.max as string
+          min: element.min,
+          max: element.max
         });
-    } else if (element.type.length > 1) {
-      attributes.push({
-        path: element.id as string,
-        type: element.type,
-        definition: element.definition as string,
-        min: element.min as number,
-        max: element.max as string
-      });
-    } else {
-      element.type.forEach((types: IElementDefinitionType) => {
-        if (element.id && types.code && element.definition) {
-          if (types.code === 'code') {
-            const valueSet: any[] = [];
-            if (element.binding) {
-              element.binding?.extension?.forEach((extension) => {
-                if (extension.valueString) {
-                  const findValueSet = valueSetRequest?.find(
-                    (value: ICodeSystem) => value.name === extension.valueString
-                  );
-                  if (findValueSet) {
-                    findValueSet.concept?.forEach((vs: any) => {
-                      valueSet.push(vs);
-                    });
+      } else {
+        element.type.forEach((types: IElementDefinitionType) => {
+          if (element.definition && element.id && element.max && types.code) {
+            if (types.code === 'code') {
+              const valueSet: ICodeSystemConcept[] = [];
+              if (element.binding) {
+                element.binding?.extension?.forEach((extension) => {
+                  if (extension.valueString && valueSetRequest) {
+                    const findValueSet:
+                      | ICodeSystem
+                      | undefined = valueSetRequest.find(
+                      (value: ICodeSystem) =>
+                        value.name === extension.valueString
+                    );
+                    if (findValueSet && findValueSet.concept) {
+                      findValueSet.concept.forEach((vs: ICodeSystemConcept) => {
+                        valueSet.push(vs);
+                      });
+                    }
                   }
+                });
+              }
+              const newAttribute: SimplifiedAttributes = {
+                definition: element.definition,
+                path: element.id,
+                type: types.code,
+                min: element.min,
+                max: element.max,
+                binding: {
+                  valueSet: valueSet.length > 0 ? valueSet : undefined,
+                  strength: element.binding?.strength
                 }
+              };
+              attributes.push(newAttribute);
+            } else {
+              attributes.push({
+                path: element.id,
+                type: types.code,
+                definition: element.definition,
+                min: element.min,
+                max: element.max
               });
             }
-            const newAttribute = {
-              definition: element.definition,
-              path: element.id,
-              type: types.code,
-              min: element.min as number,
-              max: element.max as string,
-              binding: {
-                valueSet: valueSet.length > 0 ? valueSet : undefined,
-                strength: element.binding?.strength
-              }
-            };
-            attributes.push(newAttribute);
-          } else {
-            attributes.push({
-              path: element.id,
-              type: types.code,
-              definition: element.definition,
-              min: element.min as number,
-              max: element.max as string
-            });
           }
-        }
-      });
+        });
+      }
     }
   });
   return attributes;
 };
 
 /**
- * Create simplified attributes from axios response in middleware
- * @param data axios response for data
- * @param valueSet value set response
+ * Create simplified attributes from structure definition snapshot
+ * @param structureDefinition structure definition to transform
+ * @param valueSet
  */
 export const createSimplifiedAttributes = (
-  data: IStructureDefinition[],
+  structureDefinition: IStructureDefinition[],
   valueSet: ICodeSystem[]
 ): SimplifiedAttributes[] => {
-  const newData: SimplifiedAttributes[] = [];
-  data.forEach((type: any) => {
+  const simplifiedSDef: SimplifiedAttributes[] = [];
+  const newSDef = cloneDeep(structureDefinition);
+  newSDef.forEach((type: any) => {
     const transformedAttributes = transformAttributes(
       type.snapshot.element,
       valueSet
     );
     transformedAttributes.forEach(
       (transformedAttribute: SimplifiedAttributes) => {
-        newData.push(transformedAttribute);
+        simplifiedSDef.push(transformedAttribute);
       }
     );
   });
-  return newData;
+  return simplifiedSDef;
 };
 
 /**
@@ -187,16 +179,17 @@ export const renderTreeAttributes = (
  * structure definition snapshot's paths)
  * @param complexTypes
  * An array FHIR simplified complex types
- * @param currentItemsChildren
+ * @param childrenToBeComplex
  * An array of all the children of the attribute selected
  * @param primitiveTypes
  * An array of FHIR primitive types
  */
 export const createComplexTypes = (
   complexTypes: RenderAttributesTree[],
-  currentItemsChildren: RenderAttributesTree[],
+  childrenToBeComplex: RenderAttributesTree[],
   primitiveTypes: string[]
 ): RenderAttributesTree[] => {
+  const currentItemsChildren = cloneDeep(childrenToBeComplex);
   const enhancedComplexType: RenderAttributesTree[] = [];
   for (const child of currentItemsChildren) {
     if (

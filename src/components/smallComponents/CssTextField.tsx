@@ -3,8 +3,8 @@ import { withStyles } from '@material-ui/styles';
 
 const CssTextField = withStyles((theme: Theme) => ({
   root: {
-    width: '100%',
-    '& .MuiOutlinedInput-root': {
+    width: '100%'
+    /* '& .MuiOutlinedInput-root': {
       '& fieldset': {
         borderColor: theme.palette.secondary.main
       },
@@ -14,7 +14,7 @@ const CssTextField = withStyles((theme: Theme) => ({
       '&.Mui-focused fieldset': {
         borderColor: theme.palette.secondary.dark
       }
-    }
+    } */
   }
 }))(TextField);
 

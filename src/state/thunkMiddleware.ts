@@ -85,7 +85,7 @@ export const requestFhirDataTypesThunk = createAsyncThunk<
       name: '',
       type: '',
       children: [],
-      min: null,
+      min: undefined,
       max: '',
       definition: ''
     };
@@ -94,7 +94,7 @@ export const requestFhirDataTypesThunk = createAsyncThunk<
       name: '',
       type: '',
       children: [],
-      min: null,
+      min: undefined,
       max: '',
       definition: ''
     };
