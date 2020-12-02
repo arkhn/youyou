@@ -6,25 +6,13 @@ import {
   IElementDefinition,
   IElementDefinition_Binding as IElementDefinitionBinding
 } from '@ahryman40k/ts-fhir-types/lib/R4';
-import {
-  Paper,
-  Container,
-  Typography,
-  Breadcrumbs,
-  Button,
-  IconButton,
-  Dialog
-} from '@material-ui/core';
+import { Paper, Container, Typography, Breadcrumbs } from '@material-ui/core';
 import cloneDeep from 'lodash.clonedeep';
 
 import { RootState, useAppDispatch } from 'state/store';
 
 import AttributeEditor from 'components/attributeEditor/AttributeEditor';
-import {
-  ButtonDownload,
-  CssTextField,
-  SnackBarWithClose
-} from 'components/smallComponents';
+import { ButtonDownload, SnackBarWithClose } from 'components/smallComponents';
 import Navbar from 'components/navbar/Navbar';
 import StructureDefinitionTree from 'components/structureDefinitionTree/StructureDefinitionTree';
 import StructureDefSettings from 'components/structureDefSettings/StructureDefSettings';
@@ -40,9 +28,14 @@ import {
   createElementDefinitionTree,
   findIndex
 } from 'components/profileEditor/utils';
-import { Clear } from '@material-ui/icons';
 import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
-import { Alert, AlertTitle } from '@material-ui/lab';
+import SliceDialogBox from './sliceDialogBox/SliceDialogBox';
+
+export type OpenDialogState = {
+  open: boolean;
+  add?: boolean;
+  message?: { title: string; text: string };
+};
 
 const ProfileEditor: React.FC<{}> = () => {
   const dispatch = useAppDispatch();
@@ -74,11 +67,7 @@ const ProfileEditor: React.FC<{}> = () => {
   });
 
   const [newStructureDef, setNewStructureDef] = useState(structureDefinition);
-  const [open, setOpen] = useState<{
-    open: boolean;
-    add?: boolean;
-    message?: { title: string; text: string };
-  }>({ open: false });
+  const [open, setOpen] = useState<OpenDialogState>({ open: false });
   const [sliceName, setSliceName] = useState('');
   const [sliceNameError, setSliceNameError] = useState({
     error: false,
@@ -114,22 +103,39 @@ const ProfileEditor: React.FC<{}> = () => {
       complexTypes
     );
 
+  /**
+   * If click on pizza icon, open a dialog box to give a name to the slice
+   * @param e event onClick
+   * @param node attribute selected on click
+   */
   const handleClickSliceAdd = (
     e: React.MouseEvent<Element, MouseEvent>,
-    node: RenderAttributesTree
+    node: RenderAttributesTree,
+    openDialog: OpenDialogState
   ): void => {
     e.stopPropagation();
-    setOpen({
-      open: true,
-      message: { title: 'Add a slice', text: `to ${node.newPath}` },
-      add: true
-    });
+    setOpen(openDialog);
     setNodeToSlice(node);
   };
 
   /**
+   * If click on delete icon, open a dialog box to confirm the action
+   * @param e event onClick
+   * @param node attribute selected on click
+   */
+  const handleClickSliceDelete = (
+    e: React.MouseEvent<Element, MouseEvent>,
+    node: RenderAttributesTree,
+    openDialog: OpenDialogState
+  ): void => {
+    e.stopPropagation();
+    setNodeToSlice(node);
+    setOpen(openDialog);
+  };
+
+  /**
    * If the slice name is not empty and unique, add it to the structure definition in the store
-   * @param event (on click event)
+   * @param event onClick event
    */
   const handleSubmitSliceAdd = (
     event: React.FormEvent<HTMLFormElement>
@@ -176,22 +182,10 @@ const ProfileEditor: React.FC<{}> = () => {
     }
   };
 
-  const handleClickSliceDelete = (
-    e: React.MouseEvent<Element, MouseEvent>,
-    node: RenderAttributesTree
-  ): void => {
-    e.stopPropagation();
-    setNodeToSlice(node);
-    setOpen({
-      open: true,
-      message: {
-        title: 'Delete a slice',
-        text: `Are you sure you want to delete ${node.newPath}`
-      },
-      add: false
-    });
-  };
-
+  /**
+   * Delete the slice after user validation
+   * @param event
+   */
   const handleSubmitSliceDelete = (
     event: React.FormEvent<HTMLFormElement>
   ): void => {
@@ -262,56 +256,6 @@ const ProfileEditor: React.FC<{}> = () => {
   return (
     <div>
       <Navbar />
-      <SnackBarWithClose />
-      <Dialog open={open.open} className={classes.modalContainer}>
-        <Paper className={classes.modalPaper}>
-          <IconButton
-            className={classes.modalPaperClose}
-            onClick={(): void => {
-              setOpen({ open: false });
-              setSliceName('');
-            }}
-          >
-            <Clear color="error" />
-          </IconButton>
-          <Typography variant="h1">
-            {open.message && open.message.title}
-          </Typography>
-          <Typography>{open.message && open.message.text}</Typography>
-          {sliceNameError.error && (
-            <Alert severity="error">
-              <AlertTitle>Error</AlertTitle>
-              {sliceNameError.message}
-            </Alert>
-          )}
-          <form
-            onSubmit={
-              open.add === false
-                ? handleSubmitSliceDelete
-                : handleSubmitSliceAdd
-            }
-          >
-            {open.add === true && (
-              <CssTextField
-                variant="outlined"
-                label="slice name"
-                autoFocus
-                error={sliceNameError.error}
-                onChange={(
-                  event: React.FocusEvent<
-                    HTMLInputElement | HTMLTextAreaElement
-                  >
-                ): void => {
-                  setSliceName(`${event.target.value}`);
-                }}
-              />
-            )}
-            <Button color="secondary" variant="contained" type="submit">
-              Submit
-            </Button>
-          </form>
-        </Paper>
-      </Dialog>
       <div className={classes.mapping}>
         <Paper className={clsx(classes.paperLeft, classes.paper)}>
           <Typography variant="h1">{structureDefinition.name}</Typography>
@@ -349,6 +293,21 @@ const ProfileEditor: React.FC<{}> = () => {
           </Paper>
         </Container>
       </div>
+      <SnackBarWithClose />
+      <SliceDialogBox
+        attributeSelected={open}
+        sliceNameError={sliceNameError}
+        onChangeName={(e): void => {
+          setSliceName(e.target.value);
+        }}
+        onCloseClick={(): void => {
+          setOpen({ open: false });
+          setSliceName('');
+        }}
+        onFormSubmit={
+          open.add === false ? handleSubmitSliceDelete : handleSubmitSliceAdd
+        }
+      />
     </div>
   );
 };

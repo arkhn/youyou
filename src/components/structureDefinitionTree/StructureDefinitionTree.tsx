@@ -10,6 +10,7 @@ import TreeNode from './treeNode/TreeNode';
 import { useAppDispatch } from 'state/store';
 
 import useStyles from './style';
+import { OpenDialogState } from 'components/profileEditor/ProfileEditor';
 
 type StructureDefinitionTreeProps = {
   uiAttributes?: RenderAttributesTree | undefined | null;
@@ -20,11 +21,13 @@ type StructureDefinitionTreeProps = {
   ) => void;
   onPizzaClick?: (
     event: React.MouseEvent<Element, MouseEvent>,
-    nodes: RenderAttributesTree
+    nodes: RenderAttributesTree,
+    openDialog: OpenDialogState
   ) => void;
   onTrashClick?: (
     event: React.MouseEvent<Element, MouseEvent>,
-    nodes: RenderAttributesTree
+    nodes: RenderAttributesTree,
+    openDialog: OpenDialogState
   ) => void;
 };
 

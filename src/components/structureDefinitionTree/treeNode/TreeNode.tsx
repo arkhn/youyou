@@ -4,16 +4,19 @@ import { RenderAttributesTree } from 'types';
 
 import useStyles from 'components/structureDefinitionTree/treeNode/styles';
 import { IconButton, Tooltip } from '@material-ui/core';
+import { OpenDialogState } from 'components/profileEditor/ProfileEditor';
 
 type TreeNodeProps = {
   nodes: RenderAttributesTree;
   onPizzaClick?: (
     event: React.MouseEvent<Element, MouseEvent>,
-    nodes: RenderAttributesTree
+    nodes: RenderAttributesTree,
+    openDialog: OpenDialogState
   ) => void;
   onTrashClick?: (
     event: React.MouseEvent<Element, MouseEvent>,
-    nodes: RenderAttributesTree
+    nodes: RenderAttributesTree,
+    openDialog: OpenDialogState
   ) => void;
 };
 
@@ -50,7 +53,14 @@ const TreeNode: React.FC<TreeNodeProps> = ({
       <div className={classes.pizzaIcon}>
         <IconButton
           size="small"
-          onClick={(e): void => onPizzaClick && onPizzaClick(e, nodes)}
+          onClick={(e): void =>
+            onPizzaClick &&
+            onPizzaClick(e, nodes, {
+              open: true,
+              message: { title: 'Add a slice', text: `to ${nodes.newPath}` },
+              add: true
+            })
+          }
           style={{ display: display }}
         >
           <Tooltip title="Add a slice">
@@ -60,7 +70,17 @@ const TreeNode: React.FC<TreeNodeProps> = ({
         <IconButton
           size="small"
           style={{ display: isSlice ? 'block' : 'none' }}
-          onClick={(e): void => onTrashClick && onTrashClick(e, nodes)}
+          onClick={(e): void =>
+            onTrashClick &&
+            onTrashClick(e, nodes, {
+              open: true,
+              message: {
+                title: 'Delete a slice',
+                text: `Are you sure you want to delete ${nodes.newPath}`
+              },
+              add: false
+            })
+          }
         >
           <Tooltip title="Delete slice">
             <Clear color="error" />

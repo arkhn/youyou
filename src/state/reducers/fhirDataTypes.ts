@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import cloneDeep from 'lodash.clonedeep';
 
 import { requestFhirDataTypesThunk } from 'state/thunkMiddleware';
 import { createComplexTypes } from 'state/utils';
