@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import extensionStructureDefinition from 'assets/extensionTemplate';
 import {
   IElementDefinition,
   IStructureDefinition
 } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { RenderAttributesTree, ResourceState } from 'types';
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import {
   requestIdsThunk,
   requestStructureDefThunk

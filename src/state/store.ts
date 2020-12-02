@@ -1,12 +1,13 @@
 import { combineReducers } from 'redux';
+import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
+import { persistReducer, persistStore } from 'redux-persist';
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
+
 import resourceSlice from 'state/reducers/resource';
 import codeSystem from 'state/reducers/codeSystem';
 import snackbar from 'state/reducers/snackbarReducer';
 import fhirDataTypes from 'state/reducers/fhirDataTypes';
-import { persistReducer, persistStore } from 'redux-persist';
-import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
-import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
 const persistConfig = {
   key: 'root',

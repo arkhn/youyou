@@ -8,10 +8,11 @@ import { Typography, Button } from '@material-ui/core';
 import { ToggleButton } from '@material-ui/lab';
 
 import { updateStructureDefProfile } from 'state/reducers/resource';
-import { CssTextField, CssToggleButtonGroup } from 'components/smallComponents';
-import useStyles from 'components/attributeEditor/style';
-import { allCardinalities, isDisabledInput } from './utils';
 import { useAppDispatch } from 'state/store';
+import { CssTextField, CssToggleButtonGroup } from 'components/smallComponents';
+import { allCardinalities, isDisabledInput } from './utils';
+
+import useStyles from 'components/attributeEditor/style';
 
 type AttributeEditorProps = {
   attribute: IElementDefinition;

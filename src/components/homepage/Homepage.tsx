@@ -5,16 +5,19 @@ import { Link } from 'react-router-dom';
 import { Typography, CircularProgress, Paper, Button } from '@material-ui/core';
 import clsx from 'clsx';
 
-import { selectResource } from 'state/reducers/resource';
 import { RootState, useAppDispatch } from 'state/store';
+import { selectResource } from 'state/reducers/resource';
+import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 import { requestStructureDefThunk } from 'state/thunkMiddleware';
 
 import Navbar from 'components/navbar/Navbar';
+import {
+  choosingCardsItems,
+  ChoosingCardsItemsType
+} from 'components/homepage/utils';
 import { ReactComponent as FhirLogo } from 'assets/img/fhir-logo.svg';
-import { choosingCardsItems, ChoosingCardsItemsType } from './utils';
 
 import useStyles from './style';
-import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 
 const Homepage: React.FC<{}> = () => {
   const { loading } = useSelector((state: RootState) => state.resourceSlice);

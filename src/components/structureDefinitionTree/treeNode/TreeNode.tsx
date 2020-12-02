@@ -1,30 +1,23 @@
 import React, { useState } from 'react';
+
 import { Clear, Folder, LocalOffer, LocalPizza } from '@material-ui/icons';
+import { IconButton, Tooltip } from '@material-ui/core';
+
 import { RenderAttributesTree } from 'types';
+import { OpenDialogState } from 'components/profileEditor/ProfileEditor';
 
 import useStyles from 'components/structureDefinitionTree/treeNode/styles';
-import { IconButton, Tooltip } from '@material-ui/core';
-import { OpenDialogState } from 'components/profileEditor/ProfileEditor';
 
 type TreeNodeProps = {
   nodes: RenderAttributesTree;
-  onPizzaClick?: (
-    event: React.MouseEvent<Element, MouseEvent>,
-    nodes: RenderAttributesTree,
-    openDialog: OpenDialogState
-  ) => void;
-  onTrashClick?: (
+  handleClickSlices: (
     event: React.MouseEvent<Element, MouseEvent>,
     nodes: RenderAttributesTree,
     openDialog: OpenDialogState
   ) => void;
 };
 
-const TreeNode: React.FC<TreeNodeProps> = ({
-  nodes,
-  onPizzaClick,
-  onTrashClick
-}) => {
+const TreeNode: React.FC<TreeNodeProps> = ({ nodes, handleClickSlices }) => {
   const classes = useStyles();
   const isSlice =
     nodes.id.split('.')[nodes.id.split('.').length - 1].split(':').length > 1
@@ -54,8 +47,7 @@ const TreeNode: React.FC<TreeNodeProps> = ({
         <IconButton
           size="small"
           onClick={(e): void =>
-            onPizzaClick &&
-            onPizzaClick(e, nodes, {
+            handleClickSlices(e, nodes, {
               open: true,
               message: { title: 'Add a slice', text: `to ${nodes.newPath}` },
               add: true
@@ -64,15 +56,14 @@ const TreeNode: React.FC<TreeNodeProps> = ({
           style={{ display: display }}
         >
           <Tooltip title="Add a slice">
-            <LocalPizza color={isSlice ? 'secondary' : 'primary'} />
+            <LocalPizza />
           </Tooltip>
         </IconButton>
         <IconButton
           size="small"
           style={{ display: isSlice ? 'block' : 'none' }}
           onClick={(e): void =>
-            onTrashClick &&
-            onTrashClick(e, nodes, {
+            handleClickSlices(e, nodes, {
               open: true,
               message: {
                 title: 'Delete a slice',

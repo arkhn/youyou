@@ -9,27 +9,27 @@ import {
 import { Paper, Container, Typography, Breadcrumbs } from '@material-ui/core';
 import cloneDeep from 'lodash.clonedeep';
 
-import { RootState, useAppDispatch } from 'state/store';
-
-import AttributeEditor from 'components/attributeEditor/AttributeEditor';
-import { ButtonDownload, SnackBarWithClose } from 'components/smallComponents';
-import Navbar from 'components/navbar/Navbar';
-import StructureDefinitionTree from 'components/structureDefinitionTree/StructureDefinitionTree';
-import StructureDefSettings from 'components/structureDefSettings/StructureDefSettings';
-import useStyles from 'components/profileEditor/style';
 import { RenderAttributesTree } from 'types';
+import { RootState, useAppDispatch } from 'state/store';
+import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 import {
   selectAttributeId,
   addSlice,
   deleteSlice
 } from 'state/reducers/resource';
+import AttributeEditor from 'components/attributeEditor/AttributeEditor';
+import { ButtonDownload, SnackBarWithClose } from 'components/smallComponents';
+import Navbar from 'components/navbar/Navbar';
+import StructureDefinitionTree from 'components/structureDefinitionTree/StructureDefinitionTree';
+import StructureDefSettings from 'components/structureDefSettings/StructureDefSettings';
 import {
   createComplexSnapshot,
   createElementDefinitionTree,
   findIndex
 } from 'components/profileEditor/utils';
-import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 import SliceDialogBox from './sliceDialogBox/SliceDialogBox';
+
+import useStyles from 'components/profileEditor/style';
 
 export type OpenDialogState = {
   open: boolean;
@@ -85,15 +85,6 @@ const ProfileEditor: React.FC<{}> = () => {
     setNewStructureDef(structureDefinition);
   }, [structureDefinition]);
 
-  const renderBreadcrumbs = (): JSX.Element | JSX.Element[] | undefined => {
-    if (structureDefMeta)
-      return <Typography className={classes.capitalize}>Metadata</Typography>;
-    return splitedAttributeSelected?.map((split: string) => (
-      <Typography key={split} className={classes.capitalize}>
-        {split}
-      </Typography>
-    ));
-  };
   const attributesForUI =
     newStructureDef &&
     newStructureDef.snapshot &&
@@ -104,26 +95,11 @@ const ProfileEditor: React.FC<{}> = () => {
     );
 
   /**
-   * If click on pizza icon, open a dialog box to give a name to the slice
+   * If click on add or delete icon, open a dialog box to confirm actions
    * @param e event onClick
    * @param node attribute selected on click
    */
-  const handleClickSliceAdd = (
-    e: React.MouseEvent<Element, MouseEvent>,
-    node: RenderAttributesTree,
-    openDialog: OpenDialogState
-  ): void => {
-    e.stopPropagation();
-    setOpen(openDialog);
-    setNodeToSlice(node);
-  };
-
-  /**
-   * If click on delete icon, open a dialog box to confirm the action
-   * @param e event onClick
-   * @param node attribute selected on click
-   */
-  const handleClickSliceDelete = (
+  const handleClickForSlice = (
     e: React.MouseEvent<Element, MouseEvent>,
     node: RenderAttributesTree,
     openDialog: OpenDialogState
@@ -245,6 +221,16 @@ const ProfileEditor: React.FC<{}> = () => {
     }
   };
 
+  const renderBreadcrumbs = (): JSX.Element | JSX.Element[] | undefined => {
+    if (structureDefMeta)
+      return <Typography className={classes.capitalize}>Metadata</Typography>;
+    return splitedAttributeSelected?.map((split: string) => (
+      <Typography key={split} className={classes.capitalize}>
+        {split}
+      </Typography>
+    ));
+  };
+
   if (loading) {
     return <div>Loading</div>;
   }
@@ -264,8 +250,7 @@ const ProfileEditor: React.FC<{}> = () => {
               onLabelClick={handleClick}
               uiAttributes={attributesForUI}
               structureDefinitionId={structureDefinition.id}
-              onPizzaClick={handleClickSliceAdd}
-              onTrashClick={handleClickSliceDelete}
+              handleClickSlices={handleClickForSlice}
             />
           </Container>
           <ButtonDownload

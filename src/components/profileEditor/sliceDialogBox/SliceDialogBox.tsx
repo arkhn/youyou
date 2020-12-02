@@ -9,9 +9,11 @@ import {
 } from '@material-ui/core';
 import { Clear } from '@material-ui/icons';
 import { Alert, AlertTitle } from '@material-ui/lab';
+
 import { CssTextField } from 'components/smallComponents';
-import useStyles from 'components/profileEditor/style';
 import { OpenDialogState } from 'components/profileEditor/ProfileEditor';
+
+import useStyles from 'components/profileEditor/style';
 
 type SliceDialogBoxProps = {
   attributeSelected: OpenDialogState;
