@@ -20,14 +20,22 @@ export const transformAttributes = (
 ): SimplifiedAttributes[] => {
   const attributes: SimplifiedAttributes[] = [];
   elements.forEach((element: IElementDefinition) => {
-    if (element.id && element.definition && element.max && element.type) {
-      if (element.type.length !== 1) {
+    if (element.id && element.definition && element.max) {
+      if (element.type && element.type.length !== 1) {
         attributes.push({
           path: element.id,
           type: element.type.length > 1 ? element.type : element.id,
           definition: element.definition,
           min: element.min,
           max: element.max
+        });
+      } else if (!element.type) {
+        attributes.push({
+          path: element.id,
+          definition: element.definition,
+          min: element.min,
+          max: element.max,
+          type: undefined
         });
       } else {
         element.type.forEach((types: IElementDefinitionType) => {
@@ -112,13 +120,14 @@ export const createSimplifiedAttributes = (
  * @returns if type is a primitive FHIR type, return true, else, return false.
  */
 export const isPrimitive = (
-  type: string | IElementDefinitionType[],
+  type: string | IElementDefinitionType[] | undefined,
   primitiveTypes: string[]
 ): boolean =>
   primitiveTypes.some((primitive: string) => type === primitive) ||
   type === 'http://hl7.org/fhirpath/System.String' ||
   type === 'Extension' ||
-  type === 'Reference';
+  type === 'Reference' ||
+  type === undefined;
 
 /**
  * Create renderTree of FHIR structure definition, with children determined only

@@ -46,7 +46,7 @@ export type fhirDataState = {
 export interface RenderAttributesTree {
   name: string;
   id: string;
-  type: string | IElementDefinitionType[];
+  type: string | IElementDefinitionType[] | undefined;
   children: RenderAttributesTree[];
   min: number | undefined;
   max: string;
@@ -71,7 +71,7 @@ export interface RenderComplexType {
 
 export interface SimplifiedAttributes {
   path: string;
-  type: string | IElementDefinitionType[];
+  type: string | IElementDefinitionType[] | undefined;
   definition: string;
   min: number | undefined;
   max: string;

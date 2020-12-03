@@ -42,6 +42,9 @@ export const requestStructureDefThunk = createAsyncThunk<
 >('resource/requestResourceThunk', async (param, { rejectWithValue }) => {
   const response: AxiosResponse<any> = await api.get(
     `/StructureDefinition?kind=resource&derivation=specialization&id=${param}`
+    // keep comments for testing on different kind of resources
+    /* `/StructureDefinition?id=variant` */
+    /*`/StructureDefinition?kind=resource&derivation=specialization&id=observation` */
   );
   if (response.status === 200) {
     return response.data.entry[0].resource;

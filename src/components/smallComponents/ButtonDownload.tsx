@@ -45,7 +45,7 @@ const ButtonDownload: React.FC<ButtonDownloadProps> = ({
           dispatch(
             setSnackbarOpen({
               severity: 'success',
-              message: 'Profile Downloaded ! Congratulation !'
+              message: 'Profile Downloaded ! Congratulations !'
             })
           );
         }}

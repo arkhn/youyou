@@ -9,7 +9,6 @@ import { ButtonDownload } from 'components/smallComponents';
 import AttributeEditor from 'components/extensionEditor/attributeEditor/AttributeEditor';
 import Navbar from 'components/navbar/Navbar';
 import StructureDefSettings from 'components/structureDefSettings/StructureDefSettings';
-//import StructureDefinitionTree from '../structureDefinitionTree/StructureDefinitionTree';
 
 import useStyles from 'components/profileEditor/style';
 
@@ -43,8 +42,6 @@ const ExtensionEditor: React.FC<{}> = () => {
         <React.Fragment>
           <div className={classes.mapping}>
             <Paper className={clsx(classes.paperLeft, classes.paper)}>
-              {/*  to fix when reworking this component */}
-              <Container>{/* <StructureDefinitionTree /> */}</Container>
               <ButtonDownload
                 text="Download extension"
                 toDownload={extensionStructureDefinition}

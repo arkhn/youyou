@@ -93,7 +93,6 @@ const ProfileEditor: React.FC<{}> = () => {
       primitiveTypes,
       complexTypes
     );
-
   /**
    * If click on add or delete icon, open a dialog box to confirm actions
    * @param e event onClick
@@ -288,6 +287,7 @@ const ProfileEditor: React.FC<{}> = () => {
         onCloseClick={(): void => {
           setOpen({ open: false });
           setSliceName('');
+          setSliceNameError({ error: false, message: '' });
         }}
         onFormSubmit={
           open.add === false ? handleSubmitSliceDelete : handleSubmitSliceAdd
