@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from 'state/store';
+import { useSelector } from 'react-redux';
+import { RootState, useAppDispatch } from 'state/store';
 
 import Autocomplete, {
   AutocompleteRenderInputParams
@@ -13,7 +13,7 @@ import {
   IElementDefinition
 } from '@ahryman40k/ts-fhir-types/lib/R4';
 
-import { updateStructureDefExtension } from 'state/actions/resourceActions';
+import { updateStructureDefExtension } from 'state/reducers/resource';
 
 type AttributeEditorProps = {
   structureDefinition: IStructureDefinition;
@@ -25,7 +25,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
   const { datatypes } = useSelector((state: RootState) => {
     return state.codeSystem;
   });
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const structureDef = { ...structureDefinition };
 
   const getElementById = (
@@ -152,7 +152,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
             options={datatypes ?? []}
             style={{ width: 300 }}
             onChange={(event, value): void => {
-              setDataType(value as string);
+              value && setDataType(value);
               // TODO : complete structureDefinitionTree with getStructureDef(value as string)
             }}
             renderInput={(

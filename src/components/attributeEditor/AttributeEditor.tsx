@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-import { useDispatch } from 'react-redux';
-
 import {
   IElementDefinition,
   IStructureDefinition
@@ -9,10 +7,12 @@ import {
 import { Typography, Button } from '@material-ui/core';
 import { ToggleButton } from '@material-ui/lab';
 
-import { updateStructureDefProfile } from 'state/actions/resourceActions';
+import { updateStructureDefProfile } from 'state/reducers/resource';
+import { useAppDispatch } from 'state/store';
 import { CssTextField, CssToggleButtonGroup } from 'components/smallComponents';
-import useStyles from 'components/attributeEditor/style';
 import { allCardinalities, isDisabledInput } from './utils';
+
+import useStyles from 'components/attributeEditor/style';
 
 type AttributeEditorProps = {
   attribute: IElementDefinition;
@@ -37,7 +37,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
   );
   const [defaultValueMax, setDefaultValueMax] = useState(attribute?.max);
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const classes = useStyles();
 

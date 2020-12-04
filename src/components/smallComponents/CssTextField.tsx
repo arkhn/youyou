@@ -13,6 +13,9 @@ const CssTextField = withStyles((theme: Theme) => ({
       },
       '&.Mui-focused fieldset': {
         borderColor: theme.palette.secondary.dark
+      },
+      '&.Mui-error fieldset': {
+        borderColor: theme.palette.error.main
       }
     }
   }

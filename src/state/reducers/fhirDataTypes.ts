@@ -1,20 +1,15 @@
-import {
-  GetFhirTypesFetchFailureAction,
-  GetFhirTypesFetchStartAction,
-  GetFhirTypesFetchSuccessAction,
-  GET_FHIR_TYPES_FETCH_FAILURE,
-  GET_FHIR_TYPES_FETCH_START,
-  GET_FHIR_TYPES_FETCH_SUCCESS
-} from 'state/actions/fhirDataTypesActions';
+import { createSlice } from '@reduxjs/toolkit';
 
+import { requestFhirDataTypesThunk } from 'state/thunkMiddleware';
 import { createComplexTypes } from 'state/utils';
 import { RenderAttributesTree } from 'types';
 
 export type FhirDataTypesState = {
+  requestId?: string;
   primitiveTypes: string[];
   complexTypes: RenderAttributesTree[];
   loadingTypes: boolean;
-  errorTypes: Error | null;
+  errorTypes: Error | undefined;
   structureDefinitionTree: RenderAttributesTree[];
 };
 
@@ -22,51 +17,50 @@ const initialState: FhirDataTypesState = {
   primitiveTypes: [],
   complexTypes: [],
   loadingTypes: false,
-  errorTypes: null,
+  errorTypes: undefined,
   structureDefinitionTree: []
 };
 
-type AllFhirDataTypesAction =
-  | GetFhirTypesFetchSuccessAction
-  | GetFhirTypesFetchStartAction
-  | GetFhirTypesFetchFailureAction;
-
-export const fhirDataTypes = (
-  state: FhirDataTypesState = initialState,
-  action: AllFhirDataTypesAction
-): FhirDataTypesState => {
-  switch (action.type) {
-    case GET_FHIR_TYPES_FETCH_START:
-      return {
-        ...state,
-        loadingTypes: true
-      };
-    case GET_FHIR_TYPES_FETCH_SUCCESS: {
-      const complexTypes = createComplexTypes(
-        action.payload.complexTypes,
-        action.payload.complexTypes,
-        action.payload.primitiveTypes
-      );
-      const structureDefinitionTree = createComplexTypes(
-        action.payload.complexTypes,
-        action.payload.structureDefinitionTree,
-        action.payload.primitiveTypes
-      );
-      return {
-        ...state,
-        primitiveTypes: action.payload.primitiveTypes,
-        complexTypes: complexTypes,
-        structureDefinitionTree: structureDefinitionTree,
-        loadingTypes: false,
-        errorTypes: null
-      };
-    }
-    case GET_FHIR_TYPES_FETCH_FAILURE:
-      return {
-        ...state,
-        errorTypes: action.payload
-      };
-    default:
-      return state;
+const fhirDataTypesSlice = createSlice({
+  name: 'fhirDataTypesReducer',
+  initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(requestFhirDataTypesThunk.pending, (state, { meta }) => {
+      state.requestId = meta.requestId;
+      state.loadingTypes = true;
+    });
+    builder.addCase(
+      requestFhirDataTypesThunk.fulfilled,
+      (state, { payload }) => {
+        const complexTypes = createComplexTypes(
+          payload.complexDataTypes,
+          payload.complexDataTypes,
+          payload.primitiveDataTypes
+        );
+        const structureDefinitionTree = createComplexTypes(
+          payload.complexDataTypes,
+          payload.structureDef,
+          payload.primitiveDataTypes
+        );
+        state.primitiveTypes = payload.primitiveDataTypes;
+        state.complexTypes = complexTypes;
+        state.structureDefinitionTree = structureDefinitionTree;
+        state.loadingTypes = false;
+        state.errorTypes = undefined;
+      }
+    );
+    builder.addCase(
+      requestFhirDataTypesThunk.rejected,
+      (state, { payload }) => {
+        state.loadingTypes = false;
+        state.structureDefinitionTree = [];
+        state.primitiveTypes = [];
+        state.complexTypes = [];
+        state.errorTypes = payload ?? undefined;
+      }
+    );
   }
-};
+});
+
+export default fhirDataTypesSlice.reducer;

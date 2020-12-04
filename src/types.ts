@@ -13,13 +13,14 @@ export type FetchedIds = {
 };
 
 export type ResourceState = {
+  requestId?: string;
   resources: { id: string }[];
-  structureDefinition: IStructureDefinition | null;
-  extensionStructureDefinition: IStructureDefinition | null;
-  selectedResourceId: string | null;
+  structureDefinition: IStructureDefinition | undefined;
+  extensionStructureDefinition: IStructureDefinition | undefined;
+  selectedResourceId: string | undefined;
   selectedAttributeId?: string;
   loading: boolean;
-  error: Error | null;
+  error: Error | undefined;
   structureDefMeta: boolean;
   newElementDefinition?: IElementDefinition;
 };
@@ -45,9 +46,9 @@ export type fhirDataState = {
 export interface RenderAttributesTree {
   name: string;
   id: string;
-  type: string | IElementDefinitionType[];
+  type: string | IElementDefinitionType[] | undefined;
   children: RenderAttributesTree[];
-  min: number | null;
+  min: number | undefined;
   max: string;
   definition: string;
   binding?: {
@@ -70,9 +71,9 @@ export interface RenderComplexType {
 
 export interface SimplifiedAttributes {
   path: string;
-  type: string | IElementDefinitionType[];
+  type: string | IElementDefinitionType[] | undefined;
   definition: string;
-  min: number | null;
+  min: number | undefined;
   max: string;
   binding?: {
     strength?: ElementDefinitionBindingStrengthKind;

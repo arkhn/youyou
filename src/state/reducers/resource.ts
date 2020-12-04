@@ -1,121 +1,148 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import extensionStructureDefinition from 'assets/extensionTemplate';
 import {
-  SELECT_RESOURCE,
-  ResourceAction,
-  GET_IDS_FAILURE,
-  GetIdsFailureAction,
-  GET_FETCH_START,
-  GetFetchStartAction,
-  GET_IDS_SUCCESS,
-  GetIdsSuccessAction,
-  UPDATE_STRUCTURE_DEF_PROFILE,
-  UpdateStructureDefProfileAction,
-  UPDATE_STRUCTURE_DEF_FAILURE,
-  UpdateStructureDefFailureAction,
-  SELECT_ATTRIBUTE,
-  SelectAttributeAction,
-  UPDATE_STRUCTURE_DEF_EXTENSION,
-  UpdateStructureDefExtensionAction,
-  SELECT_STRUCTUREDEFMETA,
-  SelectStructureDefMetaAction,
-  CREATE_NEW_ELEMENTDEFINITION,
-  CreateNewElementDefinitionAction
-} from 'state/actions/resourceActions';
-import { IStructureDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
-import { ResourceState } from 'types';
+  IElementDefinition,
+  IStructureDefinition
+} from '@ahryman40k/ts-fhir-types/lib/R4';
+import { RenderAttributesTree, ResourceState } from 'types';
+import {
+  requestIdsThunk,
+  requestStructureDefThunk
+} from 'state/thunkMiddleware';
+import { structureDefAddSlice, structureDefDeleteSlice } from './utils';
 
 const initialState: ResourceState = {
   resources: [],
-  structureDefinition: null,
+  structureDefinition: undefined,
   extensionStructureDefinition: extensionStructureDefinition as IStructureDefinition,
-  selectedResourceId: null,
+  selectedResourceId: undefined,
   selectedAttributeId: undefined,
   loading: false,
-  error: null,
+  error: undefined,
   structureDefMeta: true,
   newElementDefinition: undefined
 };
 
-export type AllResourcesAction =
-  | GetIdsFailureAction
-  | GetFetchStartAction
-  | GetIdsSuccessAction
-  | ResourceAction
-  | UpdateStructureDefFailureAction
-  | UpdateStructureDefProfileAction
-  | SelectAttributeAction
-  | UpdateStructureDefExtensionAction
-  | SelectStructureDefMetaAction
-  | CreateNewElementDefinitionAction;
-
-export const resource = (
-  state: ResourceState = initialState,
-  action: AllResourcesAction
-): ResourceState => {
-  switch (action.type) {
-    case SELECT_RESOURCE:
-      return {
-        ...state,
-        selectedResourceId: action.payload
-      };
-    case GET_FETCH_START:
-      return {
-        ...state,
-        loading: true
-      };
-    case GET_IDS_SUCCESS:
-      return {
-        ...state,
-        loading: false,
-        resources: action.payload,
-        error: null
-      };
-    case GET_IDS_FAILURE:
-      return {
-        ...state,
-        loading: false,
-        resources: [],
-        error: action.payload
-      };
-    case UPDATE_STRUCTURE_DEF_PROFILE:
-      return {
-        ...state,
-        loading: false,
-        structureDefinition: action.payload,
-        error: null
-      };
-    case UPDATE_STRUCTURE_DEF_FAILURE:
-      return {
-        ...state,
-        loading: false,
-        structureDefinition: null,
-        error: action.payload
-      };
-    case SELECT_ATTRIBUTE:
-      return {
-        ...state,
-        selectedAttributeId: action.payload,
-        structureDefMeta: false
-      };
-    case UPDATE_STRUCTURE_DEF_EXTENSION:
-      return {
-        ...state,
-        loading: false,
-        extensionStructureDefinition: action.payload,
-        error: null
-      };
-    case SELECT_STRUCTUREDEFMETA:
-      return {
-        ...state,
-        selectedAttributeId: undefined,
-        structureDefMeta: true
-      };
-    case CREATE_NEW_ELEMENTDEFINITION:
-      return {
-        ...state,
-        newElementDefinition: action.payload
-      };
-    default:
-      return state;
+const resourceSlice = createSlice({
+  name: 'resourceReducer',
+  initialState,
+  reducers: {
+    selectResource: (
+      state: ResourceState,
+      action: PayloadAction<string | undefined>
+    ) => {
+      state.selectedResourceId = action.payload;
+    },
+    selectAttributeId: (
+      state: ResourceState,
+      action: PayloadAction<string | undefined>
+    ) => {
+      state.selectedAttributeId = action.payload;
+      state.structureDefMeta = false;
+    },
+    selectStructureDefMeta: (state: ResourceState) => {
+      state.selectedAttributeId = undefined;
+      state.structureDefMeta = true;
+    },
+    createNewElementDefinition: (
+      state: ResourceState,
+      action: PayloadAction<IElementDefinition | undefined>
+    ) => {
+      state.newElementDefinition = action.payload;
+    },
+    updateStructureDefExtension: (
+      state: ResourceState,
+      action: PayloadAction<IStructureDefinition | undefined>
+    ) => {
+      state.extensionStructureDefinition = action.payload;
+    },
+    updateStructureDefProfile: (
+      state: ResourceState,
+      action: PayloadAction<IStructureDefinition | undefined>
+    ) => {
+      state.structureDefinition = action.payload;
+    },
+    addSlice: (
+      state: ResourceState,
+      action: PayloadAction<{
+        nodeToSlice: RenderAttributesTree;
+        structureDefinition: IStructureDefinition;
+        sliceName: string;
+        index: number;
+      }>
+    ) => {
+      const {
+        nodeToSlice,
+        structureDefinition,
+        sliceName,
+        index
+      } = action.payload;
+      state.structureDefinition = structureDefAddSlice(
+        nodeToSlice,
+        structureDefinition,
+        sliceName,
+        index
+      );
+    },
+    deleteSlice: (
+      state: ResourceState,
+      action: PayloadAction<{
+        node: RenderAttributesTree;
+        structureDefinition: IStructureDefinition;
+      }>
+    ) => {
+      const { node, structureDefinition } = action.payload;
+      state.structureDefinition = structureDefDeleteSlice(
+        node,
+        structureDefinition
+      );
+    }
+  },
+  extraReducers: (builder) => {
+    builder.addCase(requestIdsThunk.pending, (state, { meta }) => {
+      state.requestId = meta.requestId;
+      state.loading = true;
+    });
+    builder.addCase(requestIdsThunk.fulfilled, (state, { payload }) => {
+      state.loading = false;
+      state.resources = payload;
+      state.error = undefined;
+    });
+    builder.addCase(requestIdsThunk.rejected, (state, { payload }) => {
+      state.loading = false;
+      state.resources = [];
+      state.error = payload ?? undefined;
+    });
+    builder.addCase(requestStructureDefThunk.pending, (state, { meta }) => {
+      state.requestId = meta.requestId;
+      state.loading = true;
+    });
+    builder.addCase(
+      requestStructureDefThunk.fulfilled,
+      (state, { payload }) => {
+        state.loading = false;
+        state.structureDefinition = payload;
+        state.error = undefined;
+        state.structureDefMeta = true;
+      }
+    );
+    builder.addCase(requestStructureDefThunk.rejected, (state, { payload }) => {
+      state.loading = false;
+      state.structureDefinition = undefined;
+      state.error = payload ?? undefined;
+    });
   }
-};
+});
+
+export default resourceSlice.reducer;
+export const {
+  selectResource,
+  selectAttributeId,
+  selectStructureDefMeta,
+  createNewElementDefinition,
+  updateStructureDefExtension,
+  updateStructureDefProfile,
+  addSlice,
+  deleteSlice
+} = resourceSlice.actions;

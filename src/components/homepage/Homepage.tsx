@@ -1,35 +1,34 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { Typography, CircularProgress, Paper, Button } from '@material-ui/core';
 import clsx from 'clsx';
 
-import { setSnackbarOpen } from 'state/actions/snackbarActions';
-import {
-  selectResource,
-  selectStructureDefMeta
-} from 'state/actions/resourceActions';
-import { RootState } from 'state/store';
-import { requestResource } from 'state/thunkMiddleware';
+import { RootState, useAppDispatch } from 'state/store';
+import { selectResource } from 'state/reducers/resource';
+import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
+import { requestStructureDefThunk } from 'state/thunkMiddleware';
 
 import Navbar from 'components/navbar/Navbar';
+import {
+  choosingCardsItems,
+  ChoosingCardsItemsType
+} from 'components/homepage/utils';
 import { ReactComponent as FhirLogo } from 'assets/img/fhir-logo.svg';
-import { choosingCardsItems, ChoosingCardsItemsType } from './utils';
 
 import useStyles from './style';
 
 const Homepage: React.FC<{}> = () => {
-  const { loading } = useSelector((state: RootState) => state.resource);
-  const dispatch = useDispatch();
+  const { loading } = useSelector((state: RootState) => state.resourceSlice);
+  const dispatch = useAppDispatch();
   const classes = useStyles();
 
   const dispatchResourceSelected = (resource: { id: string }): void => {
     if (resource.id) {
       dispatch(selectResource(resource.id));
-      dispatch(requestResource(resource.id));
-      dispatch(setSnackbarOpen(undefined, ''));
-      dispatch(selectStructureDefMeta());
+      dispatch(requestStructureDefThunk(resource.id));
+      dispatch(setSnackbarOpen({ severity: undefined, message: '' }));
     }
   };
 

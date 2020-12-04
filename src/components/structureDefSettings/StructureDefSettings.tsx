@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { IStructureDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { Button, Container, Typography } from '@material-ui/core';
@@ -11,12 +11,12 @@ import get from 'lodash.get';
 import {
   updateStructureDefProfile,
   updateStructureDefExtension
-} from 'state/actions/resourceActions';
-import { setSnackbarOpen } from 'state/actions/snackbarActions';
-import { RootState } from 'state/store';
+} from 'state/reducers/resource';
+import { RootState, useAppDispatch } from 'state/store';
 import RenderComplexType from 'components/structureDefSettings/complexTypesEditor/RenderComplexType';
 import { createJSONTree } from 'components/structureDefSettings/utils';
 import { SnackBarWithClose } from 'components/smallComponents';
+import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 
 import useStyles from 'components/structureDefSettings/style';
 
@@ -32,7 +32,7 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
   const { complexTypes, primitiveTypes, structureDefinitionTree } = useSelector(
     (state: RootState) => state.fhirDataTypes
   );
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const classes = useStyles();
 
   const emptyTree = createJSONTree(
@@ -50,10 +50,10 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
         snapshot: { ...structureDefinition.snapshot }
       };
       if (structureDefinitionType === 'resource') {
-        dispatch(setSnackbarOpen('success', 'Saved !'));
+        dispatch(setSnackbarOpen({ severity: 'success', message: 'Saved !' }));
         dispatch(updateStructureDefProfile(structureDefinitonToEdit));
       } else if (structureDefinitionType === 'extension') {
-        dispatch(setSnackbarOpen('success', 'Saved !'));
+        dispatch(setSnackbarOpen({ severity: 'success', message: 'Saved !' }));
         dispatch(updateStructureDefExtension(structureDefinitonToEdit));
       }
     }

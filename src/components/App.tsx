@@ -5,23 +5,23 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import { StylesProvider, CssBaseline } from '@material-ui/core';
 
+import {
+  requestIdsThunk,
+  requestFhirDataTypesThunk
+} from 'state/thunkMiddleware';
+import { store, persistor } from 'state/store';
 import Homepage from 'components/homepage/Homepage';
 import ProfileEditor from 'components/profileEditor/ProfileEditor';
 import ExtensionEditor from 'components/extensionEditor/ExtensionEditor';
-import {
-  requestIds,
-  requestExtensionDataTypes,
-  requestFhirDataTypes
-} from 'state/thunkMiddleware';
-import { store, persistor } from 'state/store';
+import { requestCodeSystemDataTypeThunk } from 'state/thunkMiddleware';
 
 const App = (): JSX.Element => {
   /* @ts-ignore */
-  store.dispatch(requestIds());
+  store.dispatch(requestIdsThunk());
   /* @ts-ignore */
-  store.dispatch(requestExtensionDataTypes());
+  store.dispatch(requestCodeSystemDataTypeThunk());
   /* @ts-ignore */
-  store.dispatch(requestFhirDataTypes());
+  store.dispatch(requestFhirDataTypesThunk());
   return (
     <Provider store={store}>
       <CssBaseline />
