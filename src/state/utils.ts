@@ -103,11 +103,7 @@ export const createSimplifiedAttributes = (
       type.snapshot.element,
       valueSet
     );
-    transformedAttributes.forEach(
-      (transformedAttribute: SimplifiedAttributes) => {
-        simplifiedSDef = simplifiedSDef.concat(transformedAttribute);
-      }
-    );
+    simplifiedSDef = simplifiedSDef.concat(transformedAttributes);
   });
   return simplifiedSDef;
 };
