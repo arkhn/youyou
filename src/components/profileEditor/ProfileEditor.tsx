@@ -69,7 +69,7 @@ const ProfileEditor: React.FC<{}> = () => {
 
   const [newStructureDef, setNewStructureDef] = useState<
     IStructureDefinition | undefined
-  >(cloneDeep(structureDefinition));
+  >(structureDefinition);
   const [open, setOpen] = useState<OpenDialogState>({ open: false });
   const [sliceName, setSliceName] = useState('');
   const [sliceNameError, setSliceNameError] = useState({
