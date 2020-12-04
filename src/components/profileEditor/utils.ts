@@ -31,7 +31,6 @@ export const createComplexSnapshot = (
     attribute.forEach(
       (type) => type && renderTreeAttributes(type, type, attributeTree)
     );
-
     const children = createComplexTypes(
       complexTypes,
       attributeTree.children[0].children,
@@ -43,7 +42,6 @@ export const createComplexSnapshot = (
     );
     attributeTree.children[0].children = children;
   }
-
   const changePath = (
     atts: RenderAttributesTree[],
     path: string
@@ -78,38 +76,36 @@ export const createElementDefinitionTree = (
   return elemDef;
 };
 
+/**
+ * Find the index in structureDefinition.snapshot.element to which we are going to add the new element.
+ * Creates an array of indexes, and returns last index + 1, to add the element after the index we found.
+ *
+ * @param structureDefinition original structure definition without the slice, used to find the index of the node we're looking for
+ * @param node element we want to slice
+ * @returns a number
+ *
+ * It splits the selected node's path, and join at each iteration every element of the splited selected node path.
+ * If an element.id is identical to the splited selected node path, its index is added to the indexes array.
+ * For exemple in the resource Patient, Patient.contact.period.start is not existing in the orginal snapshot, so we're going
+ * to look if there is a Patient, then a Patient.contact, then a Patient.contact.period (all of them are existing respectively
+ * at indexes 0, 20 and 30)
+ * As Patient.contact.period.start isn't existing, it's going to return the last index (30) + 1 to add the element at index 31.
+ *
+ */
 export const findIndex = (
   structureDefinition: IStructureDefinition,
   node: RenderAttributesTree
 ): number => {
-  const index: number[] = [];
-  structureDefinition.snapshot?.element.forEach((element) => {
-    let elementPathForIndex = '';
-    element?.id?.split('.').forEach((el) => {
-      elementPathForIndex =
-        (elementPathForIndex !== ''
-          ? elementPathForIndex + '.'
-          : elementPathForIndex) + el;
-      if (
-        elementPathForIndex === node.newPath &&
-        structureDefinition.snapshot
-      ) {
-        index.push(structureDefinition.snapshot.element.indexOf(element));
-      }
-    });
+  const indexes: number[] = [];
+  const newPath = node?.newPath?.split('.');
+  structureDefinition.snapshot?.element.forEach((element, elementIndex) => {
+    if (
+      element?.id ===
+      // returns a copy of newPath selected from index 0 to index element.id.split('.').length, and join it with dots to have a path
+      newPath?.slice(0, element?.id?.split('.').length).join('.')
+    ) {
+      indexes.push(elementIndex);
+    }
   });
-  if (index.length === 0) {
-    const newPath = node?.newPath?.split('.');
-    structureDefinition.snapshot?.element.forEach((element) => {
-      if (
-        element?.id ===
-        newPath?.slice(0, element?.id?.split('.').length).join('.')
-      ) {
-        structureDefinition &&
-          structureDefinition.snapshot &&
-          index.push(structureDefinition.snapshot.element.indexOf(element));
-      }
-    });
-  }
-  return index[index.length - 1] + 1;
+  return indexes[indexes.length - 1] + 1;
 };

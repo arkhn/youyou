@@ -58,7 +58,7 @@ const SliceDialogBox: React.FC<SliceDialogBoxProps> = ({
           </Alert>
         )}
         <form onSubmit={onFormSubmit}>
-          {attributeSelected.add === true && (
+          {attributeSelected.add && (
             <CssTextField
               variant="outlined"
               label="slice name"

@@ -19,10 +19,14 @@ type TreeNodeProps = {
 
 const TreeNode: React.FC<TreeNodeProps> = ({ nodes, handleClickSlices }) => {
   const classes = useStyles();
+
+  /**
+   * check if in path, the last word (words in path delimited by '.') contains a ':'
+   * for exemple, in Patient.identifier.use:telephone, check if in ["Patient", "identifier", "use:telephone"] the last index "use:telephone".split(":").length > 1
+   * If it's superior to 1, means that there's a ":" so it's a slice
+   */
   const isSlice =
-    nodes.id.split('.')[nodes.id.split('.').length - 1].split(':').length > 1
-      ? true
-      : false;
+    nodes.id.split('.')[nodes.id.split('.').length - 1].split(':').length > 1;
   const [display, setDisplay] = useState(isSlice ? 'block' : 'none');
 
   return (

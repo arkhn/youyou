@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 
 import clsx from 'clsx';
 import {
+  IStructureDefinition,
   IElementDefinition,
   IElementDefinition_Binding as IElementDefinitionBinding
 } from '@ahryman40k/ts-fhir-types/lib/R4';
@@ -66,7 +67,9 @@ const ProfileEditor: React.FC<{}> = () => {
     };
   });
 
-  const [newStructureDef, setNewStructureDef] = useState(structureDefinition);
+  const [newStructureDef, setNewStructureDef] = useState<
+    IStructureDefinition | undefined
+  >(cloneDeep(structureDefinition));
   const [open, setOpen] = useState<OpenDialogState>({ open: false });
   const [sliceName, setSliceName] = useState('');
   const [sliceNameError, setSliceNameError] = useState({
@@ -120,10 +123,10 @@ const ProfileEditor: React.FC<{}> = () => {
       newStructureDef &&
       nodeToSlice &&
       newStructureDef?.snapshot?.element.find(
-        (element) => element.id === nodeToSlice.newPath + ':' + sliceName
+        (element) => element.id === `${nodeToSlice.newPath}:${sliceName}`
       );
     if (nodeToSlice && newStructureDef && open) {
-      if (sliceName !== '' && !existingPath) {
+      if (sliceName && !existingPath) {
         const index = findIndex(newStructureDef, nodeToSlice);
         dispatch(
           addSlice({
@@ -142,18 +145,19 @@ const ProfileEditor: React.FC<{}> = () => {
         setSliceNameError({ error: false, message: '' });
         setOpen({ open: false });
         setNodeToSlice(undefined);
-      } else if (sliceName !== '' && existingPath) {
+      } else if (sliceName && existingPath) {
         setSliceNameError({
           message:
             'This slice is already existing with the same name. If you want to create another slice, please choose a new name.',
           error: true
         });
-      } else if (sliceName === '') {
+      } else if (!sliceName) {
         setSliceNameError({
           message: 'Please choose a name for this slice',
           error: true
         });
       }
+      setSliceName('');
     }
   };
 
@@ -177,6 +181,7 @@ const ProfileEditor: React.FC<{}> = () => {
         deleteSlice({ node: nodeToSlice, structureDefinition: newElements })
       );
       setOpen({ open: false });
+      setNodeToSlice(undefined);
     }
   };
 
@@ -186,7 +191,7 @@ const ProfileEditor: React.FC<{}> = () => {
   ): void => {
     e.preventDefault();
     dispatch(selectAttributeId(node.newPath));
-    const findAttribute = structureDefinition?.snapshot?.element.find(
+    const findAttribute = newStructureDef?.snapshot?.element.find(
       (att: IElementDefinition) => att.id === node.newPath
     );
     if (!findAttribute) {
@@ -213,14 +218,14 @@ const ProfileEditor: React.FC<{}> = () => {
             ? (node.binding as IElementDefinitionBinding)
             : undefined
         };
-        const structureDefToEdit = cloneDeep(structureDefinition);
+        const structureDefToEdit = cloneDeep(newStructureDef);
         structureDefToEdit?.snapshot?.element.push(newElement);
         setNewStructureDef(structureDefToEdit);
       }
     }
   };
 
-  const renderBreadcrumbs = (): JSX.Element | JSX.Element[] | undefined => {
+  const renderBreadcrumbs = (): React.ReactNode => {
     if (structureDefMeta)
       return <Typography className={classes.capitalize}>Metadata</Typography>;
     return splitedAttributeSelected?.map((split: string) => (
@@ -234,7 +239,7 @@ const ProfileEditor: React.FC<{}> = () => {
     return <div>Loading</div>;
   }
 
-  if (!structureDefinition) {
+  if (!newStructureDef) {
     return <>Error</>;
   }
 
@@ -243,18 +248,18 @@ const ProfileEditor: React.FC<{}> = () => {
       <Navbar />
       <div className={classes.mapping}>
         <Paper className={clsx(classes.paperLeft, classes.paper)}>
-          <Typography variant="h1">{structureDefinition.name}</Typography>
+          <Typography variant="h1">{newStructureDef?.name}</Typography>
           <Container className={classes.treeView}>
             <StructureDefinitionTree
               onLabelClick={handleClick}
               uiAttributes={attributesForUI}
-              structureDefinitionId={structureDefinition.id}
+              structureDefinitionId={newStructureDef?.id}
               handleClickSlices={handleClickForSlice}
             />
           </Container>
           <ButtonDownload
             text="Download profile"
-            toDownload={structureDefinition}
+            toDownload={newStructureDef}
           />
         </Paper>
         <Container className={classes.containerRight}>

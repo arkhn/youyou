@@ -13,8 +13,8 @@ import { RenderAttributesTree } from 'types';
 import useStyles from './style';
 
 type StructureDefinitionTreeProps = {
-  uiAttributes?: RenderAttributesTree | undefined | null;
   structureDefinitionId?: string;
+  uiAttributes?: RenderAttributesTree;
   onLabelClick?: (
     event: React.MouseEvent<Element, MouseEvent>,
     nodes: RenderAttributesTree
@@ -26,10 +26,10 @@ type StructureDefinitionTreeProps = {
   ) => void;
 };
 
-export interface RenderNode {
+interface RenderedNode {
   id: string;
   name: string;
-  children: RenderNode[];
+  children: RenderedNode[];
 }
 
 const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({

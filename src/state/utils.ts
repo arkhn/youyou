@@ -97,16 +97,15 @@ export const createSimplifiedAttributes = (
   structureDefinition: IStructureDefinition[],
   valueSet: ICodeSystem[]
 ): SimplifiedAttributes[] => {
-  const simplifiedSDef: SimplifiedAttributes[] = [];
-  const newSDef = cloneDeep(structureDefinition);
-  newSDef.forEach((type: any) => {
+  let simplifiedSDef: SimplifiedAttributes[] = [];
+  structureDefinition.forEach((type: any) => {
     const transformedAttributes = transformAttributes(
       type.snapshot.element,
       valueSet
     );
     transformedAttributes.forEach(
       (transformedAttribute: SimplifiedAttributes) => {
-        simplifiedSDef.push(transformedAttribute);
+        simplifiedSDef = simplifiedSDef.concat(transformedAttribute);
       }
     );
   });

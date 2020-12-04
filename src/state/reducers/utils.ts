@@ -98,7 +98,7 @@ export const structureDefDeleteSlice = (
 ): IStructureDefinition | undefined => {
   const indexes: number[] = [];
   if (structureDefinition.snapshot) {
-    structureDefinition.snapshot.element.forEach((element) => {
+    structureDefinition.snapshot.element.forEach((element, elementIndex) => {
       if (element.id && element.id?.split(':').length > 1) {
         let splitName = '';
         element.id?.split('.').forEach((split) => {
@@ -107,7 +107,7 @@ export const structureDefDeleteSlice = (
             splitName === sliceToDelete.newPath?.split('.').join('') &&
             structureDefinition.snapshot
           ) {
-            indexes.push(structureDefinition.snapshot.element.indexOf(element));
+            indexes.push(elementIndex);
           }
         });
       }
