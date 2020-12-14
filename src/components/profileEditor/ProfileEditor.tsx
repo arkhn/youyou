@@ -275,7 +275,7 @@ const ProfileEditor: React.FC<{}> = () => {
             )}
             {selectedAttributeId && attribute && newStructureDef && (
               <AttributeEditor
-                attribute={attribute}
+                selectedAttributeId={selectedAttributeId}
                 structureDefinition={newStructureDef}
               />
             )}
