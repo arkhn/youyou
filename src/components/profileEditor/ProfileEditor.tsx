@@ -16,7 +16,8 @@ import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 import {
   selectAttributeId,
   addSlice,
-  deleteSlice
+  deleteSlice,
+  createNewElementDefinition
 } from 'state/reducers/resource';
 import AttributeEditor from 'components/attributeEditor/AttributeEditor';
 import { ButtonDownload, SnackBarWithClose } from 'components/smallComponents';
@@ -25,7 +26,6 @@ import StructureDefinitionTree from 'components/structureDefinitionTree/Structur
 import StructureDefSettings from 'components/structureDefSettings/StructureDefSettings';
 import {
   createComplexSnapshot,
-  createElementDefinitionTree,
   findIndex
 } from 'components/profileEditor/utils';
 import SliceDialogBox from './sliceDialogBox/SliceDialogBox';
@@ -80,9 +80,6 @@ const ProfileEditor: React.FC<{}> = () => {
     RenderAttributesTree | undefined
   >(undefined);
   const splitedAttributeSelected = selectedAttributeId?.split('.');
-  const attribute = newStructureDef?.snapshot?.element?.find(
-    (att: IElementDefinition) => att.id === selectedAttributeId
-  );
 
   useEffect(() => {
     setNewStructureDef(structureDefinition);
@@ -126,8 +123,8 @@ const ProfileEditor: React.FC<{}> = () => {
         (element) => element.id === `${nodeToSlice.newPath}:${sliceName}`
       );
     if (nodeToSlice && newStructureDef && open) {
-      if (sliceName && !existingPath) {
-        const index = findIndex(newStructureDef, nodeToSlice);
+      if (sliceName && !existingPath && nodeToSlice.newPath) {
+        const index = findIndex(newStructureDef, nodeToSlice.newPath);
         dispatch(
           addSlice({
             nodeToSlice,
@@ -195,33 +192,24 @@ const ProfileEditor: React.FC<{}> = () => {
       (att: IElementDefinition) => att.id === node.newPath
     );
     if (!findAttribute) {
-      const elementDefinitionType = complexTypes.find(
-        (type: RenderAttributesTree) => type.id === 'ElementDefinition'
-      );
-      if (elementDefinitionType) {
-        const newAttribute = createElementDefinitionTree(
-          elementDefinitionType.children
-        );
-        const newElement: IElementDefinition = {
-          ...newAttribute,
-          base: {
-            min: node.min,
-            max: node.max,
-            path: node.id
-          },
+      const newElement: IElementDefinition = {
+        base: {
           min: node.min,
           max: node.max,
-          id: node.newPath,
-          path: node.newPath,
-          definition: node.definition,
-          binding: node.binding
-            ? (node.binding as IElementDefinitionBinding)
-            : undefined
-        };
-        const structureDefToEdit = cloneDeep(newStructureDef);
-        structureDefToEdit?.snapshot?.element.push(newElement);
-        setNewStructureDef(structureDefToEdit);
-      }
+          path: node.id
+        },
+        min: node.min,
+        max: node.max,
+        id: node.newPath,
+        path: node.newPath,
+        definition: node.definition,
+        binding: node.binding
+          ? (node.binding as IElementDefinitionBinding)
+          : undefined
+      };
+      dispatch(createNewElementDefinition(newElement));
+    } else {
+      dispatch(createNewElementDefinition(findAttribute));
     }
   };
 
@@ -273,11 +261,8 @@ const ProfileEditor: React.FC<{}> = () => {
                 structureDefinitionType="resource"
               />
             )}
-            {selectedAttributeId && attribute && newStructureDef && (
-              <AttributeEditor
-                selectedAttributeId={selectedAttributeId}
-                structureDefinition={newStructureDef}
-              />
+            {selectedAttributeId && newStructureDef && (
+              <AttributeEditor structureDefinition={newStructureDef} />
             )}
           </Paper>
         </Container>

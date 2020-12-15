@@ -18,53 +18,84 @@ import cloneDeep from 'lodash.clonedeep';
 import { createJSONTree } from 'components/structureDefSettings/utils';
 import { RenderAttributesTree } from 'types';
 import merge from 'lodash.merge';
+import get from 'lodash.get';
 
 import set from 'lodash.set';
 import RenderComplexType from 'components/structureDefSettings/complexTypesEditor/RenderComplexType';
+import { findIndex } from 'components/profileEditor/utils';
 
 type AttributeEditorProps = {
-  selectedAttributeId: string;
   structureDefinition: IStructureDefinition;
 };
 
 const AttributeEditor: React.FC<AttributeEditorProps> = ({
-  selectedAttributeId,
   structureDefinition
 }) => {
-  const { complexTypes, primitiveTypes } = useSelector(
-    (state: RootState) => state.fhirDataTypes
-  );
   const dispatch = useAppDispatch();
-  const classes = useStyles();
-
-  const newStructureDefinition = cloneDeep(structureDefinition);
-  const attribute = newStructureDefinition?.snapshot?.element?.find(
-    (att: IElementDefinition) => att.id === selectedAttributeId
+  const { complexTypes, primitiveTypes, newElementDefinition } = useSelector(
+    (state: RootState) => {
+      const { complexTypes, primitiveTypes } = state.fhirDataTypes;
+      const { newElementDefinition } = state.resourceSlice;
+      return { complexTypes, primitiveTypes, newElementDefinition };
+    }
   );
+
   const elementDefinitionTree = complexTypes?.find(
     (element: RenderAttributesTree) => element.id === 'ElementDefinition'
   )?.children;
-  const emptyTree =
+
+  const emptyTree: IElementDefinition =
     elementDefinitionTree &&
-    createJSONTree(elementDefinitionTree, cloneDeep(attribute));
+    createJSONTree(elementDefinitionTree, cloneDeep(newElementDefinition));
+
   const [elementDefJSON, setElementDefJSON] = useState(
-    merge(cloneDeep(emptyTree), attribute)
+    merge(cloneDeep(emptyTree), newElementDefinition)
   );
 
   useEffect(() => {
-    setElementDefJSON(merge(emptyTree, attribute));
-  }, [selectedAttributeId]);
+    setElementDefJSON(merge(cloneDeep(emptyTree), newElementDefinition));
+  }, [newElementDefinition]);
 
   const onChangeElementDefJSON = (path: string, value: any): void => {
-    const str: IStructureDefinition = { ...elementDefJSON };
+    const elem: IElementDefinition = { ...elementDefJSON };
     if (value !== '') {
-      set(str, path, value);
+      set(elem, path, value);
     } else {
-      set(str, path, undefined);
+      set(elem, path, undefined);
     }
-    setElementDefJSON(str);
+    setElementDefJSON(elem);
   };
-  console.log(elementDefJSON);
+
+  const onDeleteComplexType = (path: string, i: number): void => {
+    const elem: IElementDefinition = { ...elementDefJSON };
+    const elementDefJSONAttr: any = get(elem, path);
+    elementDefJSONAttr.splice(i, 1);
+    setElementDefJSON(elem);
+  };
+
+  const onAddComplexType = (path: string, value: any): void => {
+    const elem: IElementDefinition = { ...elementDefJSON };
+    const elementDefJSONAttr = get(elem, path);
+    elementDefJSONAttr.push(value);
+    setElementDefJSON(elem);
+  };
+
+  const submit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+    e.preventDefault();
+    if (structureDefinition && elementDefJSON.path) {
+      const toFind = structureDefinition?.snapshot?.element.find(
+        (elem) => elem.path === elementDefJSON.path
+      );
+      const indexToPush = findIndex(structureDefinition, elementDefJSON.path);
+      const newSDef = cloneDeep(structureDefinition);
+      if (newSDef && newSDef.snapshot) {
+        toFind
+          ? newSDef.snapshot.element.splice(indexToPush - 1, 1, elementDefJSON)
+          : newSDef.snapshot.element.splice(indexToPush, 0, elementDefJSON);
+        dispatch(updateStructureDefProfile(newSDef));
+      }
+    }
+  };
 
   return (
     <Container>
@@ -77,11 +108,13 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
             primitiveTypes={primitiveTypes}
             name={''}
             onChangeValue={onChangeElementDefJSON}
+            handleDelete={onDeleteComplexType}
+            handleAdd={onAddComplexType}
           />
         )}
       </form>
       <div>
-        <Button variant="contained" color="secondary">
+        <Button variant="contained" color="secondary" onClick={submit}>
           Submit
         </Button>
         <Typography color="textSecondary">* Required Fields</Typography>

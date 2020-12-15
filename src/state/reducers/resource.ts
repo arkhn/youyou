@@ -100,38 +100,53 @@ const resourceSlice = createSlice({
     }
   },
   extraReducers: (builder) => {
-    builder.addCase(requestIdsThunk.pending, (state, { meta }) => {
-      state.requestId = meta.requestId;
-      state.loading = true;
-    });
-    builder.addCase(requestIdsThunk.fulfilled, (state, { payload }) => {
-      state.loading = false;
-      state.resources = payload;
-      state.error = undefined;
-    });
-    builder.addCase(requestIdsThunk.rejected, (state, { payload }) => {
-      state.loading = false;
-      state.resources = [];
-      state.error = payload ?? undefined;
-    });
-    builder.addCase(requestStructureDefThunk.pending, (state, { meta }) => {
-      state.requestId = meta.requestId;
-      state.loading = true;
-    });
+    builder.addCase(
+      requestIdsThunk.pending,
+      (state: ResourceState, { meta }) => {
+        state.requestId = meta.requestId;
+        state.loading = true;
+      }
+    );
+    builder.addCase(
+      requestIdsThunk.fulfilled,
+      (state: ResourceState, { payload }) => {
+        state.loading = false;
+        state.resources = payload;
+        state.error = undefined;
+      }
+    );
+    builder.addCase(
+      requestIdsThunk.rejected,
+      (state: ResourceState, { payload }) => {
+        state.loading = false;
+        state.resources = [];
+        state.error = payload ?? undefined;
+      }
+    );
+    builder.addCase(
+      requestStructureDefThunk.pending,
+      (state: ResourceState, { meta }) => {
+        state.requestId = meta.requestId;
+        state.loading = true;
+      }
+    );
     builder.addCase(
       requestStructureDefThunk.fulfilled,
-      (state, { payload }) => {
+      (state: ResourceState, { payload }) => {
         state.loading = false;
         state.structureDefinition = payload;
         state.error = undefined;
         state.structureDefMeta = true;
       }
     );
-    builder.addCase(requestStructureDefThunk.rejected, (state, { payload }) => {
-      state.loading = false;
-      state.structureDefinition = undefined;
-      state.error = payload ?? undefined;
-    });
+    builder.addCase(
+      requestStructureDefThunk.rejected,
+      (state: ResourceState, { payload }) => {
+        state.loading = false;
+        state.structureDefinition = undefined;
+        state.error = payload ?? undefined;
+      }
+    );
   }
 });
 

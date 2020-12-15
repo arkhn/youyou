@@ -94,10 +94,10 @@ export const createElementDefinitionTree = (
  */
 export const findIndex = (
   structureDefinition: IStructureDefinition,
-  node: RenderAttributesTree
+  path: string
 ): number => {
   const indexes: number[] = [];
-  const newPath = node?.newPath?.split('.');
+  const newPath = path.split('.');
   structureDefinition.snapshot?.element.forEach((element, elementIndex) => {
     if (
       element?.id ===
