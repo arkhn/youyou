@@ -98,6 +98,8 @@ const resourceSlice = createSlice({
         node,
         structureDefinition
       );
+      state.selectedAttributeId = undefined;
+      state.structureDefMeta = true;
     }
   },
   extraReducers: (builder) => {

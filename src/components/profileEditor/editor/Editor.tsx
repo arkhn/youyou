@@ -69,7 +69,7 @@ const Editor: React.FC<EditorProps> = ({
     ? createJSONTree(elementDefinitionTree, cloneDeep(newElementDefinition))
     : createJSONTree(structureDefinitionTree, cloneDeep(structureDefinition));
 
-  const [elementJSON, setElementJSON] = useState<
+  const [elementDefJSON, setElementDefJSON] = useState<
     IElementDefinition | undefined
   >(
     structureDefinitionType === 'element'
@@ -85,22 +85,26 @@ const Editor: React.FC<EditorProps> = ({
   );
 
   useEffect(() => {
-    setElementJSON(merge(cloneDeep(emptyTree), newElementDefinition));
+    setElementDefJSON(merge(cloneDeep(emptyTree), newElementDefinition));
   }, [newElementDefinition]);
 
   const submit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
     e.preventDefault();
     if (structureDefinitionType === 'element') {
-      if (structureDefinition && elementJSON && elementJSON.path) {
-        const toFind = structureDefinition?.snapshot?.element.find(
-          (elem) => elem.path === elementJSON.path
+      if (structureDefinition && elementDefJSON && elementDefJSON.path) {
+        const existingElement = structureDefinition?.snapshot?.element.find(
+          (elem) => elem.path === elementDefJSON.path
         );
-        const indexToPush = findIndex(structureDefinition, elementJSON.path);
+        const indexToPush = findIndex(structureDefinition, elementDefJSON.path);
         const newSDef = cloneDeep(structureDefinition);
         if (newSDef && newSDef.snapshot) {
-          toFind
-            ? newSDef.snapshot.element.splice(indexToPush - 1, 1, elementJSON)
-            : newSDef.snapshot.element.splice(indexToPush, 0, elementJSON);
+          existingElement
+            ? newSDef.snapshot.element.splice(
+                indexToPush - 1,
+                1,
+                elementDefJSON
+              )
+            : newSDef.snapshot.element.splice(indexToPush, 0, elementDefJSON);
           dispatch(
             setSnackbarOpen({
               severity: 'success',
@@ -149,17 +153,19 @@ const Editor: React.FC<EditorProps> = ({
           <RenderComplexType
             attributes={elementDefinitionTree}
             complexTypes={complexTypes}
-            structureDefJSON={elementJSON}
+            structureDefJSON={elementDefJSON}
             primitiveTypes={primitiveTypes}
             name={''}
             onChangeValue={(path, value): void =>
-              setElementJSON(onChangeElementJSON(path, value, elementJSON))
+              setElementDefJSON(
+                onChangeElementJSON(path, value, elementDefJSON)
+              )
             }
             handleDelete={(path, i): void =>
-              setElementJSON(onDeleteComplexType(path, i, elementJSON))
+              setElementDefJSON(onDeleteComplexType(path, i, elementDefJSON))
             }
             handleAdd={(path, value): void =>
-              setElementJSON(onAddComplexType(path, value, elementJSON))
+              setElementDefJSON(onAddComplexType(path, value, elementDefJSON))
             }
           />
         )}

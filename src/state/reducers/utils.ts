@@ -42,7 +42,7 @@ export const structureDefAddSlice = (
                 `:${sliceName}` +
                 (endingPath ? '.' + endingPath : ''),
               path: element.id,
-              sliceName: endingPath ? sliceName : undefined,
+              sliceName: sliceName,
               base: {
                 min: element.base.min,
                 max: element.base.max,
