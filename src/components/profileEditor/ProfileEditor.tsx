@@ -19,8 +19,8 @@ import {
   deleteSlice,
   createNewElementDefinition
 } from 'state/reducers/resource';
-import AttributeEditor from 'components/profileEditor/editor/editor';
 import { ButtonDownload, SnackBarWithClose } from 'components/smallComponents';
+import Editor from 'components/profileEditor/editor/Editor';
 import Navbar from 'components/navbar/Navbar';
 import StructureDefinitionTree from 'components/structureDefinitionTree/StructureDefinitionTree';
 import {
@@ -255,7 +255,7 @@ const ProfileEditor: React.FC<{}> = () => {
           </Breadcrumbs>
           <Paper className={clsx(classes.paperRight, classes.paper)}>
             {newStructureDef && (
-              <AttributeEditor
+              <Editor
                 structureDefinition={newStructureDef}
                 structureDefinitionType={
                   structureDefMeta ? 'resource' : 'element'
