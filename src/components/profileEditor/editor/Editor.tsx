@@ -9,16 +9,12 @@ import { Typography, Button, Container } from '@material-ui/core';
 import cloneDeep from 'lodash.clonedeep';
 import merge from 'lodash.merge';
 
-import {
-  updateStructureDefExtension,
-  updateStructureDefProfile
-} from 'state/reducers/resource';
+import { updateStructureDefProfile } from 'state/reducers/resource';
 import { RootState, useAppDispatch } from 'state/store';
 import { createJSONTree } from 'components/profileEditor/editor/utils';
 import { RenderAttributesTree } from 'types';
 import RenderComplexType from 'components/profileEditor/editor/complexTypesEditor/RenderComplexType';
 import {
-  findIndex,
   onChangeElementJSON,
   onDeleteComplexType,
   onAddComplexType
@@ -66,8 +62,8 @@ const Editor: React.FC<EditorProps> = ({
     )?.children;
 
   const emptyTree: IElementDefinition = elementDefinitionTree
-    ? createJSONTree(elementDefinitionTree, cloneDeep(newElementDefinition))
-    : createJSONTree(structureDefinitionTree, cloneDeep(structureDefinition));
+    ? createJSONTree(elementDefinitionTree, newElementDefinition)
+    : createJSONTree(structureDefinitionTree, structureDefinition);
 
   const [elementDefJSON, setElementDefJSON] = useState<
     IElementDefinition | undefined
@@ -90,59 +86,29 @@ const Editor: React.FC<EditorProps> = ({
 
   const submit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
     e.preventDefault();
-    if (structureDefinitionType === 'element') {
-      if (structureDefinition && elementDefJSON && elementDefJSON.path) {
-        const existingElement = structureDefinition?.snapshot?.element.find(
-          (elem) => elem.path === elementDefJSON.path
-        );
-        const indexToPush = findIndex(structureDefinition, elementDefJSON.path);
-        const newSDef = cloneDeep(structureDefinition);
-        if (newSDef && newSDef.snapshot) {
-          existingElement
-            ? newSDef.snapshot.element.splice(
-                indexToPush - 1,
-                1,
-                elementDefJSON
-              )
-            : newSDef.snapshot.element.splice(indexToPush, 0, elementDefJSON);
-          dispatch(
-            setSnackbarOpen({
-              severity: 'success',
-              message: 'Attribute edited !'
-            })
-          );
-          dispatch(updateStructureDefProfile(newSDef));
-        }
-      }
-    } else if (
-      structureDefinitionType === 'resource' &&
-      structureDefJSON &&
-      structureDefinition.snapshot
-    ) {
-      const newSDef = {
-        ...structureDefJSON,
-        snapshot: { ...structureDefinition.snapshot }
-      };
+    if (structureDefinitionType === 'element' && structureDefinition) {
+      dispatch(
+        setSnackbarOpen({
+          severity: 'success',
+          message: 'Attribute edited !'
+        })
+      );
+      dispatch(
+        updateStructureDefProfile({
+          structureDefinition: structureDefinition,
+          elementDefinition: elementDefJSON
+        })
+      );
+    } else if (structureDefinitionType === 'resource' && structureDefJSON) {
       dispatch(
         setSnackbarOpen({
           severity: 'success',
           message: 'Structure Definition edited !'
         })
       );
-      dispatch(updateStructureDefProfile(newSDef));
-    } else if (
-      structureDefinitionType === 'extension' &&
-      structureDefJSON &&
-      structureDefinition.snapshot
-    ) {
-      const newSDef = {
-        ...structureDefJSON,
-        snapshot: { ...structureDefinition.snapshot }
-      };
       dispatch(
-        setSnackbarOpen({ severity: 'success', message: 'Extension edited !' })
+        updateStructureDefProfile({ structureDefinition: structureDefJSON })
       );
-      dispatch(updateStructureDefExtension(newSDef));
     }
   };
 
