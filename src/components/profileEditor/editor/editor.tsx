@@ -6,105 +6,197 @@ import {
   IStructureDefinition
 } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { Typography, Button, Container } from '@material-ui/core';
-import { ToggleButton } from '@material-ui/lab';
-
-import { updateStructureDefProfile } from 'state/reducers/resource';
-import { RootState, useAppDispatch } from 'state/store';
-import { CssTextField, CssToggleButtonGroup } from 'components/smallComponents';
-import { allCardinalities, isDisabledInput } from './utils';
-
-import useStyles from 'components/profileEditor/attributeEditor/style';
 import cloneDeep from 'lodash.clonedeep';
-import { createJSONTree } from 'components/profileEditor/structureDefSettings/utils';
-import { RenderAttributesTree } from 'types';
 import merge from 'lodash.merge';
-import get from 'lodash.get';
 
-import set from 'lodash.set';
-import RenderComplexType from 'components/profileEditor/structureDefSettings/complexTypesEditor/RenderComplexType';
+import {
+  updateStructureDefExtension,
+  updateStructureDefProfile
+} from 'state/reducers/resource';
+import { RootState, useAppDispatch } from 'state/store';
+import { createJSONTree } from 'components/profileEditor/editor/utils';
+import { RenderAttributesTree } from 'types';
+import RenderComplexType from 'components/profileEditor/editor/complexTypesEditor/RenderComplexType';
 import {
   findIndex,
-  onChangeElementDefJSON,
+  onChangeElementJSON,
   onDeleteComplexType,
   onAddComplexType
 } from 'components/profileEditor/utils';
+import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 
-type AttributeEditorProps = {
+import useStyles from './style';
+
+type EditorProps = {
   structureDefinition: IStructureDefinition;
+  structureDefinitionType: 'resource' | 'extension' | 'element';
 };
 
-const AttributeEditor: React.FC<AttributeEditorProps> = ({
-  structureDefinition
+const Editor: React.FC<EditorProps> = ({
+  structureDefinition,
+  structureDefinitionType
 }) => {
-  const { complexTypes, primitiveTypes, newElementDefinition } = useSelector(
-    (state: RootState) => {
-      const { complexTypes, primitiveTypes } = state.fhirDataTypes;
-      const { newElementDefinition } = state.resourceSlice;
-      return { complexTypes, primitiveTypes, newElementDefinition };
-    }
-  );
+  const {
+    complexTypes,
+    primitiveTypes,
+    structureDefinitionTree,
+    newElementDefinition
+  } = useSelector((state: RootState) => {
+    const {
+      complexTypes,
+      primitiveTypes,
+      structureDefinitionTree
+    } = state.fhirDataTypes;
+    const { newElementDefinition } = state.resourceSlice;
+    return {
+      complexTypes,
+      primitiveTypes,
+      newElementDefinition,
+      structureDefinitionTree
+    };
+  });
 
   const dispatch = useAppDispatch();
+  const classes = useStyles();
 
-  const elementDefinitionTree = complexTypes?.find(
-    (element: RenderAttributesTree) => element.id === 'ElementDefinition'
-  )?.children;
+  const elementDefinitionTree =
+    structureDefinitionType === 'element' &&
+    complexTypes?.find(
+      (element: RenderAttributesTree) => element.id === 'ElementDefinition'
+    )?.children;
 
-  const emptyTree: IElementDefinition =
-    elementDefinitionTree &&
-    createJSONTree(elementDefinitionTree, cloneDeep(newElementDefinition));
+  const emptyTree: IElementDefinition = elementDefinitionTree
+    ? createJSONTree(elementDefinitionTree, cloneDeep(newElementDefinition))
+    : createJSONTree(structureDefinitionTree, cloneDeep(structureDefinition));
 
-  const [elementDefJSON, setElementDefJSON] = useState<IElementDefinition>(
-    merge(cloneDeep(emptyTree), newElementDefinition)
+  const [elementJSON, setElementJSON] = useState<
+    IElementDefinition | undefined
+  >(
+    structureDefinitionType === 'element'
+      ? merge(cloneDeep(emptyTree), newElementDefinition)
+      : undefined
+  );
+
+  const [structureDefJSON, setStructureDefJSON] = useState(
+    structureDefinitionType === 'resource' ||
+      structureDefinitionType === 'extension'
+      ? merge(cloneDeep(emptyTree), structureDefinition)
+      : undefined
   );
 
   useEffect(() => {
-    setElementDefJSON(merge(cloneDeep(emptyTree), newElementDefinition));
+    setElementJSON(merge(cloneDeep(emptyTree), newElementDefinition));
   }, [newElementDefinition]);
 
   const submit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
     e.preventDefault();
-    if (structureDefinition && elementDefJSON.path) {
-      const toFind = structureDefinition?.snapshot?.element.find(
-        (elem) => elem.path === elementDefJSON.path
-      );
-      const indexToPush = findIndex(structureDefinition, elementDefJSON.path);
-      const newSDef = cloneDeep(structureDefinition);
-      if (newSDef && newSDef.snapshot) {
-        toFind
-          ? newSDef.snapshot.element.splice(indexToPush - 1, 1, elementDefJSON)
-          : newSDef.snapshot.element.splice(indexToPush, 0, elementDefJSON);
-        dispatch(updateStructureDefProfile(newSDef));
+    if (structureDefinitionType === 'element') {
+      if (structureDefinition && elementJSON && elementJSON.path) {
+        const toFind = structureDefinition?.snapshot?.element.find(
+          (elem) => elem.path === elementJSON.path
+        );
+        const indexToPush = findIndex(structureDefinition, elementJSON.path);
+        const newSDef = cloneDeep(structureDefinition);
+        if (newSDef && newSDef.snapshot) {
+          toFind
+            ? newSDef.snapshot.element.splice(indexToPush - 1, 1, elementJSON)
+            : newSDef.snapshot.element.splice(indexToPush, 0, elementJSON);
+          dispatch(
+            setSnackbarOpen({
+              severity: 'success',
+              message: 'Attribute edited !'
+            })
+          );
+          dispatch(updateStructureDefProfile(newSDef));
+        }
       }
+    } else if (
+      structureDefinitionType === 'resource' &&
+      structureDefJSON &&
+      structureDefinition.snapshot
+    ) {
+      const newSDef = {
+        ...structureDefJSON,
+        snapshot: { ...structureDefinition.snapshot }
+      };
+      dispatch(
+        setSnackbarOpen({
+          severity: 'success',
+          message: 'Structure Definition edited !'
+        })
+      );
+      dispatch(updateStructureDefProfile(newSDef));
+    } else if (
+      structureDefinitionType === 'extension' &&
+      structureDefJSON &&
+      structureDefinition.snapshot
+    ) {
+      const newSDef = {
+        ...structureDefJSON,
+        snapshot: { ...structureDefinition.snapshot }
+      };
+      dispatch(
+        setSnackbarOpen({ severity: 'success', message: 'Extension edited !' })
+      );
+      dispatch(updateStructureDefExtension(newSDef));
     }
   };
 
   return (
-    <Container>
-      <form>
-        {elementDefinitionTree && (
+    <Container className={classes.formContainer}>
+      <form className={classes.form}>
+        {structureDefinitionType === 'element' && elementDefinitionTree && (
           <RenderComplexType
             attributes={elementDefinitionTree}
             complexTypes={complexTypes}
-            structureDefJSON={elementDefJSON}
+            structureDefJSON={elementJSON}
             primitiveTypes={primitiveTypes}
             name={''}
             onChangeValue={(path, value): void =>
-              setElementDefJSON(
-                onChangeElementDefJSON(path, value, elementDefJSON)
-              )
+              setElementJSON(onChangeElementJSON(path, value, elementJSON))
             }
             handleDelete={(path, i): void =>
-              setElementDefJSON(onDeleteComplexType(path, i, elementDefJSON))
+              setElementJSON(onDeleteComplexType(path, i, elementJSON))
             }
             handleAdd={(path, value): void =>
-              setElementDefJSON(onAddComplexType(path, value, elementDefJSON))
+              setElementJSON(onAddComplexType(path, value, elementJSON))
             }
           />
         )}
+        {(structureDefinitionType === 'resource' ||
+          structureDefinitionType === 'extension') &&
+          structureDefinitionTree && (
+            <RenderComplexType
+              attributes={structureDefinitionTree}
+              complexTypes={complexTypes}
+              structureDefJSON={structureDefJSON}
+              primitiveTypes={primitiveTypes}
+              name={''}
+              onChangeValue={(path, value): void =>
+                setStructureDefJSON(
+                  onChangeElementJSON(path, value, structureDefJSON)
+                )
+              }
+              handleDelete={(path, i): void =>
+                setStructureDefJSON(
+                  onDeleteComplexType(path, i, structureDefJSON)
+                )
+              }
+              handleAdd={(path, value): void =>
+                setStructureDefJSON(
+                  onAddComplexType(path, value, structureDefJSON)
+                )
+              }
+            />
+          )}
       </form>
-      <div>
-        <Button variant="contained" color="secondary" onClick={submit}>
+      <div className={classes.endForm}>
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={submit}
+          className={classes.submitButton}
+        >
           Submit
         </Button>
         <Typography color="textSecondary">* Required Fields</Typography>
@@ -266,4 +358,4 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
   ); */
 };
 
-export default AttributeEditor;
+export default Editor;

@@ -118,7 +118,7 @@ export const findIndex = (
  * @param value value to add to the object
  * @param element object to modify
  */
-export const onChangeElementDefJSON = (
+export const onChangeElementJSON = (
   path: string,
   value: any,
   element: any

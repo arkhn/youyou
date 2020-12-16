@@ -19,11 +19,10 @@ import {
   deleteSlice,
   createNewElementDefinition
 } from 'state/reducers/resource';
-import AttributeEditor from 'components/profileEditor/attributeEditor/AttributeEditor';
+import AttributeEditor from 'components/profileEditor/editor/editor';
 import { ButtonDownload, SnackBarWithClose } from 'components/smallComponents';
 import Navbar from 'components/navbar/Navbar';
 import StructureDefinitionTree from 'components/structureDefinitionTree/StructureDefinitionTree';
-import StructureDefSettings from 'components/profileEditor/structureDefSettings/StructureDefSettings';
 import {
   createComplexSnapshot,
   findIndex
@@ -255,14 +254,13 @@ const ProfileEditor: React.FC<{}> = () => {
             {renderBreadcrumbs()}
           </Breadcrumbs>
           <Paper className={clsx(classes.paperRight, classes.paper)}>
-            {structureDefMeta && newStructureDef && (
-              <StructureDefSettings
+            {newStructureDef && (
+              <AttributeEditor
                 structureDefinition={newStructureDef}
-                structureDefinitionType="resource"
+                structureDefinitionType={
+                  structureDefMeta ? 'resource' : 'element'
+                }
               />
-            )}
-            {selectedAttributeId && newStructureDef && (
-              <AttributeEditor structureDefinition={newStructureDef} />
             )}
           </Paper>
         </Container>
