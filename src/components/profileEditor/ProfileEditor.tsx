@@ -19,11 +19,11 @@ import {
   deleteSlice,
   createNewElementDefinition
 } from 'state/reducers/resource';
-import AttributeEditor from 'components/attributeEditor/AttributeEditor';
+import AttributeEditor from 'components/profileEditor/attributeEditor/AttributeEditor';
 import { ButtonDownload, SnackBarWithClose } from 'components/smallComponents';
 import Navbar from 'components/navbar/Navbar';
 import StructureDefinitionTree from 'components/structureDefinitionTree/StructureDefinitionTree';
-import StructureDefSettings from 'components/structureDefSettings/StructureDefSettings';
+import StructureDefSettings from 'components/profileEditor/structureDefSettings/StructureDefSettings';
 import {
   createComplexSnapshot,
   findIndex

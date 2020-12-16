@@ -8,7 +8,7 @@ import clsx from 'clsx';
 import { ButtonDownload } from 'components/smallComponents';
 import AttributeEditor from 'components/extensionEditor/attributeEditor/AttributeEditor';
 import Navbar from 'components/navbar/Navbar';
-import StructureDefSettings from 'components/structureDefSettings/StructureDefSettings';
+import StructureDefSettings from 'components/profileEditor/structureDefSettings/StructureDefSettings';
 
 import useStyles from 'components/profileEditor/style';
 

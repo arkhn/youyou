@@ -3,6 +3,8 @@ import {
   IStructureDefinition
 } from '@ahryman40k/ts-fhir-types/lib/R4';
 import cloneDeep from 'lodash.clonedeep';
+import set from 'lodash.set';
+import get from 'lodash.get';
 
 import {
   createComplexTypes,
@@ -108,4 +110,58 @@ export const findIndex = (
     }
   });
   return indexes[indexes.length - 1] + 1;
+};
+
+/**
+ * When changing a value in an object, returns a new copy of the object with the modification
+ * @param path path of the element to modify
+ * @param value value to add to the object
+ * @param element object to modify
+ */
+export const onChangeElementDefJSON = (
+  path: string,
+  value: any,
+  element: any
+): any => {
+  const elem: any = { ...element };
+  if (value !== '') {
+    set(elem, path, value);
+  } else {
+    set(elem, path, undefined);
+  }
+  return elem;
+};
+
+/**
+ * When deleting a complex type in an object, returns a new copy of the object with the deleting
+ * @param path path of the element to delete
+ * @param i index of the element to delete
+ * @param element object to modify
+ */
+export const onDeleteComplexType = (
+  path: string,
+  i: number,
+  element: any
+): any => {
+  const elem: any = { ...element };
+  const elementDefJSONAttr: any = get(elem, path);
+  elementDefJSONAttr.splice(i, 1);
+  return elem;
+};
+
+/**
+ * When adding a complex type in an object, returns a new copy of the object with the adding
+ * @param path path of the element where to add
+ * @param value complex type to add to the object
+ * @param element object to modify
+ */
+export const onAddComplexType = (
+  path: string,
+  value: any,
+  element: any
+): any => {
+  const elem: any = { ...element };
+  const elementDefJSONAttr = get(elem, path);
+  elementDefJSONAttr.push(value);
+  return elem;
 };

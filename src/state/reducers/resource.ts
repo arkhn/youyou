@@ -43,6 +43,7 @@ const resourceSlice = createSlice({
     },
     selectStructureDefMeta: (state: ResourceState) => {
       state.selectedAttributeId = undefined;
+      state.newElementDefinition = undefined;
       state.structureDefMeta = true;
     },
     createNewElementDefinition: (

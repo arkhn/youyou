@@ -13,12 +13,17 @@ import {
   updateStructureDefExtension
 } from 'state/reducers/resource';
 import { RootState, useAppDispatch } from 'state/store';
-import RenderComplexType from 'components/structureDefSettings/complexTypesEditor/RenderComplexType';
-import { createJSONTree } from 'components/structureDefSettings/utils';
+import RenderComplexType from 'components/profileEditor/structureDefSettings/complexTypesEditor/RenderComplexType';
+import { createJSONTree } from 'components/profileEditor/structureDefSettings/utils';
 import { SnackBarWithClose } from 'components/smallComponents';
 import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 
-import useStyles from 'components/structureDefSettings/style';
+import useStyles from 'components/profileEditor/structureDefSettings/style';
+import {
+  onAddComplexType,
+  onChangeElementDefJSON,
+  onDeleteComplexType
+} from '../utils';
 
 type StructureDefSettingsProps = {
   structureDefinition: IStructureDefinition;
@@ -59,30 +64,6 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
     }
   };
 
-  const onDeleteComplexType = (path: string, i: number): void => {
-    const str: IStructureDefinition = { ...structureDefJSON };
-    const structureDefJSONAttr: any = get(str, path);
-    structureDefJSONAttr.splice(i, 1);
-    setStructureDefJSON(str);
-  };
-
-  const onAddComplexType = (path: string, value: any): void => {
-    const str: IStructureDefinition = { ...structureDefJSON };
-    const structureDefJSONAttr = get(str, path);
-    structureDefJSONAttr.push(value);
-    setStructureDefJSON(str);
-  };
-
-  const onChangeStructureDefJSON = (path: string, value: any): void => {
-    const str: IStructureDefinition = { ...structureDefJSON };
-    if (value !== '') {
-      set(str, path, value);
-    } else {
-      set(str, path, undefined);
-    }
-    setStructureDefJSON(str);
-  };
-
   return (
     <Container className={classes.formContainer}>
       <SnackBarWithClose />
@@ -93,9 +74,19 @@ const StructureDefSettings: React.FC<StructureDefSettingsProps> = ({
             complexTypes={complexTypes}
             structureDefJSON={structureDefJSON}
             primitiveTypes={primitiveTypes}
-            onChangeValue={onChangeStructureDefJSON}
-            handleDelete={onDeleteComplexType}
-            handleAdd={onAddComplexType}
+            onChangeValue={(path, value): void =>
+              setStructureDefJSON(
+                onChangeElementDefJSON(path, value, structureDefJSON)
+              )
+            }
+            handleDelete={(path, i): void =>
+              setStructureDefJSON(
+                onDeleteComplexType(path, i, structureDefJSON)
+              )
+            }
+            handleAdd={(path, i): void =>
+              setStructureDefJSON(onAddComplexType(path, i, structureDefJSON))
+            }
             name={''}
           />
         </div>

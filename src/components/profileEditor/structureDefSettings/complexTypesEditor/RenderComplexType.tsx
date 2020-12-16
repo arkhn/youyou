@@ -14,8 +14,8 @@ import CheckboxTooltip from 'components/smallComponents/CheckboxTooltip';
 import {
   useStyles,
   MuiAccordionSummary
-} from 'components/structureDefSettings/complexTypesEditor/styles';
-import { createJSONTree } from 'components/structureDefSettings/utils';
+} from 'components/profileEditor/structureDefSettings/complexTypesEditor/styles';
+import { createJSONTree } from 'components/profileEditor/structureDefSettings/utils';
 
 type DetailProps = {
   attributes: RenderAttributesTree[];

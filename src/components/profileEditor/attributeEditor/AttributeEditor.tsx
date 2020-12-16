@@ -13,16 +13,21 @@ import { RootState, useAppDispatch } from 'state/store';
 import { CssTextField, CssToggleButtonGroup } from 'components/smallComponents';
 import { allCardinalities, isDisabledInput } from './utils';
 
-import useStyles from 'components/attributeEditor/style';
+import useStyles from 'components/profileEditor/attributeEditor/style';
 import cloneDeep from 'lodash.clonedeep';
-import { createJSONTree } from 'components/structureDefSettings/utils';
+import { createJSONTree } from 'components/profileEditor/structureDefSettings/utils';
 import { RenderAttributesTree } from 'types';
 import merge from 'lodash.merge';
 import get from 'lodash.get';
 
 import set from 'lodash.set';
-import RenderComplexType from 'components/structureDefSettings/complexTypesEditor/RenderComplexType';
-import { findIndex } from 'components/profileEditor/utils';
+import RenderComplexType from 'components/profileEditor/structureDefSettings/complexTypesEditor/RenderComplexType';
+import {
+  findIndex,
+  onChangeElementDefJSON,
+  onDeleteComplexType,
+  onAddComplexType
+} from 'components/profileEditor/utils';
 
 type AttributeEditorProps = {
   structureDefinition: IStructureDefinition;
@@ -31,7 +36,6 @@ type AttributeEditorProps = {
 const AttributeEditor: React.FC<AttributeEditorProps> = ({
   structureDefinition
 }) => {
-  const dispatch = useAppDispatch();
   const { complexTypes, primitiveTypes, newElementDefinition } = useSelector(
     (state: RootState) => {
       const { complexTypes, primitiveTypes } = state.fhirDataTypes;
@@ -39,6 +43,8 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
       return { complexTypes, primitiveTypes, newElementDefinition };
     }
   );
+
+  const dispatch = useAppDispatch();
 
   const elementDefinitionTree = complexTypes?.find(
     (element: RenderAttributesTree) => element.id === 'ElementDefinition'
@@ -48,37 +54,13 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
     elementDefinitionTree &&
     createJSONTree(elementDefinitionTree, cloneDeep(newElementDefinition));
 
-  const [elementDefJSON, setElementDefJSON] = useState(
+  const [elementDefJSON, setElementDefJSON] = useState<IElementDefinition>(
     merge(cloneDeep(emptyTree), newElementDefinition)
   );
 
   useEffect(() => {
     setElementDefJSON(merge(cloneDeep(emptyTree), newElementDefinition));
   }, [newElementDefinition]);
-
-  const onChangeElementDefJSON = (path: string, value: any): void => {
-    const elem: IElementDefinition = { ...elementDefJSON };
-    if (value !== '') {
-      set(elem, path, value);
-    } else {
-      set(elem, path, undefined);
-    }
-    setElementDefJSON(elem);
-  };
-
-  const onDeleteComplexType = (path: string, i: number): void => {
-    const elem: IElementDefinition = { ...elementDefJSON };
-    const elementDefJSONAttr: any = get(elem, path);
-    elementDefJSONAttr.splice(i, 1);
-    setElementDefJSON(elem);
-  };
-
-  const onAddComplexType = (path: string, value: any): void => {
-    const elem: IElementDefinition = { ...elementDefJSON };
-    const elementDefJSONAttr = get(elem, path);
-    elementDefJSONAttr.push(value);
-    setElementDefJSON(elem);
-  };
 
   const submit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
     e.preventDefault();
@@ -107,9 +89,17 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
             structureDefJSON={elementDefJSON}
             primitiveTypes={primitiveTypes}
             name={''}
-            onChangeValue={onChangeElementDefJSON}
-            handleDelete={onDeleteComplexType}
-            handleAdd={onAddComplexType}
+            onChangeValue={(path, value): void =>
+              setElementDefJSON(
+                onChangeElementDefJSON(path, value, elementDefJSON)
+              )
+            }
+            handleDelete={(path, i): void =>
+              setElementDefJSON(onDeleteComplexType(path, i, elementDefJSON))
+            }
+            handleAdd={(path, value): void =>
+              setElementDefJSON(onAddComplexType(path, value, elementDefJSON))
+            }
           />
         )}
       </form>
