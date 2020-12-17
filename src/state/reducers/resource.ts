@@ -11,6 +11,8 @@ import {
   requestStructureDefThunk
 } from 'state/thunkMiddleware';
 import { structureDefAddSlice, structureDefDeleteSlice } from './utils';
+import { findIndex } from 'components/profileEditor/utils';
+import cloneDeep from 'lodash.clonedeep';
 
 const initialState: ResourceState = {
   resources: [],
@@ -43,6 +45,7 @@ const resourceSlice = createSlice({
     },
     selectStructureDefMeta: (state: ResourceState) => {
       state.selectedAttributeId = undefined;
+      state.newElementDefinition = undefined;
       state.structureDefMeta = true;
     },
     createNewElementDefinition: (
@@ -59,9 +62,42 @@ const resourceSlice = createSlice({
     },
     updateStructureDefProfile: (
       state: ResourceState,
-      action: PayloadAction<IStructureDefinition | undefined>
+      action: PayloadAction<{
+        structureDefinition: IStructureDefinition;
+        elementDefinition?: IElementDefinition;
+      }>
     ) => {
-      state.structureDefinition = action.payload;
+      const { elementDefinition, structureDefinition } = action.payload;
+      if (elementDefinition && elementDefinition.path) {
+        const existingElement = structureDefinition.snapshot?.element.find(
+          (elem) => elem.path === elementDefinition.path
+        );
+        const indexToPush = findIndex(
+          structureDefinition,
+          elementDefinition.path
+        );
+        const newSDef = cloneDeep(action.payload.structureDefinition);
+        if (newSDef.snapshot) {
+          existingElement
+            ? newSDef.snapshot.element.splice(
+                indexToPush - 1,
+                1,
+                elementDefinition
+              )
+            : newSDef.snapshot.element.splice(
+                indexToPush,
+                0,
+                elementDefinition
+              );
+          state.structureDefinition = newSDef;
+        }
+      } else if (!elementDefinition && structureDefinition.snapshot) {
+        const newSDef = {
+          ...structureDefinition,
+          snapshot: { ...structureDefinition.snapshot }
+        };
+        state.structureDefinition = newSDef;
+      }
     },
     addSlice: (
       state: ResourceState,
@@ -97,41 +133,58 @@ const resourceSlice = createSlice({
         node,
         structureDefinition
       );
+      state.selectedAttributeId = undefined;
+      state.structureDefMeta = true;
     }
   },
   extraReducers: (builder) => {
-    builder.addCase(requestIdsThunk.pending, (state, { meta }) => {
-      state.requestId = meta.requestId;
-      state.loading = true;
-    });
-    builder.addCase(requestIdsThunk.fulfilled, (state, { payload }) => {
-      state.loading = false;
-      state.resources = payload;
-      state.error = undefined;
-    });
-    builder.addCase(requestIdsThunk.rejected, (state, { payload }) => {
-      state.loading = false;
-      state.resources = [];
-      state.error = payload ?? undefined;
-    });
-    builder.addCase(requestStructureDefThunk.pending, (state, { meta }) => {
-      state.requestId = meta.requestId;
-      state.loading = true;
-    });
+    builder.addCase(
+      requestIdsThunk.pending,
+      (state: ResourceState, { meta }) => {
+        state.requestId = meta.requestId;
+        state.loading = true;
+      }
+    );
+    builder.addCase(
+      requestIdsThunk.fulfilled,
+      (state: ResourceState, { payload }) => {
+        state.loading = false;
+        state.resources = payload;
+        state.error = undefined;
+      }
+    );
+    builder.addCase(
+      requestIdsThunk.rejected,
+      (state: ResourceState, { payload }) => {
+        state.loading = false;
+        state.resources = [];
+        state.error = payload ?? undefined;
+      }
+    );
+    builder.addCase(
+      requestStructureDefThunk.pending,
+      (state: ResourceState, { meta }) => {
+        state.requestId = meta.requestId;
+        state.loading = true;
+      }
+    );
     builder.addCase(
       requestStructureDefThunk.fulfilled,
-      (state, { payload }) => {
+      (state: ResourceState, { payload }) => {
         state.loading = false;
         state.structureDefinition = payload;
         state.error = undefined;
         state.structureDefMeta = true;
       }
     );
-    builder.addCase(requestStructureDefThunk.rejected, (state, { payload }) => {
-      state.loading = false;
-      state.structureDefinition = undefined;
-      state.error = payload ?? undefined;
-    });
+    builder.addCase(
+      requestStructureDefThunk.rejected,
+      (state: ResourceState, { payload }) => {
+        state.loading = false;
+        state.structureDefinition = undefined;
+        state.error = payload ?? undefined;
+      }
+    );
   }
 });
 

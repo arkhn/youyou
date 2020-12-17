@@ -8,7 +8,6 @@ import clsx from 'clsx';
 import { ButtonDownload } from 'components/smallComponents';
 import AttributeEditor from 'components/extensionEditor/attributeEditor/AttributeEditor';
 import Navbar from 'components/navbar/Navbar';
-import StructureDefSettings from 'components/structureDefSettings/StructureDefSettings';
 
 import useStyles from 'components/profileEditor/style';
 
@@ -57,10 +56,6 @@ const ExtensionEditor: React.FC<{}> = () => {
               <Paper className={clsx(classes.paperRight, classes.paper)}>
                 <div className={clsx(classes.paperRight, classes.paper)}>
                   <Typography variant="h1">Metadata</Typography>
-                  <StructureDefSettings
-                    structureDefinition={extensionStructureDefinition}
-                    structureDefinitionType="extension"
-                  />
                   <Typography variant="h1">Value</Typography>
                   <AttributeEditor
                     structureDefinition={extensionStructureDefinition}

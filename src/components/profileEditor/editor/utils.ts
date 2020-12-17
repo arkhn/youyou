@@ -1,21 +1,5 @@
-import {
-  IElementDefinition_Type as IElementDefinitionType,
-  IStructureDefinition
-} from '@ahryman40k/ts-fhir-types/lib/R4';
+import { IElementDefinition_Type as IElementDefinitionType } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { RenderAttributesTree } from 'types';
-
-export const editAttribute = <K extends keyof IStructureDefinition>(
-  structureToEdit: IStructureDefinition,
-  attributeKey: K,
-  attributeValue?: IStructureDefinition[K]
-): IStructureDefinition | undefined => {
-  if (attributeValue !== undefined && attributeValue.toString() !== '') {
-    structureToEdit[attributeKey] = attributeValue;
-    return structureToEdit;
-  } else {
-    delete structureToEdit[attributeKey];
-  }
-};
 
 /**
  * Create a JSON tree from a structure definition

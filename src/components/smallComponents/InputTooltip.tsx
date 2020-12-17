@@ -12,6 +12,7 @@ type InputTooltipProps = {
   onBlur?: (
     event: React.FocusEvent<HTMLTextAreaElement | HTMLInputElement>
   ) => void;
+  onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 };
 
 const useStyles = makeStyles(() => ({
@@ -30,7 +31,8 @@ const InputTooltip: React.FC<InputTooltipProps> = ({
   tool,
   onBlur,
   error = false,
-  classname
+  classname,
+  onClick
 }) => {
   const classes = useStyles();
   const inputRef = useRef<HTMLInputElement | undefined>();
@@ -51,6 +53,7 @@ const InputTooltip: React.FC<InputTooltipProps> = ({
         variant="outlined"
         onBlur={onBlur}
         inputRef={inputRef}
+        onClick={onClick}
       />
       <TooltipHelp tool={tool} />
     </div>
