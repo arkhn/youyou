@@ -37,21 +37,15 @@ export const structureDefAddSlice = (
           element.base &&
             element &&
             slicedElements.push({
+              ...element,
               id:
                 startingPath +
                 `:${sliceName}` +
                 (endingPath ? '.' + endingPath : ''),
               path: element.id,
               sliceName: sliceName,
-              base: {
-                min: element.base.min,
-                max: element.base.max,
-                path: element.base.path
-              },
               min: element.base.min,
               max: element.base.max,
-              definition: element.definition,
-              type: element.type,
               binding: element.binding
                 ? (nodeToSlice.binding as IElementDefinitionBinding)
                 : undefined

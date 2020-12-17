@@ -58,8 +58,26 @@ const TreeNode: React.FC<TreeNodeProps> = ({ nodes, handleClickSlices }) => {
             })
           }
           style={{ display: display }}
+          disabled={
+            nodes.max === '*' ||
+            Number(nodes.max) > 1 ||
+            (Number(nodes.max) === 1 &&
+              Array.isArray(nodes.type) &&
+              nodes.type.length > 1)
+              ? false
+              : true
+          }
+          color={
+            nodes.max === '*' ||
+            Number(nodes.max) > 1 ||
+            (Number(nodes.max) === 1 &&
+              Array.isArray(nodes.type) &&
+              nodes.type.length > 1)
+              ? 'secondary'
+              : 'primary'
+          }
         >
-          <Tooltip title="Add a slice">
+          <Tooltip title={'Add a slice'}>
             <LocalPizza />
           </Tooltip>
         </IconButton>
