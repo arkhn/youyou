@@ -22,6 +22,7 @@ import {
 import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 
 import useStyles from './style';
+import { CssTextField, InputTooltip } from 'components/smallComponents';
 
 type EditorProps = {
   structureDefinition: IStructureDefinition;

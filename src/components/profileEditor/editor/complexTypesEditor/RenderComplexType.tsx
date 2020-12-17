@@ -1,10 +1,16 @@
-import { InputTooltip, SelectTooltip } from 'components/smallComponents';
-import React from 'react';
+import {
+  CssTextField,
+  InputTooltip,
+  SelectTooltip
+} from 'components/smallComponents';
+import React, { useState } from 'react';
 
 import {
   Accordion,
   AccordionDetails,
   Button,
+  Dialog,
+  Paper,
   Typography
 } from '@material-ui/core';
 import { Add, DeleteOutline, ExpandMore } from '@material-ui/icons';
@@ -16,6 +22,8 @@ import {
   MuiAccordionSummary
 } from 'components/profileEditor/editor/complexTypesEditor/styles';
 import { createJSONTree } from 'components/profileEditor/editor/utils';
+import SliceDialogBox from 'components/profileEditor/sliceDialogBox/SliceDialogBox';
+import DialogChangeSliceName from './dialogSliceName/DialogChangeSliceName';
 
 type DetailProps = {
   attributes: RenderAttributesTree[];
@@ -27,6 +35,7 @@ type DetailProps = {
   handleAdd?: (path: string, value: any) => void;
   name: string;
   index?: number;
+  onChangeSliceName?: (value: string) => void;
 };
 
 const RenderComplexType: React.FC<DetailProps> = ({
@@ -41,6 +50,8 @@ const RenderComplexType: React.FC<DetailProps> = ({
   index
 }) => {
   const classes = useStyles();
+  let renderSliceName: JSX.Element | null = null;
+  const [open, setOpen] = useState(false);
 
   const onChange = (
     callback: typeof onChangeValue | typeof handleDelete | typeof handleAdd
@@ -151,18 +162,31 @@ const RenderComplexType: React.FC<DetailProps> = ({
         case 'uri':
         case 'id':
         case 'http://hl7.org/fhirpath/System.String': {
-          attributeElement = (
-            <InputTooltip
-              label={item.min && item.min > 0 ? `${item.name}*` : item.name}
-              value={
-                structureDefJSON[item.name] ? structureDefJSON[item.name] : ''
-              }
-              tool={item.definition}
-              onBlur={(event): void =>
-                onChange(onChangeValue)(item.name, event.target.value)
-              }
-            />
-          );
+          if (item.name !== 'sliceName') {
+            attributeElement = (
+              <InputTooltip
+                label={item.min && item.min > 0 ? `${item.name}*` : item.name}
+                value={
+                  structureDefJSON[item.name] ? structureDefJSON[item.name] : ''
+                }
+                tool={item.definition}
+                onBlur={(event): void =>
+                  onChange(onChangeValue)(item.name, event.target.value)
+                }
+              />
+            );
+          } else if (item.name === 'sliceName' && structureDefJSON.sliceName) {
+            renderSliceName = (
+              <DialogChangeSliceName
+                item={item}
+                sliceName={structureDefJSON.sliceName}
+                id={structureDefJSON.id}
+                open={open}
+                onCloseClick={() => setOpen(false)}
+                onOpenClick={() => setOpen(true)}
+              />
+            );
+          }
           break;
         }
         case 'integer':
@@ -235,9 +259,10 @@ const RenderComplexType: React.FC<DetailProps> = ({
   });
 
   return (
-    <div>
-      <div>{renderAttribute}</div>
-    </div>
+    <>
+      {renderSliceName}
+      {renderAttribute}
+    </>
   );
 };
 

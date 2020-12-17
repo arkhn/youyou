@@ -135,6 +135,37 @@ const resourceSlice = createSlice({
       );
       state.selectedAttributeId = undefined;
       state.structureDefMeta = true;
+    },
+    changeSliceName: (
+      state: ResourceState,
+      action: PayloadAction<{ id: string; newSliceName: string }>
+    ) => {
+      const { id, newSliceName } = action.payload;
+      const splitedId = id.split('.')[id.split('.').length - 1];
+      const attributesToModify: IElementDefinition[] = [];
+      const indexes: number[] = [];
+      let newId: string[] = [];
+      const newSDef = cloneDeep(state.structureDefinition);
+      if (newSDef?.snapshot) {
+        newSDef?.snapshot.element.forEach((element, indexToPush) => {
+          element?.id?.split('.').forEach((splitPath, index) => {
+            if (splitPath === splitedId && element && element.id) {
+              const newPath = splitPath.split(':');
+              newPath.splice(newPath.length - 1, 1, newSliceName);
+              const newNewPath = newPath.join(':');
+              newId = element.id.split('.');
+              newId.splice(index, 1, newNewPath);
+              attributesToModify.push({ ...element, id: newId.join('.') });
+              indexes.push(indexToPush);
+            }
+          });
+        });
+      }
+      indexes.forEach((index, i) => {
+        newSDef?.snapshot?.element.splice(index, 1, attributesToModify[i]);
+      });
+      state.structureDefinition = newSDef;
+      state.selectedAttributeId = newId.join('.');
     }
   },
   extraReducers: (builder) => {
@@ -197,5 +228,6 @@ export const {
   updateStructureDefExtension,
   updateStructureDefProfile,
   addSlice,
-  deleteSlice
+  deleteSlice,
+  changeSliceName
 } = resourceSlice.actions;
