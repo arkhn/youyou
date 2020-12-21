@@ -13,8 +13,6 @@ import { Alert, AlertTitle } from '@material-ui/lab';
 import { CssTextField } from 'components/smallComponents';
 import { OpenDialogState } from 'components/profileEditor/ProfileEditor';
 
-import useStyles from 'components/profileEditor/style';
-
 type SliceDialogBoxProps = {
   attributeSelected: OpenDialogState;
   sliceNameError: {
@@ -37,12 +35,10 @@ const SliceDialogBox: React.FC<SliceDialogBoxProps> = ({
   onCloseClick,
   onFormSubmit
 }) => {
-  const classes = useStyles();
-
   return (
-    <Dialog open={attributeSelected.open} className={classes.modalContainer}>
-      <Paper className={classes.modalPaper}>
-        <IconButton className={classes.modalPaperClose} onClick={onCloseClick}>
+    <Dialog open={attributeSelected.open}>
+      <Paper>
+        <IconButton onClick={onCloseClick}>
           <Clear color="error" />
         </IconButton>
         <Typography variant="h1">

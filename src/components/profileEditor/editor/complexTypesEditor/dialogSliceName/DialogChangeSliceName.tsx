@@ -27,16 +27,16 @@ const DialogChangeSliceName: React.FC<DialogChangeSliceNameProps> = ({
 
   return (
     <>
-      <Button onClick={() => onOpenClick()}>Change Slice Name</Button>
+      <Button onClick={(): void => onOpenClick()}>Change Slice Name</Button>
       <Dialog open={open}>
         <InputTooltip
           label={`${item.name}*`}
           value={sliceName}
           tool={item.definition}
-          onBlur={(e) => setNewSliceName(e.target.value)}
+          onBlur={(e): void => setNewSliceName(e.target.value)}
         />
         <Button
-          onClick={(e) => {
+          onClick={(e): void => {
             e.preventDefault();
             dispatch(changeSliceName({ newSliceName, id }));
             onCloseClick();

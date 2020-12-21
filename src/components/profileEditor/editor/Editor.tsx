@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 
 import {
   IElementDefinition,
   IStructureDefinition
 } from '@ahryman40k/ts-fhir-types/lib/R4';
-import { Typography, Button, Container } from '@material-ui/core';
+import { Typography, Button, Paper, Breadcrumbs } from '@material-ui/core';
 import cloneDeep from 'lodash.clonedeep';
 import merge from 'lodash.merge';
 
@@ -17,12 +17,10 @@ import RenderComplexType from 'components/profileEditor/editor/complexTypesEdito
 import {
   onChangeElementJSON,
   onDeleteComplexType,
-  onAddComplexType
+  onAddComplexType,
+  createElementDefinitionTree
 } from 'components/profileEditor/utils';
 import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
-
-import useStyles from './style';
-import { CssTextField, InputTooltip } from 'components/smallComponents';
 
 type EditorProps = {
   structureDefinition: IStructureDefinition;
@@ -54,36 +52,54 @@ const Editor: React.FC<EditorProps> = ({
   });
 
   const dispatch = useAppDispatch();
-  const classes = useStyles();
 
-  const elementDefinitionTree =
-    structureDefinitionType === 'element' &&
-    complexTypes?.find(
-      (element: RenderAttributesTree) => element.id === 'ElementDefinition'
-    )?.children;
+  const elementDefinitionTree = complexTypes?.find(
+    (element: RenderAttributesTree) => element.id === 'ElementDefinition'
+  )?.children;
 
-  const emptyTree: IElementDefinition = elementDefinitionTree
-    ? createJSONTree(elementDefinitionTree, newElementDefinition)
-    : createJSONTree(structureDefinitionTree, structureDefinition);
+  const createElementJSON = useCallback((): IElementDefinition => {
+    const elementDefTreeJSON =
+      elementDefinitionTree &&
+      createElementDefinitionTree(elementDefinitionTree);
+    return merge(cloneDeep(elementDefTreeJSON), newElementDefinition);
+  }, [elementDefinitionTree, newElementDefinition]);
+
+  const createStructureDefJSON = useCallback((): IStructureDefinition => {
+    const structureDefTreeJSON: IStructureDefinition = createJSONTree(
+      structureDefinitionTree,
+      structureDefinition
+    );
+    return merge(cloneDeep(structureDefTreeJSON), structureDefinition);
+  }, [structureDefinitionTree, structureDefinition]);
 
   const [elementDefJSON, setElementDefJSON] = useState<
     IElementDefinition | undefined
-  >(
-    structureDefinitionType === 'element'
-      ? merge(cloneDeep(emptyTree), newElementDefinition)
-      : undefined
-  );
+  >(structureDefinitionType === 'element' ? createElementJSON() : undefined);
 
-  const [structureDefJSON, setStructureDefJSON] = useState(
-    structureDefinitionType === 'resource' ||
-      structureDefinitionType === 'extension'
-      ? merge(cloneDeep(emptyTree), structureDefinition)
+  const [structureDefJSON, setStructureDefJSON] = useState<
+    IStructureDefinition | undefined
+  >(
+    structureDefinitionType === 'resource'
+      ? createStructureDefJSON()
       : undefined
   );
 
   useEffect(() => {
-    setElementDefJSON(merge(cloneDeep(emptyTree), newElementDefinition));
-  }, [newElementDefinition]);
+    if (newElementDefinition && structureDefinitionType === 'element') {
+      setElementDefJSON(createElementJSON());
+      setStructureDefJSON(undefined);
+    } else if (structureDefinitionType === 'resource') {
+      setStructureDefJSON(createStructureDefJSON());
+      setElementDefJSON(undefined);
+    } else if (structureDefinitionType === 'element' && !newElementDefinition) {
+      setStructureDefJSON(undefined);
+    }
+  }, [
+    newElementDefinition,
+    structureDefinitionType,
+    createElementJSON,
+    createStructureDefJSON
+  ]);
 
   const submit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
     e.preventDefault();
@@ -113,32 +129,40 @@ const Editor: React.FC<EditorProps> = ({
     }
   };
 
+  const renderBreadcrumbs = (): React.ReactNode => {
+    if (elementDefJSON)
+      return elementDefJSON.id
+        ?.split('.')
+        .map((split: string) => <Typography key={split}>{split}</Typography>);
+    else return <Typography>Metadata</Typography>;
+  };
+
   return (
-    <Container className={classes.formContainer}>
-      <form className={classes.form}>
-        {structureDefinitionType === 'element' && elementDefinitionTree && (
-          <RenderComplexType
-            attributes={elementDefinitionTree}
-            complexTypes={complexTypes}
-            structureDefJSON={elementDefJSON}
-            primitiveTypes={primitiveTypes}
-            name={''}
-            onChangeValue={(path, value): void =>
-              setElementDefJSON(
-                onChangeElementJSON(path, value, elementDefJSON)
-              )
-            }
-            handleDelete={(path, i): void =>
-              setElementDefJSON(onDeleteComplexType(path, i, elementDefJSON))
-            }
-            handleAdd={(path, value): void =>
-              setElementDefJSON(onAddComplexType(path, value, elementDefJSON))
-            }
-          />
-        )}
-        {(structureDefinitionType === 'resource' ||
-          structureDefinitionType === 'extension') &&
-          structureDefinitionTree && (
+    <div>
+      <Breadcrumbs>{renderBreadcrumbs()}</Breadcrumbs>
+      <Paper>
+        <form>
+          {elementDefJSON && elementDefinitionTree && newElementDefinition && (
+            <RenderComplexType
+              attributes={elementDefinitionTree}
+              complexTypes={complexTypes}
+              structureDefJSON={elementDefJSON}
+              primitiveTypes={primitiveTypes}
+              name={''}
+              onChangeValue={(path, value): void =>
+                setElementDefJSON(
+                  onChangeElementJSON(path, value, elementDefJSON)
+                )
+              }
+              handleDelete={(path, i): void =>
+                setElementDefJSON(onDeleteComplexType(path, i, elementDefJSON))
+              }
+              handleAdd={(path, value): void =>
+                setElementDefJSON(onAddComplexType(path, value, elementDefJSON))
+              }
+            />
+          )}
+          {structureDefJSON && (
             <RenderComplexType
               attributes={structureDefinitionTree}
               complexTypes={complexTypes}
@@ -162,19 +186,16 @@ const Editor: React.FC<EditorProps> = ({
               }
             />
           )}
-      </form>
-      <div className={classes.endForm}>
-        <Button
-          variant="contained"
-          color="secondary"
-          onClick={submit}
-          className={classes.submitButton}
-        >
-          Submit
-        </Button>
-        <Typography color="textSecondary">* Required Fields</Typography>
-      </div>
-    </Container>
+          {!newElementDefinition && <div>Select a valid attribute</div>}
+        </form>
+        <div>
+          <Button variant="contained" color="secondary" onClick={submit}>
+            Submit
+          </Button>
+          <Typography color="textSecondary">* Required Fields</Typography>
+        </div>
+      </Paper>
+    </div>
   );
 };
 

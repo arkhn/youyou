@@ -1,6 +1,5 @@
 import React from 'react';
 
-import clsx from 'clsx';
 import { TreeView, TreeItem } from '@material-ui/lab';
 import { ArrowRight, ArrowDropDown, Settings } from '@material-ui/icons';
 
@@ -11,6 +10,7 @@ import { useAppDispatch } from 'state/store';
 import { RenderAttributesTree } from 'types';
 
 import useStyles from './style';
+import clsx from 'clsx';
 
 type StructureDefinitionTreeProps = {
   structureDefinitionId?: string;
@@ -69,6 +69,7 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
         label={
           <span className={clsx(classes.treeItem, classes.textTreeItemMeta)}>
             <Settings
+              color="secondary"
               className={clsx(classes.iconTreeItem, classes.iconTreeItemMeta)}
             />
             Metadatas

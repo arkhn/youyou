@@ -1,16 +1,10 @@
-import {
-  CssTextField,
-  InputTooltip,
-  SelectTooltip
-} from 'components/smallComponents';
+import { InputTooltip, SelectTooltip } from 'components/smallComponents';
 import React, { useState } from 'react';
 
 import {
   Accordion,
   AccordionDetails,
   Button,
-  Dialog,
-  Paper,
   Typography
 } from '@material-ui/core';
 import { Add, DeleteOutline, ExpandMore } from '@material-ui/icons';
@@ -22,7 +16,6 @@ import {
   MuiAccordionSummary
 } from 'components/profileEditor/editor/complexTypesEditor/styles';
 import { createJSONTree } from 'components/profileEditor/editor/utils';
-import SliceDialogBox from 'components/profileEditor/sliceDialogBox/SliceDialogBox';
 import DialogChangeSliceName from './dialogSliceName/DialogChangeSliceName';
 
 type DetailProps = {
@@ -182,8 +175,8 @@ const RenderComplexType: React.FC<DetailProps> = ({
                 sliceName={structureDefJSON.sliceName}
                 id={structureDefJSON.id}
                 open={open}
-                onCloseClick={() => setOpen(false)}
-                onOpenClick={() => setOpen(true)}
+                onCloseClick={(): void => setOpen(false)}
+                onOpenClick={(): void => setOpen(true)}
               />
             );
           }

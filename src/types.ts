@@ -18,7 +18,6 @@ export type ResourceState = {
   structureDefinition: IStructureDefinition | undefined;
   extensionStructureDefinition: IStructureDefinition | undefined;
   selectedResourceId: string | undefined;
-  selectedAttributeId?: string;
   loading: boolean;
   error: Error | undefined;
   structureDefMeta: boolean;
