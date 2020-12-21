@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     overflow: 'auto'
   },
   paperLeft: {
-    width: 500,
+    width: 600,
     display: 'flex',
     flexDirection: 'column'
   },

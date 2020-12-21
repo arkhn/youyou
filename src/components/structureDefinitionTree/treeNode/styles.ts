@@ -4,10 +4,11 @@ const useStyles = makeStyles(() => ({
   index: {
     display: 'flex',
     alignItems: 'center',
-    height: 25
+    minHeight: 25
   },
   treeItem: {
     display: 'flex',
+    wordBreak: 'break-word',
     margin: 2,
     width: '100%'
   },
