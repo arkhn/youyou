@@ -2,21 +2,29 @@ import { makeStyles, Theme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme: Theme) => ({
   treeItem: {
-    display: 'flex',
     margin: 2
   },
-  iconTreeItemMeta: {
-    color: theme.palette.secondary.dark
+  treeItemContent: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    minHeight: 25,
+    width: '100%'
   },
-  textTreeItemMeta: {
-    fontStyle: 'italic'
+  iconEndTreeItem: {
+    marginLeft: 'auto',
+    height: 25,
+    display: 'flex'
   },
-  iconTreeItem: {
-    width: 15,
-    marginRight: 10
+  iconEndTreeItemPizza: {
+    color: theme.palette.secondary.main
   },
-  resourceId: {
-    marginBottom: 8
+  iconStartTreeItemPizza: {
+    height: 15
+  },
+  treeItemText: {
+    marginLeft: 8,
+    wordBreak: 'break-word'
   }
 }));
 

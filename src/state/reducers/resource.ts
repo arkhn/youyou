@@ -88,13 +88,13 @@ const resourceSlice = createSlice({
       }>
     ) => {
       const { elementDefinition, structureDefinition } = action.payload;
-      if (elementDefinition && elementDefinition.path) {
+      if (elementDefinition && elementDefinition.id) {
         const existingElement = structureDefinition.snapshot?.element.find(
-          (elem) => elem.path === elementDefinition.path
+          (elem) => elem.id === elementDefinition.id
         );
         const indexToPush = findIndex(
           structureDefinition,
-          elementDefinition.path
+          elementDefinition.id
         );
         const newSDef = cloneDeep(action.payload.structureDefinition);
         if (newSDef.snapshot) {
@@ -110,6 +110,7 @@ const resourceSlice = createSlice({
                 elementDefinition
               );
           state.structureDefinition = newSDef;
+          state.newElementDefinition = elementDefinition;
         }
       } else if (!elementDefinition && structureDefinition.snapshot) {
         const newSDef = {
@@ -153,7 +154,11 @@ const resourceSlice = createSlice({
         node,
         structureDefinition
       );
-      state.newElementDefinition = undefined;
+      if (
+        state.newElementDefinition &&
+        state.newElementDefinition.id === node.id
+      )
+        state.newElementDefinition = undefined;
     },
     changeSliceName: (
       state: ResourceState,

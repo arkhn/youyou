@@ -1,46 +1,38 @@
-import { makeStyles, withStyles, Theme } from '@material-ui/core/styles';
-import { AccordionSummary } from '@material-ui/core';
+import { makeStyles, Theme, withStyles } from '@material-ui/core/styles';
+import { AccordionSummary, Button } from '@material-ui/core';
+import theme from 'themeMUI';
 
 export const MuiAccordionSummary = withStyles({
   root: {
-    backgroundColor: '#90DFBF'
+    backgroundColor: theme.palette.primary.light,
+    marginBottom: -1,
+    height: 56
   }
 })(AccordionSummary);
 
-export const useStyles = makeStyles((theme: Theme) => ({
+export const MuiButton = withStyles((theme: Theme) => ({
   root: {
-    marginTop: 4,
-    width: '100%'
+    color: theme.palette.error.main,
+    '&:hover': {
+      backgroundColor: '#FEEDEB'
+    }
+  }
+}))(Button);
+
+export const useStyles = makeStyles((theme: Theme) => ({
+  accordionTitle: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    width: '100%',
+    alignItems: 'center'
+  },
+  accordionAddItem: {
+    borderRadius: 4,
+    paddingLeft: 16,
+    paddingRight: 4,
+    border: `1px solid ${theme.palette.primary.light}`
   },
   accordion: {
-    border: '1px solid ' + theme.palette.secondary.main,
-    flexGrow: 1
-  },
-  accordionSummary: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    flexGrow: 1
-  },
-  accordionAndButton: {
-    display: 'flex'
-  },
-  accordionButton: {
-    height: 30,
-    width: 50
-  },
-  completeDiv: {
-    border: '1px solid ' + theme.palette.secondary.light,
-    borderRadius: 8
-  },
-  header: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    margin: '8px 0',
-    textTransform: 'uppercase'
-  },
-  checkbox: {
-    marginLeft: 0
+    marginBottom: 16
   }
 }));

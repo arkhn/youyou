@@ -4,7 +4,7 @@ export const navbarHeight = 65;
 
 const useStyles = makeStyles((theme: Theme) => ({
   navBar: {
-    background: theme.palette.background.paper,
+    background: theme.palette.secondary.main,
     height: navbarHeight
   },
   toolBar: {
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     top: 10
   },
   homeLink: {
-    color: 'inherit',
+    color: theme.palette.secondary.contrastText,
     textDecoration: 'none',
     display: 'flex'
   }

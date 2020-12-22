@@ -1,30 +1,29 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
-  cardinalityInput: {
-    width: 60
-  },
-  formContainer: {
+  editorContainer: {
+    flexGrow: 1,
     height: '100%',
     display: 'flex',
     flexDirection: 'column'
   },
-  form: {
-    overflowY: 'auto',
-    paddingTop: 8,
-    marginBottom: 8,
-    height: '100%'
+  breadcrumbs: {
+    wordBreak: 'break-word',
+    marginBottom: 8
   },
-  submitButton: {
-    width: 100
-  },
-  bigInput: {
-    width: '100%'
-  },
-  endForm: {
+  paperRight: {
+    flexGrow: 1,
+    overflow: 'hidden',
+    padding: '22px 32px 16px 32px',
     display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'flex-end',
+    flexDirection: 'column'
+  },
+  formContainer: {
+    padding: 16
+  },
+  formFooter: {
+    display: 'flex',
+    alignItems: 'center',
     justifyContent: 'space-between'
   }
 }));

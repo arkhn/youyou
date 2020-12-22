@@ -24,7 +24,6 @@ import {
 import SliceDialogBox from './sliceDialogBox/SliceDialogBox';
 
 import useStyles from 'components/profileEditor/style';
-import clsx from 'clsx';
 
 export type OpenDialogState = {
   open: boolean;
@@ -83,6 +82,7 @@ const ProfileEditor: React.FC<{}> = () => {
       primitiveTypes,
       complexTypes
     );
+
   /**
    * If click on add or delete icon, open a dialog box to confirm actions
    * @param e event onClick
@@ -191,17 +191,16 @@ const ProfileEditor: React.FC<{}> = () => {
   return (
     <div>
       <Navbar />
-      <div className={classes.mapping}>
-        <Paper className={clsx(classes.paperLeft, classes.paper)}>
+      <div className={classes.profileEditorContainer}>
+        <Paper className={classes.structureDefTreeContainer}>
           <Typography variant="h1">{newStructureDef?.name}</Typography>
-          <div className={classes.treeView}>
-            <StructureDefinitionTree
-              onLabelClick={handleClick}
-              uiAttributes={attributesForUI}
-              structureDefinitionId={newStructureDef?.id}
-              handleClickSlices={handleClickForSlice}
-            />
-          </div>
+          <StructureDefinitionTree
+            onLabelClick={handleClick}
+            uiAttributes={attributesForUI}
+            structureDefinitionId={newStructureDef?.id}
+            handleClickSlices={handleClickForSlice}
+            className={classes.containerTreeAndEditor}
+          />
           <ButtonDownload
             text="Download profile"
             toDownload={newStructureDef}
@@ -209,6 +208,7 @@ const ProfileEditor: React.FC<{}> = () => {
         </Paper>
         {newStructureDef && (
           <Editor
+            classNameForm={classes.containerTreeAndEditor}
             structureDefinition={newStructureDef}
             structureDefinitionType={structureDefMeta ? 'resource' : 'element'}
           />

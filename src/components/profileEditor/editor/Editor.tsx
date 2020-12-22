@@ -22,14 +22,19 @@ import {
 } from 'components/profileEditor/utils';
 import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 
+import useStyles from 'components/profileEditor/editor/style';
+import clsx from 'clsx';
+
 type EditorProps = {
   structureDefinition: IStructureDefinition;
   structureDefinitionType: 'resource' | 'extension' | 'element';
+  classNameForm?: string;
 };
 
 const Editor: React.FC<EditorProps> = ({
   structureDefinition,
-  structureDefinitionType
+  structureDefinitionType,
+  classNameForm
 }) => {
   const {
     complexTypes,
@@ -52,6 +57,7 @@ const Editor: React.FC<EditorProps> = ({
   });
 
   const dispatch = useAppDispatch();
+  const classes = useStyles();
 
   const elementDefinitionTree = complexTypes?.find(
     (element: RenderAttributesTree) => element.id === 'ElementDefinition'
@@ -130,18 +136,24 @@ const Editor: React.FC<EditorProps> = ({
   };
 
   const renderBreadcrumbs = (): React.ReactNode => {
-    if (elementDefJSON)
+    if (newElementDefinition && elementDefJSON) {
       return elementDefJSON.id
         ?.split('.')
         .map((split: string) => <Typography key={split}>{split}</Typography>);
-    else return <Typography>Metadata</Typography>;
+    } else if (structureDefJSON) {
+      return <Typography>Metadata</Typography>;
+    } else {
+      return undefined;
+    }
   };
 
   return (
-    <div>
-      <Breadcrumbs>{renderBreadcrumbs()}</Breadcrumbs>
-      <Paper>
-        <form>
+    <div className={classes.editorContainer}>
+      <Breadcrumbs className={classes.breadcrumbs}>
+        {renderBreadcrumbs()}
+      </Breadcrumbs>
+      <Paper className={classes.paperRight}>
+        <form className={clsx(classNameForm, classes.formContainer)}>
           {elementDefJSON && elementDefinitionTree && newElementDefinition && (
             <RenderComplexType
               attributes={elementDefinitionTree}
@@ -186,13 +198,18 @@ const Editor: React.FC<EditorProps> = ({
               }
             />
           )}
-          {!newElementDefinition && <div>Select a valid attribute</div>}
         </form>
-        <div>
-          <Button variant="contained" color="secondary" onClick={submit}>
-            Submit
-          </Button>
-          <Typography color="textSecondary">* Required Fields</Typography>
+        <div className={classes.formFooter}>
+          {newElementDefinition || structureDefJSON ? (
+            <>
+              <Button variant="contained" color="secondary" onClick={submit}>
+                Submit
+              </Button>
+              <Typography color="textSecondary">* Required Fields</Typography>
+            </>
+          ) : (
+            <div>Select a valid attribute</div>
+          )}
         </div>
       </Paper>
     </div>

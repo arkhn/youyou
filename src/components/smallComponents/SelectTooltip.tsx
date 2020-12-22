@@ -30,6 +30,9 @@ type SelectWithHelpProps = {
 
 const CssFormControl = withStyles((theme: Theme) => ({
   root: {
+    display: 'flex',
+    alignItems: 'center',
+    width: '100%',
     '& .MuiOutlinedInput-root': {
       '& fieldset': {
         borderColor: theme.palette.secondary.main
@@ -48,7 +51,8 @@ const useStyles = makeStyles(() => ({
   root: {
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    width: '100%'
   },
   select: {
     flexGrow: 1,
