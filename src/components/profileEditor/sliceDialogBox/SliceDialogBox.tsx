@@ -68,7 +68,7 @@ const SliceDialogBox: React.FC<SliceDialogBoxProps> = ({
               label="slice name"
               autoFocus
               error={sliceNameError.error}
-              onBlur={onChangeName}
+              onChange={onChangeName}
             />
           )}
           <Button

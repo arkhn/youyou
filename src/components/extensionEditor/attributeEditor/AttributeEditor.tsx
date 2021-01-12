@@ -66,7 +66,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
   );
   const [dataType, setDataType] = useState('');
 
-  const handleEditExtension = (e: React.FormEvent<HTMLFormElement>): void => {
+  const handleEditExtension = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     let extensionElement = getElementById('Extension', 'differential');
@@ -108,7 +108,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
           defaultValue={short}
           onBlur={(
             event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
-          ): void => setShort(event.target.value)}
+          ) => setShort(event.target.value)}
         />
         <br />
         <TextField
@@ -117,7 +117,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
           defaultValue={definition}
           onBlur={(
             event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
-          ): void => setDefinition(event.target.value)}
+          ) => setDefinition(event.target.value)}
         />
         <br />
         <TextField
@@ -126,7 +126,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
           defaultValue={comment}
           onBlur={(
             event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
-          ): void => setComment(event.target.value)}
+          ) => setComment(event.target.value)}
         />
         <br />
         <TextField
@@ -135,7 +135,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
           defaultValue={minCardinality}
           onBlur={(
             event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
-          ): void => setMinCardinality(parseInt(event.target.value))}
+          ) => setMinCardinality(parseInt(event.target.value))}
         />
         <TextField
           id="maxCardinality"
@@ -143,7 +143,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
           defaultValue={maxCardinality}
           onBlur={(
             event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
-          ): void => setMaxCardinality(event.target.value)}
+          ) => setMaxCardinality(event.target.value)}
         />
         <br />
         <ul>
@@ -151,7 +151,7 @@ const AttributeEditor: React.FC<AttributeEditorProps> = ({
             id="Data type"
             options={datatypes ?? []}
             style={{ width: 300 }}
-            onChange={(event, value): void => {
+            onChange={(event, value) => {
               value && setDataType(value);
               // TODO : complete structureDefinitionTree with getStructureDef(value as string)
             }}

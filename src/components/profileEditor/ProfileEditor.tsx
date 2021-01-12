@@ -92,7 +92,7 @@ const ProfileEditor: React.FC<{}> = () => {
     e: React.MouseEvent<Element, MouseEvent>,
     node: RenderAttributesTree,
     openDialog: OpenDialogState
-  ): void => {
+  ) => {
     e.stopPropagation();
     setNodeToSlice(node);
     setOpen(openDialog);
@@ -102,9 +102,7 @@ const ProfileEditor: React.FC<{}> = () => {
    * If the slice name is not empty and unique, add it to the structure definition in the store
    * @param event onClick event
    */
-  const handleSubmitSliceAdd = (
-    event: React.FormEvent<HTMLFormElement>
-  ): void => {
+  const handleSubmitSliceAdd = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const existingPath =
       newStructureDef &&
@@ -152,9 +150,7 @@ const ProfileEditor: React.FC<{}> = () => {
    * Delete the slice after user validation
    * @param event
    */
-  const handleSubmitSliceDelete = (
-    event: React.FormEvent<HTMLFormElement>
-  ): void => {
+  const handleSubmitSliceDelete = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const newElements = cloneDeep(newStructureDef);
     if (newElements && nodeToSlice) {
@@ -175,7 +171,7 @@ const ProfileEditor: React.FC<{}> = () => {
   const handleClick = (
     e: React.MouseEvent<Element, MouseEvent>,
     node: RenderAttributesTree
-  ): void => {
+  ) => {
     e.preventDefault();
     dispatch(createNewElementDefinition(node));
   };
@@ -218,10 +214,10 @@ const ProfileEditor: React.FC<{}> = () => {
       <SliceDialogBox
         attributeSelected={open}
         sliceNameError={sliceNameError}
-        onChangeName={(e): void => {
+        onChangeName={(e) => {
           setSliceName(e.target.value);
         }}
-        onCloseClick={(): void => {
+        onCloseClick={() => {
           setOpen({ open: false });
           setSliceName('');
           setSliceNameError({ error: false, message: '' });

@@ -51,24 +51,23 @@ const resourceSlice = createSlice({
       state: ResourceState,
       action: PayloadAction<RenderAttributesTree>
     ) => {
+      const { min, max, id, newPath, definition, binding } = action.payload;
       let newElement = state.structureDefinition?.snapshot?.element.find(
-        (att: IElementDefinition) => att.id === action.payload.newPath
+        (att: IElementDefinition) => att.id === newPath
       );
       if (!newElement) {
         newElement = {
           base: {
-            min: action.payload.min,
-            max: action.payload.max,
-            path: action.payload.id
+            min: min,
+            max: max,
+            path: id
           },
-          min: action.payload.min,
-          max: action.payload.max,
-          id: action.payload.newPath,
-          path: action.payload.newPath,
-          definition: action.payload.definition,
-          binding: action.payload.binding
-            ? (action.payload.binding as IElementDefinitionBinding)
-            : undefined
+          min: min,
+          max: max,
+          id: newPath,
+          path: newPath,
+          definition: definition,
+          binding: binding ? (binding as IElementDefinitionBinding) : undefined
         };
       }
       state.newElementDefinition = newElement;
@@ -174,6 +173,11 @@ const resourceSlice = createSlice({
         newSDef?.snapshot.element.forEach((element, indexToPush) => {
           element?.id?.split('.').forEach((split, index) => {
             if (split === splitedId && element && element.id) {
+              /*
+                split the split we already have, and replace the last element with the new slice name 
+                for example if it's Patient.contact:sliceName, it splits contact:sliceName in ["contact", "sliceName"],
+                and replace sliceName by newSliceName, new split will be ["contact", "newSliceName"]
+              */
               const splitedSplit = split.split(':');
               splitedSplit.splice(splitedSplit.length - 1, 1, newSliceName);
               const newPath = splitedSplit.join(':');

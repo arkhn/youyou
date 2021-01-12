@@ -28,20 +28,16 @@ const TreeNode: React.FC<TreeNodeProps> = ({ nodes, handleClickSlices }) => {
     nodes.id.split('.')[nodes.id.split('.').length - 1].split(':').length > 1;
   const [display, setDisplay] = useState(isSlice ? 'block' : 'none');
   const disabledPizza =
-    nodes.max === '*' ||
-    Number(nodes.max) > 1 ||
+    Number(nodes.max) === 0 ||
     (Number(nodes.max) === 1 &&
-      Array.isArray(nodes.type) &&
-      nodes.type.length > 1)
-      ? false
-      : true;
+      (!Array.isArray(nodes.type) || nodes.type.length <= 1));
 
   return (
     <span
-      onMouseEnter={(): void => {
+      onMouseEnter={() => {
         !isSlice && setDisplay('block');
       }}
-      onMouseLeave={(): void => {
+      onMouseLeave={() => {
         !isSlice && setDisplay('none');
       }}
       className={classes.treeItemContent}
@@ -63,7 +59,7 @@ const TreeNode: React.FC<TreeNodeProps> = ({ nodes, handleClickSlices }) => {
       <div className={classes.iconEndTreeItem}>
         <IconButton
           size="small"
-          onClick={(e): void => {
+          onClick={(e) => {
             handleClickSlices(e, nodes, {
               open: true,
               message: { title: 'Add a slice', text: `to ${nodes.newPath}` },
@@ -85,7 +81,7 @@ const TreeNode: React.FC<TreeNodeProps> = ({ nodes, handleClickSlices }) => {
         <IconButton
           size="small"
           style={{ display: isSlice ? 'block' : 'none' }}
-          onClick={(e): void =>
+          onClick={(e) =>
             handleClickSlices(e, nodes, {
               open: true,
               message: {

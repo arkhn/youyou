@@ -24,7 +24,7 @@ const Homepage: React.FC<{}> = () => {
   const dispatch = useAppDispatch();
   const classes = useStyles();
 
-  const dispatchResourceSelected = (resource: { id: string }): void => {
+  const dispatchResourceSelected = (resource: { id: string }) => {
     if (resource.id) {
       dispatch(selectResource(resource.id));
       dispatch(requestStructureDefThunk(resource.id));
@@ -47,7 +47,7 @@ const Homepage: React.FC<{}> = () => {
           <Button
             variant="contained"
             color="secondary"
-            onClick={(): void => {
+            onClick={() => {
               if (button.path === '/profile/edit') {
                 dispatchResourceSelected({ id: 'Patient' });
               }

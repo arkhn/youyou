@@ -41,7 +41,7 @@ const ButtonDownload: React.FC<ButtonDownloadProps> = ({
         color="secondary"
         variant="contained"
         className={classes.buttonDownloadSize}
-        onClick={(): void => {
+        onClick={() => {
           dispatch(
             setSnackbarOpen({
               severity: 'success',

@@ -107,7 +107,7 @@ const Editor: React.FC<EditorProps> = ({
     createStructureDefJSON
   ]);
 
-  const submit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+  const submit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
     if (structureDefinitionType === 'element' && structureDefinition) {
       dispatch(
@@ -137,11 +137,19 @@ const Editor: React.FC<EditorProps> = ({
 
   const renderBreadcrumbs = (): React.ReactNode => {
     if (newElementDefinition && elementDefJSON) {
-      return elementDefJSON.id
-        ?.split('.')
-        .map((split: string) => <Typography key={split}>{split}</Typography>);
+      return (
+        <Breadcrumbs className={classes.breadcrumbs}>
+          {elementDefJSON.id?.split('.').map((split: string) => (
+            <Typography key={split}>{split}</Typography>
+          ))}
+        </Breadcrumbs>
+      );
     } else if (structureDefJSON) {
-      return <Typography>Metadata</Typography>;
+      return (
+        <Breadcrumbs className={classes.breadcrumbs}>
+          <Typography>Metadata</Typography>
+        </Breadcrumbs>
+      );
     } else {
       return undefined;
     }
@@ -156,13 +164,13 @@ const Editor: React.FC<EditorProps> = ({
           structureDefJSON={elementDefJSON}
           primitiveTypes={primitiveTypes}
           name={''}
-          onChangeValue={(path, value): void =>
+          onChangeValue={(path, value) =>
             setElementDefJSON(onChangeElementJSON(path, value, elementDefJSON))
           }
-          handleDelete={(path, i): void =>
+          handleDelete={(path, i) =>
             setElementDefJSON(onDeleteComplexType(path, i, elementDefJSON))
           }
-          handleAdd={(path, value): void =>
+          handleAdd={(path, value) =>
             setElementDefJSON(onAddComplexType(path, value, elementDefJSON))
           }
         />
@@ -175,15 +183,15 @@ const Editor: React.FC<EditorProps> = ({
           structureDefJSON={structureDefJSON}
           primitiveTypes={primitiveTypes}
           name={''}
-          onChangeValue={(path, value): void =>
+          onChangeValue={(path, value) =>
             setStructureDefJSON(
               onChangeElementJSON(path, value, structureDefJSON)
             )
           }
-          handleDelete={(path, i): void =>
+          handleDelete={(path, i) =>
             setStructureDefJSON(onDeleteComplexType(path, i, structureDefJSON))
           }
-          handleAdd={(path, value): void =>
+          handleAdd={(path, value) =>
             setStructureDefJSON(onAddComplexType(path, value, structureDefJSON))
           }
         />
@@ -197,9 +205,7 @@ const Editor: React.FC<EditorProps> = ({
 
   return (
     <div className={classes.editorContainer}>
-      <Breadcrumbs className={classes.breadcrumbs}>
-        {renderBreadcrumbs()}
-      </Breadcrumbs>
+      {renderBreadcrumbs()}
       <Paper className={classes.paperRight}>
         <form className={clsx(classNameForm, classes.formContainer)}>
           {renderAttributes()}

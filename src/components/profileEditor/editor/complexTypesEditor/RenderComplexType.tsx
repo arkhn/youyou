@@ -51,7 +51,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
 
   const onChange = (
     callback: typeof onChangeValue | typeof handleDelete | typeof handleAdd
-  ) => (path: string, value: any): void => {
+  ) => (path: string, value: any) => {
     if (index !== undefined && callback) {
       callback(`${name && name + '.'}${index}.${path}`, value);
     } else if (callback) {
@@ -74,7 +74,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
               className={clsx(classes.accordionTitle, classes.accordionAddItem)}
             >
               <IconButton
-                onClick={(): void =>
+                onClick={() =>
                   onChange(handleAdd)(
                     item.name,
                     createJSONTree(item.children, structureDefJSON[item.name])
@@ -103,7 +103,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                         {item.name} {i + 1}
                       </Typography>
                       <MuiButton
-                        onClick={(event): void => {
+                        onClick={(event) => {
                           event.stopPropagation();
                           onChange(handleDelete)(item.name, i);
                         }}
@@ -169,11 +169,9 @@ const RenderComplexType: React.FC<DetailProps> = ({
             attributeElement = (
               <InputTooltip
                 label={item.min && item.min > 0 ? `${item.name}*` : item.name}
-                value={
-                  structureDefJSON[item.name] ? structureDefJSON[item.name] : ''
-                }
+                value={structureDefJSON[item.name] ?? ''}
                 tool={item.definition}
-                onBlur={(event): void =>
+                onBlur={(event) =>
                   onChange(onChangeValue)(item.name, event.target.value)
                 }
               />
@@ -225,7 +223,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                 tool={item.definition}
                 choices={mapValues}
                 value={structureDefJSON[item.name] ?? mapValues[0].value}
-                onChange={(event): void =>
+                onChange={(event) =>
                   onChange(onChangeValue)(item.name, event.target.value)
                 }
               />
@@ -239,7 +237,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
               label={item.min && item.min > 0 ? `${item.name}*` : item.name}
               tool={item.definition}
               value={structureDefJSON[item.name] ?? false}
-              onChange={(event): void =>
+              onChange={(event) =>
                 onChange(onChangeValue)(item.name, event.target.checked)
               }
             />

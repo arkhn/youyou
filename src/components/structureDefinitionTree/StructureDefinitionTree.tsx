@@ -49,7 +49,7 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
       key={nodes.newPath ?? ''}
       nodeId={nodes.newPath ?? ''}
       label={<TreeNode handleClickSlices={handleClickSlices} nodes={nodes} />}
-      onLabelClick={(e): void => {
+      onLabelClick={(e) => {
         onLabelClick && onLabelClick(e, nodes);
       }}
     >
@@ -68,7 +68,7 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
       <TreeItem
         className={classes.treeItem}
         nodeId="0"
-        onClick={(): void => {
+        onClick={() => {
           dispatch(selectStructureDefMeta());
         }}
         label={

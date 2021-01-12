@@ -15,7 +15,7 @@ const SnackbarWithClose: React.FC<{}> = () => {
 
   const [open, setOpen] = useState(false);
 
-  const handleClose = (event?: React.SyntheticEvent, reason?: string): void => {
+  const handleClose = (event?: React.SyntheticEvent, reason?: string) => {
     if (reason === 'clickaway') {
       return;
     }
@@ -32,7 +32,7 @@ const SnackbarWithClose: React.FC<{}> = () => {
       open={open}
       autoHideDuration={3000}
       onClose={handleClose}
-      onExited={(): void => {
+      onExited={() => {
         dispatch(setSnackbarOpen({ severity: undefined, message: message }));
       }}
     >

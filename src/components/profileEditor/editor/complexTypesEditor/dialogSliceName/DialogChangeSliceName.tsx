@@ -31,7 +31,7 @@ const DialogChangeSliceName: React.FC<DialogChangeSliceNameProps> = ({
         className={classes.button}
         color="secondary"
         variant="contained"
-        onClick={(): void =>
+        onClick={() =>
           setOpen({
             open: true,
             add: true,
@@ -43,9 +43,9 @@ const DialogChangeSliceName: React.FC<DialogChangeSliceNameProps> = ({
       </Button>
       <SliceDialogBox
         attributeSelected={open}
-        onCloseClick={(): void => setOpen({ open: false })}
-        onChangeName={(e): void => setNewSliceName(e.target.value)}
-        onFormSubmit={(e): void => {
+        onCloseClick={() => setOpen({ open: false })}
+        onChangeName={(e) => setNewSliceName(e.target.value)}
+        onFormSubmit={(e) => {
           e.preventDefault();
           dispatch(changeSliceName({ newSliceName, id }));
           setOpen({ open: false });
