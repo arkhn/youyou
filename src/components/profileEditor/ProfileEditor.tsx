@@ -1,20 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
-import clsx from 'clsx';
-import {
-  IStructureDefinition,
-  IElementDefinition,
-  IElementDefinition_Binding as IElementDefinitionBinding
-} from '@ahryman40k/ts-fhir-types/lib/R4';
-import { Paper, Container, Typography, Breadcrumbs } from '@material-ui/core';
+import { IStructureDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
+import { Paper, Typography } from '@material-ui/core';
 import cloneDeep from 'lodash.clonedeep';
 
 import { RenderAttributesTree } from 'types';
 import { RootState, useAppDispatch } from 'state/store';
 import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 import {
-  selectAttributeId,
   addSlice,
   deleteSlice,
   createNewElementDefinition
@@ -45,22 +39,19 @@ const ProfileEditor: React.FC<{}> = () => {
     loading,
     structureDefinition,
     structureDefMeta,
-    selectedAttributeId,
     primitiveTypes,
     complexTypes
   } = useSelector((state: RootState) => {
     const {
       loading,
       structureDefinition,
-      structureDefMeta,
-      selectedAttributeId
+      structureDefMeta
     } = state.resourceSlice;
     const { primitiveTypes, complexTypes } = state.fhirDataTypes;
     return {
       loading,
       structureDefinition,
       structureDefMeta,
-      selectedAttributeId,
       primitiveTypes,
       complexTypes
     };
@@ -78,7 +69,6 @@ const ProfileEditor: React.FC<{}> = () => {
   const [nodeToSlice, setNodeToSlice] = useState<
     RenderAttributesTree | undefined
   >(undefined);
-  const splitedAttributeSelected = selectedAttributeId?.split('.');
 
   useEffect(() => {
     setNewStructureDef(structureDefinition);
@@ -92,6 +82,7 @@ const ProfileEditor: React.FC<{}> = () => {
       primitiveTypes,
       complexTypes
     );
+
   /**
    * If click on add or delete icon, open a dialog box to confirm actions
    * @param e event onClick
@@ -101,7 +92,7 @@ const ProfileEditor: React.FC<{}> = () => {
     e: React.MouseEvent<Element, MouseEvent>,
     node: RenderAttributesTree,
     openDialog: OpenDialogState
-  ): void => {
+  ) => {
     e.stopPropagation();
     setNodeToSlice(node);
     setOpen(openDialog);
@@ -111,9 +102,7 @@ const ProfileEditor: React.FC<{}> = () => {
    * If the slice name is not empty and unique, add it to the structure definition in the store
    * @param event onClick event
    */
-  const handleSubmitSliceAdd = (
-    event: React.FormEvent<HTMLFormElement>
-  ): void => {
+  const handleSubmitSliceAdd = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const existingPath =
       newStructureDef &&
@@ -161,9 +150,7 @@ const ProfileEditor: React.FC<{}> = () => {
    * Delete the slice after user validation
    * @param event
    */
-  const handleSubmitSliceDelete = (
-    event: React.FormEvent<HTMLFormElement>
-  ): void => {
+  const handleSubmitSliceDelete = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const newElements = cloneDeep(newStructureDef);
     if (newElements && nodeToSlice) {
@@ -184,42 +171,9 @@ const ProfileEditor: React.FC<{}> = () => {
   const handleClick = (
     e: React.MouseEvent<Element, MouseEvent>,
     node: RenderAttributesTree
-  ): void => {
+  ) => {
     e.preventDefault();
-    dispatch(selectAttributeId(node.newPath));
-    const findAttribute = newStructureDef?.snapshot?.element.find(
-      (att: IElementDefinition) => att.id === node.newPath
-    );
-    if (!findAttribute) {
-      const newElement: IElementDefinition = {
-        base: {
-          min: node.min,
-          max: node.max,
-          path: node.id
-        },
-        min: node.min,
-        max: node.max,
-        id: node.newPath,
-        path: node.newPath,
-        definition: node.definition,
-        binding: node.binding
-          ? (node.binding as IElementDefinitionBinding)
-          : undefined
-      };
-      dispatch(createNewElementDefinition(newElement));
-    } else {
-      dispatch(createNewElementDefinition(findAttribute));
-    }
-  };
-
-  const renderBreadcrumbs = (): React.ReactNode => {
-    if (structureDefMeta)
-      return <Typography className={classes.capitalize}>Metadata</Typography>;
-    return splitedAttributeSelected?.map((split: string) => (
-      <Typography key={split} className={classes.capitalize}>
-        {split}
-      </Typography>
-    ));
+    dispatch(createNewElementDefinition(node));
   };
 
   if (loading) {
@@ -233,46 +187,37 @@ const ProfileEditor: React.FC<{}> = () => {
   return (
     <div>
       <Navbar />
-      <div className={classes.mapping}>
-        <Paper className={clsx(classes.paperLeft, classes.paper)}>
+      <div className={classes.profileEditorContainer}>
+        <Paper className={classes.structureDefTreeContainer}>
           <Typography variant="h1">{newStructureDef?.name}</Typography>
-          <Container className={classes.treeView}>
-            <StructureDefinitionTree
-              onLabelClick={handleClick}
-              uiAttributes={attributesForUI}
-              structureDefinitionId={newStructureDef?.id}
-              handleClickSlices={handleClickForSlice}
-            />
-          </Container>
+          <StructureDefinitionTree
+            onLabelClick={handleClick}
+            uiAttributes={attributesForUI}
+            structureDefinitionId={newStructureDef?.id}
+            handleClickSlices={handleClickForSlice}
+            className={classes.containerTreeAndEditor}
+          />
           <ButtonDownload
             text="Download profile"
             toDownload={newStructureDef}
           />
         </Paper>
-        <Container className={classes.containerRight}>
-          <Breadcrumbs className={classes.marginBottom}>
-            {renderBreadcrumbs()}
-          </Breadcrumbs>
-          <Paper className={clsx(classes.paperRight, classes.paper)}>
-            {newStructureDef && (
-              <Editor
-                structureDefinition={newStructureDef}
-                structureDefinitionType={
-                  structureDefMeta ? 'resource' : 'element'
-                }
-              />
-            )}
-          </Paper>
-        </Container>
+        {newStructureDef && (
+          <Editor
+            classNameForm={classes.containerTreeAndEditor}
+            structureDefinition={newStructureDef}
+            structureDefinitionType={structureDefMeta ? 'resource' : 'element'}
+          />
+        )}
       </div>
       <SnackBarWithClose />
       <SliceDialogBox
         attributeSelected={open}
         sliceNameError={sliceNameError}
-        onChangeName={(e): void => {
+        onChangeName={(e) => {
           setSliceName(e.target.value);
         }}
-        onCloseClick={(): void => {
+        onCloseClick={() => {
           setOpen({ open: false });
           setSliceName('');
           setSliceNameError({ error: false, message: '' });

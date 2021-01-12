@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 import { Clear, Folder, LocalOffer, LocalPizza } from '@material-ui/icons';
-import { IconButton, Tooltip } from '@material-ui/core';
+import { IconButton, Tooltip, Typography } from '@material-ui/core';
 
 import { RenderAttributesTree } from 'types';
 import { OpenDialogState } from 'components/profileEditor/ProfileEditor';
 
-import useStyles from 'components/structureDefinitionTree/treeNode/styles';
+import useStyles from 'components/structureDefinitionTree/style';
 
 type TreeNodeProps = {
   nodes: RenderAttributesTree;
@@ -18,67 +18,82 @@ type TreeNodeProps = {
 };
 
 const TreeNode: React.FC<TreeNodeProps> = ({ nodes, handleClickSlices }) => {
-  const classes = useStyles();
-
   /**
    * check if in path, the last word (words in path delimited by '.') contains a ':'
    * for exemple, in Patient.identifier.use:telephone, check if in ["Patient", "identifier", "use:telephone"] the last index "use:telephone".split(":").length > 1
    * If it's superior to 1, means that there's a ":" so it's a slice
    */
+  const classes = useStyles();
   const isSlice =
     nodes.id.split('.')[nodes.id.split('.').length - 1].split(':').length > 1;
   const [display, setDisplay] = useState(isSlice ? 'block' : 'none');
+  const disabledPizza =
+    Number(nodes.max) === 0 ||
+    (Number(nodes.max) === 1 &&
+      (!Array.isArray(nodes.type) || nodes.type.length <= 1));
 
   return (
     <span
-      className={classes.index}
-      onMouseEnter={(): void => {
+      onMouseEnter={() => {
         !isSlice && setDisplay('block');
       }}
-      onMouseLeave={(): void => {
+      onMouseLeave={() => {
         !isSlice && setDisplay('none');
       }}
+      className={classes.treeItemContent}
     >
-      <span className={classes.treeItem}>
-        {nodes.children.length > 0 ? (
-          <Folder className={classes.iconTreeItem} />
-        ) : (
-          <LocalOffer className={classes.iconTreeItem} />
-        )}
+      {nodes.children.length > 0 ? (
+        <Folder fontSize="small" />
+      ) : (
+        <LocalOffer fontSize="small" />
+      )}
+      <LocalPizza
+        fontSize="small"
+        style={{ display: isSlice ? 'block' : 'none' }}
+        color="secondary"
+        className={classes.iconStartTreeItemPizza}
+      />
+      <Typography variant="body2" className={classes.treeItemText}>
         {nodes.name}
-      </span>
-      <div className={classes.pizzaIcon}>
+      </Typography>
+      <div className={classes.iconEndTreeItem}>
         <IconButton
           size="small"
-          onClick={(e): void =>
+          onClick={(e) => {
             handleClickSlices(e, nodes, {
               open: true,
               message: { title: 'Add a slice', text: `to ${nodes.newPath}` },
               add: true
-            })
-          }
+            });
+          }}
           style={{ display: display }}
+          disabled={disabledPizza}
         >
-          <Tooltip title="Add a slice">
-            <LocalPizza />
+          <Tooltip title={'Add a slice'}>
+            <LocalPizza
+              fontSize="small"
+              className={
+                disabledPizza ? undefined : classes.iconEndTreeItemPizza
+              }
+            />
           </Tooltip>
         </IconButton>
         <IconButton
           size="small"
           style={{ display: isSlice ? 'block' : 'none' }}
-          onClick={(e): void =>
+          onClick={(e) =>
             handleClickSlices(e, nodes, {
               open: true,
               message: {
                 title: 'Delete a slice',
-                text: `Are you sure you want to delete ${nodes.newPath}`
+                text: `Are you sure you want to delete ${nodes.newPath} ?`
               },
               add: false
             })
           }
         >
           <Tooltip title="Delete slice">
-            <Clear color="error" />
+            <Clear color="error" fontSize="small" />
           </Tooltip>
         </IconButton>
       </div>

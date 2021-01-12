@@ -15,9 +15,7 @@ const Navbar: React.FC<{}> = () => {
       <Toolbar className={classes.toolBar}>
         <Link to={'/'} className={classes.homeLink}>
           <Logo className={classes.logo} />
-          <Typography variant="h1" color="primary">
-            YOUYOU
-          </Typography>
+          <Typography variant="h1">YOUYOU</Typography>
         </Link>
       </Toolbar>
     </AppBar>

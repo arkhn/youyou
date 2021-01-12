@@ -4,18 +4,23 @@ import React from 'react';
 import {
   Accordion,
   AccordionDetails,
-  Button,
+  IconButton,
+  Tooltip,
   Typography
 } from '@material-ui/core';
-import { Add, DeleteOutline, ExpandMore } from '@material-ui/icons';
+import { Add, ExpandMore } from '@material-ui/icons';
+import clsx from 'clsx';
 
 import { RenderAttributesTree } from 'types';
 import CheckboxTooltip from 'components/smallComponents/CheckboxTooltip';
+import { createJSONTree } from 'components/profileEditor/editor/utils';
+import DialogChangeSliceName from './dialogSliceName/DialogChangeSliceName';
+
 import {
   useStyles,
-  MuiAccordionSummary
+  MuiAccordionSummary,
+  MuiButton
 } from 'components/profileEditor/editor/complexTypesEditor/styles';
-import { createJSONTree } from 'components/profileEditor/editor/utils';
 
 type DetailProps = {
   attributes: RenderAttributesTree[];
@@ -27,6 +32,7 @@ type DetailProps = {
   handleAdd?: (path: string, value: any) => void;
   name: string;
   index?: number;
+  onChangeSliceName?: (value: string) => void;
 };
 
 const RenderComplexType: React.FC<DetailProps> = ({
@@ -41,10 +47,11 @@ const RenderComplexType: React.FC<DetailProps> = ({
   index
 }) => {
   const classes = useStyles();
+  let renderSliceName: JSX.Element | null = null;
 
   const onChange = (
     callback: typeof onChangeValue | typeof handleDelete | typeof handleAdd
-  ) => (path: string, value: any): void => {
+  ) => (path: string, value: any) => {
     if (index !== undefined && callback) {
       callback(`${name && name + '.'}${index}.${path}`, value);
     } else if (callback) {
@@ -62,74 +69,77 @@ const RenderComplexType: React.FC<DetailProps> = ({
     ) {
       if (Array.isArray(structureDefJSON[item.name])) {
         attributeElement = (
-          <div className={classes.completeDiv}>
-            <div className={classes.header}>
-              <Typography>{item.name}</Typography>
-              <Button
-                className={classes.accordionButton}
-                variant="outlined"
-                color="primary"
-                onClick={(): void =>
+          <div className={classes.accordion}>
+            <div
+              className={clsx(classes.accordionTitle, classes.accordionAddItem)}
+            >
+              <IconButton
+                onClick={() =>
                   onChange(handleAdd)(
                     item.name,
                     createJSONTree(item.children, structureDefJSON[item.name])
                   )
                 }
               >
-                <Add />
-              </Button>
+                <Tooltip title={`add a new ${item.name}`}>
+                  <Add />
+                </Tooltip>
+              </IconButton>
+              <Typography className={classes.titleAdd} variant="h2">
+                {item.name}
+              </Typography>
             </div>
             {structureDefJSON[item.name].map((element: any, i: number) => {
               return (
-                <div key={i} className={classes.accordionAndButton}>
-                  <Accordion className={classes.accordion}>
-                    <MuiAccordionSummary expandIcon={<ExpandMore />}>
-                      <div className={classes.accordionSummary}>
-                        <Typography>
-                          {item.name} {i + 1}
-                        </Typography>
-                        <Button
-                          className={classes.accordionButton}
-                          variant="outlined"
-                          color="primary"
-                          onClick={(event): void => {
-                            event.stopPropagation();
-                            onChange(handleDelete)(item.name, i);
-                          }}
-                        >
-                          <DeleteOutline />
-                        </Button>
-                      </div>
-                    </MuiAccordionSummary>
-                    <AccordionDetails>
-                      <RenderComplexType
-                        structureDefJSON={element}
-                        complexTypes={complexTypes}
-                        attributes={item.children}
-                        primitiveTypes={primitiveTypes}
-                        onChangeValue={onChange(onChangeValue)}
-                        handleDelete={onChange(handleDelete)}
-                        handleAdd={onChange(handleAdd)}
-                        name={item.name}
-                        index={i}
-                      />
-                    </AccordionDetails>
-                  </Accordion>
-                </div>
+                <Accordion key={i}>
+                  <MuiAccordionSummary expandIcon={<ExpandMore />}>
+                    <div
+                      className={clsx(
+                        classes.accordionTitle,
+                        classes.accordionTitleDelete
+                      )}
+                    >
+                      <Typography>
+                        {item.name} {i + 1}
+                      </Typography>
+                      <MuiButton
+                        onClick={(event) => {
+                          event.stopPropagation();
+                          onChange(handleDelete)(item.name, i);
+                        }}
+                      >
+                        Delete
+                      </MuiButton>
+                    </div>
+                  </MuiAccordionSummary>
+                  <AccordionDetails className={classes.accordionDetails}>
+                    <RenderComplexType
+                      structureDefJSON={element}
+                      complexTypes={complexTypes}
+                      attributes={item.children}
+                      primitiveTypes={primitiveTypes}
+                      onChangeValue={onChange(onChangeValue)}
+                      handleDelete={onChange(handleDelete)}
+                      handleAdd={onChange(handleAdd)}
+                      name={item.name}
+                      index={i}
+                    />
+                  </AccordionDetails>
+                </Accordion>
               );
             })}
           </div>
         );
       } else if (typeof structureDefJSON[item.name] === 'object') {
         attributeElement = (
-          <div key={item.name} className={classes.accordionAndButton}>
+          <div key={item.name}>
             <Accordion className={classes.accordion}>
               <MuiAccordionSummary expandIcon={<ExpandMore />}>
                 <Typography>
                   {item.min && item.min > 0 ? `${item.name}*` : item.name}
                 </Typography>
               </MuiAccordionSummary>
-              <AccordionDetails>
+              <AccordionDetails className={classes.accordionDetails}>
                 <RenderComplexType
                   structureDefJSON={structureDefJSON[item.name]}
                   complexTypes={complexTypes}
@@ -145,24 +155,35 @@ const RenderComplexType: React.FC<DetailProps> = ({
           </div>
         );
       }
-    } else if (item.name !== 'extension' && item.children.length === 0) {
+    } else if (
+      item.name !== 'extension' &&
+      item.children.length === 0 &&
+      !Array.isArray(item.type)
+    ) {
       switch (item.type) {
         case 'string':
         case 'uri':
         case 'id':
         case 'http://hl7.org/fhirpath/System.String': {
-          attributeElement = (
-            <InputTooltip
-              label={item.min && item.min > 0 ? `${item.name}*` : item.name}
-              value={
-                structureDefJSON[item.name] ? structureDefJSON[item.name] : ''
-              }
-              tool={item.definition}
-              onBlur={(event): void =>
-                onChange(onChangeValue)(item.name, event.target.value)
-              }
-            />
-          );
+          if (item.name !== 'sliceName') {
+            attributeElement = (
+              <InputTooltip
+                label={item.min && item.min > 0 ? `${item.name}*` : item.name}
+                value={structureDefJSON[item.name] ?? ''}
+                tool={item.definition}
+                onBlur={(event) =>
+                  onChange(onChangeValue)(item.name, event.target.value)
+                }
+              />
+            );
+          } else if (item.name === 'sliceName' && structureDefJSON.sliceName) {
+            renderSliceName = (
+              <DialogChangeSliceName
+                sliceName={structureDefJSON.sliceName}
+                id={structureDefJSON.id}
+              />
+            );
+          }
           break;
         }
         case 'integer':
@@ -202,7 +223,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                 tool={item.definition}
                 choices={mapValues}
                 value={structureDefJSON[item.name] ?? mapValues[0].value}
-                onChange={(event): void =>
+                onChange={(event) =>
                   onChange(onChangeValue)(item.name, event.target.value)
                 }
               />
@@ -216,7 +237,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
               label={item.min && item.min > 0 ? `${item.name}*` : item.name}
               tool={item.definition}
               value={structureDefJSON[item.name] ?? false}
-              onChange={(event): void =>
+              onChange={(event) =>
                 onChange(onChangeValue)(item.name, event.target.checked)
               }
             />
@@ -227,17 +248,14 @@ const RenderComplexType: React.FC<DetailProps> = ({
           break;
       }
     }
-    return (
-      <div className={classes.root} key={index}>
-        {attributeElement}
-      </div>
-    );
+    return <div key={index}>{attributeElement}</div>;
   });
 
   return (
-    <div>
-      <div>{renderAttribute}</div>
-    </div>
+    <>
+      {renderSliceName}
+      {renderAttribute}
+    </>
   );
 };
 

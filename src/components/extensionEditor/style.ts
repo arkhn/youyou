@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginBottom: 16
   },
   treeView: {
-    overflow: 'auto',
+    overflowY: 'auto',
     margin: '8px 0 16px 0'
   },
   downloadLink: {

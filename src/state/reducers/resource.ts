@@ -3,6 +3,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import extensionStructureDefinition from 'assets/extensionTemplate';
 import {
   IElementDefinition,
+  IElementDefinition_Binding as IElementDefinitionBinding,
   IStructureDefinition
 } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { RenderAttributesTree, ResourceState } from 'types';
@@ -19,7 +20,6 @@ const initialState: ResourceState = {
   structureDefinition: undefined,
   extensionStructureDefinition: extensionStructureDefinition as IStructureDefinition,
   selectedResourceId: undefined,
-  selectedAttributeId: undefined,
   loading: false,
   error: undefined,
   structureDefMeta: true,
@@ -30,29 +30,48 @@ const resourceSlice = createSlice({
   name: 'resourceReducer',
   initialState,
   reducers: {
+    /**
+     * select the resource we want to profile
+     * @param action action.payload will be the id of the resource
+     */
     selectResource: (
       state: ResourceState,
       action: PayloadAction<string | undefined>
     ) => {
       state.selectedResourceId = action.payload;
     },
-    selectAttributeId: (
-      state: ResourceState,
-      action: PayloadAction<string | undefined>
-    ) => {
-      state.selectedAttributeId = action.payload;
-      state.structureDefMeta = false;
-    },
+    /**
+     * if we select structureDefMeta, we can modify the metadata of the structure definition, and state.structureDefMeta = true
+     */
     selectStructureDefMeta: (state: ResourceState) => {
-      state.selectedAttributeId = undefined;
       state.newElementDefinition = undefined;
       state.structureDefMeta = true;
     },
     createNewElementDefinition: (
       state: ResourceState,
-      action: PayloadAction<IElementDefinition | undefined>
+      action: PayloadAction<RenderAttributesTree>
     ) => {
-      state.newElementDefinition = action.payload;
+      const { min, max, id, newPath, definition, binding } = action.payload;
+      let newElement = state.structureDefinition?.snapshot?.element.find(
+        (att: IElementDefinition) => att.id === newPath
+      );
+      if (!newElement) {
+        newElement = {
+          base: {
+            min: min,
+            max: max,
+            path: id
+          },
+          min: min,
+          max: max,
+          id: newPath,
+          path: newPath,
+          definition: definition,
+          binding: binding ? (binding as IElementDefinitionBinding) : undefined
+        };
+      }
+      state.newElementDefinition = newElement;
+      state.structureDefMeta = false;
     },
     updateStructureDefExtension: (
       state: ResourceState,
@@ -68,13 +87,13 @@ const resourceSlice = createSlice({
       }>
     ) => {
       const { elementDefinition, structureDefinition } = action.payload;
-      if (elementDefinition && elementDefinition.path) {
+      if (elementDefinition && elementDefinition.id) {
         const existingElement = structureDefinition.snapshot?.element.find(
-          (elem) => elem.path === elementDefinition.path
+          (elem) => elem.id === elementDefinition.id
         );
         const indexToPush = findIndex(
           structureDefinition,
-          elementDefinition.path
+          elementDefinition.id
         );
         const newSDef = cloneDeep(action.payload.structureDefinition);
         if (newSDef.snapshot) {
@@ -90,6 +109,7 @@ const resourceSlice = createSlice({
                 elementDefinition
               );
           state.structureDefinition = newSDef;
+          state.newElementDefinition = elementDefinition;
         }
       } else if (!elementDefinition && structureDefinition.snapshot) {
         const newSDef = {
@@ -133,8 +153,53 @@ const resourceSlice = createSlice({
         node,
         structureDefinition
       );
-      state.selectedAttributeId = undefined;
-      state.structureDefMeta = true;
+      if (
+        state.newElementDefinition &&
+        state.newElementDefinition.id === node.id
+      )
+        state.newElementDefinition = undefined;
+    },
+    changeSliceName: (
+      state: ResourceState,
+      action: PayloadAction<{ id: string; newSliceName: string }>
+    ) => {
+      const { id, newSliceName } = action.payload;
+      const splitedId = id.split('.')[id.split('.').length - 1];
+      const attributesToModify: IElementDefinition[] = [];
+      const indexesToModify: number[] = [];
+      let newId: string[] = [];
+      const newSDef = cloneDeep(state.structureDefinition);
+      if (newSDef?.snapshot) {
+        newSDef?.snapshot.element.forEach((element, indexToPush) => {
+          element?.id?.split('.').forEach((split, index) => {
+            if (split === splitedId && element && element.id) {
+              /*
+                split the split we already have, and replace the last element with the new slice name 
+                for example if it's Patient.contact:sliceName, it splits contact:sliceName in ["contact", "sliceName"],
+                and replace sliceName by newSliceName, new split will be ["contact", "newSliceName"]
+              */
+              const splitedSplit = split.split(':');
+              splitedSplit.splice(splitedSplit.length - 1, 1, newSliceName);
+              const newPath = splitedSplit.join(':');
+              newId = element.id.split('.');
+              newId.splice(index, 1, newPath);
+              attributesToModify.push({
+                ...element,
+                id: newId.join('.'),
+                sliceName: newSliceName
+              });
+              indexesToModify.push(indexToPush);
+            }
+          });
+        });
+      }
+      indexesToModify.forEach((index, i) => {
+        newSDef?.snapshot?.element.splice(index, 1, attributesToModify[i]);
+      });
+      state.structureDefinition = newSDef;
+      state.newElementDefinition = newSDef?.snapshot?.element.find(
+        (el) => el.id === attributesToModify[0].id
+      );
     }
   },
   extraReducers: (builder) => {
@@ -191,11 +256,11 @@ const resourceSlice = createSlice({
 export default resourceSlice.reducer;
 export const {
   selectResource,
-  selectAttributeId,
   selectStructureDefMeta,
   createNewElementDefinition,
   updateStructureDefExtension,
   updateStructureDefProfile,
   addSlice,
-  deleteSlice
+  deleteSlice,
+  changeSliceName
 } = resourceSlice.actions;

@@ -1,6 +1,5 @@
 import React from 'react';
 
-import clsx from 'clsx';
 import { TreeView, TreeItem } from '@material-ui/lab';
 import { ArrowRight, ArrowDropDown, Settings } from '@material-ui/icons';
 
@@ -10,7 +9,8 @@ import { OpenDialogState } from 'components/profileEditor/ProfileEditor';
 import { useAppDispatch } from 'state/store';
 import { RenderAttributesTree } from 'types';
 
-import useStyles from './style';
+import useStyles from 'components/structureDefinitionTree/style';
+import { Typography } from '@material-ui/core';
 
 type StructureDefinitionTreeProps = {
   structureDefinitionId?: string;
@@ -24,6 +24,7 @@ type StructureDefinitionTreeProps = {
     nodes: RenderAttributesTree,
     openDialog: OpenDialogState
   ) => void;
+  className?: string;
 };
 
 interface RenderedNode {
@@ -36,17 +37,19 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
   onLabelClick,
   uiAttributes,
   structureDefinitionId,
-  handleClickSlices
+  handleClickSlices,
+  className
 }) => {
   const dispatch = useAppDispatch();
   const classes = useStyles();
 
   const renderNode = (nodes: RenderAttributesTree): JSX.Element => (
     <TreeItem
+      className={classes.treeItem}
       key={nodes.newPath ?? ''}
       nodeId={nodes.newPath ?? ''}
       label={<TreeNode handleClickSlices={handleClickSlices} nodes={nodes} />}
-      onLabelClick={(e): void => {
+      onLabelClick={(e) => {
         onLabelClick && onLabelClick(e, nodes);
       }}
     >
@@ -60,18 +63,20 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
       defaultCollapseIcon={<ArrowDropDown />}
       defaultExpandIcon={<ArrowRight />}
       defaultExpanded={[structureDefinitionId] as string[]}
+      className={className}
     >
       <TreeItem
+        className={classes.treeItem}
         nodeId="0"
-        onClick={(): void => {
+        onClick={() => {
           dispatch(selectStructureDefMeta());
         }}
         label={
-          <span className={clsx(classes.treeItem, classes.textTreeItemMeta)}>
-            <Settings
-              className={clsx(classes.iconTreeItem, classes.iconTreeItemMeta)}
-            />
-            Metadatas
+          <span className={classes.treeItemContent}>
+            <Settings color="secondary" fontSize="small" />
+            <Typography variant="body2" className={classes.treeItemText}>
+              Metadatas
+            </Typography>
           </span>
         }
       />
