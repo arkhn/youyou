@@ -8,6 +8,7 @@ import {
 import { Typography, Button, Paper, Breadcrumbs } from '@material-ui/core';
 import cloneDeep from 'lodash.clonedeep';
 import merge from 'lodash.merge';
+import clsx from 'clsx';
 
 import { updateStructureDefProfile } from 'state/reducers/resource';
 import { RootState, useAppDispatch } from 'state/store';
@@ -23,7 +24,6 @@ import {
 import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 
 import useStyles from 'components/profileEditor/editor/style';
-import clsx from 'clsx';
 
 type EditorProps = {
   structureDefinition: IStructureDefinition;
@@ -147,6 +147,54 @@ const Editor: React.FC<EditorProps> = ({
     }
   };
 
+  const renderAttributes = (): React.ReactNode => {
+    if (elementDefJSON && elementDefinitionTree && newElementDefinition) {
+      return (
+        <RenderComplexType
+          attributes={elementDefinitionTree}
+          complexTypes={complexTypes}
+          structureDefJSON={elementDefJSON}
+          primitiveTypes={primitiveTypes}
+          name={''}
+          onChangeValue={(path, value): void =>
+            setElementDefJSON(onChangeElementJSON(path, value, elementDefJSON))
+          }
+          handleDelete={(path, i): void =>
+            setElementDefJSON(onDeleteComplexType(path, i, elementDefJSON))
+          }
+          handleAdd={(path, value): void =>
+            setElementDefJSON(onAddComplexType(path, value, elementDefJSON))
+          }
+        />
+      );
+    } else if (structureDefJSON) {
+      return (
+        <RenderComplexType
+          attributes={structureDefinitionTree}
+          complexTypes={complexTypes}
+          structureDefJSON={structureDefJSON}
+          primitiveTypes={primitiveTypes}
+          name={''}
+          onChangeValue={(path, value): void =>
+            setStructureDefJSON(
+              onChangeElementJSON(path, value, structureDefJSON)
+            )
+          }
+          handleDelete={(path, i): void =>
+            setStructureDefJSON(onDeleteComplexType(path, i, structureDefJSON))
+          }
+          handleAdd={(path, value): void =>
+            setStructureDefJSON(onAddComplexType(path, value, structureDefJSON))
+          }
+        />
+      );
+    } else {
+      return (
+        <Typography variant="h2">Please select a valid attribute.</Typography>
+      );
+    }
+  };
+
   return (
     <div className={classes.editorContainer}>
       <Breadcrumbs className={classes.breadcrumbs}>
@@ -154,61 +202,16 @@ const Editor: React.FC<EditorProps> = ({
       </Breadcrumbs>
       <Paper className={classes.paperRight}>
         <form className={clsx(classNameForm, classes.formContainer)}>
-          {elementDefJSON && elementDefinitionTree && newElementDefinition && (
-            <RenderComplexType
-              attributes={elementDefinitionTree}
-              complexTypes={complexTypes}
-              structureDefJSON={elementDefJSON}
-              primitiveTypes={primitiveTypes}
-              name={''}
-              onChangeValue={(path, value): void =>
-                setElementDefJSON(
-                  onChangeElementJSON(path, value, elementDefJSON)
-                )
-              }
-              handleDelete={(path, i): void =>
-                setElementDefJSON(onDeleteComplexType(path, i, elementDefJSON))
-              }
-              handleAdd={(path, value): void =>
-                setElementDefJSON(onAddComplexType(path, value, elementDefJSON))
-              }
-            />
-          )}
-          {structureDefJSON && (
-            <RenderComplexType
-              attributes={structureDefinitionTree}
-              complexTypes={complexTypes}
-              structureDefJSON={structureDefJSON}
-              primitiveTypes={primitiveTypes}
-              name={''}
-              onChangeValue={(path, value): void =>
-                setStructureDefJSON(
-                  onChangeElementJSON(path, value, structureDefJSON)
-                )
-              }
-              handleDelete={(path, i): void =>
-                setStructureDefJSON(
-                  onDeleteComplexType(path, i, structureDefJSON)
-                )
-              }
-              handleAdd={(path, value): void =>
-                setStructureDefJSON(
-                  onAddComplexType(path, value, structureDefJSON)
-                )
-              }
-            />
-          )}
+          {renderAttributes()}
         </form>
         <div className={classes.formFooter}>
-          {newElementDefinition || structureDefJSON ? (
+          {newElementDefinition && structureDefJSON && (
             <>
               <Button variant="contained" color="secondary" onClick={submit}>
                 Submit
               </Button>
               <Typography color="textSecondary">* Required Fields</Typography>
             </>
-          ) : (
-            <div>Select a valid attribute</div>
           )}
         </div>
       </Paper>

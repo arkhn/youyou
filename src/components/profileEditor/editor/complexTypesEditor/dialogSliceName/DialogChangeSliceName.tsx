@@ -1,50 +1,57 @@
 import React, { useState } from 'react';
-import { Button, Dialog } from '@material-ui/core';
-import { InputTooltip } from 'components/smallComponents';
+
+import { Button } from '@material-ui/core';
+
 import { changeSliceName } from 'state/reducers/resource';
 import { useAppDispatch } from 'state/store';
-import { RenderAttributesTree } from 'types';
+
+import SliceDialogBox from 'components/profileEditor/sliceDialogBox/SliceDialogBox';
+import { OpenDialogState } from 'components/profileEditor/ProfileEditor';
+
+import useStyles from './style';
 
 type DialogChangeSliceNameProps = {
-  item: RenderAttributesTree;
   sliceName: string;
   id: string;
-  open: boolean;
-  onCloseClick: () => void;
-  onOpenClick: () => void;
 };
 
 const DialogChangeSliceName: React.FC<DialogChangeSliceNameProps> = ({
-  item,
   sliceName,
-  id,
-  open,
-  onCloseClick,
-  onOpenClick
+  id
 }) => {
   const dispatch = useAppDispatch();
   const [newSliceName, setNewSliceName] = useState(sliceName);
+  const classes = useStyles();
+
+  const [open, setOpen] = useState<OpenDialogState>({ open: false });
 
   return (
     <>
-      <Button onClick={(): void => onOpenClick()}>Change Slice Name</Button>
-      <Dialog open={open}>
-        <InputTooltip
-          label={`${item.name}*`}
-          value={sliceName}
-          tool={item.definition}
-          onBlur={(e): void => setNewSliceName(e.target.value)}
-        />
-        <Button
-          onClick={(e): void => {
-            e.preventDefault();
-            dispatch(changeSliceName({ newSliceName, id }));
-            onCloseClick();
-          }}
-        >
-          Change slice name
-        </Button>
-      </Dialog>
+      <Button
+        className={classes.button}
+        color="secondary"
+        variant="contained"
+        onClick={(): void =>
+          setOpen({
+            open: true,
+            add: true,
+            message: { title: 'Change slice name', text: '' }
+          })
+        }
+      >
+        Change Slice Name
+      </Button>
+      <SliceDialogBox
+        attributeSelected={open}
+        onCloseClick={(): void => setOpen({ open: false })}
+        onChangeName={(e): void => setNewSliceName(e.target.value)}
+        onFormSubmit={(e): void => {
+          e.preventDefault();
+          dispatch(changeSliceName({ newSliceName, id }));
+          setOpen({ open: false });
+        }}
+        sliceNameError={{ error: false, message: '' }}
+      />
     </>
   );
 };

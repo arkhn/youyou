@@ -1,5 +1,5 @@
 import { InputTooltip, SelectTooltip } from 'components/smallComponents';
-import React, { useState } from 'react';
+import React from 'react';
 
 import {
   Accordion,
@@ -9,17 +9,18 @@ import {
   Typography
 } from '@material-ui/core';
 import { Add, ExpandMore } from '@material-ui/icons';
+import clsx from 'clsx';
 
 import { RenderAttributesTree } from 'types';
 import CheckboxTooltip from 'components/smallComponents/CheckboxTooltip';
+import { createJSONTree } from 'components/profileEditor/editor/utils';
+import DialogChangeSliceName from './dialogSliceName/DialogChangeSliceName';
+
 import {
   useStyles,
   MuiAccordionSummary,
   MuiButton
 } from 'components/profileEditor/editor/complexTypesEditor/styles';
-import { createJSONTree } from 'components/profileEditor/editor/utils';
-import DialogChangeSliceName from './dialogSliceName/DialogChangeSliceName';
-import clsx from 'clsx';
 
 type DetailProps = {
   attributes: RenderAttributesTree[];
@@ -47,7 +48,6 @@ const RenderComplexType: React.FC<DetailProps> = ({
 }) => {
   const classes = useStyles();
   let renderSliceName: JSX.Element | null = null;
-  const [open, setOpen] = useState(false);
 
   const onChange = (
     callback: typeof onChangeValue | typeof handleDelete | typeof handleAdd
@@ -73,7 +73,6 @@ const RenderComplexType: React.FC<DetailProps> = ({
             <div
               className={clsx(classes.accordionTitle, classes.accordionAddItem)}
             >
-              <Typography variant="h2">{item.name}</Typography>
               <IconButton
                 onClick={(): void =>
                   onChange(handleAdd)(
@@ -86,12 +85,20 @@ const RenderComplexType: React.FC<DetailProps> = ({
                   <Add />
                 </Tooltip>
               </IconButton>
+              <Typography className={classes.titleAdd} variant="h2">
+                {item.name}
+              </Typography>
             </div>
             {structureDefJSON[item.name].map((element: any, i: number) => {
               return (
                 <Accordion key={i}>
                   <MuiAccordionSummary expandIcon={<ExpandMore />}>
-                    <div className={classes.accordionTitle}>
+                    <div
+                      className={clsx(
+                        classes.accordionTitle,
+                        classes.accordionTitleDelete
+                      )}
+                    >
                       <Typography>
                         {item.name} {i + 1}
                       </Typography>
@@ -105,7 +112,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                       </MuiButton>
                     </div>
                   </MuiAccordionSummary>
-                  <AccordionDetails>
+                  <AccordionDetails className={classes.accordionDetails}>
                     <RenderComplexType
                       structureDefJSON={element}
                       complexTypes={complexTypes}
@@ -132,7 +139,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
                   {item.min && item.min > 0 ? `${item.name}*` : item.name}
                 </Typography>
               </MuiAccordionSummary>
-              <AccordionDetails>
+              <AccordionDetails className={classes.accordionDetails}>
                 <RenderComplexType
                   structureDefJSON={structureDefJSON[item.name]}
                   complexTypes={complexTypes}
@@ -148,7 +155,11 @@ const RenderComplexType: React.FC<DetailProps> = ({
           </div>
         );
       }
-    } else if (item.name !== 'extension' && item.children.length === 0) {
+    } else if (
+      item.name !== 'extension' &&
+      item.children.length === 0 &&
+      !Array.isArray(item.type)
+    ) {
       switch (item.type) {
         case 'string':
         case 'uri':
@@ -170,12 +181,8 @@ const RenderComplexType: React.FC<DetailProps> = ({
           } else if (item.name === 'sliceName' && structureDefJSON.sliceName) {
             renderSliceName = (
               <DialogChangeSliceName
-                item={item}
                 sliceName={structureDefJSON.sliceName}
                 id={structureDefJSON.id}
-                open={open}
-                onCloseClick={(): void => setOpen(false)}
-                onOpenClick={(): void => setOpen(true)}
               />
             );
           }

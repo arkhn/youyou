@@ -90,7 +90,7 @@ const TreeNode: React.FC<TreeNodeProps> = ({ nodes, handleClickSlices }) => {
               open: true,
               message: {
                 title: 'Delete a slice',
-                text: `Are you sure you want to delete ${nodes.newPath}`
+                text: `Are you sure you want to delete ${nodes.newPath} ?`
               },
               add: false
             })

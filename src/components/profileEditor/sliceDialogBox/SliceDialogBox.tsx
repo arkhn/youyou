@@ -13,6 +13,8 @@ import { Alert, AlertTitle } from '@material-ui/lab';
 import { CssTextField } from 'components/smallComponents';
 import { OpenDialogState } from 'components/profileEditor/ProfileEditor';
 
+import useStyles from './style';
+
 type SliceDialogBoxProps = {
   attributeSelected: OpenDialogState;
   sliceNameError: {
@@ -35,18 +37,24 @@ const SliceDialogBox: React.FC<SliceDialogBoxProps> = ({
   onCloseClick,
   onFormSubmit
 }) => {
+  const classes = useStyles();
+
   return (
     <Dialog open={attributeSelected.open}>
-      <Paper>
-        <IconButton onClick={onCloseClick}>
-          <Clear color="error" />
-        </IconButton>
-        <Typography variant="h1">
-          {attributeSelected.message && attributeSelected.message.title}
-        </Typography>
-        <Typography>
-          {attributeSelected.message && attributeSelected.message.text}
-        </Typography>
+      <Paper className={classes.dialogBoxContainer}>
+        <div className={classes.dialogBoxHeader}>
+          <Typography variant="h1" className={classes.dialogBoxTitle}>
+            {attributeSelected.message && attributeSelected.message.title}
+          </Typography>
+          <IconButton onClick={onCloseClick} className={classes.dialogBoxClose}>
+            <Clear color="error" />
+          </IconButton>
+        </div>
+        {attributeSelected.message && attributeSelected.message.text !== '' && (
+          <Typography className={classes.dialogBoxText}>
+            {attributeSelected.message.text}
+          </Typography>
+        )}
         {sliceNameError.error && (
           <Alert severity="error">
             <AlertTitle>Error</AlertTitle>
@@ -60,10 +68,17 @@ const SliceDialogBox: React.FC<SliceDialogBoxProps> = ({
               label="slice name"
               autoFocus
               error={sliceNameError.error}
-              onChange={onChangeName}
+              onBlur={onChangeName}
             />
           )}
-          <Button color="secondary" variant="contained" type="submit">
+          <Button
+            color="secondary"
+            variant="contained"
+            type="submit"
+            className={
+              attributeSelected.add ? classes.dialogBoxButton : undefined
+            }
+          >
             Submit
           </Button>
         </form>

@@ -1,26 +1,26 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
-  modalContainer: {
+  dialogBoxHeader: {
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    '&:focused': {
-      outline: 'none'
-    }
-  },
-  modalPaper: {
-    width: 400,
-    padding: 20,
-    display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'space-between',
-    position: 'relative'
+    marginBottom: 8
   },
-  modalPaperClose: {
-    position: 'absolute',
-    top: 10,
-    right: 10
+  dialogBoxContainer: {
+    padding: 24,
+    width: 500
+  },
+  dialogBoxTitle: {
+    marginTop: 8
+  },
+  dialogBoxClose: {
+    height: 48
+  },
+  dialogBoxText: {
+    marginBottom: 24
+  },
+  dialogBoxButton: {
+    marginTop: 16
   }
 }));
 
