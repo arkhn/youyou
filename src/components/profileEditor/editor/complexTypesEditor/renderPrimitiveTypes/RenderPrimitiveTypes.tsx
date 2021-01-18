@@ -1,6 +1,8 @@
 import { InputTooltip, SelectTooltip } from 'components/smallComponents';
 import CheckboxTooltip from 'components/smallComponents/CheckboxTooltip';
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from 'state/store';
 import { RenderAttributesTree } from 'types';
 
 type RenderPrimitiveTypesProps = {
@@ -24,19 +26,35 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
   index,
   onChangeValue
 }) => {
+  const { newElementDefinition } = useSelector(
+    (state: RootState) => state.resourceSlice
+  );
   let attributeElement: any = undefined;
-  if (item.name.includes('fixed')) {
-    console.log(item);
-  }
+
+  const getName = (element: RenderAttributesTree) => {
+    let label =
+      element.min && element.min > 0 ? `${element.name}*` : element.name;
+    if (
+      label.includes('fixed') &&
+      newElementDefinition &&
+      newElementDefinition.id
+    ) {
+      const newName = newElementDefinition.id.split('.');
+      label = newName[newName.length - 1];
+    }
+    return label;
+  };
+
   switch (item.type) {
     case 'string':
     case 'uri':
     case 'id':
     case 'http://hl7.org/fhirpath/System.String': {
       if (item.name !== 'sliceName') {
+        const label = getName(item);
         attributeElement = (
           <InputTooltip
-            label={item.min && item.min > 0 ? `${item.name}*` : item.name}
+            label={label}
             value={structureDefJSON[item.name] ?? ''}
             tool={item.definition}
             onBlur={(event) =>
@@ -49,9 +67,10 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
     }
     case 'integer':
     case 'positiveInt': {
+      const label = getName(item);
       attributeElement = (
         <InputTooltip
-          label={item.min && item.min > 0 ? `${item.name}*` : item.name}
+          label={label}
           value={structureDefJSON[item.name] ? structureDefJSON[item.name] : ''}
           tool={item.definition}
         />
@@ -59,6 +78,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
       break;
     }
     case 'code': {
+      const label = getName(item);
       if (item.binding?.valueSet) {
         const mapValues: {
           value: string | undefined;
@@ -78,7 +98,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
         attributeElement = (
           <SelectTooltip
             key={index}
-            label={item.min && item.min > 0 ? `${item.name}*` : item.name}
+            label={label}
             tool={item.definition}
             choices={mapValues}
             value={structureDefJSON[item.name] ?? mapValues[0].value}
@@ -87,13 +107,24 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
             }
           />
         );
+      } else {
+        attributeElement = (
+          <InputTooltip
+            label={label}
+            value={
+              structureDefJSON[item.name] ? structureDefJSON[item.name] : ''
+            }
+            tool={item.definition}
+          />
+        );
       }
       break;
     }
     case 'boolean': {
+      const label = getName(item);
       attributeElement = (
         <CheckboxTooltip
-          label={item.min && item.min > 0 ? `${item.name}*` : item.name}
+          label={label}
           tool={item.definition}
           value={structureDefJSON[item.name] ?? false}
           onChange={(event) =>

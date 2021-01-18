@@ -1,4 +1,3 @@
-import { InputTooltip, SelectTooltip } from 'components/smallComponents';
 import React from 'react';
 
 import {
@@ -12,16 +11,16 @@ import { Add, ExpandMore } from '@material-ui/icons';
 import clsx from 'clsx';
 
 import { RenderAttributesTree } from 'types';
-import CheckboxTooltip from 'components/smallComponents/CheckboxTooltip';
 import { createJSONTree } from 'components/profileEditor/editor/utils';
 import DialogChangeSliceName from './dialogSliceName/DialogChangeSliceName';
+import RenderPrimitiveTypes from './renderPrimitiveTypes/RenderPrimitiveTypes';
 
 import {
   useStyles,
   MuiAccordionSummary,
   MuiButton
 } from 'components/profileEditor/editor/complexTypesEditor/styles';
-import RenderPrimitiveTypes from './renderPrimitiveTypes/RenderPrimitiveTypes';
+import { isPrimitive } from 'state/utils';
 
 type DetailProps = {
   attributes: RenderAttributesTree[];
@@ -62,7 +61,59 @@ const RenderComplexType: React.FC<DetailProps> = ({
 
   const renderAttribute = attributes.map((item, index) => {
     let attributeElement: JSX.Element | null = null;
-    if (
+    if (item.name.includes('fixed')) {
+      if (isPrimitive(item.type, primitiveTypes)) {
+        attributeElement = (
+          <Accordion key={index}>
+            <MuiAccordionSummary expandIcon={<ExpandMore />}>
+              <div
+                className={clsx(
+                  classes.accordionTitle,
+                  classes.accordionTitleDelete
+                )}
+              >
+                <Typography>
+                  {item.name} {item.type}
+                </Typography>
+              </div>
+            </MuiAccordionSummary>
+            <AccordionDetails className={classes.accordionDetails}>
+              <RenderPrimitiveTypes
+                item={item}
+                onChangeValue={onChangeValue}
+                structureDefJSON={structureDefJSON}
+                onChange={onChange}
+                index={index}
+              />
+            </AccordionDetails>
+          </Accordion>
+        );
+      } else {
+        attributeElement = (
+          <div key={item.name}>
+            <Accordion className={classes.accordion}>
+              <MuiAccordionSummary expandIcon={<ExpandMore />}>
+                <Typography>
+                  {item.name} {item.type}
+                </Typography>
+              </MuiAccordionSummary>
+              <AccordionDetails className={classes.accordionDetails}>
+                <RenderComplexType
+                  structureDefJSON={structureDefJSON[item.name]}
+                  complexTypes={complexTypes}
+                  attributes={item.children}
+                  primitiveTypes={primitiveTypes}
+                  onChangeValue={onChange(onChangeValue)}
+                  handleDelete={onChange(handleDelete)}
+                  handleAdd={onChange(handleAdd)}
+                  name={item.name}
+                />
+              </AccordionDetails>
+            </Accordion>
+          </div>
+        );
+      }
+    } else if (
       item.children.length > 0 &&
       item.name !== 'extension' &&
       item.name !== 'snapshot' &&
@@ -131,7 +182,10 @@ const RenderComplexType: React.FC<DetailProps> = ({
             })}
           </div>
         );
-      } else if (typeof structureDefJSON[item.name] === 'object') {
+      } else if (
+        typeof structureDefJSON[item.name] === 'object' &&
+        !item.name.includes('fixed')
+      ) {
         attributeElement = (
           <div key={item.name}>
             <Accordion className={classes.accordion}>
@@ -163,9 +217,6 @@ const RenderComplexType: React.FC<DetailProps> = ({
           id={structureDefJSON.id}
         />
       );
-    } else if (item.name.includes('fixed')) {
-      console.log(item);
-      return <div key={index}>fixed</div>;
     } else if (
       item.name !== 'extension' &&
       item.children.length === 0 &&

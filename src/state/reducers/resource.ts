@@ -51,7 +51,15 @@ const resourceSlice = createSlice({
       state: ResourceState,
       action: PayloadAction<RenderAttributesTree>
     ) => {
-      const { min, max, id, newPath, definition, binding } = action.payload;
+      const {
+        min,
+        max,
+        id,
+        newPath,
+        definition,
+        binding,
+        type
+      } = action.payload;
       let newElement = state.structureDefinition?.snapshot?.element.find(
         (att: IElementDefinition) => att.id === newPath
       );
@@ -67,6 +75,7 @@ const resourceSlice = createSlice({
           id: newPath,
           path: newPath,
           definition: definition,
+          type: Array.isArray(type) ? type : [{ code: type }],
           binding: binding ? (binding as IElementDefinitionBinding) : undefined
         };
       }

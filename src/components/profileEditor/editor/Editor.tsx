@@ -24,6 +24,7 @@ import {
 import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 
 import useStyles from 'components/profileEditor/editor/style';
+import { createComplexTypes } from 'state/utils';
 
 type EditorProps = {
   structureDefinition: IStructureDefinition;
@@ -72,13 +73,19 @@ const Editor: React.FC<EditorProps> = ({
       if (toModify) {
         if (newElementDefinition.type.length === 1) {
           toModify.type = newElementDefinition.type[0].code;
+          const children = createComplexTypes(
+            complexTypes,
+            [toModify],
+            primitiveTypes
+          );
+          toModify.children = children[0].children;
         } else {
           toModify.type = newElementDefinition.type;
         }
       }
     }
     return cloneComplexType;
-  }, [complexTypes, newElementDefinition]);
+  }, [complexTypes, newElementDefinition, primitiveTypes]);
 
   const [elementDefinitionTree, setElementDefinitionTree] = useState(
     createElementDefTree
@@ -159,6 +166,8 @@ const Editor: React.FC<EditorProps> = ({
     }
   };
 
+  console.log(elementDefJSON, elementDefinitionTree);
+
   const renderBreadcrumbs = (): React.ReactNode => {
     if (newElementDefinition && elementDefJSON) {
       return (
@@ -178,7 +187,6 @@ const Editor: React.FC<EditorProps> = ({
       return undefined;
     }
   };
-  console.log(elementDefJSON);
 
   const renderAttributes = (): React.ReactNode => {
     if (elementDefJSON && elementDefinitionTree && newElementDefinition) {
