@@ -59,9 +59,32 @@ const Editor: React.FC<EditorProps> = ({
   const dispatch = useAppDispatch();
   const classes = useStyles();
 
-  const elementDefinitionTree = complexTypes?.find(
-    (element: RenderAttributesTree) => element.id === 'ElementDefinition'
-  )?.children;
+  const createElementDefTree = useCallback(() => {
+    const cloneComplexType = cloneDeep(
+      complexTypes?.find(
+        (element: RenderAttributesTree) => element.id === 'ElementDefinition'
+      )?.children
+    );
+    if (newElementDefinition && newElementDefinition.type) {
+      const toModify = cloneComplexType?.find((elem) =>
+        elem.name.includes('fixed')
+      );
+      if (toModify) {
+        if (newElementDefinition.type.length === 1) {
+          toModify.type = newElementDefinition.type[0].code;
+        } else {
+          toModify.type = newElementDefinition.type;
+        }
+      }
+    }
+    return cloneComplexType;
+  }, [complexTypes, newElementDefinition]);
+
+  const [elementDefinitionTree, setElementDefinitionTree] = useState(
+    createElementDefTree
+  );
+
+  console.log(elementDefinitionTree);
 
   const createElementJSON = useCallback((): IElementDefinition => {
     const elementDefTreeJSON =
@@ -89,6 +112,10 @@ const Editor: React.FC<EditorProps> = ({
       ? createStructureDefJSON()
       : undefined
   );
+
+  useEffect(() => {
+    setElementDefinitionTree(createElementDefTree);
+  }, [createElementDefTree]);
 
   useEffect(() => {
     if (newElementDefinition && structureDefinitionType === 'element') {
