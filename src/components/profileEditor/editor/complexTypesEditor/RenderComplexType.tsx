@@ -21,6 +21,7 @@ import {
   MuiAccordionSummary,
   MuiButton
 } from 'components/profileEditor/editor/complexTypesEditor/styles';
+import RenderPrimitiveTypes from './renderPrimitiveTypes/RenderPrimitiveTypes';
 
 type DetailProps = {
   attributes: RenderAttributesTree[];
@@ -155,98 +156,30 @@ const RenderComplexType: React.FC<DetailProps> = ({
           </div>
         );
       }
+    } else if (item.name === 'sliceName' && structureDefJSON.sliceName) {
+      renderSliceName = (
+        <DialogChangeSliceName
+          sliceName={structureDefJSON.sliceName}
+          id={structureDefJSON.id}
+        />
+      );
+    } else if (item.name.includes('fixed')) {
+      console.log(item);
+      return <div key={index}>fixed</div>;
     } else if (
       item.name !== 'extension' &&
       item.children.length === 0 &&
       !Array.isArray(item.type)
     ) {
-      switch (item.type) {
-        case 'string':
-        case 'uri':
-        case 'id':
-        case 'http://hl7.org/fhirpath/System.String': {
-          if (item.name !== 'sliceName') {
-            attributeElement = (
-              <InputTooltip
-                label={item.min && item.min > 0 ? `${item.name}*` : item.name}
-                value={structureDefJSON[item.name] ?? ''}
-                tool={item.definition}
-                onBlur={(event) =>
-                  onChange(onChangeValue)(item.name, event.target.value)
-                }
-              />
-            );
-          } else if (item.name === 'sliceName' && structureDefJSON.sliceName) {
-            renderSliceName = (
-              <DialogChangeSliceName
-                sliceName={structureDefJSON.sliceName}
-                id={structureDefJSON.id}
-              />
-            );
-          }
-          break;
-        }
-        case 'integer':
-        case 'positiveInt': {
-          attributeElement = (
-            <InputTooltip
-              label={item.min && item.min > 0 ? `${item.name}*` : item.name}
-              value={
-                structureDefJSON[item.name] ? structureDefJSON[item.name] : ''
-              }
-              tool={item.definition}
-            />
-          );
-          break;
-        }
-        case 'code': {
-          if (item.binding?.valueSet) {
-            const mapValues: {
-              value: string | undefined;
-              label: string | undefined;
-            }[] = [];
-            if (item.min === 0)
-              mapValues.push({
-                value: '',
-                label: '--select a value--'
-              });
-            item.binding.valueSet.forEach((values) =>
-              mapValues.push({
-                value: values.code,
-                label: values.display
-              })
-            );
-            attributeElement = (
-              <SelectTooltip
-                key={index}
-                label={item.min && item.min > 0 ? `${item.name}*` : item.name}
-                tool={item.definition}
-                choices={mapValues}
-                value={structureDefJSON[item.name] ?? mapValues[0].value}
-                onChange={(event) =>
-                  onChange(onChangeValue)(item.name, event.target.value)
-                }
-              />
-            );
-          }
-          break;
-        }
-        case 'boolean': {
-          attributeElement = (
-            <CheckboxTooltip
-              label={item.min && item.min > 0 ? `${item.name}*` : item.name}
-              tool={item.definition}
-              value={structureDefJSON[item.name] ?? false}
-              onChange={(event) =>
-                onChange(onChangeValue)(item.name, event.target.checked)
-              }
-            />
-          );
-          break;
-        }
-        default:
-          break;
-      }
+      attributeElement = (
+        <RenderPrimitiveTypes
+          item={item}
+          onChangeValue={onChangeValue}
+          structureDefJSON={structureDefJSON}
+          onChange={onChange}
+          index={index}
+        />
+      );
     }
     return <div key={index}>{attributeElement}</div>;
   });

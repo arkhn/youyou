@@ -84,8 +84,6 @@ const Editor: React.FC<EditorProps> = ({
     createElementDefTree
   );
 
-  console.log(elementDefinitionTree);
-
   const createElementJSON = useCallback((): IElementDefinition => {
     const elementDefTreeJSON =
       elementDefinitionTree &&
@@ -112,7 +110,6 @@ const Editor: React.FC<EditorProps> = ({
       ? createStructureDefJSON()
       : undefined
   );
-
   useEffect(() => {
     setElementDefinitionTree(createElementDefTree);
   }, [createElementDefTree]);
@@ -181,6 +178,7 @@ const Editor: React.FC<EditorProps> = ({
       return undefined;
     }
   };
+  console.log(elementDefJSON);
 
   const renderAttributes = (): React.ReactNode => {
     if (elementDefJSON && elementDefinitionTree && newElementDefinition) {
@@ -238,7 +236,7 @@ const Editor: React.FC<EditorProps> = ({
           {renderAttributes()}
         </form>
         <div className={classes.formFooter}>
-          {newElementDefinition && structureDefJSON && (
+          {(newElementDefinition || structureDefJSON) && (
             <>
               <Button variant="contained" color="secondary" onClick={submit}>
                 Submit
