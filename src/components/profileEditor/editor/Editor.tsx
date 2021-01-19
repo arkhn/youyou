@@ -117,6 +117,9 @@ const Editor: React.FC<EditorProps> = ({
       ? createStructureDefJSON()
       : undefined
   );
+
+  console.log(elementDefJSON);
+
   useEffect(() => {
     setElementDefinitionTree(createElementDefTree);
   }, [createElementDefTree]);
@@ -165,8 +168,6 @@ const Editor: React.FC<EditorProps> = ({
       );
     }
   };
-
-  console.log(elementDefJSON, elementDefinitionTree);
 
   const renderBreadcrumbs = (): React.ReactNode => {
     if (newElementDefinition && elementDefJSON) {

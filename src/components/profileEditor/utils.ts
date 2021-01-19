@@ -67,12 +67,14 @@ export const createElementDefinitionTree = (
 ): any => {
   const elemDef: any = {};
   items.forEach((item: RenderAttributesTree) => {
-    if (item.children.length === 0) {
-      elemDef[item.name] = undefined;
-    } else if (item.max === '1') {
-      elemDef[item.name] = createElementDefinitionTree(item.children);
-    } else {
-      elemDef[item.name] = [];
+    if (!item.name.includes('fixed')) {
+      if (item.children.length === 0) {
+        elemDef[item.name] = undefined;
+      } else if (item.max === '1') {
+        elemDef[item.name] = createElementDefinitionTree(item.children);
+      } else {
+        elemDef[item.name] = [];
+      }
     }
   });
   return elemDef;
@@ -127,6 +129,7 @@ export const onChangeElementJSON = (
   if (value !== '') {
     set(elem, path, value);
   } else {
+    console.log(elem);
     set(elem, path, undefined);
   }
   return elem;
@@ -140,12 +143,16 @@ export const onChangeElementJSON = (
  */
 export const onDeleteComplexType = (
   path: string,
-  i: number,
+  i: number | undefined,
   element: any
 ): any => {
   const elem: any = { ...element };
-  const elementDefJSONAttr: any = get(elem, path);
-  elementDefJSONAttr.splice(i, 1);
+  if (i) {
+    const elementDefJSONAttr: any = get(elem, path);
+    elementDefJSONAttr.splice(i, 1);
+  } else {
+    delete elem[path];
+  }
   return elem;
 };
 
@@ -162,6 +169,12 @@ export const onAddComplexType = (
 ): any => {
   const elem: any = { ...element };
   const elementDefJSONAttr = get(elem, path);
-  elementDefJSONAttr.push(value);
+  if (Array.isArray(elementDefJSONAttr)) {
+    elementDefJSONAttr.push(value);
+  } else {
+    if (path.includes('fixed') && !elementDefJSONAttr) {
+      elem[path] = value;
+    }
+  }
   return elem;
 };

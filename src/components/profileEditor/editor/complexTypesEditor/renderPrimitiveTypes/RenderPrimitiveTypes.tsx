@@ -45,6 +45,23 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
     return label;
   };
 
+  const getFixedName = (element: RenderAttributesTree, label: string) => {
+    if (
+      element.name.includes('fixed') &&
+      element.type &&
+      !Array.isArray(element.type)
+    ) {
+      let newTypeName = element.type;
+      const splitedTypeName = newTypeName.split('');
+      const firstLetter = newTypeName[0].toUpperCase();
+      splitedTypeName.splice(0, 1, firstLetter);
+      newTypeName = splitedTypeName.join('');
+      return `fixed${newTypeName}`;
+    } else {
+      return label;
+    }
+  };
+
   switch (item.type) {
     case 'string':
     case 'uri':
@@ -52,13 +69,14 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
     case 'http://hl7.org/fhirpath/System.String': {
       if (item.name !== 'sliceName') {
         const label = getName(item);
+        const newPath = getFixedName(item, label);
         attributeElement = (
           <InputTooltip
             label={label}
-            value={structureDefJSON[item.name] ?? ''}
+            value={structureDefJSON[newPath] ?? ''}
             tool={item.definition}
             onBlur={(event) =>
-              onChange(onChangeValue)(item.name, event.target.value)
+              onChange(onChangeValue)(newPath, event.target.value)
             }
           />
         );
@@ -68,10 +86,11 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
     case 'integer':
     case 'positiveInt': {
       const label = getName(item);
+      const newPath = getFixedName(item, label);
       attributeElement = (
         <InputTooltip
           label={label}
-          value={structureDefJSON[item.name] ? structureDefJSON[item.name] : ''}
+          value={structureDefJSON[newPath] ? structureDefJSON[newPath] : ''}
           tool={item.definition}
         />
       );
@@ -79,6 +98,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
     }
     case 'code': {
       const label = getName(item);
+      const newPath = getFixedName(item, label);
       if (item.binding?.valueSet) {
         const mapValues: {
           value: string | undefined;
@@ -101,9 +121,9 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
             label={label}
             tool={item.definition}
             choices={mapValues}
-            value={structureDefJSON[item.name] ?? mapValues[0].value}
+            value={structureDefJSON[newPath] ?? mapValues[0].value}
             onChange={(event) =>
-              onChange(onChangeValue)(item.name, event.target.value)
+              onChange(onChangeValue)(newPath, event.target.value)
             }
           />
         );
@@ -111,9 +131,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
         attributeElement = (
           <InputTooltip
             label={label}
-            value={
-              structureDefJSON[item.name] ? structureDefJSON[item.name] : ''
-            }
+            value={structureDefJSON[newPath] ? structureDefJSON[newPath] : ''}
             tool={item.definition}
           />
         );
@@ -122,13 +140,14 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
     }
     case 'boolean': {
       const label = getName(item);
+      const newPath = getFixedName(item, label);
       attributeElement = (
         <CheckboxTooltip
           label={label}
           tool={item.definition}
-          value={structureDefJSON[item.name] ?? false}
+          value={structureDefJSON[newPath] ?? false}
           onChange={(event) =>
-            onChange(onChangeValue)(item.name, event.target.checked)
+            onChange(onChangeValue)(newPath, event.target.checked)
           }
         />
       );
