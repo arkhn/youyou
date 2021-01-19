@@ -9,7 +9,7 @@ import { RenderAttributesTree } from 'types';
 type AddComplexTypeProps = {
   item: RenderAttributesTree;
   newPath: string;
-  value: any;
+  value?: any;
   handleAdd: (path: string, value: any) => void;
 };
 

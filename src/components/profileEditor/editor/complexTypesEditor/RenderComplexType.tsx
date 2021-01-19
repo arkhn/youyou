@@ -63,7 +63,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
 
   const renderAttribute = attributes.map((item, index) => {
     let attributeElement: JSX.Element | null = null;
-    if (item.name.includes('fixed') && item.type !== 'BackboneElement') {
+    if (item.name.includes('fixed')) {
       const newPath = getNewPath(item);
       if (isPrimitive(item.type, primitiveTypes) && newPath) {
         const value = item.type === 'boolean' ? false : '';

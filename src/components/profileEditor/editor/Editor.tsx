@@ -41,19 +41,22 @@ const Editor: React.FC<EditorProps> = ({
     complexTypes,
     primitiveTypes,
     structureDefinitionTree,
-    newElementDefinition
+    newElementDefinition,
+    backboneElements
   } = useSelector((state: RootState) => {
     const {
       complexTypes,
       primitiveTypes,
-      structureDefinitionTree
+      structureDefinitionTree,
+      backboneElements
     } = state.fhirDataTypes;
     const { newElementDefinition } = state.resourceSlice;
     return {
       complexTypes,
       primitiveTypes,
       newElementDefinition,
-      structureDefinitionTree
+      structureDefinitionTree,
+      backboneElements
     };
   });
 
@@ -73,19 +76,27 @@ const Editor: React.FC<EditorProps> = ({
       if (toModify) {
         if (newElementDefinition.type.length === 1) {
           toModify.type = newElementDefinition.type[0].code;
-          const children = createComplexTypes(
-            complexTypes,
-            [toModify],
-            primitiveTypes
-          );
-          toModify.children = children[0].children;
+          if (
+            newElementDefinition.type[0].code === 'BackboneElement' &&
+            toModify.children.length === 0 &&
+            backboneElements
+          ) {
+            toModify.children = backboneElements;
+          } else {
+            const children = createComplexTypes(
+              complexTypes,
+              [toModify],
+              primitiveTypes
+            );
+            toModify.children = children[0].children;
+          }
         } else {
           toModify.type = newElementDefinition.type;
         }
       }
     }
     return cloneComplexType;
-  }, [complexTypes, newElementDefinition, primitiveTypes]);
+  }, [complexTypes, newElementDefinition, primitiveTypes, backboneElements]);
 
   const [elementDefinitionTree, setElementDefinitionTree] = useState(
     createElementDefTree

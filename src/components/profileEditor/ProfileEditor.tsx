@@ -24,6 +24,7 @@ import {
 import SliceDialogBox from './sliceDialogBox/SliceDialogBox';
 
 import useStyles from 'components/profileEditor/style';
+import { getBackboneElements } from 'state/reducers/fhirDataTypes';
 
 export type OpenDialogState = {
   open: boolean;
@@ -173,6 +174,9 @@ const ProfileEditor: React.FC<{}> = () => {
     node: RenderAttributesTree
   ) => {
     e.preventDefault();
+    if (node.type === 'BackboneElement')
+      dispatch(getBackboneElements(node.children));
+    else dispatch(getBackboneElements(undefined));
     dispatch(createNewElementDefinition(node));
   };
 
