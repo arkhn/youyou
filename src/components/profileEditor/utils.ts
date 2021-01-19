@@ -129,7 +129,6 @@ export const onChangeElementJSON = (
   if (value !== '') {
     set(elem, path, value);
   } else {
-    console.log(elem);
     set(elem, path, undefined);
   }
   return elem;
