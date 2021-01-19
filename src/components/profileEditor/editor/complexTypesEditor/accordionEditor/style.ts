@@ -19,17 +19,11 @@ export const MuiButton = withStyles((theme: Theme) => ({
   }
 }))(Button);
 
-export const useStyles = makeStyles((theme: Theme) => ({
+export const useStyles = makeStyles(() => ({
   accordionTitle: {
     display: 'flex',
     width: '100%',
     alignItems: 'center'
-  },
-  accordionAddItem: {
-    borderRadius: 4,
-    padding: 4,
-    paddingRight: 16,
-    border: `1px solid ${theme.palette.primary.light}`
   },
   accordion: {
     marginBottom: 16
@@ -37,9 +31,6 @@ export const useStyles = makeStyles((theme: Theme) => ({
   accordionDetails: {
     display: 'flex',
     flexDirection: 'column'
-  },
-  titleAdd: {
-    marginLeft: 4
   },
   accordionTitleDelete: {
     justifyContent: 'space-between'

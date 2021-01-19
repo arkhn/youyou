@@ -1,27 +1,16 @@
 import React from 'react';
 
-import {
-  Accordion,
-  AccordionDetails,
-  IconButton,
-  Tooltip,
-  Typography
-} from '@material-ui/core';
-import { Add, ExpandMore } from '@material-ui/icons';
-import clsx from 'clsx';
-
 import { RenderAttributesTree } from 'types';
 import { createJSONTree } from 'components/profileEditor/editor/utils';
+import { isPrimitive } from 'state/utils';
+import { createElementDefinitionTree } from 'components/profileEditor/utils';
+
+import AddComplexType from './addComplexType/AddComplexType';
+import AccordionEditor from './accordionEditor/AccordionEditor';
 import DialogChangeSliceName from './dialogSliceName/DialogChangeSliceName';
 import RenderPrimitiveTypes from './renderPrimitiveTypes/RenderPrimitiveTypes';
 
-import {
-  useStyles,
-  MuiAccordionSummary,
-  MuiButton
-} from 'components/profileEditor/editor/complexTypesEditor/styles';
-import { isPrimitive } from 'state/utils';
-import { createElementDefinitionTree } from 'components/profileEditor/utils';
+import { useStyles } from 'components/profileEditor/editor/complexTypesEditor/accordionEditor/style';
 
 type DetailProps = {
   attributes: RenderAttributesTree[];
@@ -60,60 +49,40 @@ const RenderComplexType: React.FC<DetailProps> = ({
     }
   };
 
+  const getNewPath = (item: RenderAttributesTree) => {
+    if (item.type && !Array.isArray(item.type)) {
+      let newTypeName = item.type;
+      const splitedTypeName = newTypeName.split('');
+      const firstLetter = newTypeName[0].toUpperCase();
+      splitedTypeName.splice(0, 1, firstLetter);
+      newTypeName = splitedTypeName.join('');
+      const newPath = `${item.name.split('[x]').join('')}${newTypeName}`;
+      return newPath;
+    }
+  };
+
   const renderAttribute = attributes.map((item, index) => {
     let attributeElement: JSX.Element | null = null;
     if (item.name.includes('fixed') && item.type !== 'BackboneElement') {
-      if (
-        isPrimitive(item.type, primitiveTypes) &&
-        item.type &&
-        !Array.isArray(item.type)
-      ) {
-        let newTypeName = item.type;
-        const splitedTypeName = newTypeName.split('');
-        const firstLetter = newTypeName[0].toUpperCase();
-        splitedTypeName.splice(0, 1, firstLetter);
-        newTypeName = splitedTypeName.join('');
-        const newPath = `${item.name.split('[x]').join('')}${newTypeName}`;
+      const newPath = getNewPath(item);
+      if (isPrimitive(item.type, primitiveTypes) && newPath) {
         const value = item.type === 'boolean' ? false : '';
         if (structureDefJSON[newPath] === undefined) {
           attributeElement = (
-            <div
-              className={clsx(classes.accordionTitle, classes.accordionAddItem)}
-            >
-              <IconButton onClick={() => onChange(handleAdd)(newPath, value)}>
-                <Tooltip title={`add a new ${item.name}`}>
-                  <Add />
-                </Tooltip>
-              </IconButton>
-              <Typography className={classes.titleAdd} variant="h2">
-                {item.name}
-              </Typography>
-            </div>
+            <AddComplexType
+              handleAdd={onChange(handleAdd)}
+              item={item}
+              newPath={newPath}
+              value={value}
+            />
           );
         } else {
           attributeElement = (
-            <Accordion key={index}>
-              <MuiAccordionSummary expandIcon={<ExpandMore />}>
-                <div
-                  className={clsx(
-                    classes.accordionTitle,
-                    classes.accordionTitleDelete
-                  )}
-                >
-                  <Typography>
-                    {item.name} {item.type}
-                  </Typography>
-                  <MuiButton
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      onChange(handleDelete)(newPath, undefined);
-                    }}
-                  >
-                    Delete
-                  </MuiButton>
-                </div>
-              </MuiAccordionSummary>
-              <AccordionDetails className={classes.accordionDetails}>
+            <AccordionEditor
+              title={`${item.name} ${item.type}`}
+              handleDelete={onChange(handleDelete)}
+              path={newPath}
+              accordionDetails={
                 <RenderPrimitiveTypes
                   item={item}
                   onChangeValue={onChangeValue}
@@ -121,73 +90,42 @@ const RenderComplexType: React.FC<DetailProps> = ({
                   onChange={onChange}
                   index={index}
                 />
-              </AccordionDetails>
-            </Accordion>
+              }
+            />
           );
         }
-      } else if (item.type && !Array.isArray(item.type)) {
-        let newTypeName = item.type;
-        const splitedTypeName = newTypeName.split('');
-        const firstLetter = newTypeName[0].toUpperCase();
-        splitedTypeName.splice(0, 1, firstLetter);
-        newTypeName = splitedTypeName.join('');
-        const newPath = `${item.name.split('[x]').join('')}${newTypeName}`;
+      } else if (item.type && !Array.isArray(item.type) && newPath) {
         const value = createElementDefinitionTree(item.children);
-        if (structureDefJSON[newPath]) {
+        if (!structureDefJSON[newPath]) {
           attributeElement = (
-            <div key={item.name}>
-              <Accordion className={classes.accordion}>
-                <MuiAccordionSummary expandIcon={<ExpandMore />}>
-                  <div
-                    className={clsx(
-                      classes.accordionTitle,
-                      classes.accordionTitleDelete
-                    )}
-                  >
-                    <Typography>
-                      {item.name} {item.type}
-                    </Typography>
-                    <MuiButton
-                      onClick={(event) => {
-                        event.stopPropagation();
-                        onChange(handleDelete)(newPath, undefined);
-                      }}
-                    >
-                      Delete
-                    </MuiButton>
-                  </div>
-                </MuiAccordionSummary>
-                <AccordionDetails className={classes.accordionDetails}>
-                  {structureDefJSON[newPath] && (
-                    <RenderComplexType
-                      structureDefJSON={structureDefJSON[newPath]}
-                      complexTypes={complexTypes}
-                      attributes={item.children}
-                      primitiveTypes={primitiveTypes}
-                      onChangeValue={onChange(onChangeValue)}
-                      handleDelete={onChange(handleDelete)}
-                      handleAdd={onChange(handleAdd)}
-                      name={newPath}
-                    />
-                  )}
-                </AccordionDetails>
-              </Accordion>
-            </div>
+            <AddComplexType
+              handleAdd={onChange(handleAdd)}
+              item={item}
+              newPath={newPath}
+              value={value}
+            />
           );
         } else {
           attributeElement = (
-            <div
-              className={clsx(classes.accordionTitle, classes.accordionAddItem)}
-            >
-              <IconButton onClick={() => onChange(handleAdd)(newPath, value)}>
-                <Tooltip title={`add a new ${item.name}`}>
-                  <Add />
-                </Tooltip>
-              </IconButton>
-              <Typography className={classes.titleAdd} variant="h2">
-                {item.name}
-              </Typography>
-            </div>
+            <AccordionEditor
+              handleDelete={onChange(handleDelete)}
+              title={`${item.name} ${item.type}`}
+              path={newPath}
+              accordionDetails={
+                structureDefJSON[newPath] && (
+                  <RenderComplexType
+                    structureDefJSON={structureDefJSON[newPath]}
+                    complexTypes={complexTypes}
+                    attributes={item.children}
+                    primitiveTypes={primitiveTypes}
+                    onChangeValue={onChange(onChangeValue)}
+                    handleDelete={onChange(handleDelete)}
+                    handleAdd={onChange(handleAdd)}
+                    name={newPath}
+                  />
+                )
+              }
+            />
           );
         }
       }
@@ -200,49 +138,21 @@ const RenderComplexType: React.FC<DetailProps> = ({
       if (Array.isArray(structureDefJSON[item.name])) {
         attributeElement = (
           <div className={classes.accordion}>
-            <div
-              className={clsx(classes.accordionTitle, classes.accordionAddItem)}
-            >
-              <IconButton
-                onClick={() =>
-                  onChange(handleAdd)(
-                    item.name,
-                    createJSONTree(item.children, structureDefJSON[item.name])
-                  )
-                }
-              >
-                <Tooltip title={`add a new ${item.name}`}>
-                  <Add />
-                </Tooltip>
-              </IconButton>
-              <Typography className={classes.titleAdd} variant="h2">
-                {item.name}
-              </Typography>
-            </div>
+            <AddComplexType
+              handleAdd={onChange(handleAdd)}
+              item={item}
+              newPath={item.name}
+              value={createJSONTree(item.children, structureDefJSON[item.name])}
+            />
             {structureDefJSON[item.name].map((element: any, i: number) => {
               return (
-                <Accordion key={i}>
-                  <MuiAccordionSummary expandIcon={<ExpandMore />}>
-                    <div
-                      className={clsx(
-                        classes.accordionTitle,
-                        classes.accordionTitleDelete
-                      )}
-                    >
-                      <Typography>
-                        {item.name} {i + 1}
-                      </Typography>
-                      <MuiButton
-                        onClick={(event) => {
-                          event.stopPropagation();
-                          onChange(handleDelete)(item.name, i);
-                        }}
-                      >
-                        Delete
-                      </MuiButton>
-                    </div>
-                  </MuiAccordionSummary>
-                  <AccordionDetails className={classes.accordionDetails}>
+                <AccordionEditor
+                  handleDelete={onChange(handleDelete)}
+                  title={`${item.name} ${i + 1}`}
+                  key={i}
+                  index={i}
+                  path={item.name}
+                  accordionDetails={
                     <RenderComplexType
                       structureDefJSON={element}
                       complexTypes={complexTypes}
@@ -254,8 +164,8 @@ const RenderComplexType: React.FC<DetailProps> = ({
                       name={item.name}
                       index={i}
                     />
-                  </AccordionDetails>
-                </Accordion>
+                  }
+                />
               );
             })}
           </div>
@@ -265,27 +175,22 @@ const RenderComplexType: React.FC<DetailProps> = ({
         !item.name.includes('fixed')
       ) {
         attributeElement = (
-          <div key={item.name}>
-            <Accordion className={classes.accordion}>
-              <MuiAccordionSummary expandIcon={<ExpandMore />}>
-                <Typography>
-                  {item.min && item.min > 0 ? `${item.name}*` : item.name}
-                </Typography>
-              </MuiAccordionSummary>
-              <AccordionDetails className={classes.accordionDetails}>
-                <RenderComplexType
-                  structureDefJSON={structureDefJSON[item.name]}
-                  complexTypes={complexTypes}
-                  attributes={item.children}
-                  primitiveTypes={primitiveTypes}
-                  onChangeValue={onChange(onChangeValue)}
-                  handleDelete={onChange(handleDelete)}
-                  handleAdd={onChange(handleAdd)}
-                  name={item.name}
-                />
-              </AccordionDetails>
-            </Accordion>
-          </div>
+          <AccordionEditor
+            handleDelete={onChange(handleDelete)}
+            title={item.min && item.min > 0 ? `${item.name}*` : item.name}
+            accordionDetails={
+              <RenderComplexType
+                structureDefJSON={structureDefJSON[item.name]}
+                complexTypes={complexTypes}
+                attributes={item.children}
+                primitiveTypes={primitiveTypes}
+                onChangeValue={onChange(onChangeValue)}
+                handleDelete={onChange(handleDelete)}
+                handleAdd={onChange(handleAdd)}
+                name={item.name}
+              />
+            }
+          />
         );
       }
     } else if (item.name === 'sliceName' && structureDefJSON.sliceName) {

@@ -147,7 +147,7 @@ export const onDeleteComplexType = (
   element: any
 ): any => {
   const elem: any = { ...element };
-  if (i) {
+  if (i !== undefined) {
     const elementDefJSONAttr: any = get(elem, path);
     elementDefJSONAttr.splice(i, 1);
   } else {

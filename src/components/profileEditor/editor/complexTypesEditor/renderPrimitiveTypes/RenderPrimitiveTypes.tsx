@@ -1,8 +1,10 @@
-import { InputTooltip, SelectTooltip } from 'components/smallComponents';
-import CheckboxTooltip from 'components/smallComponents/CheckboxTooltip';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from 'state/store';
+
+import { InputTooltip, SelectTooltip } from 'components/smallComponents';
+import CheckboxTooltip from 'components/smallComponents/CheckboxTooltip';
+
 import { RenderAttributesTree } from 'types';
 
 type RenderPrimitiveTypesProps = {
@@ -32,8 +34,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
   let attributeElement: any = undefined;
 
   const getName = (element: RenderAttributesTree) => {
-    let label =
-      element.min && element.min > 0 ? `${element.name}*` : element.name;
+    let label = element.name;
     if (
       label.includes('fixed') &&
       newElementDefinition &&
@@ -61,7 +62,6 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
       return label;
     }
   };
-
   switch (item.type) {
     case 'string':
     case 'uri':
@@ -72,7 +72,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
         const newPath = getFixedName(item, label);
         attributeElement = (
           <InputTooltip
-            label={label}
+            label={item.min && item.min > 0 ? `${label}*` : label}
             value={structureDefJSON[newPath] ?? ''}
             tool={item.definition}
             onBlur={(event) =>
@@ -89,7 +89,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
       const newPath = getFixedName(item, label);
       attributeElement = (
         <InputTooltip
-          label={label}
+          label={item.min && item.min > 0 ? `${label}*` : label}
           value={structureDefJSON[newPath] ? structureDefJSON[newPath] : ''}
           tool={item.definition}
         />
@@ -118,7 +118,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
         attributeElement = (
           <SelectTooltip
             key={index}
-            label={label}
+            label={item.min && item.min > 0 ? `${label}*` : label}
             tool={item.definition}
             choices={mapValues}
             value={structureDefJSON[newPath] ?? mapValues[0].value}
@@ -130,7 +130,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
       } else {
         attributeElement = (
           <InputTooltip
-            label={label}
+            label={item.min && item.min > 0 ? `${label}*` : label}
             value={structureDefJSON[newPath] ? structureDefJSON[newPath] : ''}
             tool={item.definition}
           />
@@ -143,7 +143,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
       const newPath = getFixedName(item, label);
       attributeElement = (
         <CheckboxTooltip
-          label={label}
+          label={item.min && item.min > 0 ? `${label}*` : label}
           tool={item.definition}
           value={structureDefJSON[newPath] ?? false}
           onChange={(event) =>

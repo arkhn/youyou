@@ -118,8 +118,6 @@ const Editor: React.FC<EditorProps> = ({
       : undefined
   );
 
-  console.log(elementDefJSON);
-
   useEffect(() => {
     setElementDefinitionTree(createElementDefTree);
   }, [createElementDefTree]);
