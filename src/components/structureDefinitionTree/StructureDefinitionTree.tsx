@@ -7,21 +7,21 @@ import { selectStructureDefMeta } from 'state/reducers/resource';
 import TreeNode from 'components/structureDefinitionTree/treeNode/TreeNode';
 import { OpenDialogState } from 'components/profileEditor/ProfileEditor';
 import { useAppDispatch } from 'state/store';
-import { RenderAttributesTree } from 'types';
+import { SimplifiedAttributes } from 'types';
 
 import useStyles from 'components/structureDefinitionTree/style';
 import { Typography } from '@material-ui/core';
 
 type StructureDefinitionTreeProps = {
   structureDefinitionId?: string;
-  uiAttributes?: RenderAttributesTree;
+  uiAttributes?: SimplifiedAttributes;
   onLabelClick?: (
     event: React.MouseEvent<Element, MouseEvent>,
-    nodes: RenderAttributesTree
+    nodes: SimplifiedAttributes
   ) => void;
   handleClickSlices: (
     event: React.MouseEvent<Element, MouseEvent>,
-    nodes: RenderAttributesTree,
+    nodes: SimplifiedAttributes,
     openDialog: OpenDialogState
   ) => void;
   className?: string;
@@ -43,7 +43,7 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
   const dispatch = useAppDispatch();
   const classes = useStyles();
 
-  const renderNode = (nodes: RenderAttributesTree): JSX.Element => (
+  const renderNode = (nodes: SimplifiedAttributes): JSX.Element => (
     <TreeItem
       className={classes.treeItem}
       key={nodes.newPath ?? ''}

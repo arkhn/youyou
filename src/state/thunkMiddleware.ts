@@ -10,15 +10,15 @@ import {
 import {
   FetchedData,
   FetchedIds,
-  RenderAttributesTree,
-  SimplifiedAttributes
+  SimplifiedAttributes,
+  TemporaryAttribute
 } from 'types';
 
 import api from 'services/api';
 
 import { RootState } from 'state/store';
 
-import { renderTreeAttributes, createSimplifiedAttributes } from './utils';
+import { createSimplifiedAttributes, createTemporaryAttribute } from './utils';
 
 export const requestIdsThunk = createAsyncThunk<
   { id: string }[],
@@ -56,8 +56,8 @@ export const requestStructureDefThunk = createAsyncThunk<
 export const requestFhirDataTypesThunk = createAsyncThunk<
   {
     primitiveDataTypes: string[];
-    complexDataTypes: RenderAttributesTree[];
-    structureDef: RenderAttributesTree[];
+    complexDataTypes: SimplifiedAttributes[];
+    structureDef: SimplifiedAttributes[];
   },
   void,
   { state: RootState; rejectValue: Error }
@@ -83,7 +83,7 @@ export const requestFhirDataTypesThunk = createAsyncThunk<
     valueSet.status === 200 &&
     resourceSDef.status === 200
   ) {
-    const complexTypeTree: RenderAttributesTree = {
+    const complexTypeTree: SimplifiedAttributes = {
       id: '',
       name: '',
       type: '',
@@ -92,7 +92,7 @@ export const requestFhirDataTypesThunk = createAsyncThunk<
       max: '',
       definition: ''
     };
-    const structureDefTree: RenderAttributesTree = {
+    const structureDefTree: SimplifiedAttributes = {
       id: '',
       name: '',
       type: '',
@@ -111,22 +111,24 @@ export const requestFhirDataTypesThunk = createAsyncThunk<
       (item: FetchedData) => item.resource
     );
 
-    const newComplexTypes: SimplifiedAttributes[] = createSimplifiedAttributes(
+    const newComplexTypes: TemporaryAttribute[] = createTemporaryAttribute(
       newComplexTypesFetched,
       newValueSet
     );
-    const newSDef: SimplifiedAttributes[] = createSimplifiedAttributes(
+    const newSDef: TemporaryAttribute[] = createTemporaryAttribute(
       newStructureDefFetched,
       newValueSet
     );
 
     if (newComplexTypes && newSDef) {
       newComplexTypes.forEach(
-        (type) => type && renderTreeAttributes(type, type, complexTypeTree)
+        (type) =>
+          type && createSimplifiedAttributes(type, type, complexTypeTree)
       );
 
       newSDef.forEach(
-        (type) => type && renderTreeAttributes(type, type, structureDefTree)
+        (type) =>
+          type && createSimplifiedAttributes(type, type, structureDefTree)
       );
     }
     const allPayloads = {

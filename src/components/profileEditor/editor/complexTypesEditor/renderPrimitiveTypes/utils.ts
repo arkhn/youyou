@@ -1,38 +1,33 @@
 import { IElementDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
-import { RenderAttributesTree } from 'types';
+import { SimplifiedAttributes } from 'types';
 
 /**
  * Create a new element name for the attribute selected, for displaying in the input
  * label. If element is fixed, creates a label with the name of the element definition
  * currently under modification
- * @param element
- * @param newElementDefinition
+ * @param element simplified attribute of selected element
+ * @param elementDefinition element definition selected
  */
 export const getLabel = (
-  element: RenderAttributesTree,
-  newElementDefinition: IElementDefinition | undefined
+  element: SimplifiedAttributes,
+  elementDefinition: IElementDefinition | undefined
 ) => {
   let label = element.name;
-  if (
-    label.includes('fixed') &&
-    newElementDefinition &&
-    newElementDefinition.id
-  ) {
-    const newName = newElementDefinition.id.split('.');
+  if (label.includes('fixed') && elementDefinition && elementDefinition.id) {
+    const newName = elementDefinition.id.split('.');
     label = newName[newName.length - 1];
   }
   return label;
 };
 
 /**
- * If the element is a fixed element, change the name of the element to
- * fixed + element type's name with a capitalized first letter, and if it's not fixed,
+ * If the element is a fixed element, change the name of the element to {fixed + capitalized element type's name}, and if it's not fixed,
  * keep the original name of the element
- * @param element element used to change name
+ * @param element simplified attribute of selected element
  * @param label original name of the element
  */
 export const changeFixedName = (
-  attribute: RenderAttributesTree,
+  attribute: SimplifiedAttributes,
   label: string
 ) => {
   if (

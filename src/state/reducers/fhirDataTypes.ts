@@ -2,16 +2,16 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { requestFhirDataTypesThunk } from 'state/thunkMiddleware';
 import { createComplexTypes } from 'state/utils';
-import { RenderAttributesTree } from 'types';
+import { SimplifiedAttributes } from 'types';
 
 export type FhirDataTypesState = {
   requestId?: string;
   primitiveTypes: string[];
-  complexTypes: RenderAttributesTree[];
+  complexTypes: SimplifiedAttributes[];
   loadingTypes: boolean;
   errorTypes: Error | undefined;
-  structureDefinitionTree: RenderAttributesTree[];
-  backboneElements: RenderAttributesTree[] | undefined;
+  structureDefinitionTree: SimplifiedAttributes[];
+  backboneElements: SimplifiedAttributes[] | undefined;
 };
 
 const initialState: FhirDataTypesState = {
@@ -29,7 +29,7 @@ const fhirDataTypesSlice = createSlice({
   reducers: {
     getBackboneElements: (
       state: FhirDataTypesState,
-      action: PayloadAction<RenderAttributesTree[] | undefined>
+      action: PayloadAction<SimplifiedAttributes[] | undefined>
     ) => {
       state.backboneElements = action.payload;
     }

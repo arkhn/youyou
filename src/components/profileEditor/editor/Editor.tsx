@@ -15,7 +15,7 @@ import {
   createJSONTree,
   updateStructureDefinition
 } from 'components/profileEditor/editor/utils';
-import { RenderAttributesTree } from 'types';
+import { SimplifiedAttributes } from 'types';
 import RenderComplexType from 'components/profileEditor/editor/complexTypesEditor/RenderComplexType';
 import {
   onChangeElementJSON,
@@ -65,22 +65,22 @@ const Editor: React.FC<EditorProps> = ({
   const classes = useStyles();
 
   /**
-   * creates a RenderAttributesTree with an implementation for fixed values
+   * creates a tree of simplified attributes for element definition with an implementation for fixed values
    */
   const createElementDefTree = useCallback(() => {
     const newElementDefinitionTree:
-      | RenderAttributesTree[]
+      | SimplifiedAttributes[]
       | undefined = cloneDeep(
       complexTypes?.find(
-        (complexType: RenderAttributesTree) =>
+        (complexType: SimplifiedAttributes) =>
           complexType.id === 'ElementDefinition'
       )?.children
     );
     if (currentElementDefinition && currentElementDefinition.type) {
       const fixedValueTree:
-        | RenderAttributesTree
+        | SimplifiedAttributes
         | undefined = newElementDefinitionTree?.find(
-        (attribute: RenderAttributesTree) => attribute.name.includes('fixed')
+        (attribute: SimplifiedAttributes) => attribute.name.includes('fixed')
       );
       if (fixedValueTree) {
         if (currentElementDefinition.type.length === 1) {

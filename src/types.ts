@@ -42,11 +42,11 @@ export type fhirDataState = {
   };
 };
 
-export interface RenderAttributesTree {
+export interface SimplifiedAttributes {
   name: string;
   id: string;
   type: string | IElementDefinitionType[] | undefined;
-  children: RenderAttributesTree[];
+  children: SimplifiedAttributes[];
   min: number | undefined;
   max: string;
   definition: string;
@@ -68,7 +68,7 @@ export interface RenderComplexType {
   valueSet?: ICodeSystemConcept[];
 }
 
-export interface SimplifiedAttributes {
+export interface TemporaryAttribute {
   path: string;
   type: string | IElementDefinitionType[] | undefined;
   definition: string;

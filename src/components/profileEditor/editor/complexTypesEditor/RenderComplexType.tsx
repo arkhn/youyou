@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { RenderAttributesTree } from 'types';
+import { SimplifiedAttributes } from 'types';
 import { createJSONTree } from 'components/profileEditor/editor/utils';
 import { isPrimitive } from 'state/utils';
 import { createElementDefinitionTree } from 'components/profileEditor/utils';
@@ -14,8 +14,8 @@ import { changeFixedName } from './renderPrimitiveTypes/utils';
 import { useStyles } from 'components/profileEditor/editor/complexTypesEditor/accordionEditor/style';
 
 type DetailProps = {
-  complexFhirAttributes: RenderAttributesTree[];
-  complexTypes: RenderAttributesTree[];
+  complexFhirAttributes: SimplifiedAttributes[];
+  complexTypes: SimplifiedAttributes[];
   currentNodeJSON: any;
   primitiveTypes: string[];
   onChangeValue?: (path: string, value: any) => void;

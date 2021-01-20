@@ -6,7 +6,7 @@ import {
   IElementDefinition_Binding as IElementDefinitionBinding,
   IStructureDefinition
 } from '@ahryman40k/ts-fhir-types/lib/R4';
-import { RenderAttributesTree, ResourceState } from 'types';
+import { SimplifiedAttributes, ResourceState } from 'types';
 import {
   requestIdsThunk,
   requestStructureDefThunk
@@ -49,7 +49,7 @@ const resourceSlice = createSlice({
     },
     createCurrentElementDefinition: (
       state: ResourceState,
-      action: PayloadAction<RenderAttributesTree>
+      action: PayloadAction<SimplifiedAttributes>
     ) => {
       const {
         min,
@@ -131,7 +131,7 @@ const resourceSlice = createSlice({
     addSlice: (
       state: ResourceState,
       action: PayloadAction<{
-        nodeToSlice: RenderAttributesTree;
+        nodeToSlice: SimplifiedAttributes;
         structureDefinition: IStructureDefinition;
         sliceName: string;
         index: number;
@@ -153,7 +153,7 @@ const resourceSlice = createSlice({
     deleteSlice: (
       state: ResourceState,
       action: PayloadAction<{
-        node: RenderAttributesTree;
+        node: SimplifiedAttributes;
         structureDefinition: IStructureDefinition;
       }>
     ) => {

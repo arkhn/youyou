@@ -8,18 +8,24 @@ import get from 'lodash.get';
 
 import {
   createComplexTypes,
-  renderTreeAttributes,
+  createSimplifiedAttributes,
   transformAttributes
 } from 'state/utils';
-import { RenderAttributesTree, SimplifiedAttributes } from 'types';
+import { SimplifiedAttributes, TemporaryAttribute } from 'types';
 
+/**
+ * creates tree of simplified attributes for snapshot attribute
+ * @param attributes all snapshot definition elements
+ * @param primitiveTypes simplified tree of primitive types
+ * @param complexTypes simplified tree of complex types
+ */
 export const createComplexSnapshot = (
   attributes: IElementDefinition[],
   primitiveTypes: string[],
-  complexTypes: RenderAttributesTree[]
-): RenderAttributesTree => {
-  let attribute: SimplifiedAttributes[] = [];
-  const attributeTree: RenderAttributesTree = {
+  complexTypes: SimplifiedAttributes[]
+): SimplifiedAttributes => {
+  let attribute: TemporaryAttribute[] = [];
+  const attributeTree: SimplifiedAttributes = {
     id: '',
     name: '',
     type: '',
@@ -31,7 +37,7 @@ export const createComplexSnapshot = (
   if (attributes) {
     attribute = transformAttributes(attributes);
     attribute.forEach(
-      (type) => type && renderTreeAttributes(type, type, attributeTree)
+      (type) => type && createSimplifiedAttributes(type, type, attributeTree)
     );
     const children = createComplexTypes(
       complexTypes,
@@ -45,9 +51,9 @@ export const createComplexSnapshot = (
     attributeTree.children[0].children = children;
   }
   const changePath = (
-    atts: RenderAttributesTree[],
+    atts: SimplifiedAttributes[],
     path: string
-  ): RenderAttributesTree[] => {
+  ): SimplifiedAttributes[] => {
     const attribs = cloneDeep(atts);
     for (const att of attribs) {
       const newPath = `${path !== '' ? path + '.' : ''}${att.name}`;
@@ -63,10 +69,10 @@ export const createComplexSnapshot = (
 };
 
 export const createElementDefinitionTree = (
-  items: RenderAttributesTree[]
+  items: SimplifiedAttributes[]
 ): any => {
   const elemDef: any = {};
-  items.forEach((item: RenderAttributesTree) => {
+  items.forEach((item: SimplifiedAttributes) => {
     if (!item.name.includes('fixed')) {
       if (item.children.length === 0) {
         elemDef[item.name] = undefined;

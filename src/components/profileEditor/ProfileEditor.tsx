@@ -5,7 +5,7 @@ import { IStructureDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { Paper, Typography } from '@material-ui/core';
 import cloneDeep from 'lodash.clonedeep';
 
-import { RenderAttributesTree } from 'types';
+import { SimplifiedAttributes } from 'types';
 import { RootState, useAppDispatch } from 'state/store';
 import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 import {
@@ -68,7 +68,7 @@ const ProfileEditor: React.FC<{}> = () => {
     message: ''
   });
   const [nodeToSlice, setNodeToSlice] = useState<
-    RenderAttributesTree | undefined
+    SimplifiedAttributes | undefined
   >(undefined);
 
   useEffect(() => {
@@ -87,11 +87,12 @@ const ProfileEditor: React.FC<{}> = () => {
   /**
    * If click on add or delete icon, open a dialog box to confirm actions
    * @param e event onClick
-   * @param node attribute selected on click
+   * @param node simplified attribute selected on click
+   * @param openDialog state for dialog box
    */
   const handleClickForSlice = (
     e: React.MouseEvent<Element, MouseEvent>,
-    node: RenderAttributesTree,
+    node: SimplifiedAttributes,
     openDialog: OpenDialogState
   ) => {
     e.stopPropagation();
@@ -171,7 +172,7 @@ const ProfileEditor: React.FC<{}> = () => {
 
   const selectAttributeToEdit = (
     e: React.MouseEvent<Element, MouseEvent>,
-    node: RenderAttributesTree
+    node: SimplifiedAttributes
   ) => {
     e.preventDefault();
     if (node.type === 'BackboneElement')

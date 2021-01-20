@@ -5,20 +5,19 @@ import { RootState } from 'state/store';
 import { InputTooltip, SelectTooltip } from 'components/smallComponents';
 import CheckboxTooltip from 'components/smallComponents/CheckboxTooltip';
 
-import { RenderAttributesTree } from 'types';
+import { SimplifiedAttributes } from 'types';
 import { changeFixedName, getLabel } from './utils';
 
 type RenderPrimitiveTypesProps = {
-  attribute: RenderAttributesTree;
+  attribute: SimplifiedAttributes;
   currentNodeJSON: any;
   onChangeValue: (path: string, value: any) => void;
 };
 
 /**
- *
- * @param param0.attribute element currently in modification
+ * @param param0.attribute simplified attribute of the element currently in modification
  * @param param0.currentNodeJSON
- * @param param0.onChangeValue function to modify the selectedAttribute in the json
+ * @param param0.onChangeValue function to modify the selected attribute in the JSON
  */
 const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
   attribute,

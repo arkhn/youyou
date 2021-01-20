@@ -6,21 +6,19 @@ import {
 import { updateStructureDefProfile } from 'state/reducers/resource';
 import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 import { AppDispatch } from 'state/store';
-import { RenderAttributesTree } from 'types';
+import { SimplifiedAttributes } from 'types';
 
 /**
  * Create a JSON tree from a structure definition
- * @param attributes
- * A tree of type RenderAttributesTree that will help to create a JSON tree as in FHIR resources
- * @param base
- * Original structure definition of the resource we choosed to profile
+ * @param attributes tree of simplified attributes to be transformed into JSON
+ * @param structureDefinition original structure definition of the resource we choosed to profile
  */
 export const createJSONTree = (
-  attributes: RenderAttributesTree[],
-  base: any
+  attributes: SimplifiedAttributes[],
+  structureDefinitionJSON: any
 ): any => {
   const JSONTree: any = {};
-  attributes.forEach((attribute: RenderAttributesTree) => {
+  attributes.forEach((attribute: SimplifiedAttributes) => {
     if (attribute.children.length === 0) {
       JSONTree[attribute.name] = undefined;
     } else if (
@@ -28,13 +26,16 @@ export const createJSONTree = (
       attribute.name !== 'differential'
     ) {
       if (attribute.max === '1') {
-        JSONTree[attribute.name] = createJSONTree(attribute.children, base);
+        JSONTree[attribute.name] = createJSONTree(
+          attribute.children,
+          structureDefinitionJSON
+        );
       } else {
         JSONTree[attribute.name] = [];
-        base[attribute.name] &&
-          base[attribute.name].forEach(() =>
+        structureDefinitionJSON[attribute.name] &&
+          structureDefinitionJSON[attribute.name].forEach(() =>
             JSONTree[attribute.name].push(
-              createJSONTree(attribute.children, base)
+              createJSONTree(attribute.children, structureDefinitionJSON)
             )
           );
       }

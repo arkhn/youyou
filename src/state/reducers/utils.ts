@@ -4,18 +4,18 @@ import {
   IStructureDefinition
 } from '@ahryman40k/ts-fhir-types/lib/R4';
 import cloneDeep from 'lodash.clonedeep';
-import { RenderAttributesTree } from 'types';
+import { SimplifiedAttributes } from 'types';
 
 /**
  * Add a slice to the structure definition snapshot
- * @param nodeToSlice Element selected for slicing
+ * @param nodeToSlice simplified selected attribute to slice
  * @param structureDefinition structure definition to edit
  * @param sliceName name to give to the slice (will be replaced by :${sliceName})
  * @param index where to insert the slice in the structure definition snapshot
  * @returns modified structure definition
  */
 export const structureDefAddSlice = (
-  nodeToSlice: RenderAttributesTree,
+  nodeToSlice: SimplifiedAttributes,
   structureDefinition: IStructureDefinition,
   sliceName: string,
   index: number
@@ -82,12 +82,12 @@ export const structureDefAddSlice = (
 
 /**
  * Delete a selected slice and its child on the structure definition
- * @param sliceToDelete
+ * @param sliceToDelete simplified selected slice attribute to remove
  * @param structureDefinition (actual structure definition where to remove the slice)
  * @returns modified structure definition
  */
 export const structureDefDeleteSlice = (
-  sliceToDelete: RenderAttributesTree,
+  sliceToDelete: SimplifiedAttributes,
   structureDefinition: IStructureDefinition
 ): IStructureDefinition | undefined => {
   const indexes: number[] = [];
