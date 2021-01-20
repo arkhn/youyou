@@ -6,78 +6,46 @@ import { InputTooltip, SelectTooltip } from 'components/smallComponents';
 import CheckboxTooltip from 'components/smallComponents/CheckboxTooltip';
 
 import { RenderAttributesTree } from 'types';
+import { changeFixedName, getLabel } from './utils';
 
 type RenderPrimitiveTypesProps = {
-  item: RenderAttributesTree;
-  structureDefJSON: any;
-  onChange: (
-    callback:
-      | ((path: string, value: any) => void)
-      | ((path: string, i: number) => void)
-      | ((path: string, value: any) => void)
-      | undefined
-  ) => (path: string, value: any) => void;
-  index: number;
-  onChangeValue?: (path: string, value: any) => void;
+  attribute: RenderAttributesTree;
+  currentNodeJSON: any;
+  onChangeValue: (path: string, value: any) => void;
 };
 
+/**
+ *
+ * @param param0.attribute element currently in modification
+ * @param param0.currentNodeJSON
+ * @param param0.onChangeValue function to modify the selectedAttribute in the json
+ */
 const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
-  item,
-  structureDefJSON,
-  onChange,
-  index,
+  attribute,
+  currentNodeJSON,
   onChangeValue
 }) => {
-  const { newElementDefinition } = useSelector(
+  const { currentElementDefinition } = useSelector(
     (state: RootState) => state.resourceSlice
   );
   let attributeElement: any = undefined;
-
-  const getName = (element: RenderAttributesTree) => {
-    let label = element.name;
-    if (
-      label.includes('fixed') &&
-      newElementDefinition &&
-      newElementDefinition.id
-    ) {
-      const newName = newElementDefinition.id.split('.');
-      label = newName[newName.length - 1];
-    }
-    return label;
-  };
-
-  const getFixedName = (element: RenderAttributesTree, label: string) => {
-    if (
-      element.name.includes('fixed') &&
-      element.type &&
-      !Array.isArray(element.type)
-    ) {
-      let newTypeName = element.type;
-      const splitedTypeName = newTypeName.split('');
-      const firstLetter = newTypeName[0].toUpperCase();
-      splitedTypeName.splice(0, 1, firstLetter);
-      newTypeName = splitedTypeName.join('');
-      return `fixed${newTypeName}`;
-    } else {
-      return label;
-    }
-  };
-  switch (item.type) {
+  const label =
+    attribute.min && attribute.min > 0
+      ? `${getLabel(attribute, currentElementDefinition)}*`
+      : `${getLabel(attribute, currentElementDefinition)}`;
+  const newFixedName = changeFixedName(attribute, label);
+  switch (attribute.type) {
     case 'string':
     case 'uri':
     case 'id':
     case 'http://hl7.org/fhirpath/System.String': {
-      if (item.name !== 'sliceName') {
-        const label = getName(item);
-        const newPath = getFixedName(item, label);
+      if (attribute.name !== 'sliceName') {
         attributeElement = (
           <InputTooltip
-            label={item.min && item.min > 0 ? `${label}*` : label}
-            value={structureDefJSON[newPath] ?? ''}
-            tool={item.definition}
-            onBlur={(event) =>
-              onChange(onChangeValue)(newPath, event.target.value)
-            }
+            label={label}
+            value={currentNodeJSON[newFixedName] ?? ''}
+            tool={attribute.definition}
+            onBlur={(event) => onChangeValue(newFixedName, event.target.value)}
           />
         );
       }
@@ -85,31 +53,29 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
     }
     case 'integer':
     case 'positiveInt': {
-      const label = getName(item);
-      const newPath = getFixedName(item, label);
       attributeElement = (
         <InputTooltip
-          label={item.min && item.min > 0 ? `${label}*` : label}
-          value={structureDefJSON[newPath] ? structureDefJSON[newPath] : ''}
-          tool={item.definition}
+          label={label}
+          value={
+            currentNodeJSON[newFixedName] ? currentNodeJSON[newFixedName] : ''
+          }
+          tool={attribute.definition}
         />
       );
       break;
     }
     case 'code': {
-      const label = getName(item);
-      const newPath = getFixedName(item, label);
-      if (item.binding?.valueSet) {
+      if (attribute.binding?.valueSet) {
         const mapValues: {
           value: string | undefined;
           label: string | undefined;
         }[] = [];
-        if (item.min === 0)
+        if (attribute.min === 0)
           mapValues.push({
             value: '',
             label: '--select a value--'
           });
-        item.binding.valueSet.forEach((values) =>
+        attribute.binding.valueSet.forEach((values) =>
           mapValues.push({
             value: values.code,
             label: values.display
@@ -117,37 +83,36 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
         );
         attributeElement = (
           <SelectTooltip
-            key={index}
-            label={item.min && item.min > 0 ? `${label}*` : label}
-            tool={item.definition}
+            label={label}
+            tool={attribute.definition}
             choices={mapValues}
-            value={structureDefJSON[newPath] ?? mapValues[0].value}
+            value={currentNodeJSON[newFixedName] ?? mapValues[0].value}
             onChange={(event) =>
-              onChange(onChangeValue)(newPath, event.target.value)
+              onChangeValue(newFixedName, event.target.value)
             }
           />
         );
       } else {
         attributeElement = (
           <InputTooltip
-            label={item.min && item.min > 0 ? `${label}*` : label}
-            value={structureDefJSON[newPath] ? structureDefJSON[newPath] : ''}
-            tool={item.definition}
+            label={label}
+            value={
+              currentNodeJSON[newFixedName] ? currentNodeJSON[newFixedName] : ''
+            }
+            tool={attribute.definition}
           />
         );
       }
       break;
     }
     case 'boolean': {
-      const label = getName(item);
-      const newPath = getFixedName(item, label);
       attributeElement = (
         <CheckboxTooltip
-          label={item.min && item.min > 0 ? `${label}*` : label}
-          tool={item.definition}
-          value={structureDefJSON[newPath] ?? false}
+          label={label}
+          tool={attribute.definition}
+          value={currentNodeJSON[newFixedName] ?? false}
           onChange={(event) =>
-            onChange(onChangeValue)(newPath, event.target.checked)
+            onChangeValue(newFixedName, event.target.checked)
           }
         />
       );

@@ -7,29 +7,29 @@ import { Add } from '@material-ui/icons';
 import { RenderAttributesTree } from 'types';
 
 type AddComplexTypeProps = {
-  item: RenderAttributesTree;
-  newPath: string;
+  complexFhirAttribute: RenderAttributesTree;
+  path: string;
   value?: any;
   handleAdd: (path: string, value: any) => void;
 };
 
 const AddComplexType: React.FC<AddComplexTypeProps> = ({
   handleAdd,
-  item,
-  newPath,
+  complexFhirAttribute,
+  path,
   value
 }) => {
   const classes = useStyles();
 
   return (
     <div className={clsx(classes.accordionTitle, classes.accordionAddItem)}>
-      <IconButton onClick={() => handleAdd(newPath, value)}>
-        <Tooltip title={`add a new ${item.name}`}>
+      <IconButton onClick={() => handleAdd(path, value)}>
+        <Tooltip title={`add a new ${complexFhirAttribute.name}`}>
           <Add />
         </Tooltip>
       </IconButton>
       <Typography className={classes.titleAdd} variant="h2">
-        {item.name}
+        {complexFhirAttribute.name}
       </Typography>
     </div>
   );

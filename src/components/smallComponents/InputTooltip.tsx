@@ -55,6 +55,9 @@ const InputTooltip: React.FC<InputTooltipProps> = ({
         onBlur={onBlur}
         inputRef={inputRef}
         onClick={onClick}
+        InputLabelProps={{
+          shrink: true
+        }}
       />
       <TooltipHelp tool={tool} />
     </div>

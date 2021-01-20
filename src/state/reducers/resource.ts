@@ -23,7 +23,7 @@ const initialState: ResourceState = {
   loading: false,
   error: undefined,
   structureDefMeta: true,
-  newElementDefinition: undefined
+  currentElementDefinition: undefined
 };
 
 const resourceSlice = createSlice({
@@ -44,10 +44,10 @@ const resourceSlice = createSlice({
      * if we select structureDefMeta, we can modify the metadata of the structure definition, and state.structureDefMeta = true
      */
     selectStructureDefMeta: (state: ResourceState) => {
-      state.newElementDefinition = undefined;
+      state.currentElementDefinition = undefined;
       state.structureDefMeta = true;
     },
-    createNewElementDefinition: (
+    createCurrentElementDefinition: (
       state: ResourceState,
       action: PayloadAction<RenderAttributesTree>
     ) => {
@@ -79,7 +79,7 @@ const resourceSlice = createSlice({
           binding: binding ? (binding as IElementDefinitionBinding) : undefined
         };
       }
-      state.newElementDefinition = newElement;
+      state.currentElementDefinition = newElement;
       state.structureDefMeta = false;
     },
     updateStructureDefExtension: (
@@ -118,7 +118,7 @@ const resourceSlice = createSlice({
                 elementDefinition
               );
           state.structureDefinition = newSDef;
-          state.newElementDefinition = elementDefinition;
+          state.currentElementDefinition = elementDefinition;
         }
       } else if (!elementDefinition && structureDefinition.snapshot) {
         const newSDef = {
@@ -163,10 +163,10 @@ const resourceSlice = createSlice({
         structureDefinition
       );
       if (
-        state.newElementDefinition &&
-        state.newElementDefinition.id === node.id
+        state.currentElementDefinition &&
+        state.currentElementDefinition.id === node.id
       )
-        state.newElementDefinition = undefined;
+        state.currentElementDefinition = undefined;
     },
     changeSliceName: (
       state: ResourceState,
@@ -206,7 +206,7 @@ const resourceSlice = createSlice({
         newSDef?.snapshot?.element.splice(index, 1, attributesToModify[i]);
       });
       state.structureDefinition = newSDef;
-      state.newElementDefinition = newSDef?.snapshot?.element.find(
+      state.currentElementDefinition = newSDef?.snapshot?.element.find(
         (el) => el.id === attributesToModify[0].id
       );
     }
@@ -266,7 +266,7 @@ export default resourceSlice.reducer;
 export const {
   selectResource,
   selectStructureDefMeta,
-  createNewElementDefinition,
+  createCurrentElementDefinition,
   updateStructureDefExtension,
   updateStructureDefProfile,
   addSlice,

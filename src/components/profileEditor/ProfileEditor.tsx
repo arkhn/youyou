@@ -11,7 +11,7 @@ import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 import {
   addSlice,
   deleteSlice,
-  createNewElementDefinition
+  createCurrentElementDefinition
 } from 'state/reducers/resource';
 import { ButtonDownload, SnackBarWithClose } from 'components/smallComponents';
 import Editor from 'components/profileEditor/editor/Editor';
@@ -169,7 +169,7 @@ const ProfileEditor: React.FC<{}> = () => {
     }
   };
 
-  const handleClick = (
+  const selectAttributeToEdit = (
     e: React.MouseEvent<Element, MouseEvent>,
     node: RenderAttributesTree
   ) => {
@@ -177,7 +177,7 @@ const ProfileEditor: React.FC<{}> = () => {
     if (node.type === 'BackboneElement')
       dispatch(getBackboneElements(node.children));
     else dispatch(getBackboneElements(undefined));
-    dispatch(createNewElementDefinition(node));
+    dispatch(createCurrentElementDefinition(node));
   };
 
   if (loading) {
@@ -195,7 +195,7 @@ const ProfileEditor: React.FC<{}> = () => {
         <Paper className={classes.structureDefTreeContainer}>
           <Typography variant="h1">{newStructureDef?.name}</Typography>
           <StructureDefinitionTree
-            onLabelClick={handleClick}
+            onLabelClick={selectAttributeToEdit}
             uiAttributes={attributesForUI}
             structureDefinitionId={newStructureDef?.id}
             handleClickSlices={handleClickForSlice}

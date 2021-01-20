@@ -10,9 +10,11 @@ import cloneDeep from 'lodash.clonedeep';
 import merge from 'lodash.merge';
 import clsx from 'clsx';
 
-import { updateStructureDefProfile } from 'state/reducers/resource';
 import { RootState, useAppDispatch } from 'state/store';
-import { createJSONTree } from 'components/profileEditor/editor/utils';
+import {
+  createJSONTree,
+  updateStructureDefinition
+} from 'components/profileEditor/editor/utils';
 import { RenderAttributesTree } from 'types';
 import RenderComplexType from 'components/profileEditor/editor/complexTypesEditor/RenderComplexType';
 import {
@@ -21,10 +23,9 @@ import {
   onAddComplexType,
   createElementDefinitionTree
 } from 'components/profileEditor/utils';
-import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
+import { createComplexTypes } from 'state/utils';
 
 import useStyles from 'components/profileEditor/editor/style';
-import { createComplexTypes } from 'state/utils';
 
 type EditorProps = {
   structureDefinition: IStructureDefinition;
@@ -41,7 +42,7 @@ const Editor: React.FC<EditorProps> = ({
     complexTypes,
     primitiveTypes,
     structureDefinitionTree,
-    newElementDefinition,
+    currentElementDefinition,
     backboneElements
   } = useSelector((state: RootState) => {
     const {
@@ -50,11 +51,11 @@ const Editor: React.FC<EditorProps> = ({
       structureDefinitionTree,
       backboneElements
     } = state.fhirDataTypes;
-    const { newElementDefinition } = state.resourceSlice;
+    const { currentElementDefinition } = state.resourceSlice;
     return {
       complexTypes,
       primitiveTypes,
-      newElementDefinition,
+      currentElementDefinition,
       structureDefinitionTree,
       backboneElements
     };
@@ -63,52 +64,75 @@ const Editor: React.FC<EditorProps> = ({
   const dispatch = useAppDispatch();
   const classes = useStyles();
 
+  /**
+   * creates a RenderAttributesTree with an implementation for fixed values
+   */
   const createElementDefTree = useCallback(() => {
-    const cloneComplexType = cloneDeep(
+    const newElementDefinitionTree:
+      | RenderAttributesTree[]
+      | undefined = cloneDeep(
       complexTypes?.find(
-        (element: RenderAttributesTree) => element.id === 'ElementDefinition'
+        (complexType: RenderAttributesTree) =>
+          complexType.id === 'ElementDefinition'
       )?.children
     );
-    if (newElementDefinition && newElementDefinition.type) {
-      const toModify = cloneComplexType?.find((elem) =>
-        elem.name.includes('fixed')
+    if (currentElementDefinition && currentElementDefinition.type) {
+      const fixedValueTree:
+        | RenderAttributesTree
+        | undefined = newElementDefinitionTree?.find(
+        (attribute: RenderAttributesTree) => attribute.name.includes('fixed')
       );
-      if (toModify) {
-        if (newElementDefinition.type.length === 1) {
-          toModify.type = newElementDefinition.type[0].code;
+      if (fixedValueTree) {
+        if (currentElementDefinition.type.length === 1) {
+          fixedValueTree.type = currentElementDefinition.type[0].code;
           if (
-            newElementDefinition.type[0].code === 'BackboneElement' &&
-            toModify.children.length === 0 &&
+            currentElementDefinition.type[0].code === 'BackboneElement' &&
+            fixedValueTree.children.length === 0 &&
             backboneElements
           ) {
-            toModify.children = backboneElements;
+            fixedValueTree.children = backboneElements;
           } else {
             const children = createComplexTypes(
               complexTypes,
-              [toModify],
+              [fixedValueTree],
               primitiveTypes
             );
-            toModify.children = children[0].children;
+            fixedValueTree.children = children[0].children;
           }
         } else {
-          toModify.type = newElementDefinition.type;
+          fixedValueTree.type = currentElementDefinition.type;
         }
       }
     }
-    return cloneComplexType;
-  }, [complexTypes, newElementDefinition, primitiveTypes, backboneElements]);
+    return newElementDefinitionTree;
+  }, [
+    complexTypes,
+    currentElementDefinition,
+    primitiveTypes,
+    backboneElements
+  ]);
 
   const [elementDefinitionTree, setElementDefinitionTree] = useState(
     createElementDefTree
   );
 
-  const createElementJSON = useCallback((): IElementDefinition => {
+  useEffect(() => {
+    setElementDefinitionTree(createElementDefTree);
+  }, [createElementDefTree]);
+
+  /**
+   * creates a FHIR JSON structure for Element Definition
+   */
+  const createElementDefJSON = useCallback((): IElementDefinition => {
     const elementDefTreeJSON =
       elementDefinitionTree &&
       createElementDefinitionTree(elementDefinitionTree);
-    return merge(cloneDeep(elementDefTreeJSON), newElementDefinition);
-  }, [elementDefinitionTree, newElementDefinition]);
+    return merge(cloneDeep(elementDefTreeJSON), currentElementDefinition);
+  }, [elementDefinitionTree, currentElementDefinition]);
 
+  /**
+   * creates a FHIR JSON structure for Structure Definition
+   */
   const createStructureDefJSON = useCallback((): IStructureDefinition => {
     const structureDefTreeJSON: IStructureDefinition = createJSONTree(
       structureDefinitionTree,
@@ -119,7 +143,7 @@ const Editor: React.FC<EditorProps> = ({
 
   const [elementDefJSON, setElementDefJSON] = useState<
     IElementDefinition | undefined
-  >(structureDefinitionType === 'element' ? createElementJSON() : undefined);
+  >(structureDefinitionType === 'element' ? createElementDefJSON() : undefined);
 
   const [structureDefJSON, setStructureDefJSON] = useState<
     IStructureDefinition | undefined
@@ -130,56 +154,27 @@ const Editor: React.FC<EditorProps> = ({
   );
 
   useEffect(() => {
-    setElementDefinitionTree(createElementDefTree);
-  }, [createElementDefTree]);
-
-  useEffect(() => {
-    if (newElementDefinition && structureDefinitionType === 'element') {
-      setElementDefJSON(createElementJSON());
+    if (currentElementDefinition && structureDefinitionType === 'element') {
+      setElementDefJSON(createElementDefJSON());
       setStructureDefJSON(undefined);
     } else if (structureDefinitionType === 'resource') {
       setStructureDefJSON(createStructureDefJSON());
       setElementDefJSON(undefined);
-    } else if (structureDefinitionType === 'element' && !newElementDefinition) {
+    } else if (
+      structureDefinitionType === 'element' &&
+      !currentElementDefinition
+    ) {
       setStructureDefJSON(undefined);
     }
   }, [
-    newElementDefinition,
+    currentElementDefinition,
     structureDefinitionType,
-    createElementJSON,
+    createElementDefJSON,
     createStructureDefJSON
   ]);
 
-  const submit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    e.preventDefault();
-    if (structureDefinitionType === 'element' && structureDefinition) {
-      dispatch(
-        setSnackbarOpen({
-          severity: 'success',
-          message: 'Attribute edited !'
-        })
-      );
-      dispatch(
-        updateStructureDefProfile({
-          structureDefinition: structureDefinition,
-          elementDefinition: elementDefJSON
-        })
-      );
-    } else if (structureDefinitionType === 'resource' && structureDefJSON) {
-      dispatch(
-        setSnackbarOpen({
-          severity: 'success',
-          message: 'Structure Definition edited !'
-        })
-      );
-      dispatch(
-        updateStructureDefProfile({ structureDefinition: structureDefJSON })
-      );
-    }
-  };
-
   const renderBreadcrumbs = (): React.ReactNode => {
-    if (newElementDefinition && elementDefJSON) {
+    if (currentElementDefinition && elementDefJSON) {
       return (
         <Breadcrumbs className={classes.breadcrumbs}>
           {elementDefJSON.id?.split('.').map((split: string) => (
@@ -198,13 +193,13 @@ const Editor: React.FC<EditorProps> = ({
     }
   };
 
-  const renderAttributes = (): React.ReactNode => {
-    if (elementDefJSON && elementDefinitionTree && newElementDefinition) {
+  const renderFormForAttributes = (): React.ReactNode => {
+    if (elementDefJSON && elementDefinitionTree && currentElementDefinition) {
       return (
         <RenderComplexType
-          attributes={elementDefinitionTree}
+          complexFhirAttributes={elementDefinitionTree}
           complexTypes={complexTypes}
-          structureDefJSON={elementDefJSON}
+          currentNodeJSON={elementDefJSON}
           primitiveTypes={primitiveTypes}
           name={''}
           onChangeValue={(path, value) =>
@@ -221,9 +216,9 @@ const Editor: React.FC<EditorProps> = ({
     } else if (structureDefJSON) {
       return (
         <RenderComplexType
-          attributes={structureDefinitionTree}
+          complexFhirAttributes={structureDefinitionTree}
           complexTypes={complexTypes}
-          structureDefJSON={structureDefJSON}
+          currentNodeJSON={structureDefJSON}
           primitiveTypes={primitiveTypes}
           name={''}
           onChangeValue={(path, value) =>
@@ -251,12 +246,27 @@ const Editor: React.FC<EditorProps> = ({
       {renderBreadcrumbs()}
       <Paper className={classes.paperRight}>
         <form className={clsx(classNameForm, classes.formContainer)}>
-          {renderAttributes()}
+          {renderFormForAttributes()}
         </form>
         <div className={classes.formFooter}>
-          {(newElementDefinition || structureDefJSON) && (
+          {(currentElementDefinition || structureDefJSON) && (
             <>
-              <Button variant="contained" color="secondary" onClick={submit}>
+              <Button
+                variant="contained"
+                color="secondary"
+                onClick={(
+                  event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+                ) =>
+                  updateStructureDefinition(
+                    event,
+                    structureDefinitionType,
+                    structureDefinition,
+                    elementDefJSON,
+                    structureDefJSON,
+                    dispatch
+                  )
+                }
+              >
                 Submit
               </Button>
               <Typography color="textSecondary">* Required Fields</Typography>

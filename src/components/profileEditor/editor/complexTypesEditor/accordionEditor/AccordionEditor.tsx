@@ -10,7 +10,7 @@ import { useStyles, MuiAccordionSummary, MuiButton } from './style';
 type AccordionEditorProps = {
   accordionDetails: JSX.Element;
   handleDelete: (path: string, i: number | undefined) => void;
-  title: string;
+  accordionTitle: string;
   path?: string;
   index?: number;
 };
@@ -19,7 +19,7 @@ const AccordionEditor: React.FC<AccordionEditorProps> = ({
   accordionDetails,
   handleDelete,
   index,
-  title,
+  accordionTitle,
   path
 }) => {
   const classes = useStyles();
@@ -30,7 +30,7 @@ const AccordionEditor: React.FC<AccordionEditorProps> = ({
         <div
           className={clsx(classes.accordionTitle, classes.accordionTitleDelete)}
         >
-          <Typography>{title}</Typography>
+          <Typography>{accordionTitle}</Typography>
           {path && (
             <MuiButton
               onClick={(event) => {

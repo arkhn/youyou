@@ -21,7 +21,7 @@ export type ResourceState = {
   loading: boolean;
   error: Error | undefined;
   structureDefMeta: boolean;
-  newElementDefinition?: IElementDefinition;
+  currentElementDefinition?: IElementDefinition;
 };
 
 export type FetchedData = {

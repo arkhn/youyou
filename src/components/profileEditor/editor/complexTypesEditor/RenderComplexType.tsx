@@ -9,13 +9,14 @@ import AddComplexType from './addComplexType/AddComplexType';
 import AccordionEditor from './accordionEditor/AccordionEditor';
 import DialogChangeSliceName from './dialogSliceName/DialogChangeSliceName';
 import RenderPrimitiveTypes from './renderPrimitiveTypes/RenderPrimitiveTypes';
+import { changeFixedName } from './renderPrimitiveTypes/utils';
 
 import { useStyles } from 'components/profileEditor/editor/complexTypesEditor/accordionEditor/style';
 
 type DetailProps = {
-  attributes: RenderAttributesTree[];
+  complexFhirAttributes: RenderAttributesTree[];
   complexTypes: RenderAttributesTree[];
-  structureDefJSON: any;
+  currentNodeJSON: any;
   primitiveTypes: string[];
   onChangeValue?: (path: string, value: any) => void;
   handleDelete?: (path: string, i: number) => void;
@@ -26,9 +27,9 @@ type DetailProps = {
 };
 
 const RenderComplexType: React.FC<DetailProps> = ({
-  attributes,
+  complexFhirAttributes,
   complexTypes,
-  structureDefJSON,
+  currentNodeJSON,
   primitiveTypes,
   onChangeValue,
   handleDelete,
@@ -49,74 +50,76 @@ const RenderComplexType: React.FC<DetailProps> = ({
     }
   };
 
-  const getNewPath = (item: RenderAttributesTree) => {
-    if (item.type && !Array.isArray(item.type)) {
-      let newTypeName = item.type;
-      const splitedTypeName = newTypeName.split('');
-      const firstLetter = newTypeName[0].toUpperCase();
-      splitedTypeName.splice(0, 1, firstLetter);
-      newTypeName = splitedTypeName.join('');
-      const newPath = `${item.name.split('[x]').join('')}${newTypeName}`;
-      return newPath;
-    }
-  };
-
-  const renderAttribute = attributes.map((item, index) => {
+  const renderAttribute = complexFhirAttributes.map((attribute, index) => {
     let attributeElement: JSX.Element | null = null;
-    if (item.name.includes('fixed')) {
-      const newPath = getNewPath(item);
-      if (isPrimitive(item.type, primitiveTypes) && newPath) {
-        const value = item.type === 'boolean' ? false : '';
-        if (structureDefJSON[newPath] === undefined) {
+    const newPath = changeFixedName(attribute, attribute.name);
+    if (newPath.includes('fixed')) {
+      if (isPrimitive(attribute.type, primitiveTypes) && newPath) {
+        const value = attribute.type === 'boolean' ? false : '';
+        if (currentNodeJSON[newPath] === undefined) {
+          /**
+           * if attribute name includes fixed, attribute type is primitive, and is undefined in structureDefinition,
+           * creates an AddComplexType to create it.
+           */
           attributeElement = (
             <AddComplexType
               handleAdd={onChange(handleAdd)}
-              item={item}
-              newPath={newPath}
+              complexFhirAttribute={attribute}
+              path={newPath}
               value={value}
             />
           );
         } else {
+          /**
+           * if attribute name includes fixed, attribute type is primitive, and is defined in structureDefinition,
+           * creates an accordion filled with the fixed value attributes.
+           */
           attributeElement = (
             <AccordionEditor
-              title={`${item.name} ${item.type}`}
+              accordionTitle={`${attribute.name} ${attribute.type}`}
               handleDelete={onChange(handleDelete)}
               path={newPath}
               accordionDetails={
                 <RenderPrimitiveTypes
-                  item={item}
-                  onChangeValue={onChangeValue}
-                  structureDefJSON={structureDefJSON}
-                  onChange={onChange}
-                  index={index}
+                  attribute={attribute}
+                  onChangeValue={onChange(onChangeValue)}
+                  currentNodeJSON={currentNodeJSON}
                 />
               }
             />
           );
         }
-      } else if (item.type && !Array.isArray(item.type) && newPath) {
-        const value = createElementDefinitionTree(item.children);
-        if (!structureDefJSON[newPath]) {
+      } else if (attribute.type && !Array.isArray(attribute.type) && newPath) {
+        const value = createElementDefinitionTree(attribute.children);
+        if (!currentNodeJSON[newPath]) {
+          /**
+           * if attribute type is defined, attribute type is complex, is not an array, and is undefined in structureDefinition,
+           * creates an AddComplexType to create it.
+           */
           attributeElement = (
             <AddComplexType
               handleAdd={onChange(handleAdd)}
-              item={item}
-              newPath={newPath}
+              complexFhirAttribute={attribute}
+              path={newPath}
               value={value}
             />
           );
         } else {
+          /**
+           * if attribute name includes fixed, attribute type is primitive, and is defined in structureDefinition,
+           * creates an accordion filled with the fixed value attributes.
+           */
           attributeElement = (
             <AccordionEditor
               handleDelete={onChange(handleDelete)}
-              title={`${item.name} ${item.type}`}
+              accordionTitle={`${attribute.name} ${attribute.type}`}
               path={newPath}
               accordionDetails={
-                structureDefJSON[newPath] && (
+                currentNodeJSON[newPath] && (
                   <RenderComplexType
-                    structureDefJSON={structureDefJSON[newPath]}
+                    currentNodeJSON={currentNodeJSON[newPath]}
                     complexTypes={complexTypes}
-                    attributes={item.children}
+                    complexFhirAttributes={attribute.children}
                     primitiveTypes={primitiveTypes}
                     onChangeValue={onChange(onChangeValue)}
                     handleDelete={onChange(handleDelete)}
@@ -130,38 +133,44 @@ const RenderComplexType: React.FC<DetailProps> = ({
         }
       }
     } else if (
-      item.children.length > 0 &&
-      item.name !== 'extension' &&
-      item.name !== 'snapshot' &&
-      item.name !== 'differential'
+      attribute.children.length > 0 &&
+      newPath !== 'extension' &&
+      newPath !== 'snapshot' &&
+      newPath !== 'differential'
     ) {
-      if (Array.isArray(structureDefJSON[item.name])) {
+      if (Array.isArray(currentNodeJSON[newPath])) {
+        /**
+         * render complex types with cardinality max greater than 1
+         */
         attributeElement = (
           <div className={classes.accordion}>
             <AddComplexType
               handleAdd={onChange(handleAdd)}
-              item={item}
-              newPath={item.name}
-              value={createJSONTree(item.children, structureDefJSON[item.name])}
+              complexFhirAttribute={attribute}
+              path={newPath}
+              value={createJSONTree(
+                attribute.children,
+                currentNodeJSON[newPath]
+              )}
             />
-            {structureDefJSON[item.name].map((element: any, i: number) => {
+            {currentNodeJSON[newPath].map((childNodeJSON: any, i: number) => {
               return (
                 <AccordionEditor
                   handleDelete={onChange(handleDelete)}
-                  title={`${item.name} ${i + 1}`}
+                  accordionTitle={`${newPath} ${i + 1}`}
                   key={i}
                   index={i}
-                  path={item.name}
+                  path={newPath}
                   accordionDetails={
                     <RenderComplexType
-                      structureDefJSON={element}
+                      currentNodeJSON={childNodeJSON}
                       complexTypes={complexTypes}
-                      attributes={item.children}
+                      complexFhirAttributes={attribute.children}
                       primitiveTypes={primitiveTypes}
                       onChangeValue={onChange(onChangeValue)}
                       handleDelete={onChange(handleDelete)}
                       handleAdd={onChange(handleAdd)}
-                      name={item.name}
+                      name={newPath}
                       index={i}
                     />
                   }
@@ -171,47 +180,56 @@ const RenderComplexType: React.FC<DetailProps> = ({
           </div>
         );
       } else if (
-        typeof structureDefJSON[item.name] === 'object' &&
-        !item.name.includes('fixed')
+        typeof currentNodeJSON[newPath] === 'object' &&
+        !newPath.includes('fixed')
       ) {
+        /**
+         * render complex types with cardinality max less than or equal to 1
+         */
         attributeElement = (
           <AccordionEditor
             handleDelete={onChange(handleDelete)}
-            title={item.min && item.min > 0 ? `${item.name}*` : item.name}
+            accordionTitle={
+              attribute.min && attribute.min > 0 ? `${newPath}*` : newPath
+            }
             accordionDetails={
               <RenderComplexType
-                structureDefJSON={structureDefJSON[item.name]}
+                currentNodeJSON={currentNodeJSON[newPath]}
                 complexTypes={complexTypes}
-                attributes={item.children}
+                complexFhirAttributes={attribute.children}
                 primitiveTypes={primitiveTypes}
                 onChangeValue={onChange(onChangeValue)}
                 handleDelete={onChange(handleDelete)}
                 handleAdd={onChange(handleAdd)}
-                name={item.name}
+                name={newPath}
               />
             }
           />
         );
       }
-    } else if (item.name === 'sliceName' && structureDefJSON.sliceName) {
+    } else if (newPath === 'sliceName' && currentNodeJSON.sliceName) {
+      /**
+       * if attribute name is slice name, render a button to edit slice name
+       */
       renderSliceName = (
         <DialogChangeSliceName
-          sliceName={structureDefJSON.sliceName}
-          id={structureDefJSON.id}
+          sliceName={currentNodeJSON.sliceName}
+          id={currentNodeJSON.id}
         />
       );
     } else if (
-      item.name !== 'extension' &&
-      item.children.length === 0 &&
-      !Array.isArray(item.type)
+      newPath !== 'extension' &&
+      attribute.children.length === 0 &&
+      !Array.isArray(attribute.type)
     ) {
+      /**
+       * if attribute is primitive, render a different type of input (depending on which primitive type)
+       */
       attributeElement = (
         <RenderPrimitiveTypes
-          item={item}
-          onChangeValue={onChangeValue}
-          structureDefJSON={structureDefJSON}
-          onChange={onChange}
-          index={index}
+          attribute={attribute}
+          onChangeValue={onChange(onChangeValue)}
+          currentNodeJSON={currentNodeJSON}
         />
       );
     }
