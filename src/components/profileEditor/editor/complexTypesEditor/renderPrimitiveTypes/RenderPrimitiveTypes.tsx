@@ -30,10 +30,9 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
     (state: RootState) => state.resourceSlice
   );
   let attributeElement: any = undefined;
-  const label =
-    attribute.min && attribute.min > 0
-      ? `${getLabel(attribute, currentElementDefinition)}*`
-      : `${getLabel(attribute, currentElementDefinition)}`;
+  const label = `${getLabel(attribute, currentElementDefinition)}${
+    attribute.min && attribute.min > 0 ? '*' : ''
+  }`;
 
   switch (attribute.type) {
     case 'string':
@@ -67,8 +66,8 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
     case 'code': {
       if (attribute.binding?.valueSet) {
         const mapValues: {
-          value: string | undefined;
-          label: string | undefined;
+          value?: string;
+          label?: string;
         }[] = [];
         if (attribute.min === 0)
           mapValues.push({

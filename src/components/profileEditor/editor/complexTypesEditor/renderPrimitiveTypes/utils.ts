@@ -35,10 +35,8 @@ export const changeFixedName = (
     attribute.type &&
     !Array.isArray(attribute.type)
   ) {
-    const splitedTypeName = attribute.type.split('');
-    const firstLetterCapitalize = attribute.type[0].toUpperCase();
-    splitedTypeName.splice(0, 1, firstLetterCapitalize);
-    const newTypeName = splitedTypeName.join('');
+    const newTypeName =
+      attribute.type.charAt(0).toUpperCase() + attribute.type.slice(1);
     return `fixed${newTypeName}`;
   } else {
     return label;

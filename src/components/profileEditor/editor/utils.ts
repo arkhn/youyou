@@ -32,12 +32,11 @@ export const createJSONTree = (
         );
       } else {
         JSONTree[attribute.name] = [];
-        structureDefinitionJSON[attribute.name] &&
-          structureDefinitionJSON[attribute.name].forEach(() =>
-            JSONTree[attribute.name].push(
-              createJSONTree(attribute.children, structureDefinitionJSON)
-            )
-          );
+        structureDefinitionJSON[attribute.name]?.forEach(() =>
+          JSONTree[attribute.name].push(
+            createJSONTree(attribute.children, structureDefinitionJSON)
+          )
+        );
       }
     }
   });
