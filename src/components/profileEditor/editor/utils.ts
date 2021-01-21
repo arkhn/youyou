@@ -1,34 +1,46 @@
-import { IElementDefinition_Type as IElementDefinitionType } from '@ahryman40k/ts-fhir-types/lib/R4';
-import { RenderAttributesTree } from 'types';
+import {
+  IElementDefinition,
+  IElementDefinition_Type as IElementDefinitionType,
+  IStructureDefinition
+} from '@ahryman40k/ts-fhir-types/lib/R4';
+import { updateStructureDefProfile } from 'state/reducers/resource';
+import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
+import { AppDispatch } from 'state/store';
+import { SimplifiedAttributes } from 'types';
 
 /**
  * Create a JSON tree from a structure definition
- * @param items
- * A tree of type RenderAttributesTree that will help to create a JSON tree as in FHIR resources
- * @param base
- * Original structure definition of the resource we choosed to profile
+ * @param attributes tree of simplified attributes to be transformed into JSON
+ * @param structureDefinition original structure definition of the resource we choosed to profile
  */
 export const createJSONTree = (
-  items: RenderAttributesTree[],
-  base: any
+  attributes: SimplifiedAttributes[],
+  structureDefinitionJSON: any
 ): any => {
-  const sDef: any = {};
-  items.forEach((item: RenderAttributesTree) => {
-    if (item.children.length === 0) {
-      sDef[item.name] = undefined;
-    } else if (item.name !== 'snapshot' && item.name !== 'differential') {
-      if (item.max === '1') {
-        sDef[item.name] = createJSONTree(item.children, base);
+  const JSONTree: any = {};
+  attributes.forEach((attribute: SimplifiedAttributes) => {
+    if (attribute.children.length === 0) {
+      JSONTree[attribute.name] = undefined;
+    } else if (
+      attribute.name !== 'snapshot' &&
+      attribute.name !== 'differential'
+    ) {
+      if (attribute.max === '1') {
+        JSONTree[attribute.name] = createJSONTree(
+          attribute.children,
+          structureDefinitionJSON
+        );
       } else {
-        sDef[item.name] = [];
-        base[item.name] &&
-          base[item.name].forEach(() =>
-            sDef[item.name].push(createJSONTree(item.children, base))
-          );
+        JSONTree[attribute.name] = [];
+        structureDefinitionJSON[attribute.name]?.forEach(() =>
+          JSONTree[attribute.name].push(
+            createJSONTree(attribute.children, structureDefinitionJSON)
+          )
+        );
       }
     }
   });
-  return sDef;
+  return JSONTree;
 };
 
 export const isPrimitive = (
@@ -39,3 +51,38 @@ export const isPrimitive = (
   type === 'http://hl7.org/fhirpath/System.String' ||
   type === 'Extension' ||
   type === 'Reference';
+
+export const updateStructureDefinition = (
+  e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+  structureDefinitionType: 'resource' | 'extension' | 'element',
+  structureDefinition: IStructureDefinition,
+  elementDefJSON: IElementDefinition | undefined,
+  structureDefJSON: IStructureDefinition | undefined,
+  dispatch: AppDispatch
+) => {
+  e.preventDefault();
+  if (structureDefinitionType === 'element' && structureDefinition) {
+    dispatch(
+      setSnackbarOpen({
+        severity: 'success',
+        message: 'Attribute edited !'
+      })
+    );
+    dispatch(
+      updateStructureDefProfile({
+        structureDefinition,
+        elementDefinition: elementDefJSON
+      })
+    );
+  } else if (structureDefinitionType === 'resource' && structureDefJSON) {
+    dispatch(
+      setSnackbarOpen({
+        severity: 'success',
+        message: 'Structure Definition edited !'
+      })
+    );
+    dispatch(
+      updateStructureDefProfile({ structureDefinition: structureDefJSON })
+    );
+  }
+};

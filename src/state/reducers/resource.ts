@@ -6,7 +6,7 @@ import {
   IElementDefinition_Binding as IElementDefinitionBinding,
   IStructureDefinition
 } from '@ahryman40k/ts-fhir-types/lib/R4';
-import { RenderAttributesTree, ResourceState } from 'types';
+import { SimplifiedAttributes, ResourceState } from 'types';
 import {
   requestIdsThunk,
   requestStructureDefThunk
@@ -23,7 +23,7 @@ const initialState: ResourceState = {
   loading: false,
   error: undefined,
   structureDefMeta: true,
-  newElementDefinition: undefined
+  currentElementDefinition: undefined
 };
 
 const resourceSlice = createSlice({
@@ -44,14 +44,22 @@ const resourceSlice = createSlice({
      * if we select structureDefMeta, we can modify the metadata of the structure definition, and state.structureDefMeta = true
      */
     selectStructureDefMeta: (state: ResourceState) => {
-      state.newElementDefinition = undefined;
+      state.currentElementDefinition = undefined;
       state.structureDefMeta = true;
     },
-    createNewElementDefinition: (
+    createCurrentElementDefinition: (
       state: ResourceState,
-      action: PayloadAction<RenderAttributesTree>
+      action: PayloadAction<SimplifiedAttributes>
     ) => {
-      const { min, max, id, newPath, definition, binding } = action.payload;
+      const {
+        min,
+        max,
+        id,
+        newPath,
+        definition,
+        binding,
+        type
+      } = action.payload;
       let newElement = state.structureDefinition?.snapshot?.element.find(
         (att: IElementDefinition) => att.id === newPath
       );
@@ -67,10 +75,11 @@ const resourceSlice = createSlice({
           id: newPath,
           path: newPath,
           definition: definition,
+          type: Array.isArray(type) ? type : [{ code: type }],
           binding: binding ? (binding as IElementDefinitionBinding) : undefined
         };
       }
-      state.newElementDefinition = newElement;
+      state.currentElementDefinition = newElement;
       state.structureDefMeta = false;
     },
     updateStructureDefExtension: (
@@ -109,7 +118,7 @@ const resourceSlice = createSlice({
                 elementDefinition
               );
           state.structureDefinition = newSDef;
-          state.newElementDefinition = elementDefinition;
+          state.currentElementDefinition = elementDefinition;
         }
       } else if (!elementDefinition && structureDefinition.snapshot) {
         const newSDef = {
@@ -122,7 +131,7 @@ const resourceSlice = createSlice({
     addSlice: (
       state: ResourceState,
       action: PayloadAction<{
-        nodeToSlice: RenderAttributesTree;
+        nodeToSlice: SimplifiedAttributes;
         structureDefinition: IStructureDefinition;
         sliceName: string;
         index: number;
@@ -144,7 +153,7 @@ const resourceSlice = createSlice({
     deleteSlice: (
       state: ResourceState,
       action: PayloadAction<{
-        node: RenderAttributesTree;
+        node: SimplifiedAttributes;
         structureDefinition: IStructureDefinition;
       }>
     ) => {
@@ -154,10 +163,10 @@ const resourceSlice = createSlice({
         structureDefinition
       );
       if (
-        state.newElementDefinition &&
-        state.newElementDefinition.id === node.id
+        state.currentElementDefinition &&
+        state.currentElementDefinition.id === node.id
       )
-        state.newElementDefinition = undefined;
+        state.currentElementDefinition = undefined;
     },
     changeSliceName: (
       state: ResourceState,
@@ -197,7 +206,7 @@ const resourceSlice = createSlice({
         newSDef?.snapshot?.element.splice(index, 1, attributesToModify[i]);
       });
       state.structureDefinition = newSDef;
-      state.newElementDefinition = newSDef?.snapshot?.element.find(
+      state.currentElementDefinition = newSDef?.snapshot?.element.find(
         (el) => el.id === attributesToModify[0].id
       );
     }
@@ -257,7 +266,7 @@ export default resourceSlice.reducer;
 export const {
   selectResource,
   selectStructureDefMeta,
-  createNewElementDefinition,
+  createCurrentElementDefinition,
   updateStructureDefExtension,
   updateStructureDefProfile,
   addSlice,

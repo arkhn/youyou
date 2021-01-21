@@ -8,18 +8,24 @@ import get from 'lodash.get';
 
 import {
   createComplexTypes,
-  renderTreeAttributes,
+  createSimplifiedAttributes,
   transformAttributes
 } from 'state/utils';
-import { RenderAttributesTree, SimplifiedAttributes } from 'types';
+import { SimplifiedAttributes, TemporaryAttribute } from 'types';
 
+/**
+ * creates tree of simplified attributes for snapshot attribute
+ * @param attributes all snapshot definition elements
+ * @param primitiveTypes simplified tree of primitive types
+ * @param complexTypes simplified tree of complex types
+ */
 export const createComplexSnapshot = (
   attributes: IElementDefinition[],
   primitiveTypes: string[],
-  complexTypes: RenderAttributesTree[]
-): RenderAttributesTree => {
-  let attribute: SimplifiedAttributes[] = [];
-  const attributeTree: RenderAttributesTree = {
+  complexTypes: SimplifiedAttributes[]
+): SimplifiedAttributes => {
+  let attribute: TemporaryAttribute[] = [];
+  const attributeTree: SimplifiedAttributes = {
     id: '',
     name: '',
     type: '',
@@ -31,7 +37,7 @@ export const createComplexSnapshot = (
   if (attributes) {
     attribute = transformAttributes(attributes);
     attribute.forEach(
-      (type) => type && renderTreeAttributes(type, type, attributeTree)
+      (type) => type && createSimplifiedAttributes(type, type, attributeTree)
     );
     const children = createComplexTypes(
       complexTypes,
@@ -45,9 +51,9 @@ export const createComplexSnapshot = (
     attributeTree.children[0].children = children;
   }
   const changePath = (
-    atts: RenderAttributesTree[],
+    atts: SimplifiedAttributes[],
     path: string
-  ): RenderAttributesTree[] => {
+  ): SimplifiedAttributes[] => {
     const attribs = cloneDeep(atts);
     for (const att of attribs) {
       const newPath = `${path !== '' ? path + '.' : ''}${att.name}`;
@@ -63,16 +69,18 @@ export const createComplexSnapshot = (
 };
 
 export const createElementDefinitionTree = (
-  items: RenderAttributesTree[]
+  items: SimplifiedAttributes[]
 ): any => {
   const elemDef: any = {};
-  items.forEach((item: RenderAttributesTree) => {
-    if (item.children.length === 0) {
-      elemDef[item.name] = undefined;
-    } else if (item.max === '1') {
-      elemDef[item.name] = createElementDefinitionTree(item.children);
-    } else {
-      elemDef[item.name] = [];
+  items.forEach((item: SimplifiedAttributes) => {
+    if (!item.name.includes('fixed')) {
+      if (item.children.length === 0) {
+        elemDef[item.name] = undefined;
+      } else if (item.max === '1') {
+        elemDef[item.name] = createElementDefinitionTree(item.children);
+      } else {
+        elemDef[item.name] = [];
+      }
     }
   });
   return elemDef;
@@ -140,12 +148,16 @@ export const onChangeElementJSON = (
  */
 export const onDeleteComplexType = (
   path: string,
-  i: number,
+  i: number | undefined,
   element: any
 ): any => {
   const elem: any = { ...element };
-  const elementDefJSONAttr: any = get(elem, path);
-  elementDefJSONAttr.splice(i, 1);
+  if (i !== undefined) {
+    const elementDefJSONAttr: any = get(elem, path);
+    elementDefJSONAttr.splice(i, 1);
+  } else {
+    delete elem[path];
+  }
   return elem;
 };
 
@@ -162,6 +174,12 @@ export const onAddComplexType = (
 ): any => {
   const elem: any = { ...element };
   const elementDefJSONAttr = get(elem, path);
-  elementDefJSONAttr.push(value);
+  if (Array.isArray(elementDefJSONAttr)) {
+    elementDefJSONAttr.push(value);
+  } else {
+    if (path.includes('fixed') && !elementDefJSONAttr) {
+      elem[path] = value;
+    }
+  }
   return elem;
 };

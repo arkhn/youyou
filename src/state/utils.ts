@@ -6,19 +6,19 @@ import {
   IStructureDefinition
 } from '@ahryman40k/ts-fhir-types/lib/R4';
 import cloneDeep from 'lodash.clonedeep';
-import { SimplifiedAttributes, RenderAttributesTree } from 'types';
+import { TemporaryAttribute, SimplifiedAttributes } from 'types';
 
 /**
  * Transform fetched attributes to simplified attributes with new paths
  * @param elements element definition needed to be transformed
  * @param valueSetRequest value sets for FHIR code type
- * @returns an array of all the fetched attributes, transformed in SimplifiedAttributes types
+ * @returns an array of all the fetched attributes, transformed in TemporaryAttribute types
  */
 export const transformAttributes = (
   elements: IElementDefinition[],
   valueSetRequest?: ICodeSystem[]
-): SimplifiedAttributes[] => {
-  const attributes: SimplifiedAttributes[] = [];
+): TemporaryAttribute[] => {
+  const attributes: TemporaryAttribute[] = [];
   elements.forEach((element: IElementDefinition) => {
     if (element.id && element.definition && element.max) {
       if (element.type && element.type.length !== 1) {
@@ -59,7 +59,7 @@ export const transformAttributes = (
                   }
                 });
               }
-              const newAttribute: SimplifiedAttributes = {
+              const newAttribute: TemporaryAttribute = {
                 definition: element.definition,
                 path: element.id,
                 type: types.code,
@@ -93,11 +93,11 @@ export const transformAttributes = (
  * @param structureDefinition structure definition to transform
  * @param valueSet
  */
-export const createSimplifiedAttributes = (
+export const createTemporaryAttribute = (
   structureDefinition: IStructureDefinition[],
   valueSet: ICodeSystem[]
-): SimplifiedAttributes[] => {
-  let simplifiedSDef: SimplifiedAttributes[] = [];
+): TemporaryAttribute[] => {
+  let simplifiedSDef: TemporaryAttribute[] = [];
   structureDefinition.forEach((type: any) => {
     const transformedAttributes = transformAttributes(
       type.snapshot.element,
@@ -127,19 +127,16 @@ export const isPrimitive = (
 /**
  * Create renderTree of FHIR structure definition, with children determined only
  * by its path, without looking for FHIR complex types.
- * @param attribute
- * An object with a simplified attribute of structure definition's snapshot.
- * @param parentAttribute
- * A parent of attribute determined by its path.
- * @param node
- * A node to assign to a parent node in a renderTree tree, determined by its path.
- * @returns a render tree filled with backbones elements.
+ * @param attribute an object with a temporary type of attribute of structure definition's snapshot.
+ * @param parentAttribute a parent of the temporary attribute determined by its path.
+ * @param node a node to assign to a parent node in a simplified attribute tree, determined by its path.
+ * @returns a simplified attributes tree filled with backbones elements.
  */
-export const renderTreeAttributes = (
-  attribute: SimplifiedAttributes,
-  parentAttribute: SimplifiedAttributes,
-  node: RenderAttributesTree
-): RenderAttributesTree => {
+export const createSimplifiedAttributes = (
+  attribute: TemporaryAttribute,
+  parentAttribute: TemporaryAttribute,
+  node: SimplifiedAttributes
+): SimplifiedAttributes => {
   if (node.id === parentAttribute.path) {
     return cloneDeep(node);
   } else {
@@ -154,7 +151,11 @@ export const renderTreeAttributes = (
       max: attribute.max
     };
     if (childNode) {
-      return renderTreeAttributes(newAttribute, parentAttribute, childNode);
+      return createSimplifiedAttributes(
+        newAttribute,
+        parentAttribute,
+        childNode
+      );
     } else {
       let splitSlice = '';
       splitPath.forEach((path) => {
@@ -172,29 +173,25 @@ export const renderTreeAttributes = (
       parentAttribute.binding
         ? node.children.push({ ...newNode, binding: parentAttribute.binding })
         : node.children.push(newNode);
-      return renderTreeAttributes(newAttribute, parentAttribute, newNode);
+      return createSimplifiedAttributes(newAttribute, parentAttribute, newNode);
     }
   }
 };
 
 /**
- * Create a Render Tree with filled childrens when the current item is a complex FHIR type
- * (except for Backbone element which is inheriting its children from the original
- * structure definition snapshot's paths)
- * @param complexTypes
- * An array FHIR simplified complex types
- * @param childrenToBeComplex
- * An array of all the children of the attribute selected
- * @param primitiveTypes
- * An array of FHIR primitive types
+ * Creates a simplified attribute tree, with children implemented when the selected attribute is a complex FHIR type
+ * (except for Backbone element which is inheriting its children from the original structure definition snapshot's paths)
+ * @param complexTypes an array of FHIR simplified complex types
+ * @param childrenToBeComplex an array of all the simplified attributes children of the selected attribute
+ * @param primitiveTypes an array of FHIR primitive types
  */
 export const createComplexTypes = (
-  complexTypes: RenderAttributesTree[],
-  childrenToBeComplex: RenderAttributesTree[],
+  complexTypes: SimplifiedAttributes[],
+  childrenToBeComplex: SimplifiedAttributes[],
   primitiveTypes: string[]
-): RenderAttributesTree[] => {
+): SimplifiedAttributes[] => {
   const currentItemsChildren = cloneDeep(childrenToBeComplex);
-  const enhancedComplexType: RenderAttributesTree[] = [];
+  const enhancedComplexType: SimplifiedAttributes[] = [];
   for (const child of currentItemsChildren) {
     if (
       !isPrimitive(child.type, primitiveTypes) &&

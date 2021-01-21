@@ -5,13 +5,13 @@ import { IStructureDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { Paper, Typography } from '@material-ui/core';
 import cloneDeep from 'lodash.clonedeep';
 
-import { RenderAttributesTree } from 'types';
+import { SimplifiedAttributes } from 'types';
 import { RootState, useAppDispatch } from 'state/store';
 import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 import {
   addSlice,
   deleteSlice,
-  createNewElementDefinition
+  createCurrentElementDefinition
 } from 'state/reducers/resource';
 import { ButtonDownload, SnackBarWithClose } from 'components/smallComponents';
 import Editor from 'components/profileEditor/editor/Editor';
@@ -24,6 +24,7 @@ import {
 import SliceDialogBox from './sliceDialogBox/SliceDialogBox';
 
 import useStyles from 'components/profileEditor/style';
+import { getBackboneElements } from 'state/reducers/fhirDataTypes';
 
 export type OpenDialogState = {
   open: boolean;
@@ -67,7 +68,7 @@ const ProfileEditor: React.FC<{}> = () => {
     message: ''
   });
   const [nodeToSlice, setNodeToSlice] = useState<
-    RenderAttributesTree | undefined
+    SimplifiedAttributes | undefined
   >(undefined);
 
   useEffect(() => {
@@ -86,14 +87,14 @@ const ProfileEditor: React.FC<{}> = () => {
   /**
    * If click on add or delete icon, open a dialog box to confirm actions
    * @param e event onClick
-   * @param node attribute selected on click
+   * @param node simplified attribute selected on click
+   * @param openDialog state for dialog box
    */
   const handleClickForSlice = (
     e: React.MouseEvent<Element, MouseEvent>,
-    node: RenderAttributesTree,
+    node: SimplifiedAttributes,
     openDialog: OpenDialogState
   ) => {
-    e.stopPropagation();
     setNodeToSlice(node);
     setOpen(openDialog);
   };
@@ -168,12 +169,15 @@ const ProfileEditor: React.FC<{}> = () => {
     }
   };
 
-  const handleClick = (
+  const selectAttributeToEdit = (
     e: React.MouseEvent<Element, MouseEvent>,
-    node: RenderAttributesTree
+    node: SimplifiedAttributes
   ) => {
     e.preventDefault();
-    dispatch(createNewElementDefinition(node));
+    if (node.type === 'BackboneElement')
+      dispatch(getBackboneElements(node.children));
+    else dispatch(getBackboneElements(undefined));
+    dispatch(createCurrentElementDefinition(node));
   };
 
   if (loading) {
@@ -191,7 +195,7 @@ const ProfileEditor: React.FC<{}> = () => {
         <Paper className={classes.structureDefTreeContainer}>
           <Typography variant="h1">{newStructureDef?.name}</Typography>
           <StructureDefinitionTree
-            onLabelClick={handleClick}
+            onLabelClick={selectAttributeToEdit}
             uiAttributes={attributesForUI}
             structureDefinitionId={newStructureDef?.id}
             handleClickSlices={handleClickForSlice}

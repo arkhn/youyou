@@ -12,8 +12,9 @@ import { requestStructureDefThunk } from 'state/thunkMiddleware';
 
 import Navbar from 'components/navbar/Navbar';
 import {
-  choosingCardsItems,
-  ChoosingCardsItemsType
+  editorOptions,
+  EditorOptionsType,
+  EditorOptionsButtonsType
 } from 'components/homepage/utils';
 import { ReactComponent as FhirLogo } from 'assets/img/fhir-logo.svg';
 
@@ -40,9 +41,9 @@ const Homepage: React.FC<{}> = () => {
     );
   }
 
-  const renderChoosingCards = choosingCardsItems.map(
-    (choosingItem: ChoosingCardsItemsType) => {
-      const renderButtons = choosingItem.buttons.map((button) => (
+  const renderEditorOptions = editorOptions.map((option: EditorOptionsType) => {
+    const renderButtons = option.buttons.map(
+      (button: EditorOptionsButtonsType) => (
         <Link to={button.path} key={button.path} className={classes.buttonLink}>
           <Button
             variant="contained"
@@ -57,29 +58,29 @@ const Homepage: React.FC<{}> = () => {
             {button.content}
           </Button>
         </Link>
-      ));
+      )
+    );
 
-      return (
-        <div key={choosingItem.name} className={classes.item}>
-          <Paper className={clsx(classes.itemCardLeft, classes.itemCard)}>
-            <Typography variant="h1" className={classes.itemCardTitle}>
-              {choosingItem.name}
-            </Typography>
-            <FhirLogo className={classes.fhirLogo} />
-          </Paper>
-          <Paper className={clsx(classes.itemCard, classes.itemCardRight)}>
-            <Typography>{choosingItem.description}</Typography>
-            <div>{renderButtons}</div>
-          </Paper>
-        </div>
-      );
-    }
-  );
+    return (
+      <div key={option.name} className={classes.item}>
+        <Paper className={clsx(classes.itemCardLeft, classes.itemCard)}>
+          <Typography variant="h1" className={classes.itemCardTitle}>
+            {option.name}
+          </Typography>
+          <FhirLogo className={classes.fhirLogo} />
+        </Paper>
+        <Paper className={clsx(classes.itemCard, classes.itemCardRight)}>
+          <Typography>{option.description}</Typography>
+          {renderButtons}
+        </Paper>
+      </div>
+    );
+  });
 
   return (
     <>
       <Navbar />
-      <div className={classes.items}>{renderChoosingCards}</div>
+      <div className={classes.items}>{renderEditorOptions}</div>
     </>
   );
 };

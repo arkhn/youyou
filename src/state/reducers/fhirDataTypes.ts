@@ -1,16 +1,17 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { requestFhirDataTypesThunk } from 'state/thunkMiddleware';
 import { createComplexTypes } from 'state/utils';
-import { RenderAttributesTree } from 'types';
+import { SimplifiedAttributes } from 'types';
 
 export type FhirDataTypesState = {
   requestId?: string;
   primitiveTypes: string[];
-  complexTypes: RenderAttributesTree[];
+  complexTypes: SimplifiedAttributes[];
   loadingTypes: boolean;
   errorTypes: Error | undefined;
-  structureDefinitionTree: RenderAttributesTree[];
+  structureDefinitionTree: SimplifiedAttributes[];
+  backboneElements: SimplifiedAttributes[] | undefined;
 };
 
 const initialState: FhirDataTypesState = {
@@ -18,13 +19,21 @@ const initialState: FhirDataTypesState = {
   complexTypes: [],
   loadingTypes: false,
   errorTypes: undefined,
-  structureDefinitionTree: []
+  structureDefinitionTree: [],
+  backboneElements: undefined
 };
 
 const fhirDataTypesSlice = createSlice({
   name: 'fhirDataTypesReducer',
   initialState,
-  reducers: {},
+  reducers: {
+    getBackboneElements: (
+      state: FhirDataTypesState,
+      action: PayloadAction<SimplifiedAttributes[] | undefined>
+    ) => {
+      state.backboneElements = action.payload;
+    }
+  },
   extraReducers: (builder) => {
     builder.addCase(requestFhirDataTypesThunk.pending, (state, { meta }) => {
       state.requestId = meta.requestId;
@@ -64,3 +73,4 @@ const fhirDataTypesSlice = createSlice({
 });
 
 export default fhirDataTypesSlice.reducer;
+export const { getBackboneElements } = fhirDataTypesSlice.actions;

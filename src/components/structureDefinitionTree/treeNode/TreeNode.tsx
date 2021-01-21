@@ -3,16 +3,16 @@ import React, { useState } from 'react';
 import { Clear, Folder, LocalOffer, LocalPizza } from '@material-ui/icons';
 import { IconButton, Tooltip, Typography } from '@material-ui/core';
 
-import { RenderAttributesTree } from 'types';
+import { SimplifiedAttributes } from 'types';
 import { OpenDialogState } from 'components/profileEditor/ProfileEditor';
 
 import useStyles from 'components/structureDefinitionTree/style';
 
 type TreeNodeProps = {
-  nodes: RenderAttributesTree;
+  nodes: SimplifiedAttributes;
   handleClickSlices: (
     event: React.MouseEvent<Element, MouseEvent>,
-    nodes: RenderAttributesTree,
+    nodes: SimplifiedAttributes,
     openDialog: OpenDialogState
   ) => void;
 };

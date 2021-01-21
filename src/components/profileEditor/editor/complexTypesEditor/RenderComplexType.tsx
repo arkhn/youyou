@@ -1,44 +1,34 @@
-import { InputTooltip, SelectTooltip } from 'components/smallComponents';
 import React from 'react';
 
-import {
-  Accordion,
-  AccordionDetails,
-  IconButton,
-  Tooltip,
-  Typography
-} from '@material-ui/core';
-import { Add, ExpandMore } from '@material-ui/icons';
-import clsx from 'clsx';
-
-import { RenderAttributesTree } from 'types';
-import CheckboxTooltip from 'components/smallComponents/CheckboxTooltip';
+import { SimplifiedAttributes } from 'types';
 import { createJSONTree } from 'components/profileEditor/editor/utils';
-import DialogChangeSliceName from './dialogSliceName/DialogChangeSliceName';
 
-import {
-  useStyles,
-  MuiAccordionSummary,
-  MuiButton
-} from 'components/profileEditor/editor/complexTypesEditor/styles';
+import AddComplexType from 'components/profileEditor/editor/complexTypesEditor/addComplexType/AddComplexType';
+import AccordionEditor from 'components/profileEditor/editor/complexTypesEditor/accordionEditor/AccordionEditor';
+import DialogChangeSliceName from 'components/profileEditor/editor/complexTypesEditor//dialogSliceName/DialogChangeSliceName';
+import RenderPrimitiveTypes from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/RenderPrimitiveTypes';
+import { changeFixedName } from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/utils';
+import RenderFixedValues from 'components/profileEditor/editor/complexTypesEditor/renderFixedValues/RenderFixedValues';
+
+import { useStyles } from 'components/profileEditor/editor/complexTypesEditor/accordionEditor/style';
 
 type DetailProps = {
-  attributes: RenderAttributesTree[];
-  complexTypes: RenderAttributesTree[];
-  structureDefJSON: any;
+  complexFhirAttributes: SimplifiedAttributes[];
+  complexTypes: SimplifiedAttributes[];
+  currentNodeJSON: any;
   primitiveTypes: string[];
+  name: string;
+  index?: number;
   onChangeValue?: (path: string, value: any) => void;
   handleDelete?: (path: string, i: number) => void;
   handleAdd?: (path: string, value: any) => void;
-  name: string;
-  index?: number;
   onChangeSliceName?: (value: string) => void;
 };
 
 const RenderComplexType: React.FC<DetailProps> = ({
-  attributes,
+  complexFhirAttributes,
   complexTypes,
-  structureDefJSON,
+  currentNodeJSON,
   primitiveTypes,
   onChangeValue,
   handleDelete,
@@ -59,194 +49,123 @@ const RenderComplexType: React.FC<DetailProps> = ({
     }
   };
 
-  const renderAttribute = attributes.map((item, index) => {
+  const renderAttribute = complexFhirAttributes.map((attribute, index) => {
     let attributeElement: JSX.Element | null = null;
-    if (
-      item.children.length > 0 &&
-      item.name !== 'extension' &&
-      item.name !== 'snapshot' &&
-      item.name !== 'differential'
+    const newPath = changeFixedName(attribute, attribute.name);
+    if (newPath.includes('fixed')) {
+      /**
+       * if attribute is a fixed value, render RenderFixedValues
+       */
+      attributeElement = (
+        <RenderFixedValues
+          path={newPath}
+          attribute={attribute}
+          handleAdd={onChange(handleAdd)}
+          primitiveTypes={primitiveTypes}
+          currentNodeJSON={currentNodeJSON}
+          handleDelete={onChange(handleDelete)}
+          onChangeValue={onChange(onChangeValue)}
+          complexTypes={complexTypes}
+        />
+      );
+    } else if (
+      attribute.children.length > 0 &&
+      newPath !== 'extension' &&
+      newPath !== 'snapshot' &&
+      newPath !== 'differential'
     ) {
-      if (Array.isArray(structureDefJSON[item.name])) {
+      if (Array.isArray(currentNodeJSON[newPath])) {
+        /**
+         * render complex types with cardinality max greater than 1
+         */
         attributeElement = (
           <div className={classes.accordion}>
-            <div
-              className={clsx(classes.accordionTitle, classes.accordionAddItem)}
-            >
-              <IconButton
-                onClick={() =>
-                  onChange(handleAdd)(
-                    item.name,
-                    createJSONTree(item.children, structureDefJSON[item.name])
-                  )
-                }
-              >
-                <Tooltip title={`add a new ${item.name}`}>
-                  <Add />
-                </Tooltip>
-              </IconButton>
-              <Typography className={classes.titleAdd} variant="h2">
-                {item.name}
-              </Typography>
-            </div>
-            {structureDefJSON[item.name].map((element: any, i: number) => {
+            <AddComplexType
+              handleAdd={onChange(handleAdd)}
+              complexFhirAttribute={attribute}
+              path={newPath}
+              value={createJSONTree(
+                attribute.children,
+                currentNodeJSON[newPath]
+              )}
+            />
+            {currentNodeJSON[newPath].map((childNodeJSON: any, i: number) => {
               return (
-                <Accordion key={i}>
-                  <MuiAccordionSummary expandIcon={<ExpandMore />}>
-                    <div
-                      className={clsx(
-                        classes.accordionTitle,
-                        classes.accordionTitleDelete
-                      )}
-                    >
-                      <Typography>
-                        {item.name} {i + 1}
-                      </Typography>
-                      <MuiButton
-                        onClick={(event) => {
-                          event.stopPropagation();
-                          onChange(handleDelete)(item.name, i);
-                        }}
-                      >
-                        Delete
-                      </MuiButton>
-                    </div>
-                  </MuiAccordionSummary>
-                  <AccordionDetails className={classes.accordionDetails}>
+                <AccordionEditor
+                  handleDelete={onChange(handleDelete)}
+                  accordionTitle={`${newPath} ${i + 1}`}
+                  key={i}
+                  index={i}
+                  path={newPath}
+                  accordionDetails={
                     <RenderComplexType
-                      structureDefJSON={element}
+                      currentNodeJSON={childNodeJSON}
                       complexTypes={complexTypes}
-                      attributes={item.children}
+                      complexFhirAttributes={attribute.children}
                       primitiveTypes={primitiveTypes}
                       onChangeValue={onChange(onChangeValue)}
                       handleDelete={onChange(handleDelete)}
                       handleAdd={onChange(handleAdd)}
-                      name={item.name}
+                      name={newPath}
                       index={i}
                     />
-                  </AccordionDetails>
-                </Accordion>
+                  }
+                />
               );
             })}
           </div>
         );
-      } else if (typeof structureDefJSON[item.name] === 'object') {
+      } else if (typeof currentNodeJSON[newPath] === 'object') {
+        /**
+         * render complex types with cardinality max less than or equal to 1
+         */
         attributeElement = (
-          <div key={item.name}>
-            <Accordion className={classes.accordion}>
-              <MuiAccordionSummary expandIcon={<ExpandMore />}>
-                <Typography>
-                  {item.min && item.min > 0 ? `${item.name}*` : item.name}
-                </Typography>
-              </MuiAccordionSummary>
-              <AccordionDetails className={classes.accordionDetails}>
-                <RenderComplexType
-                  structureDefJSON={structureDefJSON[item.name]}
-                  complexTypes={complexTypes}
-                  attributes={item.children}
-                  primitiveTypes={primitiveTypes}
-                  onChangeValue={onChange(onChangeValue)}
-                  handleDelete={onChange(handleDelete)}
-                  handleAdd={onChange(handleAdd)}
-                  name={item.name}
-                />
-              </AccordionDetails>
-            </Accordion>
-          </div>
+          <AccordionEditor
+            handleDelete={onChange(handleDelete)}
+            accordionTitle={
+              attribute.min && attribute.min > 0 ? `${newPath}*` : newPath
+            }
+            accordionDetails={
+              <RenderComplexType
+                currentNodeJSON={currentNodeJSON[newPath]}
+                complexTypes={complexTypes}
+                complexFhirAttributes={attribute.children}
+                primitiveTypes={primitiveTypes}
+                onChangeValue={onChange(onChangeValue)}
+                handleDelete={onChange(handleDelete)}
+                handleAdd={onChange(handleAdd)}
+                name={newPath}
+              />
+            }
+          />
         );
       }
     } else if (
-      item.name !== 'extension' &&
-      item.children.length === 0 &&
-      !Array.isArray(item.type)
+      newPath !== 'extension' &&
+      attribute.children.length === 0 &&
+      !Array.isArray(attribute.type)
     ) {
-      switch (item.type) {
-        case 'string':
-        case 'uri':
-        case 'id':
-        case 'http://hl7.org/fhirpath/System.String': {
-          if (item.name !== 'sliceName') {
-            attributeElement = (
-              <InputTooltip
-                label={item.min && item.min > 0 ? `${item.name}*` : item.name}
-                value={structureDefJSON[item.name] ?? ''}
-                tool={item.definition}
-                onBlur={(event) =>
-                  onChange(onChangeValue)(item.name, event.target.value)
-                }
-              />
-            );
-          } else if (item.name === 'sliceName' && structureDefJSON.sliceName) {
-            renderSliceName = (
-              <DialogChangeSliceName
-                sliceName={structureDefJSON.sliceName}
-                id={structureDefJSON.id}
-              />
-            );
-          }
-          break;
-        }
-        case 'integer':
-        case 'positiveInt': {
-          attributeElement = (
-            <InputTooltip
-              label={item.min && item.min > 0 ? `${item.name}*` : item.name}
-              value={
-                structureDefJSON[item.name] ? structureDefJSON[item.name] : ''
-              }
-              tool={item.definition}
-            />
-          );
-          break;
-        }
-        case 'code': {
-          if (item.binding?.valueSet) {
-            const mapValues: {
-              value: string | undefined;
-              label: string | undefined;
-            }[] = [];
-            if (item.min === 0)
-              mapValues.push({
-                value: '',
-                label: '--select a value--'
-              });
-            item.binding.valueSet.forEach((values) =>
-              mapValues.push({
-                value: values.code,
-                label: values.display
-              })
-            );
-            attributeElement = (
-              <SelectTooltip
-                key={index}
-                label={item.min && item.min > 0 ? `${item.name}*` : item.name}
-                tool={item.definition}
-                choices={mapValues}
-                value={structureDefJSON[item.name] ?? mapValues[0].value}
-                onChange={(event) =>
-                  onChange(onChangeValue)(item.name, event.target.value)
-                }
-              />
-            );
-          }
-          break;
-        }
-        case 'boolean': {
-          attributeElement = (
-            <CheckboxTooltip
-              label={item.min && item.min > 0 ? `${item.name}*` : item.name}
-              tool={item.definition}
-              value={structureDefJSON[item.name] ?? false}
-              onChange={(event) =>
-                onChange(onChangeValue)(item.name, event.target.checked)
-              }
-            />
-          );
-          break;
-        }
-        default:
-          break;
-      }
+      /**
+       * if attribute is primitive, render a different type of input (depending on which primitive type)
+       */
+      attributeElement = (
+        <RenderPrimitiveTypes
+          attribute={attribute}
+          onChangeValue={onChange(onChangeValue)}
+          currentNodeJSON={currentNodeJSON}
+          newPath={newPath}
+        />
+      );
+    } else if (newPath === 'sliceName' && currentNodeJSON.sliceName) {
+      /**
+       * if attribute name is slice name, render a button to edit slice name
+       */
+      renderSliceName = (
+        <DialogChangeSliceName
+          sliceName={currentNodeJSON.sliceName}
+          id={currentNodeJSON.id}
+        />
+      );
     }
     return <div key={index}>{attributeElement}</div>;
   });

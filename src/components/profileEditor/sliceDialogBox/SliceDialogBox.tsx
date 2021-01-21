@@ -38,31 +38,32 @@ const SliceDialogBox: React.FC<SliceDialogBoxProps> = ({
   onFormSubmit
 }) => {
   const classes = useStyles();
+  const { open, add, message } = attributeSelected;
 
   return (
-    <Dialog open={attributeSelected.open}>
+    <Dialog open={open}>
       <Paper className={classes.dialogBoxContainer}>
         <div className={classes.dialogBoxHeader}>
           <Typography variant="h1" className={classes.dialogBoxTitle}>
-            {attributeSelected.message && attributeSelected.message.title}
+            {message && message.title}
           </Typography>
           <IconButton onClick={onCloseClick} className={classes.dialogBoxClose}>
             <Clear color="error" />
           </IconButton>
         </div>
-        {attributeSelected.message && attributeSelected.message.text !== '' && (
+        {message && message.text !== '' && (
           <Typography className={classes.dialogBoxText}>
-            {attributeSelected.message.text}
+            {message.text}
           </Typography>
         )}
         {sliceNameError.error && (
           <Alert severity="error">
             <AlertTitle>Error</AlertTitle>
-            {sliceNameError.message}
+            <Typography>{sliceNameError.message}</Typography>
           </Alert>
         )}
         <form onSubmit={onFormSubmit}>
-          {attributeSelected.add && (
+          {add && (
             <CssTextField
               variant="outlined"
               label="slice name"
@@ -75,9 +76,7 @@ const SliceDialogBox: React.FC<SliceDialogBoxProps> = ({
             color="secondary"
             variant="contained"
             type="submit"
-            className={
-              attributeSelected.add ? classes.dialogBoxButton : undefined
-            }
+            className={add ? classes.dialogBoxButton : undefined}
           >
             Submit
           </Button>

@@ -10,10 +10,12 @@ import cloneDeep from 'lodash.clonedeep';
 import merge from 'lodash.merge';
 import clsx from 'clsx';
 
-import { updateStructureDefProfile } from 'state/reducers/resource';
 import { RootState, useAppDispatch } from 'state/store';
-import { createJSONTree } from 'components/profileEditor/editor/utils';
-import { RenderAttributesTree } from 'types';
+import {
+  createJSONTree,
+  updateStructureDefinition
+} from 'components/profileEditor/editor/utils';
+import { SimplifiedAttributes } from 'types';
 import RenderComplexType from 'components/profileEditor/editor/complexTypesEditor/RenderComplexType';
 import {
   onChangeElementJSON,
@@ -21,7 +23,7 @@ import {
   onAddComplexType,
   createElementDefinitionTree
 } from 'components/profileEditor/utils';
-import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
+import { createComplexTypes } from 'state/utils';
 
 import useStyles from 'components/profileEditor/editor/style';
 
@@ -40,36 +42,97 @@ const Editor: React.FC<EditorProps> = ({
     complexTypes,
     primitiveTypes,
     structureDefinitionTree,
-    newElementDefinition
+    currentElementDefinition,
+    backboneElements
   } = useSelector((state: RootState) => {
     const {
       complexTypes,
       primitiveTypes,
-      structureDefinitionTree
+      structureDefinitionTree,
+      backboneElements
     } = state.fhirDataTypes;
-    const { newElementDefinition } = state.resourceSlice;
+    const { currentElementDefinition } = state.resourceSlice;
     return {
       complexTypes,
       primitiveTypes,
-      newElementDefinition,
-      structureDefinitionTree
+      currentElementDefinition,
+      structureDefinitionTree,
+      backboneElements
     };
   });
 
   const dispatch = useAppDispatch();
   const classes = useStyles();
 
-  const elementDefinitionTree = complexTypes?.find(
-    (element: RenderAttributesTree) => element.id === 'ElementDefinition'
-  )?.children;
+  /**
+   * creates a tree of simplified attributes for element definition with an implementation for fixed values
+   */
+  const createElementDefTree = useCallback(() => {
+    const newElementDefinitionTree:
+      | SimplifiedAttributes[]
+      | undefined = cloneDeep(
+      complexTypes?.find(
+        (complexType: SimplifiedAttributes) =>
+          complexType.id === 'ElementDefinition'
+      )?.children
+    );
+    if (currentElementDefinition && currentElementDefinition.type) {
+      const fixedValueTree:
+        | SimplifiedAttributes
+        | undefined = newElementDefinitionTree?.find(
+        (attribute: SimplifiedAttributes) => attribute.name.includes('fixed')
+      );
+      if (fixedValueTree) {
+        if (currentElementDefinition.type.length === 1) {
+          fixedValueTree.type = currentElementDefinition.type[0].code;
+          if (
+            currentElementDefinition.type[0].code === 'BackboneElement' &&
+            fixedValueTree.children.length === 0 &&
+            backboneElements
+          ) {
+            fixedValueTree.children = backboneElements;
+          } else {
+            const children = createComplexTypes(
+              complexTypes,
+              [fixedValueTree],
+              primitiveTypes
+            );
+            fixedValueTree.children = children[0].children;
+          }
+        } else {
+          fixedValueTree.type = currentElementDefinition.type;
+        }
+      }
+    }
+    return newElementDefinitionTree;
+  }, [
+    complexTypes,
+    currentElementDefinition,
+    primitiveTypes,
+    backboneElements
+  ]);
 
-  const createElementJSON = useCallback((): IElementDefinition => {
+  const [elementDefinitionTree, setElementDefinitionTree] = useState(
+    createElementDefTree
+  );
+
+  useEffect(() => {
+    setElementDefinitionTree(createElementDefTree);
+  }, [createElementDefTree]);
+
+  /**
+   * creates a FHIR JSON structure for Element Definition
+   */
+  const createElementDefJSON = useCallback((): IElementDefinition => {
     const elementDefTreeJSON =
       elementDefinitionTree &&
       createElementDefinitionTree(elementDefinitionTree);
-    return merge(cloneDeep(elementDefTreeJSON), newElementDefinition);
-  }, [elementDefinitionTree, newElementDefinition]);
+    return merge(cloneDeep(elementDefTreeJSON), currentElementDefinition);
+  }, [elementDefinitionTree, currentElementDefinition]);
 
+  /**
+   * creates a FHIR JSON structure for Structure Definition
+   */
   const createStructureDefJSON = useCallback((): IStructureDefinition => {
     const structureDefTreeJSON: IStructureDefinition = createJSONTree(
       structureDefinitionTree,
@@ -80,7 +143,7 @@ const Editor: React.FC<EditorProps> = ({
 
   const [elementDefJSON, setElementDefJSON] = useState<
     IElementDefinition | undefined
-  >(structureDefinitionType === 'element' ? createElementJSON() : undefined);
+  >(structureDefinitionType === 'element' ? createElementDefJSON() : undefined);
 
   const [structureDefJSON, setStructureDefJSON] = useState<
     IStructureDefinition | undefined
@@ -91,52 +154,27 @@ const Editor: React.FC<EditorProps> = ({
   );
 
   useEffect(() => {
-    if (newElementDefinition && structureDefinitionType === 'element') {
-      setElementDefJSON(createElementJSON());
+    if (currentElementDefinition && structureDefinitionType === 'element') {
+      setElementDefJSON(createElementDefJSON());
       setStructureDefJSON(undefined);
     } else if (structureDefinitionType === 'resource') {
       setStructureDefJSON(createStructureDefJSON());
       setElementDefJSON(undefined);
-    } else if (structureDefinitionType === 'element' && !newElementDefinition) {
+    } else if (
+      structureDefinitionType === 'element' &&
+      !currentElementDefinition
+    ) {
       setStructureDefJSON(undefined);
     }
   }, [
-    newElementDefinition,
+    currentElementDefinition,
     structureDefinitionType,
-    createElementJSON,
+    createElementDefJSON,
     createStructureDefJSON
   ]);
 
-  const submit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    e.preventDefault();
-    if (structureDefinitionType === 'element' && structureDefinition) {
-      dispatch(
-        setSnackbarOpen({
-          severity: 'success',
-          message: 'Attribute edited !'
-        })
-      );
-      dispatch(
-        updateStructureDefProfile({
-          structureDefinition: structureDefinition,
-          elementDefinition: elementDefJSON
-        })
-      );
-    } else if (structureDefinitionType === 'resource' && structureDefJSON) {
-      dispatch(
-        setSnackbarOpen({
-          severity: 'success',
-          message: 'Structure Definition edited !'
-        })
-      );
-      dispatch(
-        updateStructureDefProfile({ structureDefinition: structureDefJSON })
-      );
-    }
-  };
-
   const renderBreadcrumbs = (): React.ReactNode => {
-    if (newElementDefinition && elementDefJSON) {
+    if (currentElementDefinition && elementDefJSON) {
       return (
         <Breadcrumbs className={classes.breadcrumbs}>
           {elementDefJSON.id?.split('.').map((split: string) => (
@@ -155,13 +193,13 @@ const Editor: React.FC<EditorProps> = ({
     }
   };
 
-  const renderAttributes = (): React.ReactNode => {
-    if (elementDefJSON && elementDefinitionTree && newElementDefinition) {
+  const renderFormForAttributes = (): React.ReactNode => {
+    if (elementDefJSON && elementDefinitionTree && currentElementDefinition) {
       return (
         <RenderComplexType
-          attributes={elementDefinitionTree}
+          complexFhirAttributes={elementDefinitionTree}
           complexTypes={complexTypes}
-          structureDefJSON={elementDefJSON}
+          currentNodeJSON={elementDefJSON}
           primitiveTypes={primitiveTypes}
           name={''}
           onChangeValue={(path, value) =>
@@ -178,9 +216,9 @@ const Editor: React.FC<EditorProps> = ({
     } else if (structureDefJSON) {
       return (
         <RenderComplexType
-          attributes={structureDefinitionTree}
+          complexFhirAttributes={structureDefinitionTree}
           complexTypes={complexTypes}
-          structureDefJSON={structureDefJSON}
+          currentNodeJSON={structureDefJSON}
           primitiveTypes={primitiveTypes}
           name={''}
           onChangeValue={(path, value) =>
@@ -208,12 +246,27 @@ const Editor: React.FC<EditorProps> = ({
       {renderBreadcrumbs()}
       <Paper className={classes.paperRight}>
         <form className={clsx(classNameForm, classes.formContainer)}>
-          {renderAttributes()}
+          {renderFormForAttributes()}
         </form>
         <div className={classes.formFooter}>
-          {newElementDefinition && structureDefJSON && (
+          {(currentElementDefinition || structureDefJSON) && (
             <>
-              <Button variant="contained" color="secondary" onClick={submit}>
+              <Button
+                variant="contained"
+                color="secondary"
+                onClick={(
+                  event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+                ) =>
+                  updateStructureDefinition(
+                    event,
+                    structureDefinitionType,
+                    structureDefinition,
+                    elementDefJSON,
+                    structureDefJSON,
+                    dispatch
+                  )
+                }
+              >
                 Submit
               </Button>
               <Typography color="textSecondary">* Required Fields</Typography>

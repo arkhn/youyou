@@ -1,13 +1,15 @@
-export type ChoosingCardsItemsType = {
-  name: string;
-  description: string;
-  buttons: {
-    content: string;
-    path: string;
-  }[];
+export type EditorOptionsButtonsType = {
+  content: string;
+  path: string;
 };
 
-export const choosingCardsItems: ChoosingCardsItemsType[] = [
+export type EditorOptionsType = {
+  name: string;
+  description: string;
+  buttons: EditorOptionsButtonsType[];
+};
+
+export const editorOptions: EditorOptionsType[] = [
   {
     name: 'Implementation Guide',
     description:
