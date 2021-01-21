@@ -16,9 +16,9 @@ type RenderPrimitiveTypesProps = {
 };
 
 /**
- * @param param0.attribute simplified attribute of the element currently in modification
- * @param param0.currentNodeJSON
- * @param param0.onChangeValue function to modify the selected attribute in the JSON
+ * @param attribute simplified attribute of the element currently in modification
+ * @param currentNodeJSON
+ * @param onChangeValue function to modify the selected attribute in the JSON
  */
 const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
   attribute,

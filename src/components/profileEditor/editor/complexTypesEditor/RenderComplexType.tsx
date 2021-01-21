@@ -115,10 +115,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
             })}
           </div>
         );
-      } else if (
-        typeof currentNodeJSON[newPath] === 'object' &&
-        !newPath.includes('fixed')
-      ) {
+      } else if (typeof currentNodeJSON[newPath] === 'object') {
         /**
          * render complex types with cardinality max less than or equal to 1
          */

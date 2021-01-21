@@ -29,72 +29,64 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
   currentNodeJSON,
   complexTypes
 }) => {
-  const renderFixedValuesCase = () => {
-    const isPrimitiveType = isPrimitive(attribute.type, primitiveTypes);
-    const isSet = currentNodeJSON[path] === undefined ? false : true;
+  const isPrimitiveType = isPrimitive(attribute.type, primitiveTypes);
+  const isSet = currentNodeJSON[path] === undefined ? false : true;
 
-    if (isPrimitiveType && !isSet) {
-      const value = attribute.type === 'boolean' ? false : '';
-      return (
-        <AddComplexType
-          handleAdd={handleAdd}
-          complexFhirAttribute={attribute}
-          path={path}
-          value={value}
-        />
-      );
-    } else if (!isPrimitiveType && !isSet) {
-      const value = createElementDefinitionTree(attribute.children);
-      return (
-        <AddComplexType
-          handleAdd={handleAdd}
-          complexFhirAttribute={attribute}
-          path={path}
-          value={value}
-        />
-      );
-    } else if (isPrimitiveType && isSet) {
-      return (
-        <AccordionEditor
-          accordionTitle={`${attribute.name} ${attribute.type}`}
-          handleDelete={handleDelete}
-          path={path}
-          accordionDetails={
-            <RenderPrimitiveTypes
-              attribute={attribute}
+  if (isPrimitiveType) {
+    const value = attribute.type === 'boolean' ? false : '';
+    return isSet ? (
+      <AccordionEditor
+        accordionTitle={`${attribute.name} ${attribute.type}`}
+        handleDelete={handleDelete}
+        path={path}
+        accordionDetails={
+          <RenderPrimitiveTypes
+            attribute={attribute}
+            onChangeValue={onChangeValue}
+            currentNodeJSON={currentNodeJSON}
+            newPath={path}
+          />
+        }
+      />
+    ) : (
+      <AddComplexType
+        handleAdd={handleAdd}
+        complexFhirAttribute={attribute}
+        path={path}
+        value={value}
+      />
+    );
+  } else {
+    const value = createElementDefinitionTree(attribute.children);
+    return isSet ? (
+      <AccordionEditor
+        handleDelete={handleDelete}
+        accordionTitle={`${attribute.name} ${attribute.type}`}
+        path={path}
+        accordionDetails={
+          currentNodeJSON[path] && (
+            <RenderComplexType
+              currentNodeJSON={currentNodeJSON[path]}
+              complexTypes={complexTypes}
+              complexFhirAttributes={attribute.children}
+              primitiveTypes={primitiveTypes}
               onChangeValue={onChangeValue}
-              currentNodeJSON={currentNodeJSON}
-              newPath={path}
+              handleDelete={handleDelete}
+              handleAdd={handleAdd}
+              name={path}
             />
-          }
-        />
-      );
-    } else if (!isPrimitiveType && isSet) {
-      return (
-        <AccordionEditor
-          handleDelete={handleDelete}
-          accordionTitle={`${attribute.name} ${attribute.type}`}
-          path={path}
-          accordionDetails={
-            currentNodeJSON[path] && (
-              <RenderComplexType
-                currentNodeJSON={currentNodeJSON[path]}
-                complexTypes={complexTypes}
-                complexFhirAttributes={attribute.children}
-                primitiveTypes={primitiveTypes}
-                onChangeValue={onChangeValue}
-                handleDelete={handleDelete}
-                handleAdd={handleAdd}
-                name={path}
-              />
-            )
-          }
-        />
-      );
-    }
-  };
-
-  return <>{renderFixedValuesCase()}</>;
+          )
+        }
+      />
+    ) : (
+      <AddComplexType
+        handleAdd={handleAdd}
+        complexFhirAttribute={attribute}
+        path={path}
+        value={value}
+      />
+    );
+  }
 };
 
 export default RenderFixedValues;
