@@ -2,14 +2,13 @@ import React from 'react';
 
 import { SimplifiedAttributes } from 'types';
 import { createJSONTree } from 'components/profileEditor/editor/utils';
-import { isPrimitive } from 'state/utils';
-import { createElementDefinitionTree } from 'components/profileEditor/utils';
 
-import AddComplexType from './addComplexType/AddComplexType';
-import AccordionEditor from './accordionEditor/AccordionEditor';
-import DialogChangeSliceName from './dialogSliceName/DialogChangeSliceName';
-import RenderPrimitiveTypes from './renderPrimitiveTypes/RenderPrimitiveTypes';
-import { changeFixedName } from './renderPrimitiveTypes/utils';
+import AddComplexType from 'components/profileEditor/editor/complexTypesEditor/addComplexType/AddComplexType';
+import AccordionEditor from 'components/profileEditor/editor/complexTypesEditor/accordionEditor/AccordionEditor';
+import DialogChangeSliceName from 'components/profileEditor/editor/complexTypesEditor//dialogSliceName/DialogChangeSliceName';
+import RenderPrimitiveTypes from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/RenderPrimitiveTypes';
+import { changeFixedName } from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/utils';
+import RenderFixedValues from 'components/profileEditor/editor/complexTypesEditor/renderFixedValues/RenderFixedValues';
 
 import { useStyles } from 'components/profileEditor/editor/complexTypesEditor/accordionEditor/style';
 
@@ -18,11 +17,11 @@ type DetailProps = {
   complexTypes: SimplifiedAttributes[];
   currentNodeJSON: any;
   primitiveTypes: string[];
+  name: string;
+  index?: number;
   onChangeValue?: (path: string, value: any) => void;
   handleDelete?: (path: string, i: number) => void;
   handleAdd?: (path: string, value: any) => void;
-  name: string;
-  index?: number;
   onChangeSliceName?: (value: string) => void;
 };
 
@@ -54,85 +53,21 @@ const RenderComplexType: React.FC<DetailProps> = ({
     let attributeElement: JSX.Element | null = null;
     const newPath = changeFixedName(attribute, attribute.name);
     if (newPath.includes('fixed')) {
-      if (isPrimitive(attribute.type, primitiveTypes)) {
-        const value = attribute.type === 'boolean' ? false : '';
-        if (currentNodeJSON[newPath] === undefined) {
-          /**
-           * if attribute name includes fixed, attribute type is primitive, and is undefined in structureDefinition,
-           * creates an AddComplexType to create it.
-           */
-          attributeElement = (
-            <AddComplexType
-              handleAdd={onChange(handleAdd)}
-              complexFhirAttribute={attribute}
-              path={newPath}
-              value={value}
-            />
-          );
-        } else {
-          /**
-           * if attribute name includes fixed, attribute type is primitive, and is defined in structureDefinition,
-           * creates an accordion filled with the fixed value attributes.
-           */
-          attributeElement = (
-            <AccordionEditor
-              accordionTitle={`${attribute.name} ${attribute.type}`}
-              handleDelete={onChange(handleDelete)}
-              path={newPath}
-              accordionDetails={
-                <RenderPrimitiveTypes
-                  attribute={attribute}
-                  onChangeValue={onChange(onChangeValue)}
-                  currentNodeJSON={currentNodeJSON}
-                  newPath={newPath}
-                />
-              }
-            />
-          );
-        }
-      } else if (attribute.type && !Array.isArray(attribute.type)) {
-        const value = createElementDefinitionTree(attribute.children);
-        if (!currentNodeJSON[newPath]) {
-          /**
-           * if attribute type is defined, attribute type is complex, is not an array, and is undefined in structureDefinition,
-           * creates an AddComplexType to create it.
-           */
-          attributeElement = (
-            <AddComplexType
-              handleAdd={onChange(handleAdd)}
-              complexFhirAttribute={attribute}
-              path={newPath}
-              value={value}
-            />
-          );
-        } else {
-          /**
-           * if attribute name includes fixed, attribute type is primitive, and is defined in structureDefinition,
-           * creates an accordion filled with the fixed value attributes.
-           */
-          attributeElement = (
-            <AccordionEditor
-              handleDelete={onChange(handleDelete)}
-              accordionTitle={`${attribute.name} ${attribute.type}`}
-              path={newPath}
-              accordionDetails={
-                currentNodeJSON[newPath] && (
-                  <RenderComplexType
-                    currentNodeJSON={currentNodeJSON[newPath]}
-                    complexTypes={complexTypes}
-                    complexFhirAttributes={attribute.children}
-                    primitiveTypes={primitiveTypes}
-                    onChangeValue={onChange(onChangeValue)}
-                    handleDelete={onChange(handleDelete)}
-                    handleAdd={onChange(handleAdd)}
-                    name={newPath}
-                  />
-                )
-              }
-            />
-          );
-        }
-      }
+      /**
+       * if attribute is a fixed value, render RenderFixedValues
+       */
+      attributeElement = (
+        <RenderFixedValues
+          path={newPath}
+          attribute={attribute}
+          handleAdd={onChange(handleAdd)}
+          primitiveTypes={primitiveTypes}
+          currentNodeJSON={currentNodeJSON}
+          handleDelete={onChange(handleDelete)}
+          onChangeValue={onChange(onChangeValue)}
+          complexTypes={complexTypes}
+        />
+      );
     } else if (
       attribute.children.length > 0 &&
       newPath !== 'extension' &&
@@ -208,16 +143,6 @@ const RenderComplexType: React.FC<DetailProps> = ({
           />
         );
       }
-    } else if (newPath === 'sliceName' && currentNodeJSON.sliceName) {
-      /**
-       * if attribute name is slice name, render a button to edit slice name
-       */
-      renderSliceName = (
-        <DialogChangeSliceName
-          sliceName={currentNodeJSON.sliceName}
-          id={currentNodeJSON.id}
-        />
-      );
     } else if (
       newPath !== 'extension' &&
       attribute.children.length === 0 &&
@@ -232,6 +157,16 @@ const RenderComplexType: React.FC<DetailProps> = ({
           onChangeValue={onChange(onChangeValue)}
           currentNodeJSON={currentNodeJSON}
           newPath={newPath}
+        />
+      );
+    } else if (newPath === 'sliceName' && currentNodeJSON.sliceName) {
+      /**
+       * if attribute name is slice name, render a button to edit slice name
+       */
+      renderSliceName = (
+        <DialogChangeSliceName
+          sliceName={currentNodeJSON.sliceName}
+          id={currentNodeJSON.id}
         />
       );
     }

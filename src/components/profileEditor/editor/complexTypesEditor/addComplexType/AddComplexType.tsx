@@ -1,10 +1,12 @@
 import React from 'react';
 
-import { useStyles } from './style';
 import clsx from 'clsx';
 import { IconButton, Tooltip, Typography } from '@material-ui/core';
 import { Add } from '@material-ui/icons';
+
 import { SimplifiedAttributes } from 'types';
+
+import { useStyles } from './style';
 
 type AddComplexTypeProps = {
   complexFhirAttribute: SimplifiedAttributes;
