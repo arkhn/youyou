@@ -32,7 +32,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
     attribute.min && attribute.min > 0
       ? `${getLabel(attribute, currentElementDefinition)}*`
       : `${getLabel(attribute, currentElementDefinition)}`;
-  const fixedName = changeFixedName(attribute, attribute.name);
+  const newName = changeFixedName(attribute, attribute.name);
 
   switch (attribute.type) {
     case 'string':
@@ -43,9 +43,9 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
         attributeElement = (
           <InputTooltip
             label={label}
-            value={currentNodeJSON[fixedName] ?? ''}
+            value={currentNodeJSON[newName] ?? ''}
             tool={attribute.definition}
-            onBlur={(event) => onChangeValue(fixedName, event.target.value)}
+            onBlur={(event) => onChangeValue(newName, event.target.value)}
           />
         );
       }
@@ -56,7 +56,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
       attributeElement = (
         <InputTooltip
           label={label}
-          value={currentNodeJSON[fixedName] ? currentNodeJSON[fixedName] : ''}
+          value={currentNodeJSON[newName] ? currentNodeJSON[newName] : ''}
           tool={attribute.definition}
         />
       );
@@ -84,15 +84,15 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
             label={label}
             tool={attribute.definition}
             choices={mapValues}
-            value={currentNodeJSON[fixedName] ?? mapValues[0].value}
-            onChange={(event) => onChangeValue(fixedName, event.target.value)}
+            value={currentNodeJSON[newName] ?? mapValues[0].value}
+            onChange={(event) => onChangeValue(newName, event.target.value)}
           />
         );
       } else {
         attributeElement = (
           <InputTooltip
             label={label}
-            value={currentNodeJSON[fixedName] ? currentNodeJSON[fixedName] : ''}
+            value={currentNodeJSON[newName] ? currentNodeJSON[newName] : ''}
             tool={attribute.definition}
           />
         );
@@ -104,8 +104,8 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
         <CheckboxTooltip
           label={label}
           tool={attribute.definition}
-          value={currentNodeJSON[fixedName] ?? false}
-          onChange={(event) => onChangeValue(fixedName, event.target.checked)}
+          value={currentNodeJSON[newName] ?? false}
+          onChange={(event) => onChangeValue(newName, event.target.checked)}
         />
       );
       break;
