@@ -54,7 +54,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
     let attributeElement: JSX.Element | null = null;
     const newPath = changeFixedName(attribute, attribute.name);
     if (newPath.includes('fixed')) {
-      if (isPrimitive(attribute.type, primitiveTypes) && newPath) {
+      if (isPrimitive(attribute.type, primitiveTypes)) {
         const value = attribute.type === 'boolean' ? false : '';
         if (currentNodeJSON[newPath] === undefined) {
           /**
@@ -84,12 +84,13 @@ const RenderComplexType: React.FC<DetailProps> = ({
                   attribute={attribute}
                   onChangeValue={onChange(onChangeValue)}
                   currentNodeJSON={currentNodeJSON}
+                  newPath={newPath}
                 />
               }
             />
           );
         }
-      } else if (attribute.type && !Array.isArray(attribute.type) && newPath) {
+      } else if (attribute.type && !Array.isArray(attribute.type)) {
         const value = createElementDefinitionTree(attribute.children);
         if (!currentNodeJSON[newPath]) {
           /**
@@ -230,6 +231,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
           attribute={attribute}
           onChangeValue={onChange(onChangeValue)}
           currentNodeJSON={currentNodeJSON}
+          newPath={newPath}
         />
       );
     }

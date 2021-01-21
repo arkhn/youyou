@@ -71,7 +71,7 @@ const Homepage: React.FC<{}> = () => {
         </Paper>
         <Paper className={clsx(classes.itemCard, classes.itemCardRight)}>
           <Typography>{option.description}</Typography>
-          <div>{renderButtons}</div>
+          {renderButtons}
         </Paper>
       </div>
     );

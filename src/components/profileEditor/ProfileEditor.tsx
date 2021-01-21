@@ -95,7 +95,6 @@ const ProfileEditor: React.FC<{}> = () => {
     node: SimplifiedAttributes,
     openDialog: OpenDialogState
   ) => {
-    e.stopPropagation();
     setNodeToSlice(node);
     setOpen(openDialog);
   };

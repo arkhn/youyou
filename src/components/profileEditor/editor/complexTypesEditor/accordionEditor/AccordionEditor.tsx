@@ -33,8 +33,7 @@ const AccordionEditor: React.FC<AccordionEditorProps> = ({
           <Typography>{accordionTitle}</Typography>
           {path && (
             <MuiButton
-              onClick={(event) => {
-                event.stopPropagation();
+              onClick={() => {
                 handleDelete(path, index !== undefined ? index : undefined);
               }}
             >
