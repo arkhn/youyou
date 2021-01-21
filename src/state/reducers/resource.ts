@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import extensionStructureDefinition from 'assets/extensionTemplate';
 import {
   IElementDefinition,
@@ -14,6 +15,8 @@ import {
 import { structureDefAddSlice, structureDefDeleteSlice } from './utils';
 import { findIndex } from 'components/profileEditor/utils';
 import cloneDeep from 'lodash.clonedeep';
+import { RootState } from 'state/store';
+import { setSnackbarOpen } from './snackbarReducer';
 
 const initialState: ResourceState = {
   resources: [],
@@ -25,6 +28,68 @@ const initialState: ResourceState = {
   structureDefMeta: true,
   currentElementDefinition: undefined
 };
+
+export const updateStructureDefProfileThunk = createAsyncThunk<
+  | {
+      structureDefinition: IStructureDefinition;
+      currentElementDefinition?: IElementDefinition;
+    }
+  | undefined,
+  {
+    structureDefinition: IStructureDefinition;
+    elementDefinition?: IElementDefinition;
+  },
+  { state: RootState }
+>(
+  'resourceSlice/updateStructureDefProfileThunk',
+  ({ structureDefinition, elementDefinition }, { dispatch }) => {
+    if (elementDefinition && elementDefinition.id) {
+      const existingElement = structureDefinition.snapshot?.element.find(
+        (elem) => elem.id === elementDefinition.id
+      );
+      const indexToPush = findIndex(structureDefinition, elementDefinition.id);
+      const newSDef = cloneDeep(structureDefinition);
+
+      existingElement
+        ? newSDef.snapshot!.element.splice(
+            indexToPush - 1,
+            1,
+            elementDefinition
+          )
+        : newSDef.snapshot!.element.splice(indexToPush, 0, elementDefinition);
+      dispatch(
+        setSnackbarOpen({
+          severity: 'success',
+          message: 'Attribute edited !'
+        })
+      );
+      return {
+        structureDefinition: newSDef,
+        currentElementDefinition: elementDefinition
+      };
+    } else if (!elementDefinition && structureDefinition.snapshot) {
+      const newSDef = {
+        ...structureDefinition,
+        snapshot: { ...structureDefinition.snapshot }
+      };
+      dispatch(
+        setSnackbarOpen({
+          severity: 'success',
+          message: 'Structure Definition edited !'
+        })
+      );
+      return {
+        structureDefinition: newSDef
+      };
+    }
+    dispatch(
+      setSnackbarOpen({
+        severity: 'error',
+        message: 'Problem'
+      })
+    );
+  }
+);
 
 const resourceSlice = createSlice({
   name: 'resourceReducer',
@@ -212,6 +277,16 @@ const resourceSlice = createSlice({
     }
   },
   extraReducers: (builder) => {
+    builder.addCase(
+      updateStructureDefProfileThunk.fulfilled,
+      (state: ResourceState, { payload }) => {
+        if (payload) {
+          state.structureDefinition = payload.structureDefinition;
+          if (payload.currentElementDefinition)
+            state.currentElementDefinition = payload.currentElementDefinition;
+        }
+      }
+    );
     builder.addCase(
       requestIdsThunk.pending,
       (state: ResourceState, { meta }) => {

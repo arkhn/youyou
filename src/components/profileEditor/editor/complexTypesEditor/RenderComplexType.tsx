@@ -5,7 +5,7 @@ import { createJSONTree } from 'components/profileEditor/editor/utils';
 
 import AddComplexType from 'components/profileEditor/editor/complexTypesEditor/addComplexType/AddComplexType';
 import AccordionEditor from 'components/profileEditor/editor/complexTypesEditor/accordionEditor/AccordionEditor';
-import DialogChangeSliceName from 'components/profileEditor/editor/complexTypesEditor//dialogSliceName/DialogChangeSliceName';
+import DialogChangeSliceName from 'components/profileEditor/editor/complexTypesEditor/dialogSliceName/DialogChangeSliceName';
 import RenderPrimitiveTypes from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/RenderPrimitiveTypes';
 import { changeFixedName } from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/utils';
 import RenderFixedValues from 'components/profileEditor/editor/complexTypesEditor/renderFixedValues/RenderFixedValues';
