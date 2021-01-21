@@ -36,7 +36,11 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
     const value = attribute.type === 'boolean' ? false : '';
     return isSet ? (
       <AccordionEditor
-        accordionTitle={`${attribute.name} ${attribute.type}`}
+        accordionTitle={`${attribute.name} ${
+          attribute.type === 'http://hl7.org/fhirpath/System.String'
+            ? 'string'
+            : attribute.type
+        }`}
         handleDelete={handleDelete}
         path={path}
         accordionDetails={

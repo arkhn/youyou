@@ -35,8 +35,12 @@ export const changeFixedName = (
     attribute.type &&
     !Array.isArray(attribute.type)
   ) {
-    const newTypeName =
-      attribute.type.charAt(0).toUpperCase() + attribute.type.slice(1);
+    const type =
+      attribute.type === 'http://hl7.org/fhirpath/System.String'
+        ? 'string'
+        : attribute.type;
+
+    const newTypeName = type.charAt(0).toUpperCase() + type.slice(1);
     return `fixed${newTypeName}`;
   } else {
     return label;

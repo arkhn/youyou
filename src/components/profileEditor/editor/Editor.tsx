@@ -11,10 +11,7 @@ import merge from 'lodash.merge';
 import clsx from 'clsx';
 
 import { RootState, useAppDispatch } from 'state/store';
-import {
-  createJSONTree,
-  updateStructureDefinition
-} from 'components/profileEditor/editor/utils';
+import { createJSONTree } from 'components/profileEditor/editor/utils';
 import { SimplifiedAttributes } from 'types';
 import RenderComplexType from 'components/profileEditor/editor/complexTypesEditor/RenderComplexType';
 import {
@@ -26,6 +23,7 @@ import {
 import { createComplexTypes } from 'state/utils';
 
 import useStyles from 'components/profileEditor/editor/style';
+import { updateStructureDefProfileThunk } from 'state/reducers/resource';
 
 type EditorProps = {
   structureDefinition: IStructureDefinition;
@@ -256,16 +254,29 @@ const Editor: React.FC<EditorProps> = ({
                 color="secondary"
                 onClick={(
                   event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-                ) =>
-                  updateStructureDefinition(
-                    event,
-                    structureDefinitionType,
-                    structureDefinition,
-                    elementDefJSON,
-                    structureDefJSON,
-                    dispatch
-                  )
-                }
+                ) => {
+                  event.preventDefault();
+                  if (
+                    structureDefinitionType === 'element' &&
+                    structureDefinition
+                  ) {
+                    dispatch(
+                      updateStructureDefProfileThunk({
+                        structureDefinition,
+                        elementDefinition: elementDefJSON
+                      })
+                    );
+                  } else if (
+                    structureDefinitionType === 'resource' &&
+                    structureDefJSON
+                  ) {
+                    dispatch(
+                      updateStructureDefProfileThunk({
+                        structureDefinition: structureDefJSON
+                      })
+                    );
+                  }
+                }}
               >
                 Submit
               </Button>

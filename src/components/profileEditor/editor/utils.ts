@@ -1,11 +1,4 @@
-import {
-  IElementDefinition,
-  IElementDefinition_Type as IElementDefinitionType,
-  IStructureDefinition
-} from '@ahryman40k/ts-fhir-types/lib/R4';
-import { updateStructureDefProfile } from 'state/reducers/resource';
-import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
-import { AppDispatch } from 'state/store';
+import { IElementDefinition_Type as IElementDefinitionType } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { SimplifiedAttributes } from 'types';
 
 /**
@@ -51,38 +44,3 @@ export const isPrimitive = (
   type === 'http://hl7.org/fhirpath/System.String' ||
   type === 'Extension' ||
   type === 'Reference';
-
-export const updateStructureDefinition = (
-  e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-  structureDefinitionType: 'resource' | 'extension' | 'element',
-  structureDefinition: IStructureDefinition,
-  elementDefJSON: IElementDefinition | undefined,
-  structureDefJSON: IStructureDefinition | undefined,
-  dispatch: AppDispatch
-) => {
-  e.preventDefault();
-  if (structureDefinitionType === 'element' && structureDefinition) {
-    dispatch(
-      setSnackbarOpen({
-        severity: 'success',
-        message: 'Attribute edited !'
-      })
-    );
-    dispatch(
-      updateStructureDefProfile({
-        structureDefinition,
-        elementDefinition: elementDefJSON
-      })
-    );
-  } else if (structureDefinitionType === 'resource' && structureDefJSON) {
-    dispatch(
-      setSnackbarOpen({
-        severity: 'success',
-        message: 'Structure Definition edited !'
-      })
-    );
-    dispatch(
-      updateStructureDefProfile({ structureDefinition: structureDefJSON })
-    );
-  }
-};
