@@ -23,6 +23,12 @@ type DetailProps = {
   handleDelete?: (path: string, i: number) => void;
   handleAdd?: (path: string, value: any) => void;
   onChangeSliceName?: (value: string) => void;
+  onChangeCardinality?: (
+    firstPath: string,
+    secondPath: string,
+    firstValue: number,
+    secondValue: string
+  ) => void;
 };
 
 const RenderComplexType: React.FC<DetailProps> = ({
@@ -34,7 +40,8 @@ const RenderComplexType: React.FC<DetailProps> = ({
   handleDelete,
   handleAdd,
   name,
-  index
+  index,
+  onChangeCardinality
 }) => {
   const classes = useStyles();
   let renderSliceName: JSX.Element | null = null;
@@ -46,6 +53,29 @@ const RenderComplexType: React.FC<DetailProps> = ({
       callback(`${name && name + '.'}${index}.${path}`, value);
     } else if (callback) {
       callback(`${name && name + '.'}${path}`, value);
+    }
+  };
+
+  const onChangeboth = (callback: typeof onChangeCardinality) => (
+    firstPath: string,
+    secondPath: string,
+    firstValue: number,
+    secondValue: string
+  ) => {
+    if (index !== undefined && callback) {
+      callback(
+        `${name && name + '.'}${index}.${firstPath}`,
+        `${name && name + '.'}${index}.${secondPath}`,
+        firstValue,
+        secondValue
+      );
+    } else if (callback) {
+      callback(
+        `${name && name + '.'}${firstPath}`,
+        `${name && name + '.'}${secondPath}`,
+        firstValue,
+        secondValue
+      );
     }
   };
 
@@ -115,7 +145,10 @@ const RenderComplexType: React.FC<DetailProps> = ({
             })}
           </div>
         );
-      } else if (typeof currentNodeJSON[newPath] === 'object') {
+      } else if (
+        typeof currentNodeJSON[newPath] === 'object' &&
+        newPath !== 'base'
+      ) {
         /**
          * render complex types with cardinality max less than or equal to 1
          */
@@ -154,6 +187,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
           onChangeValue={onChange(onChangeValue)}
           currentNodeJSON={currentNodeJSON}
           newPath={newPath}
+          onChangeCardinality={onChangeboth(onChangeCardinality)}
         />
       );
     } else if (newPath === 'sliceName' && currentNodeJSON.sliceName) {

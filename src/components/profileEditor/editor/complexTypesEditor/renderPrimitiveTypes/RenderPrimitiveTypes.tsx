@@ -7,12 +7,19 @@ import CheckboxTooltip from 'components/smallComponents/CheckboxTooltip';
 
 import { SimplifiedAttributes } from 'types';
 import { getLabel } from './utils';
+import Cardinality from './cardinality/Cardinality';
 
 type RenderPrimitiveTypesProps = {
   attribute: SimplifiedAttributes;
   currentNodeJSON: Record<string, any>;
   onChangeValue: (path: string, value: any) => void;
   newPath: string;
+  onChangeCardinality?: (
+    firstPath: string,
+    secondPath: string,
+    firstValue: number,
+    secondValue: string
+  ) => void;
 };
 
 /**
@@ -24,7 +31,8 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
   attribute,
   currentNodeJSON,
   onChangeValue,
-  newPath
+  newPath,
+  onChangeCardinality
 }) => {
   const { currentElementDefinition } = useSelector(
     (state: RootState) => state.resourceSlice
@@ -39,7 +47,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
     case 'uri':
     case 'id':
     case 'http://hl7.org/fhirpath/System.String': {
-      if (attribute.name !== 'sliceName') {
+      if (attribute.name !== 'sliceName' && attribute.name !== 'max') {
         attributeElement = (
           <InputTooltip
             label={label}
@@ -52,15 +60,26 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
       break;
     }
     case 'integer':
+    case 'unsignedInt':
     case 'positiveInt': {
-      attributeElement = (
-        <InputTooltip
-          label={label}
-          value={currentNodeJSON[newPath] ? currentNodeJSON[newPath] : ''}
-          tool={attribute.definition}
-          onBlur={(event) => onChangeValue(newPath, event.target.value)}
-        />
-      );
+      if (attribute.name === 'min' && !attribute.id.includes('base.min')) {
+        attributeElement = (
+          <Cardinality
+            currentNodeJSON={currentNodeJSON}
+            onChangeValue={onChangeValue}
+            onChangeCardinality={onChangeCardinality}
+          />
+        );
+      } else {
+        attributeElement = (
+          <InputTooltip
+            label={label}
+            value={currentNodeJSON[newPath] ? currentNodeJSON[newPath] : ''}
+            tool={attribute.definition}
+            onBlur={(event) => onChangeValue(newPath, event.target.value)}
+          />
+        );
+      }
       break;
     }
     case 'code': {

@@ -16,6 +16,7 @@ import { SimplifiedAttributes } from 'types';
 import RenderComplexType from 'components/profileEditor/editor/complexTypesEditor/RenderComplexType';
 import {
   onChangeElementJSON,
+  onChangeCardinalityJSON,
   onDeleteComplexType,
   onAddComplexType,
   createElementDefinitionTree
@@ -200,6 +201,11 @@ const Editor: React.FC<EditorProps> = ({
           currentNodeJSON={elementDefJSON}
           primitiveTypes={primitiveTypes}
           name={''}
+          onChangeCardinality={(a, b, c, d) => {
+            setElementDefJSON(
+              onChangeCardinalityJSON(a, b, c, d, elementDefJSON)
+            );
+          }}
           onChangeValue={(path, value) =>
             setElementDefJSON(onChangeElementJSON(path, value, elementDefJSON))
           }

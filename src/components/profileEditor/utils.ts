@@ -140,6 +140,19 @@ export const onChangeElementJSON = (
   return elem;
 };
 
+export const onChangeCardinalityJSON = (
+  cardiMinPath: string,
+  cardiMaxPath: string,
+  cardiMin: number,
+  cardiMax: string,
+  element: any
+): any => {
+  const elem: any = { ...element };
+  set(elem, cardiMinPath, cardiMin);
+  set(elem, cardiMaxPath, cardiMax);
+  return elem;
+};
+
 /**
  * When deleting a complex type in an object, returns a new copy of the object with the deleting
  * @param path path of the element to delete
