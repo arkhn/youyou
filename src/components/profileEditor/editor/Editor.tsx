@@ -11,8 +11,10 @@ import merge from 'lodash.merge';
 import clsx from 'clsx';
 
 import { RootState, useAppDispatch } from 'state/store';
-import { createJSONTree } from 'components/profileEditor/editor/utils';
-import { SimplifiedAttributes } from 'types';
+import {
+  createJSONTree,
+  createElementDefTree
+} from 'components/profileEditor/editor/utils';
 import RenderComplexType from 'components/profileEditor/editor/complexTypesEditor/RenderComplexType';
 import {
   onChangeElementJSON,
@@ -21,7 +23,6 @@ import {
   onAddComplexType,
   createElementDefinitionTree
 } from 'components/profileEditor/utils';
-import { createComplexTypes } from 'state/utils';
 
 import useStyles from 'components/profileEditor/editor/style';
 import { updateStructureDefProfileThunk } from 'state/reducers/resource';
@@ -66,44 +67,13 @@ const Editor: React.FC<EditorProps> = ({
   /**
    * creates a tree of simplified attributes for element definition with an implementation for fixed values
    */
-  const createElementDefTree = useCallback(() => {
-    const newElementDefinitionTree:
-      | SimplifiedAttributes[]
-      | undefined = cloneDeep(
-      complexTypes?.find(
-        (complexType: SimplifiedAttributes) =>
-          complexType.id === 'ElementDefinition'
-      )?.children
+  const createElementDefTreeCallback = useCallback(() => {
+    return createElementDefTree(
+      currentElementDefinition,
+      complexTypes,
+      backboneElements,
+      primitiveTypes
     );
-    if (currentElementDefinition && currentElementDefinition.type) {
-      const fixedValueTree:
-        | SimplifiedAttributes
-        | undefined = newElementDefinitionTree?.find(
-        (attribute: SimplifiedAttributes) => attribute.name.includes('fixed')
-      );
-      if (fixedValueTree) {
-        if (currentElementDefinition.type.length === 1) {
-          fixedValueTree.type = currentElementDefinition.type[0].code;
-          if (
-            currentElementDefinition.type[0].code === 'BackboneElement' &&
-            fixedValueTree.children.length === 0 &&
-            backboneElements
-          ) {
-            fixedValueTree.children = backboneElements;
-          } else {
-            const children = createComplexTypes(
-              complexTypes,
-              [fixedValueTree],
-              primitiveTypes
-            );
-            fixedValueTree.children = children[0].children;
-          }
-        } else {
-          fixedValueTree.type = currentElementDefinition.type;
-        }
-      }
-    }
-    return newElementDefinitionTree;
   }, [
     complexTypes,
     currentElementDefinition,
@@ -112,12 +82,12 @@ const Editor: React.FC<EditorProps> = ({
   ]);
 
   const [elementDefinitionTree, setElementDefinitionTree] = useState(
-    createElementDefTree
+    createElementDefTreeCallback
   );
 
   useEffect(() => {
-    setElementDefinitionTree(createElementDefTree);
-  }, [createElementDefTree]);
+    setElementDefinitionTree(createElementDefTreeCallback);
+  }, [createElementDefTreeCallback]);
 
   /**
    * creates a FHIR JSON structure for Element Definition
