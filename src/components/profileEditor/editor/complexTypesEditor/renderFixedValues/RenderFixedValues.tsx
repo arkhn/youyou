@@ -36,7 +36,9 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
     }
   );
 
-  const [contextFV, setContextFV] = useContext(contextFixedValue);
+  const [fixedValueContext, setFixedValueContext] = useContext(
+    contextFixedValue
+  );
 
   const findFixedAttribute = useCallback(
     (elemDef) => {
@@ -87,7 +89,7 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
 
   let renderFixedValuesSelector = undefined;
 
-  if (!contextFV.path) {
+  if (!fixedValueContext.path) {
     if (
       elementDefFixed &&
       elementDefFixed.type &&
@@ -136,7 +138,7 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
                     };
                     setElementDefFixed(newElement);
                     setAttributeFixed(findFixedAttribute(newElement));
-                    setContextFV({ path: newPath, value: newValue });
+                    setFixedValueContext({ path: newPath, value: newValue });
                   } else {
                     const toFind = complexTypes.find(
                       (type) => type.name === selectedFixedType
@@ -153,7 +155,7 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
                       };
                       setElementDefFixed(newElement);
                       setAttributeFixed(findFixedAttribute(newElement));
-                      setContextFV({ path: newPath, value: newValue });
+                      setFixedValueContext({ path: newPath, value: newValue });
                     }
                   }
                 }
@@ -189,7 +191,7 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
                   };
                   setElementDefFixed(newElement);
                   setAttributeFixed(findFixedAttribute(newElement));
-                  setContextFV({ path: newPath, value: newValue });
+                  setFixedValueContext({ path: newPath, value: newValue });
                 } else {
                   const toFind = complexTypes.find(
                     (type) => type.name === fixedType
@@ -205,7 +207,7 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
                     };
                     setElementDefFixed(newElement);
                     setAttributeFixed(findFixedAttribute(newElement));
-                    setContextFV({ path: newPath, value: newValue });
+                    setFixedValueContext({ path: newPath, value: newValue });
                   }
                 }
               }
@@ -222,19 +224,19 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
       return (
         <AccordionEditor
           accordionTitle={'fixed[x]'}
-          path={contextFV.path}
+          path={fixedValueContext.path}
           accordionDetails={
             <RenderPrimitiveTypes
               attribute={attributeFixed}
               onChangeValue={(path, value) => {
-                setContextFV({ ...contextFV, value });
+                setFixedValueContext({ ...fixedValueContext, value });
               }}
-              currentNodeJSON={contextFV}
+              currentNodeJSON={fixedValueContext}
               newPath={'value'}
             />
           }
           handleDelete={() =>
-            setContextFV({ path: undefined, value: undefined })
+            setFixedValueContext({ path: undefined, value: undefined })
           }
         />
       );
@@ -242,43 +244,43 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
       if (attributeFixed && attributeFixed.children && elementDefFixed) {
         return (
           <AccordionEditor
-            accordionTitle={contextFV.path}
-            path={contextFV.path}
+            accordionTitle={fixedValueContext.path}
+            path={fixedValueContext.path}
             accordionDetails={
               <RenderComplexType
                 complexFhirAttributes={attributeFixed.children}
                 complexTypes={complexTypes}
                 handleAdd={(path, value) => {
-                  setContextFV({
-                    ...contextFV,
+                  setFixedValueContext({
+                    ...fixedValueContext,
                     value: onAddComplexType(path, value, elementDefFixed)[
-                      contextFV.path
+                      fixedValueContext.path
                     ]
                   });
                 }}
                 handleDelete={(path, i) => {
-                  setContextFV({
-                    ...contextFV,
+                  setFixedValueContext({
+                    ...fixedValueContext,
                     value: onDeleteComplexType(path, i, elementDefFixed)[
-                      contextFV.path
+                      fixedValueContext.path
                     ]
                   });
                 }}
                 onChangeValue={(path, value) => {
-                  setContextFV({
-                    ...contextFV,
+                  setFixedValueContext({
+                    ...fixedValueContext,
                     value: onChangeElementJSON(path, value, elementDefFixed)[
-                      contextFV.path
+                      fixedValueContext.path
                     ]
                   });
                 }}
-                currentNodeJSON={contextFV.value}
+                currentNodeJSON={fixedValueContext.value}
                 primitiveTypes={primitiveTypes}
-                name={contextFV.path}
+                name={fixedValueContext.path}
               />
             }
             handleDelete={() =>
-              setContextFV({ path: undefined, value: undefined })
+              setFixedValueContext({ path: undefined, value: undefined })
             }
           />
         );

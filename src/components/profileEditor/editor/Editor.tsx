@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-ignore */
 import React, { useEffect, useState, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 
@@ -65,7 +66,7 @@ const Editor: React.FC<EditorProps> = ({
   const dispatch = useAppDispatch();
   const classes = useStyles();
 
-  const [contextFV, setContextFV] = useState(() => {
+  const [fixedValueContext, setFixedValueContext] = useState(() => {
     let path = undefined;
     let value = undefined;
     for (const attribute in currentElementDefinition) {
@@ -97,8 +98,6 @@ const Editor: React.FC<EditorProps> = ({
   const [elementDefinitionTree, setElementDefinitionTree] = useState(
     createElementDefTreeCallback
   );
-
-  console.log('editor : ', contextFV);
 
   useEffect(() => {
     setElementDefinitionTree(createElementDefTreeCallback);
@@ -138,7 +137,7 @@ const Editor: React.FC<EditorProps> = ({
   );
 
   useEffect(() => {
-    setContextFV(() => {
+    setFixedValueContext(() => {
       let path = undefined;
       let value = undefined;
       for (const attribute in currentElementDefinition) {
@@ -242,10 +241,10 @@ const Editor: React.FC<EditorProps> = ({
     }
   };
 
-  console.log(elementDefJSON);
-
   return (
-    <ContextFixedValue.Provider value={[contextFV, setContextFV]}>
+    <ContextFixedValue.Provider
+      value={[fixedValueContext, setFixedValueContext]}
+    >
       <div className={classes.editorContainer}>
         {renderBreadcrumbs()}
         <Paper className={classes.paperRight}>
@@ -266,10 +265,10 @@ const Editor: React.FC<EditorProps> = ({
                       structureDefinitionType === 'element' &&
                       structureDefinition
                     ) {
-                      const newElementDefinition = contextFV.path &&
-                        contextFV.value && {
+                      const newElementDefinition = fixedValueContext.path &&
+                        fixedValueContext.value && {
                           ...elementDefJSON,
-                          [contextFV.path]: contextFV.value
+                          [fixedValueContext.path]: fixedValueContext.value
                         };
                       dispatch(
                         updateStructureDefProfileThunk({
