@@ -10,7 +10,7 @@ import RenderPrimitiveTypes from 'components/profileEditor/editor/complexTypesEd
 import { changeFixedName } from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/utils';
 
 import { useStyles } from 'components/profileEditor/editor/complexTypesEditor/accordionEditor/style';
-import Toto from './Toto/Toto';
+import RenderFixedValues from 'components/profileEditor/editor/complexTypesEditor/renderFixedValues/RenderFixedValues';
 
 type DetailProps = {
   complexFhirAttributes: SimplifiedAttributes[];
@@ -83,23 +83,11 @@ const RenderComplexType: React.FC<DetailProps> = ({
     let attributeElement: JSX.Element | null = null;
     const newPath = changeFixedName(attribute, attribute.name);
     if (newPath.includes('fixed')) {
-      /**
-       * if attribute is a fixed value, render RenderFixedValues
-       */
-      /* attributeElement = (
-        <RenderFixedValues
-          path={newPath}
-          attribute={attribute}
-          handleAdd={onChange(handleAdd)}
-          primitiveTypes={primitiveTypes}
-          currentNodeJSON={currentNodeJSON}
-          handleDelete={onChange(handleDelete)}
-          onChangeValue={onChange(onChangeValue)}
-          complexTypes={complexTypes}
-        />
-      ); */
       attributeElement = (
-        <Toto complexTypes={complexTypes} primitiveTypes={primitiveTypes} />
+        <RenderFixedValues
+          complexTypes={complexTypes}
+          primitiveTypes={primitiveTypes}
+        />
       );
     } else if (
       attribute.children.length > 0 &&

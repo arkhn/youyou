@@ -23,6 +23,7 @@ import {
   onAddComplexType,
   createElementDefinitionTree
 } from 'components/profileEditor/utils';
+import ContextFixedValue from 'components/contexts/Context';
 
 import useStyles from 'components/profileEditor/editor/style';
 import { updateStructureDefProfileThunk } from 'state/reducers/resource';
@@ -64,6 +65,18 @@ const Editor: React.FC<EditorProps> = ({
   const dispatch = useAppDispatch();
   const classes = useStyles();
 
+  const [contextFV, setContextFV] = useState(() => {
+    let path = undefined;
+    let value = undefined;
+    for (const attribute in currentElementDefinition) {
+      if (attribute.includes('fixed') && attribute !== 'fixed[x]') {
+        path = attribute;
+        //@ts-ignore
+        value = currentElementDefinition[attribute];
+      }
+    }
+    return { path, value };
+  });
   /**
    * creates a tree of simplified attributes for element definition with an implementation for fixed values
    */
@@ -84,6 +97,8 @@ const Editor: React.FC<EditorProps> = ({
   const [elementDefinitionTree, setElementDefinitionTree] = useState(
     createElementDefTreeCallback
   );
+
+  console.log('editor : ', contextFV);
 
   useEffect(() => {
     setElementDefinitionTree(createElementDefTreeCallback);
@@ -123,6 +138,18 @@ const Editor: React.FC<EditorProps> = ({
   );
 
   useEffect(() => {
+    setContextFV(() => {
+      let path = undefined;
+      let value = undefined;
+      for (const attribute in currentElementDefinition) {
+        if (attribute.includes('fixed') && attribute !== 'fixed[x]') {
+          path = attribute;
+          //@ts-ignore
+          value = currentElementDefinition[attribute];
+        }
+      }
+      return { path, value };
+    });
     if (currentElementDefinition && structureDefinitionType === 'element') {
       setElementDefJSON(createElementDefJSON());
       setStructureDefJSON(undefined);
@@ -215,53 +242,62 @@ const Editor: React.FC<EditorProps> = ({
     }
   };
 
+  console.log(elementDefJSON);
+
   return (
-    <div className={classes.editorContainer}>
-      {renderBreadcrumbs()}
-      <Paper className={classes.paperRight}>
-        <form className={clsx(classNameForm, classes.formContainer)}>
-          {renderFormForAttributes()}
-        </form>
-        <div className={classes.formFooter}>
-          {(currentElementDefinition || structureDefJSON) && (
-            <>
-              <Button
-                variant="contained"
-                color="secondary"
-                onClick={(
-                  event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-                ) => {
-                  event.preventDefault();
-                  if (
-                    structureDefinitionType === 'element' &&
-                    structureDefinition
-                  ) {
-                    dispatch(
-                      updateStructureDefProfileThunk({
-                        structureDefinition,
-                        elementDefinition: elementDefJSON
-                      })
-                    );
-                  } else if (
-                    structureDefinitionType === 'resource' &&
-                    structureDefJSON
-                  ) {
-                    dispatch(
-                      updateStructureDefProfileThunk({
-                        structureDefinition: structureDefJSON
-                      })
-                    );
-                  }
-                }}
-              >
-                Submit
-              </Button>
-              <Typography color="textSecondary">* Required Fields</Typography>
-            </>
-          )}
-        </div>
-      </Paper>
-    </div>
+    <ContextFixedValue.Provider value={[contextFV, setContextFV]}>
+      <div className={classes.editorContainer}>
+        {renderBreadcrumbs()}
+        <Paper className={classes.paperRight}>
+          <form className={clsx(classNameForm, classes.formContainer)}>
+            {renderFormForAttributes()}
+          </form>
+          <div className={classes.formFooter}>
+            {(currentElementDefinition || structureDefJSON) && (
+              <>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  onClick={(
+                    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+                  ) => {
+                    event.preventDefault();
+                    if (
+                      structureDefinitionType === 'element' &&
+                      structureDefinition
+                    ) {
+                      const newElementDefinition = contextFV.path &&
+                        contextFV.value && {
+                          ...elementDefJSON,
+                          [contextFV.path]: contextFV.value
+                        };
+                      dispatch(
+                        updateStructureDefProfileThunk({
+                          structureDefinition,
+                          elementDefinition: newElementDefinition
+                        })
+                      );
+                    } else if (
+                      structureDefinitionType === 'resource' &&
+                      structureDefJSON
+                    ) {
+                      dispatch(
+                        updateStructureDefProfileThunk({
+                          structureDefinition: structureDefJSON
+                        })
+                      );
+                    }
+                  }}
+                >
+                  Submit
+                </Button>
+                <Typography color="textSecondary">* Required Fields</Typography>
+              </>
+            )}
+          </div>
+        </Paper>
+      </div>
+    </ContextFixedValue.Provider>
   );
 };
 
