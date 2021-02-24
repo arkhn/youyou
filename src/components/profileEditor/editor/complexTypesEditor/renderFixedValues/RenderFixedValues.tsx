@@ -14,7 +14,7 @@ import {
 } from 'components/profileEditor/utils';
 import merge from 'lodash.merge';
 import { IElementDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
-import contextFixedValue from 'components/contexts/Context';
+import contextFixedValue from 'components/contexts/context';
 import RenderComplexType from 'components/profileEditor/editor/complexTypesEditor/RenderComplexType';
 import RenderPrimitiveTypes from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/RenderPrimitiveTypes';
 import AccordionEditor from '../accordionEditor/AccordionEditor';
@@ -89,7 +89,7 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
 
   let renderFixedValuesSelector = undefined;
 
-  if (!fixedValueContext.path) {
+  if (fixedValueContext.value === undefined) {
     if (
       elementDefFixed &&
       elementDefFixed.type &&
@@ -118,7 +118,6 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
                 const newType = elementDefFixed.type?.find(
                   (type) => type.code === selectedFixedType
                 );
-                //const newType = { code: 'ContactPoint' };
                 if (newType && selectedFixedType) {
                   setFixedType(selectedFixedType);
                   const newPath =
@@ -236,7 +235,10 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
             />
           }
           handleDelete={() =>
-            setFixedValueContext({ path: undefined, value: undefined })
+            setFixedValueContext({
+              path: fixedValueContext.path,
+              value: undefined
+            })
           }
         />
       );
@@ -280,7 +282,10 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
               />
             }
             handleDelete={() =>
-              setFixedValueContext({ path: undefined, value: undefined })
+              setFixedValueContext({
+                path: fixedValueContext.path,
+                value: undefined
+              })
             }
           />
         );

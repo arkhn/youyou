@@ -24,7 +24,7 @@ import {
   onAddComplexType,
   createElementDefinitionTree
 } from 'components/profileEditor/utils';
-import ContextFixedValue from 'components/contexts/Context';
+import ContextFixedValue from 'components/contexts/context';
 
 import useStyles from 'components/profileEditor/editor/style';
 import { updateStructureDefProfileThunk } from 'state/reducers/resource';
@@ -241,6 +241,9 @@ const Editor: React.FC<EditorProps> = ({
     }
   };
 
+  console.log(fixedValueContext);
+  console.log(elementDefJSON);
+
   return (
     <ContextFixedValue.Provider
       value={[fixedValueContext, setFixedValueContext]}
@@ -265,11 +268,29 @@ const Editor: React.FC<EditorProps> = ({
                       structureDefinitionType === 'element' &&
                       structureDefinition
                     ) {
-                      const newElementDefinition = fixedValueContext.path &&
-                        fixedValueContext.value && {
+                      let newElementDefinition = { ...elementDefJSON };
+                      if (
+                        fixedValueContext.path &&
+                        fixedValueContext.value !== undefined
+                      ) {
+                        newElementDefinition = {
                           ...elementDefJSON,
                           [fixedValueContext.path]: fixedValueContext.value
                         };
+                      } else if (
+                        fixedValueContext.path &&
+                        !fixedValueContext.value &&
+                        // @ts-ignore
+                        elementDefJSON[fixedValueContext.path] !== undefined
+                      ) {
+                        newElementDefinition = { ...elementDefJSON };
+                        // @ts-ignore
+                        delete newElementDefinition[fixedValueContext.path];
+                        setFixedValueContext({
+                          ...fixedValueContext,
+                          path: undefined
+                        });
+                      }
                       dispatch(
                         updateStructureDefProfileThunk({
                           structureDefinition,
