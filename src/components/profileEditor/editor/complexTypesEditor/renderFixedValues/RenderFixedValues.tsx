@@ -137,7 +137,11 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
                     };
                     setElementDefFixed(newElement);
                     setAttributeFixed(findFixedAttribute(newElement));
-                    setFixedValueContext({ path: newPath, value: newValue });
+                    setFixedValueContext({
+                      path: newPath,
+                      value: newValue,
+                      type: newElement.type
+                    });
                   } else {
                     const toFind = complexTypes.find(
                       (type) => type.name === selectedFixedType
@@ -154,7 +158,11 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
                       };
                       setElementDefFixed(newElement);
                       setAttributeFixed(findFixedAttribute(newElement));
-                      setFixedValueContext({ path: newPath, value: newValue });
+                      setFixedValueContext({
+                        path: newPath,
+                        value: newValue,
+                        type: newElement.type
+                      });
                     }
                   }
                 }
@@ -190,7 +198,11 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
                   };
                   setElementDefFixed(newElement);
                   setAttributeFixed(findFixedAttribute(newElement));
-                  setFixedValueContext({ path: newPath, value: newValue });
+                  setFixedValueContext({
+                    path: newPath,
+                    value: newValue,
+                    type: newElement.type
+                  });
                 } else {
                   const toFind = complexTypes.find(
                     (type) => type.name === fixedType
@@ -206,7 +218,11 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
                     };
                     setElementDefFixed(newElement);
                     setAttributeFixed(findFixedAttribute(newElement));
-                    setFixedValueContext({ path: newPath, value: newValue });
+                    setFixedValueContext({
+                      path: newPath,
+                      value: newValue,
+                      type: newElement.type
+                    });
                   }
                 }
               }

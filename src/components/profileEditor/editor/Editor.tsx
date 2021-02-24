@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 
 import {
   IElementDefinition,
+  IElementDefinition_Type as IElementDefinitionType,
   IStructureDefinition
 } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { Typography, Button, Paper, Breadcrumbs } from '@material-ui/core';
@@ -66,17 +67,23 @@ const Editor: React.FC<EditorProps> = ({
   const dispatch = useAppDispatch();
   const classes = useStyles();
 
-  const [fixedValueContext, setFixedValueContext] = useState(() => {
+  const [fixedValueContext, setFixedValueContext] = useState<{
+    value?: any;
+    path?: string;
+    type?: IElementDefinitionType[];
+  }>(() => {
     let path = undefined;
     let value = undefined;
+    let type = undefined;
     for (const attribute in currentElementDefinition) {
       if (attribute.includes('fixed') && attribute !== 'fixed[x]') {
         path = attribute;
         //@ts-ignore
         value = currentElementDefinition[attribute];
+        type = currentElementDefinition.type;
       }
     }
-    return { path, value };
+    return { path, value, type };
   });
   /**
    * creates a tree of simplified attributes for element definition with an implementation for fixed values
@@ -241,9 +248,6 @@ const Editor: React.FC<EditorProps> = ({
     }
   };
 
-  console.log(fixedValueContext);
-  console.log(elementDefJSON);
-
   return (
     <ContextFixedValue.Provider
       value={[fixedValueContext, setFixedValueContext]}
@@ -275,7 +279,8 @@ const Editor: React.FC<EditorProps> = ({
                       ) {
                         newElementDefinition = {
                           ...elementDefJSON,
-                          [fixedValueContext.path]: fixedValueContext.value
+                          [fixedValueContext.path]: fixedValueContext.value,
+                          type: fixedValueContext.type
                         };
                       } else if (
                         fixedValueContext.path &&
@@ -288,7 +293,8 @@ const Editor: React.FC<EditorProps> = ({
                         delete newElementDefinition[fixedValueContext.path];
                         setFixedValueContext({
                           ...fixedValueContext,
-                          path: undefined
+                          path: undefined,
+                          type: undefined
                         });
                       }
                       dispatch(
