@@ -13,13 +13,15 @@ type AddComplexTypeProps = {
   path: string;
   value?: any;
   handleAdd: (path: string, value: any) => void;
+  childComponent?: JSX.Element;
 };
 
 const AddComplexType: React.FC<AddComplexTypeProps> = ({
   handleAdd,
   complexFhirAttribute,
   path,
-  value
+  value,
+  childComponent
 }) => {
   const classes = useStyles();
 
@@ -30,9 +32,10 @@ const AddComplexType: React.FC<AddComplexTypeProps> = ({
           <Add />
         </Tooltip>
       </IconButton>
-      <Typography className={classes.titleAdd} variant="h2">
-        {complexFhirAttribute.name}
-      </Typography>
+      <div className={classes.addValue}>
+        <Typography variant="h2">{complexFhirAttribute.name}</Typography>
+        {childComponent && <>{childComponent}</>}
+      </div>
     </div>
   );
 };

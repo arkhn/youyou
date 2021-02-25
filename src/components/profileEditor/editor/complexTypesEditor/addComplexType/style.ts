@@ -12,7 +12,10 @@ export const useStyles = makeStyles((theme: Theme) => ({
     paddingRight: 16,
     border: `1px solid ${theme.palette.primary.light}`
   },
-  titleAdd: {
-    marginLeft: 4
+  addValue: {
+    marginLeft: 4,
+    display: 'flex',
+    alignItems: 'center',
+    width: '100%'
   }
 }));

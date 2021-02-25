@@ -4,7 +4,6 @@ import { RootState } from 'state/store';
 import { SimplifiedAttributes } from 'types';
 import { createElementDefTree } from '../../utils';
 import SelectWithHelp from 'components/smallComponents/SelectTooltip';
-import { Button } from '@material-ui/core';
 import { isPrimitive } from 'state/utils';
 import {
   onChangeElementJSON,
@@ -18,6 +17,7 @@ import contextFixedValue from 'components/contexts/context';
 import RenderComplexType from 'components/profileEditor/editor/complexTypesEditor/RenderComplexType';
 import RenderPrimitiveTypes from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/RenderPrimitiveTypes';
 import AccordionEditor from '../accordionEditor/AccordionEditor';
+import AddComplexType from '../addComplexType/AddComplexType';
 
 type RenderFixedValuesProps = {
   primitiveTypes: string[];
@@ -93,7 +93,8 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
     if (
       elementDefFixed &&
       elementDefFixed.type &&
-      elementDefFixed.type.length > 1
+      elementDefFixed.type.length > 1 &&
+      attributeFixed
     ) {
       const selectorValues = elementDefFixed.type.map((type) => {
         return {
@@ -102,34 +103,55 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
         };
       });
       selectorValues.unshift({ label: 'select a type', value: '' });
-
       renderFixedValuesSelector = (
-        <>
-          <SelectWithHelp
-            choices={selectorValues}
-            value={selectedFixedType}
-            onChange={(e) => setSelectedFixedType(e.target.value as string)}
-            label={'select fixed value'}
-            tool={'select a type for the fixed value'}
-          />
-          <Button
-            onClick={() => {
-              if (elementDefFixed) {
-                const newType = elementDefFixed.type?.find(
-                  (type) => type.code === selectedFixedType
-                );
-                if (newType && selectedFixedType) {
-                  setFixedType(selectedFixedType);
-                  const newPath =
-                    selectedFixedType ===
-                    'http://hl7.org/fhirpath/System.String'
-                      ? 'fixedString'
-                      : 'fixed' +
-                        selectedFixedType.charAt(0).toUpperCase() +
-                        selectedFixedType.slice(1);
-                  if (isPrimitive(selectedFixedType, primitiveTypes)) {
-                    const newValue =
-                      selectedFixedType === 'boolean' ? false : '';
+        <AddComplexType
+          childComponent={
+            <SelectWithHelp
+              choices={selectorValues}
+              value={selectedFixedType}
+              onChange={(e) => setSelectedFixedType(e.target.value as string)}
+              label={'select fixed value'}
+              tool={'select a type for the fixed value'}
+            />
+          }
+          path={selectedFixedType}
+          complexFhirAttribute={attributeFixed}
+          handleAdd={() => {
+            if (elementDefFixed) {
+              const newType = elementDefFixed.type?.find(
+                (type) => type.code === selectedFixedType
+              );
+              if (newType && selectedFixedType) {
+                setFixedType(selectedFixedType);
+                const newPath =
+                  selectedFixedType === 'http://hl7.org/fhirpath/System.String'
+                    ? 'fixedString'
+                    : 'fixed' +
+                      selectedFixedType.charAt(0).toUpperCase() +
+                      selectedFixedType.slice(1);
+                if (isPrimitive(selectedFixedType, primitiveTypes)) {
+                  const newValue = selectedFixedType === 'boolean' ? false : '';
+                  const newElement = {
+                    ...elementDefFixed,
+                    [newPath]: newValue,
+                    type: [newType]
+                  };
+                  setElementDefFixed(newElement);
+                  setAttributeFixed(findFixedAttribute(newElement));
+                  setFixedValueContext({
+                    path: newPath,
+                    value: newValue,
+                    type: newElement.type
+                  });
+                } else {
+                  const toFind = complexTypes.find(
+                    (type) => type.name === selectedFixedType
+                  )?.children;
+                  if (toFind && attributeFixed) {
+                    const newValue = merge(
+                      createElementDefinitionTree(toFind),
+                      createElementDefinitionTree(attributeFixed.children)
+                    );
                     const newElement = {
                       ...elementDefFixed,
                       [newPath]: newValue,
@@ -142,57 +164,54 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
                       value: newValue,
                       type: newElement.type
                     });
-                  } else {
-                    const toFind = complexTypes.find(
-                      (type) => type.name === selectedFixedType
-                    )?.children;
-                    if (toFind && attributeFixed) {
-                      const newValue = merge(
-                        createElementDefinitionTree(toFind),
-                        createElementDefinitionTree(attributeFixed.children)
-                      );
-                      const newElement = {
-                        ...elementDefFixed,
-                        [newPath]: newValue,
-                        type: [newType]
-                      };
-                      setElementDefFixed(newElement);
-                      setAttributeFixed(findFixedAttribute(newElement));
-                      setFixedValueContext({
-                        path: newPath,
-                        value: newValue,
-                        type: newElement.type
-                      });
-                    }
                   }
                 }
               }
-            }}
-          >
-            Add fixedValue
-          </Button>
-        </>
+            }
+          }}
+        />
       );
     } else if (
       elementDefFixed &&
       elementDefFixed.type &&
-      elementDefFixed.type.length === 1
+      elementDefFixed.type.length === 1 &&
+      attributeFixed
     ) {
       renderFixedValuesSelector = (
-        <div>
-          {fixedType}
-          <Button
-            onClick={() => {
-              if (elementDefFixed && fixedType) {
-                const newPath =
-                  fixedType === 'http://hl7.org/fhirpath/System.String'
-                    ? 'fixedString'
-                    : 'fixed' +
-                      fixedType.charAt(0).toUpperCase() +
-                      fixedType.slice(1);
-                if (isPrimitive(fixedType, primitiveTypes)) {
-                  const newValue = fixedType === 'boolean' ? false : '';
-                  const newElement: IElementDefinition = {
+        <AddComplexType
+          path={selectedFixedType}
+          complexFhirAttribute={attributeFixed}
+          handleAdd={() => {
+            if (elementDefFixed && fixedType) {
+              const newPath =
+                fixedType === 'http://hl7.org/fhirpath/System.String'
+                  ? 'fixedString'
+                  : 'fixed' +
+                    fixedType.charAt(0).toUpperCase() +
+                    fixedType.slice(1);
+              if (isPrimitive(fixedType, primitiveTypes)) {
+                const newValue = fixedType === 'boolean' ? false : '';
+                const newElement: IElementDefinition = {
+                  ...elementDefFixed,
+                  [newPath]: newValue
+                };
+                setElementDefFixed(newElement);
+                setAttributeFixed(findFixedAttribute(newElement));
+                setFixedValueContext({
+                  path: newPath,
+                  value: newValue,
+                  type: newElement.type
+                });
+              } else {
+                const toFind = complexTypes.find(
+                  (type) => type.name === fixedType
+                )?.children;
+                if (toFind && attributeFixed) {
+                  const newValue = merge(
+                    createElementDefinitionTree(toFind),
+                    createElementDefinitionTree(attributeFixed.children)
+                  );
+                  const newElement = {
                     ...elementDefFixed,
                     [newPath]: newValue
                   };
@@ -203,34 +222,11 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
                     value: newValue,
                     type: newElement.type
                   });
-                } else {
-                  const toFind = complexTypes.find(
-                    (type) => type.name === fixedType
-                  )?.children;
-                  if (toFind && attributeFixed) {
-                    const newValue = merge(
-                      createElementDefinitionTree(toFind),
-                      createElementDefinitionTree(attributeFixed.children)
-                    );
-                    const newElement = {
-                      ...elementDefFixed,
-                      [newPath]: newValue
-                    };
-                    setElementDefFixed(newElement);
-                    setAttributeFixed(findFixedAttribute(newElement));
-                    setFixedValueContext({
-                      path: newPath,
-                      value: newValue,
-                      type: newElement.type
-                    });
-                  }
                 }
               }
-            }}
-          >
-            Add fixedValue
-          </Button>
-        </div>
+            }
+          }}
+        />
       );
     }
     return <>{renderFixedValuesSelector}</>;
