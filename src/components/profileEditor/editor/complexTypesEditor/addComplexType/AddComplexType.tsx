@@ -7,6 +7,7 @@ import { Add } from '@material-ui/icons';
 import { SimplifiedAttributes } from 'types';
 
 import { useStyles } from './style';
+import { TooltipHelp } from 'components/smallComponents';
 
 type AddComplexTypeProps = {
   complexFhirAttribute: SimplifiedAttributes;
@@ -33,8 +34,11 @@ const AddComplexType: React.FC<AddComplexTypeProps> = ({
         </Tooltip>
       </IconButton>
       <div className={classes.addValue}>
-        <Typography variant="h2">{complexFhirAttribute.name}</Typography>
+        <Typography variant="h2" className={classes.title}>
+          {complexFhirAttribute.name}
+        </Typography>
         {childComponent && <>{childComponent}</>}
+        <TooltipHelp tool={complexFhirAttribute.definition} />
       </div>
     </div>
   );

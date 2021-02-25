@@ -152,6 +152,7 @@ const Cardinality: React.FC<CardinalityProps> = ({
         >
           {allCardinalities.map((cardi) => (
             <ToggleButton
+              size="medium"
               key={`${cardi.min}|${cardi.max}`}
               value={`${cardi.min}|${cardi.max}`}
               disabled={isDisabledInput(cardi.min, cardi.max, baseMin, baseMax)}
