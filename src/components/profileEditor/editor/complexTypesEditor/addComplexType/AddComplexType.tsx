@@ -15,6 +15,7 @@ type AddComplexTypeProps = {
   value?: any;
   handleAdd: (path: string, value: any) => void;
   childComponent?: JSX.Element;
+  className?: string;
 };
 
 const AddComplexType: React.FC<AddComplexTypeProps> = ({
@@ -22,23 +23,26 @@ const AddComplexType: React.FC<AddComplexTypeProps> = ({
   complexFhirAttribute,
   path,
   value,
-  childComponent
+  childComponent,
+  className
 }) => {
   const classes = useStyles();
 
   return (
     <div className={clsx(classes.accordionTitle, classes.accordionAddItem)}>
-      <IconButton onClick={() => handleAdd(path, value)}>
-        <Tooltip title={`add a new ${complexFhirAttribute.name}`}>
-          <Add />
-        </Tooltip>
-      </IconButton>
       <div className={classes.addValue}>
-        <Typography variant="h2" className={classes.title}>
-          {complexFhirAttribute.name}
-        </Typography>
+        <div className={clsx(classes.allTitles, className)}>
+          <IconButton onClick={() => handleAdd(path, value)}>
+            <Tooltip title={`add a new ${complexFhirAttribute.name}`}>
+              <Add />
+            </Tooltip>
+          </IconButton>
+          <Typography variant="h2" className={classes.title}>
+            {complexFhirAttribute.name}
+          </Typography>
+          <TooltipHelp tool={complexFhirAttribute.definition} />
+        </div>
         {childComponent && <>{childComponent}</>}
-        <TooltipHelp tool={complexFhirAttribute.definition} />
       </div>
     </div>
   );

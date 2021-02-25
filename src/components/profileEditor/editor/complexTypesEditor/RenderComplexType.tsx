@@ -9,8 +9,8 @@ import DialogChangeSliceName from 'components/profileEditor/editor/complexTypesE
 import RenderPrimitiveTypes from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/RenderPrimitiveTypes';
 import { changeFixedName } from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/utils';
 
-import { useStyles } from 'components/profileEditor/editor/complexTypesEditor/accordionEditor/style';
 import RenderFixedValues from 'components/profileEditor/editor/complexTypesEditor/renderFixedValues/RenderFixedValues';
+import { useStyles } from 'components/profileEditor/editor/complexTypesEditor/styles';
 
 type DetailProps = {
   complexFhirAttributes: SimplifiedAttributes[];
@@ -43,8 +43,8 @@ const RenderComplexType: React.FC<DetailProps> = ({
   index,
   onChangeCardinality
 }) => {
-  const classes = useStyles();
   let renderSliceName: JSX.Element | null = null;
+  const classes = useStyles();
 
   const onChange = (
     callback: typeof onChangeValue | typeof handleDelete | typeof handleAdd
@@ -100,41 +100,48 @@ const RenderComplexType: React.FC<DetailProps> = ({
          * render complex types with cardinality max greater than 1
          */
         attributeElement = (
-          <div className={classes.accordion}>
-            <AddComplexType
-              handleAdd={onChange(handleAdd)}
-              complexFhirAttribute={attribute}
-              path={newPath}
-              value={createJSONTree(
-                attribute.children,
-                currentNodeJSON[newPath]
-              )}
-            />
-            {currentNodeJSON[newPath].map((childNodeJSON: any, i: number) => {
-              return (
-                <AccordionEditor
-                  handleDelete={onChange(handleDelete)}
-                  accordionTitle={`${newPath} ${i + 1}`}
-                  key={i}
-                  index={i}
-                  path={newPath}
-                  accordionDetails={
-                    <RenderComplexType
-                      currentNodeJSON={childNodeJSON}
-                      complexTypes={complexTypes}
-                      complexFhirAttributes={attribute.children}
-                      primitiveTypes={primitiveTypes}
-                      onChangeValue={onChange(onChangeValue)}
-                      handleDelete={onChange(handleDelete)}
-                      handleAdd={onChange(handleAdd)}
-                      name={newPath}
-                      index={i}
-                    />
-                  }
-                />
-              );
-            })}
-          </div>
+          <AddComplexType
+            handleAdd={onChange(handleAdd)}
+            complexFhirAttribute={attribute}
+            path={newPath}
+            value={createJSONTree(attribute.children, currentNodeJSON[newPath])}
+            className={
+              currentNodeJSON[newPath].length > 0
+                ? classes.multipleComplexType
+                : undefined
+            }
+            childComponent={currentNodeJSON[newPath].map(
+              (childNodeJSON: any, i: number) => {
+                return (
+                  <AccordionEditor
+                    handleDelete={onChange(handleDelete)}
+                    accordionTitle={`${newPath} ${i + 1}`}
+                    key={i}
+                    index={i}
+                    path={newPath}
+                    className={
+                      i !== currentNodeJSON[newPath].length - 1
+                        ? classes.accordionMultiple
+                        : undefined
+                    }
+                    accordionDetails={
+                      <RenderComplexType
+                        currentNodeJSON={childNodeJSON}
+                        complexTypes={complexTypes}
+                        complexFhirAttributes={attribute.children}
+                        primitiveTypes={primitiveTypes}
+                        onChangeValue={onChange(onChangeValue)}
+                        handleDelete={onChange(handleDelete)}
+                        handleAdd={onChange(handleAdd)}
+                        name={newPath}
+                        index={i}
+                      />
+                    }
+                  />
+                );
+              }
+            )}
+          />
         );
       } else if (
         typeof currentNodeJSON[newPath] === 'object' &&
@@ -192,7 +199,11 @@ const RenderComplexType: React.FC<DetailProps> = ({
         />
       );
     }
-    return <div key={index}>{attributeElement}</div>;
+    return (
+      <div key={index} className={classes.attributeElement}>
+        {attributeElement}
+      </div>
+    );
   });
 
   return (

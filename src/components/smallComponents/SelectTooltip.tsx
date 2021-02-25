@@ -18,7 +18,7 @@ type SelectWithHelpProps = {
   value?: StatusKind | string | undefined;
   choices: { label?: string; value?: string }[];
   error?: boolean | undefined;
-  tool: string;
+  tool?: string;
   onChange?: (
     event: React.ChangeEvent<{
       name?: string | undefined;
@@ -88,7 +88,7 @@ const SelectWithHelp: React.FC<SelectWithHelpProps> = ({
             );
           })}
         </Select>
-        <TooltipHelp tool={tool} />
+        {tool && <TooltipHelp tool={tool} />}
       </div>
     </CssFormControl>
   );

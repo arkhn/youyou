@@ -136,7 +136,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
       break;
   }
 
-  return <div>{attributeElement}</div>;
+  return <>{attributeElement}</>;
 };
 
 export default RenderPrimitiveTypes;

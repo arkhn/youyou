@@ -25,9 +25,6 @@ export const useStyles = makeStyles(() => ({
     width: '100%',
     alignItems: 'center'
   },
-  accordion: {
-    marginBottom: 16
-  },
   accordionDetails: {
     display: 'flex',
     flexDirection: 'column'

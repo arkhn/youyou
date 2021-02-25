@@ -13,6 +13,7 @@ type AccordionEditorProps = {
   accordionTitle: string;
   path?: string;
   index?: number;
+  className?: string;
 };
 
 const AccordionEditor: React.FC<AccordionEditorProps> = ({
@@ -20,12 +21,13 @@ const AccordionEditor: React.FC<AccordionEditorProps> = ({
   handleDelete,
   index,
   accordionTitle,
-  path
+  path,
+  className
 }) => {
   const classes = useStyles();
 
   return (
-    <Accordion className={classes.accordion}>
+    <Accordion className={className}>
       <MuiAccordionSummary expandIcon={<ExpandMore />}>
         <div
           className={clsx(classes.accordionTitle, classes.accordionTitleDelete)}

@@ -18,6 +18,7 @@ import RenderComplexType from 'components/profileEditor/editor/complexTypesEdito
 import RenderPrimitiveTypes from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/RenderPrimitiveTypes';
 import AccordionEditor from '../accordionEditor/AccordionEditor';
 import AddComplexType from '../addComplexType/AddComplexType';
+import useStyles from './styles';
 
 type RenderFixedValuesProps = {
   primitiveTypes: string[];
@@ -28,6 +29,7 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
   primitiveTypes,
   complexTypes
 }) => {
+  const classes = useStyles();
   const { currentElementDefinition, backboneElements } = useSelector(
     (state: RootState) => {
       const { backboneElements } = state.fhirDataTypes;
@@ -118,13 +120,13 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
       selectorValues.unshift({ label: 'select a type', value: '' });
       renderFixedValuesSelector = (
         <AddComplexType
+          className={classes.selectMultipleType}
           childComponent={
             <SelectWithHelp
               choices={selectorValues}
               value={selectedFixedType}
               onChange={(e) => setSelectedFixedType(e.target.value as string)}
-              label={'select fixed value'}
-              tool={'select a type for the fixed value'}
+              label={'select fixed value type'}
             />
           }
           path={selectedFixedType}
