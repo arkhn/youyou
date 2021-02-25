@@ -2,8 +2,16 @@ import React, { useEffect, useState } from 'react';
 
 import { IElementDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { ToggleButton } from '@material-ui/lab';
-import { CssTextField, CssToggleButtonGroup } from 'components/smallComponents';
+import {
+  CssTextField,
+  CssToggleButtonGroup,
+  TooltipHelp
+} from 'components/smallComponents';
 import { allCardinalities, isDisabledInput } from './utils';
+
+import useStyles from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/cardinality/styles';
+import { Typography } from '@material-ui/core';
+import { SimplifiedAttributes } from 'types';
 
 type CardinalityProps = {
   currentNodeJSON: IElementDefinition;
@@ -14,13 +22,16 @@ type CardinalityProps = {
     firstValue: number,
     secondValue: string
   ) => void;
+  attribute: SimplifiedAttributes;
 };
 
 const Cardinality: React.FC<CardinalityProps> = ({
   currentNodeJSON,
   onChangeValue,
-  onChangeCardinality
+  onChangeCardinality,
+  attribute
 }) => {
+  const classes = useStyles();
   const [defaultValueMin, setDefaultValueMin] = useState(
     currentNodeJSON.min?.toString()
   );
@@ -92,51 +103,63 @@ const Cardinality: React.FC<CardinalityProps> = ({
   }, [currentNodeJSON]);
 
   return (
-    <>
-      <CssTextField
-        label="min"
-        variant="outlined"
-        value={defaultValueMin}
-        onChange={handleChangeMin}
-        onBlur={handleBlurMin}
-      />
-      <CssTextField
-        label="max"
-        variant="outlined"
-        value={defaultValueMax}
-        onChange={handleChangeMax}
-        onBlur={handleBlurMax}
-      />
-      <CssToggleButtonGroup
-        value={`${currentNodeJSON.min?.toString()}|${currentNodeJSON.max}`}
-        exclusive
-        onChange={(
-          event: React.MouseEvent<HTMLElement, MouseEvent>,
-          value: any
-        ) => {
-          if (value) {
-            const newValue = value.split('|');
-            onChangeCardinality &&
-              onChangeCardinality(
-                'min',
-                'max',
-                Number(newValue[0]),
-                newValue[1]
-              );
+    <div className={classes.cardinalityContainer}>
+      <div className={classes.cardinalityInformations}>
+        <Typography variant="h2">Cardinality</Typography>
+        <TooltipHelp
+          tool={
+            'The minimum number of times this element SHALL appear in the instance, and the maximum number of times this element is permitted to appear in the instance.'
           }
-        }}
-      >
-        {allCardinalities.map((cardi) => (
-          <ToggleButton
-            key={`${cardi.min}|${cardi.max}`}
-            value={`${cardi.min}|${cardi.max}`}
-            disabled={isDisabledInput(cardi.min, cardi.max, baseMin, baseMax)}
-          >
-            {cardi.min}...{cardi.max}
-          </ToggleButton>
-        ))}
-      </CssToggleButtonGroup>
-    </>
+        />
+      </div>
+      <div className={classes.cardinalityForm}>
+        <CssTextField
+          className={classes.inputCardinality}
+          label="min"
+          variant="outlined"
+          value={defaultValueMin}
+          onChange={handleChangeMin}
+          onBlur={handleBlurMin}
+        />
+        <CssTextField
+          className={classes.inputCardinality}
+          label="max"
+          variant="outlined"
+          value={defaultValueMax}
+          onChange={handleChangeMax}
+          onBlur={handleBlurMax}
+        />
+        <CssToggleButtonGroup
+          value={`${currentNodeJSON.min?.toString()}|${currentNodeJSON.max}`}
+          exclusive
+          onChange={(
+            event: React.MouseEvent<HTMLElement, MouseEvent>,
+            value: any
+          ) => {
+            if (value) {
+              const newValue = value.split('|');
+              onChangeCardinality &&
+                onChangeCardinality(
+                  'min',
+                  'max',
+                  Number(newValue[0]),
+                  newValue[1]
+                );
+            }
+          }}
+        >
+          {allCardinalities.map((cardi) => (
+            <ToggleButton
+              key={`${cardi.min}|${cardi.max}`}
+              value={`${cardi.min}|${cardi.max}`}
+              disabled={isDisabledInput(cardi.min, cardi.max, baseMin, baseMax)}
+            >
+              {cardi.min}...{cardi.max}
+            </ToggleButton>
+          ))}
+        </CssToggleButtonGroup>
+      </div>
+    </div>
   );
 };
 

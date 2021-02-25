@@ -68,6 +68,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
             currentNodeJSON={currentNodeJSON}
             onChangeValue={onChangeValue}
             onChangeCardinality={onChangeCardinality}
+            attribute={attribute}
           />
         );
       } else {
