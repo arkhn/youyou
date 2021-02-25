@@ -105,7 +105,9 @@ const Cardinality: React.FC<CardinalityProps> = ({
   return (
     <div className={classes.cardinalityContainer}>
       <div className={classes.cardinalityInformations}>
-        <Typography variant="h2">Cardinality</Typography>
+        <Typography variant="h2" className={classes.cardinalityTitle}>
+          Cardinality
+        </Typography>
         <TooltipHelp
           tool={
             'The minimum number of times this element SHALL appear in the instance, and the maximum number of times this element is permitted to appear in the instance.'

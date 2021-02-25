@@ -12,15 +12,17 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   cardinalityContainer: {
     borderRadius: 4,
-    padding: '4px 16px',
+    padding: '4px 16px 16px 16px',
     marginBottom: 16,
     border: `1px solid ${theme.palette.primary.light}`
   },
   cardinalityInformations: {
     display: 'flex',
     width: '100%',
-    alignItems: 'center',
-    justifyContent: 'space-between'
+    alignItems: 'center'
+  },
+  cardinalityTitle: {
+    marginRight: 16
   }
 }));
 
