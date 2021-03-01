@@ -11,7 +11,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   cardinalityContainer: {
     borderRadius: 4,
-    border: `1px solid ${theme.palette.primary.light}`
+    border: `1px solid ${theme.palette.primary.light}`,
+    padding: 8
   },
   cardinalityInformations: {
     display: 'flex',
@@ -21,6 +22,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   cardinalityTitle: {
     marginRight: 16
+  },
+  cardinalityToggle: {
+    marginRight: 8
   }
 }));
 

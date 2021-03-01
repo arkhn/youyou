@@ -1,17 +1,17 @@
 import React from 'react';
 
-import { FormControlLabel, Checkbox } from '@material-ui/core';
+import { FormControlLabel, Switch } from '@material-ui/core';
 
 import { TooltipHelp } from 'components/smallComponents';
 
-type CheckbokTooltipProps = {
+type SwitchTooltipProps = {
   label: string;
   value: boolean;
   tool: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-const CheckboxTooltip: React.FC<CheckbokTooltipProps> = ({
+const SwitchTooltip: React.FC<SwitchTooltipProps> = ({
   label,
   value,
   tool,
@@ -22,7 +22,7 @@ const CheckboxTooltip: React.FC<CheckbokTooltipProps> = ({
       <FormControlLabel
         label={label}
         control={
-          <Checkbox checked={value} onChange={onChange} color="secondary" />
+          <Switch checked={value} onChange={onChange} color="secondary" />
         }
       />
       <TooltipHelp tool={tool} />
@@ -30,4 +30,4 @@ const CheckboxTooltip: React.FC<CheckbokTooltipProps> = ({
   );
 };
 
-export default CheckboxTooltip;
+export default SwitchTooltip;

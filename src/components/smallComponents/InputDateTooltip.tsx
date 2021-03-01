@@ -24,6 +24,9 @@ const InputDate: React.FC<InputDateProps> = ({
       type="datetime-local"
       onChange={onChange}
       variant="outlined"
+      InputLabelProps={{
+        shrink: true
+      }}
       InputProps={{
         endAdornment: <TooltipHelp tool={tool} />
       }}

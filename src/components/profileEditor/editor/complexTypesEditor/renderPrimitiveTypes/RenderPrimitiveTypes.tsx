@@ -2,8 +2,12 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from 'state/store';
 
-import { InputTooltip, SelectTooltip } from 'components/smallComponents';
-import CheckboxTooltip from 'components/smallComponents/CheckboxTooltip';
+import {
+  InputDateTooltip,
+  InputTooltip,
+  SelectTooltip
+} from 'components/smallComponents';
+import SwitchTooltip from 'components/smallComponents/SwitchTooltip';
 
 import { SimplifiedAttributes } from 'types';
 import { getLabel } from './utils';
@@ -42,10 +46,18 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
     attribute.min && attribute.min > 0 ? '*' : ''
   }`;
 
+  /**
+   * decimal : Rational numbers that have a decimal representation
+   *
+   */
+
   switch (attribute.type) {
     case 'string':
     case 'uri':
+    case 'url':
     case 'id':
+    case 'canonical':
+    case 'base64Binary':
     case 'http://hl7.org/fhirpath/System.String': {
       if (attribute.name !== 'sliceName' && attribute.name !== 'max') {
         attributeElement = (
@@ -57,6 +69,18 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
           />
         );
       }
+      break;
+    }
+    case 'markdown': {
+      attributeElement = (
+        <InputTooltip
+          label={label}
+          multiline
+          value={currentNodeJSON[newPath] ?? ''}
+          tool={attribute.definition}
+          onBlur={(event) => onChangeValue(newPath, event.target.value)}
+        />
+      );
       break;
     }
     case 'integer':
@@ -123,7 +147,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
     }
     case 'boolean': {
       attributeElement = (
-        <CheckboxTooltip
+        <SwitchTooltip
           label={label}
           tool={attribute.definition}
           value={currentNodeJSON[newPath] ?? false}
@@ -132,7 +156,20 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
       );
       break;
     }
+    case 'date':
+    case 'dateTime': {
+      attributeElement = (
+        <InputDateTooltip
+          label={label}
+          value={currentNodeJSON[newPath] ?? ''}
+          tool={attribute.definition}
+          onChange={(event) => onChangeValue(newPath, event.target.value)}
+        />
+      );
+      break;
+    }
     default:
+      //console.log(attribute.type);
       break;
   }
 

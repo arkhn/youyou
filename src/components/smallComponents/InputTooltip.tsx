@@ -8,7 +8,8 @@ type InputTooltipProps = {
   label: string;
   value: string;
   tool: string;
-  error?: boolean | undefined;
+  error?: boolean;
+  multiline?: boolean;
   onBlur?: (
     event: React.FocusEvent<HTMLTextAreaElement | HTMLInputElement>
   ) => void;
@@ -29,6 +30,7 @@ const InputTooltip: React.FC<InputTooltipProps> = ({
   label,
   value,
   tool,
+  multiline,
   onBlur,
   error = false,
   classname,
@@ -52,6 +54,8 @@ const InputTooltip: React.FC<InputTooltipProps> = ({
         defaultValue={value}
         variant="outlined"
         onBlur={onBlur}
+        multiline={multiline}
+        rows={multiline ? 3 : undefined}
         inputRef={inputRef}
         onClick={onClick}
         InputLabelProps={{

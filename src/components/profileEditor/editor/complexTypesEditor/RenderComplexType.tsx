@@ -188,7 +188,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
           onChangeCardinality={onChangeboth(onChangeCardinality)}
         />
       );
-    } else if (newPath === 'sliceName' && currentNodeJSON.sliceName) {
+    } else if (currentNodeJSON.sliceName) {
       /**
        * if attribute name is slice name, render a button to edit slice name
        */
