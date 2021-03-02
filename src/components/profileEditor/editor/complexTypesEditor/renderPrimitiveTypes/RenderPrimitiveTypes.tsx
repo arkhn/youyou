@@ -12,6 +12,7 @@ import SwitchTooltip from 'components/smallComponents/SwitchTooltip';
 import { SimplifiedAttributes } from 'types';
 import { getLabel } from './utils';
 import Cardinality from './cardinality/Cardinality';
+import useStyles from './style';
 
 type RenderPrimitiveTypesProps = {
   attribute: SimplifiedAttributes;
@@ -38,6 +39,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
   newPath,
   onChangeCardinality
 }) => {
+  const classes = useStyles();
   const { currentElementDefinition } = useSelector(
     (state: RootState) => state.resourceSlice
   );
@@ -197,7 +199,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
         timeZone = newDate[1];
       }
       attributeElement = (
-        <>
+        <div className={classes.dateTimeContainer}>
           <InputDateTooltip
             type="dateTime-local"
             label={'dateTime'}
@@ -225,7 +227,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
               );
             }}
           />
-        </>
+        </div>
       );
       break;
     }

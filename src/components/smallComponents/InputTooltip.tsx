@@ -20,9 +20,6 @@ const useStyles = makeStyles(() => ({
   root: {
     display: 'flex',
     alignItems: 'center'
-  },
-  select: {
-    flexGrow: 1
   }
 }));
 
