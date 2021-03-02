@@ -39,16 +39,16 @@ export const createComplexSnapshot = (
     attribute.forEach(
       (type) => type && createSimplifiedAttributes(type, type, attributeTree)
     );
-    const children = createComplexTypes(
-      complexTypes,
-      attributeTree.children[0].children,
-      primitiveTypes
-    );
-    attributeTree.children[0].children.splice(
-      0,
-      attributeTree.children[0].children.length
-    );
-    attributeTree.children[0].children = children;
+    const children: any[] = [];
+    attributeTree.children.forEach((kid) => {
+      children.push(
+        createComplexTypes(complexTypes, kid.children, primitiveTypes)
+      );
+    });
+
+    children.forEach((kid, i) => {
+      attributeTree.children[i].children = kid;
+    });
   }
   const changePath = (
     atts: SimplifiedAttributes[],
