@@ -18,10 +18,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
     width: '100%',
     alignItems: 'center',
-    marginBottom: 4
+    marginBottom: 12
   },
   cardinalityTitle: {
-    marginRight: 16
+    marginRight: 8
   },
   cardinalityToggle: {
     marginRight: 8

@@ -23,7 +23,7 @@ export const createComplexSnapshot = (
   attributes: IElementDefinition[],
   primitiveTypes: string[],
   complexTypes: SimplifiedAttributes[]
-): SimplifiedAttributes => {
+): SimplifiedAttributes[] => {
   let attribute: TemporaryAttribute[] = [];
   const attributeTree: SimplifiedAttributes = {
     id: '',
@@ -65,7 +65,7 @@ export const createComplexSnapshot = (
     return attribs;
   };
 
-  return changePath(attributeTree.children, attributeTree.name)[0];
+  return changePath(attributeTree.children, attributeTree.name);
 };
 
 export const createElementDefinitionTree = (

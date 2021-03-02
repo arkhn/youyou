@@ -6,6 +6,7 @@ import { Accordion, AccordionDetails, Typography } from '@material-ui/core';
 import { ExpandMore } from '@material-ui/icons';
 
 import { useStyles, MuiAccordionSummary, MuiButton } from './style';
+import { TooltipHelp } from 'components/smallComponents';
 
 type AccordionEditorProps = {
   accordionDetails: JSX.Element;
@@ -14,6 +15,7 @@ type AccordionEditorProps = {
   path?: string;
   index?: number;
   className?: string;
+  tool?: string;
 };
 
 const AccordionEditor: React.FC<AccordionEditorProps> = ({
@@ -22,7 +24,8 @@ const AccordionEditor: React.FC<AccordionEditorProps> = ({
   index,
   accordionTitle,
   path,
-  className
+  className,
+  tool
 }) => {
   const classes = useStyles();
 
@@ -32,7 +35,10 @@ const AccordionEditor: React.FC<AccordionEditorProps> = ({
         <div
           className={clsx(classes.accordionTitle, classes.accordionTitleDelete)}
         >
-          <Typography>{accordionTitle}</Typography>
+          <div className={classes.accordionTitleTooltip}>
+            <Typography className={classes.title}>{accordionTitle}</Typography>
+            {tool && <TooltipHelp tool={tool} />}
+          </div>
           {path && (
             <MuiButton
               onClick={() => {

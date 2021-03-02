@@ -111,6 +111,12 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
        * If it's a multiple choices fixed type, renders a select and change the
        * element definition type on click, to create and edit the type.
        */
+      const newPath =
+        selectedFixedType === 'http://hl7.org/fhirpath/System.String'
+          ? 'fixedString'
+          : 'fixed' +
+            selectedFixedType.charAt(0).toUpperCase() +
+            selectedFixedType.slice(1);
       const selectorValues = elementDefFixed.type.map((type) => {
         return {
           label: type.code,
@@ -130,19 +136,13 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
             />
           }
           path={selectedFixedType}
-          complexFhirAttribute={attributeFixed}
+          complexFhirAttribute={{ ...attributeFixed, name: newPath }}
           handleAdd={() => {
             const newTypeCode = elementDefFixed.type?.find(
               (type) => type.code === selectedFixedType
             );
             if (newTypeCode) {
               setFixedType(selectedFixedType);
-              const newPath =
-                selectedFixedType === 'http://hl7.org/fhirpath/System.String'
-                  ? 'fixedString'
-                  : 'fixed' +
-                    selectedFixedType.charAt(0).toUpperCase() +
-                    selectedFixedType.slice(1);
               if (isPrimitive(selectedFixedType, primitiveTypes)) {
                 const newValue = selectedFixedType === 'boolean' ? false : '';
                 const newElement = {
@@ -195,17 +195,16 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
        * If it's not a multiple choices fixed type, renders an AddComplexType
        * component to add the fixed type to the structure definition
        */
+      const newPath =
+        fixedType === 'http://hl7.org/fhirpath/System.String'
+          ? 'fixedString'
+          : 'fixed' + fixedType.charAt(0).toUpperCase() + fixedType.slice(1);
+
       renderFixedValuesSelector = (
         <AddComplexType
           path={fixedType}
-          complexFhirAttribute={attributeFixed}
+          complexFhirAttribute={{ ...attributeFixed, name: newPath }}
           handleAdd={() => {
-            const newPath =
-              fixedType === 'http://hl7.org/fhirpath/System.String'
-                ? 'fixedString'
-                : 'fixed' +
-                  fixedType.charAt(0).toUpperCase() +
-                  fixedType.slice(1);
             if (isPrimitive(fixedType, primitiveTypes)) {
               const newValue = fixedType === 'boolean' ? false : '';
               const newElement: IElementDefinition = {
@@ -251,17 +250,27 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
      * If the fixed element exists in the element definition, render an accordion
      * with the input to modify
      */
-    if (isPrimitive(fixedType, primitiveTypes) && attributeFixed) {
+    if (
+      isPrimitive(fixedType, primitiveTypes) &&
+      attributeFixed &&
+      currentElementDefinition &&
+      currentElementDefinition.definition
+    ) {
       /**
        * if the fixed type is a primitive type, renders an RenderPrimitiveTypes component
        */
+      console.log(attributeFixed);
       return (
         <AccordionEditor
-          accordionTitle={'fixed[x]'}
+          accordionTitle={fixedValueContext.path}
           path={fixedValueContext.path}
+          tool={attributeFixed.definition}
           accordionDetails={
             <RenderPrimitiveTypes
-              attribute={attributeFixed}
+              attribute={{
+                ...attributeFixed,
+                definition: currentElementDefinition?.definition
+              }}
               onChangeValue={(path, value) => {
                 setFixedValueContext({ ...fixedValueContext, value });
               }}
@@ -271,7 +280,7 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
           }
           handleDelete={() =>
             setFixedValueContext({
-              path: fixedValueContext.path,
+              ...fixedValueContext,
               value: undefined
             })
           }
@@ -286,6 +295,7 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
           <AccordionEditor
             accordionTitle={fixedValueContext.path}
             path={fixedValueContext.path}
+            tool={attributeFixed.definition}
             accordionDetails={
               <RenderComplexType
                 complexFhirAttributes={attributeFixed.children}
@@ -321,7 +331,7 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
             }
             handleDelete={() =>
               setFixedValueContext({
-                path: fixedValueContext.path,
+                ...fixedValueContext,
                 value: undefined
               })
             }

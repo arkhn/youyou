@@ -147,14 +147,16 @@ const Editor: React.FC<EditorProps> = ({
     setFixedValueContext(() => {
       let path = undefined;
       let value = undefined;
+      let type = undefined;
       for (const attribute in currentElementDefinition) {
         if (attribute.includes('fixed') && attribute !== 'fixed[x]') {
           path = attribute;
           //@ts-ignore
           value = currentElementDefinition[attribute];
+          type = currentElementDefinition.type;
         }
       }
-      return { path, value };
+      return { path, value, type };
     });
     if (currentElementDefinition && structureDefinitionType === 'element') {
       setElementDefJSON(createElementDefJSON());
@@ -288,7 +290,6 @@ const Editor: React.FC<EditorProps> = ({
                         // @ts-ignore
                         elementDefJSON[fixedValueContext.path] !== undefined
                       ) {
-                        newElementDefinition = { ...elementDefJSON };
                         // @ts-ignore
                         delete newElementDefinition[fixedValueContext.path];
                         setFixedValueContext({

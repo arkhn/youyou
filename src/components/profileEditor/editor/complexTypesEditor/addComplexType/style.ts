@@ -17,7 +17,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
     flexDirection: 'column'
   },
   title: {
-    marginRight: 16
+    marginRight: 8,
+    marginLeft: 4
   },
   allTitles: {
     display: 'flex',

@@ -211,7 +211,11 @@ export const createComplexTypes = (
                 (ct) => ct.name === kid.name.split('.')[0]
               )
             ) {
-              childrenComplexType.push(kid);
+              let index = 0;
+              childrenComplexType.forEach((value, i) => {
+                if (value.name === kid.name.split(':')[0]) index = i;
+              });
+              childrenComplexType.splice(index + 1, 0, kid);
             } else {
               const newName = kid.name
                 .split('.')

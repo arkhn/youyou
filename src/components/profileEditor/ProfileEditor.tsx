@@ -85,8 +85,6 @@ const ProfileEditor: React.FC<{}> = () => {
       complexTypes
     );
 
-  console.log(newStructureDef?.snapshot, attributesForUI);
-
   /**
    * If click on add or delete icon, open a dialog box to confirm actions
    * @param e event onClick

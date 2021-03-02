@@ -31,5 +31,12 @@ export const useStyles = makeStyles(() => ({
   },
   accordionTitleDelete: {
     justifyContent: 'space-between'
+  },
+  accordionTitleTooltip: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  title: {
+    marginRight: 8
   }
 }));

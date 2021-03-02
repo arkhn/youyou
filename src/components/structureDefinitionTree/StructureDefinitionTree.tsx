@@ -14,7 +14,7 @@ import { Typography } from '@material-ui/core';
 
 type StructureDefinitionTreeProps = {
   structureDefinitionId?: string;
-  uiAttributes?: SimplifiedAttributes;
+  uiAttributes?: SimplifiedAttributes[];
   onLabelClick?: (
     event: React.MouseEvent<Element, MouseEvent>,
     nodes: SimplifiedAttributes
@@ -80,7 +80,7 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
           </span>
         }
       />
-      {uiAttributes && renderNode(uiAttributes)}
+      {uiAttributes && uiAttributes.map((attribute) => renderNode(attribute))}
     </TreeView>
   );
 };

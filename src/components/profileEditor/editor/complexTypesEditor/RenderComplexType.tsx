@@ -89,6 +89,8 @@ const RenderComplexType: React.FC<DetailProps> = ({
           primitiveTypes={primitiveTypes}
         />
       );
+    } else if (newPath === 'extension') {
+      console.log(attribute);
     } else if (
       attribute.children.length > 0 &&
       newPath !== 'extension' &&
@@ -153,6 +155,7 @@ const RenderComplexType: React.FC<DetailProps> = ({
         attributeElement = (
           <AccordionEditor
             handleDelete={onChange(handleDelete)}
+            tool={attribute.definition}
             accordionTitle={
               attribute.min && attribute.min > 0 ? `${newPath}*` : newPath
             }

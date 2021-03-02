@@ -6,6 +6,7 @@ type InputDateProps = {
   label: string;
   value: string;
   tool: string;
+  type: 'date' | 'dateTime-local' | 'time';
   onChange?: (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => void;
@@ -15,13 +16,14 @@ const InputDate: React.FC<InputDateProps> = ({
   label,
   value,
   tool,
-  onChange
+  onChange,
+  type
 }) => {
   return (
     <CssTextField
       label={label}
       defaultValue={value}
-      type="datetime-local"
+      type={type}
       onChange={onChange}
       variant="outlined"
       InputLabelProps={{
