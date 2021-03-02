@@ -93,7 +93,8 @@ const RenderComplexType: React.FC<DetailProps> = ({
       attribute.children.length > 0 &&
       newPath !== 'extension' &&
       newPath !== 'snapshot' &&
-      newPath !== 'differential'
+      newPath !== 'differential' &&
+      newPath !== 'type'
     ) {
       if (Array.isArray(currentNodeJSON[newPath])) {
         /**

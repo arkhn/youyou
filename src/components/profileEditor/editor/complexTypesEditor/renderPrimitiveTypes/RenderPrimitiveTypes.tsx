@@ -5,7 +5,8 @@ import { RootState } from 'state/store';
 import {
   InputDateTooltip,
   InputTooltip,
-  SelectTooltip
+  SelectTooltip,
+  TooltipHelp
 } from 'components/smallComponents';
 import SwitchTooltip from 'components/smallComponents/SwitchTooltip';
 
@@ -13,6 +14,7 @@ import { SimplifiedAttributes } from 'types';
 import { getLabel } from './utils';
 import Cardinality from './cardinality/Cardinality';
 import useStyles from './style';
+import { Typography } from '@material-ui/core';
 
 type RenderPrimitiveTypesProps = {
   attribute: SimplifiedAttributes;
@@ -44,13 +46,39 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
     (state: RootState) => state.resourceSlice
   );
   let attributeElement: any = undefined;
-  const label = `${getLabel(attribute, currentElementDefinition)}${
-    attribute.min && attribute.min > 0 ? '*' : ''
-  }`;
   /**
    * decimal : Rational numbers that have a decimal representation
    *
    */
+
+  const isDisabled = () => {
+    if (
+      currentElementDefinition &&
+      (attribute.name === 'path' || attribute.name === 'id')
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const isRequired = () => {
+    if (
+      (attribute.min && attribute.min > 0) ||
+      attribute.name === 'id' ||
+      attribute.name === 'path' ||
+      attribute.name === 'short' ||
+      attribute.name === 'definition'
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const label = `${getLabel(attribute, currentElementDefinition)}${
+    isRequired() ? '*' : ''
+  }`;
 
   switch (attribute.type) {
     case 'string':
@@ -65,6 +93,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
       if (attribute.name !== 'sliceName' && attribute.name !== 'max') {
         attributeElement = (
           <InputTooltip
+            disabled={isDisabled()}
             label={label}
             value={currentNodeJSON[newPath] ?? ''}
             tool={attribute.definition}
@@ -162,7 +191,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
       break;
     }
     case 'date': {
-      // date YYYY, YYYY-MM, or YYYY-MM-DD
+      // YYYY-MM-DD
       attributeElement = (
         <InputDateTooltip
           type="date"
@@ -175,7 +204,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
       break;
     }
     case 'time': {
-      // time hh:mm:ss
+      // hh:mm:ss
       attributeElement = (
         <InputDateTooltip
           type="time"
@@ -189,8 +218,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
     }
     case 'instant':
     case 'dateTime': {
-      // instant YYYY-MM-DDThh:mm:ss.sss+zz:zz
-      // dateTime YYYY, YYYY-MM, YYYY-MM-DD or YYYY-MM-DDThh:mm:ss+zz:zz
+      // YYYY-MM-DDThh:mm:ss.sss+zz:zz
       let date: any;
       let timeZone: any;
       if (currentNodeJSON[newPath]) {
@@ -200,33 +228,40 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
       }
       attributeElement = (
         <div className={classes.dateTimeContainer}>
-          <InputDateTooltip
-            type="dateTime-local"
-            label={'dateTime'}
-            value={date ?? ''}
-            tool={attribute.definition}
-            onChange={(event) => {
-              date = event.target.value;
-              onChangeValue(
-                newPath,
-                timeZone ? `${date}+${timeZone}` : `${date}`
-              );
-            }}
-          />
-          <InputDateTooltip
-            type="time"
-            label={'time-zone'}
-            value={timeZone ?? ''}
-            tool={'add a time-zone'}
-            onChange={(event) => {
-              onChangeValue(
-                newPath,
-                event.target.value !== ''
-                  ? `${date}+${event.target.value}`
-                  : date
-              );
-            }}
-          />
+          <div className={classes.titles}>
+            <Typography className={classes.title} variant="h2">
+              {attribute.name}
+            </Typography>
+            <TooltipHelp tool={attribute.definition} />
+          </div>
+          <div className={classes.inputs}>
+            <InputDateTooltip
+              type="dateTime-local"
+              label={'date and time'}
+              value={date ?? ''}
+              onChange={(event) => {
+                date = event.target.value;
+                onChangeValue(
+                  newPath,
+                  timeZone ? `${date}+${timeZone}` : `${date}`
+                );
+              }}
+            />
+            <InputDateTooltip
+              className={classes.timeInput}
+              type="time"
+              label={'time zone'}
+              value={timeZone ?? ''}
+              onChange={(event) => {
+                onChangeValue(
+                  newPath,
+                  event.target.value !== ''
+                    ? `${date}+${event.target.value}`
+                    : date
+                );
+              }}
+            />
+          </div>
         </div>
       );
       break;

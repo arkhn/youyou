@@ -7,7 +7,8 @@ import clsx from 'clsx';
 type InputDateProps = {
   label: string;
   value: string;
-  tool: string;
+  tool?: string;
+  className?: string;
   type: 'date' | 'dateTime-local' | 'time';
   onChange?: (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -18,9 +19,6 @@ const useStyles = makeStyles(() => ({
   container: {
     display: 'flex',
     alignItems: 'center'
-  },
-  time: {
-    marginLeft: 16
   }
 }));
 
@@ -29,17 +27,12 @@ const InputDate: React.FC<InputDateProps> = ({
   value,
   tool,
   onChange,
-  type
+  type,
+  className
 }) => {
   const classes = useStyles();
-
   return (
-    <div
-      className={clsx(
-        classes.container,
-        type === 'time' ? classes.time : undefined
-      )}
-    >
+    <div className={clsx(className, classes.container)}>
       <CssTextField
         label={label}
         defaultValue={value}
@@ -50,7 +43,7 @@ const InputDate: React.FC<InputDateProps> = ({
           shrink: true
         }}
       />
-      <TooltipHelp tool={tool} />
+      {tool && <TooltipHelp tool={tool} />}
     </div>
   );
 };

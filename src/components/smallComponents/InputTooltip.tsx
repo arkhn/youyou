@@ -10,6 +10,7 @@ type InputTooltipProps = {
   tool: string;
   error?: boolean;
   multiline?: boolean;
+  disabled?: boolean;
   onBlur?: (
     event: React.FocusEvent<HTMLTextAreaElement | HTMLInputElement>
   ) => void;
@@ -31,7 +32,8 @@ const InputTooltip: React.FC<InputTooltipProps> = ({
   onBlur,
   error = false,
   classname,
-  onClick
+  onClick,
+  disabled
 }) => {
   const classes = useStyles();
   const inputRef = useRef<HTMLInputElement | undefined>();
@@ -45,6 +47,7 @@ const InputTooltip: React.FC<InputTooltipProps> = ({
   return (
     <div className={classes.root}>
       <CssTextField
+        disabled={disabled}
         className={classname}
         label={label}
         error={error}
