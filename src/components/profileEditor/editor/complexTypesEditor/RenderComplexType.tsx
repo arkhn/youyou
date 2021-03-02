@@ -89,8 +89,6 @@ const RenderComplexType: React.FC<DetailProps> = ({
           primitiveTypes={primitiveTypes}
         />
       );
-    } else if (newPath === 'extension') {
-      console.log(attribute);
     } else if (
       attribute.children.length > 0 &&
       newPath !== 'extension' &&

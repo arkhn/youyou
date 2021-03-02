@@ -74,7 +74,6 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
     }
     case 'xhtml':
     case 'markdown': {
-      console.log(attribute.name, attribute.type);
       attributeElement = (
         <InputTooltip
           label={label}
@@ -161,7 +160,6 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
       break;
     }
     case 'date': {
-      console.log(attribute, currentNodeJSON);
       // date YYYY, YYYY-MM, or YYYY-MM-DD
       attributeElement = (
         <InputDateTooltip
@@ -175,7 +173,6 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
       break;
     }
     case 'time': {
-      console.log(attribute, currentNodeJSON);
       // time hh:mm:ss
       attributeElement = (
         <InputDateTooltip
@@ -190,6 +187,8 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
     }
     case 'instant':
     case 'dateTime': {
+      // instant YYYY-MM-DDThh:mm:ss.sss+zz:zz
+      // dateTime YYYY, YYYY-MM, YYYY-MM-DD or YYYY-MM-DDThh:mm:ss+zz:zz
       let date: any;
       let timeZone: any;
       if (currentNodeJSON[newPath]) {
@@ -229,11 +228,8 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
         </>
       );
       break;
-      // instant YYYY-MM-DDThh:mm:ss.sss+zz:zz
-      // dateTime YYYY, YYYY-MM, YYYY-MM-DD or YYYY-MM-DDThh:mm:ss+zz:zz
     }
     default:
-      //console.log(attribute.type);
       break;
   }
 

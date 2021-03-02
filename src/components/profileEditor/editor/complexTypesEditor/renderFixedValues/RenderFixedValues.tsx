@@ -259,7 +259,6 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
       /**
        * if the fixed type is a primitive type, renders an RenderPrimitiveTypes component
        */
-      console.log(attributeFixed);
       return (
         <AccordionEditor
           accordionTitle={fixedValueContext.path}
