@@ -66,7 +66,7 @@ const TreeNode: React.FC<TreeNodeProps> = ({ nodes, handleClickSlices }) => {
               add: true
             });
           }}
-          style={{ display: display }}
+          style={{ display: isSlice ? 'none' : display }}
           disabled={disabledPizza}
         >
           <Tooltip title={'Add a slice'}>
