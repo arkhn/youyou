@@ -51,17 +51,6 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
    *
    */
 
-  const isDisabled = () => {
-    if (
-      currentElementDefinition &&
-      (attribute.name === 'path' || attribute.name === 'id')
-    ) {
-      return true;
-    } else {
-      return false;
-    }
-  };
-
   const isRequired = () => {
     if (
       (attribute.min && attribute.min > 0) ||
@@ -93,7 +82,6 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
       if (attribute.name !== 'sliceName' && attribute.name !== 'max') {
         attributeElement = (
           <InputTooltip
-            disabled={isDisabled()}
             label={label}
             value={currentNodeJSON[newPath] ?? ''}
             tool={attribute.definition}
