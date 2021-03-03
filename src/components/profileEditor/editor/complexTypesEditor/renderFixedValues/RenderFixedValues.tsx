@@ -30,12 +30,21 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
   complexTypes
 }) => {
   const classes = useStyles();
-  const { currentElementDefinition, backboneElements } = useSelector(
-    (state: RootState) => {
-      const { backboneElements } = state.fhirDataTypes;
-      const { currentElementDefinition } = state.resourceSlice;
-      return { backboneElements, currentElementDefinition };
-    }
+  const {
+    currentElementDefinition,
+    originalStructureDef,
+    backboneElements
+  } = useSelector((state: RootState) => {
+    const { backboneElements } = state.fhirDataTypes;
+    const {
+      currentElementDefinition,
+      originalStructureDef
+    } = state.resourceSlice;
+    return { backboneElements, currentElementDefinition, originalStructureDef };
+  });
+
+  const baseElement = originalStructureDef?.snapshot?.element.find(
+    (elem) => elem.path === currentElementDefinition?.path
   );
 
   /**
@@ -277,12 +286,20 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
               newPath={'value'}
             />
           }
-          handleDelete={() =>
-            setFixedValueContext({
-              ...fixedValueContext,
-              value: undefined
-            })
-          }
+          handleDelete={() => {
+            if (baseElement) {
+              setElementDefFixed({
+                ...elementDefFixed,
+                type: baseElement.type
+              });
+              setSelectedFixedType('');
+              setFixedValueContext({
+                ...fixedValueContext,
+                type: baseElement.type,
+                value: undefined
+              });
+            }
+          }}
         />
       );
     } else {
@@ -328,12 +345,20 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
                 name={fixedValueContext.path}
               />
             }
-            handleDelete={() =>
-              setFixedValueContext({
-                ...fixedValueContext,
-                value: undefined
-              })
-            }
+            handleDelete={() => {
+              if (baseElement) {
+                setSelectedFixedType('');
+                setElementDefFixed({
+                  ...elementDefFixed,
+                  type: baseElement.type
+                });
+                setFixedValueContext({
+                  ...fixedValueContext,
+                  type: baseElement.type,
+                  value: undefined
+                });
+              }
+            }}
           />
         );
       } else {

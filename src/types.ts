@@ -16,6 +16,7 @@ export type ResourceState = {
   requestId?: string;
   resources: { id: string }[];
   structureDefinition: IStructureDefinition | undefined;
+  originalStructureDef: IStructureDefinition | undefined;
   extensionStructureDefinition: IStructureDefinition | undefined;
   selectedResourceId: string | undefined;
   loading: boolean;

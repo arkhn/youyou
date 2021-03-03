@@ -84,7 +84,6 @@ const ProfileEditor: React.FC<{}> = () => {
       primitiveTypes,
       complexTypes
     );
-
   /**
    * If click on add or delete icon, open a dialog box to confirm actions
    * @param e event onClick

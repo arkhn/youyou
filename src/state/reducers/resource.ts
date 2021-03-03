@@ -23,6 +23,7 @@ const initialState: ResourceState = {
   structureDefinition: undefined,
   extensionStructureDefinition: extensionStructureDefinition as IStructureDefinition,
   selectedResourceId: undefined,
+  originalStructureDef: undefined,
   loading: false,
   error: undefined,
   structureDefMeta: true,
@@ -322,6 +323,7 @@ const resourceSlice = createSlice({
       (state: ResourceState, { payload }) => {
         state.loading = false;
         state.structureDefinition = payload;
+        state.originalStructureDef = payload;
         state.error = undefined;
         state.structureDefMeta = true;
       }
@@ -331,6 +333,7 @@ const resourceSlice = createSlice({
       (state: ResourceState, { payload }) => {
         state.loading = false;
         state.structureDefinition = undefined;
+        state.originalStructureDef = undefined;
         state.error = payload ?? undefined;
       }
     );

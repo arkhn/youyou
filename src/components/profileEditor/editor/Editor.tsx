@@ -119,7 +119,6 @@ const Editor: React.FC<EditorProps> = ({
       createElementDefinitionTree(elementDefinitionTree);
     return merge(cloneDeep(elementDefTreeJSON), currentElementDefinition);
   }, [elementDefinitionTree, currentElementDefinition]);
-
   /**
    * creates a FHIR JSON structure for Structure Definition
    */
@@ -274,7 +273,7 @@ const Editor: React.FC<EditorProps> = ({
                       structureDefinitionType === 'element' &&
                       structureDefinition
                     ) {
-                      let newElementDefinition = { ...elementDefJSON };
+                      let newElementDefinition: any = { ...elementDefJSON };
                       if (
                         fixedValueContext.path &&
                         fixedValueContext.value !== undefined
