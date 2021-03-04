@@ -25,6 +25,23 @@ const useStyles = makeStyles((theme: Theme) => ({
     border: `1px solid ${theme.palette.primary.contrastText}`,
     borderRadius: 4,
     margin: '8px 0'
+  },
+  loader: {
+    height: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  errorContainer: {
+    width: '100%',
+    height: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  errorTitle: {
+    marginBottom: 16
   }
 }));
 

@@ -46,7 +46,6 @@ const Homepage: React.FC<{}> = () => {
       return { label: resource.name, value: resource.name };
     })
     .sort((a, b) => {
-      // Use toUpperCase() to ignore character casing
       const idA = a.label.toUpperCase();
       const idB = b.label.toUpperCase();
 

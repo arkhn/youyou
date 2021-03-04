@@ -7,6 +7,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useAppDispatch } from 'state/store';
 import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 
+import isEmpty from 'lodash.isempty';
+import cloneDeep from 'lodash.clonedeep';
+
 type ButtonDownloadProps = {
   text: string;
   toDownload: IStructureDefinition;
@@ -28,13 +31,49 @@ const ButtonDownload: React.FC<ButtonDownloadProps> = ({
   const classes = useStyles();
   const dispatch = useAppDispatch();
 
+  const cleaningJSON = (oldObject: any) => {
+    const object = cloneDeep(oldObject);
+    for (const key in object) {
+      if (object[key] === undefined) {
+        delete object[key];
+      } else if (
+        typeof object[key] === 'object' &&
+        !Array.isArray(object[key])
+      ) {
+        if (isEmpty(object[key])) {
+          delete object[key];
+        } else {
+          object[key] = cleaningJSON(object[key]);
+        }
+      } else if (
+        typeof object[key] === 'object' &&
+        Array.isArray(object[key])
+      ) {
+        if (isEmpty(object[key])) {
+          delete object[key];
+        } else {
+          const newObject: any[] = [];
+          object[key].forEach((item: any) => {
+            const newItem = cleaningJSON(item);
+            if (!isEmpty(newItem)) {
+              newObject.push(newItem);
+            }
+          });
+          object[key] = cleaningJSON(newObject);
+        }
+      }
+    }
+    return object;
+  };
+  const cleanJSONToDownload = cleaningJSON(toDownload);
+
   return (
     <a
       href={
         'data:json/plain;charset=utf-8,' +
-        encodeURIComponent(JSON.stringify(toDownload, null, 2))
+        encodeURIComponent(JSON.stringify(cleanJSONToDownload, null, 2))
       }
-      download={toDownload.name + '.json'}
+      download={cleanJSONToDownload.name + '.json'}
       className={classes.buttonDownloadText}
     >
       <Button

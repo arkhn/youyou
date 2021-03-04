@@ -26,7 +26,7 @@ export const requestIdsThunk = createAsyncThunk<
   { state: RootState; rejectValue: Error }
 >('resource/requestIdsThunk', async (param, { rejectWithValue }) => {
   const response: AxiosResponse<any> = await api.get(
-    `/StructureDefinition?kind=resource&_elements=name&_count=150`
+    `/StructureDefinition?kind=resource&_elements=name&_count=200`
   );
   if (response.status === 200) {
     return response.data.entry.map((result: FetchedIds) => result.resource);

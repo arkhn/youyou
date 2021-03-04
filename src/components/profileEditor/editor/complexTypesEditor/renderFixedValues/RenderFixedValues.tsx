@@ -130,19 +130,25 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
           : 'fixed' +
             selectedFixedType.charAt(0).toUpperCase() +
             selectedFixedType.slice(1);
-      const selectorValues = elementDefFixed.type.map((type) => {
+      const selectorValues: {
+        label?: string;
+        value?: string;
+      }[] = elementDefFixed.type.map((type) => {
         return {
           label: type.code,
           value: type.code
         };
       });
       selectorValues.unshift({ label: 'select a type', value: '' });
+      const newSelectorValues = selectorValues.filter(
+        (value) => value.value !== 'BackboneElement'
+      );
       renderFixedValuesSelector = (
         <AddComplexType
           className={classes.selectMultipleType}
           childComponent={
             <SelectTooltip
-              choices={selectorValues}
+              choices={newSelectorValues}
               value={selectedFixedType}
               onChange={(e) => setSelectedFixedType(e.target.value as string)}
               label={'select fixed value type'}

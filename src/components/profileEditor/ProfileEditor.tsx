@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import { IStructureDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
-import { Paper, Typography } from '@material-ui/core';
+import { CircularProgress, Paper, Typography } from '@material-ui/core';
 import cloneDeep from 'lodash.clonedeep';
 
 import { SimplifiedAttributes } from 'types';
@@ -184,13 +184,24 @@ const ProfileEditor: React.FC<{}> = () => {
   };
 
   if (error) {
-    return <div>Error</div>;
+    return (
+      <>
+        <Navbar />
+        <div className={classes.errorContainer}>
+          <Typography variant="h2" className={classes.errorTitle}>
+            Error : {error.name}
+          </Typography>
+          <Typography>{error.message}</Typography>
+        </div>
+      </>
+    );
   } else if (
     newStructureDef &&
     !loading &&
     !error &&
     newStructureDef.snapshot &&
-    newStructureDef.snapshot.element[0].id
+    newStructureDef.snapshot.element[0].id &&
+    attributesForUI
   ) {
     return (
       <div>
@@ -239,7 +250,14 @@ const ProfileEditor: React.FC<{}> = () => {
       </div>
     );
   } else {
-    return <>Loading</>;
+    return (
+      <>
+        <Navbar />
+        <section className={classes.loader}>
+          <CircularProgress color="primary" />
+        </section>
+      </>
+    );
   }
 };
 
