@@ -6,9 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import { useAppDispatch } from 'state/store';
 import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
-
-import isEmpty from 'lodash.isempty';
-import cloneDeep from 'lodash.clonedeep';
+import { cleaningJSON } from './utils';
 
 type ButtonDownloadProps = {
   text: string;
@@ -31,40 +29,6 @@ const ButtonDownload: React.FC<ButtonDownloadProps> = ({
   const classes = useStyles();
   const dispatch = useAppDispatch();
 
-  const cleaningJSON = (oldObject: any) => {
-    const object = cloneDeep(oldObject);
-    for (const key in object) {
-      if (object[key] === undefined) {
-        delete object[key];
-      } else if (
-        typeof object[key] === 'object' &&
-        !Array.isArray(object[key])
-      ) {
-        if (isEmpty(object[key])) {
-          delete object[key];
-        } else {
-          object[key] = cleaningJSON(object[key]);
-        }
-      } else if (
-        typeof object[key] === 'object' &&
-        Array.isArray(object[key])
-      ) {
-        if (isEmpty(object[key])) {
-          delete object[key];
-        } else {
-          const newObject: any[] = [];
-          object[key].forEach((item: any) => {
-            const newItem = cleaningJSON(item);
-            if (!isEmpty(newItem)) {
-              newObject.push(newItem);
-            }
-          });
-          object[key] = cleaningJSON(newObject);
-        }
-      }
-    }
-    return object;
-  };
   const cleanJSONToDownload = cleaningJSON(toDownload);
 
   return (

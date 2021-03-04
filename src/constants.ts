@@ -1,3 +1,3 @@
 export const FHIR_API_URL = 'https://staging.arkhn.com/api';
 export const AUTH_TOKEN_KEY =
-  'XUtYBzS1sTUAN-7aHtU-lkJRaVz_uKxh2uqwwh2e1ks.unWnQaK8SB4Iod3i6k-OOHOhlMv7UFitsMxrnwNOme0';
+  'uCdCF5UAGtlTGvghfcUQeRR26sfMXW6ZYDAJFGectec.5Z0Gt2qrCRsv0mXucJTyL9Wo_gIsXR8enU7gDsS8VTs';

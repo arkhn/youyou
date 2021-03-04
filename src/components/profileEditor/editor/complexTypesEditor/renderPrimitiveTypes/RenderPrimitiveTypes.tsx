@@ -133,11 +133,10 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
           value?: string;
           label?: string;
         }[] = [];
-        if (attribute.min === 0)
-          mapValues.push({
-            value: '',
-            label: '--select a value--'
-          });
+        mapValues.push({
+          value: '',
+          label: '--select a value--'
+        });
         attribute.binding.valueSet.forEach((values) =>
           mapValues.push({
             value: values.code,

@@ -321,6 +321,17 @@ const resourceSlice = createSlice({
     builder.addCase(
       requestStructureDefThunk.fulfilled,
       (state: ResourceState, { payload }) => {
+        payload.snapshot?.element.forEach((element) => {
+          if (element.base && element.base.min !== element.min) {
+            element.base.min = element.min;
+          }
+          if (!element.base) {
+            element.base = { min: element.min, max: element.max };
+          }
+          if (element.base && element.base.max !== element.max) {
+            element.base.max = element.max;
+          }
+        });
         state.loading = false;
         state.structureDefinition = payload;
         state.originalStructureDef = payload;
