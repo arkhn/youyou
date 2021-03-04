@@ -6,7 +6,7 @@ import { Add } from '@material-ui/icons';
 
 import { SimplifiedAttributes } from 'types';
 
-import { useStyles } from './style';
+import { useStyles } from 'components/profileEditor/editor/complexTypesEditor/addComplexType/style';
 import { TooltipHelp } from 'components/smallComponents';
 
 type AddComplexTypeProps = {

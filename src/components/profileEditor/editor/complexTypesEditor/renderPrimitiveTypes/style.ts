@@ -3,7 +3,7 @@ import { makeStyles, Theme } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme: Theme) => ({
   dateTimeContainer: {
     borderRadius: 4,
-    border: `1px solid ${theme.palette.primary.light}`,
+    border: `1px solid ${theme.palette.primary.contrastText}`,
     padding: 8
   },
   titles: {

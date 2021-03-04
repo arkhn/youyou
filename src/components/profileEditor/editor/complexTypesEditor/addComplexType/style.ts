@@ -9,7 +9,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
   accordionAddItem: {
     borderRadius: 4,
     padding: 4,
-    border: `1px solid ${theme.palette.primary.light}`
+    border: `1px solid ${theme.palette.primary.contrastText}`
   },
   addValue: {
     display: 'flex',

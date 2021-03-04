@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   buttonLink: {
     textDecoration: 'none'
   },
+  buttonLinkDisabled: {
+    pointerEvents: 'none'
+  },
   items: {
     padding: theme.spacing(5),
     paddingTop: navbarHeight + theme.spacing(2),

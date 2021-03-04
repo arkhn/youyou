@@ -1,24 +1,28 @@
 import React, { useCallback, useEffect, useState, useContext } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from 'state/store';
+
+import merge from 'lodash.merge';
+import { IElementDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
+
 import { SimplifiedAttributes } from 'types';
-import { createElementDefTree } from '../../utils';
-import SelectWithHelp from 'components/smallComponents/SelectTooltip';
+
 import { isPrimitive } from 'state/utils';
+import { createElementDefTree } from 'components/profileEditor/editor/utils';
 import {
   onChangeElementJSON,
   onDeleteComplexType,
   onAddComplexType,
   createElementDefinitionTree
 } from 'components/profileEditor/utils';
-import merge from 'lodash.merge';
-import { IElementDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
 import contextFixedValue from 'components/contexts/context';
 import RenderComplexType from 'components/profileEditor/editor/complexTypesEditor/RenderComplexType';
 import RenderPrimitiveTypes from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/RenderPrimitiveTypes';
-import AccordionEditor from '../accordionEditor/AccordionEditor';
-import AddComplexType from '../addComplexType/AddComplexType';
-import useStyles from './styles';
+import AccordionEditor from 'components/profileEditor/editor/complexTypesEditor/accordionEditor/AccordionEditor';
+import AddComplexType from 'components/profileEditor/editor/complexTypesEditor/addComplexType/AddComplexType';
+import useStyles from 'components/profileEditor/editor/complexTypesEditor/renderFixedValues/styles';
+import { SelectTooltip } from 'components/smallComponents';
+import { Typography } from '@material-ui/core';
 
 type RenderFixedValuesProps = {
   primitiveTypes: string[];
@@ -137,7 +141,7 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
         <AddComplexType
           className={classes.selectMultipleType}
           childComponent={
-            <SelectWithHelp
+            <SelectTooltip
               choices={selectorValues}
               value={selectedFixedType}
               onChange={(e) => setSelectedFixedType(e.target.value as string)}
@@ -204,39 +208,20 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
        * If it's not a multiple choices fixed type, renders an AddComplexType
        * component to add the fixed type to the structure definition
        */
-      const newPath =
-        fixedType === 'http://hl7.org/fhirpath/System.String'
-          ? 'fixedString'
-          : 'fixed' + fixedType.charAt(0).toUpperCase() + fixedType.slice(1);
+      if (elementDefFixed.type[0].code !== 'BackboneElement') {
+        const newPath =
+          fixedType === 'http://hl7.org/fhirpath/System.String'
+            ? 'fixedString'
+            : 'fixed' + fixedType.charAt(0).toUpperCase() + fixedType.slice(1);
 
-      renderFixedValuesSelector = (
-        <AddComplexType
-          path={fixedType}
-          complexFhirAttribute={{ ...attributeFixed, name: newPath }}
-          handleAdd={() => {
-            if (isPrimitive(fixedType, primitiveTypes)) {
-              const newValue = fixedType === 'boolean' ? false : '';
-              const newElement: IElementDefinition = {
-                ...elementDefFixed,
-                [newPath]: newValue
-              };
-              setElementDefFixed(newElement);
-              setAttributeFixed(findFixedAttribute(newElement));
-              setFixedValueContext({
-                path: newPath,
-                value: newValue,
-                type: newElement.type
-              });
-            } else {
-              const toFind = complexTypes.find(
-                (type) => type.name === fixedType
-              )?.children;
-              if (toFind && attributeFixed) {
-                const newValue = merge(
-                  createElementDefinitionTree(toFind),
-                  createElementDefinitionTree(attributeFixed.children)
-                );
-                const newElement = {
+        renderFixedValuesSelector = (
+          <AddComplexType
+            path={fixedType}
+            complexFhirAttribute={{ ...attributeFixed, name: newPath }}
+            handleAdd={() => {
+              if (isPrimitive(fixedType, primitiveTypes)) {
+                const newValue = fixedType === 'boolean' ? false : '';
+                const newElement: IElementDefinition = {
                   ...elementDefFixed,
                   [newPath]: newValue
                 };
@@ -247,11 +232,45 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
                   value: newValue,
                   type: newElement.type
                 });
+              } else {
+                const toFind = complexTypes.find(
+                  (type) => type.name === fixedType
+                )?.children;
+                if (toFind && attributeFixed) {
+                  const newValue = merge(
+                    createElementDefinitionTree(toFind),
+                    createElementDefinitionTree(attributeFixed.children)
+                  );
+                  const newElement = {
+                    ...elementDefFixed,
+                    [newPath]: newValue
+                  };
+                  setElementDefFixed(newElement);
+                  setAttributeFixed(findFixedAttribute(newElement));
+                  setFixedValueContext({
+                    path: newPath,
+                    value: newValue,
+                    type: newElement.type
+                  });
+                }
               }
-            }
-          }}
-        />
-      );
+            }}
+          />
+        );
+      } else {
+        renderFixedValuesSelector = (
+          <div className={classes.fixedBackbone}>
+            <Typography
+              className={classes.fixedBackboneTitle}
+              variant="h2"
+            >{`Fixed[x]`}</Typography>
+            <Typography>
+              {`This element is a backbone element. You can't fix it, but you can
+          fix its child elements.`}
+            </Typography>
+          </div>
+        );
+      }
     }
     return <>{renderFixedValuesSelector}</>;
   } else {

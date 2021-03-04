@@ -12,6 +12,8 @@ import cloneDeep from 'lodash.clonedeep';
 import merge from 'lodash.merge';
 import clsx from 'clsx';
 
+import ContextFixedValue from 'components/contexts/context';
+import { updateStructureDefProfileThunk } from 'state/reducers/resource';
 import { RootState, useAppDispatch } from 'state/store';
 import {
   createJSONTree,
@@ -25,10 +27,8 @@ import {
   onAddComplexType,
   createElementDefinitionTree
 } from 'components/profileEditor/utils';
-import ContextFixedValue from 'components/contexts/context';
 
 import useStyles from 'components/profileEditor/editor/style';
-import { updateStructureDefProfileThunk } from 'state/reducers/resource';
 
 type EditorProps = {
   structureDefinition: IStructureDefinition;

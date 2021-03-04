@@ -2,18 +2,17 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from 'state/store';
 
+import { SimplifiedAttributes } from 'types';
+import { getLabel } from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/utils';
 import {
   InputDateTooltip,
   InputTooltip,
   SelectTooltip,
-  TooltipHelp
+  TooltipHelp,
+  SwitchTooltip
 } from 'components/smallComponents';
-import SwitchTooltip from 'components/smallComponents/SwitchTooltip';
-
-import { SimplifiedAttributes } from 'types';
-import { getLabel } from './utils';
-import Cardinality from './cardinality/Cardinality';
-import useStyles from './style';
+import Cardinality from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/cardinality/Cardinality';
+import useStyles from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/style';
 import { Typography } from '@material-ui/core';
 
 type RenderPrimitiveTypesProps = {
@@ -114,7 +113,6 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
             currentNodeJSON={currentNodeJSON}
             onChangeValue={onChangeValue}
             onChangeCardinality={onChangeCardinality}
-            attribute={attribute}
           />
         );
       } else {
@@ -207,12 +205,14 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
     case 'instant':
     case 'dateTime': {
       // YYYY-MM-DDThh:mm:ss.sss+zz:zz
-      let date: any;
       let timeZone: any;
+      let date: any;
       if (currentNodeJSON[newPath]) {
-        const newDate = currentNodeJSON[newPath].split('+');
-        date = newDate[0];
+        const newDate = new Date(currentNodeJSON[newPath])
+          .toISOString()
+          .split('+');
         timeZone = newDate[1];
+        date = new Date(currentNodeJSON[newPath]).toISOString().split('Z')[0];
       }
       attributeElement = (
         <div className={classes.dateTimeContainer}>

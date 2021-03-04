@@ -28,7 +28,7 @@ type SelectWithHelpProps = {
   ) => void;
 };
 
-const CssFormControl = withStyles((theme: Theme) => ({
+export const CssFormControl = withStyles((theme: Theme) => ({
   root: {
     display: 'flex',
     alignItems: 'center',

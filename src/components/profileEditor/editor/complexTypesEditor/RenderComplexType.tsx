@@ -8,8 +8,8 @@ import AccordionEditor from 'components/profileEditor/editor/complexTypesEditor/
 import DialogChangeSliceName from 'components/profileEditor/editor/complexTypesEditor/dialogSliceName/DialogChangeSliceName';
 import RenderPrimitiveTypes from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/RenderPrimitiveTypes';
 import { changeFixedName } from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/utils';
-
 import RenderFixedValues from 'components/profileEditor/editor/complexTypesEditor/renderFixedValues/RenderFixedValues';
+
 import { useStyles } from 'components/profileEditor/editor/complexTypesEditor/styles';
 
 type DetailProps = {

@@ -14,7 +14,7 @@ export type FetchedIds = {
 
 export type ResourceState = {
   requestId?: string;
-  resources: { id: string }[];
+  resources: { name: string }[];
   structureDefinition: IStructureDefinition | undefined;
   originalStructureDef: IStructureDefinition | undefined;
   extensionStructureDefinition: IStructureDefinition | undefined;

@@ -5,8 +5,12 @@ import clsx from 'clsx';
 import { Accordion, AccordionDetails, Typography } from '@material-ui/core';
 import { ExpandMore } from '@material-ui/icons';
 
-import { useStyles, MuiAccordionSummary, MuiButton } from './style';
 import { TooltipHelp } from 'components/smallComponents';
+import {
+  useStyles,
+  MuiAccordionSummary,
+  MuiButton
+} from 'components/profileEditor/editor/complexTypesEditor/accordionEditor/style';
 
 type AccordionEditorProps = {
   accordionDetails: JSX.Element;

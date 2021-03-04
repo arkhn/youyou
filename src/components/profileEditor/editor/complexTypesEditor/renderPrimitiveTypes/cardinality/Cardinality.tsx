@@ -2,16 +2,19 @@ import React, { useEffect, useState } from 'react';
 
 import { IElementDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { ToggleButton } from '@material-ui/lab';
+import { Typography } from '@material-ui/core';
+
+import {
+  allCardinalities,
+  isDisabledInput
+} from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/cardinality/utils';
 import {
   CssTextField,
   CssToggleButtonGroup,
   TooltipHelp
 } from 'components/smallComponents';
-import { allCardinalities, isDisabledInput } from './utils';
 
 import useStyles from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/cardinality/styles';
-import { Typography } from '@material-ui/core';
-import { SimplifiedAttributes } from 'types';
 
 type CardinalityProps = {
   currentNodeJSON: IElementDefinition;
@@ -22,14 +25,12 @@ type CardinalityProps = {
     firstValue: number,
     secondValue: string
   ) => void;
-  attribute: SimplifiedAttributes;
 };
 
 const Cardinality: React.FC<CardinalityProps> = ({
   currentNodeJSON,
   onChangeValue,
-  onChangeCardinality,
-  attribute
+  onChangeCardinality
 }) => {
   const classes = useStyles();
   const [defaultValueMin, setDefaultValueMin] = useState(

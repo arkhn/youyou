@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { CssTextField, TooltipHelp } from 'components/smallComponents';
 import { makeStyles } from '@material-ui/core';
 import clsx from 'clsx';
+
+import { CssTextField, TooltipHelp } from 'components/smallComponents';
 
 type InputDateProps = {
   label: string;
