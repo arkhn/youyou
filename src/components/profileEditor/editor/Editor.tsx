@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 
 import {
   IElementDefinition,
-  IElementDefinition_Type as IElementDefinitionType,
   IStructureDefinition
 } from '@ahryman40k/ts-fhir-types/lib/R4';
 import { Typography, Button, Paper, Breadcrumbs } from '@material-ui/core';
@@ -272,7 +271,9 @@ const Editor: React.FC<EditorProps> = ({
                       structureDefinitionType === 'element' &&
                       structureDefinition
                     ) {
-                      let newElementDefinition: any = { ...elementDefJSON };
+                      let newElementDefinition: IElementDefinition = {
+                        ...elementDefJSON
+                      };
                       if (
                         fixedValueContext.path &&
                         fixedValueContext.value !== undefined

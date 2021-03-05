@@ -30,7 +30,7 @@ const Homepage: React.FC<{}> = () => {
   const classes = useStyles();
 
   const [selectedFhirResource, setSelectedFhirResource] = useState<
-    any | undefined
+    { label: string; value: string } | undefined
   >(undefined);
 
   const dispatchResourceSelected = (resource: { name: string }) => {
@@ -38,6 +38,7 @@ const Homepage: React.FC<{}> = () => {
       dispatch(selectResource(resource.name));
       dispatch(requestStructureDefThunk(`kind=resource&name=${resource.name}`));
       dispatch(setSnackbarOpen({ severity: undefined, message: '' }));
+      setSelectedFhirResource(undefined);
     }
   };
 
