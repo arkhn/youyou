@@ -165,14 +165,27 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
       break;
     }
     case 'boolean': {
-      attributeElement = (
-        <SwitchTooltip
-          label={label}
-          tool={attribute.definition}
-          value={currentNodeJSON[newPath] ?? false}
-          onChange={(event) => onChangeValue(newPath, event.target.checked)}
-        />
-      );
+      if (attribute.name !== 'sliceIsConstraining') {
+        attributeElement = (
+          <SwitchTooltip
+            label={label}
+            tool={attribute.definition}
+            value={currentNodeJSON[newPath] ?? false}
+            onChange={(event) => onChangeValue(newPath, event.target.checked)}
+          />
+        );
+      } else {
+        if (currentNodeJSON.sliceName) {
+          attributeElement = (
+            <SwitchTooltip
+              label={label}
+              tool={attribute.definition}
+              value={currentNodeJSON[newPath] ?? false}
+              onChange={(event) => onChangeValue(newPath, event.target.checked)}
+            />
+          );
+        }
+      }
       break;
     }
     case 'date': {

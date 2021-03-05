@@ -12,6 +12,12 @@ export type FetchedIds = {
   search: any;
 };
 
+export type ContextFixedValuesType = {
+  path?: string;
+  value?: any;
+  type?: IElementDefinitionType[];
+};
+
 export type ResourceState = {
   requestId?: string;
   resources: { name: string }[];

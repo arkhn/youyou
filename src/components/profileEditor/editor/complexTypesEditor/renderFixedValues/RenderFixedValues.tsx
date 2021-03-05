@@ -109,7 +109,7 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
 
   let renderFixedValuesSelector = undefined;
 
-  if (fixedValueContext.value === undefined) {
+  if (fixedValueContext && fixedValueContext.value === undefined) {
     /**
      * If the fixed element doesn't exists in the element definition, renders an
      * AddComplexType component to add the fixed type to the element definition
@@ -171,11 +171,13 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
                 };
                 setElementDefFixed(newElement);
                 setAttributeFixed(findFixedAttribute(newElement));
-                setFixedValueContext({
+                const newFixedValueContext = {
                   path: newPath,
                   value: newValue,
                   type: newElement.type
-                });
+                };
+                setFixedValueContext &&
+                  setFixedValueContext(newFixedValueContext);
               } else {
                 const toFind = complexTypes.find(
                   (type) => type.name === selectedFixedType
@@ -192,11 +194,13 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
                   };
                   setElementDefFixed(newElement);
                   setAttributeFixed(findFixedAttribute(newElement));
-                  setFixedValueContext({
+                  const newFixedValueContext = {
                     path: newPath,
                     value: newValue,
                     type: newElement.type
-                  });
+                  };
+                  setFixedValueContext &&
+                    setFixedValueContext(newFixedValueContext);
                 }
               }
             }
@@ -233,11 +237,12 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
                 };
                 setElementDefFixed(newElement);
                 setAttributeFixed(findFixedAttribute(newElement));
-                setFixedValueContext({
-                  path: newPath,
-                  value: newValue,
-                  type: newElement.type
-                });
+                setFixedValueContext &&
+                  setFixedValueContext({
+                    path: newPath,
+                    value: newValue,
+                    type: newElement.type
+                  });
               } else {
                 const toFind = complexTypes.find(
                   (type) => type.name === fixedType
@@ -253,11 +258,12 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
                   };
                   setElementDefFixed(newElement);
                   setAttributeFixed(findFixedAttribute(newElement));
-                  setFixedValueContext({
-                    path: newPath,
-                    value: newValue,
-                    type: newElement.type
-                  });
+                  setFixedValueContext &&
+                    setFixedValueContext({
+                      path: newPath,
+                      value: newValue,
+                      type: newElement.type
+                    });
                 }
               }
             }}
@@ -288,7 +294,10 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
       isPrimitive(fixedType, primitiveTypes) &&
       attributeFixed &&
       currentElementDefinition &&
-      currentElementDefinition.definition
+      currentElementDefinition.definition &&
+      fixedValueContext &&
+      fixedValueContext.path &&
+      setFixedValueContext
     ) {
       /**
        * if the fixed type is a primitive type, renders an RenderPrimitiveTypes component
@@ -331,7 +340,14 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
       /**
        * if the fixed type is a complex type, renders an RenderComplexTypes component
        */
-      if (attributeFixed && attributeFixed.children && elementDefFixed) {
+      if (
+        attributeFixed &&
+        attributeFixed.children &&
+        elementDefFixed &&
+        fixedValueContext &&
+        fixedValueContext.path &&
+        setFixedValueContext
+      ) {
         return (
           <AccordionEditor
             accordionTitle={fixedValueContext.path}
@@ -342,28 +358,31 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
                 complexFhirAttributes={attributeFixed.children}
                 complexTypes={complexTypes}
                 handleAdd={(path, value) => {
-                  setFixedValueContext({
-                    ...fixedValueContext,
-                    value: onAddComplexType(path, value, elementDefFixed)[
-                      fixedValueContext.path
-                    ]
-                  });
+                  fixedValueContext.path &&
+                    setFixedValueContext({
+                      ...fixedValueContext,
+                      value: onAddComplexType(path, value, elementDefFixed)[
+                        fixedValueContext.path
+                      ]
+                    });
                 }}
                 handleDelete={(path, i) => {
-                  setFixedValueContext({
-                    ...fixedValueContext,
-                    value: onDeleteComplexType(path, i, elementDefFixed)[
-                      fixedValueContext.path
-                    ]
-                  });
+                  fixedValueContext.path &&
+                    setFixedValueContext({
+                      ...fixedValueContext,
+                      value: onDeleteComplexType(path, i, elementDefFixed)[
+                        fixedValueContext.path
+                      ]
+                    });
                 }}
                 onChangeValue={(path, value) => {
-                  setFixedValueContext({
-                    ...fixedValueContext,
-                    value: onChangeElementJSON(path, value, elementDefFixed)[
-                      fixedValueContext.path
-                    ]
-                  });
+                  fixedValueContext.path &&
+                    setFixedValueContext({
+                      ...fixedValueContext,
+                      value: onChangeElementJSON(path, value, elementDefFixed)[
+                        fixedValueContext.path
+                      ]
+                    });
                 }}
                 currentNodeJSON={fixedValueContext.value}
                 primitiveTypes={primitiveTypes}

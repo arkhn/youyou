@@ -29,6 +29,7 @@ import {
 } from 'components/profileEditor/utils';
 
 import useStyles from 'components/profileEditor/editor/style';
+import { ContextFixedValuesType } from 'types';
 
 type EditorProps = {
   structureDefinition: IStructureDefinition;
@@ -67,11 +68,9 @@ const Editor: React.FC<EditorProps> = ({
   const dispatch = useAppDispatch();
   const classes = useStyles();
 
-  const [fixedValueContext, setFixedValueContext] = useState<{
-    value?: any;
-    path?: string;
-    type?: IElementDefinitionType[];
-  }>(() => {
+  const [fixedValueContext, setFixedValueContext] = useState<
+    ContextFixedValuesType
+  >(() => {
     let path = undefined;
     let value = undefined;
     let type = undefined;
