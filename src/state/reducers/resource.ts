@@ -321,6 +321,7 @@ const resourceSlice = createSlice({
     builder.addCase(
       requestStructureDefThunk.fulfilled,
       (state: ResourceState, { payload }) => {
+        const fixedElements: string[] = [];
         payload.snapshot?.element.forEach((element) => {
           if (element.base && element.base.min !== element.min) {
             element.base.min = element.min;
@@ -330,6 +331,11 @@ const resourceSlice = createSlice({
           }
           if (element.base && element.base.max !== element.max) {
             element.base.max = element.max;
+          }
+          for (const key in element) {
+            if (key.includes('fixed') && element.path) {
+              fixedElements.push(element.path);
+            }
           }
         });
         state.loading = false;

@@ -34,6 +34,16 @@ export const createComplexSnapshot = (
     max: '',
     definition: ''
   };
+  const fixedElements: string[] = [];
+  attributes.forEach((attribute) => {
+    for (const key in attribute) {
+      if (key.includes('fixed') && attribute.id) {
+        fixedElements.push(attribute.id);
+      }
+    }
+  });
+
+  //if (fixedElements.length > 0) state.fixedElements = fixedElements;
   if (attributes) {
     attribute = transformAttributes(attributes);
     attribute.forEach(
@@ -57,6 +67,12 @@ export const createComplexSnapshot = (
     const attribs = cloneDeep(atts);
     for (const att of attribs) {
       const newPath = `${path !== '' ? path + '.' : ''}${att.name}`;
+      if (att.children.length > 0) {
+        att.isComplex = true;
+      }
+      if (fixedElements.find((path) => path === newPath)) {
+        att.children = [];
+      }
       att.newPath = newPath;
       if (att.children.length > 0) {
         att.children = changePath(cloneDeep(att.children), att.newPath);

@@ -49,7 +49,7 @@ const TreeNode: React.FC<TreeNodeProps> = ({ nodes, handleClickSlices }) => {
       }}
       className={classes.treeItemContent}
     >
-      {nodes.children.length > 0 ? (
+      {nodes.isComplex ? (
         <Folder fontSize="small" />
       ) : (
         <LocalOffer fontSize="small" />

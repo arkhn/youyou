@@ -62,6 +62,7 @@ export interface SimplifiedAttributes {
     valueSet?: ICodeSystemConcept[];
   };
   newPath?: string;
+  isComplex?: boolean;
 }
 
 export interface RenderComplexType {
