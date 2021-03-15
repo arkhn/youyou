@@ -50,22 +50,15 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
    *
    */
 
-  const isRequired = () => {
-    if (
-      (attribute.min && attribute.min > 0) ||
-      attribute.name === 'id' ||
-      attribute.name === 'path' ||
-      attribute.name === 'short' ||
-      attribute.name === 'definition'
-    ) {
-      return true;
-    } else {
-      return false;
-    }
-  };
+  const isRequired =
+    (attribute.min && attribute.min > 0) ||
+    attribute.name === 'id' ||
+    attribute.name === 'path' ||
+    attribute.name === 'short' ||
+    attribute.name === 'definition';
 
   const label = `${getLabel(attribute, currentElementDefinition)}${
-    isRequired() ? '*' : ''
+    isRequired ? '*' : ''
   }`;
 
   switch (attribute.type) {
@@ -119,7 +112,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
         attributeElement = (
           <InputTooltip
             label={label}
-            value={currentNodeJSON[newPath] ? currentNodeJSON[newPath] : ''}
+            value={currentNodeJSON[newPath] ?? ''}
             tool={attribute.definition}
             onBlur={(event) => onChangeValue(newPath, event.target.value)}
           />
@@ -156,7 +149,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
         attributeElement = (
           <InputTooltip
             label={label}
-            value={currentNodeJSON[newPath] ? currentNodeJSON[newPath] : ''}
+            value={currentNodeJSON[newPath] ?? ''}
             tool={attribute.definition}
             onBlur={(event) => onChangeValue(newPath, event.target.value)}
           />
@@ -174,17 +167,18 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
             onChange={(event) => onChangeValue(newPath, event.target.checked)}
           />
         );
-      } else {
-        if (currentNodeJSON.sliceName) {
-          attributeElement = (
-            <SwitchTooltip
-              label={label}
-              tool={attribute.definition}
-              value={currentNodeJSON[newPath] ?? false}
-              onChange={(event) => onChangeValue(newPath, event.target.checked)}
-            />
-          );
-        }
+      } else if (
+        currentNodeJSON.sliceName &&
+        attribute.name === 'sliceIsConstraining'
+      ) {
+        attributeElement = (
+          <SwitchTooltip
+            label={label}
+            tool={attribute.definition}
+            value={currentNodeJSON[newPath] ?? false}
+            onChange={(event) => onChangeValue(newPath, event.target.checked)}
+          />
+        );
       }
       break;
     }

@@ -46,23 +46,25 @@ const Cardinality: React.FC<CardinalityProps> = ({
   const handleChangeMin = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    if (event.target.value.match(number) || event.target.value === '') {
-      setDefaultValueMin(event.target.value);
+    const { value } = event.target;
+    if (value.match(number) || value === '') {
+      setDefaultValueMin(value);
     }
   };
 
   const handleBlurMin = (
     event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
+    const { value } = event.target;
     if (
       baseMin !== undefined &&
       Number(defaultValueMin) >= baseMin &&
       (Number(defaultValueMin) <= Number(defaultValueMax) ||
         defaultValueMax === '*')
     ) {
-      if (event.target.value !== '') {
-        setDefaultValueMin(event.target.value);
-        onChangeValue('min', Number(event.target.value));
+      if (value !== '') {
+        setDefaultValueMin(value);
+        onChangeValue('min', Number(value));
       }
     } else {
       setDefaultValueMin(currentNodeJSON.min?.toString());
@@ -78,21 +80,17 @@ const Cardinality: React.FC<CardinalityProps> = ({
   const handleBlurMax = (
     event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    if (
-      event.target.value.match(number) ||
-      event.target.value === '*' ||
-      event.target.value === ''
-    ) {
+    const { value } = event.target;
+    if (value.match(number) || value === '*' || value === '') {
       if (
-        (Number(event.target.value) >= Number(currentNodeJSON.min) &&
-          Number(event.target.value) <= Number(baseMax)) ||
-        (baseMax === '*' &&
-          Number(event.target.value) >= Number(currentNodeJSON.min)) ||
-        (baseMax === '*' && event.target.value === '*')
+        (Number(value) >= Number(currentNodeJSON.min) &&
+          Number(value) <= Number(baseMax)) ||
+        (baseMax === '*' && Number(value) >= Number(currentNodeJSON.min)) ||
+        (baseMax === '*' && value === '*')
       ) {
-        if (event.target.value !== '') {
-          setDefaultValueMax(event.target.value);
-          onChangeValue('max', event.target.value);
+        if (value !== '') {
+          setDefaultValueMax(value);
+          onChangeValue('max', value);
         }
       } else setDefaultValueMax(currentNodeJSON.max);
     }

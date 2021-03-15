@@ -146,14 +146,6 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
       renderFixedValuesSelector = (
         <AddComplexType
           className={classes.selectMultipleType}
-          childComponent={
-            <SelectTooltip
-              choices={newSelectorValues}
-              value={selectedFixedType}
-              onChange={(e) => setSelectedFixedType(e.target.value as string)}
-              label={'select fixed value type'}
-            />
-          }
           path={selectedFixedType}
           complexFhirAttribute={{ ...attributeFixed, name: newPath }}
           handleAdd={() => {
@@ -205,7 +197,14 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
               }
             }
           }}
-        />
+        >
+          <SelectTooltip
+            choices={newSelectorValues}
+            value={selectedFixedType}
+            onChange={(e) => setSelectedFixedType(e.target.value as string)}
+            label={'select fixed value type'}
+          />
+        </AddComplexType>
       );
     } else if (
       elementDefFixed &&

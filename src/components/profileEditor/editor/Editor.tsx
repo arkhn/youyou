@@ -73,11 +73,14 @@ const Editor: React.FC<EditorProps> = ({
     let path = undefined;
     let value = undefined;
     let type = undefined;
-    for (const attribute in currentElementDefinition) {
-      if (attribute.includes('fixed') && attribute !== 'fixed[x]') {
-        path = attribute;
-        //@ts-ignore
-        value = currentElementDefinition[attribute];
+    if (currentElementDefinition) {
+      const newFixedPath = Object.keys(currentElementDefinition).find((key) =>
+        key.includes('fixed') && key !== 'fixed[x]' ? key : undefined
+      );
+      if (newFixedPath) {
+        path = newFixedPath;
+        // @ts-ignore
+        value = currentElementDefinition[newFixedPath];
         type = currentElementDefinition.type;
       }
     }
@@ -194,6 +197,49 @@ const Editor: React.FC<EditorProps> = ({
     }
   };
 
+  const handleSubmit = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    event.preventDefault();
+    if (structureDefinitionType === 'element' && structureDefinition) {
+      let newElementDefinition: IElementDefinition = {
+        ...elementDefJSON
+      };
+      if (fixedValueContext.path && fixedValueContext.value !== undefined) {
+        newElementDefinition = {
+          ...elementDefJSON,
+          [fixedValueContext.path]: fixedValueContext.value,
+          type: fixedValueContext.type
+        };
+      } else if (
+        fixedValueContext.path &&
+        !fixedValueContext.value &&
+        // @ts-ignore
+        elementDefJSON[fixedValueContext.path] !== undefined
+      ) {
+        // @ts-ignore
+        delete newElementDefinition[fixedValueContext.path];
+        setFixedValueContext({
+          ...fixedValueContext,
+          path: undefined,
+          type: undefined
+        });
+      }
+      dispatch(
+        updateStructureDefProfileThunk({
+          structureDefinition,
+          elementDefinition: newElementDefinition
+        })
+      );
+    } else if (structureDefinitionType === 'resource' && structureDefJSON) {
+      dispatch(
+        updateStructureDefProfileThunk({
+          structureDefinition: structureDefJSON
+        })
+      );
+    }
+  };
+
   const renderFormForAttributes = (): React.ReactNode => {
     if (elementDefJSON && elementDefinitionTree && currentElementDefinition) {
       return (
@@ -263,57 +309,7 @@ const Editor: React.FC<EditorProps> = ({
                 <Button
                   variant="contained"
                   color="secondary"
-                  onClick={(
-                    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-                  ) => {
-                    event.preventDefault();
-                    if (
-                      structureDefinitionType === 'element' &&
-                      structureDefinition
-                    ) {
-                      let newElementDefinition: IElementDefinition = {
-                        ...elementDefJSON
-                      };
-                      if (
-                        fixedValueContext.path &&
-                        fixedValueContext.value !== undefined
-                      ) {
-                        newElementDefinition = {
-                          ...elementDefJSON,
-                          [fixedValueContext.path]: fixedValueContext.value,
-                          type: fixedValueContext.type
-                        };
-                      } else if (
-                        fixedValueContext.path &&
-                        !fixedValueContext.value &&
-                        // @ts-ignore
-                        elementDefJSON[fixedValueContext.path] !== undefined
-                      ) {
-                        // @ts-ignore
-                        delete newElementDefinition[fixedValueContext.path];
-                        setFixedValueContext({
-                          ...fixedValueContext,
-                          path: undefined,
-                          type: undefined
-                        });
-                      }
-                      dispatch(
-                        updateStructureDefProfileThunk({
-                          structureDefinition,
-                          elementDefinition: newElementDefinition
-                        })
-                      );
-                    } else if (
-                      structureDefinitionType === 'resource' &&
-                      structureDefJSON
-                    ) {
-                      dispatch(
-                        updateStructureDefProfileThunk({
-                          structureDefinition: structureDefJSON
-                        })
-                      );
-                    }
-                  }}
+                  onClick={handleSubmit}
                 >
                   Submit
                 </Button>
