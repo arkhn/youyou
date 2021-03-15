@@ -74,8 +74,8 @@ const Editor: React.FC<EditorProps> = ({
     let value = undefined;
     let type = undefined;
     if (currentElementDefinition) {
-      const newFixedPath = Object.keys(currentElementDefinition).find((key) =>
-        key.includes('fixed') && key !== 'fixed[x]' ? key : undefined
+      const newFixedPath = Object.keys(currentElementDefinition).find(
+        (key) => key.includes('fixed') && key !== 'fixed[x]'
       );
       if (newFixedPath) {
         path = newFixedPath;
@@ -148,11 +148,14 @@ const Editor: React.FC<EditorProps> = ({
       let path = undefined;
       let value = undefined;
       let type = undefined;
-      for (const attribute in currentElementDefinition) {
-        if (attribute.includes('fixed') && attribute !== 'fixed[x]') {
-          path = attribute;
-          //@ts-ignore
-          value = currentElementDefinition[attribute];
+      if (currentElementDefinition) {
+        const newFixedPath = Object.keys(currentElementDefinition).find(
+          (key) => key.includes('fixed') && key !== 'fixed[x]'
+        );
+        if (newFixedPath) {
+          path = newFixedPath;
+          // @ts-ignore
+          value = currentElementDefinition[newFixedPath];
           type = currentElementDefinition.type;
         }
       }

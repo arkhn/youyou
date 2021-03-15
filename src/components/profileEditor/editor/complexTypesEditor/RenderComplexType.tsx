@@ -100,37 +100,6 @@ const RenderComplexType: React.FC<DetailProps> = ({
         /**
          * render complex types with cardinality max greater than 1
          */
-        const childComponent = currentNodeJSON[newPath].map(
-          (childNodeJSON: any, i: number) => {
-            return (
-              <AccordionEditor
-                handleDelete={onChange(handleDelete)}
-                accordionTitle={`${newPath} ${i + 1}`}
-                key={i}
-                index={i}
-                path={newPath}
-                className={
-                  i !== currentNodeJSON[newPath].length - 1
-                    ? classes.accordionMultiple
-                    : undefined
-                }
-                accordionDetails={
-                  <RenderComplexType
-                    currentNodeJSON={childNodeJSON}
-                    complexTypes={complexTypes}
-                    complexFhirAttributes={attribute.children}
-                    primitiveTypes={primitiveTypes}
-                    onChangeValue={onChange(onChangeValue)}
-                    handleDelete={onChange(handleDelete)}
-                    handleAdd={onChange(handleAdd)}
-                    name={newPath}
-                    index={i}
-                  />
-                }
-              />
-            );
-          }
-        );
         attributeElement = (
           <AddComplexType
             handleAdd={onChange(handleAdd)}
@@ -143,7 +112,35 @@ const RenderComplexType: React.FC<DetailProps> = ({
                 : undefined
             }
           >
-            {childComponent}
+            {currentNodeJSON[newPath].map((childNodeJSON: any, i: number) => {
+              return (
+                <AccordionEditor
+                  handleDelete={onChange(handleDelete)}
+                  accordionTitle={`${newPath} ${i + 1}`}
+                  key={i}
+                  index={i}
+                  path={newPath}
+                  className={
+                    i !== currentNodeJSON[newPath].length - 1
+                      ? classes.accordionMultiple
+                      : undefined
+                  }
+                  accordionDetails={
+                    <RenderComplexType
+                      currentNodeJSON={childNodeJSON}
+                      complexTypes={complexTypes}
+                      complexFhirAttributes={attribute.children}
+                      primitiveTypes={primitiveTypes}
+                      onChangeValue={onChange(onChangeValue)}
+                      handleDelete={onChange(handleDelete)}
+                      handleAdd={onChange(handleAdd)}
+                      name={newPath}
+                      index={i}
+                    />
+                  }
+                />
+              );
+            })}
           </AddComplexType>
         );
       } else if (
