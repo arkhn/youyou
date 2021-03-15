@@ -9,10 +9,19 @@ export const useStyles = makeStyles((theme: Theme) => ({
   accordionAddItem: {
     borderRadius: 4,
     padding: 4,
-    paddingRight: 16,
-    border: `1px solid ${theme.palette.primary.light}`
+    border: `1px solid ${theme.palette.primary.contrastText}`
   },
-  titleAdd: {
+  addValue: {
+    display: 'flex',
+    width: '100%',
+    flexDirection: 'column'
+  },
+  title: {
+    marginRight: 8,
     marginLeft: 4
+  },
+  allTitles: {
+    display: 'flex',
+    alignItems: 'center'
   }
 }));

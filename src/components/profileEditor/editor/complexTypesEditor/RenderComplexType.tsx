@@ -10,7 +10,7 @@ import RenderPrimitiveTypes from 'components/profileEditor/editor/complexTypesEd
 import { changeFixedName } from 'components/profileEditor/editor/complexTypesEditor/renderPrimitiveTypes/utils';
 import RenderFixedValues from 'components/profileEditor/editor/complexTypesEditor/renderFixedValues/RenderFixedValues';
 
-import { useStyles } from 'components/profileEditor/editor/complexTypesEditor/accordionEditor/style';
+import { useStyles } from 'components/profileEditor/editor/complexTypesEditor/styles';
 
 type DetailProps = {
   complexFhirAttributes: SimplifiedAttributes[];
@@ -23,6 +23,12 @@ type DetailProps = {
   handleDelete?: (path: string, i: number) => void;
   handleAdd?: (path: string, value: any) => void;
   onChangeSliceName?: (value: string) => void;
+  onChangeCardinality?: (
+    firstPath: string,
+    secondPath: string,
+    firstValue: number,
+    secondValue: string
+  ) => void;
 };
 
 const RenderComplexType: React.FC<DetailProps> = ({
@@ -34,10 +40,11 @@ const RenderComplexType: React.FC<DetailProps> = ({
   handleDelete,
   handleAdd,
   name,
-  index
+  index,
+  onChangeCardinality
 }) => {
-  const classes = useStyles();
   let renderSliceName: JSX.Element | null = null;
+  const classes = useStyles();
 
   const onChange = (
     callback: typeof onChangeValue | typeof handleDelete | typeof handleAdd
@@ -49,46 +56,62 @@ const RenderComplexType: React.FC<DetailProps> = ({
     }
   };
 
+  const handleChangeCadinality = (
+    firstPath: string,
+    secondPath: string,
+    firstValue: number,
+    secondValue: string
+  ) => {
+    if (index !== undefined && onChangeCardinality) {
+      onChangeCardinality(
+        `${name && name + '.'}${index}.${firstPath}`,
+        `${name && name + '.'}${index}.${secondPath}`,
+        firstValue,
+        secondValue
+      );
+    } else if (onChangeCardinality) {
+      onChangeCardinality(
+        `${name && name + '.'}${firstPath}`,
+        `${name && name + '.'}${secondPath}`,
+        firstValue,
+        secondValue
+      );
+    }
+  };
+
   const renderAttribute = complexFhirAttributes.map((attribute, index) => {
     let attributeElement: JSX.Element | null = null;
     const newPath = changeFixedName(attribute, attribute.name);
     if (newPath.includes('fixed')) {
-      /**
-       * if attribute is a fixed value, render RenderFixedValues
-       */
       attributeElement = (
         <RenderFixedValues
-          path={newPath}
-          attribute={attribute}
-          handleAdd={onChange(handleAdd)}
-          primitiveTypes={primitiveTypes}
-          currentNodeJSON={currentNodeJSON}
-          handleDelete={onChange(handleDelete)}
-          onChangeValue={onChange(onChangeValue)}
           complexTypes={complexTypes}
+          primitiveTypes={primitiveTypes}
         />
       );
     } else if (
       attribute.children.length > 0 &&
       newPath !== 'extension' &&
       newPath !== 'snapshot' &&
-      newPath !== 'differential'
+      newPath !== 'differential' &&
+      newPath !== 'type'
     ) {
       if (Array.isArray(currentNodeJSON[newPath])) {
         /**
          * render complex types with cardinality max greater than 1
          */
         attributeElement = (
-          <div className={classes.accordion}>
-            <AddComplexType
-              handleAdd={onChange(handleAdd)}
-              complexFhirAttribute={attribute}
-              path={newPath}
-              value={createJSONTree(
-                attribute.children,
-                currentNodeJSON[newPath]
-              )}
-            />
+          <AddComplexType
+            handleAdd={onChange(handleAdd)}
+            complexFhirAttribute={attribute}
+            path={newPath}
+            value={createJSONTree(attribute.children, currentNodeJSON[newPath])}
+            className={
+              currentNodeJSON[newPath].length > 0
+                ? classes.multipleComplexType
+                : undefined
+            }
+          >
             {currentNodeJSON[newPath].map((childNodeJSON: any, i: number) => {
               return (
                 <AccordionEditor
@@ -97,6 +120,11 @@ const RenderComplexType: React.FC<DetailProps> = ({
                   key={i}
                   index={i}
                   path={newPath}
+                  className={
+                    i !== currentNodeJSON[newPath].length - 1
+                      ? classes.accordionMultiple
+                      : undefined
+                  }
                   accordionDetails={
                     <RenderComplexType
                       currentNodeJSON={childNodeJSON}
@@ -113,15 +141,19 @@ const RenderComplexType: React.FC<DetailProps> = ({
                 />
               );
             })}
-          </div>
+          </AddComplexType>
         );
-      } else if (typeof currentNodeJSON[newPath] === 'object') {
+      } else if (
+        typeof currentNodeJSON[newPath] === 'object' &&
+        newPath !== 'base'
+      ) {
         /**
          * render complex types with cardinality max less than or equal to 1
          */
         attributeElement = (
           <AccordionEditor
             handleDelete={onChange(handleDelete)}
+            tool={attribute.definition}
             accordionTitle={
               attribute.min && attribute.min > 0 ? `${newPath}*` : newPath
             }
@@ -154,9 +186,10 @@ const RenderComplexType: React.FC<DetailProps> = ({
           onChangeValue={onChange(onChangeValue)}
           currentNodeJSON={currentNodeJSON}
           newPath={newPath}
+          onChangeCardinality={handleChangeCadinality}
         />
       );
-    } else if (newPath === 'sliceName' && currentNodeJSON.sliceName) {
+    } else if (currentNodeJSON.sliceName) {
       /**
        * if attribute name is slice name, render a button to edit slice name
        */
@@ -167,7 +200,11 @@ const RenderComplexType: React.FC<DetailProps> = ({
         />
       );
     }
-    return <div key={index}>{attributeElement}</div>;
+    return (
+      <div key={index} className={classes.attributeElement}>
+        {attributeElement}
+      </div>
+    );
   });
 
   return (

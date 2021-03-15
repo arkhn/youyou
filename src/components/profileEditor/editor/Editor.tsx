@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-ignore */
 import React, { useEffect, useState, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 
@@ -10,20 +11,24 @@ import cloneDeep from 'lodash.clonedeep';
 import merge from 'lodash.merge';
 import clsx from 'clsx';
 
+import ContextFixedValue from 'components/contexts/context';
+import { updateStructureDefProfileThunk } from 'state/reducers/resource';
 import { RootState, useAppDispatch } from 'state/store';
-import { createJSONTree } from 'components/profileEditor/editor/utils';
-import { SimplifiedAttributes } from 'types';
+import {
+  createJSONTree,
+  createElementDefTree
+} from 'components/profileEditor/editor/utils';
 import RenderComplexType from 'components/profileEditor/editor/complexTypesEditor/RenderComplexType';
 import {
   onChangeElementJSON,
+  onChangeCardinalityJSON,
   onDeleteComplexType,
   onAddComplexType,
   createElementDefinitionTree
 } from 'components/profileEditor/utils';
-import { createComplexTypes } from 'state/utils';
 
 import useStyles from 'components/profileEditor/editor/style';
-import { updateStructureDefProfileThunk } from 'state/reducers/resource';
+import { ContextFixedValuesType } from 'types';
 
 type EditorProps = {
   structureDefinition: IStructureDefinition;
@@ -62,47 +67,35 @@ const Editor: React.FC<EditorProps> = ({
   const dispatch = useAppDispatch();
   const classes = useStyles();
 
+  const [fixedValueContext, setFixedValueContext] = useState<
+    ContextFixedValuesType
+  >(() => {
+    let path = undefined;
+    let value = undefined;
+    let type = undefined;
+    if (currentElementDefinition) {
+      const newFixedPath = Object.keys(currentElementDefinition).find(
+        (key) => key.includes('fixed') && key !== 'fixed[x]'
+      );
+      if (newFixedPath) {
+        path = newFixedPath;
+        // @ts-ignore
+        value = currentElementDefinition[newFixedPath];
+        type = currentElementDefinition.type;
+      }
+    }
+    return { path, value, type };
+  });
   /**
    * creates a tree of simplified attributes for element definition with an implementation for fixed values
    */
-  const createElementDefTree = useCallback(() => {
-    const newElementDefinitionTree:
-      | SimplifiedAttributes[]
-      | undefined = cloneDeep(
-      complexTypes?.find(
-        (complexType: SimplifiedAttributes) =>
-          complexType.id === 'ElementDefinition'
-      )?.children
+  const createElementDefTreeCallback = useCallback(() => {
+    return createElementDefTree(
+      currentElementDefinition,
+      complexTypes,
+      backboneElements,
+      primitiveTypes
     );
-    if (currentElementDefinition && currentElementDefinition.type) {
-      const fixedValueTree:
-        | SimplifiedAttributes
-        | undefined = newElementDefinitionTree?.find(
-        (attribute: SimplifiedAttributes) => attribute.name.includes('fixed')
-      );
-      if (fixedValueTree) {
-        if (currentElementDefinition.type.length === 1) {
-          fixedValueTree.type = currentElementDefinition.type[0].code;
-          if (
-            currentElementDefinition.type[0].code === 'BackboneElement' &&
-            fixedValueTree.children.length === 0 &&
-            backboneElements
-          ) {
-            fixedValueTree.children = backboneElements;
-          } else {
-            const children = createComplexTypes(
-              complexTypes,
-              [fixedValueTree],
-              primitiveTypes
-            );
-            fixedValueTree.children = children[0].children;
-          }
-        } else {
-          fixedValueTree.type = currentElementDefinition.type;
-        }
-      }
-    }
-    return newElementDefinitionTree;
   }, [
     complexTypes,
     currentElementDefinition,
@@ -111,12 +104,12 @@ const Editor: React.FC<EditorProps> = ({
   ]);
 
   const [elementDefinitionTree, setElementDefinitionTree] = useState(
-    createElementDefTree
+    createElementDefTreeCallback
   );
 
   useEffect(() => {
-    setElementDefinitionTree(createElementDefTree);
-  }, [createElementDefTree]);
+    setElementDefinitionTree(createElementDefTreeCallback);
+  }, [createElementDefTreeCallback]);
 
   /**
    * creates a FHIR JSON structure for Element Definition
@@ -127,7 +120,6 @@ const Editor: React.FC<EditorProps> = ({
       createElementDefinitionTree(elementDefinitionTree);
     return merge(cloneDeep(elementDefTreeJSON), currentElementDefinition);
   }, [elementDefinitionTree, currentElementDefinition]);
-
   /**
    * creates a FHIR JSON structure for Structure Definition
    */
@@ -152,6 +144,23 @@ const Editor: React.FC<EditorProps> = ({
   );
 
   useEffect(() => {
+    setFixedValueContext(() => {
+      let path = undefined;
+      let value = undefined;
+      let type = undefined;
+      if (currentElementDefinition) {
+        const newFixedPath = Object.keys(currentElementDefinition).find(
+          (key) => key.includes('fixed') && key !== 'fixed[x]'
+        );
+        if (newFixedPath) {
+          path = newFixedPath;
+          // @ts-ignore
+          value = currentElementDefinition[newFixedPath];
+          type = currentElementDefinition.type;
+        }
+      }
+      return { path, value, type };
+    });
     if (currentElementDefinition && structureDefinitionType === 'element') {
       setElementDefJSON(createElementDefJSON());
       setStructureDefJSON(undefined);
@@ -191,6 +200,49 @@ const Editor: React.FC<EditorProps> = ({
     }
   };
 
+  const handleSubmit = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    event.preventDefault();
+    if (structureDefinitionType === 'element' && structureDefinition) {
+      let newElementDefinition: IElementDefinition = {
+        ...elementDefJSON
+      };
+      if (fixedValueContext.path && fixedValueContext.value !== undefined) {
+        newElementDefinition = {
+          ...elementDefJSON,
+          [fixedValueContext.path]: fixedValueContext.value,
+          type: fixedValueContext.type
+        };
+      } else if (
+        fixedValueContext.path &&
+        !fixedValueContext.value &&
+        // @ts-ignore
+        elementDefJSON[fixedValueContext.path] !== undefined
+      ) {
+        // @ts-ignore
+        delete newElementDefinition[fixedValueContext.path];
+        setFixedValueContext({
+          ...fixedValueContext,
+          path: undefined,
+          type: undefined
+        });
+      }
+      dispatch(
+        updateStructureDefProfileThunk({
+          structureDefinition,
+          elementDefinition: newElementDefinition
+        })
+      );
+    } else if (structureDefinitionType === 'resource' && structureDefJSON) {
+      dispatch(
+        updateStructureDefProfileThunk({
+          structureDefinition: structureDefJSON
+        })
+      );
+    }
+  };
+
   const renderFormForAttributes = (): React.ReactNode => {
     if (elementDefJSON && elementDefinitionTree && currentElementDefinition) {
       return (
@@ -200,6 +252,11 @@ const Editor: React.FC<EditorProps> = ({
           currentNodeJSON={elementDefJSON}
           primitiveTypes={primitiveTypes}
           name={''}
+          onChangeCardinality={(a, b, c, d) => {
+            setElementDefJSON(
+              onChangeCardinalityJSON(a, b, c, d, elementDefJSON)
+            );
+          }}
           onChangeValue={(path, value) =>
             setElementDefJSON(onChangeElementJSON(path, value, elementDefJSON))
           }
@@ -240,52 +297,32 @@ const Editor: React.FC<EditorProps> = ({
   };
 
   return (
-    <div className={classes.editorContainer}>
-      {renderBreadcrumbs()}
-      <Paper className={classes.paperRight}>
-        <form className={clsx(classNameForm, classes.formContainer)}>
-          {renderFormForAttributes()}
-        </form>
-        <div className={classes.formFooter}>
-          {(currentElementDefinition || structureDefJSON) && (
-            <>
-              <Button
-                variant="contained"
-                color="secondary"
-                onClick={(
-                  event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-                ) => {
-                  event.preventDefault();
-                  if (
-                    structureDefinitionType === 'element' &&
-                    structureDefinition
-                  ) {
-                    dispatch(
-                      updateStructureDefProfileThunk({
-                        structureDefinition,
-                        elementDefinition: elementDefJSON
-                      })
-                    );
-                  } else if (
-                    structureDefinitionType === 'resource' &&
-                    structureDefJSON
-                  ) {
-                    dispatch(
-                      updateStructureDefProfileThunk({
-                        structureDefinition: structureDefJSON
-                      })
-                    );
-                  }
-                }}
-              >
-                Submit
-              </Button>
-              <Typography color="textSecondary">* Required Fields</Typography>
-            </>
-          )}
-        </div>
-      </Paper>
-    </div>
+    <ContextFixedValue.Provider
+      value={[fixedValueContext, setFixedValueContext]}
+    >
+      <div className={classes.editorContainer}>
+        {renderBreadcrumbs()}
+        <Paper className={classes.paperRight}>
+          <form className={clsx(classNameForm, classes.formContainer)}>
+            {renderFormForAttributes()}
+          </form>
+          <div className={classes.formFooter}>
+            {(currentElementDefinition || structureDefJSON) && (
+              <>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  onClick={handleSubmit}
+                >
+                  Submit
+                </Button>
+                <Typography color="textSecondary">* Required Fields</Typography>
+              </>
+            )}
+          </div>
+        </Paper>
+      </div>
+    </ContextFixedValue.Provider>
   );
 };
 

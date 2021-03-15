@@ -1,14 +1,17 @@
 import React, { useEffect, useRef } from 'react';
 
-import { CssTextField, TooltipHelp } from 'components/smallComponents';
 import { makeStyles } from '@material-ui/core';
+
+import { CssTextField, TooltipHelp } from 'components/smallComponents';
 
 type InputTooltipProps = {
   classname?: string;
   label: string;
   value: string;
   tool: string;
-  error?: boolean | undefined;
+  error?: boolean;
+  multiline?: boolean;
+  disabled?: boolean;
   onBlur?: (
     event: React.FocusEvent<HTMLTextAreaElement | HTMLInputElement>
   ) => void;
@@ -17,12 +20,8 @@ type InputTooltipProps = {
 
 const useStyles = makeStyles(() => ({
   root: {
-    marginBottom: 16,
     display: 'flex',
     alignItems: 'center'
-  },
-  select: {
-    flexGrow: 1
   }
 }));
 
@@ -30,10 +29,12 @@ const InputTooltip: React.FC<InputTooltipProps> = ({
   label,
   value,
   tool,
+  multiline,
   onBlur,
   error = false,
   classname,
-  onClick
+  onClick,
+  disabled
 }) => {
   const classes = useStyles();
   const inputRef = useRef<HTMLInputElement | undefined>();
@@ -47,12 +48,15 @@ const InputTooltip: React.FC<InputTooltipProps> = ({
   return (
     <div className={classes.root}>
       <CssTextField
+        disabled={disabled}
         className={classname}
         label={label}
         error={error}
         defaultValue={value}
         variant="outlined"
         onBlur={onBlur}
+        multiline={multiline}
+        rows={multiline ? 3 : undefined}
         inputRef={inputRef}
         onClick={onClick}
         InputLabelProps={{

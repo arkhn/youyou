@@ -23,7 +23,7 @@ export const createComplexSnapshot = (
   attributes: IElementDefinition[],
   primitiveTypes: string[],
   complexTypes: SimplifiedAttributes[]
-): SimplifiedAttributes => {
+): SimplifiedAttributes[] => {
   let attribute: TemporaryAttribute[] = [];
   const attributeTree: SimplifiedAttributes = {
     id: '',
@@ -34,21 +34,28 @@ export const createComplexSnapshot = (
     max: '',
     definition: ''
   };
+  const fixedElements: string[] = [];
+  attributes.forEach((attribute) => {
+    for (const key in attribute) {
+      if (key.includes('fixed') && attribute.id) {
+        fixedElements.push(attribute.id);
+      }
+    }
+  });
+
+  //if (fixedElements.length > 0) state.fixedElements = fixedElements;
   if (attributes) {
     attribute = transformAttributes(attributes);
     attribute.forEach(
       (type) => type && createSimplifiedAttributes(type, type, attributeTree)
     );
-    const children = createComplexTypes(
-      complexTypes,
-      attributeTree.children[0].children,
-      primitiveTypes
+    const children: SimplifiedAttributes[][] = attributeTree.children.map(
+      (kid) => createComplexTypes(complexTypes, kid.children, primitiveTypes)
     );
-    attributeTree.children[0].children.splice(
-      0,
-      attributeTree.children[0].children.length
-    );
-    attributeTree.children[0].children = children;
+
+    children.forEach((kid, i) => {
+      attributeTree.children[i].children = kid;
+    });
   }
   const changePath = (
     atts: SimplifiedAttributes[],
@@ -57,6 +64,12 @@ export const createComplexSnapshot = (
     const attribs = cloneDeep(atts);
     for (const att of attribs) {
       const newPath = `${path !== '' ? path + '.' : ''}${att.name}`;
+      if (att.children.length > 0) {
+        att.isComplex = true;
+      }
+      if (fixedElements.find((path) => path === newPath)) {
+        att.children = [];
+      }
       att.newPath = newPath;
       if (att.children.length > 0) {
         att.children = changePath(cloneDeep(att.children), att.newPath);
@@ -65,7 +78,7 @@ export const createComplexSnapshot = (
     return attribs;
   };
 
-  return changePath(attributeTree.children, attributeTree.name)[0];
+  return changePath(attributeTree.children, attributeTree.name);
 };
 
 export const createElementDefinitionTree = (
@@ -137,6 +150,19 @@ export const onChangeElementJSON = (
   } else {
     set(elem, path, undefined);
   }
+  return elem;
+};
+
+export const onChangeCardinalityJSON = (
+  cardiMinPath: string,
+  cardiMaxPath: string,
+  cardiMin: number,
+  cardiMax: string,
+  element: any
+): any => {
+  const elem: any = { ...element };
+  set(elem, cardiMinPath, cardiMin);
+  set(elem, cardiMaxPath, cardiMax);
   return elem;
 };
 

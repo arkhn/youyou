@@ -2,6 +2,7 @@ import React from 'react';
 
 import { TreeView, TreeItem } from '@material-ui/lab';
 import { ArrowRight, ArrowDropDown, Settings } from '@material-ui/icons';
+import { Typography } from '@material-ui/core';
 
 import { selectStructureDefMeta } from 'state/reducers/resource';
 import TreeNode from 'components/structureDefinitionTree/treeNode/TreeNode';
@@ -10,11 +11,10 @@ import { useAppDispatch } from 'state/store';
 import { SimplifiedAttributes } from 'types';
 
 import useStyles from 'components/structureDefinitionTree/style';
-import { Typography } from '@material-ui/core';
 
 type StructureDefinitionTreeProps = {
-  structureDefinitionId?: string;
-  uiAttributes?: SimplifiedAttributes;
+  structureDefinitionId: string;
+  uiAttributes?: SimplifiedAttributes[];
   onLabelClick?: (
     event: React.MouseEvent<Element, MouseEvent>,
     nodes: SimplifiedAttributes
@@ -62,7 +62,7 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
     <TreeView
       defaultCollapseIcon={<ArrowDropDown />}
       defaultExpandIcon={<ArrowRight />}
-      defaultExpanded={[structureDefinitionId] as string[]}
+      defaultExpanded={[structureDefinitionId]}
       className={className}
     >
       <TreeItem
@@ -80,7 +80,7 @@ const StructureDefinitionTree: React.FC<StructureDefinitionTreeProps> = ({
           </span>
         }
       />
-      {uiAttributes && renderNode(uiAttributes)}
+      {uiAttributes && uiAttributes.map((attribute) => renderNode(attribute))}
     </TreeView>
   );
 };

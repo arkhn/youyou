@@ -23,6 +23,7 @@ const initialState: ResourceState = {
   structureDefinition: undefined,
   extensionStructureDefinition: extensionStructureDefinition as IStructureDefinition,
   selectedResourceId: undefined,
+  originalStructureDef: undefined,
   loading: false,
   error: undefined,
   structureDefMeta: true,
@@ -320,8 +321,26 @@ const resourceSlice = createSlice({
     builder.addCase(
       requestStructureDefThunk.fulfilled,
       (state: ResourceState, { payload }) => {
+        const fixedElements: string[] = [];
+        payload.snapshot?.element.forEach((element) => {
+          if (element.base && element.base.min !== element.min) {
+            element.base.min = element.min;
+          }
+          if (!element.base) {
+            element.base = { min: element.min, max: element.max };
+          }
+          if (element.base && element.base.max !== element.max) {
+            element.base.max = element.max;
+          }
+          for (const key in element) {
+            if (key.includes('fixed') && element.path) {
+              fixedElements.push(element.path);
+            }
+          }
+        });
         state.loading = false;
         state.structureDefinition = payload;
+        state.originalStructureDef = payload;
         state.error = undefined;
         state.structureDefMeta = true;
       }
@@ -331,6 +350,7 @@ const resourceSlice = createSlice({
       (state: ResourceState, { payload }) => {
         state.loading = false;
         state.structureDefinition = undefined;
+        state.originalStructureDef = undefined;
         state.error = payload ?? undefined;
       }
     );

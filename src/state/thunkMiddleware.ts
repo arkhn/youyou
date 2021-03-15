@@ -21,12 +21,12 @@ import { RootState } from 'state/store';
 import { createSimplifiedAttributes, createTemporaryAttribute } from './utils';
 
 export const requestIdsThunk = createAsyncThunk<
-  { id: string }[],
+  { name: string }[],
   void,
   { state: RootState; rejectValue: Error }
 >('resource/requestIdsThunk', async (param, { rejectWithValue }) => {
   const response: AxiosResponse<any> = await api.get(
-    `/StructureDefinition?kind=resource&derivation=specialization&_elements=id&_count=150`
+    `/StructureDefinition?kind=resource&_elements=name&_count=200`
   );
   if (response.status === 200) {
     return response.data.entry.map((result: FetchedIds) => result.resource);
@@ -41,11 +41,10 @@ export const requestStructureDefThunk = createAsyncThunk<
   { state: RootState; rejectValue: Error }
 >('resource/requestResourceThunk', async (param, { rejectWithValue }) => {
   const response: AxiosResponse<any> = await api.get(
-    `/StructureDefinition?kind=resource&derivation=specialization&id=${param}`
-    // keep comments for testing on different kind of resources
-    /* `/StructureDefinition?id=variant` */
-    /*`/StructureDefinition?kind=resource&derivation=specialization&id=observation` */
+    `/StructureDefinition?${param}`
+    //`/StructureDefinition?url=http://hl7.org/fhir/StructureDefinition/bp`
   );
+
   if (response.status === 200) {
     return response.data.entry[0].resource;
   } else {
@@ -74,7 +73,7 @@ export const requestFhirDataTypesThunk = createAsyncThunk<
     api.get('/StructureDefinition?derivation=specialization&kind=complex-type'),
     api.get('/CodeSystem?_elements=name,concept&_count=508'),
     api.get(
-      '/StructureDefinition?kind=resource&derivation=specialization&id=StructureDefinition'
+      '/StructureDefinition?kind=resource&derivation=specialization&name=StructureDefinition'
     )
   ]);
   if (

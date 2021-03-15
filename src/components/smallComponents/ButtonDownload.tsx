@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import { useAppDispatch } from 'state/store';
 import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
+import { cleaningJSON } from './utils';
 
 type ButtonDownloadProps = {
   text: string;
@@ -28,13 +29,15 @@ const ButtonDownload: React.FC<ButtonDownloadProps> = ({
   const classes = useStyles();
   const dispatch = useAppDispatch();
 
+  const cleanJSONToDownload = cleaningJSON(toDownload);
+
   return (
     <a
       href={
         'data:json/plain;charset=utf-8,' +
-        encodeURIComponent(JSON.stringify(toDownload, null, 2))
+        encodeURIComponent(JSON.stringify(cleanJSONToDownload, null, 2))
       }
-      download={toDownload.name + '.json'}
+      download={cleanJSONToDownload.name + '.json'}
       className={classes.buttonDownloadText}
     >
       <Button

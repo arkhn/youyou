@@ -6,6 +6,7 @@ import TooltipHelp from 'components/smallComponents/TooltipHelp';
 import SelectTooltip from 'components/smallComponents/SelectTooltip';
 import CssTextField from 'components/smallComponents/CssTextField';
 import CssToggleButtonGroup from 'components/smallComponents/CssToggleButtonGroup';
+import SwitchTooltip from 'components/smallComponents/SwitchTooltip';
 
 export {
   ButtonDownload,
@@ -15,5 +16,6 @@ export {
   TooltipHelp,
   SelectTooltip,
   CssTextField,
-  CssToggleButtonGroup
+  CssToggleButtonGroup,
+  SwitchTooltip
 };

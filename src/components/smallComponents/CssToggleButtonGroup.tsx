@@ -14,7 +14,7 @@ const CssToggleButtonGroup = withStyles((theme: Theme) => ({
     '& .MuiToggleButton-root': {
       width: 50,
       borderRadius: theme.shape.borderRadius,
-      margin: theme.spacing(0.5),
+      //margin: theme.spacing(0.5),
       transition: theme.transitions.create(
         ['background-color', 'border-color'],
         {

@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import { IStructureDefinition } from '@ahryman40k/ts-fhir-types/lib/R4';
-import { Paper, Typography } from '@material-ui/core';
+import { CircularProgress, Paper, Typography } from '@material-ui/core';
 import cloneDeep from 'lodash.clonedeep';
 
 import { SimplifiedAttributes } from 'types';
 import { RootState, useAppDispatch } from 'state/store';
+import { getBackboneElements } from 'state/reducers/fhirDataTypes';
 import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 import {
   addSlice,
@@ -24,7 +25,6 @@ import {
 import SliceDialogBox from './sliceDialogBox/SliceDialogBox';
 
 import useStyles from 'components/profileEditor/style';
-import { getBackboneElements } from 'state/reducers/fhirDataTypes';
 
 export type OpenDialogState = {
   open: boolean;
@@ -38,6 +38,7 @@ const ProfileEditor: React.FC<{}> = () => {
 
   const {
     loading,
+    error,
     structureDefinition,
     structureDefMeta,
     primitiveTypes,
@@ -46,7 +47,8 @@ const ProfileEditor: React.FC<{}> = () => {
     const {
       loading,
       structureDefinition,
-      structureDefMeta
+      structureDefMeta,
+      error
     } = state.resourceSlice;
     const { primitiveTypes, complexTypes } = state.fhirDataTypes;
     return {
@@ -54,13 +56,15 @@ const ProfileEditor: React.FC<{}> = () => {
       structureDefinition,
       structureDefMeta,
       primitiveTypes,
-      complexTypes
+      complexTypes,
+      error
     };
   });
 
   const [newStructureDef, setNewStructureDef] = useState<
     IStructureDefinition | undefined
   >(structureDefinition);
+
   const [open, setOpen] = useState<OpenDialogState>({ open: false });
   const [sliceName, setSliceName] = useState('');
   const [sliceNameError, setSliceNameError] = useState({
@@ -83,7 +87,6 @@ const ProfileEditor: React.FC<{}> = () => {
       primitiveTypes,
       complexTypes
     );
-
   /**
    * If click on add or delete icon, open a dialog box to confirm actions
    * @param e event onClick
@@ -180,58 +183,82 @@ const ProfileEditor: React.FC<{}> = () => {
     dispatch(createCurrentElementDefinition(node));
   };
 
-  if (loading) {
-    return <div>Loading</div>;
-  }
-
-  if (!newStructureDef) {
-    return <>Error</>;
-  }
-
-  return (
-    <div>
-      <Navbar />
-      <div className={classes.profileEditorContainer}>
-        <Paper className={classes.structureDefTreeContainer}>
-          <Typography variant="h1">{newStructureDef?.name}</Typography>
-          <StructureDefinitionTree
-            onLabelClick={selectAttributeToEdit}
-            uiAttributes={attributesForUI}
-            structureDefinitionId={newStructureDef?.id}
-            handleClickSlices={handleClickForSlice}
-            className={classes.containerTreeAndEditor}
-          />
-          <ButtonDownload
-            text="Download profile"
-            toDownload={newStructureDef}
-          />
-        </Paper>
-        {newStructureDef && (
-          <Editor
-            classNameForm={classes.containerTreeAndEditor}
-            structureDefinition={newStructureDef}
-            structureDefinitionType={structureDefMeta ? 'resource' : 'element'}
-          />
-        )}
+  if (error) {
+    return (
+      <>
+        <Navbar />
+        <div className={classes.errorContainer}>
+          <Typography variant="h2" className={classes.errorTitle}>
+            Error : {error.name}
+          </Typography>
+          <Typography>{error.message}</Typography>
+        </div>
+      </>
+    );
+  } else if (
+    newStructureDef &&
+    !loading &&
+    !error &&
+    newStructureDef.snapshot &&
+    newStructureDef.snapshot.element[0].id &&
+    attributesForUI
+  ) {
+    return (
+      <div>
+        <Navbar />
+        <div className={classes.profileEditorContainer}>
+          <Paper className={classes.structureDefTreeContainer}>
+            <Typography variant="h1">{newStructureDef.name}</Typography>
+            <StructureDefinitionTree
+              onLabelClick={selectAttributeToEdit}
+              uiAttributes={attributesForUI}
+              structureDefinitionId={newStructureDef.snapshot.element[0].id}
+              handleClickSlices={handleClickForSlice}
+              className={classes.containerTreeAndEditor}
+            />
+            <ButtonDownload
+              text="Download profile"
+              toDownload={newStructureDef}
+            />
+          </Paper>
+          {newStructureDef && (
+            <Editor
+              classNameForm={classes.containerTreeAndEditor}
+              structureDefinition={newStructureDef}
+              structureDefinitionType={
+                structureDefMeta ? 'resource' : 'element'
+              }
+            />
+          )}
+        </div>
+        <SnackBarWithClose />
+        <SliceDialogBox
+          attributeSelected={open}
+          sliceNameError={sliceNameError}
+          onChangeName={(e) => {
+            setSliceName(e.target.value);
+          }}
+          onCloseClick={() => {
+            setOpen({ open: false });
+            setSliceName('');
+            setSliceNameError({ error: false, message: '' });
+          }}
+          onFormSubmit={
+            open.add === false ? handleSubmitSliceDelete : handleSubmitSliceAdd
+          }
+        />
       </div>
-      <SnackBarWithClose />
-      <SliceDialogBox
-        attributeSelected={open}
-        sliceNameError={sliceNameError}
-        onChangeName={(e) => {
-          setSliceName(e.target.value);
-        }}
-        onCloseClick={() => {
-          setOpen({ open: false });
-          setSliceName('');
-          setSliceNameError({ error: false, message: '' });
-        }}
-        onFormSubmit={
-          open.add === false ? handleSubmitSliceDelete : handleSubmitSliceAdd
-        }
-      />
-    </div>
-  );
+    );
+  } else {
+    return (
+      <>
+        <Navbar />
+        <section className={classes.loader}>
+          <CircularProgress color="primary" />
+        </section>
+      </>
+    );
+  }
 };
 
 export default ProfileEditor;

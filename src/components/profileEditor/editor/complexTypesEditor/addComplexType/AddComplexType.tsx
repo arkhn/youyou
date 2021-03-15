@@ -6,33 +6,43 @@ import { Add } from '@material-ui/icons';
 
 import { SimplifiedAttributes } from 'types';
 
-import { useStyles } from './style';
+import { useStyles } from 'components/profileEditor/editor/complexTypesEditor/addComplexType/style';
+import { TooltipHelp } from 'components/smallComponents';
 
 type AddComplexTypeProps = {
   complexFhirAttribute: SimplifiedAttributes;
   path: string;
   value?: any;
   handleAdd: (path: string, value: any) => void;
+  className?: string;
 };
 
 const AddComplexType: React.FC<AddComplexTypeProps> = ({
   handleAdd,
   complexFhirAttribute,
   path,
-  value
+  value,
+  children,
+  className
 }) => {
   const classes = useStyles();
 
   return (
     <div className={clsx(classes.accordionTitle, classes.accordionAddItem)}>
-      <IconButton onClick={() => handleAdd(path, value)}>
-        <Tooltip title={`add a new ${complexFhirAttribute.name}`}>
-          <Add />
-        </Tooltip>
-      </IconButton>
-      <Typography className={classes.titleAdd} variant="h2">
-        {complexFhirAttribute.name}
-      </Typography>
+      <div className={classes.addValue}>
+        <div className={clsx(classes.allTitles, className)}>
+          <IconButton onClick={() => handleAdd(path, value)}>
+            <Tooltip title={`add a new ${complexFhirAttribute.name}`}>
+              <Add />
+            </Tooltip>
+          </IconButton>
+          <Typography variant="h2" className={classes.title}>
+            {complexFhirAttribute.name}
+          </Typography>
+          <TooltipHelp tool={complexFhirAttribute.definition} />
+        </div>
+        {children}
+      </div>
     </div>
   );
 };

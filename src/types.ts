@@ -12,10 +12,17 @@ export type FetchedIds = {
   search: any;
 };
 
+export type ContextFixedValuesType = {
+  path?: string;
+  value?: any;
+  type?: IElementDefinitionType[];
+};
+
 export type ResourceState = {
   requestId?: string;
-  resources: { id: string }[];
+  resources: { name: string }[];
   structureDefinition: IStructureDefinition | undefined;
+  originalStructureDef: IStructureDefinition | undefined;
   extensionStructureDefinition: IStructureDefinition | undefined;
   selectedResourceId: string | undefined;
   loading: boolean;
@@ -55,6 +62,7 @@ export interface SimplifiedAttributes {
     valueSet?: ICodeSystemConcept[];
   };
   newPath?: string;
+  isComplex?: boolean;
 }
 
 export interface RenderComplexType {

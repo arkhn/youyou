@@ -8,7 +8,7 @@ import { useAppDispatch } from 'state/store';
 import SliceDialogBox from 'components/profileEditor/sliceDialogBox/SliceDialogBox';
 import { OpenDialogState } from 'components/profileEditor/ProfileEditor';
 
-import useStyles from './style';
+import useStyles from 'components/profileEditor/editor/complexTypesEditor/dialogSliceName/style';
 
 type DialogChangeSliceNameProps = {
   sliceName: string;
