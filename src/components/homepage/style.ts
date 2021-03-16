@@ -59,7 +59,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   itemCardRight: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
+    width: '100%'
   },
   fhirLogo: {
     position: 'absolute',
