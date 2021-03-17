@@ -101,7 +101,6 @@ const Homepage: React.FC<{}> = () => {
           <FhirLogo className={classes.fhirLogo} />
         </Paper>
         <Paper className={clsx(classes.itemCard, classes.itemCardRight)}>
-          <Typography>{option.description}</Typography>
           {option.name === 'Profile' && (
             <Autocomplete
               options={selectChoices}
