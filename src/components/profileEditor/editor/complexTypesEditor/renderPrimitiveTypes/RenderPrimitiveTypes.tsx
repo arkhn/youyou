@@ -50,12 +50,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
    *
    */
 
-  const isRequired =
-    (attribute.min && attribute.min > 0) ||
-    attribute.name === 'id' ||
-    attribute.name === 'path' ||
-    attribute.name === 'short' ||
-    attribute.name === 'definition';
+  const isRequired = attribute.min && attribute.min > 0;
 
   const label = `${getLabel(attribute, currentElementDefinition)}${
     isRequired ? '*' : ''
@@ -148,7 +143,7 @@ const RenderPrimitiveTypes: React.FC<RenderPrimitiveTypesProps> = ({
       } else {
         attributeElement = (
           <InputTooltip
-            label={label}
+            label={`${label}`}
             value={currentNodeJSON[newPath] ?? ''}
             tool={attribute.definition}
             onBlur={(event) => onChangeValue(newPath, event.target.value)}

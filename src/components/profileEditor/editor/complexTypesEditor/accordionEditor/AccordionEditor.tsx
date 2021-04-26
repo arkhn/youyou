@@ -45,7 +45,8 @@ const AccordionEditor: React.FC<AccordionEditorProps> = ({
           </div>
           {path && (
             <MuiButton
-              onClick={() => {
+              onClick={(e) => {
+                e.stopPropagation();
                 handleDelete(path, index !== undefined ? index : undefined);
               }}
             >

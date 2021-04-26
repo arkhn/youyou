@@ -338,6 +338,17 @@ const resourceSlice = createSlice({
             }
           }
         });
+        if (payload.meta && payload.meta.lastUpdated) {
+          delete payload.meta.lastUpdated;
+        }
+        delete payload.text;
+        delete payload.date;
+        delete payload.publisher;
+        delete payload.contact;
+        delete payload.abstract;
+        delete payload.mapping;
+        delete payload.url;
+
         state.loading = false;
         state.structureDefinition = payload;
         state.originalStructureDef = payload;
