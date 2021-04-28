@@ -44,8 +44,8 @@ export const structureDefAddSlice = (
                 (endingPath ? '.' + endingPath : ''),
               path: element.id,
               sliceName: sliceName,
-              min: element.base.min,
-              max: element.base.max,
+              min: element.min,
+              max: element.max,
               binding: element.binding
                 ? (nodeToSlice.binding as IElementDefinitionBinding)
                 : undefined

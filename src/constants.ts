@@ -1,2 +1,4 @@
-export const FHIR_API_URL = 'https://staging.arkhn.com/api';
-export const AUTH_TOKEN_KEY = '';
+export const {
+  REACT_APP_FHIR_API_URL: FHIR_API_URL,
+  REACT_APP_API_ADMIN_TOKEN: AUTH_TOKEN_KEY
+} = process.env;

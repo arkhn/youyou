@@ -29,7 +29,10 @@ const ButtonDownload: React.FC<ButtonDownloadProps> = ({
   const classes = useStyles();
   const dispatch = useAppDispatch();
 
-  const cleanJSONToDownload = cleaningJSON(toDownload);
+  const cleanJSONToDownload: IStructureDefinition = cleaningJSON(
+    toDownload,
+    true
+  );
 
   return (
     <a

@@ -320,15 +320,23 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
             />
           }
           handleDelete={() => {
+            setSelectedFixedType('');
             if (baseElement) {
               setElementDefFixed({
                 ...elementDefFixed,
                 type: baseElement.type
               });
-              setSelectedFixedType('');
+              setFixedValueContext({
+                type: baseElement.type,
+                value: undefined
+              });
+            } else {
+              setElementDefFixed({
+                ...elementDefFixed,
+                type: fixedValueContext.type
+              });
               setFixedValueContext({
                 ...fixedValueContext,
-                type: baseElement.type,
                 value: undefined
               });
             }

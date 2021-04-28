@@ -208,6 +208,7 @@ const Editor: React.FC<EditorProps> = ({
       let newElementDefinition: IElementDefinition = {
         ...elementDefJSON
       };
+      const newStructureDefinition = cloneDeep(structureDefinition);
       if (fixedValueContext.path && fixedValueContext.value !== undefined) {
         newElementDefinition = {
           ...elementDefJSON,
@@ -216,9 +217,7 @@ const Editor: React.FC<EditorProps> = ({
         };
       } else if (
         fixedValueContext.path &&
-        !fixedValueContext.value &&
-        // @ts-ignore
-        elementDefJSON[fixedValueContext.path] !== undefined
+        fixedValueContext.value === undefined
       ) {
         // @ts-ignore
         delete newElementDefinition[fixedValueContext.path];
@@ -227,10 +226,20 @@ const Editor: React.FC<EditorProps> = ({
           path: undefined,
           type: undefined
         });
+        const newSnapshot = newStructureDefinition.snapshot?.element.filter(
+          (element) => {
+            if (elementDefJSON && elementDefJSON.id && element.id) {
+              if (!element.id.startsWith(`${elementDefJSON.id}.`))
+                return element;
+            }
+          }
+        );
+        if (newStructureDefinition.snapshot && newSnapshot)
+          newStructureDefinition.snapshot.element = newSnapshot;
       }
       dispatch(
         updateStructureDefProfileThunk({
-          structureDefinition,
+          structureDefinition: newStructureDefinition,
           elementDefinition: newElementDefinition
         })
       );

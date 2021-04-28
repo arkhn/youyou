@@ -11,6 +11,8 @@ import { changeFixedName } from 'components/profileEditor/editor/complexTypesEdi
 import RenderFixedValues from 'components/profileEditor/editor/complexTypesEditor/renderFixedValues/RenderFixedValues';
 
 import { useStyles } from 'components/profileEditor/editor/complexTypesEditor/styles';
+import { useAppDispatch } from 'state/store';
+import { setSnackbarOpen } from 'state/reducers/snackbarReducer';
 
 type DetailProps = {
   complexFhirAttributes: SimplifiedAttributes[];
@@ -45,14 +47,37 @@ const RenderComplexType: React.FC<DetailProps> = ({
 }) => {
   let renderSliceName: JSX.Element | null = null;
   const classes = useStyles();
+  const dispatch = useAppDispatch();
 
   const onChange = (
     callback: typeof onChangeValue | typeof handleDelete | typeof handleAdd
   ) => (path: string, value: any) => {
-    if (index !== undefined && callback) {
-      callback(`${name && name + '.'}${index}.${path}`, value);
-    } else if (callback) {
-      callback(`${name && name + '.'}${path}`, value);
+    const max = complexFhirAttributes.find(
+      (attribute) => attribute.name === path
+    )?.max;
+
+    if (callback && callback.name !== 'handleAdd') {
+      index !== undefined
+        ? callback(`${name && name + '.'}${index}.${path}`, value)
+        : callback(`${name && name + '.'}${path}`, value);
+    } else if (
+      max &&
+      callback &&
+      callback.name === 'handleAdd' &&
+      Array.isArray(currentNodeJSON[path])
+    ) {
+      if (Number(max) > currentNodeJSON[path].length || max === '*') {
+        index !== undefined
+          ? callback(`${name && name + '.'}${index}.${path}`, value)
+          : callback(`${name && name + '.'}${path}`, value);
+      } else if (Number(max) === currentNodeJSON[path].length) {
+        dispatch(
+          setSnackbarOpen({
+            message: `You can't add more than ${max} ${path}`,
+            severity: 'error'
+          })
+        );
+      }
     }
   };
 
