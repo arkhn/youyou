@@ -35,7 +35,7 @@ Note that you'll need to have a _**.env**_ file a the root of the project contai
 
 # :earth_africa: Start Contributing
 
-Many improvements can be made to Youyou.
+Many improvements can be made to Youyou. :octocat:
 
 You can join our [Slack](https://join.slack.com/t/arkhn/shared_invite/zt-7ccdmm81-il2NOcS7iM6goZ_4OHC2qQ) to contact us if you have trouble or questions ! :)
 
