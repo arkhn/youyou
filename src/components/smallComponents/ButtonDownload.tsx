@@ -29,26 +29,10 @@ const ButtonDownload: React.FC<ButtonDownloadProps> = ({
   const classes = useStyles();
   const dispatch = useAppDispatch();
 
-  const cleanJSONToDownload: IStructureDefinition = cleaningJSON(toDownload);
-
-  delete cleanJSONToDownload.differential;
-
-  const date = new Date(Date.now()).toISOString();
-  if (!cleanJSONToDownload.date) {
-    cleanJSONToDownload.date = date;
-  }
-  if (cleanJSONToDownload.meta && !cleanJSONToDownload.meta.lastUpdated) {
-    cleanJSONToDownload.meta = {
-      ...cleanJSONToDownload.meta,
-      lastUpdated: date
-    };
-  }
-  if (cleanJSONToDownload.abstract === undefined) {
-    cleanJSONToDownload.abstract = false;
-  }
-  if (!cleanJSONToDownload.url) {
-    cleanJSONToDownload.url = `http://arkhn.com/profile/${cleanJSONToDownload.name}`;
-  }
+  const cleanJSONToDownload: IStructureDefinition = cleaningJSON(
+    toDownload,
+    true
+  );
 
   return (
     <a
