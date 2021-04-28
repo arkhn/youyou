@@ -200,6 +200,12 @@ const Editor: React.FC<EditorProps> = ({
     }
   };
 
+  //console.log(structureDefinition, elementDefJSON);
+  //console.log(fixedValueContext);
+  /*   structureDefinition.snapshot?.element?.forEach(
+    (element: IElementDefinition) => console.log(element.id)
+  ); */
+
   const handleSubmit = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
@@ -208,6 +214,7 @@ const Editor: React.FC<EditorProps> = ({
       let newElementDefinition: IElementDefinition = {
         ...elementDefJSON
       };
+      const newStructureDefinition = cloneDeep(structureDefinition);
       if (fixedValueContext.path && fixedValueContext.value !== undefined) {
         newElementDefinition = {
           ...elementDefJSON,
@@ -216,9 +223,7 @@ const Editor: React.FC<EditorProps> = ({
         };
       } else if (
         fixedValueContext.path &&
-        !fixedValueContext.value &&
-        // @ts-ignore
-        elementDefJSON[fixedValueContext.path] !== undefined
+        fixedValueContext.value === undefined
       ) {
         // @ts-ignore
         delete newElementDefinition[fixedValueContext.path];
@@ -227,10 +232,30 @@ const Editor: React.FC<EditorProps> = ({
           path: undefined,
           type: undefined
         });
+        const indexToDelete: number[] = [];
+        structureDefinition.snapshot?.element.forEach((element, index) => {
+          if (elementDefJSON && elementDefJSON.id && element.id) {
+            const splitedId = element.id
+              .split(elementDefJSON.id)
+              .slice(1)
+              .join('');
+            if (splitedId && splitedId[0] === '.') {
+              indexToDelete.push(index);
+            }
+          }
+        });
+        if (indexToDelete.length > 0) {
+          indexToDelete.reverse();
+          indexToDelete.forEach((index) => {
+            newStructureDefinition &&
+              newStructureDefinition.snapshot &&
+              newStructureDefinition.snapshot.element.splice(index, 1);
+          });
+        }
       }
       dispatch(
         updateStructureDefProfileThunk({
-          structureDefinition,
+          structureDefinition: newStructureDefinition,
           elementDefinition: newElementDefinition
         })
       );

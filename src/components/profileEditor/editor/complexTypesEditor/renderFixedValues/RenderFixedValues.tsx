@@ -336,8 +336,7 @@ const RenderFixedValues: React.FC<RenderFixedValuesProps> = ({
                 type: fixedValueContext.type
               });
               setFixedValueContext({
-                path: undefined,
-                type: fixedValueContext.type,
+                ...fixedValueContext,
                 value: undefined
               });
             }
