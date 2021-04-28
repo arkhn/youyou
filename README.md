@@ -1,4 +1,4 @@
-<img src="src/assets/img/youyou-logo.png" style="width: 400px;" alt="youyou logo" />
+# YOUYOU
 
 Youyou is a Arkhn tool which help you editing and create FHIR profiles.
 
