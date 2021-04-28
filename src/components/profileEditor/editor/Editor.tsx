@@ -200,12 +200,6 @@ const Editor: React.FC<EditorProps> = ({
     }
   };
 
-  //console.log(structureDefinition, elementDefJSON);
-  //console.log(fixedValueContext);
-  /*   structureDefinition.snapshot?.element?.forEach(
-    (element: IElementDefinition) => console.log(element.id)
-  ); */
-
   const handleSubmit = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
@@ -232,26 +226,16 @@ const Editor: React.FC<EditorProps> = ({
           path: undefined,
           type: undefined
         });
-        const indexToDelete: number[] = [];
-        structureDefinition.snapshot?.element.forEach((element, index) => {
-          if (elementDefJSON && elementDefJSON.id && element.id) {
-            const splitedId = element.id
-              .split(elementDefJSON.id)
-              .slice(1)
-              .join('');
-            if (splitedId && splitedId[0] === '.') {
-              indexToDelete.push(index);
+        const newSnapshot = newStructureDefinition.snapshot?.element.filter(
+          (element) => {
+            if (elementDefJSON && elementDefJSON.id && element.id) {
+              if (!element.id.startsWith(`${elementDefJSON.id}.`))
+                return element;
             }
           }
-        });
-        if (indexToDelete.length > 0) {
-          indexToDelete.reverse();
-          indexToDelete.forEach((index) => {
-            newStructureDefinition &&
-              newStructureDefinition.snapshot &&
-              newStructureDefinition.snapshot.element.splice(index, 1);
-          });
-        }
+        );
+        if (newStructureDefinition.snapshot && newSnapshot)
+          newStructureDefinition.snapshot.element = newSnapshot;
       }
       dispatch(
         updateStructureDefProfileThunk({
