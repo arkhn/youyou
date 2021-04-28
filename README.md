@@ -18,6 +18,13 @@ This first version allows you to :
 
 # Quick install
 
+### Environment variables
+
+Note that you'll need to have a _**.env**_ file a the root of the project containing the following variables:
+
+- REACT_APP_FHIR_API_URL: a base url to a fhir api.
+- REACT_APP_API_ADMIN_TOKEN: authentification token to use the fhir api.
+
 ### Install dependencies
 
 `yarn install`
