@@ -9,7 +9,7 @@
     "@material-ui/lab": "^4.0.0-alpha.53",
     "@material-ui/styles": "^4.9.10",
     "@reduxjs/toolkit": "^1.4.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.0",
     "classnames": "^2.2.6",
     "clsx": "^1.1.1",
